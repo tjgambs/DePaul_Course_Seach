@@ -33,7 +33,7 @@ def create_webpage(filename):
 					i[k] = '&nbsp;'
 
 
-			if(i[0] != 'N/A' and os.path.exists('../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html')):
+			if(i[0] != '0.0' and os.path.exists('../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html')):
 				html+='<tr>'
 
 				tags.append(i[0])

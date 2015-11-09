@@ -136,7 +136,7 @@ def overall_rating(first,last):
 	for row in reader:
 		if first.lower() == row['teacherfirstname_t'].lower() and last.lower() == row['teacherlastname_t'].lower():
 			return row['averageratingscore_rf']
-	return 'N/A'
+	return '0.0'
 
 
 def main():
