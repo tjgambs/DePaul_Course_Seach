@@ -16,7 +16,7 @@ def create_webpage(filename):
 		html = '<html><head><title>'+title+'</title>'
 		html += '''<link rel="shortcut icon" href="../other/icon.png"><link rel="stylesheet" href="../css/stylesheet.css" type="text/css" media="print, projection, screen" />
 					<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script><script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
-					</head><script type="text/javascript">$(document).ready(function(){$("#myTable").tablesorter(); }); </script>'''
+					</head><script type="text/javascript">$(document).ready(function(){$("#myTable").tablesorter({sortInitialOrder: 'desc'});  }); </script>'''
 
 		html += '<h1>'+title+'</h1><body>'+course_description+'<h2>Available Classes</h2><table id="myTable" class="tablesorter">'
 		html+='<thead><tr>'

@@ -140,7 +140,7 @@ def overall_rating(first,last):
 
 
 def main():
-    #download_classes()
+    download_classes()
     format_classes()
 
 if __name__ == '__main__':
