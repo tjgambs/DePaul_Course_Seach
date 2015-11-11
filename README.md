@@ -1,4 +1,4 @@
-# depaul-course-seach
+# depaul-course-search
 
 The DePaul Course Seach website is meant to help DePaul students prepare their course selections for the coming quarter. 
 This website provides an easy to navigate interface while giving the student more information about all classes and their
