@@ -121,7 +121,7 @@ def format_classes():
 				rmp_overall = overall_rating(teacher_first_name,teacher_last_name)
 
 				array_of_class_data.append([rmp_overall,class_status,credit_hours,teacher_first_name,teacher_last_name,class_start_time,class_end_time,class_section,class_number,class_location,days])
-			with open('../class_data/'+ class_name.replace('/','').replace(';','') +'.csv','w') as formatted_class:
+			with open('../class_data/'+ class_name.replace('/','').replace(';','').replace(' ','-').lower() +'.csv','w') as formatted_class:
 				writer = csv.writer(formatted_class)
 				writer.writerow([class_name])
 				writer.writerow([class_description])
@@ -140,7 +140,7 @@ def overall_rating(first,last):
 
 
 def main():
-    download_classes()
+    #download_classes()
     format_classes()
 
 if __name__ == '__main__':
