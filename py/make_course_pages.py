@@ -63,12 +63,12 @@ def create_webpage(filename):
         
 		html+='</tbody></table></body></html>'
 
-		with open('../classes/'+title.replace(' ','-').replace('/','').replace(';','').lower()+'.html','w') as output:
+		with open('../classes/'+title.lower().replace(' ','-').replace('/','').replace(';','')+'.html','w') as output:
 			output.write(html)
 
 		tags = list(set(tags))
 		tags = filter(None, tags)
-		return [title, course_description,tags,('classes/'+title.replace(' ','-').replace('/','').replace(';','')+'.html')]
+		return [title, course_description,tags,('classes/'+title.lower().replace(' ','-').replace('/','').replace(';','')+'.html')]
 
 
 def create_all_webpages():
