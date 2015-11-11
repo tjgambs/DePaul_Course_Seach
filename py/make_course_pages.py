@@ -22,7 +22,6 @@ def create_webpage(filename):
 		html+='<thead><tr>'
 
 		for i in info[2]:
-			tags.append(i)
 			html+='<th>' + i + '</th>'
 		html+=' </tr></thead><tbody>'
 
@@ -32,17 +31,13 @@ def create_webpage(filename):
 				if len(i[k]) == 0: 
 					i[k] = '&nbsp;'
 
-
 			if(i[0] != '0.0' and os.path.exists('../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html')):
 				html+='<tr>'
 
-				tags.append(i[0])
 				html+='<td>' + '<a href = "../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html">' + i[0] + '</a></td>'
 
-				tags.append(i[1])
 				html+='<td>' + i[1] + '</td>'
 
-				tags.append(i[2])
 				html+='<td>' + i[2] + '</td>'
 
 				tags.append(i[3])
@@ -52,23 +47,25 @@ def create_webpage(filename):
 				html+='<td>' + '<a href = "../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html">' + i[4] + '</a></td>'
 
 				for j in i[5:]:
-					tags.append(j)
 					html+='<td>' + j + '</td>'
 			else:
-				for j in i:
-					tags.append(j)
+				for k,j in enumerate(i):
+					if k==3 or k==4: tags.append(j)
 					html+='<td>' + j + '</td>'
 
 			html+=' </tr>'
         
 		html+='</tbody></table></body></html>'
 
-		with open('../classes/'+title.lower().replace(' ','-').replace('/','').replace(';','')+'.html','w') as output:
+		link = ('classes/'+'-'.join(title.split()[:2]).replace(';','').lower()+'.html')
+
+		with open('../'+link,'w') as output:
 			output.write(html)
 
 		tags = list(set(tags))
 		tags = filter(None, tags)
-		return [title, course_description,tags,('classes/'+title.lower().replace(' ','-').replace('/','').replace(';','')+'.html')]
+
+		return [title, course_description,tags,link]
 
 
 def create_all_webpages():
@@ -80,6 +77,7 @@ def create_all_webpages():
 
 	for i in files:
 		to_be_indexed.append(create_webpage('../class_data/'+i))
+		create_webpage('../class_data/'+i)
 
 	send_to_be_indexed(to_be_indexed)
 
