@@ -11,7 +11,6 @@ import csv
 br = mechanize.Browser()
 cj = cookielib.LWPCookieJar()
 
-
 def setup_browser():
 	br.set_cookiejar(cj)
 	br.set_handle_equiv(True)
@@ -20,7 +19,6 @@ def setup_browser():
 	br.set_handle_robots(False)
 	br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 	br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
-
 
 def download_classes():
 	setup_browser()
@@ -56,7 +54,6 @@ def download_classes():
 
 		json.dump(courses, output)
 		format_classes()
-
 
 def format_classes():
 	headers = ['Overall Rating','Class Status','Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days']
@@ -130,14 +127,12 @@ def format_classes():
 				for row in array_of_class_data:
 					writer.writerow(row)
 
-
 def overall_rating(first,last):
 	reader = csv.DictReader(open('../other/teachers.csv'))
 	for row in reader:
 		if first.lower() == row['teacherfirstname_t'].lower() and last.lower() == row['teacherlastname_t'].lower():
 			return row['averageratingscore_rf']
 	return '0.0'
-
 
 def main():
     download_classes()

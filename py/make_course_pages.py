@@ -1,8 +1,9 @@
 #Created by Timothy Gamble
 #tjgambs@gmail.com
 
+from BeautifulSoup import BeautifulSoup as Soup
 import os
-import csv 
+import csv
 
 def create_webpage(filename):
 	with open(filename,'r') as class_data:
@@ -13,60 +14,54 @@ def create_webpage(filename):
 		course_description = info[1][0]
 		tags = []
 
-		html = '<html><head><title>'+title+'</title>'
+		html = '<html><head><title>' + title + '</title>'
 		html += '''<link rel="shortcut icon" href="../other/icon.png"><link rel="stylesheet" href="../css/stylesheet.css" type="text/css" media="print, projection, screen" />
 					<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script><script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
 					</head><script type="text/javascript">$(document).ready(function(){$("#myTable").tablesorter({sortInitialOrder: 'desc'});  }); </script>'''
+		html += '<h1>' + title + '</h1><body>' + course_description + '<h2>Available Classes</h2><table id="myTable" class="tablesorter">'
+		html += '<thead><tr>'
 
-		html += '<h1>'+title+'</h1><body>'+course_description+'<h2>Available Classes</h2><table id="myTable" class="tablesorter">'
-		html+='<thead><tr>'
-
+		#Adds the headers to the table
 		for i in info[2]:
-			html+='<th>' + i + '</th>'
-		html+=' </tr></thead><tbody>'
+			html += '<th>' + i + '</th>'
+		html += ' </tr></thead><tbody>'
 
+		#Replace all open spaces with &nbsp; so Safari loads the border
 		for i in info[3:]:
-
 			for k in range(len(i)):
 				if len(i[k]) == 0: 
 					i[k] = '&nbsp;'
 
-			if(i[0] != '0.0' and os.path.exists('../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html')):
+			teacher_file = (i[3]+'-'+i[4]).replace(' ','-').lower()
+
+			if(i[0] != '0.0' and os.path.exists('../teachers/' + teacher_file + '.html')):
 				html+='<tr>'
-
-				html+='<td>' + '<a href = "../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html">' + i[0] + '</a></td>'
-
+				html+='<td>' + '<a href = "../teachers/' + teacher_file + '.html">' + i[0] + '</a></td>'
 				html+='<td>' + i[1] + '</td>'
-
 				html+='<td>' + i[2] + '</td>'
-
-				tags.append(i[3])
-				html+='<td>' + '<a href = "../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html">' + i[3] + '</a></td>'
-
-				tags.append(i[4])
-				html+='<td>' + '<a href = "../teachers/' + i[3].replace(' ','-').lower()+'-'+i[4].replace(' ','-').lower() + '.html">' + i[4] + '</a></td>'
+				html+='<td>' + '<a href = "../teachers/' + teacher_file + '.html">' + i[3] + '</a></td>'
+				html+='<td>' + '<a href = "../teachers/' + teacher_file + '.html">' + i[4] + '</a></td>'
 
 				for j in i[5:]:
 					html+='<td>' + j + '</td>'
 			else:
-				for k,j in enumerate(i):
-					if k==3 or k==4: tags.append(j)
-					html+='<td>' + j + '</td>'
+				for j in i:
+					html += '<td>' + j + '</td>'
+			#Adds the first name of the teacher to keywords
+			tags.append(i[3])
+			#Adds the last name of the teacher to keywords
+			tags.append(i[4])
 
-			html+=' </tr>'
-        
-		html+='</tbody></table></body></html>'
+			html += '</tr>'
+		html += '</tbody></table></body></html>'
 
-		link = ('classes/'+'-'.join(title.split()[:2]).replace(';','').lower()+'.html')
+		#Creates a name that only contains the first two words (i.e. wrd-103.html or eco-105.html)
+		webpage_name = ('classes/'+'-'.join(title.split()[:2]).replace(';','').lower()+'.html')
 
-		with open('../'+link,'w') as output:
+		with open('../'+webpage_name,'w') as output:
 			output.write(html)
 
-		tags = list(set(tags))
-		tags = filter(None, tags)
-
-		return [title, course_description,tags,link]
-
+		return [title, course_description,tags,webpage_name]
 
 def create_all_webpages():
 	files = []
@@ -83,7 +78,6 @@ def create_all_webpages():
 
 
 def send_to_be_indexed(items):
-
 	with open('../tipuesearch/tipuesearch_content.js','w') as output:
 		output.write('var tipuesearch = {"pages": [\n')
 		for i in items:
@@ -93,22 +87,23 @@ def send_to_be_indexed(items):
 			url = '""'
 
 			if i[0]:
-				title = '"{0}"'.format(i[0].replace("\"",'').replace("\r\n",'').replace("\n",''))
+				title = clean_index(i[0])
 			if i[1]:
-				text = '"{0}"'.format(i[1].replace("\"",'').replace("\r\n",'').replace("\n",''))
+				text = clean_index(i[1])
 			if i[2]:
 				tags = ', '.join('{0}'.format(j) for j in set(i[2]))
-				tags = '"{0}"'.format(tags.replace("\"",'').replace("\r\n",'').replace("\n",''))
+				tags = clean_index(tags)
 			if i[3]:
-				url = '"{0}"'.format(i[3].replace("\"","\'"))
+				url = clean_index(i[3])
 
 			output.write('{"title":'+ title +',"text":'+ text +',"tags":'+ tags +',"url": '+url+'},\n')
 		output.write(']};')
 
+def clean_index(item):
+	return '"{0}"'.format(item.replace("\"",'').replace("\r\n",'').replace("\n",''))
 
 def main():
 	create_all_webpages()
 	
-
 if __name__ == '__main__':
 	main()

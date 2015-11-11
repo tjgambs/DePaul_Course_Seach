@@ -9,6 +9,7 @@ import json
 import csv
 import os
 import unidecode
+import rmp_reviews
 
 #The id number of your school can be found in the ratemyprofessor link. For example
 #the link of a universities page might look like this: 
@@ -31,7 +32,6 @@ overall_rating 			= True
 helpfulness_rating 		= True
 clarity_rating 			= True
 easiness_rating 		= True
-
 
 #Creates a url with the predefined url parameters.
 def generate_url():
@@ -65,7 +65,6 @@ def generate_url():
 
 	return url
 
-
 #Takes the url generated and takes all of the data to be formatted.
 def gather_data():
 	url = generate_url()
@@ -84,7 +83,6 @@ def gather_data():
 	
 	return data
 
-
 #Totals all of the teachers that are associated with the specified university
 def total_teachers():
 	url = 'http://search.mtvnservices.com/typeahead/suggest/?callback=jQuery11100050687990384176373_1446754108140&q=*:*+AND+schoolid_s:' + school_id_number + '&siteName=rmp'
@@ -94,7 +92,6 @@ def total_teachers():
 	end = page_content.index(',"start":')
 
 	return page_content[begin:end]
-
 
 #Takes all of the data and stores it in a csv called teachers.csv
 def export_to_csv():
@@ -106,78 +103,28 @@ def export_to_csv():
 	    dict_writer.writeheader()
 	    dict_writer.writerows(data)
 
-
-def pages_of_reviews(id):
-	counter = 1
-	url = 'http://www.ratemyprofessors.com/paginate/professors/ratings?tid=' + str(id) + '&page=' + str(counter)
-	page = urllib.urlopen(url).read()
-	
-	data = json.loads(page)
-	number_of_reviews = int(data['remaining'])
-	return number_of_reviews/20+2
-
-def get_all_reviews(id):
-	reviews = []
-	for i in range(1,pages_of_reviews(id)+1):
-		url = 'http://www.ratemyprofessors.com/paginate/professors/ratings?tid=' + str(id) + '&page=' + str(i)
-		page=urllib.urlopen(url).read()
-
-		data = json.loads(page)
-		reviews.append(data['ratings'])
-	
-	return reviews
-
-def format_reviews(id):
-	formatted_reviews = []
-	reviews = get_all_reviews(id)
-
-	class_name = ''
-	grade_received = ''
-	date = ''
-	comments = ''
-	easy = ''
-	clarity = ''
-	helpful = ''
-
-	for i in reviews:
-		for j in i:
-			temp = {}
-			temp['class_name'] = j['rClass']
-			temp['grade_received'] = j['teacherGrade']
-			temp['date'] = j['rDate']
-			temp['comments'] = j['rComments']
-			temp['easy'] = j['rEasy']
-			temp['clarity'] = j['rClarity']
-			temp['helpful'] = j['rHelpful']
-			formatted_reviews.append(temp)
-
-	return formatted_reviews
-
 def create_teacher_webpage(id,name,values):
-
-	reviews = format_reviews(id)
-	if name == None: return
+	reviews = rmp_reviews.format_reviews(id)
 	name = name.encode('utf-8').replace('í','i')
 
 	with open('../teachers/' + name.replace(' ','-').replace('/','').lower() + '.html','w') as output:
 		html = '<!DOCTYPE html><html><head><title>' + name + ' - ' + values[0] + '</title><link rel="shortcut icon" href="../other/icon.png">'
-		
 		html +=	'''<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"></head><style type="text/css">img.alignleft{ float: left; 
 					margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 100px;float: left;padding-bottom:30px;padding-top: 20px;}
 					#right{height: 100px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><h1>'''
-		
 		html += name + '<hr></h1><div><h2>'
 
+		#Adds the professors overall rankings
 		html += 'Overall Quality: ' + values[0] + '<br><br>'
 		html += 'Helpfulness: ' + values[1] + '<br>'
 		html += 'Clarity: ' + values[2] + '<br>'
 		html += 'Easiness: ' + values[3]
-
 		html += '</h2></div><h1>Student Reviews</h1><hr>'
 
+		#Adds the student reviews to the webpage
 		for i in reviews:
 			html += '<div id="container"><div id="left">'
-
+			
 			html += 'Date: ' + str(i['date']) + '<br>'
 			html += 'Class Name: ' + str(i['class_name']) + '<br>'
 			html += 'Helpfulness: ' + str(i['helpful']) + '<br>'
@@ -186,43 +133,43 @@ def create_teacher_webpage(id,name,values):
 			html += 'Grade Received: ' + str(i['grade_received'])
 
 			html += '</div><div id="right"><div>'
-
 			html += i['comments']
-
 			html += '</div></div></div>'
-
 		html += '</body></html>'
 
 		output.write(html.encode("utf-8", "ignore"))
 
+
 def create_all_teacher_webpages():
 	data = gather_data()
 	for i in data:
-		rating = '0'
-		helpful = '0'
-		clarity = '0'
-		easy = '0'
-		name = None
+		try: 
+			name = i['teacherfirstname_t'] + ' ' + i['teacherlastname_t']
+		except: 
+			name = None
+		try: 
+			rating = str(i['averageratingscore_rf'])
+		except: 
+			rating = '0'
+		try: 
+			helpful = str(i['averagehelpfulscore_rf'])
+		except: 
+			helpful = '0'
+		try: 
+			clarity = str(i['averageclarityscore_rf'])
+		except: 
+			clarity = '0'
+		try: 
+			easy = str(i['averageeasyscore_rf'])
+		except: 
+			easy = '0'
 
-		try: name = i['teacherfirstname_t'] + ' ' + i['teacherlastname_t']
-		except: pass
-		try: rating = str(i['averageratingscore_rf'])
-		except: pass
-		try: helpful = str(i['averagehelpfulscore_rf'])
-		except: pass
-		try: clarity = str(i['averageclarityscore_rf'])
-		except: pass
-		try: easy = str(i['averageeasyscore_rf'])
-		except: pass
-
-		create_teacher_webpage(str(i['pk_id']),name,[rating,helpful,clarity,easy])
-
+		if name != None:
+			create_teacher_webpage(str(i['pk_id']),name,[rating,helpful,clarity,easy])
 
 def main():
     export_to_csv()
     create_all_teacher_webpages()
 
-
 if __name__ == '__main__':
 	main()
-	
