@@ -21,7 +21,7 @@
 <body>
 	<div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
 	<div class="center"><div class="inner"><h1>MockSched</h1><h3 style="padding-bottom:15px;">Course Cart</h3></div></div>
-	<div id = "body"></div>
+	<div class="center" id = "body"></div>
 </body>
 <script>
 
@@ -40,34 +40,34 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 				classes.push(temp)
 			}
 		}
-		if (classes.lemgth == 0) return;
-		html = '<table id="myTable" class="tablesorter">'
-		html += '<thead><tr><th class="header">Remove</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
-
-		for (i of classes)
+		html = '<h2>Your course cart is empty.</h2>'
+		if (classes.length > 0)
 		{
-			classValue = i[3].toLowerCase() + '-' +i[4].toLowerCase() + '-add'
-			html += '<tr><td><input class="'+classValue+'" id="'+i.join(',')+'" type="image" src="minus.png" width="20" onclick="removeFromCart(this)"></td>'
-			for (j of i)
-			{
-				html += '<td>' + j + '</td>'
-			}
-			html += '</tr>'
-		}
-		html += '<tbody></table>'
+			html = '<table id="myTable" class="tablesorter">'
+			html += '<thead><tr><th class="header">Remove</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
 
+			for (i of classes)
+			{
+				classValue = i[3].toLowerCase() + '-' +i[4].toLowerCase() + '-add'
+				html += '<tr><td><input class="'+classValue+'" id="'+i.join(',')+'" type="image" src="minus.png" width="20" onclick="removeFromCart(this)"></td>'
+				for (j of i)
+				{
+					html += '<td>' + j + '</td>'
+				}
+				html += '</tr>'
+			}
+			html += '<tbody></table>'
+		}
 
 		document.getElementById('body').innerHTML = html
 	}
 
 	function removeFromCart(contents)
 	{
-		console.log(contents)
 		index = 8
 		value = contents.getAttribute('id')
 		if(value.split(',').length<11) index=7
 		className = contents.getAttribute('class')
-		console.log(className+'-'+value.split(',')[index])
 		delete_cookie(className+'-'+value.split(',')[index])
 		formatCookies()
 		
