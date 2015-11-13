@@ -146,12 +146,11 @@ url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc
 
 	function addToCart(contents)
 	{
-		name = 'addtocart'
 		value = contents.getAttribute('id')
 		className = contents.getAttribute('class')
-		days = 7
+		days = 1
 
-		writeCookie(className+'-'+name,value,days)
+		writeCookie(className,value,days)
 	}
 
 	function writeCookie(name,value,days) 
