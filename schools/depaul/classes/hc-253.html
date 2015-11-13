@@ -130,16 +130,17 @@ Perhaps the most important question we can ask about the family is what comes ne
 	    	}
 	    }
 	});
-
-  	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 
 	function addToCart(contents)
 	{
+		index = 8
 		value = contents.getAttribute('id')
+		if(value.split(',').length<11) index=7
 		className = contents.getAttribute('class')
 		days = 1
-
-		writeCookie(className+'-'+value.split(',')[8],value,days)
+		writeCookie(className+'-'+value.split(',')[index],value,days)
+		console.log(className+'-'+value.split(',')[index])
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
 		
@@ -147,11 +148,13 @@ Perhaps the most important question we can ask about the family is what comes ne
 
 	function removeFromCart(contents)
 	{
+		index = 8
 		value = contents.getAttribute('id')
+		if(value.split(',').length<11) index=7
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
-		delete_cookie(className+'-'+value.split(',')[8])
+		delete_cookie(className+'-'+value.split(',')[index])
 		
 	}
 
