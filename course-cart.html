@@ -8,76 +8,68 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/stylesheet.css">
+		<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-70030211-1', 'auto');
+			ga('send', 'pageview');
+	 	</script>
 	</head>
 <body>
 	<div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
-	<div class="center"><div class="inner"><h1>MockSched</h1><h3>Course Cart</h3></div></div>
-	<div class="center"><h1 id="here">This is still under construction.</h1></div>
-	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
+	<div class="center"><div class="inner"><h1>MockSched</h1><h3 style="padding-bottom:15px;">Course Cart</h3></div></div>
+	<div id = "body"></div>
 </body>
 <script>
-	html = ''
-	for (i of document.cookie.split(';'))
-	{
-		if(i.indexOf('-add')!=-1) html += i + '<br />'
-	}
-	document.getElementById('here').innerHTML = html
 
-	function addToCart(contents)
-	{
-		value = contents.getAttribute('id')
-		className = contents.getAttribute('class')
-		days = 1
+formatCookies()
 
-		writeCookie(className,value,days)
-		document.getElementById(value).src = "../../../minus.png"
-		document.getElementById(value).onclick = function() {removeFromCart(contents);};
-		
+$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+	function formatCookies()
+	{
+		classes = []
+		for (i of document.cookie.split(';'))
+		{
+			if(i.indexOf('-add')!=-1) 
+			{
+				temp = i.substring(i.indexOf('=')+1).split(',')
+				if(temp.length==10) temp = ('0.0,' + temp).split(',')
+				classes.push(temp)
+			}
+		}
+		html = '<table id="myTable" class="tablesorter">'
+		html += '<thead><tr><th class="header">Add</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
+
+		for (i of classes)
+		{
+			classValue = i[3].toLowerCase() + '-' +i[4].toLowerCase() + '-add'
+			html += '<tr><td><input class="'+classValue+'" id="'+i.join(',')+'" type="image" src="minus.png" width="20" onclick="removeFromCart(this)"></td>'
+			for (j of i)
+			{
+				html += '<td>' + j + '</td>'
+			}
+			html += '</tr>'
+		}
+		html += '<tbody></table>'
+
+
+		document.getElementById('body').innerHTML = html
 	}
 
 	function removeFromCart(contents)
 	{
+		console.log(contents)
+		index = 8
 		value = contents.getAttribute('id')
+		if(value.split(',').length<11) index=7
 		className = contents.getAttribute('class')
-		document.getElementById(value).src = "../../../add.png"
-		document.getElementById(value).onclick = function() {addToCart(contents)};
-		delete_cookie(className)
+		console.log(className+'-'+value.split(',')[index])
+		delete_cookie(className+'-'+value.split(',')[index])
+		formatCookies()
 		
-	}
-
-	function writeCookie(name,value,days) 
-    {
-        var date, expires;
-        if (days) 
-        {
-            date = new Date();
-            date.setTime(date.getTime()+(days*24*60*60*1000));
-            expires = "; expires=" + date.toGMTString();
-        }
-        else
-        {
-            expires = "";
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-
-    function readCookie(name) 
-	{
-    	var i, c, ca, nameEQ = name + "=";
-    	ca = document.cookie.split(';');
-    	for(i=0;i < ca.length;i++) 
-    	{
-       		c = ca[i];
-        	while (c.charAt(0)==' ') 
-        	{
-            	c = c.substring(1,c.length);
-        	}
-	        if (c.indexOf(nameEQ) == 0) 
-	        {
-	            return c.substring(nameEQ.length,c.length);
-	        }
-    	}
-    	return '';
 	}
 
 	function delete_cookie(name) 
@@ -85,4 +77,5 @@
   		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
 </script>
+<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
 </html>
