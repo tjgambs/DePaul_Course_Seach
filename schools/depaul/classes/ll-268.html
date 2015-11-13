@@ -143,7 +143,7 @@ The skills you learn in this class are widely applicable and will help you impro
 		className = contents.getAttribute('class')
 		days = 1
 
-		writeCookie(className,value,days)
+		writeCookie(className+value,value,days)
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
 		
@@ -155,7 +155,7 @@ The skills you learn in this class are widely applicable and will help you impro
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
-		delete_cookie(className)
+		delete_cookie(className+value)
 		
 	}
 

@@ -150,7 +150,7 @@ def create_page(full_name,description,course_url):
 		className = contents.getAttribute('class')
 		days = 1
 
-		writeCookie(className,value,days)
+		writeCookie(className+value,value,days)
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
 		
@@ -162,7 +162,7 @@ def create_page(full_name,description,course_url):
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
-		delete_cookie(className)
+		delete_cookie(className+value)
 		
 	}
 
