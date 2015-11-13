@@ -12,7 +12,77 @@
 <body>
 	<div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
 	<div class="center"><div class="inner"><h1>MockSched</h1><h3>Course Cart</h3></div></div>
-	<div class="center"><h1>This is still under construction.</h1></div>
+	<div class="center"><h1 id="here">This is still under construction.</h1></div>
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
 </body>
+<script>
+	html = ''
+	for (i of document.cookie.split(';'))
+	{
+		if(i.indexOf('-add')!=-1) html += i + '<br />'
+	}
+	document.getElementById('here').innerHTML = html
+
+	function addToCart(contents)
+	{
+		value = contents.getAttribute('id')
+		className = contents.getAttribute('class')
+		days = 1
+
+		writeCookie(className,value,days)
+		document.getElementById(value).src = "../../../minus.png"
+		document.getElementById(value).onclick = function() {removeFromCart(contents);};
+		
+	}
+
+	function removeFromCart(contents)
+	{
+		value = contents.getAttribute('id')
+		className = contents.getAttribute('class')
+		document.getElementById(value).src = "../../../add.png"
+		document.getElementById(value).onclick = function() {addToCart(contents)};
+		delete_cookie(className)
+		
+	}
+
+	function writeCookie(name,value,days) 
+    {
+        var date, expires;
+        if (days) 
+        {
+            date = new Date();
+            date.setTime(date.getTime()+(days*24*60*60*1000));
+            expires = "; expires=" + date.toGMTString();
+        }
+        else
+        {
+            expires = "";
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) 
+	{
+    	var i, c, ca, nameEQ = name + "=";
+    	ca = document.cookie.split(';');
+    	for(i=0;i < ca.length;i++) 
+    	{
+       		c = ca[i];
+        	while (c.charAt(0)==' ') 
+        	{
+            	c = c.substring(1,c.length);
+        	}
+	        if (c.indexOf(nameEQ) == 0) 
+	        {
+	            return c.substring(nameEQ.length,c.length);
+	        }
+    	}
+    	return '';
+	}
+
+	function delete_cookie(name) 
+	{
+  		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
+</script>
 </html>

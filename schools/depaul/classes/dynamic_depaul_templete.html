@@ -83,7 +83,14 @@ url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
 		    	
 		    	html += '<tr>'
-		    	html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
+		    	if(readCookie(teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add').length==0)
+		    	{
+		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
+		    	}
+		    	else
+		    	{
+		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
+		    	}
 		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-overall">0.0</td>'
 		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-status">'+classStatus+'</td>'
 		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-credits">'+creditHours+'</td>'
@@ -162,7 +169,7 @@ url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
-		document.cookie = className+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+		delete_cookie(className)
 		
 	}
 
@@ -199,6 +206,11 @@ url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc
 	        }
     	}
     	return '';
+	}
+
+	function delete_cookie(name) 
+	{
+  		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
 
 
