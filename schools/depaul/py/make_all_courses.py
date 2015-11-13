@@ -140,9 +140,7 @@ def create_page(full_name,description,course_url):
 	    }
 	});
 
-	$(document).ajaxStop(function(){
-  		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	});
+  	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 
 	function addToCart(contents)
 	{
