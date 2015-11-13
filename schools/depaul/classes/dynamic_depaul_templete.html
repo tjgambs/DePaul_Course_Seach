@@ -35,7 +35,6 @@ An introduction to the forms, expectations, and conventions of writing at the co
 </body>
 <script>
 url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=WRD&catalog_nbr=104'
-count = 0;
 	$.ajax({
 	    url:url,
 	    type:'GET',
@@ -145,14 +144,14 @@ count = 0;
   		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 
-	function addToCart(stuff)
+	function addToCart(contents)
 	{
 		name = 'addtocart'
-		value = stuff.getAttribute('id')
+		value = contents.getAttribute('id')
+		className = contents.getAttribute('class')
 		days = 7
 
-		writeCookie(count+''+name,value,days)
-		count += 1;
+		writeCookie(className+'-'+name,value,days)
 	}
 
 	function writeCookie(name,value,days) 
