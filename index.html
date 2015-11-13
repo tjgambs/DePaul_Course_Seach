@@ -43,6 +43,7 @@
                 document.getElementById('tipue3').href = '';
                 document.getElementById('tipue4').src = '';
                 document.getElementById('search').innerHTML = '';
+                document.cookie = "university=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
                 return;
             }
             document.getElementById('tipue1').src = "schools/" + id.value + "/tipuesearch/tipuesearch_set.js";
@@ -50,6 +51,7 @@
             document.getElementById('tipue3').href = "schools/" + id.value + "/tipuesearch/tipuesearch.css";
             document.getElementById('tipue4').src = "schools/" + id.value + "/tipuesearch/tipuesearch.min.js";
             document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="on" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
+            document.cookie="university=" + id.value;
         }
 
     </script>
