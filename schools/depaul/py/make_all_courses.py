@@ -69,8 +69,9 @@ def create_page(full_name,description,course_url):
 		    	if (days.length == 0) days = '&nbsp;';
 		    	if(teacherFirstName.length == 0) teacherFirstName = 'TBD';
 		    	if(teacherLastName.length == 0) teacherLastName = 'TBD';
-		    	if(classStartTime.length == 0) classStartTime = 'TBD';
-		    	if(classEndTime.length == 0) classEndTime = 'TBD';
+		    	if(classStartTime.length == 0) classStartTime = 'OnLine';
+		    	if(classEndTime.length == 0) classEndTime = 'OnLine';
+		    	if(days=='&nbsp;') days = 'OnLine';
 		    	if(classStatus == 'C') classStatus = 'Closed';
 		    	if(classStatus == 'O') classStatus = 'Open';
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
