@@ -7,30 +7,51 @@
 
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/standard.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
 
-        <script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
-        <script type="text/javascript" src="tipuesearch/tipuesearch_content.js"></script>
-        <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
-        <script type="text/javascript" src="tipuesearch/tipuesearch.min.js"></script>
-        <link rel="shortcut icon" href="other/icon.png">
+        <script type="text/javascript" id="tipue1" src=""></script>
+        <script type="text/javascript" id="tipue2" src=""></script>
+        <link rel="stylesheet" id="tipue3" type="text/css" href="">
+        <script type="text/javascript" id="tipue4" src=""></script>
     </head>
 <body>
-    <div class="right" style="padding-top: 2.5%; padding-right: 7%;" class="inner"><h3><a href="course-cart.html" style="text-decoration:none">Course Cart</a></h3></div>
-    <div class="center"><div class="inner" style="padding-top: 1%;"><h1>MockSched</h1><h3>DePaul University</h3></div></div>
-    <div class="block" style="padding-top: 2%">
+    <div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
+    <div class="center"><div class="inner"><h1>MockSched</h1></div></div>
 
-    <form action="search.html">
-        <input type="text" name="q" id="tipue_search_input" autocomplete="on" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">
-    </form>
+    <h2 class="center">Please select your university.</h2>
+    <div class="select-style">
+        <select onchange="showSearch(this)">
+            <option value="select">Select</option>
+            <option value="depaul">DePaul University</option>
+        </select>   
+    </div>
+    <div class="block" style="padding-top: 2%">
+    
+    <form action="search.html" id="search" class="search"></form>
     <div id="tipue_search_content"></div>
 
-    <div class="center ital" style="padding: 2%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
+    <div class="center ital" style="padding: 0%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
 
     <script>
-    $(document).ready(function() {
-         $('#tipue_search_input').tipuesearch();
-    });
+
+        function showSearch(id)
+        {
+            if (id.value == 'select')
+            {
+                document.getElementById('tipue1').src = '';
+                document.getElementById('tipue2').src = '';
+                document.getElementById('tipue3').href = '';
+                document.getElementById('tipue4').src = '';
+                document.getElementById('search').innerHTML = '';
+                return;
+            }
+            document.getElementById('tipue1').src = "schools/" + id.value + "/tipuesearch/tipuesearch_set.js";
+            document.getElementById('tipue2').src = "schools/" + id.value + "/tipuesearch/tipuesearch_content.js";
+            document.getElementById('tipue3').href = "schools/" + id.value + "/tipuesearch/tipuesearch.css";
+            document.getElementById('tipue4').src = "schools/" + id.value + "/tipuesearch/tipuesearch.min.js";
+            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="on" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
+        }
+
     </script>
 </body>
 </html>
