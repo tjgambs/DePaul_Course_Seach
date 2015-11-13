@@ -76,7 +76,7 @@ def create_page(full_name,description,course_url):
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
 		    	
 		    	html += '<tr>'
-		    	if(readCookie(teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days])==0)  
+		    	if(readCookie(teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add-'+classNumber)==0)
 		    	{
 		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
 		    	}
@@ -148,7 +148,7 @@ def create_page(full_name,description,course_url):
 		className = contents.getAttribute('class')
 		days = 1
 
-		writeCookie(className+value,value,days)
+		writeCookie(className+'-'+value.split(',')[8],value,days)
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
 		
@@ -160,7 +160,7 @@ def create_page(full_name,description,course_url):
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
-		delete_cookie(className+value)
+		delete_cookie(className+'-'+value.split(',')[8])
 		
 	}
 
