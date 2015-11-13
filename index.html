@@ -54,10 +54,10 @@
                 writeCookie('input',undefined,7) 
                 return;
             }
-            document.getElementById('tipue1').src = "schools/" + id.value + "/tipuesearch/tipuesearch_set.js";
-            document.getElementById('tipue2').src = "schools/" + id.value + "/tipuesearch/tipuesearch_content.js";
-            document.getElementById('tipue3').href = "schools/" + id.value + "/tipuesearch/tipuesearch.css";
-            document.getElementById('tipue4').src = "schools/" + id.value + "/tipuesearch/tipuesearch.min.js";
+            document.getElementById('tipue1').src = "schools/" + id.value.split()[0] + "/tipuesearch/tipuesearch_set.js";
+            document.getElementById('tipue2').src = "schools/" + id.value.split()[0] + "/tipuesearch/tipuesearch_content.js";
+            document.getElementById('tipue3').href = "schools/" + id.value.split()[0] + "/tipuesearch/tipuesearch.css";
+            document.getElementById('tipue4').src = "schools/" + id.value.split()[0] + "/tipuesearch/tipuesearch.min.js";
             document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="on" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
             writeCookie('input',id.value,7) 
         }
