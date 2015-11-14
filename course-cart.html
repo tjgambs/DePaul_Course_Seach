@@ -107,8 +107,7 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 		if(value.split(',').length<12) index=8
 		className = contents.getAttribute('class')
 		delete_cookie(className+'-'+value.split(',')[index])
-		formatCookies()
-		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
+		window.location.reload()
 	}
 
 	function delete_cookie(name) 
