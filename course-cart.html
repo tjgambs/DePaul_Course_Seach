@@ -31,7 +31,7 @@
 	<div class="center" style="padding: 2%;">
 		<button class="generate" onclick="createCalendarData()" style="visibility: hidden;">Generate Mock Schedule</button>
 	</div>
-	<div class="calendar"id="calendar" style="padding-top:1%;"></div>
+	<div class="calendar" id="calendar" style="padding-top:1%; visibility: hidden"></div>
 </body>
 <script>
 
@@ -52,6 +52,7 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 			}
 		}
 		document.getElementsByClassName('generate')[0].style.visibility='hidden';
+		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
 		document.getElementById('empty').innerHTML = '<h2>Your course cart is currently empty.</h2>'
 		if (classes.length > 0)
 		{
@@ -105,6 +106,7 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 		className = contents.getAttribute('class')
 		delete_cookie(className+'-'+value.split(',')[index])
 		formatCookies()
+		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
 	}
 
 	function delete_cookie(name) 
@@ -173,6 +175,7 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 			
 		}
 		createCalendar(events)
+		document.getElementsByClassName('calendar')[0].style.visibility='visible';
 	}
 
 
