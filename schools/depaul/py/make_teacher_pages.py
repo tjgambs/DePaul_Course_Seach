@@ -109,7 +109,7 @@ def create_teacher_webpage(id,name,values):
 
 	with open('../teachers/' + name.replace(' ','-').replace('/','').lower() + '.html','w') as output:
 		html = '<!DOCTYPE html><html><head><title>' + name + ' - ' + values[0] + '</title>'
-		html +=	'''<link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css"></head><style type="text/css">img.alignleft{ float: left; 
+		html +=	'''<link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css"><link rel="shortcut icon" href="../../../icon.png"></head><style type="text/css">img.alignleft{ float: left; 
 					margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 100px;float: left;padding-bottom:30px;padding-top: 20px;}
 					#right{height: 100px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><h1>'''
 		html += name + '<hr></h1><div><h2>'
