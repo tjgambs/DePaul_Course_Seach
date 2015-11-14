@@ -4,11 +4,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+		<link href='css/fullcalendar.css' rel='stylesheet' />
+		<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+		<script src='js/moment.min.js'></script>
+		<script src='js/jquery.min.js'></script>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src='js/fullcalendar.min.js'></script>
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,7 +26,12 @@
 <body>
 	<div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
 	<div class="center"><div class="inner"><h1>MockSched</h1><h3 style="padding-bottom:15px;">Course Cart</h3></div></div>
+	<div class="center" id="empty"><h2>Your course cart is currently empty.</h2></div>
 	<div class="center" id = "body"></div>
+	<div class="center" style="padding: 2%;">
+		<button class="generate" onclick="createCalendarData()" style="visibility: hidden;">Generate Mock Schedule</button>
+	</div>
+	<div class="calendar"id="calendar" style="padding-top:1%;"></div>
 </body>
 <script>
 
@@ -31,48 +41,54 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	function formatCookies()
 	{
 		classes = []
+		html = ''
 		for (i of document.cookie.split(';'))
 		{
 			if(i.indexOf('-add')!=-1) 
 			{
 				temp = i.substring(i.indexOf('=')+1).split(',')
-				if(temp.length==10) temp = ('0.0,' + temp).split(',')
+				if(temp.length==11) temp = ('0.0,' + temp).split(',')
 				classes.push(temp)
 			}
 		}
-		html = '<h2>Your course cart is empty. Search for classes <a style="text-decoration:none; color:#333" href="index.html"><strong>here.</strong></a></h2>'
+		document.getElementsByClassName('generate')[0].style.visibility='hidden';
+		document.getElementById('empty').innerHTML = '<h2>Your course cart is currently empty.</h2>'
 		if (classes.length > 0)
 		{
+			document.getElementsByClassName('generate')[0].style.visibility='visible';
+			document.getElementById('empty').innerHTML = ''
 			html = '<table id="myTable" class="tablesorter">'
-			html += '<thead><tr><th class="header">Remove</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
+			html += '<thead><tr><th class="header">Remove</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
 
 			for (i of classes)
 			{
-				classValue = i[3].toLowerCase() + '-' +i[4].toLowerCase() + '-add'
-				html += '<tr><td><input class="'+classValue+'" id="'+i.join(',')+'" type="image" src="minus.png" width="20" onclick="removeFromCart(this)"></td>'
-				href = 'schools/depaul/teachers/' + i[3].toLowerCase()+'-'+i[4].toLowerCase() + '.html'
+				classValue = i[4].toLowerCase() + '-' +i[5].toLowerCase() + '-add'
+				html += '<tr class=course><td><input class="'+classValue+'" id="'+i.join(',')+'" type="image" src="minus.png" width="20" onclick="removeFromCart(this)"></td>'
+				href = 'schools/depaul/teachers/' + i[4].toLowerCase()+'-'+i[5].toLowerCase() + '.html'
 				if (i[0] == '0.0') 
 				{
-					html += '<td>'+i[0]+'</td>'
-					html += '<td>'+i[1]+'</td>'
-			    	html += '<td>'+i[2]+'</td>'
-			    	html += '<td>'+i[3]+'</td>'
-			    	html += '<td>'+i[4]+'</td>'
+					html += '<td class="name">'+i[1]+'</td>'
+					html += '<td class="overall">'+i[0]+'</td>'
+					html += '<td class="status">'+i[2]+'</td>'
+			    	html += '<td class="hours">'+i[3]+'</td>'
+			    	html += '<td class="fname">'+i[4]+'</td>'
+			    	html += '<td class="lname">'+i[5]+'</td>'
 				}
 		    	else 
 		    	{
-		    		html += '<td><a style="text-decoration:none;" href="'+href+'">'+i[0]+'</a></td>'
-		    		html += '<td>'+i[1]+'</td>'
-			    	html += '<td>'+i[2]+'</td>'
-			    	html += '<td><a style="text-decoration:none;" href="'+href+'">'+i[3]+'</td>'	
-			    	html += '<td><a style="text-decoration:none;" href="'+href+'">'+i[4]+'</td>'	
+		    		html += '<td class="name">'+i[1]+'</td>'
+		    		html += '<td><a class="overall" style="text-decoration:none;" href="'+href+'">'+i[0]+'</a></td>'
+		    		html += '<td class="status">'+i[2]+'</td>'
+			    	html += '<td class="hours">'+i[3]+'</td>'
+			    	html += '<td><a class="fname" style="text-decoration:none;" href="'+href+'">'+i[4]+'</td>'	
+			    	html += '<td><a class="lname" style="text-decoration:none;" href="'+href+'">'+i[5]+'</td>'	
 		    	}
-		    	html += '<td>'+i[5]+'</td>'
-		    	html += '<td>'+i[6]+'</td>'
-		    	html += '<td>'+i[7]+'</td>'
-		    	html += '<td>'+i[8]+'</td>'
-		    	html += '<td>'+i[9]+'</td>'
-		    	html += '<td>'+i[10]+'</td>'
+		    	html += '<td class="start">'+i[6]+'</td>'
+		    	html += '<td class="end">'+i[7]+'</td>'
+		    	html += '<td class="section">'+i[8]+'</td>'
+		    	html += '<td class="number">'+i[9]+'</td>'
+		    	html += '<td class="location">'+i[10]+'</td>'
+		    	html += '<td class="days">'+i[11]+'</td>'
 				html += '</tr>'
 			}
 			html += '<tbody></table>'
@@ -83,19 +99,126 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 
 	function removeFromCart(contents)
 	{
-		index = 8
+		index = 9
 		value = contents.getAttribute('id')
-		if(value.split(',').length<11) index=7
+		if(value.split(',').length<12) index=8
 		className = contents.getAttribute('class')
 		delete_cookie(className+'-'+value.split(',')[index])
 		formatCookies()
-		
 	}
 
 	function delete_cookie(name) 
 	{
   		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
+
+	function createCalendar(events)
+	{
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek'
+			},
+			defaultDate: '2016-01-04',
+			selectable: true,
+			selectHelper: true,
+			defaultView: 'agendaWeek',
+			select: function(start, end) {
+				var title = prompt('Event Title:');
+				var eventData;
+				if (title) {
+					eventData = {
+						title: title,
+						description: description,
+						start: start,
+						end: end,
+						dow: dow
+					};
+					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+				}
+				$('#calendar').fullCalendar('unselect');
+			},
+			editable: false,
+			eventLimit: true, // allow "more" link when too many events
+			selectable: false,
+			events: events,
+			eventRender: function (event, element, view) {
+    			element.find('.fc-title').append('<div class="hr-line-solid-no-margin"></div><span style="font-size: 10px">'+event.description+'</span></div>');
+			},
+
+		});
+
+		$('html, body').animate({
+    		scrollTop: $("#calendar").offset().top
+		}, 1000);
+
+	}
+
+	function createCalendarData()
+	{
+		courses = document.getElementsByClassName("course");
+		events = []
+		for(var i=0;i<courses.length;i++)
+		{
+			start = convertTime(courses[i].getElementsByClassName('start')[0].innerHTML)
+			end = convertTime(courses[i].getElementsByClassName('end')[0].innerHTML)
+			firstname = courses[i].getElementsByClassName('fname')[0].innerHTML
+			lastname = courses[i].getElementsByClassName('lname')[0].innerHTML
+			courseLocation = courses[i].getElementsByClassName('location')[0].innerHTML
+			days = convertDays(courses[i].getElementsByClassName('days')[0].innerHTML)
+			course = courses[i].getElementsByClassName('name')[0].innerHTML
+			description = "Teacher: "+firstname + ' ' + lastname +"<br>" + "Location: "+courseLocation
+			events.push({'title':course,'description':description,'start':start,'end':end,'dow':days})
+			
+		}
+		createCalendar(events)
+	}
+
+
+	function convertDays(days)
+	{
+		ret = []
+		if (days.indexOf('M')!=-1) ret.push(1)
+		if (days.indexOf('Tu')!=-1) ret.push(2)
+		if (days.indexOf('W')!=-1) ret.push(3)
+		if (days.indexOf('Th')!=-1) ret.push(4)
+		if (days.indexOf('F')!=-1) ret.push(5)
+		if (days.indexOf('Sat')!=-1) ret.push(6)
+
+		return ret
+	}
+
+	function convertTime(time)
+	{
+		if(time=='TBD') return
+		hours = time.split(' ')[0].split(':')[0]
+		minutes = time.split(' ')[0].split(':')[1]
+		if(time.split(' ')[1].toLowerCase() == 'pm' && time.split(' ')[0].split(':')[0].length < 2) {
+			hours = String(parseInt(hours)+12)
+		}
+		ret = hours+':'+minutes+':00'
+		if (ret.length ==7) ret = '0' + ret
+		console.log(ret)
+		return ret
+	}
+
+
+	Date.prototype.yyyymmdd = function() 
+	{
+		var yyyy = this.getFullYear().toString();
+	    var mm = (this.getMonth()+1).toString(); 
+	    var dd  = this.getDate().toString();
+		return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]);
+	};
+
 </script>
+<style>
+	#calendar 
+	{
+		max-width: 90%;
+		margin: 0 auto;
+	}
+</style>
 <div class="center ital" style="padding: 2%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>
 </html>

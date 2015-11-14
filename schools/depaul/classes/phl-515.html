@@ -25,7 +25,7 @@
 	    	data = jQuery.parseJSON(response);
 	    	html = '<table id="myTable" class="tablesorter"><thead><tr>';
 
-	    	headers = ['Add/Remove','Overall Rating','Class Status','Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
+	    	headers = ['Add','Overall Rating','Class Status','Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
 
 	    	for (i of headers)
 	    	{
@@ -53,24 +53,22 @@
 		    	if (data[i].sat.toLowerCase() == 'y') days[5] = 'Sat';
 		    	days = days.join('');
 
-		    	if (days.length == 0) days = '&nbsp;';
+		    	if (days.length == 0) days = 'OnLine';
 		    	if(teacherFirstName.length == 0) teacherFirstName = 'TBD';
 		    	if(teacherLastName.length == 0) teacherLastName = 'TBD';
-		    	if(classStartTime.length == 0) classStartTime = 'OnLine';
-		    	if(classEndTime.length == 0) classEndTime = 'OnLine';
-		    	if(days=='&nbsp;') days = 'OnLine';
+		    	if(classStartTime.length == 0) classStartTime = 'TBD';
+		    	if(classEndTime.length == 0) classEndTime = 'TBD';
 		    	if(classStatus == 'C') classStatus = 'Closed';
 		    	if(classStatus == 'O') classStatus = 'Open';
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
 		    	
 		    	html += '<tr>'
 		    	if(readCookie(teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add-'+classNumber)==0)
-		    	{
-		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
+		    	{html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+["PHL 515",classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
 		    	}
 		    	else
 		    	{
-		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+[classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
+		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
 		    	}
 		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-overall">0.0</td>'
 		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-status">'+classStatus+'</td>'
@@ -131,13 +129,12 @@
 
 	function addToCart(contents)
 	{
-		index = 8
+		index = 9
 		value = contents.getAttribute('id')
-		if(value.split(',').length<11) index=7
+		if(value.split(',').length<12) index=8
 		className = contents.getAttribute('class')
 		days = 1
 		writeCookie(className+'-'+value.split(',')[index],value,days)
-		console.log(className+'-'+value.split(',')[index])
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
 		
@@ -145,9 +142,9 @@
 
 	function removeFromCart(contents)
 	{
-		index = 8
+		index = 9
 		value = contents.getAttribute('id')
-		if(value.split(',').length<11) index=7
+		if(value.split(',').length<12) index=8
 		className = contents.getAttribute('class')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
