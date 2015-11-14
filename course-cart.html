@@ -71,7 +71,8 @@ $("#myTable").tablesorter({sortInitialOrder: 'desc'});
 				href = 'schools/depaul/teachers/' + i[4].toLowerCase()+'-'+i[5].toLowerCase() + '.html'
 				if (i[0] == '0.0') 
 				{
-					html += '<td class="name">'+i[1]+'</td>'
+					course_name = 'schools/depaul/classes/'+i[1].replace(' ','-').toLowerCase() + '.html'
+					html += '<td><a class="name" style="text-decoration: none;" href="'+course_name+'">'+i[1]+'</a></td>'
 					html += '<td class="overall">'+i[0]+'</td>'
 					html += '<td class="status">'+i[2]+'</td>'
 			    	html += '<td class="hours">'+i[3]+'</td>'
