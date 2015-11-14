@@ -51,7 +51,6 @@ def download_classes():
 
 		json.dump(courses, output)
 
-
 def main():
     download_classes()
 

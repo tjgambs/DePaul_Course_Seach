@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/stylesheet.css">
 
         <script type="text/javascript" id="tipue1" src="schools/default/tipuesearch/tipuesearch_set.js"></script>
-        <script type="text/javascript" id="tipue2" src=""></script>
+        <script type="text/javascript" id="tipue2" src="schools/depaul/tipuesearch/tipuesearch_content.js"></script>
         <link rel="stylesheet" id="tipue3" type="text/css" href="schools/default/tipuesearch/tipuesearch.css">
         <script type="text/javascript" id="tipue4" src="schools/default/tipuesearch/tipuesearch.min.js"></script>
         <script>
@@ -46,16 +46,11 @@
         {
             if (id.value == 'select')
             {
-                document.getElementById('tipue1').src = 'schools/default/tipuesearch/tipuesearch_set.js';
-                document.getElementById('tipue2').src = '';
-                document.getElementById('tipue3').href = 'schools/default/tipuesearch/tipuesearch.css';
-                document.getElementById('tipue4').src = 'schools/default/tipuesearch/tipuesearch.min.js';
                 document.getElementById('search').innerHTML = '';
                 writeCookie('input',undefined,7) 
                 return;
             }
-            document.getElementById('tipue2').src = "schools/" + id.value.split(' ')[0] + "/tipuesearch/tipuesearch_content.js";
-            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="on" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
+            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
             writeCookie('input',id.value,7) 
         }
 
