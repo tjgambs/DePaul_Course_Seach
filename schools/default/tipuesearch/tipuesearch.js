@@ -211,7 +211,7 @@ http://www.tipue.com/search
                                         if (tipuesearch_in.pages[i].text.search(pat) != -1)
                                         {
                                              var m_c = tipuesearch_in.pages[i].text.match(pat).length;
-                                             score += (20 * m_c);
+                                             score += (0 * m_c);
                                         }
                                         
                                         if (set.highlightTerms)
