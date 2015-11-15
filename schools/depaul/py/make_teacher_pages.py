@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 #Created by Timothy Gamble
-#tjgambs@gmail.com
+#mocksched@gmail.com
 
 from BeautifulSoup import BeautifulSoup as Soup
 import urllib
@@ -139,7 +139,7 @@ def create_teacher_webpage(id,name,values):
 			html += '</div></div></div>'
 		html += '</div>'
 		html += '<div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div>'
-		html += '<div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>';
+		html += '<div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>';
 		html += '</body>'
 		html += '</html>'
 
