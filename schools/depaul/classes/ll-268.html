@@ -117,7 +117,7 @@ The skills you learn in this class are widely applicable and will help you impro
 		success: function(response)
 	    {
 	    	begin = response.indexOf('"docs":') + 7;
-	    	end = response.length - 150;
+	    	end = response.length - 151;
 	    	data = jQuery.parseJSON(response.substr(begin,end));
 
 	    	for (i of data)

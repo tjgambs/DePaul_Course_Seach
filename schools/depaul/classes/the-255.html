@@ -112,7 +112,7 @@ discover how the ritual of theatre has been used to create the eclectic quilt of
 		success: function(response)
 	    {
 	    	begin = response.indexOf('"docs":') + 7;
-	    	end = response.length - 150;
+	    	end = response.length - 151;
 	    	data = jQuery.parseJSON(response.substr(begin,end));
 
 	    	for (i of data)

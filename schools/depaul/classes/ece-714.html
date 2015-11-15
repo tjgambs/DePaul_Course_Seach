@@ -113,7 +113,7 @@ The seminar will have the following objectives:  1) In-depth analysis of the con
 		success: function(response)
 	    {
 	    	begin = response.indexOf('"docs":') + 7;
-	    	end = response.length - 150;
+	    	end = response.length - 151;
 	    	data = jQuery.parseJSON(response.substr(begin,end));
 
 	    	for (i of data)

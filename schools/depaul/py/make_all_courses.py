@@ -126,7 +126,7 @@ def create_page(full_name,description,course_url):
 		success: function(response)
 	    {
 	    	begin = response.indexOf('"docs":') + 7;
-	    	end = response.length - 150;
+	    	end = response.length - 151;
 	    	data = jQuery.parseJSON(response.substr(begin,end));
 
 	    	for (i of data)
