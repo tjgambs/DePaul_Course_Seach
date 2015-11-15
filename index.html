@@ -21,8 +21,8 @@
         </script>
     </head>
 <body>
-    <div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#000">Course Cart</a></h3></div>
-    <div class="center"><div class="inner"><a href="index.html" style="text-decoration:none;"><h1>MockSched</h1></a><h3 id="name"></h3></div></div>
+    <div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#333">Course Cart</a></h3></div>
+    <div class="center"><div class="inner"><a href="search.html" style="text-decoration:none;"><h1>MockSched</h1></a><h3 id="name"></h3></div></div>
 
     <h2 class="center">Please select your university.</h2>
     <div class="select-style">
@@ -48,7 +48,7 @@
                 writeCookie('input',undefined,7) 
                 return;
             }
-            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name, Course Number, Professor Name or General Keyword">';
+            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name or General Keyword" style="width:100%;">';
             writeCookie('input',id.value,7) 
         }
 

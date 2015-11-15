@@ -109,9 +109,11 @@ def create_teacher_webpage(id,name,values):
 
 	with open('../teachers/' + name.replace(' ','-').replace('/','').lower() + '.html','w') as output:
 		html = '<!DOCTYPE html><html><head><title>' + name + ' - ' + values[0] + '</title>'
-		html +=	'''<link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css"><link rel="shortcut icon" href="../../../icon.png"></head><style type="text/css">img.alignleft{ float: left; 
-					margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 100px;float: left;padding-bottom:30px;padding-top: 20px;}
-					#right{height: 100px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><h1>'''
+		html +=	'''<link rel="stylesheet" type="text/css" href="../../../css/stylesheet.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet"><link rel="stylesheet" id="tipue3" type="text/css" href="../../default/tipuesearch/tipuesearch.css"><link rel="shortcut icon" href="../../../icon.png"></head><style type="text/css">img.alignleft{ float: left; 
+					margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
+					#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body><div><span><h3><a href="../../../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span><span>
+					<h1 style="float:left; padding: 0px; padding-right:2%;">MockSched</a></h1><form action="../../../search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name or General Keyword" style="width:40%;"></form></span><div><br /><br /><h1>'''
 		html += name + '<hr></h1><div><h2>'
 
 		#Adds the professors overall rankings
@@ -123,7 +125,7 @@ def create_teacher_webpage(id,name,values):
 
 		#Adds the student reviews to the webpage
 		for i in reviews:
-			html += '<div id="container"><div id="left">'
+			html += '<div id="container" class="review"><div id="left">'
 			
 			html += 'Date: ' + str(i['date']) + '<br>'
 			html += 'Class Name: ' + str(i['class_name']) + '<br>'
@@ -135,7 +137,11 @@ def create_teacher_webpage(id,name,values):
 			html += '</div><div id="right"><div>'
 			html += i['comments']
 			html += '</div></div></div>'
-		html += '</body></html>'
+		html += '</div>'
+		html += '<div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div>'
+		html += '<div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:tjgambs@gmail.com?subject=MockSched">Developer</a></div>';
+		html += '</body>'
+		html += '</html>'
 
 		output.write(html.encode("utf-8", "ignore"))
 
