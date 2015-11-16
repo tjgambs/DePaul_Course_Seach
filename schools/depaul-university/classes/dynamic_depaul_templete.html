@@ -25,10 +25,10 @@
 </head>
 <body id="body">
 <div>
-	<span><h3><a href="../../../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+	<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
 	<span>
-		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../../../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
-		<form action="../../../search.html">
+		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
+		<form action="../search.html">
 			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name or General Keyword" style="width:40%;">
 		</form>
 	</span>
@@ -135,7 +135,7 @@ url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc
 		success: function(response)
 	    {
 	    	begin = response.indexOf('"docs":') + 7;
-	    	end = response.length - 150;
+	    	end = response.length - 151;
 	    	data = jQuery.parseJSON(response.substr(begin,end));
 
 	    	for (i of data)
