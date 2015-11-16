@@ -2,15 +2,10 @@
     <head>
     	<title>MockSched</title>
         <link rel="shortcut icon" href="icon.png">
-
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/stylesheet.css">
-
-        <script type="text/javascript" id="tipue1" src="schools/default/tipuesearch/tipuesearch_set.js"></script>
-        <script type="text/javascript" id="tipue2" src="schools/depaul/tipuesearch/tipuesearch_content.js"></script>
-        <link rel="stylesheet" id="tipue3" type="text/css" href="schools/default/tipuesearch/tipuesearch.css">
-        <script type="text/javascript" id="tipue4" src="schools/default/tipuesearch/tipuesearch.min.js"></script>
+        <link rel="stylesheet" type="css" href="css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="schools/default/tipuesearch/tipuesearch.css">
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,53 +16,37 @@
         </script>
     </head>
 <body>
-    <div class="right" class="inner"><h3><a href="course-cart.html" style="text-decoration:none; color:#333">Course Cart</a></h3></div>
-    <div class="center"><div class="inner"><h1>MockSched</h1><h3 id="name"></h3></div></div>
-
-    <h2 class="center">Please select your university.</h2>
+    <div class="right">
+        <h3 id="coursecart"></h3>
+    </div>
+        <div class="center">
+            <h1>MockSched</h1>
+        </div>
+        <h2 class="center">Select Your University</h2>
     <div class="select-style">
         <select onclick="showSearch(this)" onchange="showSearch(this)">
             <option value="select">Select</option>
-            <option value="depaul university">DePaul University</option>
+            <option value="depaul-university">DePaul University</option>
         </select>   
     </div>
     <div class="block" style="padding-top: 2%">
-    
-    <form action="search.html" id="search" class="search"></form>
-    <div id="tipue_search_content"></div>
-
+    <form action="" id="search"></form>
     <div class="center ital" style="padding: 0%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
-
-    <script>
-
-        function showSearch(id)
-        {
-            if (id.value == 'select')
-            {
-                document.getElementById('search').innerHTML = '';
-                writeCookie('input',undefined,7) 
-                return;
-            }
-            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name or General Keyword" style="width:100%;">';
-            writeCookie('input',id.value,7) 
-        }
-
-        function writeCookie(name,value,days) 
-        {
-            var date, expires;
-            if (days) 
-            {
-                date = new Date();
-                date.setTime(date.getTime()+(days*24*60*60*1000));
-                expires = "; expires=" + date.toGMTString();
-            }
-            else
-            {
-                expires = "";
-            }
-            document.cookie = name + "=" + value + expires + "; path=/";
-        }
-
-    </script>
 </body>
+<script>
+    function showSearch(id)
+    {
+        if (id.value == 'select')
+        {
+            document.getElementById('search').innerHTML = '';
+            document.getElementById('coursecart').innerHTML = '';
+        }
+        else
+        {
+            document.getElementById('search').innerHTML = '<input type="text" name="q" id="tipue_search_input" autocomplete="off" required placeholder="Enter a Course Name or General Keyword" style="width:100%;">';
+            document.getElementById('search').action = 'schools/' + id.value + '/search.html'
+            document.getElementById('coursecart').innerHTML = '<a href="schools/' + id.value + '/course-cart.html" style="text-decoration:none; color:#333">Course Cart</a>';
+        }
+    }
+</script>
 </html>
