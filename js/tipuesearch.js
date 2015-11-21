@@ -68,7 +68,7 @@ http://www.tipue.com/search
                                         "text": desc,
                                         "tags": cont,
                                         "url": tipuesearch_pages[i] 
-                                   });    
+                                   });
                               });
                     }
                }

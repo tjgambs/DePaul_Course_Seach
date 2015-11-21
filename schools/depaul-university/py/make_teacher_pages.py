@@ -358,8 +358,8 @@ def create_teacher_webpage(id,name,values):
 						var number = document.getElementsByClassName('number')[0].value
 						if(isNaN(number) == false)
 						{
-							search = prefix.toUpperCase() + ' ' + number
-							document.getElementById('tipue_search_input').value = '"'+search+'"'
+							search = prefix.toUpperCase() + '  ' + number
+							document.getElementById('tipue_search_input').value = '" '+search+'"'
 							document.getElementById('field').submit()
 						}
 					}

@@ -408,8 +408,8 @@ def create_page(full_name,description,course_url):
 		var number = document.getElementsByClassName('number')[0].value
 		if(isNaN(number) == false)
 		{
-			search = prefix.toUpperCase() + ' ' + number
-			document.getElementById('tipue_search_input').value = '"'+search+'"'
+			search = prefix.toUpperCase() + '  ' + number
+			document.getElementById('tipue_search_input').value = '" '+search+'"'
 			document.getElementById('field').submit()
 		}
 	}
@@ -466,7 +466,9 @@ def send_to_be_indexed(items):
 			url = '""'
 
 			if i[0]:
-				title = clean_index(i[0])
+				temp = i[0].split(' ')
+				temp[0] = ' '+temp[0]+' '
+				title = clean_index(' '.join(temp))
 			if i[1]:
 				text = clean_index(i[1])
 			if i[2]:
