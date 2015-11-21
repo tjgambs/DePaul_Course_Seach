@@ -324,8 +324,6 @@ In this class, you will have the opportunity to practice your interviewing skill
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -424,6 +422,11 @@ In this class, you will have the opportunity to practice your interviewing skill
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

@@ -387,7 +387,9 @@ def create_teacher_webpage(id,name,values):
 					    }
 					});
 
-				 	$(".prefix").select2();
+				 	$( document ).ready(function() {
+    					$(".prefix").select2();
+					});
 				</script>'''
 		html += '</html>'
 

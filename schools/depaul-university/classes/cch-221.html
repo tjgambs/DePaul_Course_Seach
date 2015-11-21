@@ -328,8 +328,6 @@ Student will have an opportunity to speak at each class as there will be 3 short
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -428,6 +426,11 @@ Student will have an opportunity to speak at each class as there will be 3 short
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

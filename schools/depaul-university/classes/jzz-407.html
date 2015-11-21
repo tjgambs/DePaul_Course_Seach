@@ -323,8 +323,6 @@ Students must be registered for applied lessons during the quarter the recital i
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ Students must be registered for applied lessons during the quarter the recital i
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

@@ -323,8 +323,6 @@ discover how the ritual of theatre has been used to create the eclectic quilt of
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ discover how the ritual of theatre has been used to create the eclectic quilt of
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

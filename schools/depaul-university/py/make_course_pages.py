@@ -337,8 +337,6 @@ def create_page(full_name,description,course_url):
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -437,6 +435,11 @@ def create_page(full_name,description,course_url):
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>'''

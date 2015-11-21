@@ -323,8 +323,6 @@ PSY 241 and PSY 242 may be taken in either order; one is not a prerequisite for 
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ PSY 241 and PSY 242 may be taken in either order; one is not a prerequisite for 
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

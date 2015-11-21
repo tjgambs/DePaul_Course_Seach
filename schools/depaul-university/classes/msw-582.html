@@ -323,8 +323,6 @@ It is required that this course be taken concurrently with MSW 592 (Advanced Fie
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ It is required that this course be taken concurrently with MSW 592 (Advanced Fie
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

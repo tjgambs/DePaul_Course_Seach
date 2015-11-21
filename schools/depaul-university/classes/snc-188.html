@@ -324,8 +324,6 @@ An introduction to moral philosophy with emphasis on the conflict between "moral
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -424,6 +422,11 @@ An introduction to moral philosophy with emphasis on the conflict between "moral
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

@@ -324,8 +324,6 @@ Prerequisites: DC 201</h2></body><script>url = "https://crossorigin.me/http://of
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -424,6 +422,11 @@ Prerequisites: DC 201</h2></body><script>url = "https://crossorigin.me/http://of
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

@@ -323,8 +323,6 @@ Cross-listed as CPL 355.</h2></body><script>url = "https://crossorigin.me/http:/
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ Cross-listed as CPL 355.</h2></body><script>url = "https://crossorigin.me/http:/
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

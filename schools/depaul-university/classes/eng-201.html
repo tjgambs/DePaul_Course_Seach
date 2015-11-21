@@ -323,8 +323,6 @@ WRD 103 or HON 100 is recommended.</h2></body><script>url = "https://crossorigin
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ WRD 103 or HON 100 is recommended.</h2></body><script>url = "https://crossorigin
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>

@@ -323,8 +323,6 @@ PREREQUISITE(S): ANI 220 and ANI 240 and junior standing</h2></body><script>url 
 	    	}
 	    }
 	});
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-	$(".prefix").select2();
 	
 	function addToCart(contents)
 	{
@@ -423,6 +421,11 @@ PREREQUISITE(S): ANI 220 and ANI 240 and junior standing</h2></body><script>url 
 	    {
 	        submitForm()
 	    }
+	});
+
+	$( document ).ready(function() {
+    	$(".prefix").select2();
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});
 </script>
 </html>
