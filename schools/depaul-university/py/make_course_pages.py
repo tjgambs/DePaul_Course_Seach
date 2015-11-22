@@ -1,4 +1,5 @@
 import json
+import urllib
 
 def create_page(full_name,description,course_url):
 	short_url = ' '.join(full_name.split()[:2]).replace(';','')
@@ -473,7 +474,11 @@ def create_page(full_name,description,course_url):
 	webpage_name = ('classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html')
 	with open('../'+webpage_name,'w') as output:
 			output.write(html)
-	return [full_name.replace(';',''),description,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
+	data = json.loads(urllib.urlopen(course_url).read())
+	names = []
+	for i in data:
+		names.append(i['first_name'] + ' ' + i['last_name'])
+	return [full_name.replace(';',''),description,names,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
 
 def create_all():
 	with open('../classes.json','r') as input:
@@ -499,7 +504,10 @@ def send_to_be_indexed(items):
 			if i[1]:
 				text = clean_index(i[1])
 			if i[2]:
-				url = clean_index(i[2])
+				tags = clean_index(','.join(i[2]))
+			if i[3]:
+				url = clean_index(i[3])
+
 
 			output.write('{"title":'+ title +',"text":'+ text +',"tags":'+ tags +',"url": '+url+'},\n')
 		output.write(']};')
