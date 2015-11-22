@@ -22,17 +22,14 @@
 <body>
 	<div class="right" class="inner">
 		<h3>
-			<a href="" style="text-decoration:none; color:#333; visibility: hidden;" id="course-cart">Course Cart</a>
+			<a href="" style="text-decoration:none; color:#333;">Course Cart</a>
 		</h3>
 	</div>
 	<div align="center">
 		<h1><a href="index.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
-		<select id="select-option" style="width: 30%" onchange="select()" onclick="select()">
-			<option value="select">Select Your University</option>
-			<option value="depaul-university">DePaul University</option>
-		</select>
+		<h3>DePaul University</h3>
 	</div>
-	<div id="search-box" style="text-align: center; visibility: hidden;">
+	<div id="search-box" style="text-align: center;">
 		<div style="display: inline-block; padding-right:10px">
 			<div style="padding: 3%; text-align:left;">COURSE PREFIX</div>
 			<select class="prefix">
@@ -233,23 +230,6 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
-	function select()
-	{
-		value = document.getElementById('select-option').value
-		if(value == 'depaul-university')
-		{
-			document.getElementById('search-box').style.visibility = 'visible'
-			document.getElementById('course-cart').style.visibility = 'visible'
-			document.getElementById('course-cart').href = 'schools/'+value+'/course-cart.html'
-		}
-		if(value == 'select')
-		{
-			document.getElementById('search-box').style.visibility = 'hidden'
-			document.getElementById('course-cart').style.visibility = 'hidden'
-			document.getElementById('course-cart').href = ''
-		}
-	}
-
 	function overlay() 
 	{
 		el = document.getElementById("overlay");
