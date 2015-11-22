@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Erica Neidlinger</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 3.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/19/2013<br>Class Name: MUS101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>To the point and effective, Dr. Neidlinger is a very musical and precise conductor. Her knowledge goes well beyond the score and aims to change the ensemble's perception. There is always something to learn in her rehearsals. She could be more stern with individuals that come unprepared.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: MEN101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a little tough if you prove that you don't know your stuff or show up even the slightest bit later than she expects but it really isn't that bad. She is a great rehearser and knows exactly what she wants to get accomplished. Over all, she's a great director and is very efficient.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2011<br>Class Name: MEN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Neidlinger has been one my most influential teachers while at DePaul.  She genuinely cares about students and is a excellent clinician.  The amount of depth and understanding she has of each work is apparent in both rehearsal and performance.  In my opinion she leaves other conductors I've worked with in the dust.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2010<br>Class Name: MUS304<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Where to begin...nice woman with good intentions, but a terrible conductor. Completely biased towards the woodwinds and makes EVERY wind symphony rehearsal a flute/clarinet/oboe sectional. We spend literally half of each rehearsal listening to her talk...we've timed it. I only bother going because the stipulations of my scholarship require me to.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Erica Neidlinger</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 3.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/19/2013<br>Class Name: MUS101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>To the point and effective, Dr. Neidlinger is a very musical and precise conductor. Her knowledge goes well beyond the score and aims to change the ensemble's perception. There is always something to learn in her rehearsals. She could be more stern with individuals that come unprepared.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: MEN101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a little tough if you prove that you don't know your stuff or show up even the slightest bit later than she expects but it really isn't that bad. She is a great rehearser and knows exactly what she wants to get accomplished. Over all, she's a great director and is very efficient.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2011<br>Class Name: MEN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Neidlinger has been one my most influential teachers while at DePaul.  She genuinely cares about students and is a excellent clinician.  The amount of depth and understanding she has of each work is apparent in both rehearsal and performance.  In my opinion she leaves other conductors I've worked with in the dust.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2010<br>Class Name: MUS304<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Where to begin...nice woman with good intentions, but a terrible conductor. Completely biased towards the woodwinds and makes EVERY wind symphony rehearsal a flute/clarinet/oboe sectional. We spend literally half of each rehearsal listening to her talk...we've timed it. I only bother going because the stipulations of my scholarship require me to.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

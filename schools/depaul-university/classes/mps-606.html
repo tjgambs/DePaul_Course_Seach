@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>MPS 606 LEADERSHIP IN HIGHER EDUCATION ADMINISTRATION</h1><h2>This course introduces students to the organization and management of institutions of higher education with an emphasis on the administrative structures and functions of colleges and universities, as well as organizational theory as it applies to institutions of higher education. This course explores topics such as leadership, governance, strategic planning and budgeting, and human resource management, and also introduces students to allied higher education research and advocacy organizations.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MPS&catalog_nbr=606",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

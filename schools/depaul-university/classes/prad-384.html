@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>PRAD 384 INTERNATIONAL PUBLIC RELATIONS</h1><h2>International public relations is an upper-level undergraduate course designed to introduce students to the global perspective of public relations.  A primary goal of the course is to help students become knowledgeable of the ever-increasing development of the field across the world and the opportunities it offers to them, especially in government, transnational businesses, non-governmental organizations, and global agencies. Using a combination of real-world cases, interaction with industry professionals, on-site visit(s), and engagement with the multicultural aspects of the city of Chicago, students will put the class content in perspective and acquire competencies to be effective communicators and global public relations managers.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRAD&catalog_nbr=384",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

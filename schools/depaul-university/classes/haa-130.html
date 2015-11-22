@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>HAA 130 EUROPEAN ART</h1><h2>This introductory-level course examines the art historical methods and their application to a broad chronological and select survey of European art and architecture  from pre-history to the 20th century. Field trips to Chicago art institutions extend the visual traditions and critical methods taught in class lectures and discussions.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HAA&catalog_nbr=130",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

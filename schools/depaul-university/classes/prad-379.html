@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>PRAD 379 ADVERTISING MEDIA PLANNING</h1><h2>This course examines the diverse capabilities of various media available to advertisers and the process by which advertising media plans are constructed to help meet marketing communication objectives for a product or service. The course provides fundamentals on the language, tools, research methods and concepts employed in the media planning process and helps students build media plans using appropriate objectives, strategies and tactics. The course will help students develop a heightened appreciation for the roles of logic, analysis, and insight in the media planning and buying process.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRAD&catalog_nbr=379",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

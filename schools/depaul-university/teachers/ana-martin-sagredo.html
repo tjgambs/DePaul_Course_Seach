@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Ana Martin Sagredo</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.7<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/29/2015<br>Class Name: SPN105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Ana is from Spain, so she is definitely very knowledgable about Spanish culture and the language. Many times during class, however, it was almost impossible to understand her speaking. I've gotten As in my other spanish courses but I and most people in the class struggled with this course.  I would not recommend. </div></div></div><div id="container" class="review"><div id="left">Date: 12/23/2010<br>Class Name: SPN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Sagredo is a very fluent Spanish speaker who comes from Spain. She makes Spanish easy to understand and her tests are relatively easy if you study. Do your homework, pay attention in class, study for the tests, and you'll get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2010<br>Class Name: SPN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ana is a great teacher. She's really nice and helpful and shes from Spain so we know she's legit. Sometimes she expects a lot out of you but she means well and i liked her.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Ana Martin Sagredo</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.7<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/29/2015<br>Class Name: SPN105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Ana is from Spain, so she is definitely very knowledgable about Spanish culture and the language. Many times during class, however, it was almost impossible to understand her speaking. I've gotten As in my other spanish courses but I and most people in the class struggled with this course.  I would not recommend. </div></div></div><div id="container" class="review"><div id="left">Date: 12/23/2010<br>Class Name: SPN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Sagredo is a very fluent Spanish speaker who comes from Spain. She makes Spanish easy to understand and her tests are relatively easy if you study. Do your homework, pay attention in class, study for the tests, and you'll get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2010<br>Class Name: SPN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ana is a great teacher. She's really nice and helpful and shes from Spain so we know she's legit. Sometimes she expects a lot out of you but she means well and i liked her.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>James Haefner</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.67<br>Clarity: 4.67<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/03/2006<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a very good techer, funny and the class is easy. He only gives a midterm and the final and they both are take home exams. How sweet is that.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This man is sharp and can open your eyes to the real world of marketing.  He jokes around a lot, but still focuses on the material. His grading is fair and the mid-term and final are both take-home essays. He is one of my favorite professors I have taken so far.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>What a breeze! Easy A...Two exams( midterm & final) - both take home. Great sense of humor. Welcome to DePaul!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>James Haefner</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.67<br>Clarity: 4.67<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/03/2006<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a very good techer, funny and the class is easy. He only gives a midterm and the final and they both are take home exams. How sweet is that.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This man is sharp and can open your eyes to the real world of marketing.  He jokes around a lot, but still focuses on the material. His grading is fair and the mid-term and final are both take-home essays. He is one of my favorite professors I have taken so far.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>What a breeze! Easy A...Two exams( midterm & final) - both take home. Great sense of humor. Welcome to DePaul!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>MUS 282 LOVE SONGS</h1><h2>This course will investigate case studies of love songs in the Western tradition, considering contemporary conventions, the response of composers and poets to expectations, and the relation between first-person song and autobiography. In this interdisciplinary class, students will explore the historically contingent nature of musical and poetic convention, changing ideas of love and gender relationships, and the importance of biography in the reception of love songs. While the course will have a broad historical scope, an emphasis on modern popular music will allow students to apply critical reading and listening skills to the music they already appreciate.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MUS&catalog_nbr=282",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

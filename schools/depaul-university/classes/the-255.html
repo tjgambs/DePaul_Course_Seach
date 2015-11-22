@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>THE 255 ANGELS, PUNKS AND RAGING QUEENS:THE ECLECTIC QUILT OF AIDS DRAMA</h1><h2>Acquired Immune Deficiency Syndrome (AIDS) has left an indelible mark on both the history and culture of the world. While fear and loss can paralyze, they can also mobilize. In addition to destroying generations of artists, AIDS has become what some call "the great unifier," giving voice to a new generation of theatre artists. But what are these voices? Cries for social change? Political rants? Stories of remembrance? Lessons to educate? All of the above? What does AIDS mean when it appears onstage in a performance? By interpreting and analyzing plays from both national and global AIDS perspectives, reading critical and reflective essays, and through discussion, students in the course will
 discover how the ritual of theatre has been used to create the eclectic quilt of voices that is AIDS drama.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=255",$.ajax({
 	    url:url,
@@ -322,6 +329,26 @@ discover how the ritual of theatre has been used to create the eclectic quilt of
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

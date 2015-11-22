@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>HC 253 FAMILY LIFE: THE PAST, PRESENT AND FUTURE OF FAMILIES</h1><h2>In history, families have been defined as mother, father, and children.  In our current experience, more families differ from that model than comply with it.  Family structure is evolving. Missing fathers, Single parents, and Blended families are only a few of the changes to the family structure that have occurred with some significance beginning in the 1950s.
  
 What influences family structure? Do economics and education make a difference?  Are race and ethnicity important factors? What about gender, personality and religion? Is the two parent family necessary? What role do grandparents and great grandparents play in the changing family?
@@ -325,6 +332,26 @@ Perhaps the most important question we can ask about the family is what comes ne
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>ORGC 354 EMPLOYMENT INTERVIEWING</h1><h2>This course examines the theory and practice of on-the-job interviewing and is especially helpful to those students who will soon graduate and transition into the world of full-time work. Through the class, you will learn to: a) identify personal transferable skills acquired through a range of school and work activities and jobs; b ) identify careers/professions whose functional makeup requires professionals with your skills; c) apply to an ideal job through a carefully crafted cover letter and resume; d) open and close any interview effectively; e) build an interview schedule for any information-seeking interview; f) align different types of questions with interview goals and in-the-moment interview developments; g) learn to avoid question-asking pitfalls; and h) respond effectively to competency-based employment interview questions.
 
 In this class, you will have the opportunity to practice your interviewing skills in simulated probing and employment screening interviews. While the principal emphasis of the class is on the employment screening interview, many interviewing skills and pitfalls that translate equally well to other interview contexts will be learned as well.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ORGC&catalog_nbr=354",$.ajax({
@@ -323,6 +330,26 @@ In this class, you will have the opportunity to practice your interviewing skill
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

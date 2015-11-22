@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Victoria Van Kirk Pride</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/05/2014<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Ms. Van Kirk is awesome. She's very encouraging and helpful and the class was fun and easy. 10/10 would take again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2013<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice/cool lady, easy class, I learned a couple of helpful things...that about says it all. Nothing negative to say about her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Van Kirk is extremely sweet and really tries to bring about the best work a student can offer. Her assignment are fairly easy and extremely helpful for the final research paper. If you have her, keep her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Van Kirk is the best professor I have had so far. She is extremely helpful and knowledgable. I've never felt that a professor cared more about my grade. The assignments build on each other, making the research paper is not as hard as it could have been. All in all, Van Kirk made WRD 104 a good experience.</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>2nd time taking this class and Professor VK is awesome! She is very understanding and will always give you the benefit of the doubt. Her assignments are pretty easy compared to my first WRD 104 class. She tries to get you to know others in the class which I think is a great idea, especially for freshmen. Take her if you can!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Victoria Van Kirk Pride</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/05/2014<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Ms. Van Kirk is awesome. She's very encouraging and helpful and the class was fun and easy. 10/10 would take again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2013<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice/cool lady, easy class, I learned a couple of helpful things...that about says it all. Nothing negative to say about her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Van Kirk is extremely sweet and really tries to bring about the best work a student can offer. Her assignment are fairly easy and extremely helpful for the final research paper. If you have her, keep her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Van Kirk is the best professor I have had so far. She is extremely helpful and knowledgable. I've never felt that a professor cared more about my grade. The assignments build on each other, making the research paper is not as hard as it could have been. All in all, Van Kirk made WRD 104 a good experience.</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>2nd time taking this class and Professor VK is awesome! She is very understanding and will always give you the benefit of the doubt. Her assignments are pretty easy compared to my first WRD 104 class. She tries to get you to know others in the class which I think is a great idea, especially for freshmen. Take her if you can!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Darrell Moore</h1><hr><div><h2>Overall Quality: 3.25<br><br>Helpfulness: 3.5<br>Clarity: 3.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/08/2014<br>Class Name: PHL231<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Darrell is one of the most amazing professors I've EVER had. This course fulfilled a requirement, but ended up being much more. Darrell pushed me to greatly improve my reading/writing as we dissected many academic works. His comments on papers were very helpful. He kept regular AND flexible office hours, working individually w/ students. TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2014<br>Class Name: PHL243<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you're black definitely take him. He hooks it up. Smart guy, but you never know where you stand with him or what he wants out of you. Grades papers very harshly for a class that is about the philosophy of film - focuses more on writing than he does on content.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Darrell Moore</h1><hr><div><h2>Overall Quality: 3.25<br><br>Helpfulness: 3.5<br>Clarity: 3.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/08/2014<br>Class Name: PHL231<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Darrell is one of the most amazing professors I've EVER had. This course fulfilled a requirement, but ended up being much more. Darrell pushed me to greatly improve my reading/writing as we dissected many academic works. His comments on papers were very helpful. He kept regular AND flexible office hours, working individually w/ students. TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2014<br>Class Name: PHL243<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you're black definitely take him. He hooks it up. Smart guy, but you never know where you stand with him or what he wants out of you. Grades papers very harshly for a class that is about the philosophy of film - focuses more on writing than he does on content.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

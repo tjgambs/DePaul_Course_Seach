@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>IT 394 SOFTWARE PROJECTS FOR COMMUNITY CLIENTS I</h1><h2>This is the first course in a two-quarter sequence (winter/spring) for CDM students that satisfies both the Senior Year Capstone requirement and the Junior Year Experiential Learning requirement.  The second quarter will be IT 395. You will earn four quarter hours of credit for each quarter for a total of eight quarter hours of credit.  You must complete both quarters to receive any credit. We work with a community service organization, chosen with help of the Steans Center for Community-based Service Learning.  As a community-based service learning course, students will have the opportunity to assess urban community needs in technology, and use problem-solving methods and strategies to make a substantial difference in an inner-city community group, usually by developing an application or a web site.  PREREQUISITE(S): IT 320 or CSC 355 or CSC 360</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IT&catalog_nbr=394",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

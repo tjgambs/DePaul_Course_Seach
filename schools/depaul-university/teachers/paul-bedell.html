@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Paul Bedell</h1><hr><div><h2>Overall Quality: 3.75<br><br>Helpfulness: 4.0<br>Clarity: 3.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/25/2012<br>Class Name: TDC512<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This instructor has a unique personality. In this class, he has 3 assignments (1 4-5 page paper and 2 multiple choice/True False questions). He basically reads from the book which he wrote. Get ready to hear "isn't that amazing", "it's mind boggling", and "tell your friends this at your next cocktail party". If you yawn or sleep he will stop class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2009<br>Class Name: TDC425<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The powperpoint are not his and he reads the slides word for word.  Boring!  He has a really annoying voice also.  But I will recommend the class because he is not difficult at all if you just need it to meet degree requirements.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2007<br>Class Name: TDC532<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Excellent course, excellent teacher.  Very knowledgeable SME in the field.  After taking this course, my interest in Telecommunications has increased ten-fold.  I would take this professor for every single remaining class I have, if I could!  Homework assignments are very straight-forward.  He does an awesome job of preparing you for the exams! A+</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2006<br>Class Name: TDC512<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Paul is a pretty cool guy and teaches TDC512 well, but there are a couple weird things about him. He is very slow and loud. The slow part I like, not so much the loud part. He is very disorganized but demands organization from you. He might want exactly 93 to get an A, but he would have mistakes in the final.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Paul Bedell</h1><hr><div><h2>Overall Quality: 3.75<br><br>Helpfulness: 4.0<br>Clarity: 3.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/25/2012<br>Class Name: TDC512<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This instructor has a unique personality. In this class, he has 3 assignments (1 4-5 page paper and 2 multiple choice/True False questions). He basically reads from the book which he wrote. Get ready to hear "isn't that amazing", "it's mind boggling", and "tell your friends this at your next cocktail party". If you yawn or sleep he will stop class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2009<br>Class Name: TDC425<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The powperpoint are not his and he reads the slides word for word.  Boring!  He has a really annoying voice also.  But I will recommend the class because he is not difficult at all if you just need it to meet degree requirements.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2007<br>Class Name: TDC532<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Excellent course, excellent teacher.  Very knowledgeable SME in the field.  After taking this course, my interest in Telecommunications has increased ten-fold.  I would take this professor for every single remaining class I have, if I could!  Homework assignments are very straight-forward.  He does an awesome job of preparing you for the exams! A+</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2006<br>Class Name: TDC512<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Paul is a pretty cool guy and teaches TDC512 well, but there are a couple weird things about him. He is very slow and loud. The slow part I like, not so much the loud part. He is very disorganized but demands organization from you. He might want exactly 93 to get an A, but he would have mistakes in the final.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Clifford Ang</h1><hr><div><h2>Overall Quality: 2.0<br><br>Helpfulness: 2.0<br>Clarity: 2.0<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/04/2012<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not a bad guy.  Grade is based on a Midterm, Final, Group Project w/Presentation, two Problem Sets, and Participation.  Tests are tough but you will receive a better grade than your actual percentage.   He has good real world experience and is willing to help you out for the most part.  Study the slides before class and you will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2011<br>Class Name: FIN330<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He seems like a nice person but does not teach well. I did not learn anything in his class. Take him if you are only looking to pass.</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2011<br>Class Name: FIN330<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a terrible professor, but he will not fail you. He doesn't care about the class and he is extremely boring. His grading scale is based on class ranking with about 15% getting As, 15% A-s, and the rest B+ through B-. He will not give you a grade lower than B- no matter how poorly you perform.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2011<br>Class Name: FIN330<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Class Participation 5% (CLASS AVERAGE 10%) Problem Sets 10% (CLASS AVERAGE 60%) Project 25% (CLASS AVERAGE 75%) He mocks you during the presentation, so be prepared to answer all the question and does not explain the project well. Does not answer your question with direct directions.  Mid-term Exam 25% (CLASS AVERAGE 50%) Final Exam 35% (DON'T </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Clifford Ang</h1><hr><div><h2>Overall Quality: 2.0<br><br>Helpfulness: 2.0<br>Clarity: 2.0<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/04/2012<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not a bad guy.  Grade is based on a Midterm, Final, Group Project w/Presentation, two Problem Sets, and Participation.  Tests are tough but you will receive a better grade than your actual percentage.   He has good real world experience and is willing to help you out for the most part.  Study the slides before class and you will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2011<br>Class Name: FIN330<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He seems like a nice person but does not teach well. I did not learn anything in his class. Take him if you are only looking to pass.</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2011<br>Class Name: FIN330<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a terrible professor, but he will not fail you. He doesn't care about the class and he is extremely boring. His grading scale is based on class ranking with about 15% getting As, 15% A-s, and the rest B+ through B-. He will not give you a grade lower than B- no matter how poorly you perform.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2011<br>Class Name: FIN330<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Class Participation 5% (CLASS AVERAGE 10%) Problem Sets 10% (CLASS AVERAGE 60%) Project 25% (CLASS AVERAGE 75%) He mocks you during the presentation, so be prepared to answer all the question and does not explain the project well. Does not answer your question with direct directions.  Mid-term Exam 25% (CLASS AVERAGE 50%) Final Exam 35% (DON'T </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

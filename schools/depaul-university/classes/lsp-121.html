@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>LSP 121 QUANTITATIVE REASONING AND TECHNOLOGICAL LITERACY II</h1><h2>This course provides more advanced mathematical and computational methods in the analysis and interpretation of quantitative information. Topics include databases, descriptive statistics, measures of association and their interpretation, elementary probability theory, and an introduction to algorithms and computer programming.  The course is taught in a hands-on laboratory environment where students are introduced to advanced computer tools for data analysis, including databases and a professional statistical software package. PREREQUISITE(S): LSP 120 or a passing score on the LSP 120 Proficiency Exam. As an alternative to taking LSP 121, this requirement can be met by passing a separate LSP 121 Proficiency Exam (see qrc.depaul.edu). A student whose major requires calculus is exempt from this requirement.  Formerly ISP 121.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=LSP&catalog_nbr=121",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

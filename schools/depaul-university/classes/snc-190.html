@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>SNC 190 AFRICAN-AMERICAN STUDIES IN CRITICAL PERSPECTIVE</h1><h2>This course is offered in SNL?s online program.  Online course conform to University scheduling, but are conducted exclusively through Desire to Learn (D2L).  There are no in person class meetings.
 
 This course is important for students who seek to gain a comprehensive understanding of African-American history in the United States. It will begin with discussions of African culture, the Atlantic Slave Trade, and early forms of slavery/indenturing. It will pay particular attention to the colonial and Revolutionary experience, delving into the mass exodus of Africans during the Revolutionary War, and African-American's role and position in the country's formative years. Enslavement, the Civil War and Reconstruction will follow as key areas of study. In every discussion, students will be asked to look for parallels between the contemporary and 18th and 19th century African-American experience and, where appropriate, to identify key social and cultural thinkers and leaders of the various historical periods. The primary texts for the course will be John Hope Franklin's From Slavery to Freedom, articles and readings written by scholars and important early African-American artists and intellectuals, and video presentations.  Understanding the Past.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SNC&catalog_nbr=190",$.ajax({
@@ -323,6 +330,26 @@ This course is important for students who seek to gain a comprehensive understan
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Donald L Opitz</h1><hr><div><h2>Overall Quality: 2.9<br><br>Helpfulness: 2.6<br>Clarity: 3.2<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/16/2014<br>Class Name: SW208<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Completely useless. The students had to teach the course.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2013<br>Class Name: LECFOUNDATIONS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I was so unimpressed with Opitz that I withdrew from the Foundations class rather than be aggravated by his utter lack of preparation.  Don's disorganization was almost laughable. He was reading the material in class as he taught! Avoid him for Foundations- it feels like he treats it as if where study hall duty.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2011<br>Class Name: SNC701<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class was amazing mainly because i was paired up with the most amazing ladies for our group projects, so i found the class to be fun and enlightening at the same time. It was hard work but so worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2009<br>Class Name: LL250<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Opitz unfortunately is my faculty advisor, so I was unprivileged enough to take him in Foundations of Adult Learning.I forgot that he was the teacher as he had no interaction with the class and doesn't provide any feedback.He was useless during my 1st committee meeting and continues to be. He is too busy with his personal endeavors to be of use</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2007<br>Class Name: MATA201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor, Very Helpfull.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Donald L Opitz</h1><hr><div><h2>Overall Quality: 2.9<br><br>Helpfulness: 2.6<br>Clarity: 3.2<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/16/2014<br>Class Name: SW208<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Completely useless. The students had to teach the course.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2013<br>Class Name: LECFOUNDATIONS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I was so unimpressed with Opitz that I withdrew from the Foundations class rather than be aggravated by his utter lack of preparation.  Don's disorganization was almost laughable. He was reading the material in class as he taught! Avoid him for Foundations- it feels like he treats it as if where study hall duty.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2011<br>Class Name: SNC701<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class was amazing mainly because i was paired up with the most amazing ladies for our group projects, so i found the class to be fun and enlightening at the same time. It was hard work but so worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2009<br>Class Name: LL250<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Opitz unfortunately is my faculty advisor, so I was unprivileged enough to take him in Foundations of Adult Learning.I forgot that he was the teacher as he had no interaction with the class and doesn't provide any feedback.He was useless during my 1st committee meeting and continues to be. He is too busy with his personal endeavors to be of use</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2007<br>Class Name: MATA201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor, Very Helpfull.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

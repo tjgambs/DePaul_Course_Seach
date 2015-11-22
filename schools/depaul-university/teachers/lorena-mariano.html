@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Lorena Mariano</h1><hr><div><h2>Overall Quality: 4.25<br><br>Helpfulness: 5.0<br>Clarity: 3.5<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This teacher cares if students learn the concepts. She is willing to help you out. But, their are 3 books to read each with a book report and class discussion.Along with 5 quizzes and final paper. Class is not easiest LSP 200 ( multiculturalism) but the professor tries to relate to students. Wish class had less work,overall 3.5/5</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2010<br>Class Name: AMS230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Take her!! She is SUCH a great teacher. She is so sweet and really works with her students to make sure they succeed.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Lorena Mariano</h1><hr><div><h2>Overall Quality: 4.25<br><br>Helpfulness: 5.0<br>Clarity: 3.5<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This teacher cares if students learn the concepts. She is willing to help you out. But, their are 3 books to read each with a book report and class discussion.Along with 5 quizzes and final paper. Class is not easiest LSP 200 ( multiculturalism) but the professor tries to relate to students. Wish class had less work,overall 3.5/5</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2010<br>Class Name: AMS230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Take her!! She is SUCH a great teacher. She is so sweet and really works with her students to make sure they succeed.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

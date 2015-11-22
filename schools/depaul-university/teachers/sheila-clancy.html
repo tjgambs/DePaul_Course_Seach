@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Sheila Clancy</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/26/2015<br>Class Name: JOUR245<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>I would call Clancy's class "Life Advice with Sheila Clancy". I learned more from her class than I did from any other class. She brings in her own life stories to teach us about journalism, working in a news room, dealing with people and just how to make it through life. She is very real and understanding. No textbook either!</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2015<br>Class Name: JOUR245<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Clancy is hilarious!  News Editing was not very stressful (no book to buy).  Expect news quizzes weekly, but they aren't too bad.  She's very understanding towards what students expect.  Her lectures are never dull, and she often draws on her own personal experience at past jobs in the industry.  She's a real newsperson's newsperson!  TAKE HER!!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sheila Clancy</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/26/2015<br>Class Name: JOUR245<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>I would call Clancy's class "Life Advice with Sheila Clancy". I learned more from her class than I did from any other class. She brings in her own life stories to teach us about journalism, working in a news room, dealing with people and just how to make it through life. She is very real and understanding. No textbook either!</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2015<br>Class Name: JOUR245<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Clancy is hilarious!  News Editing was not very stressful (no book to buy).  Expect news quizzes weekly, but they aren't too bad.  She's very understanding towards what students expect.  Her lectures are never dull, and she often draws on her own personal experience at past jobs in the industry.  She's a real newsperson's newsperson!  TAKE HER!!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

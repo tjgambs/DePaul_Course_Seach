@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>HTHC 525 NARRATIVES IN HEALTH CARE</h1><h2>Focusing on the performance and narrative paradigms of communication studies, the course will survey uses of performance and narrative methods to consider health communication relationships. Narrative and narrative performance are sites of health communication issues for marginalized populations, difficult conversations, and alternate means of reporting. For example, narrative and narrative performance are increasingly being used as part of medical curriculum, as a means to train health care professionals to understand the experiences of their patients, encourage deep listening, and foster different professional-patient relations. For cancer, HIV/AIDS, and other patients, performance becomes a means of speaking into mainstream and dominant discourses of health and to actively shape discourses from their own subjectivities. This increases the visibility of health care experiences in their gendered, sexualized, and racialized dimensions. Finally, narrative and narrative performance offers an additional means of visibility in catalyzing change in public, legislative, scholarly and relational arenas.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HTHC&catalog_nbr=525",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

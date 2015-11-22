@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Claudine Samanic</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.5<br>Clarity: 2.5<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/15/2015<br>Class Name: HLTH310<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>The class itself is difficult but Claudine does her best to teach it. There is one group project, 1 paper (2 pages), and a midterm and final. I paid attention in class and it was pretty easy. Just do the in class worksheets in class and you will be good.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2015<br>Class Name: HLTH310<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst professor I've ever had. Supposed to be fundamentals but felt like advanced physics. Terrible teaching methods, hard exams, long lectures. I did my homework, paid attention in class and still had a hard time. Avoid at all cost. Worse academic decision I ever took was take this class with her. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Claudine Samanic</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.5<br>Clarity: 2.5<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/15/2015<br>Class Name: HLTH310<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>The class itself is difficult but Claudine does her best to teach it. There is one group project, 1 paper (2 pages), and a midterm and final. I paid attention in class and it was pretty easy. Just do the in class worksheets in class and you will be good.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2015<br>Class Name: HLTH310<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst professor I've ever had. Supposed to be fundamentals but felt like advanced physics. Terrible teaching methods, hard exams, long lectures. I did my homework, paid attention in class and still had a hard time. Avoid at all cost. Worse academic decision I ever took was take this class with her. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

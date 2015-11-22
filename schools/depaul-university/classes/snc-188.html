@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>SNC 188 PROBLEMS AND ISSUES IN CONTEMPORARY ETHICS</h1><h2>This course is offered in SNL?s online program.  Online course conform to University scheduling, but are conducted exclusively through Desire to Learn (D2L).  There are no in person class meetings.
 
 An introduction to moral philosophy with emphasis on the conflict between "moral relativism" (or "subjective" ethics) on the one hand and "moral realism" (or "objective" ethics) on the other. During the course you will be introduced to classic theories and leading figures in the history of ethics, from Plato and Aristotle to Kant and Nietzsche. Course content will focus on issues (e.g., poverty, drug use, capital punishment, sexual behavior, euthanasia, biomedical research, animal rights, political violence) at the center of contemporary ethical debate in the United States and throughout the world.  Philosophical Inquiry.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SNC&catalog_nbr=188",$.ajax({
@@ -323,6 +330,26 @@ An introduction to moral philosophy with emphasis on the conflict between "moral
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

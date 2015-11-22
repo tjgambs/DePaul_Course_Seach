@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>T&L 413 READING/LANGUAGE ARTS IN THE MIDDLE GRADES</h1><h2>This course extends Emerging Reading and Language Arts to facilitate increased independence in students as strategic readers and competent writers. It focuses on the further development of reading comprehension and writing abilities in the intermediate grades and middle school.  Emphasis is placed on the complex nature of literacy addressing issues such as content-area literacies, learning in and across languages, and critically consuming and producing a wide variety of texts (including online, multimedia and print based).  Application of course material is facilitated through fieldwork focusing on the design, teaching, and reflection on literacy lesson(s) for intermediate learners.  COREQUISTIES: For T&L; EE majors, concurrent enrollment in LSI 446 and T&L; 583 in a public school is required.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=T%26L&catalog_nbr=413",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

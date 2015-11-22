@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>MSW 482 FOUNDATION PRACTICE II</h1><h2>This course is the second in a series of three required foundational courses (MSW 481, MSW 482 and MSW 483) designed to equip students with the basic theoretical knowledge, analytical skills, practice skills, and values needed to practice generalist social work with groups in an urban context. The course will emphasize the development, implementation, and evaluation of various forms of therapeutic groups along with some content on organizational task groups. Task groups will be covered more thoroughly in MSW 483. The course is grounded in an empowerment model with an emphasis on social justice and the Vincentian values of respect, advocacy, service, and inventiveness. This course is to be taken concurrently with MSW 492 (Foundation Field Education II) and is required of all students enrolled in the first year field sequence.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MSW&catalog_nbr=482",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

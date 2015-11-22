@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>CCS 219 THE AGING (OR REENGAGING) BRAIN?</h1><h2>In this course, we will examine the latest research on the aging process and, specifically, its relationship to the brain.  We will cover a mix of material from psychological and, especially, neuroscientific fields.  Students will also be introduced to the field of neuroplasticity, which is revolutionizing the way we understand the functioning power of the brain.  Neuroplasticity, in simple terms, is the brain's ability to rearrange its connections and, therefore, its functions based on experiences.  In other words, the brain has the capacity to literally change itself, based on experiences, to achieve positive results.  The goals of this course are to understand how the brain works, examine its impact on our daily actions, study how aging impacts brain functioning, discover the learning and adjustment potential of the brain, and apply the principles of the 3 P's.  We will use numerous examples to understand the brain, including health, work, relational, and personal settings.  Students will ultimately answer the question of whether they will have an aging or reengaging brain.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CCS&catalog_nbr=219",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

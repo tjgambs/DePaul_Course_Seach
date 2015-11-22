@@ -222,7 +222,14 @@
 	</div>
 	<br />
 	<hr>
-	<button class="generate" id="search" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+	<div id="overlay">
+	    <div>
+	        <form action="search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	    </div>
+	</div>
+	<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 	<div class="center">
 		<div style="padding-bottom: 1%;">
 			<a href="course-cart.html" style="text-decoration:none; color:#333;">
@@ -246,6 +253,27 @@
 <script>
 	formatCookies()
 	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+
 	function formatCookies()
 	{
 		classes = []
@@ -259,11 +287,9 @@
 				classes.push(temp)
 			}
 		}
-
 		document.getElementById('mocksched').style.visibility='hidden';
 		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
 		document.getElementById('empty').innerHTML = '<h2>Your course cart is currently empty. Search for courses <a href="search.html" style="color: #333;">here.</a></h2>'
-
 		if (classes.length > 0)
 		{
 			document.getElementById('mocksched').style.visibility='visible';
@@ -306,7 +332,6 @@
 			}
 			html += '<tbody></table>'
 		}
-
 		document.getElementById('body').innerHTML = html
 	}
 
@@ -362,13 +387,10 @@
 			eventRender: function (event, element, view) {
     			element.find('.fc-title').append('<div class="hr-line-solid-no-margin"></div><span style="font-size: 6px;">' + event.description + '</span></div>');
 			},
-
 		});
-
 		$('html, body').animate({
     		scrollTop: $("#calendar").offset().top
 		}, 1000);
-
 	}
 
 	function createCalendarData()
@@ -451,10 +473,10 @@
 	    }
 	});
 
-	$( document ).ready(function() {
+	$( document ).ready(function() 
+	{
     	$(".prefix").select2();
 	});
-
 </script>
 <style>
 	#calendar 

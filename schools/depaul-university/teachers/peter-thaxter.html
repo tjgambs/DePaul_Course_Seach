@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Peter Thaxter</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 5.0<br>Clarity: 4.8<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Peter is a great teacher. He is so helpful, and wants his students to succeed. His child psych class was interesting and very easy. I would be shocked if anyone got below an A in the class. Also, his tests are EASY</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2010<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Peter Thaxter is one of the most helpful teachers. class is mainly power points but tests/essays are so straight forward its hard to get anything below an A. highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2008<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! would take again!</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2008<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Peter is awesome. The class itself is boring, but he does everything possible to try and make it more interesting. He's incredibly helpful and responds to e-mails with much detail and thought.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2008<br>Class Name: PSYCH241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great teacher. He is very clear with what is expected. There are 2 midterms and they are not very hard at all. The final project is worth most of your grade. It's a lot of work, so if you start early you will be fine. Peter is awesome and tells jokes and tries to keep you entertained. He is also very helpful and just wants you to do well.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Peter Thaxter</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 5.0<br>Clarity: 4.8<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Peter is a great teacher. He is so helpful, and wants his students to succeed. His child psych class was interesting and very easy. I would be shocked if anyone got below an A in the class. Also, his tests are EASY</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2010<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Peter Thaxter is one of the most helpful teachers. class is mainly power points but tests/essays are so straight forward its hard to get anything below an A. highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2008<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! would take again!</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2008<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Peter is awesome. The class itself is boring, but he does everything possible to try and make it more interesting. He's incredibly helpful and responds to e-mails with much detail and thought.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2008<br>Class Name: PSYCH241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great teacher. He is very clear with what is expected. There are 2 midterms and they are not very hard at all. The final project is worth most of your grade. It's a lot of work, so if you start early you will be fine. Peter is awesome and tells jokes and tries to keep you entertained. He is also very helpful and just wants you to do well.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

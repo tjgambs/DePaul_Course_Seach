@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>NSG 610 ANESTHESIA PRACTICUM I</h1><h2>An introduction to the clinical practice of nurse anesthesia with an emphasis on the principles introduced in ANES 500-504, 507, and 508.  Includes administration of anesthesia for select patient populations under direct instruction and supervision of a certified registered nurse anesthetist (CRNA) or anesthesiologist.  The course content focuses on specific general surgical procedures, including intra-abdominal, gynecological, urologic, ear, nose and throat, orthopedic, and endoscopic procedure.  Content knowledge will be assessed through objective examinations. The preparation, implementation and evaluation of an appropriate nurse anesthesia care plan for these populations will be assessed through clinical performance evaluations and written care plans   Course includes Human Patient Simulation (HPS) assignments.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=610",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

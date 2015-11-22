@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>ICS 350 INTERNATIONAL BUSINESS SEMINAR</h1><h2>This foreign study course is meant to introduce the student to the world of international life and business as it is today.  The course provides students the opportunity to visit and study foreign commercial enterprises on-site.  Additional emphasis is placed on understanding overseas cultures, self-reference criteria, and the fact that people around the world can maintain/develop hopes and dreams within their own lifestyle even though it may differ from others'.  Most courses in this group will count for liberal studies credit as an experiential learning course.  See the Director of the Driehaus Center for International Business or the College of Commerce undergraduate office for additional information.  Registration with the Driehaus Center is required.  International Business Seminars may not be taken Pass/Fail.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ICS&catalog_nbr=350",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

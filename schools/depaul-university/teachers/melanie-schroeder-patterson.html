@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Melanie Schroeder-Patterson</h1><hr><div><h2>Overall Quality: 3.75<br><br>Helpfulness: 4.0<br>Clarity: 3.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/01/2008<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Schroeder is a very helpful teacher. It's just the subject matter is extremely boring. She really makes sure the students understand the work, and it is all easy, just painfully boring.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2008<br>Class Name: CHE115<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Overall, I thought she was a good teacher. She just got her post-doc, so of course she's a little rusty when it comes to lecturing. She is very fair on grading, and the CHE 115 subject matter is soooo so easy (compared to CHE 111 and 113 that is!). Give her a chance. Teaching isn't easy.</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2008<br>Class Name: CHE115<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>While she is new at lecturing and has some to learn - if you actually listen to her lectures, she makes A LOT of sense. She is a very good teacher if you put in the effort and she is more than willing to help you. She is not easy and expects you to learn the concepts, but overall she's the best chemistry teacher I've had.</div></div></div><div id="container" class="review"><div id="left">Date: 08/23/2008<br>Class Name: CHE115<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Schroeder was unprepared and did not care about the class.  She read completely off of somebody else's notes and often did not know what she was talking about.  Useless in preparing us for the cumulative exam at the end and randomly assigned points for her useless exams.  Avoid taking her if you can and go for Parra or Southern if possible.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Melanie Schroeder-Patterson</h1><hr><div><h2>Overall Quality: 3.75<br><br>Helpfulness: 4.0<br>Clarity: 3.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/01/2008<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Schroeder is a very helpful teacher. It's just the subject matter is extremely boring. She really makes sure the students understand the work, and it is all easy, just painfully boring.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2008<br>Class Name: CHE115<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Overall, I thought she was a good teacher. She just got her post-doc, so of course she's a little rusty when it comes to lecturing. She is very fair on grading, and the CHE 115 subject matter is soooo so easy (compared to CHE 111 and 113 that is!). Give her a chance. Teaching isn't easy.</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2008<br>Class Name: CHE115<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>While she is new at lecturing and has some to learn - if you actually listen to her lectures, she makes A LOT of sense. She is a very good teacher if you put in the effort and she is more than willing to help you. She is not easy and expects you to learn the concepts, but overall she's the best chemistry teacher I've had.</div></div></div><div id="container" class="review"><div id="left">Date: 08/23/2008<br>Class Name: CHE115<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Schroeder was unprepared and did not care about the class.  She read completely off of somebody else's notes and often did not know what she was talking about.  Useless in preparing us for the cumulative exam at the end and randomly assigned points for her useless exams.  Avoid taking her if you can and go for Parra or Southern if possible.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

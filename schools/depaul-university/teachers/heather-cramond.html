@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Heather Cramond</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.67<br>Clarity: 4.33<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/18/2009<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Shes a really nice teacher, and a really easy grader. She understands that English is not our whole world and that we have other things to do. She also likes to appeal to our interests by discussing current events</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2009<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Cramond is kind of bizarre at times but is one of the best teachers I've had.  She super nice and super easy.  She even pushed back due dates for papers if we gave her good reason.  She not a hard grader and totally understands that students have other homework to do.  Definitely taker her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2008<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Cramond is a great teacher! I had her for WRD and I loved it. I would recommend taking her class. She's extremely easy to talk to, ready to help whenever, and cracks jokes just like a student which makes the classroom environment less stressful. She's a fair grader, explains everything well, and is really understanding. I loved the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Heather Cramond</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.67<br>Clarity: 4.33<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/18/2009<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Shes a really nice teacher, and a really easy grader. She understands that English is not our whole world and that we have other things to do. She also likes to appeal to our interests by discussing current events</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2009<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Cramond is kind of bizarre at times but is one of the best teachers I've had.  She super nice and super easy.  She even pushed back due dates for papers if we gave her good reason.  She not a hard grader and totally understands that students have other homework to do.  Definitely taker her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2008<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Cramond is a great teacher! I had her for WRD and I loved it. I would recommend taking her class. She's extremely easy to talk to, ready to help whenever, and cracks jokes just like a student which makes the classroom environment less stressful. She's a fair grader, explains everything well, and is really understanding. I loved the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Kenneth George</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.4<br>Clarity: 3.8<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I personally enjoyed this class. He explained things well and was always helpful on projects. He was relaxed on the due dates of projects, extended them out within a reasonable amount of time. Was a nice way to be creative and have fun.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2012<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Knowledgable on the material and helps his students as much as he can. Easy grader and knows how difficult animation can be for non-majors. Reccomend him for a fun and easy elective course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: ANI150<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Horrible classroom with terrible glare on the projector and no recording of the lectures. He teaches by doing, over and over so it's hard to catch what he's doing and learn it. If you want After Effects boot camp then this class is not for you. He is a really nice guy and knows After Effects well, he just doesn't translate it to teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy who tries really hard. He needs to learn how to teach, rather than show, a little better. I enjoyed the class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A little disorganized, but overall a great prof.  Wants his students to be successful, and understands that this class should be fun.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kenneth George</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.4<br>Clarity: 3.8<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I personally enjoyed this class. He explained things well and was always helpful on projects. He was relaxed on the due dates of projects, extended them out within a reasonable amount of time. Was a nice way to be creative and have fun.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2012<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Knowledgable on the material and helps his students as much as he can. Easy grader and knows how difficult animation can be for non-majors. Reccomend him for a fun and easy elective course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: ANI150<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Horrible classroom with terrible glare on the projector and no recording of the lectures. He teaches by doing, over and over so it's hard to catch what he's doing and learn it. If you want After Effects boot camp then this class is not for you. He is a really nice guy and knows After Effects well, he just doesn't translate it to teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy who tries really hard. He needs to learn how to teach, rather than show, a little better. I enjoyed the class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A little disorganized, but overall a great prof.  Wants his students to be successful, and understands that this class should be fun.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

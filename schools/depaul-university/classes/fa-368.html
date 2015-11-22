@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>FA 368 COMPASSIONATE BUSINESS: STRESS REDUCTION IN THE WORKFORCE</h1><h2>A system of spiritual growth, a system of stress relief. In the business world, the stress on a person's life and health has a direct impact on their productivity and creativity.  Studies have shown that as stress increases in someone's life, their productivity at work goes down. The current state of humanity and technology has created a world with a new type of stress; the pace and speed of interaction has increased to a rate where a person has to deal with an influx of information and, often, interactions with hundreds of people per day via different technologies.  In this course we will study another worldview in order to develop survival skills that reduce our stress.  This different world view is the Yogic tradition from India called Kundalini Yoga.   By taking this course, students will develop stress relief techniques and a sense of great purpose in their business lives. We will lower the stress level in our lives by participating in Kundalini Yoga stress reduction techniques from a video, weekly meditation exercises and textbooks.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FA&catalog_nbr=368",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Rita Patel</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 4.0<br>Clarity: 3.0<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/14/2015<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a fantastic teacher. I talked to her multiple times and she was always helpful. You either get math or you don't, its that simple, if you do you will do very well in her class, if not, oh well. She has to go fast because we only have 10 weeks, but she makes it manageable. Highly recommend her if you have the chance to take her. </div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2015<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>I loved Rita Patel as I teacher, yes she expect you to read the chapter before class but she also goes over everything from her notes packet. I had her for Business Calc 1 and she makes sure to answer all questions. The thing I am most grateful for is that she was very helpful and did not judge when someone did not know something that was a pre-rec</div></div></div><div id="container" class="review"><div id="left">Date: 09/25/2015<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>TEACHES TOO FAST!!!!! It is not uncommon to go through 2 or 3 sections in a day. She expects you to read the chapter before class and be able to understand it that way. In reality though, that is the only way you're going to pass her class because of how quickly she goes through the material.. theres not enough time to synthesize the information. </div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2015<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Makes you read the entire chapter before class and then goes over problems from the chapter, doesn't really explain much . For me math books are super hard to understand. She also will give you a test each week after one day of learning and the quizes are your only grade so if you do bad on them you basically fail the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rita Patel</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 4.0<br>Clarity: 3.0<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/21/2015<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Math is not easy, and Ms. Patel is always helpful in clarifying anything you need to help with. She does not make the exams difficult, she cares more that you know how to do the material. Do the homework, it is the best way to better grasp the material.   Would take again in a heartbeat </div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2015<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a fantastic teacher. I talked to her multiple times and she was always helpful. You either get math or you don't, its that simple, if you do you will do very well in her class, if not, oh well. She has to go fast because we only have 10 weeks, but she makes it manageable. Highly recommend her if you have the chance to take her. </div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2015<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>I loved Rita Patel as I teacher, yes she expect you to read the chapter before class but she also goes over everything from her notes packet. I had her for Business Calc 1 and she makes sure to answer all questions. The thing I am most grateful for is that she was very helpful and did not judge when someone did not know something that was a pre-rec</div></div></div><div id="container" class="review"><div id="left">Date: 09/25/2015<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>TEACHES TOO FAST!!!!! It is not uncommon to go through 2 or 3 sections in a day. She expects you to read the chapter before class and be able to understand it that way. In reality though, that is the only way you're going to pass her class because of how quickly she goes through the material.. theres not enough time to synthesize the information. </div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2015<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Makes you read the entire chapter before class and then goes over problems from the chapter, doesn't really explain much . For me math books are super hard to understand. She also will give you a test each week after one day of learning and the quizes are your only grade so if you do bad on them you basically fail the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

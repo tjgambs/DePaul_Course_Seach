@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Liliane Calfee</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.0<br>Clarity: 5.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She was awesome! She was very knowledgable on everything she was talking about and had applicable real world experience. She tries to work with you if you're missing work but doesn't let you slide easily. She lays the course content out very clearly and everything is relevant to the class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Crystal clear on everything: the lecture itself, how far the class is at in a quarter, how soon students will have a test due, what the test is about. Before I took her class, to be honest I was just going for the credit because it's required for my major. But she made the lecture really interesting and the class relates to real life really well.</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took this class because it was a free elective I had open & didn't expect to love it as much as I did. She's super fun and the discussions are great! Take it by any means you will enjoy it and it's not too difficult.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Liliane Calfee</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.0<br>Clarity: 5.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She was awesome! She was very knowledgable on everything she was talking about and had applicable real world experience. She tries to work with you if you're missing work but doesn't let you slide easily. She lays the course content out very clearly and everything is relevant to the class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Crystal clear on everything: the lecture itself, how far the class is at in a quarter, how soon students will have a test due, what the test is about. Before I took her class, to be honest I was just going for the credit because it's required for my major. But she made the lecture really interesting and the class relates to real life really well.</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2015<br>Class Name: DC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took this class because it was a free elective I had open & didn't expect to love it as much as I did. She's super fun and the discussions are great! Take it by any means you will enjoy it and it's not too difficult.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

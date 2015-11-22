@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>WGS 387 TEEN VIOLENCE PREVENTION</h1><h2>This course is an interdisciplinary experiential/service learning seminar in which students will participate in, and critically reflect upon, a relationship violence prevention program in Chicago area high schools. This class will explore adolescent development, considering the ways in which economic, social, political and cultural contexts influence that development.  In addition, we will focus on adolescent relationships, group work with teens, aggression and violence in intimate -- in particular teen -- relationships, and evaluation of programs to prevent teen violence.  Each week students will address a set of theoretical and/or practical themes that in some way relate to teen violence and aggression, as well as prevention of such violence.  Discussions of each theme will draw on course readings, lecture materials, and perhaps most importantly, students' experiences working with teens in schools.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=WGS&catalog_nbr=387",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

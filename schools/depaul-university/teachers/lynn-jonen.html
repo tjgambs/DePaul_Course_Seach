@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Lynn Jonen</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class is a lot of work(bi monthly tests). She adjusts tests when people are doing bad in them. She's very clear and everything is based off of your notes. Just know your info inside and out and you will be fine. She's very knowledgeable and helpful. Take the class if your naturally interested in it or it's ur major, if not then it might b hard</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2006<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Abnormal Psych.  VERY helpful teacher.  Bi monthly quizzes are fairly simple and will even adjust them if she sees too manypeople failing.  Would gladly take another class taught by her.  Just study and you should be fine.  Always willing to help and if you don't understand ask. Variety from using the book, slides and clips of movies.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Lynn Jonen</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class is a lot of work(bi monthly tests). She adjusts tests when people are doing bad in them. She's very clear and everything is based off of your notes. Just know your info inside and out and you will be fine. She's very knowledgeable and helpful. Take the class if your naturally interested in it or it's ur major, if not then it might b hard</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2006<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Abnormal Psych.  VERY helpful teacher.  Bi monthly quizzes are fairly simple and will even adjust them if she sees too manypeople failing.  Would gladly take another class taught by her.  Just study and you should be fine.  Always willing to help and if you don't understand ask. Variety from using the book, slides and clips of movies.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

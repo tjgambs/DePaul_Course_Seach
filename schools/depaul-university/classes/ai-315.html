@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>AI 315 CREATIVITY AND IMAGINATION</h1><h2>Is there a specific mental procedure that gives rise to the making of new inventions, new scientific and mathematical discoveries, new philosophical systems, and new works of art? If so, it remains as mysterious today as a thousand years ago.  In this course we will compare and critically evaluate a range of theories about human invention and creativity, both classic and modern - from ancient conceptions of divine inspiration and "creative madness" to recent hypotheses in the fields of evolutionary psychology, cognitive science, and artificial intelligence. We will test these theories by (a) applying them to our own past experience with creative endeavors and (b) by determining to what extent the theories can adequately explain the emergence of particular inventions, scientific or mathematical breakthroughs, or works of art.   The course will introduce the thought of a range of important theorists on the creative process -  from Plato to Freud -  and also weigh the contributions and examples of prominent artists, scientists, and inventors, including Archimedes, Newton, Mozart, Milton, Poe, Van Gogh, Poincari, Edison, Einstein, and others.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=AI&catalog_nbr=315",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

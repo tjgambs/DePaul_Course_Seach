@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Frank Rottman</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 3.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/27/2010<br>Class Name: SOC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>he is a great professor and has an attractive son</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2009<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Frank is AWESOME!  I loved his class.  He is a teacher in Glenview and he KNOWS what the real field is like because he is in it!  This is extremely helpful for us!  He keeps the class moving and teaches many useful activities to take into any content area.  Lovely man and excellent professor.  I can't say enough about Frank Rottman! Love him!</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2008<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Prof. Makes the class enjoyable by role playing, group discussion.  He is light-hearted. Makes it easy for you to get an A, if you work for it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2008<br>Class Name: TL413<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Teaches Social Studies.  I really liked him and has a quirky personality and makes the class fun. The workload is managable and he is very fair in grading. Its an easy A</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Frank Rottman</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 3.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/27/2010<br>Class Name: SOC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>he is a great professor and has an attractive son</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2009<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Frank is AWESOME!  I loved his class.  He is a teacher in Glenview and he KNOWS what the real field is like because he is in it!  This is extremely helpful for us!  He keeps the class moving and teaches many useful activities to take into any content area.  Lovely man and excellent professor.  I can't say enough about Frank Rottman! Love him!</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2008<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Prof. Makes the class enjoyable by role playing, group discussion.  He is light-hearted. Makes it easy for you to get an A, if you work for it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2008<br>Class Name: TL413<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Teaches Social Studies.  I really liked him and has a quirky personality and makes the class fun. The workload is managable and he is very fair in grading. Its an easy A</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

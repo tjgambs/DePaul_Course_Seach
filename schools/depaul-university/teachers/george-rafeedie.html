@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>George Rafeedie</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2011<br>Class Name: PRAD225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is the best teacher you could even think off. Really understanding and knows what he is talking about. Makes class super fun and interesting. EASY A, seriously the BEST teachr in DePaul</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: PR225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. Seriously. He's awesome. Very cool. He really gets to our level and jokes around to make class fun. He keeps the class exciting and interesting. I completely recomend him. If you don't you'll regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2011<br>Class Name: INTROPR<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really nice guy.  Take him for your intro class, but i wouldn't reccomend him any further.  He seems to have been in the industry for a while, but didn't go into detail about many things.  He makes you go into team and come up with PR strategies which was good for us.  Not much HW, class work, or any work really.  Easy A. Cool dude</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>George Rafeedie</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2011<br>Class Name: PRAD225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is the best teacher you could even think off. Really understanding and knows what he is talking about. Makes class super fun and interesting. EASY A, seriously the BEST teachr in DePaul</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: PR225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. Seriously. He's awesome. Very cool. He really gets to our level and jokes around to make class fun. He keeps the class exciting and interesting. I completely recomend him. If you don't you'll regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2011<br>Class Name: INTROPR<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really nice guy.  Take him for your intro class, but i wouldn't reccomend him any further.  He seems to have been in the industry for a while, but didn't go into detail about many things.  He makes you go into team and come up with PR strategies which was good for us.  Not much HW, class work, or any work really.  Easy A. Cool dude</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>LSP 120 QUANTITATIVE REASONING & TECHNOLOGICAL LITERACY I</h1><h2>This course provides a mathematical foundation for students to become confident and critical users of quantitative information of all kinds: numerical, graphical, and verbal. Students analyze data from a wide variety of fields, making and critiquing quantitative arguments. Mathematical topics include proportional reasoning and rates, the making and interpretation of graphs, linear and exponential models, logarithms, and finance. The course is taught in a hands-on laboratory environment where students are introduced to computer tools for data analysis and presentation. PREREQUISITE(S): MAT 100, MAT 101, or demonstrating readiness via the math placement test  taken at matriculation. As an alternative to taking LSP 120, this requirement can be met by passing a separate LSP 120 Proficiency Exam (see qrc.depaul.edu).  A student whose major requires calculus is exempt from this requirement. Formerly ISP 120.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=LSP&catalog_nbr=120",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

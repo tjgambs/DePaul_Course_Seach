@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>BBE 330 LATINOS AND EDUCATION</h1><h2>This course examines historical and current issues related to the education of Latinos in the US that includes PK-12 and higher education. The course explores the sociolinguistic, theoretical, historical, sociocultural, legal, and political contexts that shape the educational experience of Latinos in the US. Demographic trends and data are examined in light of the various characteristics that make up the diverse Latino population. The course also analyses the theoretical, historical, and political constructs of bilingual schooling and the underlying assumptions and implications for Latino students. Current research conducted by prominent scholars in the field are presented and examined. The course considers factors that influence, positively or negatively, the educational attainment of Latino students. The readings and class discussions emphasize how power relations in the wider society influence patterns in Latino education outcomes and policy-making. The course also examines arguments, assumptions, and interpretations of current and past legislation in regards to the education of Latinos in the US.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BBE&catalog_nbr=330",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

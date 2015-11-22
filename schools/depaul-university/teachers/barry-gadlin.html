@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Barry Gadlin</h1><hr><div><h2>Overall Quality: 3.62<br><br>Helpfulness: 3.75<br>Clarity: 3.5<br>Easiness: 4.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/10/2005<br>Class Name: SEC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He was great.  There was a lot of work, but he was the first one to submit my req. form. Real dedicated.  Loved the class.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2005<br>Class Name: TL429<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>My beef is not w/ Gadlin as much as w/ DPU.  428 covers literacy but I'm not sure how &quot;T&L literature&quot; expands on that in any way.  Also, how does an accredited university get away with making grad students color with crayons not just once but 3 times in this course&#63;  I feel bad for saying this for Gadlin is nice, but I'm going into debt for this!</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2004<br>Class Name: SEC325<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>it's pretty much like taking a grade school class. all he does is assign journal entries and projects that are SO elementary, but then he grades them with reckless abandon. not sure i'd recommend him, but he is a nice guy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: SEC325<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>THE CLASS WAS REALLY BORING.  HE IS A NICE GUY BUT VERY UNCLEAR AT TIMES.  A LOT OF BUSY WORK.  AND HIS GRADING SCALE IS VERY STRANGE.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Barry Gadlin</h1><hr><div><h2>Overall Quality: 3.62<br><br>Helpfulness: 3.75<br>Clarity: 3.5<br>Easiness: 4.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/10/2005<br>Class Name: SEC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He was great.  There was a lot of work, but he was the first one to submit my req. form. Real dedicated.  Loved the class.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2005<br>Class Name: TL429<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>My beef is not w/ Gadlin as much as w/ DPU.  428 covers literacy but I'm not sure how &quot;T&L literature&quot; expands on that in any way.  Also, how does an accredited university get away with making grad students color with crayons not just once but 3 times in this course&#63;  I feel bad for saying this for Gadlin is nice, but I'm going into debt for this!</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2004<br>Class Name: SEC325<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>it's pretty much like taking a grade school class. all he does is assign journal entries and projects that are SO elementary, but then he grades them with reckless abandon. not sure i'd recommend him, but he is a nice guy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: SEC325<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>THE CLASS WAS REALLY BORING.  HE IS A NICE GUY BUT VERY UNCLEAR AT TIMES.  A LOT OF BUSY WORK.  AND HIS GRADING SCALE IS VERY STRANGE.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

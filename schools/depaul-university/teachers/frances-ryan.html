@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Frances Ryan</h1><hr><div><h2>Overall Quality: 1.25<br><br>Helpfulness: 1.5<br>Clarity: 1.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/26/2006<br>Class Name: ECE302<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Horrible Professor! She needs to be retired as soon as possible.  She is not helpful, mean, and rude towards students.  She treats the students like kindergarteners.  If you have a choice, DON’T EVER TAKE HER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: HSC458<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This instructor should be retired. She is so out-of-touch with the students, treats grad students like junior high school kids, is very subjective in her grading procedures, she has obvious &quot;favorites&quot; in the class, treats them accordingly,talks down to and humiliates students in front of everyone.If she were an employer, I would quit w/o notice.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Frances Ryan</h1><hr><div><h2>Overall Quality: 1.25<br><br>Helpfulness: 1.5<br>Clarity: 1.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/26/2006<br>Class Name: ECE302<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Horrible Professor! She needs to be retired as soon as possible.  She is not helpful, mean, and rude towards students.  She treats the students like kindergarteners.  If you have a choice, DON’T EVER TAKE HER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: HSC458<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This instructor should be retired. She is so out-of-touch with the students, treats grad students like junior high school kids, is very subjective in her grading procedures, she has obvious &quot;favorites&quot; in the class, treats them accordingly,talks down to and humiliates students in front of everyone.If she were an employer, I would quit w/o notice.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

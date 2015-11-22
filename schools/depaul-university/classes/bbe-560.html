@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>BBE 560 SECOND, WORLD AND HERITAGE LANGUAGE ACQUISITION K-12</h1><h2>This course is an introduction to the theoretical study of second, world and heritage language acquisition (SLA) from a generative and psycholinguistic perspective at the K-12 levels. The content of the class is founded on the major concepts and issues of language acquisition, including UG-access, L1-transfer, age effects, and the acquisition of form vs. meaning. The course pays particular attention to empirical second and world language studies at the syntax/semantics interface. Course readings and discussion examine the complexities of the processes involved in acquiring a world language that includes the relation between first and SLA; contrastive and error analysis; interlanguage; the social and cultural influences on SLA; learner variability; learning strategies; and classroom interaction analysis. Issues surrounding second and world language acquisition are discussed and deliberated through university classroom experiences as well as required field experiences (20/15 hours; level 2).</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BBE&catalog_nbr=560",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

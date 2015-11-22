@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Melanie Jones Gast</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.6<br>Clarity: 2.4<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: SOC101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>I had a bad experience in this class.  Maybe it was the students themselves, but the class would often go on social justice rants. These would have nothing to do with the class and often would get very heated. I hardly learned anything from this professor.  On the plus side Online quizzes and open note final. </div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2015<br>Class Name: SOC101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>She is a very sweet woman and cares about her students success. It was her first time teaching 101 so I tried to cut her some slack but she was just okay. I think she will get better with time. But she is willing to meet with you any time!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2014<br>Class Name: LSP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>She's repetitive. "Easy" class if you read the ENTIRE 40pg/class articles-Expects you to know small details. Doesn't get to the point until the last 10mins of class. Picks on certain people. The course itself is okay, but her sources are not reliable. Participation points. Course was about race&ethnicity but she added sociology and literature.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2013<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awful class. She makes no sense half the time but treats you like you're the idiot.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2011<br>Class Name: LSP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good professor, cares a lot about her students. This class required a lot of reading, writing, and class participation (including online discussion postings), but we did learn a lot about Race & Ethnicity. Class was demanding at times with a large load of work but course objectives were met.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Melanie Jones Gast</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.6<br>Clarity: 2.4<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: SOC101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>I had a bad experience in this class.  Maybe it was the students themselves, but the class would often go on social justice rants. These would have nothing to do with the class and often would get very heated. I hardly learned anything from this professor.  On the plus side Online quizzes and open note final. </div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2015<br>Class Name: SOC101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>She is a very sweet woman and cares about her students success. It was her first time teaching 101 so I tried to cut her some slack but she was just okay. I think she will get better with time. But she is willing to meet with you any time!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2014<br>Class Name: LSP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>She's repetitive. "Easy" class if you read the ENTIRE 40pg/class articles-Expects you to know small details. Doesn't get to the point until the last 10mins of class. Picks on certain people. The course itself is okay, but her sources are not reliable. Participation points. Course was about race&ethnicity but she added sociology and literature.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2013<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awful class. She makes no sense half the time but treats you like you're the idiot.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2011<br>Class Name: LSP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good professor, cares a lot about her students. This class required a lot of reading, writing, and class participation (including online discussion postings), but we did learn a lot about Race & Ethnicity. Class was demanding at times with a large load of work but course objectives were met.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Susan Hahn</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.67<br>Clarity: 3.33<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/23/2007<br>Class Name: DC301<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easily the worst prof I've ever had.  She was late to literally everything. We only had class about 4 or 5 times and always left early. The only grade I received the entire term was my final grade... which she was late with (of course)! Overall, the class was a complete waste of time and money and did not make me a better writer.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2005<br>Class Name: DC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is an awesome teacher. We watched movies everyday. She had a point with each movie, and she brought breakfest to bribe students to come to class. A lot of reading though, but you'll need it. I recomend her 110%.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2005<br>Class Name: DC301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Sus is great. Do the work, show up for class and you'll get an A. Listening to her can be work; you have the option of following her train of thought or remembering what she says. She's very nice and helpful though, and she will go out of her way to meet with you.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Susan Hahn</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.67<br>Clarity: 3.33<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/23/2007<br>Class Name: DC301<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easily the worst prof I've ever had.  She was late to literally everything. We only had class about 4 or 5 times and always left early. The only grade I received the entire term was my final grade... which she was late with (of course)! Overall, the class was a complete waste of time and money and did not make me a better writer.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2005<br>Class Name: DC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is an awesome teacher. We watched movies everyday. She had a point with each movie, and she brought breakfest to bribe students to come to class. A lot of reading though, but you'll need it. I recomend her 110%.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2005<br>Class Name: DC301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Sus is great. Do the work, show up for class and you'll get an A. Listening to her can be work; you have the option of following her train of thought or remembering what she says. She's very nice and helpful though, and she will go out of her way to meet with you.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

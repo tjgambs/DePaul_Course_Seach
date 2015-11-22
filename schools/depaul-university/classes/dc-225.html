@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>DC 225 DIGITAL STILL PHOTOGRAPHY</h1><h2>This course is an introduction to the history and aesthetics of still photography and to the concept of photography as a descriptive and interpretive artistic medium.  Students will learn the fundamental concepts necessary to shoot, edit, manipulate, and print digital still photographs.  Students will learn to scan, capture, correct and enhance digital images and prepare files for output on black and white and color printing devices.  Introduces students to theories, terminology, and applications of digital imaging technologies.  Students will acquire the knowledge needed to analyze and critique existing work.  
 
 In addition, students will involve themselves in hands-on exercises with digital still photography, manipulation and printing.  Demonstrations will facilitate learning software techniques and systems of working.  Use of Adobe Photoshop will be extensively covered in this course.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=225",$.ajax({
@@ -323,6 +330,26 @@ In addition, students will involve themselves in hands-on exercises with digital
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

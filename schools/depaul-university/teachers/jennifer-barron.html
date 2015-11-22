@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Jennifer Barron</h1><hr><div><h2>Overall Quality: 1.5<br><br>Helpfulness: 1.0<br>Clarity: 2.0<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: COM104<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 1<br>Grade Received: D+</div><div id="right"><div>SHE IS TERRIBLE!DO NOT TAKE HER PUBLIC SPEAKNG CLASS!The whole class consist of 3 exams, 3 minor speeches, 2 major speeches, attendance, 2 speech analysis papers. It is a speech class, yet the 3 test count more than your speeches. The test are terrible, and she makes them hard. She also picks favorites, and grades very hard on speech presentation.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2015<br>Class Name: ORGC212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div> Going into this class "Small Group Communication", I expected projects and group presentations. But not 30 page long projects and whole quarter long presentations with more papers in between.  RateMyProf won't let me explain the details how she's discriminatory on here but she gives far too much work. Never again will I take her</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jennifer Barron</h1><hr><div><h2>Overall Quality: 1.5<br><br>Helpfulness: 1.0<br>Clarity: 2.0<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: COM104<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 1<br>Grade Received: D+</div><div id="right"><div>SHE IS TERRIBLE!DO NOT TAKE HER PUBLIC SPEAKNG CLASS!The whole class consist of 3 exams, 3 minor speeches, 2 major speeches, attendance, 2 speech analysis papers. It is a speech class, yet the 3 test count more than your speeches. The test are terrible, and she makes them hard. She also picks favorites, and grades very hard on speech presentation.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2015<br>Class Name: ORGC212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div> Going into this class "Small Group Communication", I expected projects and group presentations. But not 30 page long projects and whole quarter long presentations with more papers in between.  RateMyProf won't let me explain the details how she's discriminatory on here but she gives far too much work. Never again will I take her</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>LL 280 WAYS OF KNOWING IN THE LIBERAL ARTS</h1><h2>Follow the Drinking Gourd and Steal Away to Jesus are but two songs that resonate deep within the American experience. Many have come to know them as spirituals, sorrow songs created and first sung by African Americans that remind us of an over two centuries old period in our history when American slavery was legal and people of African descent were enslaved with purpose for profit. But these songs were also signals to freedom, carefully created and strategically communicated, as enslaved laborers risked their lives enroute on the Underground Railroad so that they could live in freedom. This course will draw from Chicago area resources to explore multiple ways of knowing about the African American experience through this moment in time. In addition to our engagement with texts from multiple sources within the liberal arts, discussions, writing, and presentations, field trips and other participatory learning activities may also illuminate the topic and enhance our learning about this American experience.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=LL&catalog_nbr=280",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

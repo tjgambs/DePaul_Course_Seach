@@ -224,11 +224,38 @@
 	</div>
 	<br />
 	<hr>
-	<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+	<div id="overlay">
+	    <div>
+	        <form action="search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	    </div>
+	</div>
+	<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 	<div id="tipue_search_content"></div>
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+
 	function submitForm()
 	{
 		var prefix = document.getElementsByClassName('prefix')[0].value
@@ -240,6 +267,7 @@
 			document.getElementById('field').submit()
 		}
 	}
+
 	function matchStart (term, text) 
 	{
 		if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
@@ -263,7 +291,9 @@
 	        submitForm()
 	    }
 	});
-	$( document ).ready(function() {
+
+	$( document ).ready(function() 
+	{
     	$(".prefix").select2();
     	$('#tipue_search_input').tipuesearch();
 	});

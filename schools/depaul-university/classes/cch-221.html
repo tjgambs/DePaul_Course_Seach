@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>CCH 221 PUBLIC SPEAKING: HOW TO CHANGE YOUR LIFE</h1><h2>Public speaking is the #1 fear in humans.  Mastery of this skill is critical to one?s professional and personal advancement. Being able to confidently, effectively and enthusiastically deliver your thoughts and ideas to a group of individuals is a skill that separates leaders from followers.  We will explore creative ways to significantly enhance our comfort level speaking effectively in front of groups.  In an open, friendly, fun, enthusiastic and supportive environment, participants will be introduced to a variety of methods to become much more confident with public speaking.
 
 Since fear of speaking is the most significant roadblock to giving effective presentations, this will be a focus of the class.  We learned to feel this fear from our conditioning, which gave us disempowering values, beliefs and thoughts about this activity.   These values, beliefs and thoughts, which we subconsciously inherited and adopted as our own, are likewise responsible for everything else that is or is not working in our lives.   Understanding this power of our minds and our ability to implement new, more empowering values, beliefs and thoughts, is critical to creating the life we desire.
@@ -327,6 +334,26 @@ Student will have an opportunity to speak at each class as there will be 3 short
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

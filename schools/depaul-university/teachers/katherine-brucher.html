@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Katherine Brucher</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's so basic and really boring and awkward. I took the class because it sounded interesting but she killed any chance of that.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very boring class. She is nice and tries, and this does help the class make it bearable. For a requirement seminar, i expected something easier, but the concepts taught and the experience she has in the field make the class much better. get ready for class participation! also make sure you read!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is kinda boring, But is very nice and very helpful if you need help. She is a very easy grader and the papers are easy no final or midterm. overall not a bad class for a sophmore seminar easy A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2009<br>Class Name: MUS265<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Pretty boring, but she knows her subject and makes sure that you understand. Be ready for &quot;hands on&quot; class activities.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2008<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class is so boring.  I can attribute much of this to the fact that I had no interest at all in the class, but at the same time I'm going to forget the material the second I complete the final.  She tries to get the class to sing along and dance, it made me feel as if I had been demoted back to the second grade.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Katherine Brucher</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's so basic and really boring and awkward. I took the class because it sounded interesting but she killed any chance of that.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very boring class. She is nice and tries, and this does help the class make it bearable. For a requirement seminar, i expected something easier, but the concepts taught and the experience she has in the field make the class much better. get ready for class participation! also make sure you read!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is kinda boring, But is very nice and very helpful if you need help. She is a very easy grader and the papers are easy no final or midterm. overall not a bad class for a sophmore seminar easy A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2009<br>Class Name: MUS265<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Pretty boring, but she knows her subject and makes sure that you understand. Be ready for &quot;hands on&quot; class activities.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2008<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class is so boring.  I can attribute much of this to the fact that I had no interest at all in the class, but at the same time I'm going to forget the material the second I complete the final.  She tries to get the class to sing along and dance, it made me feel as if I had been demoted back to the second grade.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>CSC 554 ADVANCED DATABASE MANAGEMENT</h1><h2>In this class, we will discuss concepts, technologies, guiding principles, processes and best practices in managing database environment to meet high availability, scalability, and compliance needs.   Organizations with business critical applications must reduce their risk of downtime, manage database environment efficiently and ensure data meets compliance requirements effectively.  IT now has additional responsibilities to secure and manage information in alignment with legal, records management and regulations.
 This class explores methods and techniques to achieve the availability needs and also focuses on how to protect the database against disasters by maintaining multiple copies of the databases in
 separate locations, synchronized in real-time.   Students learn to  
@@ -324,6 +331,26 @@ design and manage key business resumption functions including disaster recovery 
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>MKT 357 MANAGEMENT OF MARKETING</h1><h2>The second course in the IME sequence acquaints the student with the knowledge and skills necessary for the management of marketing activities including marketing plan preparation and tactical decision-making in changing situations. (1) Students will build upon the situation analysis and presentation skills acquired in the IME Level l, by developing skills necessary to prepare and present a marketing plan. (2) Tactical managerial decisions to be addressed include product/service management, competitive pricing decisions, distribution, and promotion decisions as faced by the manager of marketing activities in the day-to-day life of the firm. Students will learn to develop sales forecasts and budgets and apply control and analysis techniques to evaluate marketing operations. Course milestones will include market plan development and presentation to internal as well as external groups, and the presentation of analysis and recommendations to address the day-to-day management of marketing operations. Students will work in teams to address a marketing problem provided by a sponsoring Chicago-based company. This problem will require students to use available secondary data to analyze the current market situation and analyze and interpret primary data necessary to make decisions. Offered every Winter.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MKT&catalog_nbr=357",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

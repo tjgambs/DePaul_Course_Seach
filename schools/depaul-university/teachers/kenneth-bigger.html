@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Kenneth Bigger</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 3.0<br>Clarity: 2.0<br>Easiness: 2.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Poor lecturer, loses train of thought, couldn't learn anything in class, I wondered why we were even there. It's almost impossible to keep up with the reading and he is a tough grader. Bus. Eth. is a difficult class but he didn't do anything to make it accessible/easy to understand. Half the class got a D/F on the midterm (4pt curve) Unacceptable!</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2005<br>Class Name: REL228<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Has so much reading its almost impossible to keep up with. He is a nice guy, but a bit unfair when comes to tests. In our class half got Ds or Faild the first test and his curve was tiny. If you cant read 50-100 pages a night and retain all the information, dont take this class. His in class lectures are unstructured and very boring.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2005<br>Class Name: MGTREL228<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Bigger is a bit unclear at times.  He tends to be at a lost for words when approached with a question.  Class not very structured.  A lot of reading (it's all on the exam). If u read u can Ace the class.  Papers aren't too bad either (3).</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kenneth Bigger</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 3.0<br>Clarity: 2.0<br>Easiness: 2.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Poor lecturer, loses train of thought, couldn't learn anything in class, I wondered why we were even there. It's almost impossible to keep up with the reading and he is a tough grader. Bus. Eth. is a difficult class but he didn't do anything to make it accessible/easy to understand. Half the class got a D/F on the midterm (4pt curve) Unacceptable!</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2005<br>Class Name: REL228<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Has so much reading its almost impossible to keep up with. He is a nice guy, but a bit unfair when comes to tests. In our class half got Ds or Faild the first test and his curve was tiny. If you cant read 50-100 pages a night and retain all the information, dont take this class. His in class lectures are unstructured and very boring.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2005<br>Class Name: MGTREL228<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Bigger is a bit unclear at times.  He tends to be at a lost for words when approached with a question.  Class not very structured.  A lot of reading (it's all on the exam). If u read u can Ace the class.  Papers aren't too bad either (3).</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>TCH 412 THE NATURE OF HISTORY AND THE SOCIAL SCIENCES</h1><h2>This course builds on the content course work students have done in the seven disciplines grouped under the heading "social sciences" (history, political science, geography, sociology, anthropology, economics, and psychology).  In this class students will get further exposure to the basic concepts of the social science disciplines and consider the connections as well as differences between them.  The course emphasizes how different disciplinary backgrounds lead students to bring different perspectives to their study of social phenomena and helps them see these phenomena from multiple vantage points.  The course will employ a case study approach framed around social issues of interest to all seven disciplines (e.g. social control, threats, development, natural disasters).  By the end of the course, students will have applied the knowledge and skills of multiple social science disciplines to evaluate social phenomena, considered the relationship and differences between those disciplines, and be prepared to enter TCH 422 where they will apply their content knowledge to inquiry and teaching in the field. Offered during Winter term only.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TCH&catalog_nbr=412",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>AAS 252 SOUTH ASIA, C. 900 TO 1707: SULTANS, MUGHALS, AND ISLAMIC EMPIRES</h1><h2>The course begins with the transformation of society from the 'ancient' to the 'medieval', and compares this to developments in Europe in the feudal age. It then incorporates specific political, social, and cultural developments in South Asia that came about with the establishment of powerful Islamic states in a region where Muslims were a minority. These issues will inform the analysis of the Ghaznavid and Ghurid invasions, the Delhi Sultanate, the Vijayanagara empire and the Mughal empire. The course will end with the Marathas and the decline of the Mughal empire, and the rising influence of the British. The central themes concern how the state, economy, culture, and society developed in the period when Islam became firmly embedded in South Asia.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=AAS&catalog_nbr=252",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

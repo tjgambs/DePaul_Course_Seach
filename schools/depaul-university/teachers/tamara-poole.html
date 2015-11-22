@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Tamara Poole</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/27/2014<br>Class Name: 302<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof Poole is great and goes above and beyond for her students. she is the kind of teacher that truly cares</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2014<br>Class Name: NSG302<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She does give you brief test outline for each exam, but that does not mean it is easy! Make sure you study everything. Her exams are very tricky. If you have a question pertaining to the exam don't bother to ask her. She is not much help.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: NSG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A-</div><div id="right"><div>Fantastic instructor! I swear she has the answer to everything nursing. Do the study guide she gives you for her exams. Your guaranteed an A if you just fill out everything on the study guide.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Tamara Poole</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/27/2014<br>Class Name: 302<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof Poole is great and goes above and beyond for her students. she is the kind of teacher that truly cares</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2014<br>Class Name: NSG302<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She does give you brief test outline for each exam, but that does not mean it is easy! Make sure you study everything. Her exams are very tricky. If you have a question pertaining to the exam don't bother to ask her. She is not much help.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: NSG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A-</div><div id="right"><div>Fantastic instructor! I swear she has the answer to everything nursing. Do the study guide she gives you for her exams. Your guaranteed an A if you just fill out everything on the study guide.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

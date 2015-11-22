@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Joseph Thompson</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.7<br>Clarity: 4.3<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/27/2015<br>Class Name: FIN362<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: Not sure yet</div><div id="right"><div>Goes through material much too quickly. Willing to help you after class but the multiple choice questions on the quizzes are impossible. Scribbles on the board which can sometimes be unclear. Class was decent. </div></div></div><div id="container" class="review"><div id="left">Date: 07/22/2014<br>Class Name: FIN362<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Thompson is one of the best guys, I have ever taken at DePaul. He is a nice guy with extensive financial knowledge and background. I always enjoyed to have conversation with him and yeah he loves to helps his students, so DON'T hesitate.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2014<br>Class Name: FIN360<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Thompson is awesome, super chill and makes topics extremely. He has a ton of knowledge and a lot of industry experience. Really enjoyed talking to him about his own opinion on markets and risk intstruments. Class is hard, but absolutely reccommend him!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Joseph Thompson</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.7<br>Clarity: 4.3<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/27/2015<br>Class Name: FIN362<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: Not sure yet</div><div id="right"><div>Goes through material much too quickly. Willing to help you after class but the multiple choice questions on the quizzes are impossible. Scribbles on the board which can sometimes be unclear. Class was decent. </div></div></div><div id="container" class="review"><div id="left">Date: 07/22/2014<br>Class Name: FIN362<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Thompson is one of the best guys, I have ever taken at DePaul. He is a nice guy with extensive financial knowledge and background. I always enjoyed to have conversation with him and yeah he loves to helps his students, so DON'T hesitate.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2014<br>Class Name: FIN360<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Thompson is awesome, super chill and makes topics extremely. He has a ton of knowledge and a lot of industry experience. Really enjoyed talking to him about his own opinion on markets and risk intstruments. Class is hard, but absolutely reccommend him!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

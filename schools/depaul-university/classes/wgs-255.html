@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>WGS 255 DECONSTRUCTING THE DIVA</h1><h2>This course studies the figure of the diva as a powerful cultural text, central to both understanding historical conceptions of socially normative femininity and to uncovering and examining our own present-day conceptions of what it means to be feminine, to be a woman. Through fiction, drama, biography, autobiography, film, audio recordings, and gender, the course explores representations of the diva in literature, art, and popular and high culture. The goal of this course is to investigate the ways that "diva" has actually been code for women (and sometimes men) behaving outside of societal norms. Students will do this both historically and thematically, uncovering a path in which "women behaving badly" are routinely censured, and silenced. Students will also investigate how women both resist and re-appropriate this label.This course also seeks to explore the lives of both extraordinary and ordinary women, contextualizing the historical moments that they both contested and were sometimes consumed by.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=WGS&catalog_nbr=255",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

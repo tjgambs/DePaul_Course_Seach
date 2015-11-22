@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Susan/elizabeth Rangel</h1><hr><div><h2>Overall Quality: 1.63<br><br>Helpfulness: 1.5<br>Clarity: 1.75<br>Easiness: 1.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/31/2014<br>Class Name: ASL101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You get the grade you deserve with her, if you want a good grade you'll have to put some time into actually learning the signs from the book before the class.If you show you are trying she will be more understanding. Come on an extra credit points 4 head phones, if you want an easy don't take her but if you want to learn ASL she's the one for you.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2013<br>Class Name: ASL102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is very discouraging. Honestly hated every minute of her class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: ASL101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst professor I have ever taken. Do not walk, RUN from this class!! She does not speak at all and does not allow talking so if you are confused about something in class you are SOL. Ended up dropping the class because I was actually going to fail this 100 level class. Her grading is ridiculous and there is no arguing with her about it</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2011<br>Class Name: ASL101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>very difficult grading for a beginner language class. quizzes were unnecessarily hard, as though she wanted us to fail. she didn't respond to emails in a timely manner and missed assignments of mine consistently even though i had proved that i turned it in on many occasions. i'm taking ASL 102 in the loop next time.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Susan/elizabeth Rangel</h1><hr><div><h2>Overall Quality: 1.63<br><br>Helpfulness: 1.5<br>Clarity: 1.75<br>Easiness: 1.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/31/2014<br>Class Name: ASL101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You get the grade you deserve with her, if you want a good grade you'll have to put some time into actually learning the signs from the book before the class.If you show you are trying she will be more understanding. Come on an extra credit points 4 head phones, if you want an easy don't take her but if you want to learn ASL she's the one for you.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2013<br>Class Name: ASL102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is very discouraging. Honestly hated every minute of her class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: ASL101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst professor I have ever taken. Do not walk, RUN from this class!! She does not speak at all and does not allow talking so if you are confused about something in class you are SOL. Ended up dropping the class because I was actually going to fail this 100 level class. Her grading is ridiculous and there is no arguing with her about it</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2011<br>Class Name: ASL101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>very difficult grading for a beginner language class. quizzes were unnecessarily hard, as though she wanted us to fail. she didn't respond to emails in a timely manner and missed assignments of mine consistently even though i had proved that i turned it in on many occasions. i'm taking ASL 102 in the loop next time.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

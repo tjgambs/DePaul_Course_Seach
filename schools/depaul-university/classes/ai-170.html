@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>AI 170 CREATIVITY AND ENTREPRENEURSHIP</h1><h2>IPads. Smart Phones. The automobile. These inventions, once unknown and now taken for granted, required years of imagining, experimentation and innovative thinking. While we value the end product, we are often uncomfortable with the creative/creating process. This process of imagining, conceptualizing and articulating the new? requires skills we often label `creative?. This class will explore the role of creativity in the development of entrepreneurial skills and the entrepreneurial personality. Creativity in this course will be seen both as a learned skill and as an exploration of our intuition. Contemporary ideas about creativity are often tied to images of the past - from mad scientists to mystical muses. But modern science tells us something else about the creative mind. This course will explore contemporary approaches to the creative process based on the human capacity to imagine, to explore and, ultimately, to create. These are core skills for anyone pursuing a career as an entrepreneur or simply in search of ways to explore innovation.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=AI&catalog_nbr=170",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

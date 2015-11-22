@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Deanna Montgomery</h1><hr><div><h2>Overall Quality: 1.75<br><br>Helpfulness: 1.5<br>Clarity: 2.0<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/21/2013<br>Class Name: SDV432<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Unknowledgeable, unprepared.I expect to be challenged with higher level thinking, this was not the case in this class.   Plan ahead and be considerate. I question the integrity of education at DePaul if this is the type of teacher that is employed. I expect the teachers at DePaul to be more qualified for their position.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2010<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I feel like she means well, but her class was so difficult. I tried very hard to succeed in this class but I felt like she never acknowledged that. A final on top of the HUGE group project and presentation was uncalled for. I learned some stuff, sure, but I just think this class would have been tolerable if I had another professor. She wasn't nice.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Deanna Montgomery</h1><hr><div><h2>Overall Quality: 1.75<br><br>Helpfulness: 1.5<br>Clarity: 2.0<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/21/2013<br>Class Name: SDV432<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Unknowledgeable, unprepared.I expect to be challenged with higher level thinking, this was not the case in this class.   Plan ahead and be considerate. I question the integrity of education at DePaul if this is the type of teacher that is employed. I expect the teachers at DePaul to be more qualified for their position.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2010<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I feel like she means well, but her class was so difficult. I tried very hard to succeed in this class but I felt like she never acknowledged that. A final on top of the HUGE group project and presentation was uncalled for. I learned some stuff, sure, but I just think this class would have been tolerable if I had another professor. She wasn't nice.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

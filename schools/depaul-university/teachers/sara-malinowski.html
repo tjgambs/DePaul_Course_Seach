@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Sara Malinowski</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/02/2009<br>Class Name: PSY366<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is shy and straightforward. You will get more a sense of the passion she has for her career than her personality. She is very intelligent and helpful. She wants you to learn. Does lots of powerpoints, and makes you write occasional reflections to makes sure you were paying attention. If you do the work, you'll get the A.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2008<br>Class Name: PSY366<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sara is a 5th year grad student. If you have a chance to take her, please do. She is intelligent and incorporates her work in the community mental health center in class. VERY interesting class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/08/2008<br>Class Name: PSY3XX<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a grad student so I don't know if she'll be teaching future classes but I'd recommend.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sara Malinowski</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.33<br>Clarity: 4.67<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/02/2009<br>Class Name: PSY366<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is shy and straightforward. You will get more a sense of the passion she has for her career than her personality. She is very intelligent and helpful. She wants you to learn. Does lots of powerpoints, and makes you write occasional reflections to makes sure you were paying attention. If you do the work, you'll get the A.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2008<br>Class Name: PSY366<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sara is a 5th year grad student. If you have a chance to take her, please do. She is intelligent and incorporates her work in the community mental health center in class. VERY interesting class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/08/2008<br>Class Name: PSY3XX<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a grad student so I don't know if she'll be teaching future classes but I'd recommend.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

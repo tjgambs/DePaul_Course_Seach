@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>DA 233 APPLIED INFORMATION MANAGEMENT SYSTEMS</h1><h2>This course introduces students to the key concepts in the field of Management Information Systems (MIS) and enhances understanding of the issues that business organizations face when developing and managing information systems. In this course, students will be presented with a broad overview of the field to first examine the increasing impact of information technology in business organizations, and second, in preparation for more advanced courses in data analytics and information systems. Specifically, the three major topics covered include (1) e-businesses and networks, (2) databases, as well as (3) enterprise resource planning (ERP) and process models. These topics are designed to prepare students for further inquiry on web analytics, data mining, project management, supply chain management, as well as business in general. By completing the course, students should be better equipped to apply IT skills to solve business problems, to participate in IT projects, and to communicate more knowledgeably with IT professionals.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DA&catalog_nbr=233",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

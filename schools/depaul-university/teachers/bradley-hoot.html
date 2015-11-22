@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Bradley Hoot</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 5.0<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/01/2014<br>Class Name: SPN102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I LOVE Professor Hoot. I am currently with another teacher wishing I could go back to him.  He speaks in spanish the whole time, but it is slow which helps so much. He speaks in english for complicated things. He is super helpful, encourages you to speak and participate, doesn't berate you if you get the wrong answer, encourages you to try again.</div></div></div><div id="container" class="review"><div id="left">Date: 07/12/2013<br>Class Name: SPN352<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hoot was great.  I had very little interest in Phonetics and Phonology beforehand (just needed the course to graduate) but his passion for the subject was contagious, and even though the homework felt like busy-work at times, I enjoyed it (and it helped my pronunciation a ton!)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Bradley Hoot</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 5.0<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/01/2014<br>Class Name: SPN102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I LOVE Professor Hoot. I am currently with another teacher wishing I could go back to him.  He speaks in spanish the whole time, but it is slow which helps so much. He speaks in english for complicated things. He is super helpful, encourages you to speak and participate, doesn't berate you if you get the wrong answer, encourages you to try again.</div></div></div><div id="container" class="review"><div id="left">Date: 07/12/2013<br>Class Name: SPN352<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hoot was great.  I had very little interest in Phonetics and Phonology beforehand (just needed the course to graduate) but his passion for the subject was contagious, and even though the homework felt like busy-work at times, I enjoyed it (and it helped my pronunciation a ton!)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

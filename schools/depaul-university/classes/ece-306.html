@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>ECE 306 FUNCTIONAL BEHAVIOR ASSESSMENT: POSITIVE BEHAVIORAL SUPPORT AND INTERVENTION METHODS</h1><h2>This course is designed to prepare early childhood pre-service teachers to work with children who present a variety of challenging behaviors in the classroom.  Grounded in principles of Applied Behavior Analysis, the philosophy of the course is based on the premise that understanding the underlying causes of children?s externalizing and internalizing behavior enables the teacher to utilize appropriate techniques in conducting behavior intervention and classroom management.  Using Positive Behavioral Support and Functional Behavior Analysis (a competency required for all teachers under the provisions of IDEA), students will learn how to design and develop a Behavior Intervention Plan. Diverse methods for addressing a variety of behaviors are explored and practiced through field-based assignments that also include application of behavioral assessment and intervention tools, as well as techniques.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECE&catalog_nbr=306",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

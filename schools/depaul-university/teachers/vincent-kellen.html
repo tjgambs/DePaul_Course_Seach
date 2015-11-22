@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Vincent Kellen</h1><hr><div><h2>Overall Quality: 2.75<br><br>Helpfulness: 3.0<br>Clarity: 2.5<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/05/2007<br>Class Name: CSC208<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy is the CIO of depaul and teaches csc 208.  Not a hard grader just make sure you go to class every week bc journal entry due on one day then quiz on the next.  Material not that hard and he loosens up after a couple weeks.  I did not show up 6 out of 20 times and was still able to get a B.  Group project and you can do group papers.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2007<br>Class Name: ECT586<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is in love with himself. Arrogant.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2006<br>Class Name: ECT556<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class requires you to think.  The homework and exams are structured where there is no straight answer but something you put together from all the reading assignments.  It requires some creative thought or sometime plain old thinking.  Don't take the class unless you have alot of time to read and research topics.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2006<br>Class Name: ECT556<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The topic is interesting and the readings as well but Mr. Kellen often zones out. I find it often very unclear. On the other hand he likes to speak about his IT shop what can be interesting. Would not take it again. You do not get enough for your money.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Vincent Kellen</h1><hr><div><h2>Overall Quality: 2.75<br><br>Helpfulness: 3.0<br>Clarity: 2.5<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/05/2007<br>Class Name: CSC208<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy is the CIO of depaul and teaches csc 208.  Not a hard grader just make sure you go to class every week bc journal entry due on one day then quiz on the next.  Material not that hard and he loosens up after a couple weeks.  I did not show up 6 out of 20 times and was still able to get a B.  Group project and you can do group papers.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2007<br>Class Name: ECT586<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is in love with himself. Arrogant.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2006<br>Class Name: ECT556<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class requires you to think.  The homework and exams are structured where there is no straight answer but something you put together from all the reading assignments.  It requires some creative thought or sometime plain old thinking.  Don't take the class unless you have alot of time to read and research topics.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2006<br>Class Name: ECT556<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The topic is interesting and the readings as well but Mr. Kellen often zones out. I find it often very unclear. On the other hand he likes to speak about his IT shop what can be interesting. Would not take it again. You do not get enough for your money.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

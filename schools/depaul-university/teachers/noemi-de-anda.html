@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Noemi De Anda</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.8<br>Clarity: 3.2<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/08/2009<br>Class Name: REL113<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's not very hard to get an A as long as you read your assigned readings and study a few hours a week.</div></div></div><div id="container" class="review"><div id="left">Date: 07/09/2008<br>Class Name: REL291<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's very understanding, friendly and knowledgeable. She's willing to help you out on your spare time. She gives you a list with all the possible assignments and with your possible grade. Basically based off the assignments you choose to do, get you the grade you want. I highly remcommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: RELSECT<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sucked.  Tried so hard to make things interesting but would always just make things complicated.  Her readings were boring and she never really &quot;taught&quot; she had us present and get in groups and talk about what we read.  Unbelievably boring and had too much work that was unecessary</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2006<br>Class Name: REL291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's fantastic ! if you are willing to study, im sure u will get a good grade on her class. and some of her material is really interesting (especiall about the tortilla and the movie speech session).. I highly reccomend u to take her class</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2006<br>Class Name: REL103<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The whole class was a bunch of nonsense. The three text books were a bunch of nonsense. She's a feminist that likes to talk in an incoherent language. It's true you can choose what assaignments to do, and can predict your grade based off of that. BUT A RIDICULOUS AMOUNTS OF POINTS ARE NEEDED FOR AN A. THIS CLASS WAS A ROYAL WASTE OF MY TIME.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Noemi De Anda</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.8<br>Clarity: 3.2<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/08/2009<br>Class Name: REL113<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's not very hard to get an A as long as you read your assigned readings and study a few hours a week.</div></div></div><div id="container" class="review"><div id="left">Date: 07/09/2008<br>Class Name: REL291<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's very understanding, friendly and knowledgeable. She's willing to help you out on your spare time. She gives you a list with all the possible assignments and with your possible grade. Basically based off the assignments you choose to do, get you the grade you want. I highly remcommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: RELSECT<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sucked.  Tried so hard to make things interesting but would always just make things complicated.  Her readings were boring and she never really &quot;taught&quot; she had us present and get in groups and talk about what we read.  Unbelievably boring and had too much work that was unecessary</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2006<br>Class Name: REL291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's fantastic ! if you are willing to study, im sure u will get a good grade on her class. and some of her material is really interesting (especiall about the tortilla and the movie speech session).. I highly reccomend u to take her class</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2006<br>Class Name: REL103<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The whole class was a bunch of nonsense. The three text books were a bunch of nonsense. She's a feminist that likes to talk in an incoherent language. It's true you can choose what assaignments to do, and can predict your grade based off of that. BUT A RIDICULOUS AMOUNTS OF POINTS ARE NEEDED FOR AN A. THIS CLASS WAS A ROYAL WASTE OF MY TIME.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Marine Broche-Soyer</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.67<br>Clarity: 4.67<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/15/2006<br>Class Name: FCH2012<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very sweet, funny, native-speaker, but don't let this fool you into thinking she is a push-over.  Couple of the hardest classes my freshman year, but learned a lot.  No final, but grammar+ vocab test every couple weeks+ 3-4 mini essays. LOTS of exercise book work, but also does poem analysis, film analysis, things to keep you interested.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2005<br>Class Name: FCHPRACTICUM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>veryy nice and sweet. always willing to help and answer questions. she's not too hard with grading either. I would highly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2005<br>Class Name: FRH201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Currently enjoying her class. Very sweet, soft-spoken, informative, sometimes funny, native-speaker. Always open to answering questions (grammatical/cultural/etc) and does so until you understand. Approachable and fair. Recommended :)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Marine Broche-Soyer</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.67<br>Clarity: 4.67<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/15/2006<br>Class Name: FCH2012<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very sweet, funny, native-speaker, but don't let this fool you into thinking she is a push-over.  Couple of the hardest classes my freshman year, but learned a lot.  No final, but grammar+ vocab test every couple weeks+ 3-4 mini essays. LOTS of exercise book work, but also does poem analysis, film analysis, things to keep you interested.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2005<br>Class Name: FCHPRACTICUM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>veryy nice and sweet. always willing to help and answer questions. she's not too hard with grading either. I would highly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2005<br>Class Name: FRH201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Currently enjoying her class. Very sweet, soft-spoken, informative, sometimes funny, native-speaker. Always open to answering questions (grammatical/cultural/etc) and does so until you understand. Approachable and fair. Recommended :)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

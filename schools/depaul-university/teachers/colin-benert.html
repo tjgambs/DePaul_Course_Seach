@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Colin Benert</h1><hr><div><h2>Overall Quality: 3.33<br><br>Helpfulness: 3.33<br>Clarity: 3.33<br>Easiness: 2.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/30/2013<br>Class Name: GER397<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Doesn't put on a big show to lure students into the subject- you gotta meet him halfway! But so worth it; he has an incredible wealth of knowledge. Tough course, and I learned a lot- amazing lectures, in-depth and thought-provoking, and serious reading material. VERY detailed, thoughtful and useful critiques on papers. Goes out of his way to help.</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2012<br>Class Name: GER101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>An alright class for 101. The work was not too difficult. He did not seem to be too passionate about the subject matter. He seems like he'd be better suited for higher level courses.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2012<br>Class Name: GER101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mr. Benert is an alright teacher. He speaks too much German for a 101 class. He sometimes gets frustrated with students, and does not answer questions well. He's a nice guy, just does not work well with lower level students. Most work is done from the textbook and online workbook.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Colin Benert</h1><hr><div><h2>Overall Quality: 3.33<br><br>Helpfulness: 3.33<br>Clarity: 3.33<br>Easiness: 2.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/30/2013<br>Class Name: GER397<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Doesn't put on a big show to lure students into the subject- you gotta meet him halfway! But so worth it; he has an incredible wealth of knowledge. Tough course, and I learned a lot- amazing lectures, in-depth and thought-provoking, and serious reading material. VERY detailed, thoughtful and useful critiques on papers. Goes out of his way to help.</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2012<br>Class Name: GER101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>An alright class for 101. The work was not too difficult. He did not seem to be too passionate about the subject matter. He seems like he'd be better suited for higher level courses.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2012<br>Class Name: GER101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mr. Benert is an alright teacher. He speaks too much German for a 101 class. He sometimes gets frustrated with students, and does not answer questions well. He's a nice guy, just does not work well with lower level students. Most work is done from the textbook and online workbook.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

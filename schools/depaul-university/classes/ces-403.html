@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>CES 403 CITIES AND RACIAL FORMATION</h1><h2>One of the required courses for the MA in Critical Ethnic Studies is in the area of Cities and Racial Formation. The group of courses in this area would cover urban issues, whether related to Chicago or other city/cities, or issues of race and ethnicity. These courses might cover topics on space, planning, and history of cities; or labor, work, and employment in urban contexts; or racial identity formation. As the majority of people living in the world today inhabit cities, this category of courses considers the many factors that transform racial make-up of urban areas. Courses might ask such questions as: What is the effect of rapid economic change on different races and their jobs in cities? What environmental features of cities affect race relations? What processes involving resource and energy consumption concern racial groups in different ways?</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CES&catalog_nbr=403",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

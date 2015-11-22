@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Andrew Stasiulis</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.8<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/23/2015<br>Class Name: DC-11O<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Andy is, by far, my favorite professor at DePaul. He's extremely clear about assignments and he really knows his stuff. I would definitely retake Andy's class any day. He's really engaging and he's also hilarious. You don't need coffee for his class because he'll wake you up in a heartbeat. </div></div></div><div id="container" class="review"><div id="left">Date: 09/15/2015<br>Class Name: DC224<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Andrew certainly shows a lot of passion for the subjects he teaches, which you can tell straight away with how energetic he is. Coming from Scotland has made him wiser but it certainly gave him a grandiose opinion of how America does things wrong. He's a fair grader, he's a funny guy, he just never feel wrong which is annoying. Expect a good class </div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: DC110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher, super funny. He knows what he's talking about and makes class interesting. However, he is super easy to get off topic so I sometimes felt like my time was wasted (yet still enjoyed). A few assignments here and there but besides that the work load is fairly easy. A teacher you must have at least once. </div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: GD110402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Actually learned something from this course. Andrew is awesome!</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: DC110402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I love Andy. He is by far one of the best professors I have ever had! I learned so much from him and I would highly recommend taking any class that he teaches. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Andrew Stasiulis</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.8<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/23/2015<br>Class Name: DC-11O<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Andy is, by far, my favorite professor at DePaul. He's extremely clear about assignments and he really knows his stuff. I would definitely retake Andy's class any day. He's really engaging and he's also hilarious. You don't need coffee for his class because he'll wake you up in a heartbeat. </div></div></div><div id="container" class="review"><div id="left">Date: 09/15/2015<br>Class Name: DC224<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Andrew certainly shows a lot of passion for the subjects he teaches, which you can tell straight away with how energetic he is. Coming from Scotland has made him wiser but it certainly gave him a grandiose opinion of how America does things wrong. He's a fair grader, he's a funny guy, he just never feel wrong which is annoying. Expect a good class </div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: DC110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher, super funny. He knows what he's talking about and makes class interesting. However, he is super easy to get off topic so I sometimes felt like my time was wasted (yet still enjoyed). A few assignments here and there but besides that the work load is fairly easy. A teacher you must have at least once. </div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: GD110402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Actually learned something from this course. Andrew is awesome!</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: DC110402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I love Andy. He is by far one of the best professors I have ever had! I learned so much from him and I would highly recommend taking any class that he teaches. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

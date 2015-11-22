@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Chuck Norris</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 2.8<br>Clarity: 5.0<br>Easiness: 1.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/02/2015<br>Class Name: KILL102<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>Chuck is master supreme. I assumed that after taking Kill101, I would know what to expect from the next level. I feel that I have ascended into a new being after taking this course! Would recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2011<br>Class Name: KILL101<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Being from Texas I am used to this man being behind you at all time. But he followed me to Chicago!!! Now the eyes of Texas never leave me alone, I can see them in my sleep. I have nightmares. OH GOD...</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2007<br>Class Name: KILL101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>My face still hurts but I've never felt smarter in my life.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2006<br>Class Name: KILL101<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Wow, I never really thought he would be such a tough professor! Just be sure not to backtalk to the man or he'll roundhouse you in the face. His a$$-kicking skills are super amazing, especially in person. We learned all sorts of deadly techniques and maneuvers. I just wish he would teach more classes; apparently, he's too busy taking care of crime.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Chuck Norris</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 2.8<br>Clarity: 5.0<br>Easiness: 1.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/02/2015<br>Class Name: KILL102<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>Chuck is master supreme. I assumed that after taking Kill101, I would know what to expect from the next level. I feel that I have ascended into a new being after taking this course! Would recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2011<br>Class Name: KILL101<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Being from Texas I am used to this man being behind you at all time. But he followed me to Chicago!!! Now the eyes of Texas never leave me alone, I can see them in my sleep. I have nightmares. OH GOD...</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2007<br>Class Name: KILL101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>My face still hurts but I've never felt smarter in my life.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2006<br>Class Name: KILL101<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Wow, I never really thought he would be such a tough professor! Just be sure not to backtalk to the man or he'll roundhouse you in the face. His a$$-kicking skills are super amazing, especially in person. We learned all sorts of deadly techniques and maneuvers. I just wish he would teach more classes; apparently, he's too busy taking care of crime.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Zack Ostrowski</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.8<br>Clarity: 4.3<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/19/2015<br>Class Name: ART358<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Prof. Ostrowski is the man with the plan </div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2013<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Zack is an awesome professor! The projects he assigned helped me grow so much as an artist and he gives really great feedback. This class is super laid back, but certain projects can be a bit challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2013<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a good teacher, but there are lots of assignments which are very rushed. Therefore, the students have to spend several hours outside of class. He is a very cool singer/artist/person. His suggestions on our projects were helpful and he was always willing to help through email as well.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2012<br>Class Name: ART264<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I loved this class. Typography is surprisingly very interesting. The professor is really nice and his comments are really helpful. I really recommend him! I'm very surprised how much I enjoyed this class. Definitely recommend  taking it!!! Pretty easy coursework too!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Zack Ostrowski</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.8<br>Clarity: 4.3<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/19/2015<br>Class Name: ART358<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Prof. Ostrowski is the man with the plan </div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2013<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Zack is an awesome professor! The projects he assigned helped me grow so much as an artist and he gives really great feedback. This class is super laid back, but certain projects can be a bit challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2013<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a good teacher, but there are lots of assignments which are very rushed. Therefore, the students have to spend several hours outside of class. He is a very cool singer/artist/person. His suggestions on our projects were helpful and he was always willing to help through email as well.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2012<br>Class Name: ART264<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I loved this class. Typography is surprisingly very interesting. The professor is really nice and his comments are really helpful. I really recommend him! I'm very surprised how much I enjoyed this class. Definitely recommend  taking it!!! Pretty easy coursework too!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value

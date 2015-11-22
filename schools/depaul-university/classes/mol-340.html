@@ -211,7 +211,14 @@
 <div>
 <br />
 <hr>
-<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button>
+<div id="overlay">
+	<div>
+	    <form action="../search.html">
+			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+			</form>
+	</div>
+</div>
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>MOL 340 ARAB CULTURE</h1><h2>This is the first in a series of three hybrid courses in the Arabic Studies Program that examine Arab culture. The purpose of this course is to provide students with an overview of Arab culture and a clear understanding of its elements and historical events that shaped it. Emphasis will be placed on cultural aspects shared by all Arabs. The course will examine the general concept of culture, and study the elements that form Arab culture. It will also explore the impact of critical factors and events in Arab history from pre-Islamic to modern time on the evolvement of Arab culture as we know it today. Students will gain insight into the way Arabs think by examining Arabs' cultural practices, products, and perspectives. In addition to learning about Arabs and Arab culture, students will practice using technology to research, blog, discuss, and contribute to open-sources on topics related to Arab culture. Students will also have the opportunity to meet and interact with Arabs and the Chicago Arab heritage community.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MOL&catalog_nbr=340",$.ajax({
 	    url:url,
 	    type:'GET',
@@ -321,6 +328,26 @@
 	    		}
 	    	}
 	    }
+	});
+
+	function overlay() 
+	{
+		el = document.getElementById("overlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 	
 	function addToCart(contents)

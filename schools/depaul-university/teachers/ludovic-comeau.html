@@ -212,7 +212,34 @@
 				<div>
 				<br />
 				<hr>
-				<button class="generate" style="top:-20px; align: center;">ADVANCED SEARCH</button><h1>Ludovic Comeau</h1><hr><div><h2>Overall Quality: 1.5<br><br>Helpfulness: 1.5<br>Clarity: 1.5<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/20/2014<br>Class Name: FOUNDATIONS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: P</div><div id="right"><div>I was assigned to his Foundations class, so he then, unfortunately, became my advisor. I received little to know advising from him the entire time. The few times I did reach out for help, he made me feel like I was bothering him. He was neither encouraging nor supportive, the way an advisor should be. Incredibly rude and arrogant.</div></div></div><div id="container" class="review"><div id="left">Date: 09/03/2009<br>Class Name: ECON102<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very inconsiderate. Does not understand how to reach out to students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="overlay">
+					<div>
+					    <form action="../search.html">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+							</form>
+					</div>
+				</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Ludovic Comeau</h1><hr><div><h2>Overall Quality: 1.5<br><br>Helpfulness: 1.5<br>Clarity: 1.5<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/20/2014<br>Class Name: FOUNDATIONS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: P</div><div id="right"><div>I was assigned to his Foundations class, so he then, unfortunately, became my advisor. I received little to know advising from him the entire time. The few times I did reach out for help, he made me feel like I was bothering him. He was neither encouraging nor supportive, the way an advisor should be. Incredibly rude and arrogant.</div></div></div><div id="container" class="review"><div id="left">Date: 09/03/2009<br>Class Name: ECON102<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very inconsiderate. Does not understand how to reach out to students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					function overlay() 
+					{
+						el = document.getElementById("overlay");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#overlay').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("overlay");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function submitForm()
 					{
 						var prefix = document.getElementsByClassName('prefix')[0].value
