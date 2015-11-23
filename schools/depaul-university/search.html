@@ -36,7 +36,7 @@
 		<h1><a href="search.html" style="text-decoration:none; color:#333">MockSched</a></h1>
 		<h3>DePaul University</h3>
 	</div>
-	<div style="text-align: center;">
+	<div id="search-box" style="text-align: center; visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
 			<div style="padding: 3%; text-align:left;">COURSE PREFIX</div>
 			<select class="prefix">
@@ -353,6 +353,7 @@
 	{
     	$(".prefix").select2();
     	$('#tipue_search_input').tipuesearch();
+    	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	updateCourseCartCount()
 </script>
