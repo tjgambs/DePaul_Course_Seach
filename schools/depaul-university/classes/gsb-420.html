@@ -361,7 +361,6 @@ This course will stress learning through applications/problem-solving using Exce
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ This course will stress learning through applications/problem-solving using Exce
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

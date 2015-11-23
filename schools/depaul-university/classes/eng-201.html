@@ -361,7 +361,6 @@ WRD 103 or HON 100 is recommended.</h2></body><script>url = "https://crossorigin
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ WRD 103 or HON 100 is recommended.</h2></body><script>url = "https://crossorigin
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

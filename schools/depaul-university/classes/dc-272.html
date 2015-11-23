@@ -362,7 +362,6 @@ Prerequisites: DC 201</h2></body><script>url = "https://crossorigin.me/http://of
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -526,6 +525,7 @@ Prerequisites: DC 201</h2></body><script>url = "https://crossorigin.me/http://of
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

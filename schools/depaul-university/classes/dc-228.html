@@ -361,7 +361,6 @@ In the eyes of many, games and movies are violent, offensive and immoral. This c
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ In the eyes of many, games and movies are violent, offensive and immoral. This c
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

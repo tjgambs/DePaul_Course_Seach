@@ -362,7 +362,6 @@ Students will learn the fundamental concepts necessary to shoot, edit, manipulat
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -526,6 +525,7 @@ Students will learn the fundamental concepts necessary to shoot, edit, manipulat
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

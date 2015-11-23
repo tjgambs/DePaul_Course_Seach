@@ -361,7 +361,6 @@ PREREQUISITE(S): ANI 421</h2></body><script>url = "https://crossorigin.me/http:/
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ PREREQUISITE(S): ANI 421</h2></body><script>url = "https://crossorigin.me/http:/
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

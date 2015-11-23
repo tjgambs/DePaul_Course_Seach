@@ -361,7 +361,6 @@ PREREQUISITE(S): GAM 377 or GAM 392</h2></body><script>url = "https://crossorigi
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ PREREQUISITE(S): GAM 377 or GAM 392</h2></body><script>url = "https://crossorigi
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

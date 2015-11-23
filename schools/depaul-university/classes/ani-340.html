@@ -361,7 +361,6 @@ PREREQUISITE(S): ANI 220 and ANI 240 and junior standing</h2></body><script>url 
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -525,6 +524,7 @@ PREREQUISITE(S): ANI 220 and ANI 240 and junior standing</h2></body><script>url 
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

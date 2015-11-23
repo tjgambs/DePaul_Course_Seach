@@ -366,7 +366,6 @@ Student will have an opportunity to speak at each class as there will be 3 short
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -530,6 +529,7 @@ Student will have an opportunity to speak at each class as there will be 3 short
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

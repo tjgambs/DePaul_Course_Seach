@@ -362,7 +362,6 @@ Speech, whether we call it dramatic or declamatory, has the potential to move th
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -526,6 +525,7 @@ Speech, whether we call it dramatic or declamatory, has the potential to move th
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

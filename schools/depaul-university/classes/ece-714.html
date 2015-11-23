@@ -362,7 +362,6 @@ The seminar will have the following objectives:  1) In-depth analysis of the con
 		    		}
 		    	}
 	    	}
-	    	document.getElementById('search-box').style.visibility = 'visible';
 	    }
 	});
 
@@ -526,6 +525,7 @@ The seminar will have the following objectives:  1) In-depth analysis of the con
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>

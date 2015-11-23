@@ -29,6 +29,7 @@
 	</span>
 	<span>
 		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
+		<div id="search-box" style="visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
 			<select class="prefix" style="width:200px;">
 				<option value="ACC">ACC - Accountancy</option>
@@ -212,6 +213,7 @@
 					<input class="inputbox" type="submit" value="SEARCH">
 				</form>
 			</div>
+		</div>
 		</div>
 	</span>
 <div>
@@ -522,6 +524,7 @@ those pieces were successful and how to translate that success to the stage.</h2
 		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
 </html>
