@@ -349,10 +349,13 @@ An introduction to moral philosophy with emphasis on the conflict between "moral
 		    		{
 		    			if (overall != undefined)
 		    			{
-			    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ overall + '</a>'
-			    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ first_name + '</a>'
-			    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ last_name + '</a>'
-			    			list_cookie[j].id = overall+',' + list_cookie[j].id
+		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
+		    				{
+				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ overall + '</a>'
+				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ first_name + '</a>'
+				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ last_name + '</a>'
+				    			list_cookie[j].id = overall+',' + list_cookie[j].id
+			    			}
 		    			}
 		    		}
 		    	}

@@ -104,6 +104,7 @@ def export_to_csv():
 
 def create_teacher_webpage(id,name,values):
 	if (values[0] == '0' or values[0] == '0.0'): return
+	if (os.path.exists('../teachers/' + name.replace(' ','-').replace('/','').lower() + '.html')): return
 	reviews = rmp_reviews.format_reviews(id)
 	name = name.encode('utf-8').replace('í','i')
 	print name
