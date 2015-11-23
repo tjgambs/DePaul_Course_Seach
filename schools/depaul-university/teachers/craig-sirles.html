@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Craig Sirles</h1><hr><div><h2>Overall Quality: 3.91<br><br>Helpfulness: 3.85<br>Clarity: 3.97<br>Easiness: 2.56</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/10/2014<br>Class Name: ENG211<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>In addition to being a good instructor, Dr. Sirles has a droll sense of humor that is amusing to say the least. Although his class seemed a little work heavy at first, Dr. Sirles was helpful and willing to go over old material. I highly recommend his class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2014<br>Class Name: ENG211<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor is rude to students. He seems to enjoy calling students out and embarrassing them. He is only a lecture teacher, though he puts handouts up. Overall, his lecture is mainly confusing and I would not recommend this class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: ENG221<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice guy and has a good sense of humor. Do the readings and you'll pass the quizzes every time. Assignments aren't too difficult and he's laid back about deadlines. Definitely recommend and would take again, he is awesome!</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2012<br>Class Name: ENG407<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of my favorite teachers in MAWP. He is hilarious and a joy to listen to because of all his random knowledge. Though Language and Style is challenging, he gives you chances to drop your lowest grades.</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2009<br>Class Name: ENG528<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I received my MA over ten years ago now. I can say with conviction that I learned more in Dr. Sirles class than any other. He's no bullsh*t--and if you can't handle straighforward, contrstructive criticism, do not take this class. It was more real-world than any other class I took. Plus, I think he's a hottie. :)</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2009<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is very sarcastic but you end up liking him. He is very smart and I learned a lot from him. The textbook is very helpful even after you've taken the course. I'd recommend him anytime.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2009<br>Class Name: ENG40<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sirles is hilarious. I enjoyed every minute of class, except for when he'd read page after page of text out loud. If you're thin-skinned, you'll probably get offended by him, but if you like a dry, sarcastic wit, you'll have a blast at everyone elses' expense.</div></div></div><div id="container" class="review"><div id="left">Date: 04/10/2007<br>Class Name: ENG500S<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Sirles is the most intelligent person I've ever met. I purposely took two hard classes as electives just so that I could take him again. I envision him sipping martinis at a cocktail party, arguing over Norman Mailer. I fell in love with this man's brain!</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2006<br>Class Name: ENG202<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>wonderful, always late to class and wastes tons of time.  Just the kind of class you'd want to take if you want to be in a HORRIBLE mood for the rest of the day!! Only take him if you want to fully convince yourself all classes outside of your major are a waste of time and money.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2006<br>Class Name: ENG426<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The wittiest, most entertaining, intelligent professor I've ever had.  He's the kind of guy you'd find in a pub in London ranting about syntax and politics.  He will teach you much.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2006<br>Class Name: GRAMMAR<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sirles rocks!  He has the perfect balance of intelligence, dry wit, and presentational style.  He taught me how to &quot;tree,&quot; but more importantly, how to teach grammar.  His mother says he is a doctor, &quot;but the not the kind that helps people.&quot;  I beg to differ, Mrs. Sirles, I beg to differ.</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2006<br>Class Name: ENG101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>awesome</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2006<br>Class Name: ENG409<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best professors I have ever had.  He has a sense of humor. He lectures, but is will to stop for conversation and to discuss material in greater detail.  I learned the most for my master's degree from his classes.  It's stuff you can really put to good use.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2006<br>Class Name: ENG203<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this is the funniest professor of all time. i would take anything with him because this dude is so crude and hilarious. amazing.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2005<br>Class Name: STYLISTICS<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Learned a lot in his class. The best thing about him is that he actually lectures! No breaking into groups and discussing the material. He comes in prepared with lecture notes and explains the material. I wish more teachers would go back to this style. He really knows his material and makes it intresting.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2005<br>Class Name: ENG369<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was an awesome teacher. Very funny, sometimes crude humor (he flicked me off, all in good fun though) Curves alot, but knows his stuff. Kept me awake alot better than most other english profs.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2005<br>Class Name: ENG408<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Lectures are very interesting. The humor is appreciated. Prof. Sirles is not an easy grader, but he does curve a lot. I would recommend taking his classes. You could do a whole lot worse.</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2005<br>Class Name: ENG408<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great sense of humor, helpful, enjoy his class!</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2005<br>Class Name: 408<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>All you have to do is come to class prepared and leave the B.S. at home. Sirles knows his stuff and will call you out if you don't know yours.</div></div></div><div id="container" class="review"><div id="left">Date: 08/06/2005<br>Class Name: ENG416<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Agree with most comments. Biting humor. Very very smart. Curves like crazy. Learned a hec of a lot in his class, which was very tough. (grad level rhetorical grammar). Was also my masters' advisor. Work hard and you'll do fine. Slack and you will not.</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2005<br>Class Name: ENG401<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent professor. Knows his stuff and doesn't suffer fools easily. Great if you are willing to think and learn. Oh, and you have to have a sense of humor. Would take another class with him any day.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: ENG408<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This man's class is wonderful for people who hate the English language.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: ENG408<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>danger warning stay away, great class if you want to suck the life out of the english language psychotic</div></div></div><div id="container" class="review"><div id="left">Date: 01/21/2005<br>Class Name: ENG408<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is challenging, but interesting.  Sirles doesn't put up with idiots, which may intimidate some people.</div></div></div><div id="container" class="review"><div id="left">Date: 01/19/2005<br>Class Name: GRADCLASSES<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sirles used to give me the finger.  To end every class he told us 'It's Miller time.'</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: SOPHSEMINAR<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sirles is awesome as long as you have a sense of humor. Curves tests like crazy, so you can do poorly and still get a B. Workload was less than I had expected.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2004<br>Class Name: ENG408<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sirles is great, if you are not offended by him!  He is smart and the workload was a cinch.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2004<br>Class Name: ENG203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>By far my favorite professor in my three years at DePaul.  He is sooo funny and he makes class go by fast because of it.  He knows his stuff and is very easy to learn from and easy to talk too. He wants his students to do well so he gives a nice curve.</div></div></div><div id="container" class="review"><div id="left">Date: 09/11/2004<br>Class Name: ENG416<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>witty, personable, extremely knowledgable</div></div></div><div id="container" class="review"><div id="left">Date: 07/27/2004<br>Class Name: ENG202<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy knows his stuff and is willing to share if you ask. You have to work for your grade, but you will learn a TON of usefull corporate tricks for writing. Highly recommended to the student who wants to be successfull in the business world.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2003<br>Class Name: ENG416<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>A very difficult and sometimes hard to follow class.  Intelligent teacher with biting humor.  Don't take him unless you're prepared to work and study hard.  He is fair with curves.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2003<br>Class Name: LING<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sirles rocks! My Masters program wouldn't have been the same without him. How can you not like a guy who taught you trees&#63; Libby misses you. :)</div></div></div><div id="container" class="review"><div id="left">Date: 09/04/2003<br>Class Name: ENG400<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>HARD AS HELL, but makes things fair with a curve. This guy is hilarious--but not if you're easily offended.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2003<br>Class Name: ENG202<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Amira Proweller</h1><hr><div><h2>Overall Quality: 3.47<br><br>Helpfulness: 3.21<br>Clarity: 3.73<br>Easiness: 2.26</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/25/2014<br>Class Name: SCG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>She was an incredible professor. Passionate, kind and reasonable. She instilled passion in her students, and was very open minded in discussion times.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: SCU207<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Proweller is incredibly passionate and knowledgable. Lots of reading, but necessary for pre-service teachers. A great social justice emphasis. She cares about her students and tries very hard to get students to be engaged and participate. Papers are clear and are easy if you have kept up with the readings and class discussions</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: SCU207101<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Pretty good teacher. Can be rather opinionated but only because she is passionate about education. She runs class seems more like a social justice class with an emphasis in education but it makes you think about continuing in profession. Get through this class, and you're set.</div></div></div><div id="container" class="review"><div id="left">Date: 09/14/2012<br>Class Name: SCG408<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Like the professor and class. She knows her field and expects a lot from students. I guess I see the world more critically w/o my rose colored glasses I was wearing. I recommend her. Be open and be honest.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2011<br>Class Name: SAC408<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Tough class, but incredibly interesting. She's pointed and opinionated, but that's not bad -- she definitely knows her stuff. Expect to work. Most of the students who disliked her simply didn't want to do any work. She was able to make research methodology an interesting topic -- didn't think that was possible!</div></div></div><div id="container" class="review"><div id="left">Date: 01/13/2010<br>Class Name: SCG408<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This is among the top three worst educational experiences I have had in my entire life. I understand that professors, as well as students, come to class with preconceived opinions, but Prof. Proweller was openly dismissive of anyone's opinions but her own.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2009<br>Class Name: SCU207<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Interesting topics and important readings, but there are a good number of them that are a bit unnecessary.  Also, it's tough to sit through 3 hours of lectures in this class.  But, overall not too bad.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2009<br>Class Name: SCU270<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Before coming to this class (SCU 270) I was excited for the topics we would cover. But all she does is sit behind a desk for 3 hours and talk. It is impossible to stay interested or even pay attention. The readings and topics are worth the time, but the classroom hours are unbearable.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2009<br>Class Name: SCG408<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Did well in the class, although I hated it.  I agree with most of the previous comments.  I'd like to add that Prof. Proweller is a &quot;researcher&quot; meaning don't bring up methodology or classroom application of any of the readings, because that is &quot;not [her] area of expertise&quot; and she will immediately change the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2009<br>Class Name: SCG408<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Interesting readings, but the majority of them leaned strongly towards the professor's point of view and she would tear apart the readings that didn't while assuming we agreed with her. I did all of the readings, barely participated (too busy watching the clock), but got an A. If you want to take this class, I'd try a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2008<br>Class Name: SCG408<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This teacher likes to listen to herself talk. She frequently talked at us...and even interrupted the group presentations so that she could talk more (and inject her own opinions). Really disliked this class. Too much emphasis on the teacher's biased opinions at the expense of more rich understanding.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2008<br>Class Name: SCG408<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>After reading the other reviews, I wanted to add my comment.  As someone who did every reading for this class- I didn't feel the need to participate solely because I felt it was an environment hostile to opinions that differed from the professor.  She may declare her bias, but that doesn't make it right.  Good teaching is presenting multiple sides.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2008<br>Class Name: SCG408<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The prof. is open about her bias and invited argument.   Those who complain about bias did not speak up to disagree. Many did not even  do the readings so that they would be able to back up dissenting opinions, or they spent class working on papers for other classes.  If you want to do work, think, and be challenged, you will enjoy this prof.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2008<br>Class Name: SCG408<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This professor has a definite agenda.  Her lessons are so biased that (even though I would possibly agree with some of what she says), I couldn't take her seriously at all.  Such bias corrupts all credibility.  Hated this prof!  Watched the clock for 3 hours straight.  And apparently I'm not alone in this view.  Steer clear!</div></div></div><div id="container" class="review"><div id="left">Date: 07/10/2004<br>Class Name: METHODS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

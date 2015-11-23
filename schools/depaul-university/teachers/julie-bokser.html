@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Julie Bokser</h1><hr><div><h2>Overall Quality: 3.35<br><br>Helpfulness: 3.33<br>Clarity: 3.38<br>Easiness: 2.79</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/03/2015<br>Class Name: 104<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>She tends to give assignments that are very blunt and have no point. She's incredibly opinionated and has no room to be; it's either you write the way that she or the people she presents does. Please, don't take her class unless you can stand someone that is uptight and biased. </div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2014<br>Class Name: WRD103<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Lots of busy work and lots of reading, on top of your essays due. She is very passionate about her class. But it is not an interesting course. Unlike other WRD classes you are not writing about interesting topics. All your essays are topics arguing something like "what is good writing". This professor's class is seriously writing about writing...</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>I loved having Professor Bokser as my teacher! I'm a pretty strong writer but find writing completely boring.. She really helped make it bearable. Loved how she gave feedback, it was really helpful and it really helped you get a good grade and learn how to write well!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2011<br>Class Name: WRD300<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you like writing and you like working in groups then this is your class. We get to write 4 essays on whatever topic, but be careful. Bokser is extremely critical of her students' writing. She gave me my first B- on a paper EVER! If you can handle criticism then you will do find in her class. Cool prof. overall.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2011<br>Class Name: WRD306<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>At first she is very intimidating, but she's actually a really sweet lady. I learned so much in her class. There is a lot of reading and writing, but it's worth it. You will learn a lot about rhetoric! My favorite WRD class thus far! Take her if you're willing to work.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2011<br>Class Name: WRD104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I'm sorry to say she is one of the bad professor of depaul. Her assignments are pointless, and what we do in class is pointless. I didn't learn anything in her class and her grading is confusing and hard to understand. Just don't waste your time with her class, she may seem fun and interested, you can be fooled by that.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2011<br>Class Name: WRD300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>What&#63; She's not helpful&#63; Yes she is. Also, she's a really good teacher. Take if you like english, you will learn a lot. Don't miss Bokser if you want to get a good education from depaul</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2010<br>Class Name: FOCALPNT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amazing professor. One of DePaul's best. Her focal point class is AMAZING, take it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2010<br>Class Name: ENG809<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not a good teacher at all. The readings are not helpful and the assignments are pointless. You are better off taking a different teacher, she is not helpful at all</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2010<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Do not take. Not worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2009<br>Class Name: ENG309<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>My writing improved greatly with her help. She picks great essays and articles for reading.  However, sometimes she can come off as if her viewpoint is the only correct way to look at something. She has a hard time reading a text in any other way than her own interpretation. I recommend her, but if you are stubborn with your writing, i would pass</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2007<br>Class Name: ENG379<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took her for my senior seminar and she was great! Sweet as could be and always willing to help. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2006<br>Class Name: ENG306<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Good teacher, good class. I thought she was a very easy grader (I got my A). I learned quite a bit about rhetoric and it's history that I know I will be able to use outside the classroom. She is mainly interested in the content and logic of what your writing about. I would recommend this class and her to anybody.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2006<br>Class Name: ENG300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i thought she was a good teacher. She didn't hold everyone to one standard. She really worked with people to make them work to their full potential. She concentrated on individual growth, rather than comapring you to everyone else in the class. She's really nice too.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2005<br>Class Name: ENG306<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very good teacher.  I was skeptical when I looked at her syllabus and saw the crazy assignments that she had planned, but they ended up being very interesting.  I didn't think I could enjoy rhetoric as much as I did.  She kept the students interested for the entire time.  Good teacher, very helpful, and very intelligent.  Great class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2005<br>Class Name: HON101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I'm taking this class right now and it's one of my favorites. Bokser is a very intelligent and admirable professor. She picks great, throught-provoking literature. A very enjoyable class!</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2005<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A feminist as well is dumb. Made rude comments about my writing. She shouldnt teach at depaul not a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2005<br>Class Name: ENG300<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I DONT KNOW WHY SHE GOT A BAD RAP, IF YOUR WRITING SUCKS AND SHE TELLS YOU IT DOSENT MAKE HER A BAD PROF.  I REALLY ENJOYED HER CLASS I LEARNED A LOT AND I WOULD DEFFINATELY RECCOMEND HER</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2004<br>Class Name: ENG300<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I do not recommend this teacher! She is extremely opinionated! Only her comments and her style of writing is right, so if you don't write just like her don't expect to do well in the class. She refuses to see a topic from a different perspective.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2004<br>Class Name: ENG103<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She has the worst topics for papers and it was the boringest class ever. She made you stay even if she had nothing to teach. She was also an unfair grader. Horrible teacer in general.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: ENG300<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take Bokser for upper-division courses.  Once you have gone through the 100 and 200 level courses, she is great.  Very relevant reading and assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2004<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is probably the worst professor that I have ever had at DePaul.  She makes it seem as if her class is the only class that you take here.  Her topics are boring, the reading is boring, and she grades very hard, even though her topics are opinionated.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2004<br>Class Name: ENGLISH102<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her topics are not appealing for writing assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2004<br>Class Name: ENG395<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Granted, I hate Professor Boksor for a class for the Writing Center, of which she is the director, which makes it all that more imperative for her to be able to help us learn so we can do our jobs correctly; however, I think she does a very good job.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

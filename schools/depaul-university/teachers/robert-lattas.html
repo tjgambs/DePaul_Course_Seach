@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Robert Lattas</h1><hr><div><h2>Overall Quality: 4.35<br><br>Helpfulness: 4.23<br>Clarity: 4.46<br>Easiness: 2.85</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/10/2014<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Bob is great at teaching accounting, he is very clear and the exams are super easy (that is if you know your stuff of course).</div></div></div><div id="container" class="review"><div id="left">Date: 06/29/2013<br>Class Name: ACC102<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Knows what he's doing; however, extremely sarcastic and rude.  Goes over problems in class.  Memorize and you will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2013<br>Class Name: ACC350<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>ACC 350 with lattas was mostly group work (4 students per group). 3 informal presentations and a huge formal one.Also, midterm and final. I thought the class was interesting work but I couldn't get over the fact at how rude(some say sarcastic) he was towards students and people in general.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Taking Acc 102 with Professor Lattas, A.K.A Bob was probably one of the best decisions I made my freshman year at DePaul. Bob is a no BS kind of guy and you can see that in his homework, test, and quizes. In the end I would defiantly recommend you take him to invest in your future, he just might invest in yours.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2013<br>Class Name: ACC304<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very sarcastic; I loved it.  I didn't like his style of throwing us into a complicated assignment before explaining how to do it (though it wasn't graded)  Other than that, his grading was very lenient and he *tried* to find points if possible.  If you can stand a 4 hours night class I would definitely recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2013<br>Class Name: ACC304<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>By no mean he is a bad person, just full of sarcasm. Need to read the book and do homework by yourself before class, mostly self-study. He just solve problems in class and teach just a little bit about it. Real world experience & tips. Totally not recommend if you want to learn, not memorize. Talk very fast and give headache, but easy exams.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2012<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Says it the way it is and will not tolerate ignorance in the classroom.  Demands respect, but also gives it.  Runs his classroom like a business and he expects everyone to be prepared for class, show up on time AND NOT USE YOUR CELL PHONE WHILE IN CLASS.  Best professor I had at DePaul because he has real world experience too.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2012<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Lattas is an excellent teacher. As long as you come to class prepared, take the time to pay attention and do the assigned problems you will succeed. If I was confused he was available to help clarify through office hours and via email. I would definitely take another one of his classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2010<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof Lattas is a great prof. He may seem kind of cocky but he knows what he's talking about. He goes over every HW problem so make sure you're prepared cause he will call on you, he just doesn't collect it. He tells you what kind of problems to study for the midterm and final. He's active during class and keeps class upbeat. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2010<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DePaul's best professor.  Brilliant, funny, successful, and passionate.  The attributes of what every professor should be.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2010<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>You can tell that Professor Lattas has a passion for teaching.  More importantly, he has experience and knows how business works!  You e-mail him, he e-mails you back immediately.  He is always available to chat before or after class and during office hours.  He cares about his students...he got a bunch of us jobs!  I mean...what more do you want!</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2010<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Overall good professor. Teaching method is odd, it will take some getting used to. If your lazy and don't do what he tells you, you will fail no doubt. If you take him, plan on spending a lot of time reviewing. 3 quizzes, midterm, and a final. I'm escaping with an A.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2010<br>Class Name: ACC304<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>very funny professor. You must have the homework done for the chapters to be taught that week because goes over homework during class. He tells you what you need to know. 2 exams, 2 take home quizzes & Final. Must take!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

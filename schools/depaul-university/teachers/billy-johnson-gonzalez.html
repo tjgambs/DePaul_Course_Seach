@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Billy Johnson Gonzalez</h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 5.0<br>Clarity: 4.86<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/26/2013<br>Class Name: ENG275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of my absolute favorite classes! The knowledge this professor possess is astonishing. He is so funny. He is so passionate. & is such an amazing teacher. You have a couple quizzes, three major papers, and a final. He grades the papers intensely but gives great feedback. I loved attending every single class. He also dresses really nice--so fab</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2013<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor BJG is hands down my favorite professor that I've had in college.  He is extremely knowledgeable and his lectures are always full of life and spunk.  He did a great job of keeping the class engaged and getting us to think outside of the box.  That being said, he is not an easy grader but he is fair, so you get the grade you earn.</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2013<br>Class Name: ENG363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>My favorite English professor at DePaul. When he does lecture he is so well spoken it is impossible not to be captivated. Class discussions were usually student lead which was great. He is genuinely interested in hearing what you have to say and will help in any way he can. A must take in my opinion, especially from 363. Three papers and a final.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2013<br>Class Name: ENG472<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Gonzalez could not get any better at doing his job:  he explains everything thoroughly while not taking for granted that you've understood what he's said.  He asks you if you have understood each reading, and, if you haven't, goes through it step-by-step while asking for your input along the way.  Lots of reading but totally worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2011<br>Class Name: ENG398<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I love this professor. His ability to make you rethink every character in a book or movie is amazing. I walked into my first literature class terrified that it would be overwhelming. And it was at firsr but Bill's sense of humor and good attitude make it easy to care about the material.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2011<br>Class Name: LST310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor BJG is awesome! He gets you to think without even trying! All you need to do is keep up with the readings. He doesnt have pop quizzes or long papers to write. He will help you in anyway possible if you just ask. I recommend him to all DePaul students. You really wont regret it (:</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2010<br>Class Name: ENG369<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I had Bill in Fall '07. It was my first quarter as a transfer stdnt, and his first at DePaul. One of the nicest profs at DePaul. Very lively and engaging. He is vastly knowledgeable, yet not at all pompous. He exemplifies good teaching. Take him, you won't regret it for a second.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

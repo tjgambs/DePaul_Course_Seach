@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sherri Ter Molen</h1><hr><div><h2>Overall Quality: 4.2<br><br>Helpfulness: 4.3<br>Clarity: 4.1<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: CMN103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sherri is great, such a lovely woman. She is so intelligent, and she has a true love for intercultural communication. Super down to earth, and willing to help you if needed. She has strict grading criteria, but its because she expects good work. She keeps the class interesting and engaging. Would totally take her again, I highly suggest her. </div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2015<br>Class Name: CMN103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Sherri is a great teacher, though her teaching style clashed with my personality. A very sweet teacher who encourages participation and really wants to get to know her students. There are 3 quizzes, of which the lowest is dropped and a couple papers and a final. Do the reading, study for quizzes and the final and you'll be fine. She is really great</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: ORG201<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>We had a ton of group projects for an online class and it sucks. she seemed sweet and from above ratings it would appear she may be better to take in person. the terms over and she still hasnt graded over 80% of the hw and im not finding out how she grades and a lot of tips i could have used. overall disappointed and annoyed would say take in class</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2014<br>Class Name: CMN103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sherri is the SWEETEST professor I've ever had! She is very passionate about intercultural communication and OBSESSED with South Korean culture. There are a lot of group discussions. Class is not difficult if you casually read the book. Sherri is quirky and has a heart of gold. If you have the opportunity, you will not regret taking her class!</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2014<br>Class Name: COM103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sherri is the sweetest woman. Had her for intercultural communications. She is SO passionate about the subject and especially North Korean culture. I learned so much in her class. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2014<br>Class Name: ORGC201<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This was my first online class at DePaul. I ended up liking it since I could work on it around my schedule which I guess is the point. There are a lot of assignments but if you are organized then it isn't difficult. A few group projects which weren't bad. Provided quick feedback and responses whenever I had a question. </div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2012<br>Class Name: COM2010<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Had Sherri for Intro to Film at Wayne State. Really pointless class, which I will admit is not her fault. She tries, it's just not an interesting class in anyway and she doesnt make it fun. The semester consists of childish activities and boring movies with one 3 page paper.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2011<br>Class Name: CMNS316<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took CMNS 316 online with Sherri. I took her previously for CMN103 and really enjoy her teaching style. She is a little quirky with her love for Korea and other cultures, but that makes her a fun teacher. Assignments are clear and not hard, but she is a strict grader. Just follow the directions and do the work, you'll get an A.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>David Platek</h1><hr><div><h2>Overall Quality: 3.1<br><br>Helpfulness: 2.9<br>Clarity: 3.3<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/22/2010<br>Class Name: BLW201<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>absolutely horrible.  no clue as to how the final will be, no other grades in class.  completely unreasonable.  i put in the work to study, thought i was going to do well, but ended up with a C.  PLEASE DO NOT TAKE HIS CLASS, YOU WILL REGRET IT!</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2010<br>Class Name: BLW201<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>NO Study Guide, No Direction to what the final will be on, I studied very hard, DID ALL the briefs and still got a C... Students BEWARE!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2007<br>Class Name: BLW201<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The professor is funny, witty, and get's right to the point.  The class itself is very interesting and he takes what could be boring material and brings it to life.  With that said, the course consists of lectures, a mid-term, and a final.  No review before exams, no study guides, very vague direction.  You'll work really hard to get an A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2006<br>Class Name: BLW200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Loved this class!!!  Platek is AMAZING, he really makes you think. The course requires a good amount of reading but its a Law class so it should be expected. One of the best classes I have ever taken. Even if you do poorly on the exams you can make up for it with the case briefs. I got C's on the exams but he gave me a B+ cause I did most of the case briefs.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: BLW201<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>You have to work for the grade you want.  Funny guy</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2006<br>Class Name: BMS<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers at DePaul. Makes class extremely funny and interesting. This guy is hilarious, but you can also learn a lot from him. Great class, great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: BLW<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Crazy Teacher... Agreed! Different teaching style, and one of the only classes I look foreward too! Lectures relate to real life issues, and you leave the class feeling like you learned something you may use everyday! One of the best teachers at DePaul for sure! Take him! You will not regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2005<br>Class Name: ETHICS<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very different teaching style. Class lectures did not have any direction and very little to do with the book, mostly current events and weird things about moo-cows. Take the class and you'll understand.  Tests were True/False.  Very difficult for a 'grey area' like law and ethics.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2005<br>Class Name: BLW<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Agree with the previous comment. Pretty crazy guy, but definitely the right guy for the job. Cuts very well through all of the pc bullcrap, although might scare some of the weaker types off with the first lecture. Definitely take him if you want something more than just the book read to you.</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2005<br>Class Name: BUSINESSLAW<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The bomb digity.  By far the craziest teacher depaul has to offer.  If your interested in three hours of complete insanity you need to take this guy.  First thing he says to class &quot;i dont care what your name is or who you are&quot;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

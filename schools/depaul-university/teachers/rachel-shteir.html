@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rachel Shteir</h1><hr><div><h2>Overall Quality: 2.94<br><br>Helpfulness: 2.69<br>Clarity: 3.19<br>Easiness: 1.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/03/2013<br>Class Name: THEA324<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor was disorganized and not so attentive to my questions and concerns. She seemed very full of herself and condescended to students at times. I felt like she was more interesting in impressing the class than really teaching. Also, she dressed provocatively and inappropriately at times which was distracting.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2013<br>Class Name: THE324<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Provocative, provoking provocateur.  Everything an excellent professor should be.  Anyone else who thinks less of her is whining because they couldn't hack it in her class or the industry.  I hate saying it but it's true.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2011<br>Class Name: THE325<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Took several required classes with her- Extremely flawed, pretentious, makes innapropraite comments about students to other professors and student in public&private. Inconsiderate and thoughtless, unprepared. Will disregard a student's comment if she is ignorant on the topic. Chooses favorites. Downright rude and hurtful.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2011<br>Class Name: THE210<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Somewhat terrifying at first, but you'll start to realize how great she is as the quarter goes on. DO THE READINGS. She calls on you whether your hand is raised or not expecting a somewhat intelligent answer. Your life will be insanely easier (and happier) if you just do the freaking readings and apply yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2010<br>Class Name: THE324<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Rachel's classes are not for the faint of heart, if you have her class go prepared to work. She is  brilliant and is especially good at getting the students to start forming their own thoughts and theories about theatre. My advice: DO THE READINGS and SPEAK YOUR MIND and you will do just fine.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2009<br>Class Name: THEADTGY<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Two words: withered ambition. I rarely got the idea this professor wanted to teach. She's barely tolerable in the classroom (unprepared, &quot;discussion&quot; based lectures) but an all out disaster as an adviser. Do NOT get stuck dramaturging a show under her. It'll be a tedious waste of your time.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2009<br>Class Name: THE126<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Useless and self righteous. She has forgotten the overall meaning of TEACHING. That is unless your willing to kiss her ass and tell her how amazing she is... which she isn't. She's not even helpful as a person.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2008<br>Class Name: DRAMA1000<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The most unpleasant professor I have ever had, and among the worst people I've ever met. Her overall pretension and vile personality made the course virtually unpalatable.</div></div></div><div id="container" class="review"><div id="left">Date: 04/20/2006<br>Class Name: THE63<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Took dramatic crit with her and worked on dramaturgy papers. I liked her a lot more in a class setting. I met her in her 1st year & maybe she had something to prove, cause she wasn't all that nice or supportive. She does have favorites & she does push you hard, but I think, once you prove yourself a bit, she can help you grow as a writer & thinker.</div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2005<br>Class Name: THE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Rachel is one of the best professors in the theatre school. Demanding, exciting, brilliant, provocative, and passionate. You will learn so much, improve your writing, and leave every class with your head spinning. This isn't a teacher for you if you're lazy, unimaginative, conventional, or dumb.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2005<br>Class Name: THE235<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>You can glean kernels of invaluable information from her classes- by that, I mean stuff that can come in handy in professinoal theatre. These are the steps to get thoset: 1- prove that you work hard. 2- prove that you have the capacity for exceptional comprehension. 3- don't let her smell your fear.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2004<br>Class Name: DRAMATURGY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>the smartest teacher you'll ever have at depaul. Actually the most famous if you forget that costume lady. Shtier is what you assume, rather hope a college professor would be. Brilliant, beautiful, nurturing, driving, better than you. Can't doubt her. She's smarter than you or your father.</div></div></div><div id="container" class="review"><div id="left">Date: 07/30/2004<br>Class Name: THE324<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this is a REALLY hard class. the final was based on a 600 page book of which we were expected to read every page. It was a pretty fun, discussion-based class though. Fun class to go to high.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: ISP201<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>God help you if you take her.  Lots of reading AND 4 page SINGLE SPACED papers each week... thats every week.  Her extremely flawed personality is the kicker.  What the other person said about her having favorites and such is true.  I even got a B.</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2004<br>Class Name: THEATRE<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>While I can't say I did well in Shteir's courses, I did learn a lot about how to write and analyze works of theatre.  If you don't want to work hard and do a lot of reading, do not take her sophomore sem. course. It's definitely not &quot;easy.&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Avoid! Very knowledgable about theatre, but incredibly pretentious. Chooses favorites in the class, shuns others. Does not know how to differentiate &quot;theatre&quot; classes from &quot;English&quot; classes. Vindictive. (And I did WELL in her class!)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

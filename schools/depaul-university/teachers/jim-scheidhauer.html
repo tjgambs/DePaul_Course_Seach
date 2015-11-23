@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jim Scheidhauer</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.7<br>Easiness: 4.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/15/2014<br>Class Name: DISCOVERSOUND<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Jim is awesome! I loved Discover Chicago in Sound and highly suggest it. It's a very easy class, and he's a very easy grader. Most of the time he doesn't even seem to care, extremely laid back and funny.</div></div></div><div id="container" class="review"><div id="left">Date: 08/01/2013<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class was really easy but he makes it fun to come to class. You have a bunch of assignments and a midterm, final, and final project but they are all can be done with no effort and time.</div></div></div><div id="container" class="review"><div id="left">Date: 08/01/2013<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Schiedhauer is AWESOME. Class was really easy but he makes it fun to come to class. You have a bunch of assignments and a midterm, final, and final project but they are all can be done with no effort and time.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2013<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a fantastic prof! Made everything clear and always explained questions. Activities were easy and his feedback was great. Midterm, final, and end project weren't that hard, and he helps along the way. I was afraid to take this, but he made it easy and fun to go. Used real-life examples and is really funny! Definitely recommend!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2013<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jim is nice! Class is fairly simple! Excel will become your new best friend! Class activities and hw is fairly simple! There is a project which isn't too scary. Midterm and final were doable. Take him if you can! This was my first college class ever as a Freshman! Safe to say it helped make the college experience great so far!</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2013<br>Class Name: LSP12216<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great teacher. Was very scared of math, but made very clear. NIGHT CLASS w/him was great. Let go early at times. Feedback on assignments was very helpful. Very clear on what students need. Always willing to explain. HILARIOUS.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2013<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Funny, makes everything applicable and understandable to real-world scenarios. If you are afraid of math, take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The best professor ever! He is soo funny, helpful, and hot!! The class is so easy and he makes it even easierr!! Loved it! I wish all of my classes and professors were to be like that!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jim was a great teacher for LSP 120, he is helpful, and is pretty easy while speaking with clarity so you actually know what is going on in class. He is super nice and makes a morning class bearable</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>if you don't like math, after taking this course with Jim, you will no longer believe that. he is THE BEST teacher EVER. not to mention, he's not to bad to look at (; actually, he's super FINE. he is also a very funny guy and is very approachable when one needs help! please take him! he encourages everyone to succeed in this class (:</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is so FINE! BANGABLE!:)))but also a really good teacher! his class is easy and he is really helpful! The BEST class ever!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This is one math class I actually enjoyed.  Easy 'A' if you simply pay attention.  Best professor so far, I highly recommend him!</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2012<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>SO FUNNY! Having Jim my first quarter of college definitely got me excited for the years to come. I hate math, but found his class easy if you paid attention and did the activities. Very helpful! Definitely take him if you have to take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I was late for his class at least half of the time and it didn't matter. This class is pretty boring, but he does the best he can to make it interesting and he does a great job.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2011<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Mr. Scheidhauer is a really really great dude. He is not a hard grader, and allows late work. He'll help you, if you ask. He's super nice and really funny (he has a background in improv comedy). I'd say one of the best teachers i've ever had. I hate math more than words can say, but he made class very bearable.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He was awesome! Favorite professor of this term. He is very understanding and helpful. He grades homework on completion and lets you use a note card on the tests.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is super nice and chill about assignments. i had him for an 8 am and people were late all the time but he didn't care. He takes attendance. He is very clear and posts all his notes online. LOVE HIM. TAKE HIM</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Extremely helpful. I'm a person who has always been afraid of anything involving math, he made everything feel easy. His notes were clear and his examples were realistic. I would definately recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2011<br>Class Name: PHY115<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher, very funny. Makes you want to listen and attend class. Tries hard not to be boring, and reasonable and fair about grading. He wants everyone to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really liked him; I feel he is a great teacher and can make a rather boring subject interesting. He is also understanding of students limitations and I feel will award students the grade they deserve.</div></div></div><div id="container" class="review"><div id="left">Date: 01/20/2011<br>Class Name: PHY120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I had Jim for PHY114 and PHY120 and think he is an amazing professor.  Jim keeps things engaging no matter what and he's not that hard.  He's extremely witty and teaches with a perspective of the subject's larger context.  Fun guy</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2010<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Oh...wow. You just need to take him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2010<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is the best professor ever! Super Hilarious and knows his material very well. He will let you walk into his office for any questions and will definitely help. No text book required, only a jump drive and Excel spread sheet. Passing score for the final is 55% or higher. Overall a great class and a super GREAT Professor! I highly recommend him! :)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

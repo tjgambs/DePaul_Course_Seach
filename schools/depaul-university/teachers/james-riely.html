@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>James Riely</h1><hr><div><h2>Overall Quality: 3.3<br><br>Helpfulness: 3.3<br>Clarity: 3.3<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/14/2015<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Put simply, this is a really hard class.  Homework was reasonable and interesting.  Pretty good lectures, pretty tough exams with a tough final project.  Traffic simulation was the hardest thing I've done at DePaul.  This prof is helpful and responsive and it is clear that he cares and tries.  But this class is extremely challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2015<br>Class Name: CSC403<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>He is a one of the best professors is ever had. He explains in a concise manner. Assignments are challenging and fun to do.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2015<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Excellent Professor.  He is able to clearly explain the assignments prior to giving them to you.  Always available to assist the students with the material.  Keeps the class energized through his lectures, is hilarious.  Tests are directly related to the homework with tweeks to keep you on your feet.  If you do the work learn the material, you pass</div></div></div><div id="container" class="review"><div id="left">Date: 08/21/2014<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very concise and effective teacher. He teaches at a quick pace, but explains concepts very clearly. He is also very open to helping students outside of class. Has no sympathy for slackers.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2014<br>Class Name: CSC300AND301<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is pretty funny and lectures are interesting, but the work is very hard and he grades really tough. 2 quizzes a week, a programming assignment almost every week, and a midterm and final. He doesn't take attendance, but you have to watch the lectures for the magic word. A lot of people fail his tests so their is a big curve.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2014<br>Class Name: CSC407<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>He is my favorite professor in my Master degree yet. he knows exactly what he's doing, his assignments are practical and fun to program, and he's very helpful. I agree that his exams are pretty hard, but the knowledge you will get from his class is priceless</div></div></div><div id="container" class="review"><div id="left">Date: 01/18/2014<br>Class Name: CSC402<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I liked him and enjoyed his class. However it was very hard for me. A bit disorganized. Very late assignment correction. Didn't want to specify exam grades. He posted new things on deadline days which cause confusion.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: A-</div><div id="right"><div>The most challenging class I ever take . I liked this class in the beginning but after the midterm I hated it because I don't know how fair he was in grading the students that he even graded the exams in almost 1 day. Just think twice before taking his class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>His exams are ridiculously difficult also he is not fair in grading the exams.I saw one student exam and how he graded his exam and mine ,it was clear that he was lenient with him for some reason.Yes,you will like his class and so much to learn but you are going to get low grade at the most,and loads of assignments.I will not take his class again.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2013<br>Class Name: CSC402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>great professor for teaching, smart, clear, can definitely learn something from his class</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2013<br>Class Name: CSC400<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>if you are working full time or working at all, DO NOT TAKE THIS CLASS. For really really really intuitive java students this class may come across as "challenging but not impossible". For me this class came close to impossible. The homework questions are vague and the exams are insanely difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: CSC383<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not sure what to make of the guy. Really nice guy, definitely knows his stuff...freakishly tall...but this was the hardest class I've EVER had. EVER. Don't know if it's James or the material. You learn a lot, but exam expectations are extremely vague. Homework takes up every waking second between classes -- if you take this class, quit your job!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2012<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really difficult class, but he knows what he is talking about. Towards the end of the quarter the homework gets easier but more tedious. Expect to spend 6 hours a week on homework if you want to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: CSC373<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Have to admit sometimes I felt like he didn't know what he was talking about, but it may be his personality (goofy). I took Systems 1 & I have to say the material itself wasn't hard or out of reach. The labs are hard, I strongly recommend working in a team & maybe visiting the professor. All in all, he good but you must work.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy is hilarious. Course material is very challenging but not impossible.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm truly baffled by James Riely's low ratings.  I just completed his course, and found him to be a fantastic professor.  He really knows his stuff, he loves to teach, and his actual ability to teach the material is great!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2010<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>It's too late but I wish I did not take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2010<br>Class Name: CS373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a bad professor. Steam rolls through the course without explaining the material. Also, his labs are ridiculous and don't add value to the couse.</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Quirky, tall, super intelligent but a below-average professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I at least feel somewhat vindicated reading the other recent ratings on this site. I was doing great in the class until the midterm which wasn't what I expected it to be at all, and I sort of gave up towards the end. Prof. Riely has an impressive knowledge of the material to say the least, but I felt the pace was too fast for an undergrad course.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He needs to slow down and start teaching this course at an undergraduate level. He's not very clear, and he presents the information in a way that makes you even more confused than you walked in. Take Joe Phillips instead.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If I could go back and take another teacher I would - no one should be forced to take this class with this man.  I have gotten 100's on all HW, and am still struggling to pass the class because his exams are ridiculously hard and count for a HUGE portion of your grade.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr. Riely jumped into the material too fast for most of the class. The book isn't that helpful. I wouldn't take Dr. Riely unless you're either a very fast learner or you know a little Assembly for Computer Systems 1.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This prof is much more suited to teach advanced classes than intro.  He doesn't respect student's limited knowledge. His midterm is WAY too hard, and held too early. Describes concepts in unclear round-about ways. Take another prof for this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2009<br>Class Name: CSC372<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DONT DONT DONT DONT take this class with him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2009<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very tall so is very understandable on the Distance Learning video. Knows his stuff. Replies to email promptly.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2007<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great Professor, knows everything about the subject, teaches it well!  Recommended strongly</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Really great professor. He has a strong grasp of everything he teaches, and it's clear in his lectures. He is a busy man but will always respond to emails.  If you have little programming experience, the hw will take you a very long time, and midterm+final will be very challenging. Invest as much time as you can into this class, it is well worth it</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Riley taught me more about OO programming than I ever thought I could know.  He's clear and concise.  He explains topics thoroughly, but won't drag on about subjects while the class falls asleep.  Had to do hella lot of work, but it was all worth it</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jill Stewart</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.8<br>Clarity: 4.5<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/16/2015<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Jill is such a great teacher. Took her for my first public relations class and she's the reason I switched majors. Such a lovely professor, really cares about her students and wants to give as many opportunities to pass as possible. Super interesting class over all, learned a lot about public relations and the work necessary for the profession</div></div></div><div id="container" class="review"><div id="left">Date: 07/30/2015<br>Class Name: PRAD256<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Professor Stewart is one of the best professors I've had here at DePaul. Don't let the work load scare you off from taking or staying in her class, it really is very manageable. The final project that you work on all quarter is a great tool for getting PR internships and she gives amazing feedback and really wants to see everyone succeed. TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 06/29/2015<br>Class Name: PRAD515<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>I really liked Jill. She provided good feedback. Class was a little intense to start, but wasn't bad at all. Really knowledgeable and a great person to know if you plan to work in PR in Chicago. I'd absolutely take another class with her if I had the chance. </div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2015<br>Class Name: PRAD255<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>easy class. </div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2015<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>If you have the chance to take a class with Professor Stewart, do it! There's a lot of work, but it's manageable. Not a tough grader and offers a lot of extra credit opportunities.  She wants everyone to get an A. </div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2014<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Jill is an inspiring professor with a great dedication to her field. I learned so much in her intro to PR class! It was very easy but also very educational, and the work wasn't too much or too little! She is a little unclear at times, but she is very good at clarifying if you have questions. Definitely recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: PRAD396<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Took my Senior Capstone class with Jill. She's a wonderful instructor, and person in general. The class on the other hand was a bit of an (easy) dud. Didn't really learn a whole lot.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2014<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is super helpful, very clear when teaching and is always on time. We had attendance but she was understanding with how harsh this winter was if we e-mailed her prior that we could not attend. The work load was fair and she definitely helped me better understand the many areas public relations professionals work in!</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: PRAD256<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is definitely one of the best professor at DePaul. I am not a native speaker and she really helped me a lot. She is just so nice and warm with everyone.Definitely take her!!!</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2013<br>Class Name: PRAD256<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Stewart is literally the best professor I've ever had. I promise I've never written a RMP review, but I feel compelled to because she is that fantastic. She is a wonderful contact to keep& gives you all of the tools necessary to succeed. Her curriculum is a bit intimidating at first but you learn to appreciate the details/clarity. Loved her!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2013<br>Class Name: PRAD256<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Love Prof. Stewart! Have taken a few classes with her for that reason. A PR industry expert! Is willing to help in anyway... Wants you to do YOUR best! Overall easy class and you learn a lot of real life applicable  industry tools. Definitely take</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2013<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof Stewart is one of the best professors you will ever have at DePaul. Take her class!! Work is totally doable You wont regret it, she knows PR 100%, she's so helpful and so understanding, and so so funny. Very smart professor with PR experience who genuinely wants to see you succeed and is crystal clear. Easily one of the best teachers at DePaul</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2013<br>Class Name: PRAD255<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Wonderful Professor. She makes the class fun and interesting. Clear expectations and assignments. If you read and do the work she asks for then you can definitely get an A. Shes very helpful and wants everyone to succeed. She knows what shes talking about and you will learn alot from her! Shes one of the best, Take her class !</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

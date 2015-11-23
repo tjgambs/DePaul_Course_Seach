@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Talitha Rajah</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.8<br>Clarity: 3.3<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: BIO390<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>I love Dr. Rajah, she is very helpful. This class was special topics in cancer and it was hard but she made the class enjoyable and I enjoyed it. The class consisted of reviewing articles and was challenging but I am glad I took it. I learned a lot</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2015<br>Class Name: 250<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Cell bio with Rajah was very easy. She did a lot of reviews in class and most of the time told us exactly what was on the test. Tests are not multiple choice which was awesome because it was mostly labeling pictures. Final was hard. </div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2015<br>Class Name: 250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Cell biology is one of the easiest class in the biology series. However, there are a lot to cover and you may feel over whelmed . She try to cover everything, but there are just so littler time. Would take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2015<br>Class Name: 250<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>To sum it all up. If you go to lecture thinking you know something, her lecture will confuse you to the point where you don't know it anymore. Didn't think that was possible before  this class. Boring, unorganized, unclear, and she makes the class more difficult than it should be.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2015<br>Class Name: 250<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is extremely boring, talks way too fast, and has an accent that is very hard to understand. She posts old tests and quizzes with no answer keys. Impossible quiz every week and you don't even get to see what you get wrong. Her tests are poorly written and poorly organized. She is smart and nice but teaching and lecture is obviously not for her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2015<br>Class Name: 250<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>SO unclear, impossible to follow lectures, unorganized and talks way too fast and is a horrible lecturer and super unclear about what is on the exams. STAY AWAY. Nice lady but teaching is not for her</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2014<br>Class Name: CANCERBIO<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>She gives you all the material you need. The book, the guide with lecture notes, past exams, and tests, her slides. she gives you time to absorb all the pathways you need to learn. she gives you break to breath, buy coffee and walk around. since it is 8am class. after all these, if you get B or C or less... its your fault. you are making NO effort!</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2013<br>Class Name: BIO250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is amazing. She is very clear and informative. You'll things that you can apply to other biology classes other than cell bio. She gives a lot of extra credit during exams so look out for those. She's very sweet and caring. She held review sessions for exams out of her own time. Definitely take her for Cell Bio!</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2012<br>Class Name: BIO380<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr Rajah must have changed her teaching style from previous commenters experiences, bc she is awesome. She is a clear, slow lecturer and gives you a TON of supplemental materials to succeed. It;s a hard class for sure, but she provides students with old tests/slides/a workbook. She sets you up to get an A if you work at it. Plus she's really nice.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2011<br>Class Name: BIO380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Fantastic professor. Well organized course. Information is really interesting. Tests are easy, and there is big curve on the final grade. If you're going to take any 8 am class this should be it. Rajah is extremely helpful both in class and advising outside of class. Probably my favorite course at DePaul, definitely recommend it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2011<br>Class Name: BIO250<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is fantastically smart and knows her material. Shes very approachable and can answer your questions. Shes pretty good at repeating whats needed. Weekly quizzes can be a hassle. and some of her questions are tricky. which is annoyin</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2011<br>Class Name: BIO250<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>confusing lectures that are very disorganized.... it's worse because she's easily intimidated by in class questions. although she lets you meet with her during office hours half the class will have to do that because actual test material is SO unclear during the actual class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2011<br>Class Name: BIO380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is awesome!!! she is by far the best teacher I've had at depaul. Not only is she extremely helpful and willing to meet with students whenever, she has an extremely positive attitude. She will ALWAYS offer her help to students, and make everyone comfortable. She is extremely knowledgeable on the subject! HIGHLY RECOMMENDED!!!!!!!!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2006<br>Class Name: BIO390<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Bad Professor/Bad Attitude</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2006<br>Class Name: BIO115<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a wonderful teacher, very helpful and very clear, too. Attendance is mandatory, but test are very easy she gives you waht you need to know in every class so that's why it's important to go to every class. She uses the textbook a lot, however, you don't even have to read because she goes over everything and even tells you what to write down.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2006<br>Class Name: BIO380<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Be careful, she picks favorites, so make sure you're on her good side.  She is inconsistent in her lecutres, notes are difficult to follow, when asked to repeat herself, she never repeats the sames thing, which pretty much defeats the purpose.  Also, her test questions are obscure and open-ended, you never know what she is looking for.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2006<br>Class Name: BIO380<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Picks favorites and if you’re not one of them you’ll have a tough time. Lectures jump from topic to topic making them hard to follow. Grading is also inconsistent between students. She talks a mile a minute and when asked to repeat, she either says she doesn’t remember what she said or says the exact opposite of what she said the first time.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2006<br>Class Name: BIO380<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Seemed nice at first, but the class was incredibly difficult, not purely b/c of the material, as one might think, but due to her teaching style. She would often forget what she said & need students to remind her, jump around in the book, & treat some students very nicely while treating others horribly for no reason! I would def. not take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: BIO115<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Just be present in her class and take good notes. 3 test + final which is not cummulative. Just study her notes and you will do great. Easy class for non majors and for requirements</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2006<br>Class Name: BIO390<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is a great professor. She truly cares about her students and wants them to do well. All you have to do is study her notes and you'll get atleast a B. Show her that you care and she takes that into consideration. One of the best teachers in the Biology department. DEFINITELY RECOMMEND HER!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: GENETOX<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is very accomodating if you have a question or need help. The material is difficult and she expects you to know it. I really liked both classes I took with her... she's a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2006<br>Class Name: BIO355<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is a great teacher.  You have to study hard, but she is very helpful.  Study the notes and you should be fine.  When you finish the class you will actually retain the information.  She also does NOT go off on tangents and this is my second class with her.  Very straightforward and I would highly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2006<br>Class Name: BIO115<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Helpful, clear, friendly. VERY INSECURE. Have to watch tone of voice when asking a question or she'll go on a paranoid tangent on whether or not we are taking her seriously. And the tangent goes on and on until I've clawed my eyes out, because she WON'T LET IT GO until one of us distracts her with BIO 115. You know, the class we signed up for.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2005<br>Class Name: BIO390<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good Professor, if you go to class it's an easy class, but if you skip its near impossible.  Also she is very willing to meet with you to talk about the up coming tests or your grade in the class.  Would take other classes with her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2005<br>Class Name: BIO390<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Rajah is a good educator... she cares about her students, and her exams are fair... difficult but fair.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Melissa Markley</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 4.0<br>Clarity: 3.7<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/16/2015<br>Class Name: HON100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Super passionate about nonprofits and marketing. Very laid back but expects the best. Very interesting class that required a lot of involvement. Minimal homework and assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 09/07/2015<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Great lectures. Took this class over the summer and it was a lot of work, but she kept class interesting. It wasn't too difficult as a summer class. She relates material to real world examples, and she is very smart and funny. It was easy to participate in her class because she is very welcoming and engaging.</div></div></div><div id="container" class="review"><div id="left">Date: 08/29/2015<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Very lively lectures (you will never get bored). She is very funny, very smart, and very helpful. Took her over the summer, and it was a great 5 weeks with her. She makes a boring subject, live consumer behavior, interesting and fun to learn about. She also doesn't require the newest textbook so she saves you a couple hundred dollars there.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2015<br>Class Name: MKT310<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Great lectures. Never a boring time, actually an entertaining class because she gives excellent real life examples. She gives prep quizzes before the mid term and final that are very similar to what is on the exams. One paper that is due on week three so she gets the class moving early.  A lot of discussion board posts too. </div></div></div><div id="container" class="review"><div id="left">Date: 01/21/2015<br>Class Name: HON110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>If you by some miracle can see this review before picking a Discover class, take Prof. Markley's class! She was passionate about the subject of Non-Profits and pretty much gave A's away for free as long as you did everything. She can be a bit cold and aggressive at times, though in a sort of protective and understandable way.</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2014<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I would not recommend taking this teacher. The exam is really hard. She makes it sound really easy but it is not.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2014<br>Class Name: MRKT310<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hard exams are terribly hard, I failed both exams. Plus a huge paper, AVOID.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2014<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>hybrid class. tests were extremely hard. don't take her</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: MKT310<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This professor is cool and laid back, but her tests are extremely hard. I spent hours and hours studying and still did not do as well as I hoped. My GPA is a 3.8 but after this class it will surly go down. Not impossible to get an A, but you have to work really hard for it. She makes you do a 10 page paper ON TOP of a hard final. Do not recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2014<br>Class Name: DSCVR<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's VERY HELPFUL! and KIND! except she can be a little moody sometimes. still has a good heart, and passionate about teaching. take her</div></div></div><div id="container" class="review"><div id="left">Date: 12/30/2013<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Took this class as a hybrid class. It should be called a once a week class though as it was very little online work. Professor was good at sparking interest and I enjoyed the class. I felt like I learned a lot about Consumer Behavior. Class was graded fairly and would recommend it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2012<br>Class Name: LSP110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Professor Markley's Discover Chicago Class...and it was awesome. We learned about non-for-profits all around chicago and the class after discover week was super easy. just one group paper. no tests, no midterm. take this class!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2012<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She keeps the classroom discussion lively. Has your best interests to learn the concepts well. We got to take a field trip which was very engaging and entertaining. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Markley is super nice and helpful. Her lectures are fun and interesting. As long as you listen and follow along you will do great. I would definitely recommend her!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2011<br>Class Name: MRKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers at DePaul. Lectures are fun and the time just flies by in a classroom.  However, test are not easy, we had 90 qts for mid and final.  Some of the questions were easy, but some were hard.  I would take another class with her!</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2010<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a very great professor.  You don't need to bring the book to class but it is needed for homework.  She gives a midterm and final and you have to give a group presentation. Tests are not hard, just make sure you know the material.  Attendance is not mandatory, but if hardly anyone shows up she will take attendance so beware of that. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2009<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very good at explaining the material and her lectures are interesting!Tests were not hard-she includes only the material that is discussed in class.take notes,review the power points and the definitions in the text and you'll be perfectly fine!very clear about what she expects from students.highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2009<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Really hard professor!! Impossible to do well on the tests without reading every word of the textbook.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2009<br>Class Name: MKT310<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is nice & spontaneous in nature, but her tests are difficult. The material covered in class doesn't always come up in the tests so you need to do a lot of studying by reading the textbook word 4 word. She gives a total of 3 tests, some random assignments, & a term paper. I don't c her point of giving a final AND term paper. She's just OK.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2009<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Every commerce student should take her class! Her lectures are so interesting that you learn the material in class!Plus, she is so funny that I guarantee, you will enjoy going to class.2midterms,final and a paper.The best marketing professor I have had at DePaul</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

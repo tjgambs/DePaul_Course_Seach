@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jennifer Galka</h1><hr><div><h2>Overall Quality: 3.88<br><br>Helpfulness: 3.92<br>Clarity: 3.85<br>Easiness: 3.54</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/19/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very Nice Teacher! Explains everything very well! Only con about her is that she is a very picky grader and all tests are on the computer which is confusing at times. Overall, I would recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2012<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fun, funny, energetic. Knowledgeable, approachable. Fair grader. Gives fair amount of homework. You will definitely learn USEFUL and PRACTICAL subject matter for when one graduates: Microsoft Excel (calculations, functions, spreadsheets, graphs, and bars). We look at a lot of statistical information in class. We learn to graph them properly.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: MAT120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Galka had a very funny personality during class. She kept the class interesting with her opinions on different things. The work wasn't hard if you attended each class or asked questions right away if you didn't understand something. Just attend tutoring and study and turn in assignments on time and you will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2011<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you (like myself) have to retake this class because your credits didn't transfer so well: DON'T TAKE IT WITH HER. It seems that she's not really used to dealing with other adults, she's somewhat rude and is under the impression all of her students are fresh out of high school and stay in the dorm.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2011<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Wouldn't recommend taking this course on a Friday morning for 3 hrs, especially if you commute. There's a lot of material covered in one session with plenty of homework that will keep you busy all week. She is very anal about grading too and is sure to mark you down if you don't describe something a certain way. This class most def. lowered my gpa.</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is very upbeat in class and actually pretty funny. I don't really like math but if I ever need help or have questions she is very accessible and open to come in and talk to. Take her! She is fun!</div></div></div><div id="container" class="review"><div id="left">Date: 08/12/2011<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not too horrible but also not without faults. I felt condescended and uncomfortable when seeking help. There is a lack of urgency/accessibility for help outside of class time. A 100 level math class ought to be approached differently. Even 300 level courses aren't this loathsome!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2011<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The only real problems I had was the grading is very biased and based on the opinion of the teacher and the class gets very boring. Other than that it was fine for a required class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2011<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>It was okay at the beginning, however, she goes way too fast. If you aren't good at math in the least bit do NOT take this class with this teacher. She doesn't slow down much, and when you go in to ask her questions she doesn't explain it any better than she does in class. Also, her midterm is too long, and most kids couldn't even finish it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2011<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take this class if you feel like doing a paper, presentation, and a final exam in the last 2 weeks. Personally, I found her methods annoying when I was swamped with work from other classes that will actually mean something. At least avoid the three hour version of the class if you can.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2011<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Lovely lovely human being. She's hilarious and makes math (which I loathe) actually pretty fun. Her assignments are clear, just elaborate well and you'll be fine. She's really understanding if you have a problem and is always willing to help. Take her! She's amazing!</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2010<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was awesome! Very upbeat and excited about what she's teaching. Young lady with passion for helping students. If your good at math this class will be very easy. Learned how to apply math in real world problems. Definitely recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2009<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is really sweet and definitely helps out her students a lot. This class is beneficial because it is the math that you would use to pay credit cards and everything. If you do the homework and in class activities, you'll pretty much get a good grade in the class. I would definitely recommend it!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

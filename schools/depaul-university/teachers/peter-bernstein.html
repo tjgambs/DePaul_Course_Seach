@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Peter Bernstein</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.15<br>Clarity: 4.45<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/25/2015<br>Class Name: ECO315<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fantastic and knowledgeable professor. The class is clear-cut, if you put in the effort there is no reason not to get an A or B. He will grade on a curve if necessary. The book is helpful to enhance your understanding of certain topics but it is not necessary. The topic isn't the most fascinating but he does a great job making it interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2015<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Super funny and keeps the class interesting. He organized this class really effectively and his handouts are amazingly useful. The subject was difficult but he prepares you to do well on the tests by giving out study guides. Also, his tests are open book (but make sure you study because you won't have enough time to only rely on the book).  </div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2015<br>Class Name: 360<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Great professor and crystal clear. Just make sure you really study for the exams. No trick questions. Very straightforward. Super nice guy, too. </div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2014<br>Class Name: ECO315<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is very clear and very knowledgeable on the topic; but when it comes to the quizzes (exams) it feels like the questions are very deceiving and tricky. Not calling for an easy A, but the class doesn't really relate much to the exams. Hard exams in general</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2014<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Open book exam, but book is useless during test, also, 1 hr time constraint so don't be late to test. Reality, the answers to the questions on handouts are what will be on test. He sends you the answers to these questions b4 exam. I read these answers thoroughly and practiced the formulas and aced the first test. Don't bother with the book I got B+</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2014<br>Class Name: ECON315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher, didn't really even need the textbook. Very helpful, sends review questions and answers before tests.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: ECO315<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>STEER CLEAR. Very vague, not sure what happened but he seemed not to care about students that were struggling. Gave pop quizzes on topics that hadn't sunk in yet after going over material way to fast. No curves extra credit or anything, good guy, iffy teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 10/04/2012<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>My favorite professor at DePaul. I could not have been happier with his class. His test are challegenging but if you make an effort to improve he is willing to give you the grade you deserve. Ladies beware!! You will develop a crush.</div></div></div><div id="container" class="review"><div id="left">Date: 08/27/2011<br>Class Name: ECON106<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great prof! Took him during summer. Smart guy from UofC, but teaches clear and simple. Attendance not mandatory but a short quiz is given after class. Midterm and final were open book.Def worth taking!!</div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2010<br>Class Name: ECO106<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i took him for summer school so the class was a little diff from what i read, no homework, just a midterm and final. and even though they are open book, i found them so diffucult, and the weekly study questions he gave us, there was probably only like 3 problems that were on the exam. i would suggest you study a lot. otherwise a good teacher</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2009<br>Class Name: ECON105<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>attendance/punctuality is not mandatory, hw is out of 3 points...1 point just for turning it in. 2 quizzes. 1 final which half of it was out of the sample final; took this class during summer, pretty easy</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2008<br>Class Name: ECO106<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very nice Professor. very humorous. always give u chances to redo ur hw or quizzes. Definitely take him</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2008<br>Class Name: MGT526<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Loved prof Bernstein and his class.  I thought an entire class on compensation would make me want to scratch my eyes out, but he made the class my favorite here @ depaul.  He's quirky, yes, but that's his charm.  He's a really great guy, and a fantastic teacher.  His passion for the subject is contagious.  I wish I could take more classes from him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2008<br>Class Name: ECO105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Bernstein is a very nice guy. Be careful with your homework assignments though...he is quick to give you full credit even if you get the answers wrong, so make sure you ask him questions so as not to be surprised by the quizzes & exams because it is very possible that you will be!! He's very approachable and willing to help you do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2008<br>Class Name: ECON106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome professor!He explains everything so well that you learn the material in class. Midterm & final are very similar to the study guides he gives. Extremely funny and friendly. Even though I'm not a big fan of Econ, I really, really enjoyed this class... Probably the best professor you can choose</div></div></div><div id="container" class="review"><div id="left">Date: 08/01/2005<br>Class Name: ECON315<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he is a very helpful professor.  The material is very dry and boring.  Took him in summer, everyone failed, and let us do a redo at home, so he is very interested in the needs of his students.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: ECO106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof Bernstein is a really nice guy. He tries to make the class interesting and keep material up to date. Easy weekly homework questions that count for 20 pts of your grade. Tests are easy. He doesn't take attendance.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2005<br>Class Name: ECO106<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good communicator for dry material.  Was available, if necessary, outside of class via e-mail, phone, etc.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2005<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2004<br>Class Name: ECO315<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Professor, pretty easy course.  He gives you the answers to all your homework assignments after you turn them in. Then all you have to do is study the answers for the midterm and final and you're good to go. Would totally take him again.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

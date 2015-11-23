@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Woods Bowman</h1><hr><div><h2>Overall Quality: 2.96<br><br>Helpfulness: 3.15<br>Clarity: 2.77<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/19/2009<br>Class Name: MPS542<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Impatient and condescending when asked for help.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2007<br>Class Name: MPS515<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He certainly is a nice person, but I would recommend you avoid his class.  He constantly confused himself in our class and was condescending to students who had questions.  I think most came out alright in the end, but his classes were the slowest, most drawn out classes I've ever had to sit through.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2007<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Extremely knowledgeable professor and an easy A. Many students did not get A's, however, they did not take notes. He specifically states what to study for tests. For some reason, people are shocked when those topics are on the exam. If he looks at pg.50 in class you can bet it's on the test. don't be stupid, study what he tells you to study.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2006<br>Class Name: ISP103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2006<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a very knowledgeable man. He has a lot of very interesting things to say. He is very smart. I enjoyed listening to him. He is understanding but not a push over. He has personal political experiences. Take him if you want to learn about how Chicago politics really work.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2006<br>Class Name: MPS515<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You will learn a lot in this class, and be prepared to read and comprehend the assignments.  He is very helpful if you get lost in all of the accounting-speak.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2006<br>Class Name: MPS515<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He didn't really explain the finance stuff.  Math itself is straightforward but he didn't talk about the equations and when to use or not use them.  He also made up spreadsheets with info that had little or nothing to do with the subject & discussed them in class.  Many of us were treading water during this part of the course.  Unclear explanations</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2006<br>Class Name: MPSFINANCEMGM<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This course includes some finance and accounting, which he teaches as if we've had taken introductory courses.  Most of us, including me, have not taken those courses at all or took them years ago.  I found his explanations for finance to be completely unclear and quite incomplete.</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2005<br>Class Name: MPS<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>worst teacher ever.  it seems like he goes out of his way to give convoluted instructions to screw over the class.  most boring ever, as well.  if you have insomnia, this is the guy for you.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2005<br>Class Name: FINANCIALADMIN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A really nice guy who really tries to work with you. I mean, you really have to screw up and not even try to get a really bad grade from him.</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2004<br>Class Name: ISP102<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This review is based on his Chicago politics class, supposedly an introductory course to DePaul life.  It was a class like any other with attendance, papers, a midquarter and a final, but while it wasnt an introduction, the professor graded liberally.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2004<br>Class Name: ISP102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Bowman is a nice guy, who's very understanding. Most of the work for class is pretty easy, with the exception of perhaps the community project.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2004<br>Class Name: EXPLORE<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Takes his subject to seriously for an introductory course that is required by the university.  Too strenuous for a class simply meant to get us used to DePaul.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael Baxter</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/06/2015<br>Class Name: REL183<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>He is a great guy! He made the class go by very fast! Pretty easy grader. Just make sure you go to all of the classes because if you don't you might fail. All around great class and great guy!</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2014<br>Class Name: CTH248<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Not a very hard class. Definitely interesting but you NEED to participate to pass. Do not chat during class. NO cellphones, laptops, etc. He is strict. But movies and readings are good, lectures can be long but are interesting and he doesn't grade very hard. Just go every week and do the work. </div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2014<br>Class Name: CTH243<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>GREAT class - 3-4 essays all quarter (including the midterm and final), classes are all discussion-based and very interesting, and the professor is just an all around awesome guy.  One thing to note though: MUST PARTICIPATE IN CLASS. He notices those who do, and they benefit from it grade-wise.</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2014<br>Class Name: CTH180<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Baxter is an excellent professor. He is an expert in Catholic Worker movement and it was very fascinating to learn about the "non-conservative" side of Catholicism in an intro class.  Sometimes his directions were unclear but nontheless made the class very interesting. He is also a very nice person.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: CTH180<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Baxter was a pretty decent guy. The only thing was when he was lecturing he was kind of confusing. He forced a lot of students to participate at times but it was alright. Pretty easy A, just make sure to read the books.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2013<br>Class Name: LSP110<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took professor Baxter as my first class for DePaul, and I would like to say that he is a very nice guy; however, his class discussions are very incoherent and erratic. In addition, the material and grading seemed very subjective, but in the end it was an easy a. I learned an average amount.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2013<br>Class Name: CATH180<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super easy course. Michael is hilarious and easy going. Just don't talk to friends in class because he will separate you guys lol. love this guy, and again super easy as long as you study a bit.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2013<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really nice guy, easy professor. Wants students to do well. Put forth a little effort in papers and briefly study for tests and you'll get an A. Class can get slow at times, but worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2013<br>Class Name: REL222<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Wouldn't recommend. Unclear on what he wants and a much more tedious and difficult class than it needs to be. Topic sounded fun but soon became bland. I'm out.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2013<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>On the first day of class when we received a well organized syllabus that made me eager with anticipation. Unfortunately, the classes were just him talking and talking and talking. Overall, very boring. He does make up for it by being an easy grader and very lenient. Just don't have your phone out in class, its a peeve of his.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

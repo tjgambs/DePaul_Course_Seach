@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Timur Gok</h1><hr><div><h2>Overall Quality: 2.73<br><br>Helpfulness: 2.92<br>Clarity: 2.53<br>Easiness: 2.68</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B-</div><div id="right"><div>Really helpful in class and in office hours. Use his teaching notes and practice questions, all that he posts on online. Pretty good class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Gok is really helpful. Gives you practice questions that help you on the exam. Always willing to help you during his office hours.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN310330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>I had Prof.Gok twice, he is super nice and really helpful. The handout is well organized. One of the best fin prof.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>Professor Gok has one of the best pedagogies in teaching Finance that I've come across. He teaches the class intuitively so the student grasps ideas beyond the point of just being able to emulate problems to pass exams. A stellar professor who most definitely prepared me for the real world.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN333<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B</div><div id="right"><div>The class is not difficult it just requires effort. Professor Gok was one of my favorite professors at DePaul. His exams do require studying but you will actually retain information in his class. Loves to help his students and a good resource out of class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: B+</div><div id="right"><div>Great teacher who wants to see his students excel.  He knows the class is rather challenging and is understanding when it comes to the extra effort being put into the material.  Can use a note sheet on the test. Test are challenging but there is a curve.  No surprises on the tests, you know what to expect from the practice problems.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN333<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Nice guy, who wants to help out succeed in his class. Very understanding when it comes to grading, and how challenging the class can be.  Tests are challenging but lets you use a note sheet.  Straight forward on the questions, no surprises. Great teacher if you want to learn.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: B-</div><div id="right"><div>Good teacher. Tests are difficult if you don truly understand the material.  Don't just do the practice problems, understand them. There will be questions on the test that you haven't seen before, so it's important to know the material.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Gok is a nice guy.  His class is challenging, but you will learn a lot.  He is worth taking, and in my opinion is one of the best finance professors at DePaul.  The reason student’s fail his class is due to a lack of effort.  We are in college, so studying for his class is a must.  If you study hard, an A is not hard to receive.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2014<br>Class Name: FIN330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Gok is very patient with his students and more than happy to help anyone after class when necessary.  In addition, he is very flexible with any make up material and ensures that each student received all the extra help that is needed.  The exams are not a surprise - the questions are taken directly from class discussion and problems.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2013<br>Class Name: FIN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: C-</div><div id="right"><div>Terrible experience. Very terrible. I was completely lost in this class. Half the class dropped. He ended up curving everything because he has no choice. Quizzes are random and MyFinancelab is required. Exams are okay but I would avoid if you want to learn.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2013<br>Class Name: FIN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: C+</div><div id="right"><div>Prof. T Gok has a good heart I'm sure, but he is a not a good professor in general. Very bad jokes at times, embarrasses people. Quizes are random and HARD! Exam (multiple choice is okay, but written he will tear you apart). I want my money back. feel cheated even though , I passed. Wanted to learn something about the markets and real world.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2013<br>Class Name: FIN310<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class is hard in itself, put Timur Gok in front of the class and you will be bored/confused and leave the class wanting to drop out of the business school. You are allowed a cheat sheet, however he ends up testing on information that EVERYONE does not know. I was happy to pass with a D. Not proud of it.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: FIN310<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you put the effort and are willing to study hard you will get an A. His teaching is directed to those who somehow have finance knowledge prior to joining the class. COUNT AND TOTAL YOUR EXAMS, half the class was graded incorrectly. Best to avoid</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2013<br>Class Name: FINANCE311<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He talked mostly about everday business issues and covered very little material in class that was used for the exams. That being said he chooses the hardest problems from the homework for the exams, and gives you inadequate time. This is coming from somebody who got an A in the class. He seems to think 311 is a Finance capstone course.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2012<br>Class Name: FIN311<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I have had in my entire academic career dating back to preschool. Literally has no idea how to solve any equation he is describing in class. He is not fooling anybody, it is sad that DePaul University has lowered its standards in such a core class. This does not justify the tuition I am paying.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2012<br>Class Name: FIN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very unclear on almost everything. Self taught myself most of the quarter. Group presentation, 2 tests and optional final. 2 quizzes and 6 homework all online. Drop the lowest scores. The guy is nice but it's hard to understand him. Doesn't answer any question straight. Hard tests! And don't buy the text book, just buy the myfinancelab pass.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2012<br>Class Name: FIN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Gok knows what he is talking about but he definitely does not know how to pass it onto his students. Don't waste your time or money!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2012<br>Class Name: FIN311<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have never taken a teacher worse than Gok at DePaul. The tangents he goes down in class are hardly relatable to what is actually being taught in the book. If you want to be lost for an entire quarter, sign up!! I hope this helps.</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2012<br>Class Name: FIN310<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>When I pay my tuition I expect the professors to at least teach... a little bit. He is unclear, off topic, and teaching is obviously not something in his skill set. He expects the class to answer some ridiculous questions on his tests that he wouldn't be able to answer himself. I would stay away, bad teacher plain and simple.</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2012<br>Class Name: FIN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Had some awful profs at DePaul but Timur Gok might be the one of the worst. Unclear. Hw and quizzes (which he makes you pay $100 for on MyFinanceLab) don't correspond w/ tests. Belittles you and makes you feel stupid if you ask a ? in class. Easily gets off track. DO NOT TAKE HIM.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2012<br>Class Name: FIN310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>There are a lot of opportunities to pass his class with a good grade. try to get at least a B in his first exam and its smooth sailing from there, as long as you study. He curved our grades too.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2012<br>Class Name: FIN330<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy was hilarious but not clear during lectures. The problems done in class are the problems on the exams. As for MC/Short answers, study the teaching notes & HW problems in the book. If he gives you a practice exam, study that for your exam b/c that was all our 2nd exam was. If you get a B before the final...opt out b/c it's cummulative.</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2012<br>Class Name: FIN310<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Takes FOREVER to grade tests (3 weeks for final grade). Missed class time to go to conferences out of state. Homework is on MyFinanceLab, and its very tedious. However, to get a C- minus in the class, all you needed was an overall 45% for the course. If you're a slacker, this is the teacher for you. Pop quizzes on 1st, 3rd, and 6th week of class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2012<br>Class Name: FIN310<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Shows up unprepared and wastes too much class time. Knows the subject but has a hard time connecting with students, especially those uninterested in the subject. Takes forever to grade assignments. Overall, huge curve compensates for his grading, which he often marks off for correct answers but gives the option to appeal.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: FIN310<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>First off don't buy the book. Class is weekly homework on My Finance Lab which is graded and actually the best learning tool in this course. Random quizzes, of which we only had three and one was dropped.  Two exams worth 35% of your grade each and an optional final to raise your grade if needed. I got C's on both the midterms and got a B overall.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2011<br>Class Name: FIN311<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I &lt;3 Gok! Yes, Corp Fin is a hard subject so you have to study a lot. However, Gok is always willing to help, gives bonus points/curves, HW is part of your grade, had out of class review for final...If you are a lazy student like many at DePaul maybe you won't like him bc he wants to you to learn and the exams can be hard. oh and, JOKES ARE FUNNY.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2011<br>Class Name: FIN311<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible Professor. Class-time is a waste. It's easier to teach yourself. He came from NIU, if you want to read reviews from there. Makes terrible jokes and has no control or agenda for the class. Often gets sidetracked with pointless stories or figuring out the math himself (why didn't he do the math for his assignment before teaching it&#63;&#63;)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

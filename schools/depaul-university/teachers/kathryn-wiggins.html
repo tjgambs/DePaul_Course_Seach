@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kathryn Wiggins</h1><hr><div><h2>Overall Quality: 2.89<br><br>Helpfulness: 2.95<br>Clarity: 2.83<br>Easiness: 2.89</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/09/2014<br>Class Name: EE281<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Wiggins' class was one of the worst experiences I have ever had. I received rude and demeaning feedback on assignments and even when mistakes pointed out by her were corrected, I still received low scores. Find another teacher, because the material in the class is great, just not the instruction.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: EE281<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She's the WORST teacher I've ever had! She is beyond rude and doesn't grade fairly. If she doesn't like you, she will grade you bad. DO NOT TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2013<br>Class Name: EE281<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Take this class with a different teacher. Wiggins was rude to the class, had unclear assignments and graded very inconsistently. She is VERY opinionated, so don't say anything that she might disagree with because she will make the class miserable for you. She seriously needs to retire.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2010<br>Class Name: PE317<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Wiggins means well, but the course is unlike any education class.  She is blunt, which is not always a good thing.  If you do not have great self-confidence, be careful and do not take things too personally while taking this class.  You may think her critical critique is only happening to you but it happens to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2008<br>Class Name: EE317<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I do not know why everyone complains about her so much. Yes, she is very opinionated and wants things to go her way but aren't we all like that&#63; This is my second time taking an education with Wiggins and I truely enjoy it. She is the one teacher that will tell you how it is and if you are honest with her she will help you in any way possible.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2008<br>Class Name: PE111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I hated this class immensely.  That being said, it was extremely easy (although possibly useless).  Wiggins is nice enough but talks to you as if you are a third grader, which gets old by week 3. Do not buy the textbook, you do not need it.</div></div></div><div id="container" class="review"><div id="left">Date: 08/13/2007<br>Class Name: PE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>OMG DO NOT ASK A QUESTION!!!! She acts SOOO nice and sweet and innocent in class and then you ask a question and she is STRAIGHT UP RUDE!! I have her next quarter too! I am totally dreading it!! She is an easy grader though, just not on exams. A lot of memorizing. ANNOYING CLASS!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2007<br>Class Name: PE111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Wiggins is passionate about physical education and children. Took her class as an English Ed major, and still enjoyed it.  For the most part, the class is pretty easy as long as you do the readings and a few assignments. The midterm and final are based entirely on handouts she gives out in class--a lot to memorize but straightforward.</div></div></div><div id="container" class="review"><div id="left">Date: 04/19/2006<br>Class Name: PE111<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>well, it's either her way or the long island express way. she's so difficult to deal and talk to.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2006<br>Class Name: EE317<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>make sure you ask no questions in her class...she hates repeating...she is okay, but hard grader...also strange and does not really know much about pe...do as she says, and you will get a B!</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2006<br>Class Name: PE111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>really funny lady! very helpful and understanding. not to hard...get to work with kids..and play around in the gym. not that hard just study for tests and she tells you everything you are going to need to know.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2006<br>Class Name: PE111<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Although I must say she's a pretty easy grader she is difficult as a teacher. It's her way or no way. If you agree with all her opinions and her teaching styles then you'll be fine. If you tend to express yourself differently watch out she'll have issues with it! Overall not bad but I would avoid her again if I had to...</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2006<br>Class Name: EE317<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Mrs. Wiggins is a miserable woman who is never satisfied! She will make you feel like crap and nothing is good enough for her, eventhough you have tried your best.  She is very unclear and yet she gets pissed off when things are not done her way.  Hated her class so much that I dropped it and took it the next quarter with a different teacher and I </div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2005<br>Class Name: EE317<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Worst edu. professor at DePaul. Her way or no way, so do exactly as she tells you and you will do fine. Don't ask for help because she won't listen. Makes people cry and is really overly harsh...do not take. Avoid at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2005<br>Class Name: EE317<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i agree. she comes off as hard and strict but is easy! do your work...not too much (and do great when teaching gym) youll get an A!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: EE281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A great professor, really helps you understand how to be an effective teacher. I would recommmend taking this course. She comes off as hard and strict but she is very easy going and helpful.  If you do what is asked of you, you will get a good grade!</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2005<br>Class Name: EE281<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Wiggins seems very nice. It's a good class but some of her assignments are tough and require lots of work. She can sometimes be unclear of what she wants and lets you figure it out for yourself. Take her if you are education major because she gives you opportunities to get good grades.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2005<br>Class Name: PE111<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Motor Development throughout lifespan. Dr Wiggins knows her stuff. She gives lots of helpful handouts which come in handy for midterm & final. Participate in class so she gets to know ur name. Working with kids was fun but exhausting. She's okay I guess.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

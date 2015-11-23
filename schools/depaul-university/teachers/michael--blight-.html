@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael  Blight </h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 4.86<br>Clarity: 5.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/15/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Blight is an amazing professor and human being. As an international student, I needed help and professor Blight was full of compassion. His lectures are interesting and helpful.  He had my full attention.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>An amazing professor. I absolutely loved this class. He really knows how to keep you interested during lectures. Quizzes are easy as long as you pay attention. There are two big papers, but he is always willing to help you on them. He also offers a lot of extra credit. If you have the chance to have him as a professor, take it! You won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Although the material that was covered was not my favorite, I always enjoyed going to class because of Professor Blight.  There are 2 big papers, which he will review if you send to him.  Quizzes are easy as well. He also offers TONS of extra credit - the grade is worth 100 pts, and I got 12 pts of EC.  DEFINITELY take - he's also kinda cute :)</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Professor Blight is by far one of the best professors I have had thus far. He clarifies all the information he presents and is really passionate about it. There are two papers and if you need any help, he is there to help you. There are several opportunities for extra credit. If you are willing to put forth the effort and listen to him, easy A. </div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Blight managed to keep me awake at 9am with his interesting & relevant lectures. He's pretty young so his lectures contain a lot of connections to pop culture that make class fun. The first day of class he played Hotline Bling so there's that. 10 take home quizzes, 2 papers and you're done. Definitely take him! (And yes, I can confirm he's cute)</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: COM101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome professor. Makes an effort to make lectures interesting and relatable. Although I'm not a communications major, taking this class will probably help improve my communication skills in both work related and social situations. </div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy is amazing! No mid-term and no final. 10 short quizzes and two 5 page papers. He is super helpful and clear when it comes to the papers. Not to mention funny (and attractive). Absolutely recommend and would definitely take him again!</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really good prof. He's pretty funny and does a nice job making a potentially boring subject interesting. 10 open note quizzes, two 5 page papers (he gives you a clear outline and stricture to follow). Also gives lots of EC opportunities. Overall good dude. Would take again. </div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you have the option to take a class with this professor, DO IT!  1. He is so helpful, Every email I sent got a response within a couple hours.  2. He is hysterical... Like get this guy on youtube. He should do stand up 3. He's a Greek, aka "good people" 4. He will get drafted ivy league soon! He deserves it. SO TAKE IT WHILE YOU CAN!</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>A fantastic professor, absolutely hilarious and relatable (and cute). Quizzes every week but no exams and two papers. Very clear on what he expects and always willing to clarify or help you if needed. He made everything so interesting, easy to understand, and he was SO funny, he's one of my favorite professors at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Blight is awesome. He plays a lot of youtube clips to break up the material to keep everyone interested. He is funny and someone you don't have a problem going up to for a question. There is a quiz everyweek but almost all the answers are in the powerpoints or book. Then 2 case study papers that aren't hard. </div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2015<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>If you have a chance to take him, do it.  He's a young professor who is clearly passionate in what he does and he is NOT boring!  All the quizzes you take are online, he provides you with the power points from lecture, 2 papers for the entire quarter, and he gives extra credit.  What more can you ask for?!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Blight's lectures aren't mind numbingly dull nor is he a boring person. Not bad on the eyes either. He's really funny in a dorky, corny way. Only two papers for the quarter and all of his weekly quizzes are online and he gives you notes in class so the book is just an additional resource for the occasional difficult question. </div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Blight is an incredible professor. He really knows the material he is teaching and makes it relatable for the students. He makes class genuinely fun even when we're learning about material that some may find uninteresting. There are weekly quizzes but they really aren't bad and you do them online. We had two essays and thats about it. A+</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

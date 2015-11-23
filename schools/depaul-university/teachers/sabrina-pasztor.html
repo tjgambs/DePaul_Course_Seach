@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sabrina Pasztor</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.9<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/18/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>She was more than a professor, there was a lot of work but it was manageable, she always sent motivating emails and was extremely clear on our assignments. I learned a lot from her would recommend her to anyone. She brings stress balls on speaking days and I think little things like that just shows how much she cares for her students, love her! </div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was an amazing experience. I not only learned a lot, but i actually felt that  Prof. Pastor wanted every single student in the class to succeed. There is a lot to learn in this course and she does an amazing job at teaching the content! Absolutely would recommend her to anyone at DePaul!   </div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take her! AMAZAING Professor, gives lots of extra credit! (The best so far)</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Really great professor. Truly has the communication aspect down by creating a very open environment. She knows each student very well by the end of the quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2013<br>Class Name: ORGC201<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Pasztor is a great teacher. She is easy to talk to and made the classroom environment very comfortable. She is well prepared and easily reachable. Be prepared to work, a lot went into this class and a majority of the work was in the last 4 weeks of class when you are already swamped with finals :(</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2013<br>Class Name: ORGC201<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>It was fun, but it required too much work</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great class and teacher! She really makes an effort to be there for her students, is passionate about the subject, and clear about what is expected. Typical speech class with its speech requirements. However, she makes you comfortable with the class and students right off the bat with ice breakers and activities. I'd recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You can tell that this professor really cares about her students. She gives great feedback and you learn a lot about public speaking/ presenting. I learned things that will help me after college. HOWEVER it isn't easy to get an A. Don't take it lightly. Buy book.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I like this professor. I am very happy I took it with this professor because she is very understanding of your situations. I work and go to school full time and appreciated her ability to be a little more flexible on presentation days. Make eye contact with audience. That is her pet peeve.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice teacher, crystal clear. Very glad to have a take home final but it's timed and online. I HATE public speaking and this has helped me astoundingly! I didn't like the peer Evals b/c my peers were a little mean at times quizzes were slightly ambiguous at times so I didn't do so hot even though I studied</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: ORGC201<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This is a class that everyone should take... Which is why its required but pretty boring, especially the lector base parts... Its a speech class what do you expect...</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Pasztor is an awesome instructor.  You will learn something in her class.  It was fun while also challenging.  You will use a large majority of material covered in this course in all aspects of your life.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the most helpful classes I've taken at DePaul. Professor Pasztor did her best to make us feel comfortable in front of the class and also gave us really good constructive criticism. I really grew as a speaker over the last 10 weeks. Take her! You won't regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Pasztor helped me overcome my fear of speaking in front of the class. The class was very welcoming and kind, which helped me feel comfortable in front of the class. I learned the importance of preparation and practice- two skills that I will take beyond the classroom. Thank you!</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I would definitely recommend taking this professors class. 4 quizzes and final is online (take home), but class is mainly focused around presentations. So it isn't boring and you don't memorize a ton of definitions. She makes it fun.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. You have to work for an A and work to be a better speaker, but Sabrina is a great teacher. Quizes and final are very easy. Its all about the presentations and speeches.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The only way you could not do well in this class is if you did absolutely nothing. She gives you the tools to succeed.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor that will give you more than enough chances to make an A. She gives out a ton extra credit assignments. I hope I get an A in her class because I enjoyed it so much. She teaches with meaning and leaves an impact on the class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a really good professor.  Everything is outlined in the syllabus and no surprises. She really likes to help her students and cares about the material. It is a great subject because you actually learn a lot about giving presentations.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher is really good at teaching professional communication. I actually learned a lot about speaking, and I thought I was already pretty good. Your speeches get recorded. It is not a blow off class, but it is pretty easy if you stay on top of your work.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor.  She really does help and the class was worth it.  At first I was dreading this class because it is a presentation class but it really did help with my presenting.  Great class, great professor.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sabrina is very personable and helpful.  She knows her stuff and makes every effort to ensure you will too.  The pace of the course did get hectic towards the end, I think she could have assigned some of the extra assignments towards the beginning as opposed to cramming them in the last two weeks with finals.  Overall I would still recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great class and teacher! She is so helpful and lays out all the requirements for each assignment really clearly. If you work hard in the class and do what she asks, you will definitely improve your skills.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Professor! She really is an expert at what she does, and shares this knowledge really well with the class. She understands that each student is at their own level and provides helpful feedback. Not a blow off class, but not too stressful. I would recommend to anyone, no matter what major.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome class! She is an expert at her subject and very well at helping students improve. The quizzes are manageable, just do the readings ( which are not too long), the speeches are clearly outlined.  If you want a blow off, do nothing class, don't take, but if you want a teacher who KNOWS what theyre talking about, its a must take.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Pasztor is amazing! She is knowledgeable, friendly, helpful, and extrmely caring towards her students. She makes the class interesting anf fun, as you learn very important and relevant communication and presentation skills that truly help make you a better public speaker. Take her! You will be happy that you did.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2013<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sabrina was an awesome instructor who tried to push students to improve in their speaking abilities. It was a struggle for me but definitely think it served me well to take this class before working in the real world to magnify speaking shortcomings.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2012<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take her, worth your tuition dollars!  Not always said about classes at depaul.  What everyone wants to know:  3 Quizzes all multiple choice and one short answer.  Final was online.   Easy teacher.  Great constructive feedback.  Fun and energetic projects.  Grades are posted online!(super plus).  Speeches cover all topics and are fun! A+ teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2012<br>Class Name: ORGC201<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor with solid real world experience. The crux of the class comes down to speeches which can be very intimidating for some. Recognizing this, she incorporates good ice breakers to make everyone feel at ease. She is strict but as long as you show hard work she can be understanding.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2012<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very well organized, always available. Lets students know exactly what is expected of them. Great professor!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

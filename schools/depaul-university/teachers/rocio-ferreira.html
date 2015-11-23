@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rocio Ferreira</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.0<br>Clarity: 4.19<br>Easiness: 3.05</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: 371<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very hard grader. She unreliable and pretty strict.  The class was good but just be sure you get on her good side.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2012<br>Class Name: SPN330<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I dont understand why people are writing bad reviews. Seriously, this is College and it should not be easy. If you are looking for an easy blow off class DO NOT take her classes, BUT if you are looking to learn and think critically take her class.This has been the hardest class but it has been the BEST class I have ever taken. Really smart.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: SPN371<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Disappointing reviews. Took Prof based on them.SO Disorganized! Completely unresponsive. No direction. Syllabus an inaccurate spanglish mess. Grades arbitrarily & provides no feedback. Complete flake. $40text not used at all. Its amazing she's survived this long w as flaky as she is. NOT RECOMMENDED. TERRIBLE 'EDUCATOR'. Makes DPU look bad. UGH!</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2010<br>Class Name: SPN331<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor, really organized and dedicated to her students. Her course load is moderate, you have to do the reading in order to receive a good grade. Really organized and really smart too! Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2010<br>Class Name: SPN331<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Ferreira is a great prof., really helpful, understanding and caring. The administration seems to put a couple of burdens on her, that ultimately make her look bad, but in reality its out of her control. She is not an easy professor, but you will learn a lot from her, and she will make things much easier for you. Take her, you won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2009<br>Class Name: SPN115<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is so rude. You try to by nice to her and it does not help. She is unorganized...but it would not of been a problem if she was at least nice.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2008<br>Class Name: SPN115<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>There is alot of homework. Expect to spend alot of time with her class. Do all her homework in the end points do add up. I recommend her expecially since we all speak spanish it's a fun class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2008<br>Class Name: SPN331<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Don't take her. She is very disorganized and flighty. A nice lady, but not too great a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2008<br>Class Name: SPN331<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Cinema class: LOTS of work, sometimes unorganized, syllabus chgd often (cuz she's a busy woman). Even so, I learned a lot & I think she's way better than other professors I've had for adv spn. Tests are easy if you pay attn in class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/02/2006<br>Class Name: SPN207<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2006<br>Class Name: SPN116<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Rocio is a wonderful professor, one of the best I have had in my three years at DePaul.  She is all about helping the student and making sure that everyone understands.  She gave a lot of work, but in the end it helped everyone succeed!</div></div></div><div id="container" class="review"><div id="left">Date: 04/19/2006<br>Class Name: SPN220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This professor is my favorite at DePaul. Her classes are a lot of work but you learn a lot and she is always there to help. She has some great fashion too and always looks nice. Her Spanish is very understandable and she has the cutest accent. DEFINITELY RECOMMENDED! Couldn't have a better Spanish class at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2006<br>Class Name: 114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Fer..is the shizniz...she is very helpful and if you don't understand she'll help you through it. She's really friendly and understanding.. she's one of the best professors I've had at Depaul. Take her for spanish!</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2006<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Senora Ferreira is amazing! I learned so much in this class! She is very understanding and knows that not everyone is going to get stuff right away. She always reviews before tests, and does not hesitate to put back a test a day or so. Some people thought it was a lot of work-- especially the workbook, but it's never due before the weekend! =)</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2005<br>Class Name: SPN371<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This profesora is AMAZING.  She is all about helping her students out and improving their Spanish.  She goes out of her way for them and is interested in their futures.  I definitely recommend her for any Spanish class.  There is a lot of work, but the end results are well worth it.  Buenas Suerte!</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2005<br>Class Name: SPN371<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was really laid back.  We just showed up every week and watched a movie and turned in a short paper after each film.  Def recommend to anyone who needs an easy, educational 300 level class. Learned a lot about film analysis too. 2 big papers weren't too bad either.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2005<br>Class Name: SPN114116<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you need a spanish class, make sure you take her. She is really easy and really nice! Great teacher!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2005<br>Class Name: SPN115<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she grades you on your progress, is very understanding and is real chill and laidback. the guys thought she was cute, girls think she has an admirable tan. overall wonderful teacher that knows what she is teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2005<br>Class Name: ESPANOL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>one of the best professors in the university hands down.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2004<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor, always understandable and helful.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2004<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was very hepful, if you don't understand something, she is quick to help you understand. The work load isn't bad. And she is very nice and definitely the type of teacher that will stop and talk to you on the street. The guys in my class think that she is one hot very educated woman.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

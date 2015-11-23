@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jean Biddulph</h1><hr><div><h2>Overall Quality: 3.64<br><br>Helpfulness: 3.72<br>Clarity: 3.56<br>Easiness: 3.11</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/20/2006<br>Class Name: MAT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is the best math teacher I have ever had and that's saying a lot.  I have had terrible teachers for math since junior high, hence, I have not done well in math since then.  But Ms. Biddulph made all the difference.  She explained every type of problem and even handed out these &quot;Can You&#63;&quot; sheets at the beginning of every class.Excellent teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2006<br>Class Name: MTH101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you have a question and didn't understand the first time, she won't help you.  Don't take this teacher if you aren't a math wiz.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2005<br>Class Name: METHODS<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great job!  she used to be a high school math teacher, so she was a great math methods teacher - excellent!</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2005<br>Class Name: BMS126<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>at least i'm not the only one who thinks she is a hard and picky grader, i had to retake bms 126  because of her</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2004<br>Class Name: BMS126<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>don't  take her, hard grader...i had to retake the class becuz of her</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2004<br>Class Name: MATH101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice lady, old fashioned and doesn't use a lot of technology. Pretty easy grader and work load isn't too bad</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2004<br>Class Name: MATH111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A lot of work and projects in her class.  But if you keep up with the homework and let her know you're trying it's not hard to get an B+ or A-.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2004<br>Class Name: MATH101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>SUCKS!!!</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2004<br>Class Name: BMS126<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>strongly not recommended.  very picky and hard grader.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2004<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>As someone said, teaches like H.S. I don't know about anyone else but I hated H.S. Stubbornly uses projector instead of dry erase-right out of the 70's. not picky,unreasonable grader. wont use blackboard, had tho write contact info on sheet she passed out</div></div></div><div id="container" class="review"><div id="left">Date: 06/01/2004<br>Class Name: BMS126<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a great professor! She's always available for help and gives study guides before tests and quizzes. Do the homework, go to class, do the study guides and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 06/01/2004<br>Class Name: BMS126<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the sweetest ladies I have ever met.  She is a great professor and is always more than willing to help her students out.  Her quizzes and exams are directly from her study guides.  AWESOME TEACHER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2004<br>Class Name: BMS126<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she is the best math profeesor i have ever had! She makes the material very easy to learn and is willing to help those who need. She also has a great personality. She gives about 5 quizzes and 3 exams, but gives study sheets that show exactly what to stud</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: MAT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a very nice lady!! Great professor!! :)</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: MATH110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is one of the sweetest prof's I have ever had and because she is I have had her two times. And like someone said above, she is very straight foward.  The review quides are identical from the test.  Though she is fairly easy, you learn a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2003<br>Class Name: MAT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice and Helpful!</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2003<br>Class Name: MATH101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>BEST MATH TEACHER EVER !!! she is such a sweet lady, and really wants to help u. I liek how we do problems and class lots of participation, although not required! her tests are straightforward. she is soooo great really made my transition to depaul easy</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2003<br>Class Name: MATH101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She teaches this class like a high school class.  So for those just coming into college, it's a nice feeling.  She is a very genuine person.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

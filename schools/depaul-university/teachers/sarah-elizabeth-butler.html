@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sarah Elizabeth Butler</h1><hr><div><h2>Overall Quality: 3.19<br><br>Helpfulness: 3.08<br>Clarity: 3.31<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: PSY347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Simply very helpful and kind.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2010<br>Class Name: LSP110<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really boring. Attend all classes and dont talk during class or shell get very mad.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2010<br>Class Name: LSP110<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Extremely opinionated to the point that it is just rude.  Doesn't accept other's ideas or opinions.  Turned an extremely cool Wild Chicago course (adventure in the city) into such a painful class after immersion week. Reads directly from a powerpoint.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: LSP110<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Meh.</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2008<br>Class Name: PSYCH240<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's great. It's a flexible class, you get a week for each homework assignment, tests are graded on curves and she's very fair. Test aren't that difficult at all. She's very helpful and understanding- very willing to meet outside of class for help. Thought class can be a little boring, to be fair, it is Statistics. Go for it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2008<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I'd say one of the best teachers I've had at DePaul. I was barely in class due to illness, but she is very helpful, funny, and nice. She helps you understand. Homework is almost easy, tests are not very difficult and she shows you that Statistics really isn't that scary. Take her if you can!</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2008<br>Class Name: PSYCH215<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I would not take her again, I do not like her style of teaching. You can tell she hasn't been teaching long, doesn't make the class very interesting. But her exams and hw assignments are not very hard. Although she takes off silly points for the writing assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2008<br>Class Name: PSY215<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>absolutely horrible. reads off slides, no enthusiasm, assumed everyone in the class has had sex, always arrive late to class and keep students late. she required a $35 iclicker n only uses it 10 times in the entire quarter. clearly not ready to teach college students because she treats us all like little kids by talking to us like we're slow.</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2008<br>Class Name: PSYCH215<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>First of all she cannot stay on track and always runs over her alloted time and keeps students after. Second she reads off of her slides which makes paying attention or taking notes completely useless. Third she is not ready for teaching she has changed my grade in the past three days 4 times and blames it on the system.</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2008<br>Class Name: PSY241<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This particular class I would not take one day a week, it just too much information to cram it and the class will feel endless. She's slow with posting things on blackboard and getting back to students, but if you make the effort she is willing to help.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2008<br>Class Name: PSYCH241<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a very knowledgeable and helpful professor. Shes very young and is very interested in what she teaches. No tests, just homework assignments, the homework takes some time, but it sure beats having to take tests!  Good teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2008<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very helpful and understanding.  She is extremely nice and enthusiastic.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2008<br>Class Name: PSY241<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was very nice and tried to be very funny, but sometimes lectures were just very boring. Powerpoints are not intriguing, and she posts them so the motivation to pay attention just isn't there. Knows her stuff, but night class never really gets out early...sometimes held after!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

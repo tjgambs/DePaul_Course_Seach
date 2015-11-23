@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jean-Claude Teboul</h1><hr><div><h2>Overall Quality: 3.76<br><br>Helpfulness: 3.67<br>Clarity: 3.86<br>Easiness: 2.93</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/03/2009<br>Class Name: CMN101<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a nice teacher and cracks the occasional joke. I sometimes find myself slipping in and out of the discussion though. Articles he assigns aren't of too much importance..I usually don't read them. Overall, he's a pretty good professor; he just teaches a topic that's kinda common knowledge.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Funny guy, just he teaches such a boring topic.  His downfall is expecting students to participate in a class they don't care much about.  Led to lots of awkward silences.  Still a nice, easy teacher, though.  His middle name's Bruno, that might win him points, too.</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2008<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very helpful and knowledgeable. Not too difficult, but requires in class participation.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2007<br>Class Name: CMN251<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>OMG.. he is the best teacher here at Depaul! I love him, very smart and fun. I learned alot and have taken him 3 times...every class is a blast! TAKE HIM... but you have to be ready to study  and participate if you want to get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 08/01/2007<br>Class Name: CMN526<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great professor, took him twice, grad-level courses, and learned a lot. he knows his stuff and teaches it well.</div></div></div><div id="container" class="review"><div id="left">Date: 06/28/2007<br>Class Name: CMN251<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If he wasn't teaching at DePaul, he would be homeless.  I'm not joking!  I'm shocked he doesn't require a feeding tube and constant primary care attention.</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2007<br>Class Name: CMN101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Strange little man-His classes should be on line because listening to him is like listening to grass grow. Very, Very dull and painful for my ears</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2007<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>best teacher at DePaul! His teaching style is really helpful and he gets you to really enjoy the material. hes pretty funny to!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2006<br>Class Name: CMN255<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He didn't show up for the final b/c he got the time mixed up, kinda funny b/c he's an ORGANIZATION prof. We waited for the guy for 35 minutes and he was shocked we left.  In four years I've never had a prof. be late for a final.  How long were we supposed to wait, 2 1/2 hours!&#63; AND he made everyone come back and take it, though it was his fault.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2006<br>Class Name: CMN251<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome. Really cares about his students.</div></div></div><div id="container" class="review"><div id="left">Date: 07/06/2006<br>Class Name: CMN101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took this course when it was split in half with Tim Cole...I have no idea where they determined the final grades but for an entry level course I was surprised by the outcome. Nice guy, good stories, boring half of the curriculum.</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2006<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He keeps saying, &quot;I'm the man&quot;.  I'm not sure what he means by that.</div></div></div><div id="container" class="review"><div id="left">Date: 05/22/2006<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>To know him is to love him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2006<br>Class Name: CMN<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is arrogant and condescending. I do NOT recommend taking his class. He does not respond to emails and is inconsistent with information. Also, he assigns way too much work and does not return it in a timely manner (very frustrating!). There are many great CMN Prof's, he is just not one of them.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: CMN<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>he is a cocky jerk who should move back to australia.  he doesnt explain anything clearly and makes stupid assignments that must be done in class or you dont get credit.  i dont recommend taking him at all i did not learn anything and he think hes funny but really just annoying.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2006<br>Class Name: CMN251<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This professor is a jerk!  He failed half of the class!</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2006<br>Class Name: CMN212<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>explains everything really well and clearly. i don't even remember having hw. the only thing is there's a midterm, presentation project, and a 12-15pg paper for the final.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2005<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This man knows you better than you know yourself.  If you can only take one class in your entire life (because maybe you're poor), you should this man.  He was both a friend and a mentor.  When I'm old and sick, I'll remember him fondly.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2005<br>Class Name: COM<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2005<br>Class Name: CMN212<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Cool teacher just a hard grader and ALOT of work involved for a Communication class!! Midterm, paper and a group project.</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2005<br>Class Name: CMN212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professot Teboul is a man among boys.</div></div></div><div id="container" class="review"><div id="left">Date: 05/16/2005<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He makes me smile inside.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2005<br>Class Name: 101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>NIce guy. Good examples. Good lectures. Kind of funny. Cute accent (easy to understand). Very knowledgeable on subject matter. Grades fairly. Take him.</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2005<br>Class Name: CMN541<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2005<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Teboul is knowledgeable, funny, interesting, and does a great job of providing examples. He makes sure you can get missed notes too. Good guy</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2004<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great guy, lead good lectures, and an interesting change from Cole.  I would definitely recommend.  He's very intelligent.  Plus, his accent is great.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2004<br>Class Name: CMN<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2004<br>Class Name: CMNORG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Bruno is money.  The guy is all about clarity.  If you attend lecture your fine.  People complain about grading too hard, but welcome to college.  I want to be challenged and Bruno does that.  Just dont get BURNED OUT, MAN</div></div></div><div id="container" class="review"><div id="left">Date: 07/27/2004<br>Class Name: CMN212<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He makes it explicitly clear what he's looking for in the paper and group project. This class requires attentive note taking that you will use to construct the final paper. I learned a TON, and recommend him if you want to advance your group comm skills.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2004<br>Class Name: CMN350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A class act knows how to involve students and teach at the same time.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2004<br>Class Name: CMN350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very challenging in upper level courses- A LOT of reading!</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: CNM220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Good teacher, excellent clarity.  Attendance to class is a must.  Hard grader, but fair.  You need to put in the time, but you will learn alot. Over all a nice guy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: CMN212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His accent gets annoying but he knows his stuff.  Class gets kind of boring but half the time he lets you work in groups and you can jet out early.  Not bad, I would take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: CMN212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>hard greader</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Godo teacher, just don't forget to come to class or you'll get lost.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: ORGCOM<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Bad teacher very rude. didn't e/mail back fast at all... He also won't give you any help...and if u do go for help he will still give u a bad grade on a paper even when he said it looks good. Tests are hard and durning class he just give u notes thats it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Knows his stuff... is engaging in his lecture, encourages participation, interesting guy. You'll learn a lot about the business world and small group communication...  Demands effort, but if you're willing to do a little work he's the best!</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2003<br>Class Name: CMN212<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>really bad teacher, very hard and demanding for a liberal arts requirement. i suggest you dont take him. it really isnt worth it!</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2003<br>Class Name: COMM212<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A communications class should not cut into my other real classes. Very demanding.  Other than that a nice guy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2003<br>Class Name: CMN212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>There's a lot of love in the man.</div></div></div><div id="container" class="review"><div id="left">Date: 04/03/2003<br>Class Name: CMN220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a good man full of good ideas and always ready for fun.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2003<br>Class Name: SMALLGRP<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>For a communications class, he was extremely difficult with tons of work. He's the hardest small group comm teacher that I've heard about</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

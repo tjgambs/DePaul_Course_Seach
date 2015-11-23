@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Helen Marlborough</h1><hr><div><h2>Overall Quality: 4.48<br><br>Helpfulness: 4.58<br>Clarity: 4.38<br>Easiness: 3.13</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/30/2012<br>Class Name: ENGXXX<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took her Renaissance Lit class and loved it. Who knew how interesting Paradise Lost could be? Or the Faerie Queene? I started off slow (low grade on first paper) but she helped me figure out how to do better (in her class and all later ones). Great teacher, great class!</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2011<br>Class Name: HON101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class is very interesting. The books are all great and there are only 2 papers, 10 mini responses, and 1 test. Not bad at all. The paper grading is a little rough but that is about it. Over all not a bad class</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2010<br>Class Name: ENG220<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Marlborough is so enjoyable!  If her class is up for a great discussion, she's a wonderful facilitator.  If it's a particularly dull day for the students, she doesn't get hostile, but goes with the flow.  She teaches in a very clear way that is easy to understand, which is often incredibly helpful juxtaposed with the challenging work.</div></div></div><div id="container" class="review"><div id="left">Date: 08/19/2010<br>Class Name: HON101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Lovely woman, great teacher, nice class, cool discussions, helpful, kind, appropriate level of work.  the only criticism I have is that she could maybe hold the bar a little higher.  Otherwise, all-around good experience.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2009<br>Class Name: HON101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Marlborough is a nice adorable professor.  While the discussions can get a bit dry because we spent so long discussing each book, if you are having any trouble she is very willing to help.  No Textbook, jut 8 or 10 novels, about 1 a week.  She is very knowledgeable, and again such a sweet woman.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2008<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I didn't have much interest in poetry, but she made it interesting.  Very sweet lady and a great, clear teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 04/06/2007<br>Class Name: HON101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I am not a huge fan of literature, but I love great discussions. Keeping in mind that Professor Marlborough is the Director of Honors Program,I was expecting great class discussions.That did not happen - no discussions,just going line by line what was read. Her grading is confusing - writes great comments and gives a B.She is a sweet person though.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2006<br>Class Name: HON110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Marlborough is an eloquent, knowledgeable professor.  I enjoyed her well-picked literature, which she disscected cover to cover.  She is an easy, even merciful, grader on her papers.  Considering her approachable personality and enthusiasm, I would recommend taking her courses to anyone who wants (not is reluctant) to learn and work.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2006<br>Class Name: ENG320<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her class was incredibly dry and boring. She stands there behind her podium and goes line by line through the reading and doesn't really let her students talk. She's very big on English history too. She's a harsh grader. Class breakdown: Weekly in-class work, 1st paper is 3 pages, Written Midterm and Final, 2nd Paper is 5-6 pages, research involved</div></div></div><div id="container" class="review"><div id="left">Date: 07/26/2005<br>Class Name: ENG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent instructor.  Very knowledgeable and chooses great material.  Highly recommended!!</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2005<br>Class Name: ENG320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very sweet teacher.  tests are easy as long as you take down notes and read materials.  willing to give extensions if you ask for it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2005<br>Class Name: ENG320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Extremely intelligent, she is not an easy grader but is the clearest and most helpful professor I have ever had.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2005<br>Class Name: ENG220320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She really is a classic professor, compelte with the Tiffany's lamp in her office! Really nice, will make time to help you with a paper, responds to e-mails really quickly. I REALLY don't see where the Christian fanatic thing is coming from. I had her for 3 classes & I'm not even an English major!</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2005<br>Class Name: ENG320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took her for my capstone, and she was wonderful. As for the person who said you can't express rel. views outside of Christianity, you are wrong here. My final paper was on how pagan religions can be viewed as theater. I also got an A on it. She is a great techer, though a bit dull at times.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2004<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not the best class i've taken, but it does have its good moments. she's very helpful and quick to respond to emails. i do agree that she is very knowledgeable. would definitely recommend taking this teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2004<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not the most exciting class, but she teaches the material well and is always available outside of class if you have any questions.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2004<br>Class Name: ENG320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice lady and very intelligent. She's so awesome, that I have taken her three times. She's truly a classic professor. I must disagree with the Christian fanatic label as well. Be advised, you must be able to write well.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Cool prof. & very helpful outside of the classroom. Some of the reading selections were rather dull & if you take her for a night class expect to get a little antsy or bored. Otherwise very nice lady.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2004<br>Class Name: ENGLISH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher, so erudite. She comes off as very placid, but the woman is the real thing and she knows her stuff. Has an amazing breadth of knowledge that she can tap into in conjunction with most topics. She knows more than you do, get used to it, enjoy!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2004<br>Class Name: ENG220<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is nice and very knowledgeable. I don't think she'a a 'fanatic Christian' as someone else said, but I did realize that she grades papers according to how well you apply what she has taught, and not on how original or creative you are.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: ENG310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor. I personally don't find her to be a Christian fanatic (like one person reported). Very knowledgeable, very intelligent, makes jokes, and will always help you out if you don't understand something. Know you will have to write well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: 220310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>REALLY knows her stuff.  Very helpful, very nice.  She knows so much it will amaze you.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: ENG310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you're an extremist Christian, this is the teacher for you. If you like to think for yourself, don't express your views in her course, or she'll target you by docking your grades in assignments, because of her differing, close-minded beliefs.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2004<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's the nicest teacher ever!!  She's extremely informed about English, and she's very helpful.  I've taken her for 3 classes, and she is my English advisor.  I highly recommend her for any English class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

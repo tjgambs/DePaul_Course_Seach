@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Donald Bateman</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.1<br>Clarity: 3.9<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/28/2015<br>Class Name: 398320<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Great Professor! If you want to know more about finance world and learn - that's the guy! Interesting lectures, bit dry-but its finance! I am taking him for 2 classes now, and I do not regret! </div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2014<br>Class Name: FIN320<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Don't buy the textbook. Don't need it. There are hw problems from it, but you can just google those. There is a midterm and a final. As long as you read and reread the powerpoints to the point of memorization, and as long as you actually answer the sample essay questions he gives you, you will be fine. </div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2014<br>Class Name: FIN320<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>AVOID!!!! The book is over 100 dollars and is only used for 2 assignments that count toward participation which is 10% of your grade which you don't learn about till it's too late to return. The other 2 assignments are a 5 page research papers that he isn't clear on what to cover specifically about the subjects.</div></div></div><div id="container" class="review"><div id="left">Date: 12/20/2013<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Prof. Bateman is one of the brightest professors out there. He has a huge experience in the Finance world and is willing to share his knowledge. This was one of my favorite classes. I really recommend this class, it will teach you a lot. Practice multiple choice questions he gives out right away on d2l and get ready to answer essay questions.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2013<br>Class Name: FIN320<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Man was this class BORING. He was a nice guy but was so boring even though I thought the material was interesting. He consistently says "I am from industry." The tests were not too tough. I recommend going over the multiple choice questions he gives you.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: FIN398<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Expected a lot of our case study assignments and didn't give clear guidelines to what he wanted. Midterm and Final are open book/open laptop though...</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2012<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Donald is an awesome guy. Attendance is mandatory. He is very nice and understanding. Definitely knows his stuff and is willing to help. He goes off powerpoint so class can be dry at times. I learned a lot and I would take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2012<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Bateman is an extremely knowledgeable professor. He's overwhelmingly helpful, he's very nice, very patient, and even has a great sense of humor. He's not a tough grader, tests are very straight forward. My class wasn't all that talkative - so I felt we didn't receive all he had to offer, but I would definitely retake Mr. Bateman if I had to.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2012<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor. Exams are open notes/book.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2012<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My class experience might have been better had my peers actually participated in the discussions. Very smart, very informed on the subject matter, even though it's not the most exciting. Read the chapters, articles, and study the powerpoints. Don't hesitate to ask him any questions or to look over a paper before turning it in; extremely helpful!</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2011<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's awesome...Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2010<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is a very nice professor, fair grader and a kind person overall. But! Extremely boring lectures. People are talking during his class and he says nothing to them. Looks like he is afraid of his students. Sometimes looks confused about material.Even though I tried to listen to his lectures, it was hard :) Midterm and final are straightforward.</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2010<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Fantastic professor. Gives real world examples that give the lecture some meaning (something professors suck at). Wealth of experience. Willing to help. Sometimes goes off on tangents, but it is mostly related to finance anyways. Overall outstanding professor.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2010<br>Class Name: FIN320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I love that he has real world experience because any time he gets stuck with his slides he just talks about experience. Class was so straight forward no surprises really fair grader. Class can be rough but if you go there will be no surprises on any exam. 2 mini papers, two exams, and attendance.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2010<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Would not reccommend... take Karen instead.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2010<br>Class Name: FIN320<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>fun class, hard class.don't expect anything higher than a B with hard work put in.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2010<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor!!!This is a financial planning class and we actually did a real-life project! very interesting, helpful and interactive class! Thank you, Professor Bateman! It was a real pleasure to be in that class :)</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2010<br>Class Name: FIN320<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really good professor. Lots of experiences and stories related to class. 2 papers on interesting finance topics related to current events, midterm and final. Overall a good professor. Take him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2010<br>Class Name: FIN320<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good teacher, lectures are boring, 2 short easy papers midterm and a final, nice and simple midterm and a final based on questions provided for you just memorize all of them and your set.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2010<br>Class Name: FIN320<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good professor. Two papers, and two finals. Pretty clear. Goes by the textbook.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

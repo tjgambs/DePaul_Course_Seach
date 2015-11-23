@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Teresia Hinga</h1><hr><div><h2>Overall Quality: 2.56<br><br>Helpfulness: 2.97<br>Clarity: 2.15<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/16/2005<br>Class Name: CTH248<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Class was boring, lectures and notes were hard to understand, and there were tons of readings on blackboard in addition to the 3 textbooks. She was never clear on expectations and held some pretty clear biases in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2005<br>Class Name: RS274<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I hated this class!!!  She is not very clear on what she expects. There is a lot of reading and weekly questions.  She talks a bunch of jibberish, and its hard to read he notes off the board (bad handwritting). The class itself is not the most difficult as long as you do the work, but I dreaded going every week. Its the worst class ever and BORING!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: REL222<br>Helpfulness: 5<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class is the easiest B in the world.  Who cares if you can understand her if she is giving away A's, & B's.  I took her for two classes and received an A & B+.  NO TESTS.... 2 five page papers only.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2005<br>Class Name: RS222<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2005<br>Class Name: REL222<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Avoid like the plague...seriously...its hell on earth</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: RELIGION<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher.  Encouraged class participation which was challenging since the calss was at night.  Still was one of my favs that quarter. Work interesting and not too hard.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: COLONIZEDPEOPL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class was really intersting. She knew what she was talking about and plus was so incredibly nice it was ok that it was a night class. SHes very understanding and an easy grader. I enjoyed having her as a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: REL264<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very nice, friendly and cooperative...but still a challenging course if you're not interested in the subject matter.  It was a pain to do all the reading and keep up with assignments for me because I just needed the REL credit and it was the only class open</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: AFRICANREL<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>good teacher and a good class. she is a really nice lady who cares about her students. assignments for each class, but they are easy. the class is repetitive but she will keep you slightly entertained. overall it was easy enough, and its rare to find caring teachers like hinga</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: REL264<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she just wants students to put forth an effort.  bottom line if you just tell her you're late and why (make it sound valid) she will give you a decent grade.  I probably missed 55% of the class and still got a B.</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2005<br>Class Name: REL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i hate her. she is hard to understand and had got an talks to you like your dumb. she makes no sense and to get through night class with her it is best if you get trashed before hand. you will need a couple of beers to sit there and not wnat to pull your upper lip over your head and just die. painfu</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2005<br>Class Name: REL244<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>THIS CLASS IS SOOOOOOOOOOOOOOOOO BORING. really, do not take this class</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: RS264<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Hinga is a very nice woman and thoroughly explains things.  She goes over all the information you need along with lots of other stuff.  In a 3 hour class only about 30 minutes of it will be what you need.  Lecture's are boring, but class isn't hard.</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2005<br>Class Name: AFRICANREL<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Doesn't post the questions that go with the readings until the day before at the earliest which sucks if you finish the readings early.  If you are straped for time dont take her cause her readings are long and the questions are posted late so if you have to refer back to the reading you waste time</div></div></div><div id="container" class="review"><div id="left">Date: 12/27/2004<br>Class Name: REL264<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good teacher very interesting class. She is a little hard to understand at first but it gets better. A lot of reading but if you listen to the lectures you will be fine. Very lenient with turning in your work.</div></div></div><div id="container" class="review"><div id="left">Date: 12/27/2004<br>Class Name: CTH248<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is very hard to understand, but as long as you do you homework and come to class she will give you an A.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2004<br>Class Name: REL222<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Her African accent drove me nuts and she has a hard time writing in English, it's actually easier to understand her verbally.  The class is dull, but she's always on schedule.  Her grading is fair and she'll care about you if you show respect for her.  If you don't mind her accent, you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2004<br>Class Name: REL264<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>BAD TEACHERR. DO not take. I stress this. Very boring. If you want some good sleep take it then but other than that don't. Not organized at all. Gave to much tedious homework.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2004<br>Class Name: REL222<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>u cant understand her,she gives so much work its unbelievable.if u don't show up to class ur grade will go down&she'll hate ur guts for the rest of the quarter.don't get on her bad side,just do the work and show up to class but i dont recommend her at all</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2004<br>Class Name: 701<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She meant well but her class definitely lacked organization.  In addition too much reading.  I mean she forgets that most of us are not majoring in religion.  If you are behind in work however she will work with you.  Seriously think before you take the c</div></div></div><div id="container" class="review"><div id="left">Date: 09/28/2004<br>Class Name: CTH248<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>NO organizational skills WHATSOEVER. Bad with grades, too much busy work and group projects. Makes interesting subject matter into something you come to loathe. She means well, but she needs to get her act together.</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2004<br>Class Name: REL222<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Her class is like pergatory.  If you can handle elementary group work, senseless discussions, and staying in a night class until the end, then its worth the easy A.  On the other hand, I would rather chew glass than sit through one more class for that A.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2004<br>Class Name: REL222<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>one of the worst proffs i ever had.after 10 minutes of reading i could have thought the class better!!allways off topic,busy work, weird analegies,bad speller,work insulted my inteligence and she always kept us late.i learned more from group presentations</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2004<br>Class Name: REL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>if you can read heiroglyphics, you may be able to decipher her handwriting. she gives group presentations, probably so she doesn't have to do any work, i kind of resented that.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: REL<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i dont remember having many difficult assignments. group presentations were fun. her accent is difficult at times. i thought she was pretty easy.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2004<br>Class Name: REL222<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hinga is hard to understand at times.  I had her for a night class and she never let us leave even 5 minutes early, yet she was always 15+ minutes late! Weekly work was just busy work, that I don't know if she even read.  Projects were easy.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2004<br>Class Name: REL222<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Horrible teacher. always off topic and discusses elementary school issues that are irrelevent to the course. I had to get a grade change so make sure to keep all papers and documents. She is truly an insult to the quality of education at Depaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2004<br>Class Name: RELIGION<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i took her for an ethics class. it was pretty easy, i think i got an A. shes a bit hard to understand, though, with a heavy accent.. but i guess it makes you pay atttention more!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2004<br>Class Name: RS101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>such a terrible course that i dismissed religious studies for the next two years until i had a great professor in it and ended up majoring in it!</div></div></div><div id="container" class="review"><div id="left">Date: 12/28/2003<br>Class Name: CTH248<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good teacher, LOTS of work though. kind of hard to understand and seems confused sometimes, but she laughs it off.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2003<br>Class Name: CTH248<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very hard work, and lots of it, she is knowleadgeable in her domain but not very organized, not very good with grades.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: REL222<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she really loves what she teaches, alot of work though i got an A</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2003<br>Class Name: REL274<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good professor with plenty of knowledge in African religion and culture.  A bit disorganized and unclear at times.  Be ready to participate because she does call on the quieter students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

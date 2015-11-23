@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Ken Sarubbi</h1><hr><div><h2>Overall Quality: 3.64<br><br>Helpfulness: 3.71<br>Clarity: 3.57<br>Easiness: 2.71</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/13/2011<br>Class Name: KINE362<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Doc Is the best teacher ever. He's understanding and cool as hell. Not to mention VERY good looking.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2011<br>Class Name: KIN300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Doc is one of the best at what he does. He's an expert at the game and should never leave. Wish there were more professors like him!!! He will go out of his way to help you out, just show some initative!</div></div></div><div id="container" class="review"><div id="left">Date: 12/23/2010<br>Class Name: PHE351<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hi I had Doc in the 70's. Great teacher,very much on top of his area of kinesology!!Made the class easier to understand. SUPER!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2009<br>Class Name: PE206<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I wish I hadn't had to take this class, but it ended up being pretty easy.  The final was tough, but the rest of it was easy.  If you go to class, don't buy the book.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2007<br>Class Name: PE206<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good fun class</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2006<br>Class Name: PE206<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His kines/ath inj. classes are tough but this class is fairly easy. he tells many great funny stories and is very knowledgable about the subject. either you take doc for this class or you take kristen neisler. TRUST ME, YOU DO NOT WANT TO TAKE THIS CLASS WITH KRISTEN (or any classes with her). 2 exams and 1.5 paper. ***take good notes in class***</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2004<br>Class Name: INJURIES<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He makes a topic that could be staright forward, quite confusing.  He needs to modernize his teaching methods.  Makes tests very hard!!  Study everything.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2004<br>Class Name: INJURIESKINES<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Doc is great. But you must go to class and take the notes. He tests mainly from class notes, but there will be a few random questions from the book. Basically you should study everything! All in all I would recommend him, and he is very available for those needing help.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: ATHLINJ<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Doc is a rare breed today. If you really want to learn take this class because he makes you work, but at the same time won't stick it to you if you really put a decent effort</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2004<br>Class Name: INJURIES<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>test were way too hard....make sure to read the book.....he tests things that are not taught but are in the book....he is cool and tells good stories but is just an ok teacher</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2004<br>Class Name: ATHINJ<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He's very, very nice. His tests are very hard though. I guess it should be b/c the field is complicated.  You have to come to class and take notes *AND* read the book or there is NO, NO, NO way you're pass.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: PE<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He gets off on the fact that no one can really pass his exams.  There is no reason for topics to be so hard.  He tests on things that aren't even taught in class.  He leactures in a very unclear fashion.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2003<br>Class Name: EDU<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent, excellent, excellent.                                 Interesting in class and very helpful out side of it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2003<br>Class Name: ATHINJ<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Doc is the best...what a stud!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

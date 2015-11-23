@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Karen Glynn</h1><hr><div><h2>Overall Quality: 2.53<br><br>Helpfulness: 2.75<br>Clarity: 2.3<br>Easiness: 2.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/30/2012<br>Class Name: MRKEVEN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>excellent class, enjoyed her lectures and would recommend her as a teacher</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2009<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>dont take her. unclear. doesnt shut up. very hard exams. learned nothing</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2008<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Had a good class, I have the book we used ,Consumer Behavior [Hardcover] by Hoyer, Wayne D.; MacInnis, Deborah J..., plz contact me if anyone wants to buy it ... 630-344-2867</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2008<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took a night class from her and ended up with a -A.. the comments i see, i am pretty much sure are from my class fellows. Well it was i nite class and it gets a bit tough. She is a good prof. She missed one class, so we kind had to rush but it was okie.. i heard from her moring class student and they had a better mid-term, so i taking moring clas</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2008<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The midterm was very long and difficult..it was straight from the BOOK. Since the whole class did so poorly on the midterm, the final was open-book (but really hard). Her class is boring and she is not helpful at all. I would not recommend this class!</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2008<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Just awful.Entire class is spent veering off topic & talking about the economy & politics.Midterm ridiculously long/hard, was 80%book/20%class notes & was clearly generated from the book's CD;midterm class average was a 54 & she didn't seem to think it was odd at all.She's a nice woman, just horrible prof. JUST AVOID BY ALL MEANS!</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2008<br>Class Name: MKT1166<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class was a waste of time and money! Midterm was hard, the class average was C- cause she does not teach anything. Avoid at all costs!</div></div></div><div id="container" class="review"><div id="left">Date: 07/09/2008<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fairly easy midterm. Easy project. The discussion multiple choice questions in the take home final have either-or answers and they are worth half of the entire exam! Some of the questions asked were meaningless and did not serve anyone justice even if you were paying close attention during class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2008<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Karen Glynn is a clear example of how tenure can ruin a university.  I learned absolutely nothing from this class.  Each day is an incoherent mash-up of the pointless thoughts in her head.    Do Not take this professor!</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2008<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>VERY EASY AND HELPFUL. MIDTERM AND FINAL STRAIGHT FROM THE SLIDES. EASY PROJECT. OVERALL EASY GRADER.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2007<br>Class Name: MKT310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Be very careful with her, she doesn't tell you her grading syst and leaves 50pt for her to evaluate you-if she doesn't like you she'll take these 50pts. Lectures are all class and about 5 lecture quest(out85)are on exams.READ THE BOOK for midterm, final take home. She definitely has attitude, can be very mean, make sure she likes you (50pts!!).</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: MKT301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher, she’s trying to do her best. I liked her. She is very reasonable, in class mid term, presentation + paper, and take-home final. Recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I guess she did change her teaching style.  All we had was a midterm, small presentation, and a take home final.  She is really down to earth and tries to explain the material in an interesting way.  I recomend her, nice lady</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2006<br>Class Name: MKT310<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome! Looks like she changed her way of teaching based on the previous reviews on here.  Gives great lectures, very clear and really funny!  Made class interesting and entertaining.  Midterm, one small project, and final (take home).  Great professor, highly recommended.  I learned a lot.  Take her!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Yeah, the project is rough. It seems like she is not clear on what she wants in the papers, because she isn't; she lets you do your own things, which is great. Best thing about Dr. Glynn is she's down to earth; just like a regular student.  She knows her stuff, and presents it all super well. I'm glad I was lucky enough to take this class with her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2005<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her class is filled with just busy work, the project is consisted of 7 three page papers and 3 journel entries every week for the quarter. It's a lot of work but isn't hard, just a lot. The midterm and final are easy, just multiple choice over notes and topics covered in class. Nothing too crazy. You can totally do well in this class. Just keep up</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2004<br>Class Name: MKT331<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she's a nice lady, but dosen't teach for**** and then complains that nobody is doing anything! she bases the final grade on how she likes your final project which she's unclear about in the first place!take the class but beware it's not as easy as it seems</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2004<br>Class Name: MKT331<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is one of the wort teacher that i have had, she teaches the course straight out of the book,your better off not going to class, and just reading the book.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2004<br>Class Name: ISP250<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Grades are totally unfair, if you ask about the grade she wont even know what she was grading.  Lost part of my project and then didnt even give me a fair grade.  didnt explain the homework and then gave horrible grades on it.  Dont take her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2004<br>Class Name: MKT331<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Horrible teacher, and a boring class</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

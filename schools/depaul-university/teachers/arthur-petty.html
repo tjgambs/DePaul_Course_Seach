@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Arthur Petty</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.7<br>Easiness: 4.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/01/2015<br>Class Name: MGT301<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DIdn't learn much, but the worst part of the class was how he'd randomly call on people. He also shows overly long videos - bad idea for night classes! By the way, he keeps you till the very end so be ready for a full three hour class. The book is a ripoff, but you'll probably need it for some of the online posts.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2015<br>Class Name: MGT598<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Art is one of those rare and wonderful professors who understands that you have a life outside of class. He wants you to learn more than anything so assignments (and the final) are by no means rigorous. We had very engaging discussions and I wouldn't hesitate to ever reach out to him to talk. Great guy, relevant topics discussed, a great class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2015<br>Class Name: MGT150006<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Art has been one of my best instructors, and I've had dozens. Ranging from contractors, to military instructors. Art is THE best I've had out of all of them. All I can say is that his teaching style is spot on and has made my management class a real treat to be a part of.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2015<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice professor. MGT 301 has a bad reputation among DePaul students but this class was probably my favorite this quarter. He's big on participation, and most of the assignments are D2L posts. You have all week to write these D2L posts so put some effort into them - they're easy points. The final was also done on D2L. Overall, a fun class. </div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2013<br>Class Name: MGT598<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The course isn't a lot of work and isn't incredibly taxing, but you'll learn a ton and you will benefit from having a professor with loads of real-world experience and advice. He's great at facilitating in-class (and online) discussions and cares about student success. Highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2013<br>Class Name: MGT598<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Art is not only a gifted instructor in his own right, but also brought in the talents and experiences of a handful of his professional connections, as well.  He was very professional and open in his communication, and it was quite easy to get any questions answered.  I would highly recommend his class to any MBA student.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2013<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor. He is smart, and very well spoken. Take his courses.</div></div></div><div id="container" class="review"><div id="left">Date: 01/20/2013<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy easy class but marginally interesting aside from current business topics discussions. Just show up, participate, and do the assigned homework and you are sure to get an A. Group activities are highly emphasized.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2012<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Group work every class, applicable materials. Light homework, more importantly homework that I like to do. I'm in my junior year, got good classes and bad classes, yet THIS IS BEST CLASS EVER :O</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2012<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is a great professor who makes the class extremely interesting and interactive. He teaches in a way that is easy to understand and does easy case studies to emphasize points. If you try you will easily get a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2010<br>Class Name: MGT598<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This isn't a hard class at all, and if you listen, what he teaches is *very* applicable to the working world. He's a very good guy, really wants you to get a lot out of the class. It is also a highly interactive class, which makes the three hours fly by. Make sure to challenge him if you don't agree with something or things don't make sense.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2008<br>Class Name: MGT598<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Art is a great professor.  He cares a lot about the subject matter and tries to keep things interesting.  Show up for class and pay attention and you will do well in his class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

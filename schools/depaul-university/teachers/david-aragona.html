@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>David Aragona</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.3<br>Clarity: 3.6<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/13/2014<br>Class Name: COM202<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>David is literally my favorite. Hottest teacher I've had at Canisius. Waiting for him to leave his wife for me.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2009<br>Class Name: COM101<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I thought this dude was super attractive.  He kind of has an arrogant attitude, but at the same time wants you to think he is cool so he tries to be funny&#63; I don't know the class is easy you just take notes from the power points but it sucks that he doesn't put them on blackboard. Midterm was kind of tricky but he curved it. Enjoyable five weeks.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2009<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Funny teacher, made the class go by fast.  However, for a 100 level class, the test was wayyyy too hard!</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2009<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's ok. Not that difficult. Tells lots of personal stories which makes the class more fun. The exam was a little challenging. The questions were worded in a weird way. Overall, I would take his class again.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2009<br>Class Name: CMN101<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I thought he was a good prof. He was easy to understand, gave clear examples, and the final came straight out of the notes. The one paper we had for him was an easy topic.</div></div></div><div id="container" class="review"><div id="left">Date: 04/30/2009<br>Class Name: COMM101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>One of my best experiences with a professor! He may appear to be tough because your grade basically consists of an essay and a midterm, however, he makes class interesting, and knows how to mix things up with his jokes and bizarre activities. While the test was challenging, he provided the class with everything we needed to know for it. I definitel</div></div></div><div id="container" class="review"><div id="left">Date: 04/30/2009<br>Class Name: CMN101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Funny at first, but lectures get rally boring. He thinks he's so funny....but he's not.  The notes and final do not correspond at all. The final was ridiculous for the ease of the subject matter.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2009<br>Class Name: CMN100<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Funny guy, but your entire grade is based off of a paper and a test, which I was not a big fan of. Not &quot;mandatory&quot; attendance, but everything on the test came directly out of class notes. Test was confusing and had to be curved for our class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2009<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he's a great teacher and there's only 1 paper and 1 test (60 questions)! attendance isn't mandatory but he doesn't put his lecture notes online so you kind of have to show up. he loves what he teachers though so it makes things interesting.. HIGHLY RECOMMENDED!</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2009<br>Class Name: CMN101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was alright, nothing like Wow. He was slightly off mentally it seemed, and most of his lectures always relate to his college friends, college years,etc. Not that great of a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2008<br>Class Name: CMNS291<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I might take a double look at him while walking down the street. But listening to him talk makes him hotter. He's hilarious.  Which makes his lectures that better.  Makes fun of himself a lot.  Class got boring sometimes but he made it bearable.  I would definitely take him again. He makes you want to learn.  He explains things very well.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

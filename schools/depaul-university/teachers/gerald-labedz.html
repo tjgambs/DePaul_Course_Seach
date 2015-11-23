@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Gerald Labedz</h1><hr><div><h2>Overall Quality: 2.7<br><br>Helpfulness: 2.7<br>Clarity: 2.6<br>Easiness: 3.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/19/2015<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>He was a nice guy and grader but not the best teacher. The class was easy but I would recommend going to all of the classes.  </div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2015<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>For a mandatory class he makes everything annoyingly complex. I learned all of this course's material in hs and was still throughly confused. Lectures are boring and filled with random tangents about nothing relevant. Lots of lab work and group projects. Takes attendance every class. </div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2014<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Professor Labedz was endlessly confusing, never graded anything so I never knew how I was doing, and was just not a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2014<br>Class Name: 101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: F</div><div id="right"><div>First things first, this is one of the nicest professors Ive had at DePaul. But, I cant give him my recommendation. Assignments are vague and the final is borderline insulting due to the lack of preparation he gives his students. If your taking a required class, I'd recommend taking another teacher to be safe. Just being honest.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2014<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Labedz explains everything and will help you when you ask for help. Assignments are not time consuming. If you do all your work you'll be fine. He makes sure to help you understand that anyone can be good at Math. He connects Math with real life! He cares about his students truly learning.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2014<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Labedz is very knowledgeable. He explains everything and will definitely help you when you ask for help. Assignments are not time consuming. If you do all your work, you'll probably get an A. He makes sure to help you understand that anyone can be good at Math. He connects Math with real life! He cares about his students truly learning.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2014<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>To pad my GPA, I chose to enroll instead of testing out of it. Big mistake. He rambles on about unrelated topics and makes the most basic mathematical concepts (fractions, pie graphs) more confusing than they are - considering these are concepts used in everyday life.</div></div></div><div id="container" class="review"><div id="left">Date: 01/15/2014<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Really simple class that you will fail if you don't put in the effort. He won't help you, go to tutors & figure it out yourself: the course is too easy to fail. TIPS: write down those pointless facts he mentions in class- he uses them as extra credit. -write down EVERYTHING, on your notecard for final & midterm. He doesnt check them.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2013<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The real only reason people would not like this prof. is because they didn't try in the class. I took this class and found the work wasn't very asking and when I did have questions he was able to show me what I needed to do and correct me. Honestly one of the kindest prof.s I've had.</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2013<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is hands-down the worst professor I have ever had. I had a good grade going into the final then received a C- in the class. He wouldn't even show me what I did wrong on my final because he claims "he lost it." Do not take this teacher, he will ruin your GPA</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2013<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very friendly and helpful, not intimidating at all - seems like a mix between Santa and Mario. Sort of fun teacher, makes the class fun by taking the class on digressing topics at the start of class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2012<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Horrible instructor. He's a good guy, but the final was super hard and weighted heavily to the point that even if you did well on everything else, you will fail if you do not pass the final. His teaching style is not clear and tutoring is not helpful. Don't take him.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2012<br>Class Name: LSP120<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Labedz is super kind, but his teaching style was not beneficial at all. Take this class if you want to teach yourself everything. The final was super hard and killed my grade.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hardly ever received emails back before the assignment was due (even if I emailed him a week before). Couldn't understand his teaching style-very boring. One midterm, one group project, one HARD final that he didn't prepare us for. I recommend taking another teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2012<br>Class Name: LSP207<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Couldn't get any help when there were 20+ students clamoring for help with assignments in the tech lab and only Labedz and one other lab assistant to help. Labedz relied on powerpoint demonstrations to teach his course and placed little to no emphasis on interaction with his students. I strongly recommend finding another professor for this course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Funny and cares about his students. Also incredibly easy. Despite what the others say I am very glad I took this class with Prof. Labedz. Kind of nerdy, but a very good guy. Also for LSP 120 requires no textbook which is obviously a huge plus.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2011<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really smart guy, however he was not the greatest instructor. Learned more from the student lab assistant. 1 midterm, 1 project with a group, and 1 HARD final. In-class assignments due every day and HW due every week.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2011<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Worst professor I've had so far at Depaul. He could not teach and talk to save his life; he always taught wrong information. And when he did teach correct info you couldn't understand what he was trying to say. STAY AWAY</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

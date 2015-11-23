@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rafael A. Tenorio</h1><hr><div><h2>Overall Quality: 3.82<br><br>Helpfulness: 3.71<br>Clarity: 3.93<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/11/2015<br>Class Name: ECO525<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Tenorio was difficult to engage outside of class. He relied on group presentations to teach most topics. Participation was weighted more heavily in spite of its subjective nature. Any math found within the course was rudimentary.  For a subject with rich subject matter, this class was an acute let down.  It should be avoided if possible.</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2011<br>Class Name: ECON525<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very intelligent professor with good insight on a subject that is abstract and difficult to understand at times. Will take again for future ECON courses.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2011<br>Class Name: ECON525<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Rafael has no tests, but there are weekly journals and a final paper that you do as a team.  Easy class and apply the theory without memorizing it.  Great teacher but a hard grader.</div></div></div><div id="container" class="review"><div id="left">Date: 12/18/2009<br>Class Name: ECO525<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This was hands down the best class I've had in the MBA program. Tenorio is a great asset to DePaul.  He's not an easy grade by any means, but you learn so much from his teaching style that it doesn't matter.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2009<br>Class Name: ECO555<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Technically I feel that I don't learn anything from him. But somehow I feel by the time you're working on his exam then you learn something. It's tough one though..he graded tough on the paper !!</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2009<br>Class Name: ECO555<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Tenorio is a great economics professor. His take-home tests are pretty straightforward if you come to class, pay attention and can apply the concepts discussed in class. Seems like a no-brainer, but if you want to coast through class and regurgitate (w/o applying concepts) what was discussed w/o knowing the how and why, this isn't the class for you</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2009<br>Class Name: ECO555<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Top-notch Professor of Economics and extremely knowledgeable in the field.  Must-attend classes because he covers alot of information necessary for the take-home exams.  Open for conversations at anytime and truly cares about the students.  He's a must-have for this course.  Just be prepared to focus during class.  It's definitely not a breeze.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2009<br>Class Name: ECON555<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Nice Guy but his tests are very difficult along with the material.  I don't reccommend him unless you're ready to work.</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2008<br>Class Name: ECO555<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a decent teacher. His lectures make sense in class but when you get the take home tests, they are different than the examples. Also, there are no real question samples to work on, so you have no idea if you are doing it right. The tests are hard.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2008<br>Class Name: ECO555<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great prof! Very very talented teacher, and pretty entertaining as well. But, don't let his jovial demeanor fool you into thinking he's an easy grader, he's tough. But you will enjoy class and learn alot.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2008<br>Class Name: ECON555<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Take home tests and 2 writing assignments. Not too hard but not super easy either. I found that the 2nd past of the class was much more interesting. Tests straight from the notes with some analysis. No real need for the book at all.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2007<br>Class Name: ECO555<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very good teacher with great lectures. Class is well organized and material is presented in a thorough and understandable manner. Exams (take home) are moderately difficult but still manageable; force you to apply material from class to stated scenarios.  Two group projects are pretty straightforward. Definitely recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2007<br>Class Name: ECO555<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The lectures in this class are excellent and really help you understand the material.  Attendence is a must in order to fill in the lecture slides.  Exams were take home and very difficult with a lot of wording that is difficult to properly interpret.  He is a tough grader as well.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2005<br>Class Name: ECO555<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>hard tests, you HAVE to go to class to get the slides filled in.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

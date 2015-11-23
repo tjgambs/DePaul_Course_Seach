@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Holly Grace Moore</h1><hr><div><h2>Overall Quality: 4.15<br><br>Helpfulness: 4.19<br>Clarity: 4.1<br>Easiness: 3.06</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/09/2009<br>Class Name: PL234<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not good - no sense of the overarching topic - gets lost in the particulars of the philosophers - pretends to &quot;accidentally&quot; write Greek on the board, which none of us know - discussions go nowhere because people are too concerned about their participation grade to wait until they have something meaningful to say. bummer</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Although I never want to take philosophy again, Professor Moore made it easy to understand. She always asked if we understood main concepts during class. The exegetical paper was kind of tricky and hard to write but she was always available to help. I absolutely hate philosophy and am terrible at it but i passed with a B.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm not really sure what everyone is talking about. Holly Moore is HANDS DOWN the BEST professor I've ever had. She makes philosophy interesting and easy to understand. I would recommend her to everybody.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>For a philosophy class, she was an ok teacher. Her grading system is ridiculous. -.25 here -.5 here. Super hard grader. It's difficult to know what she wants. Allows rewrites for the paper. Class goes by very slow the second half of the quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2009<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Decent Prof. I didn't really like her style, I would recommend against taking philosophy all together. She did an okay job, she wants finite answers to a subject that is not finite, really expects you to know the material, you will grow to love or hate her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2009<br>Class Name: PHIL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is pretty ambiguous in her teaching style, not really clear which only complicates philosophy. Pretty straight forward but hard grader. NOT AN EASY A!</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2009<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Alright.  I'm taking PHL this class to kill a req.  Easy A right&#63;  I thought so, too.  Little did I know I signed up for the nickel and dime express.  My midterm, sitting on completely correct answers, has a -1 to a -1.5 on each question (half right&#63;&#63;&#63;&#63;).  Is it for my handwriting&#63;  I don't know, she didn't/ wont explain.  So I'll get a B, awesome.</div></div></div><div id="container" class="review"><div id="left">Date: 01/15/2009<br>Class Name: PHL238<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This teacher made philosophy realtively understandable which my previous teacher completely failed at.  So if you think you have no clue about philosophy take this teacher.  The reading was intense but in class discussions were very helpful.  There was only 2 papers with hw every class like writing discussion q's and summary of the readings.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2008<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Grading (20% each): Exegetica l Paper, Reading Questions (4), Participation, Midterm, and Final Paper. This teacher is amazing at engaging the students in philisophical thinking. Easy grading and funny attitude. She allows re-writes for the Exegesis also. She is respectful of all students and value their opinion. AWESOME TEACHER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2008<br>Class Name: MGT242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's very helpful & participation is a must in her class. Even though the material is hard to comprehend, she does her best to explain it with clarity so that everyone can understand. she's a picky/hard grader esp (if you like to bs your work/have poor grammar). Nevertheless, she is very friendly, helpful, and funny too.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2008<br>Class Name: PHIL248<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is a good teacher overall. A lot of readings but her lectures help a lot in understanding the topic. Just show up to class and take notes. 2 tests (not hard)but HUGE final project (have to present for an hour and 6 pg paper). Just keep up with the work and participate in class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2008<br>Class Name: MGT248<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class was really hard, but Professor Moore was great! We had 2 tests, and a final project.  Philosophy is way confusing and hard to comprehend, but she is more then willing to help you out! Contribution is a must, and your grade will suffer a little if you don't talk in class.  All in all she is a great teacher! I would recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2008<br>Class Name: PHIL101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A good amount of reading, but she makes it very clear</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2007<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Shes such a goof and i loved it. The class was really interesting and she explained the texts sooooo well. Let us opt out of our final and write a paper instead. Other than that there were text Qs, an exegetical paper, and a midterm. Not that hard. Highly recommend her. Shes really funny.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2007<br>Class Name: ISP101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Shes a nut bag</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2007<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Moore was an ok teacher. She used what was in class and in the books on the midterm and final, but did not do a review day for each. She allowed drafts of paper, and re-writes. It was mentioned by a classmate that she taught the 100 level class like it was a 200 or 300.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2007<br>Class Name: PSC100<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's great! and soooo funny! class goes by really fast! just make sure you try and contibute to class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2007<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She might be the most interesting Philosophy prof. at DePaul.  She's very clear about that she wants and is always willing to help you.  The work is very straight forward. I thought Philosophy was going to be boring but I actually kept two of the books.  Consiering that you have to take two PHL courses, take this professor!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2006<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Overall a GREAT teacher, if you do what she assigns(especially the readings) you'll be ok because she explains material very well and hw is easy. Papers are a little bit tougher but she allows rough drafts</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2006<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a very good professor considering the subject matter.  I bleieve that philosophy is a very difficult subject in itself and she does a very good job teaching it.  You can do very well in the class as long as 1. you attend class regularly 2. participate 3.  do the reading questions 4.  Hand in rough drafts (she gives very helpful feedback) If </div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2006<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice but the subject is difficult. She is willing to help in any way she can. The discussiona are good but if you do not know what's going on you cannot participate. For being my first philosophy class, it wan't that bad.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2006<br>Class Name: PHL101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ms. Moore is quite helpful and always willing to clarify things. She will meet with students outside of class at their convinience. She is quite fair on tests as well as homework. The discussions in class REALLY HELP, she MAKES you understand. She is GREAT!</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2006<br>Class Name: PLATOSREPUBLI<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Grading is simple- talk in class and get 20%, create one presentation for 20%, write two journals a week for 20%, one exegisis for 20%, and a final paper for 20%. Very nice and very helpful. An easy A if you plan on reading the book and discussing it with the class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2006<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome prof. She's very clear in explaining the material so if you read and participate in class you're guaranteed a good grade. Take good notes b/c her notes are alot of what's on the test. Really nice and understanding about everything. Best Professor I've had at Depaul, absolutely great, especially for philosophy</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2006<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I dont like her because she did me wrong and punished me for not getting to class on time even though i had to run across campus in 10 minutes... but i guess she is okay... just okay...</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: PHL<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I love this teacher.. my favorite class. If you have questions just ask and tun in your reading qestions and you'll do great!! Take Her!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: PHIL101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Participate, it's huge in her class! She is very helpful and if you go to her outside of class, she'll give you credit for wanting to do better...</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2005<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Moore,  Is vindictive and petty in class.  Too busy going over her &quot;participation chart&quot; to ever get into a useful discussion of any pertinent formative philosophy for any students interested in study of the field.  She hosed me with a B+, after I stopped coming to class the last 5 weeks.  She's just bad, what else could I do&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I'd hate to say anything bad about such a nice, and well informed teacher. However, being a rookie made her volnerable to stripping desperately needed points at crucial times for her own sake. It's cool to go by the book, but uncool to make a not-horrible student's grade pay for it. The class is awesome regardless.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2005<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great class. She's super nice and explains stuff really well. Not alot of work; midterm is not bad. Willing to help. Take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2005<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great class. Lenient professor. Attendance not required. Very few assignments; only reading questions. Midterm was easy and short. Take this class; the professor explains everything very good.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

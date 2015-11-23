@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Ulrich Kamp</h1><hr><div><h2>Overall Quality: 2.42<br><br>Helpfulness: 2.29<br>Clarity: 2.54<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/30/2005<br>Class Name: REMOTESENSING<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>GREAT CLASS TO SLEEP IN BECAUSE YOU'RE GOING TO FAIL ANYWAY!  REALLY BIG JERK...Told all the students to never take him again. INCREDIBLY BORING really hard grader  but impossible to follow because it was boring</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2005<br>Class Name: ENV200<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2005<br>Class Name: GEOPHY225<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>All notes & review online; Very Good @ Teaching; EXTREMELY POLITCAL; hates U.S.; Eurocentric; took away final & doubled midterm but failed more than half class on midterm; Cocky; funny; wants students to participate; gave us all questions on midterm, but if you don't study you won't do well, all questions short answer, must be able to explain well.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: GEO243<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He makes the course about as easy as possible for non-science students.  But he would encourage students to ask questions, and then belittle that student for their naivete.  What gives&#63;  This gave an awkward tension to many of his classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2004<br>Class Name: GEO101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hyper-organized, helpful in and out of class, a bit teutonic (formal) in his manner, but he makes his students feel like they matter. Tough grader, but that's ok. I came to college to learn, and i'm learning a lot w/ him. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2004<br>Class Name: ENV200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he is an extremely helpful teahcer, everything you need he posts on blackboard, and he makes himself more than readily available.  he is very intresting, nice, and great teacher. although i think he takes it too hard when he gets poor evaluations, for anyone to do bad in his class, they didn't try.</div></div></div><div id="container" class="review"><div id="left">Date: 08/02/2004<br>Class Name: GEO101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Smart, challenging teacher. Superbly prepared and generous w/ course prep materials. Tough, though. He's giving me my tuition money's worth. Take him.</div></div></div><div id="container" class="review"><div id="left">Date: 07/07/2004<br>Class Name: ENV<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Smart guy, pay attention you'll do fine. Gives notes to you online on blackboard in powerpoint form</div></div></div><div id="container" class="review"><div id="left">Date: 06/29/2004<br>Class Name: ENV200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The guy rocks !!!! very helpful and he is serious about teaching.  I am taking him again next year !!</div></div></div><div id="container" class="review"><div id="left">Date: 06/28/2004<br>Class Name: ENV200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>great prof with expectations. Made me excited about environmental science and geography. For serious students only.</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2004<br>Class Name: ENV200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thought Professor Kamp was great, very laid back and with an easy teaching style. Seemed like a really cool guy, interesting class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2004<br>Class Name: GEOGRAPHY<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: GEO<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He may ****off alot of students when comparing america to germany, but he's good at what counts- teaching</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ENV201<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2003<br>Class Name: GEO210<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I agree with the last comment. It's nice to know that there are some non-ignorant Americans who understand that not everyone has the same &quot;america's the greatest&quot; view.  The guy grew up in another culture, that's not his fault.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2003<br>Class Name: GEO225<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>People need to understand that this is a matter of cultural difference. It's not that he hates america or is ignorant. When you come from another country it is natural that you observe differences between cultures. Anyone who has been abroad knows this.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2003<br>Class Name: GEO210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's horrible. He's such a joke it's not funny.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: ENV200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: GEO210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: ENV200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Most subjective grader ever.  I would take this class again only because there is no actual work, what he does grade is based on his skewed standards.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: GEO210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2003<br>Class Name: GEO200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I hate this class...Never lectures till like 15 mins till its over...</div></div></div><div id="container" class="review"><div id="left">Date: 09/09/2003<br>Class Name: GEO225<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>i worked like hell to get a B+ in this class, after getting points off assignments for issues such as irrelevant formatting he wasn't happy with.  constantly providing contradictory material about course requirements, unhappy about teaching the course,etc</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2003<br>Class Name: GEO225<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This is the worst professor in college history I am sure.  He's rude, ignorant, and I can't believe that I wasted my money to take his class.  There isn't one student who actually completed this class with better than a C-  which should tell you something</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Janine Spears</h1><hr><div><h2>Overall Quality: 3.1<br><br>Helpfulness: 3.3<br>Clarity: 3.0<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: CNS340<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A-</div><div id="right"><div>You have discussions, labs, and lecture 1x week. Discussions are OK, just show you understand the article and give a RESPONSE NOT A SUMMARY. The labs are fun and easy! I only had a hard time with 1 lab. Lectures are a bit dry but it's because students don't participate. She gives good career advice and is good in 1 to 1 Q and A. Attendance matters!</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2015<br>Class Name: CNS340<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I enjoyed this class a lot. Being a network security major, I learned a variety of new thingstool involving security. If you come into class and put in moderate effort into this class and do well on the labs. You should get an A. The final is a take home 35 question test. Overall this was an easy going class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2015<br>Class Name: CNS477<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Good Professor , Clear material and Fair chance at scoring a "A" grade. Recommend the professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: CNS340<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Stay away from this class, Talks way too much and not so helpful when help is needed.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2014<br>Class Name: CNS340<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This instructor is  quirky. Her laughs are just annoying.</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2014<br>Class Name: CNS340<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Spears is passionate about the topic of security, but unfortunately proves her lack of expertise everyday. While her Alma matter may give her a leg-up on the soft-skill side of things such as information security litigation, she brought up many outdated technologies, methods, and terms that will not properly prep you. But,A great person overall</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2014<br>Class Name: CNS228<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She means well, but she tends to confuse herself very often, which leads to overall class confusion as well.  Its an easy class overall, but can be a little annoying with the way she teaches.  You won't completely regret taking the class with her, but she is also not the most interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: CNS340<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Course guide lines and lab works wasn't explain prior to the lab. Also, Mid Term and Final has Study Guide only has vocab not given answer for it. Software wasn't install in the lab prior to lab assignments. Avoid taking her. :(</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: CNS340<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Not sure as to why the post below bashed this professor.  If you pay attention in the class, and do the simple assignments she assigns, you'll have no problem getting a good grade.  I would say he powerpoints are boring, not confusing.  If you want a pretty chill class, and chill professor, where you will learn something, take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2013<br>Class Name: CNS340<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Spears is a horrible professor. Simply because her lectures are VERY confusing and so is she. Has little respect for students and cant really answer questions outside her 'powerpoint' which by the way will confuse you further with what she says. Not sure why she is teaching this class. Midterm was not quite straightforward it was confusing.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2012<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>All her courses are packed with good and useful information. Her teaching style is extremely effective; just take notes, ask questions, do not procrastinate and you’ll do just fine on her classes. I also encourage you to ask for advice even if she is not your academic advisor; she is very committed to helping students. Definitely an A+ professor !!</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2012<br>Class Name: IS421<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I had the great pleasure of taking 3 of Janine’s classes (IS421, IS433, CNS477) as part of my Masters degree. She is a very knowledgeable professor and taught her classes in a very dynamic manner, empowering students with useful methodologies and analytical skills by providing great real life time case studies.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2012<br>Class Name: IS435<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's either she doesn't really know her stuff or it's the teaching style that make  you to figure everything out yourself. If this class wasn't a requirement, I rather read a book and save $. Everything she taught came out from the book anyway. For the amount I paid, does not seem to worth the little knowledge that I have gained.</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2011<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was pretty straight to the point, pretty easy. many materials to read but all worth the experience for future classes. she doesnt like cheaters so dont think you can copy work in her class. overall it was a pleasure to be in her class</div></div></div><div id="container" class="review"><div id="left">Date: 01/18/2011<br>Class Name: IS433<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Her lectures were confusing.  She presented the material as if she didn't know what she was talking about. She could not answer questions about her own material.  The amount paid for the course did not reflect the amount of knowledge I received.</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2010<br>Class Name: CNS228<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>gives far too much busy work and is very &quot;by the books&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2010<br>Class Name: ISIS<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div></div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2010<br>Class Name: IS433<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice, a little quirky in a fun way. great class, attendance only required for two guest lecturers. take home final exam no midterm.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

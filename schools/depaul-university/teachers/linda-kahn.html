@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Linda Kahn</h1><hr><div><h2>Overall Quality: 4.58<br><br>Helpfulness: 4.63<br>Clarity: 4.54<br>Easiness: 4.71</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/13/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Take this class! Professor Kahn is among the best that I've had at DePaul. Her teaching style may make you feel uncomfortable at times, but she challenges you to step out of your comfort zone in fun and creative ways! Most of her teaching is based on subjective learning which allows you to interact with others in the class. Truly a great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 07/29/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>One of the best classes I took at DePaul.  Professor Kahn is extremely helpful and passionate about what she teaches.  She guides her students to reach their full potential and push themselves to think in a new manner.  It may not be like a traditional class but you will still be asked to push yourself, and I promise it will be engaging.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn was an amazing teacher! She was open to everyone's ideas and opinions. Class was interesting and fun to go to. The class was pretty much about yourself and your own creativity, which made it really cater to each individual person. The only complaint I had was that she required us to pay to go to a dance performance that she was in...</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2013<br>Class Name: LSP111<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She obviously cared a lot about the class and her students but there was just too much work for something no one was ever going to use in their life. We had to write a 5 page paper about a dance performance and then a 10 page paper about everything we had learned, all as first quarter freshmen. Not worth the time.</div></div></div><div id="container" class="review"><div id="left">Date: 08/02/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is a very nice and helpful teacher that tries to make class as interesting as possible. She never overburdens you with work and she really lets you show your creative side. Overall I had a great  time in her class and it wasnt very hard or time consuming. A high recommendation.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Creativity & Adversity with her and I found the class to be very insightful. I learned a lot of things that I was able to directly apply to my daily life. I really appreciated her style and openness to everyone's ideas, and she made the atmosphere in the room feel like there was never a wrong answer. I would definitely recommend this class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I don't know what people are talking about, she is an AWESOME professor. It is definitely a different style of class, but what she teaches you is real world experience that is meaningful. As long as you put in some effort I don't see how you could get anything besides an A. She is a great professor, super caring, and wants you to succeed. TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn has been one of the most influential professors I have ever had. She truly cares about the success of her students, not just by their grades, but of their UNDERSTANDING of true, related-to-life content. Instead of lectures, she enjoys opinions from students as the base of her class. TAKE HER CLASSES!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took LSP112 with Kahn last year and was so inspired and loved her teaching style. But her Sophmore Seminar has been a disappointment. It is very different material of course, but it feels as if her teaching style has changed as well. I HIGHLY recommend Creativity and Adversity Focal Point, not so much her Soph. Seminar though.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Any good review here is probably from a Psychology major. I failed my first assignment because I didn't have enough color on an essay. #Synergy</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2013<br>Class Name: LSP112<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The comment I wrote below may be misconstrued! While her style may SEEM goofy or out there, I quickly learned that Professor Kahn's style is intentional, effective and intelligent. Her experiential learning is reminiscent of childhood, which leads to a high level of creative insight and self-understanding. Her approach to academia is enlightening.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If nothing else, Professor Kahn's classes are fun. Sometime the activities can seem goofy and her teaching style is a little out there, but she's a refreshing respite from the normal university experience. She is passionate and truly interested in the well-being of her students. I honestly can't describe her energy- it's wonderfully unique!</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AMAZING TEACHER so helpful and nice this is a class you actually want to show up too! She makes the class so much fun I recommend to any student looking for a non boring LSP this is the way to go!! Plus the work is pretty easy if you pay attention in class which is not hard at all</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is unlike any teacher I've ever had. She encourages her students and promotes an open, creative, and stimulating environment. I LOVE going to her class- her enthusiasm is contagious. I'll never forget what I've learned in her courses. Take her if you want a unique and fun learning experience!</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is an artist and therefore has a unique perspective on teaching - more collaborative and flexible. She makes you feel so comfortable and engaged in the class discussions. Good sense of humor and so much positive energy!</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is easily one of the best professors I've had at DePaul. Please do not miss an opportunity to have her. Her and her classes are unique, enlightening, and eye opening. I learned more about myself in her class than any other I've taken. She genuinely cares about her students and their progress. She is simply and utterly amazing.</div></div></div><div id="container" class="review"><div id="left">Date: 12/20/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Creativity & Adversity and it ended up being one of the best decisions I could have made. The class is dynamic, you are always actively learning (and sometimes you didn't even know you were!) I learned so much about myself and use the concepts in everyday life. Professor Kahn is the best. It was an eye-opening class - TAKE IT!</div></div></div><div id="container" class="review"><div id="left">Date: 12/19/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Creativity and Adversity was by far one of the best and most unique classes at DePaul. I am so glad I decided to take it.  Professor Kahn is an amazing educator and person. She is now offering a Sophomore Seminar.  I would recommend taking anything she teaches!</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was always very helpful and her class was extremely engaging. Profesor Kahn made sure to include everyone and carry an intellectually stimulating class. Every class built on the last and helped students to really understand the material. She was an amazing profesor and I would definitely recommend this class to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Lin Khan is one of those professors who change your life. I took her Creativity and adversity class and was truly inspired. Lin takes a different approach to learning, she focuses on how to serve students, instead of how for students to serve her... I have taken the knowledge she gave me and used it elsewhere in life!! finally.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2012<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The most amazing and most influential professors I've ever had the pleasure of having! Creativity & Adversity is definitely a class everyone should take. It changed my perspectives and opened my mind.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor. She is more concerned with students actually APPLYING and INTEGRATING what they learn rather than earning points. Prof. Kahn keeps students on their toes in the best way possible, and challenges and encourages us to truly learn and explore. Take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 09/28/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>c&a is an easy A but it's intellectually challenging and interesting at the same time. lots of improv activities/games in class. prof kahn is super fun and easygoing, and genuinely cares about each student's success.</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is an amazing teacher and just an amazing person in general! She's extremely kind and compassionate. I was initially SO nervous about speaking up in a seminar course, but she created such a comfortable environment where all students became eager to participate in discussions. I highly recommend her creativity & adversity seminar!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

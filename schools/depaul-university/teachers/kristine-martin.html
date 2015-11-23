@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kristine Martin</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.2<br>Clarity: 3.7<br>Easiness: 4.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Ms. Martin is one of the most bubbly professors I've had class with. Her attitude in people's writings is fully supportive and she is extremely lenient on topics that you write your essays about. That being said be prepared to write 3-4 page papers about every other week, but that isn't so bad for most.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2015<br>Class Name: WRD103<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Really nice lady but pretty boring professor. I took her in the late afternoon and it was hard to keep a lot of the students interested. If you do the homework, pay attention, and go to class, you'll do well. She even let us out early half of the time. </div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2014<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ms. Martin is the sweetest! She really cares about your work and takes time to give everyone feedback. She even meets with everyone at some point in the term to learn more about you one on one. The course load isn't too heavy and she has us do some interesting assignments like "taboo" writing. Definitely recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2014<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Ms. Martin is the sweetest lady. Her WRD103 class was wonderful, but she can sometimes be unclear. She talks very slowly and thinks aloud. Overall a very easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2008<br>Class Name: ENG102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good professor. is a little un clear. Makes papers very intersting. takes every assignment seriously. Does too many peer edits.!! like all class i think it is a lil boring!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2007<br>Class Name: ENG102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a very nice lady and a good teacher. She grades the papers pretty easy though, i must say. The quizzes are a bit annoying and somewhat difficult to get A's on, but if you read the stuff and get atleast B's on the quizzes you should be good for an A. she's a liltte boring at times but still pretty cool when it comes to grading.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2006<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is a nice person and a teacher who really helps her students. Strongly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2006<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>EASY! she's flakey, slow, and just boring. but take her as a teacher. ENG 104 especially: all the class was was a couple quizzes (drops the lowest grade/i never read!) and the research paper stuff... which she probably didn't even actually read.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2006<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's really really slow...takes long pauses in the middle of sentences and that can get very tiring. She often seems like she doesnt prepare at all for class; sometimes i felt like i had a better grasp on the readings than she did. Easy class, but I didnt gain anything new from the course.</div></div></div><div id="container" class="review"><div id="left">Date: 12/28/2005<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>one of the easiest classes ive taken. she is helpful  and gives you basic assignments. its kinda like learning hs freshmen english</div></div></div><div id="container" class="review"><div id="left">Date: 09/27/2005<br>Class Name: ENG102<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Shes a very nice teacher. Understanding and will help you out alot if you need it. Writes great comments on papers</div></div></div><div id="container" class="review"><div id="left">Date: 07/07/2005<br>Class Name: ENC102<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Just do the assignments, because you'll be teACHING YOURSELF. vERY BORING.</div></div></div><div id="container" class="review"><div id="left">Date: 09/30/2004<br>Class Name: ENG101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice teacher!! easy to get along with!! she is cool</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

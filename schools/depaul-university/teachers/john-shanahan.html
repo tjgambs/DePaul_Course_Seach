@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>John Shanahan</h1><hr><div><h2>Overall Quality: 4.82<br><br>Helpfulness: 4.8<br>Clarity: 4.84<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/29/2013<br>Class Name: ENG339<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>This is the best teacher I have had at DePaul. He is careful and honest and will help you or just BS with you if you both have the time. The class is challenging, but worth the struggle. I hope all students have a teacher like this or this teacher himself.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: ENG330<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Shanahan was a great teacher. He really made a subject that seemed very dull fairly interesting with his knowledge and enthusiasm. He knew a lot about other subjects as well and could always relate what we were talking about to something else, whether historical, literary, film or pop culture. Workload is farily light and the grading fair</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2010<br>Class Name: ENG220<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Read the material and find at least one thing to say about it. It is obvious that he does not want the entire class period to be a lecture. He appreciates participation and attendance. He gives you all the tools to succeed and is eager to answer questions in class. My only complaint is that he's difficult to reach by e-mail. Awesome professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: ENG471<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Shanahan is one of those rare professors that manages to be informative, helpful, effective at teaching the topic and easy-going all at once. I learned everything I needed to know in a required class in the MA program and always enjoyed myself-- never felt overwhelmed. He is quick to respond to emails and is good lecturer. Overall a great class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2009<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Shanahan is awesome. He has a lot of fun teaching his subject and enjoys hearing what his students think about it, as well. He encourages participation which is very important to his class and understanding the material. He's extremely laid back and talks to students like we're just hanging out, not in a class. Great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2009<br>Class Name: ENG330<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Shanahan is an amazing teacher.  He has a lot of energy and really makes the subject fun to learn. He is extremely helpful with paper assignments.  If you work hard, you will do well.  Great guy!  Take him!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2008<br>Class Name: ENG439<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Shanahan is a fantastic professor.  He encourages/expects class participation and is open to new ideas and interpretations of texts that he is an expert on.  I worked insanely hard in his class, but he rewards and recognizes hard work so it was it all worthwhile.  TAKE HIS CLASS!</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2008<br>Class Name: ENG339<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Shanahan is extremely well-read on Restoration literature, and is sincerely passionate about the topic.  His passion is contagious and I learned far more from this class than I anticipated.  Papers were easy, discussions were well-rounded, somewhat intimidating because he is so intelligent.  Great course, great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 04/03/2007<br>Class Name: ENG431<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great class.  I was nervous about the reading load before taking the class, but it works out. Make sure you read though...classes are small and most of the class time is devoted to class conversation.  I learned a ton and Prof. Shanahan is super helpful and accessible.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2007<br>Class Name: ENG330<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You need to read! A lot of the readings are confusing and not interesting. He calls randomly on students. Pop quizzes on readings and written final. Okay professor. Wouldn't take again. Brought my 4.0 gpa down with an A-!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: ENG330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>John is very entusiastic about what he teaches.  He brings life to literature I would otherwise hate.  His grading is fair and he is super understanding of various circumstances that come up in the life of a college student.  Don't try and take advantage of him, but he is seriously one of the most lenient professors I have ever had.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: ENGLIS380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I can't say enough nice things about Shanahan.   If you take this class you won't be sorry.  If you're a fairly decent writer then you're bound to get an A in this course because most of your grade is based on the essays.  Take him if you can!  Very easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2006<br>Class Name: ENG330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's sooo great. Take his class! Very knowledgable but also light-hearted and makes class kind of fun. Readings are all very interesting and he engages his students by asking them to speak up. Class Breakdown: Weekly Pop Quizzes, 3 5-6 page papers, written Final. Pretty easy class overall and he is a very encouraging guy. Love him!</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2006<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>John is an amazing teacher.  He keeps class interesting and cares about his students.  He is easy going and I highly recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2006<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>SUCH A GREAT PROFESSOR!! He is so passionate about what he is teaching that it makes a student be interested! He knows his stuff! Amazing professor!</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2005<br>Class Name: RESTORATION<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Brilliant, challenging and really sexy. Very helpful and available during office hours.  His obvious affection for what he teaches is infectious. I got an A, which I totally deserved, because I worked really extremely hard, because I wanted to impress him.  Because he's hot and brainy.</div></div></div><div id="container" class="review"><div id="left">Date: 09/07/2005<br>Class Name: ENG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great professor, very helpfull, wants you to do well in class, answers all the questions.  If you want to take a Shakespeare's class take John Shanahan.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2005<br>Class Name: ENGGRAD<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>awesome. He knows his stuff- you need to read tho to keep up. take his classes.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2005<br>Class Name: ENG320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was great... fantastic sense of humor and cares about his work. He has an attendance policy but I missed about 15-18 classes and still got a 'B+'. I would have gotten an 'A' if I didn't miss so much, but it was still cool that it didn't affect my grade too badly. Take him, you won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2005<br>Class Name: ENG330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor--really grows on you. Calls on people randomly, so you have to do the reading, or be a bit embarassed. He does expect a lot from his students, but he's an awesome teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 01/18/2005<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good Professor-Great guy.  He teaches with great concern for not only the material, but for his students.</div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2005<br>Class Name: ENG228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He understands Shakespeare very well and is a master guiding students to understand it as well. Very helpful, wants you to do well in class, class breakdown: &quot;pop&quot; quizzes (he warns you about them), 2 simple &quot;production critiques&quot; (5pg.), final paper (5-6p) and a final exam. Easy class, I got an A</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2005<br>Class Name: ISP211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is so entertaining in class, and very understanding.  Stays with pace of class and always attempts to have great discussion.  Sense of humor and open to get to know you! Definately take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2004<br>Class Name: HON350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>nice, intelligent guy who was very discussion-oriented in the class i had him for. he gave us a lot of reading but it was worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2004<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! Really makes you think and analyze things from a different perspective. He is a nice guy - very understanding.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2004<br>Class Name: HON101<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Enthusiastic about literature, nice guy in general. If you participate in discussion, you'll be fine, but class can sometimes get stale. Papers aren't hard with topics he provides.</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2004<br>Class Name: ENG339<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He expects a lot of work from his students, but he is reasonable when it comes time for course grades; even if his paper grading is tough. Lets students control discussion. A very good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2004<br>Class Name: ENG339<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great teacher.  has a clear knowledge of the subject and is enthusiatic about teaching it.  one of the best teachers I've had.  expects a lot, but definitely worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2003<br>Class Name: HON101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Shanahan pretty much lets the students take the class where they think it should go. If you don't do the reading though, you're screwed. If you don't go to class, you're screwed on the paper. Great times here. Whoever wrote the first rating is in my class</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2003<br>Class Name: HON101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There was a lot of reading involved, but the class over all was wonderful.  the whole class is just a round group discussion about we think happened in the reading.  the book we read were great, too.  the number of papers are definitely fair, too.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

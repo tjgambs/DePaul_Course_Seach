@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kimberly Moffitt</h1><hr><div><h2>Overall Quality: 3.95<br><br>Helpfulness: 3.94<br>Clarity: 3.97<br>Easiness: 3.55</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/16/2005<br>Class Name: CMN203<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class. Honestly the way she teaches, a 12 year old could get an easy A. She's very tolerant of people that ask the same questions 5 times. Quizzes are easy, tests are fine if you use her study guide. Most of the information you learn in this class is just common sense, anyway.</div></div></div><div id="container" class="review"><div id="left">Date: 08/10/2005<br>Class Name: CULTUREMEDIA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved Dr. Moffitt's class.  Yeah, you had to study for the tests, but they weren't hard if you were in class.She didn't pick favorites,but you coudl tell she didn't like when people complained about how &quot;unfair&quot; the tests were...I thought her whole class was fair, and I learned a lot from her.  I would take her again!</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2005<br>Class Name: CMN346<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is challenging.  Unfortunatly the people who are making the comments dont care to take time to meet the prof outside of class. She is awesome and open to hearing all your comments. Its intersting how if your in the majority you tend to see a person of color as having favorites.Would  you say that about your white prof who has all white student&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2005<br>Class Name: CMN346<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Bad teacher she picks her favorites, and doesn't really care about others! she live in another state and travels to chicago! HELLO she is NEVER around for help, why do we even have a teacher that live in another state teaching at DePaul&#63; Well if you really want to work hard and not get a good grade then take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2005<br>Class Name: CMN<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>great because she was never there</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved this teacher! At times she seemed very black and white but for the most part she raised great discussions. Not much work at all and it was interesting stuff to do. Tests were very hard but they didnt' hurt your grade too much. Lots of xtra credit! This class was awesome! TAKE IT!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2005<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take her for your soph. seminar. It was an easy class and the exams were very easy. She is specific, but she is very helpful and willing to address issues that you have. I liked her a lot, and we watched a lot of videos.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2005<br>Class Name: CMN346<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved this class! Tests are tough, but doable with A LOT of studying. Really interesting, and she knows her stuff.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2005<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher - knows her stuff, likes teaching it. gives good notes and examples.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2005<br>Class Name: CMN<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Moffitt is a wonderful teacher.  her classes are all easy. YOu just have to use her study guides.  You don't need to take notes if you have the book.  Her videos, discussions, etc are all interesting.  She is very approachable.  It's sad when people are intimidated because she's a brilliant woma</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2005<br>Class Name: CMN346<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I didn't feel as though she knew the information herself, or how to teach it. I felt that every time I asked her for help she was very rude and unpleasent... She openly stated that she attempts to trick everyone with her exams. Overall I would never take her again!</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2005<br>Class Name: CMN203<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Moffitt gives off the impression that she is a nice lady, but her tests are impossible.  I studied so much for the test and still got a C.  Her questions are very specific (and not important) and she trys to trick you.  I would not take her if I did not have to.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2005<br>Class Name: CMN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Moffitt is a very good professor. Her discussion of topics is completely appropriate and relevant to modern issues.  Don't take the class if you are a close-minded, prejudice, bigot, otherwise you might find it &quot;boring&quot; or &quot;confusing&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: CMN346<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class discussion is pointless chit-chat! (and thats the entire class)Not only is it all about black/white, its all about pro-woman (I'm female and annoyed)I haven't learned a thing. Test &#63;s are unclear & she uses trick questions on purpose. she picks favorits, careful if you are not one of them.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a truly amazing woman.  She has a great command of her topic and teaches in a great style.  I loved her class.  I have had her numerous times and would again!  Her tests are so easy, she gives out study guides that tell you everything on the test!</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2004<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she is awsome, very nice and thoughtful and makes you really get into the subject.  she brought in good out of class examples.  she is awsome, best teacher at depaul ive had</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was the best teacher I had so far, in my 3 years at DePaul. She can really reach you, if you take the time to listen. She understands, and will help you out the best way she can. I really loved her class</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2004<br>Class Name: INTERCUL<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Moffitt was decent when I had her. I learned a lot. I did tend to think she focused to much on Black and White. But that was interesting for me but not for others. She was always helpful and her test were pretty easy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2004<br>Class Name: CMN501<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She missed more than just 2 classes and because of that, I did not feel her grading was appropriate.  More work because she couldn't be there, I don't think so.</div></div></div><div id="container" class="review"><div id="left">Date: 04/23/2004<br>Class Name: CMN501<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Just average. She is knowledgable but I didn't really learn much in the class since it was mainly a discussion of personal feelings. She grades fairly easily. She missed 2 night classes but then gave us an extra paper during finals because of it-not cool.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2004<br>Class Name: CMN203<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her tests intentionally confused students and a class avg of a d needs to be curved on exams and explains the animosity some feel.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2004<br>Class Name: CMN203<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>To call Dr. Moffitt &quot;dynamic&quot; is an unfunny joke. Her lectures are 99% derived from a textbook, which she spits out verbatim and with awful tempo. It is incredibly difficult to take sufficient notes because of this. Test questions formatted to c</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: CMN203<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Moffitt's class was all about &quot;white vs. black&quot;. She talked about the differences in race to much. Honeslty, I really didn't learn anything.  She may have taught class up to her due date, but she complained about it all the time. Midterm was</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: CMN201<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The class itself is easy and the papers graded fairly.. however the midterm was totally out of left field (Class avg a D!). If I would have known that a intercutural comm class was basically a &quot;white and black thing&quot; I wouldn't have signed up fo</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's great! I really admire this woman...not only for her intelligence and wonderful teaching skills...but she taught my class right up to her due date with her first child! She's also very helpful and loves to get students engaged in the class topics.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: CMN203<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Made a pretty boring class kind of interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2004<br>Class Name: FOCAL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Moffitt is the best professor any student could ask for. She will help you when you need it and is very understanding. This is one professor who you would want to participate in her class. Take her class when ever it is offered, because it's worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2004<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had her for my Discovery Chicago Class she was amazing.  She is so intelligent and enthusiastic, she makes you want to learn more.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2004<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very intelligent woman, but not at all intimidating.  I thoroughly enjoyed her class and learned a lot.  I definetly recommend her for any communication classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2003<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Interesting, dynamic, intelligent...Dr. Moffitt is one of the greats and you will learn so much from her Intercultural Communication class which I definately recommend taking even for non-com. majors!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2003<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Moffitt is one of the best professors I've had here @ DePaul and I'm only a sophomore! She is dynamic and she really knows her stuff. She keeps class interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2003<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was really nice and interesting.  The class was enjoyable.  Papers and exams were easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2003<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good teacher, grades pretty easy</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

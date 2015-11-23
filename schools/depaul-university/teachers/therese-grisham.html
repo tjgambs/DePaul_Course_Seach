@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Therese Grisham</h1><hr><div><h2>Overall Quality: 3.53<br><br>Helpfulness: 3.63<br>Clarity: 3.44<br>Easiness: 3.31</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/13/2014<br>Class Name: HUM<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is very passionate but laid back and personable. You have to do the reading and participate in class. No papers were turned back so if you want to know how you are doing you have to ask during the semester but overall she is very good!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2012<br>Class Name: MCS273<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>In short she is a joke.  Turned in a paper in January, 3 months later still hasnt been graded.  Doing a ridiculous take home final with no paper feedback and no clue what my grade is. She obviously knows the subject, but if you cant grade the work YOU ARE NOT DOING THE JOB OF BEING A TEACHER.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: MCS273<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the nicest and most accommadating professor I've ever had! All the movies she picks are fun to watch, and they are frequently from foreign sources you wouldn't expect. Classes require more reading than I'd like (since I'm a non-MCS-major), but I still recommended this class to my friends.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: MCS273<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very laid back, not really concerned with due dates. Does take a while to grade papers, but is very insightful when she does. If you don't want to read the book, just go to lecture and she covers everything you have to read. Great choices for movies as well, definitely enjoyable.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2010<br>Class Name: MCS271<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>ne of the worst classes that I have ever taken in my life.  Extremely boring and unhelpful with questions. Took a month to return papers and even then we received 3 out of the 6 or 7 papers we did .Every class at least 9 people would leave during break.  STAY AS FAR AWAY FROM THIS CLASS AS YOU CAN. TERRIBLE TEACHER-WILL RUIN THIS CLASS FOR YOU.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2009<br>Class Name: MEDIACULT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's a really nice professor! knows a lot about movies and film. i liked the class. after taking her, you will never watch movies the same way again (in a good way). you will learn to watch tv a different way. she's not too hard, i recommend her. the final is a 3 page paper, you do little papers throughout the quarter, no midterm, no tests :)</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2009<br>Class Name: MCS301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent professor. Laid back, nice, knows a lot about the subject. I liked the film section best, but I learned a lot about radio too.</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2009<br>Class Name: MCS501<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I never knew there was so much that went into film until I took this class! And I don't know whether to be glad or mad that I won't ever look at movies the same after this. Professor Grisham is awesome. She knows everything about film. If she teaches other classes I can take, I will! Great professor.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2009<br>Class Name: MCS601<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I don't agree with some of the comments here. She is very clear, very knowledgeable. People aren't used to discussion at DePaul and don't follow when things become spontaneous. I got the most from our discussions. The material I have taken away from this class will stay with me. I plan to become a director, and I have much to think about.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2009<br>Class Name: MCS501<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a really great prof. and very personable, too. I learned a lot in this class that I didn't know before. She is kind and helpful, and when I had problems, she was great to talk to to clarify things and direct me with my work. I recommend her highly, to anyone who likes movies and other media. (For an older woman, she is graceful and pretty.)</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2008<br>Class Name: MCS273<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Therese is a good teacher. Knowledgeable and obviously has a passion for film. Yes, she takes forever in grading papers but she extends deadlines so you can incorporate her feedback. The classes can get boring but this is college, all classes can. She is not always crystal clear but she tries to be. All in all a decent teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2008<br>Class Name: MCS273<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Grisham is a good teacher. She is knowledgable in her field and obviously has a passion for film. It is correct that she takes forever to grade papers and return them to you, but she also will extend assignments so you can incorporate her feedback. She can get boring, but all in all I would not warn you to stay away.</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2008<br>Class Name: CMN271<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Annoying when she makes an issue out of people not doing the insane amount of reading assigned every day, yet does not get papers back. Out of five papers due, by the end of the term I had only gotten two back, making it impossible to get a high grade when you get no feed back on the work that you have done.  Material is all over the place.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2008<br>Class Name: CMN271<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>boring and unorgranized. goes all over the place. her daily study questions are stupid and a waste of time. We had 4 papers and i only got 1 of them back before the end of the qtr.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2008<br>Class Name: INTROTV<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ugh so boring, boring assigments every night like a math class...Nice lady but class is so so</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2007<br>Class Name: CMN273<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice woman, doesn't tolerate late work, but still a great professor. Fun class if you enjoy watching movies.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

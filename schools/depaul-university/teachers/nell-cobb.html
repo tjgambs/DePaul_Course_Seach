@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Nell Cobb</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.6<br>Clarity: 4.0<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/22/2014<br>Class Name: 111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Excellent Professor. You will learn the material IF you want to!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2012<br>Class Name: EE333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved Prof Cobb. I didn't have her for MAT 110 or 111, but I found she was very clear in teaching math strategies. I have never been good at math, but found that after this class I am prepared for teaching math in the classroom. She was a ray of sunshine and willing to listen to your ideas.   Highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2012<br>Class Name: MTH110<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had her for MTH 110 & MTH 111. She is a little hard to understand at first but is more than willing to help you. Once you get a hang of her teaching style the class is a breeze. The class is all group work and no lectures which is great!</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2010<br>Class Name: MAT110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Professor. Helpful. Lots of group work, which is the best part of the class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2009<br>Class Name: MAT110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Cobb is great! She knows the material, and helps you understand it in different ways. Class is always interesting, and time flies.</div></div></div><div id="container" class="review"><div id="left">Date: 08/13/2007<br>Class Name: EE333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>THE BEST! She is very helpful IF you approach her. She may seem like she is being rude but really she is the sweetest professor. Loves to joke! I took her for ALL three math classes! Must take her. Class is a lot of work but do-able. Take her.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2007<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Ver knowledgable and approachable.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2007<br>Class Name: MAT274<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>MRS COBB IS HOTT</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2007<br>Class Name: HIST101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A-MAZING</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2006<br>Class Name: MAT110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice teacher. Helpful if you dont understand something.  Grades somewhat unfair, but will fix your grade if you think it is wrong. I would take her again. She knows what she is talking about and is very smart.</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2006<br>Class Name: TL416<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Syllabus was not inclusive.  Handouts were given with additional detail.  Oral explanations of assignments did not always match written directions.  She was condescending when asked for clarification.  Class always started with a Math problem; however, never explained what strategy/method the problems applied to.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2006<br>Class Name: MATHFORTEACHE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The woman actually taught me to like Math!  She was a wonderful teacher and very helpful!  I highly suggest taking her course!</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2005<br>Class Name: MAT110<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's willing to bend over backwards to be sure her students understand the material. She'll even put you on the spot to be sure you'll stay after class and learn if you're struggling. She really cares about her students and is very dedicated. She can be vague but she'll clarify if you ask. All in all, a positive experience.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2005<br>Class Name: EE333<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Her passion for the chicago public schools is refreshing, but class itself is a bit boring and sometimes a bit unclear.  Overall- ok.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2005<br>Class Name: EE333<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Cobb is very nice, but not the best professor.  Class is really boring, and her exam questions had little to do with what we talked about in class.  As far as Education professors go,she is just okay.</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2005<br>Class Name: 101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: MAT111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a fairly easy teacher.  She explains the assignments and helps the students a lot.  The work load isn't too bad.  The stuff we do is kind of tedious but it is an elementary math class.  I'd def think people should take her class</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2005<br>Class Name: BASICALGERA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Overall Cobb is a wonderful person.  SHe is sweet, kind, helpful and smart.  I got an A or B our of her class. (I cannot remeber)  I would take her again.  she goes slow so you can understand.  Willing to talk and tutor you if you need the help.  May God Bless her!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2004<br>Class Name: MATH110<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's very helpful.  I ended up staying afterclass most days to learn the material and she made it seem like it was no big deal.  She really wants her students to know the material, even if it affects her free time.  I really did good in her class but of the extra help.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2004<br>Class Name: BRIDGEMATH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof. Cobb is awesome! she is such a sweet lady and is always willing to help anyone.IF you can take her class.it is easy and you learn a lot.she is my favorite!</div></div></div><div id="container" class="review"><div id="left">Date: 09/25/2004<br>Class Name: MATH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved Prof Cobb, she was amazing!!!! One of my favorites.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2004<br>Class Name: MATH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I had Prof. Cobb and I loved her. She is amazing and such a great person!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: MAT111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>this professor is very good!she puts a great deal of time into helping everyone who wants to be helped get a good grade.no way should you leave this class with less than a B.a very understanding and helpful teacher.take this course with this teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: MAT110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is a great professor. She is kind and is willing to help you. She is one of the best education professors.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

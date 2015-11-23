@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sandra Jackson</h1><hr><div><h2>Overall Quality: 3.6<br><br>Helpfulness: 3.6<br>Clarity: 3.6<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/28/2014<br>Class Name: WGS212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>This class was a challenge, but if you're interested in the subject matter, you should be fine. She was an English professor, so she's a tough grader, but the papers and assignments were all pretty short and straight forward. Also, there is a group project. I really loved this class! Discussions were interesting and really made me think.</div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2014<br>Class Name: WGS336<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Jackson was not helpful nor clear. I took Woman and Film and I can't tell you one thing I learned. All we did was watch movies, discuss them (in which she didn't say anything), and write papers. I know this sounds okay, but she was a horrible grader. She would give feedback that made no sense and was illegible. I would not recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2010<br>Class Name: WGS212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Jackson is just amazing! This class made me grow as a person.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2008<br>Class Name: WMS212<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Love Dr. Jackson and this class. Sometimes students in the class say ridiculous anti-feminist statements but Dr. Jackson keeps her cool. (I wish she would call them out). Interesting readings and assignments. I suggest this professor and this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2008<br>Class Name: WMS212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's a really good professor. There were three big papers in the class and mini writing assignments along the way. You have to read all the text because the discussion is classed based. it's a really interesting class and I would recommed prof Jackson to anyone. She's a really really understanding lady and I think her requirements are fair.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2008<br>Class Name: WMS212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Jackson is a cool lady. She's very intelligent and personable during class discussions.  She doesn't make the class about her but rather about your thoughts and your ideas on the readings. You must read the readings, although there are alot of articles and anthogolies to read. She grades papers tough because she was 1st an english teacher</div></div></div><div id="container" class="review"><div id="left">Date: 12/19/2007<br>Class Name: WMS212<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>READINGS REQUIRED ARE INTERESTING BUT HER GRADING FOR PAPERS, WHICH INCLUDED ABOUT 3 PAPERS (3-4 PAGES), WAS TOUGH AND IT IS REALLY HARD TO GET A'S ON PAPERS</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2007<br>Class Name: WMS219<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jackson is intimidating at first but by the end of the quarter I liked her. You do a lot of reading and writing. She was an English major or something like that and she will tear your papers apart, but you will learn to write better. She is strict on attendance.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2007<br>Class Name: WMS203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a very interesting teacher. Class was basically just an open discussion, and the reading's really intersting. She's really helpful with work. I got a C on my first one and she made me meet with her so i could do better. This calss was actually fun at times.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: GROWINGUPFEM<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I heard that the class has changed, but when I had it, it was a giant therapy session. Her grading was biased towards her favorites and how much personal info you divulged.  Worst college experience ever.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: WMS334<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The hardest grader I have had at DePaul.  Good teacher, but the grading was a suprise.  The class was pertty interesting, and I did alright, but if you pride yourself on your writing abilities, this class will prove different.  The class was probably worth taking, even with the &quot;b,&quot; just be prepared.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2005<br>Class Name: WMS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really a wonderful woman.  Easy class if you do the simple assignments.  Is very helpful and very nice</div></div></div><div id="container" class="review"><div id="left">Date: 04/25/2005<br>Class Name: WMS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/29/2004<br>Class Name: WMS<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/06/2004<br>Class Name: ENG101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Her cold stare is terrible.  If you disagree with her she makes you look like an idiot and looks to give bad grades.  Watch out.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2004<br>Class Name: WMS212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr.Jackson is a really good teacher.  She always has great discussions to interact with everyone in the classroom.  Also she gives alot of assistance to students.  Theres not that many assignment, but she grades seriously on the essays she assigns</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: WMS340<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

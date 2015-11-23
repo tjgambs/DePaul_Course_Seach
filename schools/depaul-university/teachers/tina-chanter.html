@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Tina Chanter</h1><hr><div><h2>Overall Quality: 2.8<br><br>Helpfulness: 2.87<br>Clarity: 2.74<br>Easiness: 1.91</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: PHL233<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Enjoyed her lectures, and her TA is very helpful and both are open to discussion after class. Her accent is nice to listen to, especially if you don't have any interest in the subject, which I really didn't. Work for the class was remarkably low, and grades pretty fairly.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2011<br>Class Name: PHL233<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Not the best professor I've ever had, but she was interesting and I enjoyed her class</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2010<br>Class Name: PHL290<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She certainly knows her stuff and insanely bright, but she is very difficult. I'm a philo major and have had easier classes at the 300 level. I wouldn't recommend the class, but if you're up for a challenge, you've found your class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2010<br>Class Name: PHL290<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Don't take this class if you don't have a serious background of philosophy. The material is seriously difficult if you haven't had the experience in reading philosophy. If you don't get it at the beginning, you sure as hell won't get it at the end.</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2008<br>Class Name: PHL300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Tina Chanter is super brilliant and super attractive, I can't believe she has no sexy points, I fell in love with her a little bit.  She would edit our papers before hand to help us since the reading material was fairly challenging.  She allowed us to manipulate the reading schedule since it was pretty challenging.  I had a great time. FAV PROF EV.</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2006<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's very smart and almost too informative.  She pounds a lot of information and expects a lot from you.  Bottom line, she's a great teacher and you will learn a lot.  Expect demanding work from/for her.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2006<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I really liked her as a teacher.  She was great at provoking good discussions/ and arguments which made the class fly by.  She makes you write a fair number of papers, but gives you so much additional resources, that the argumnets are basically established for you, you just have to find the quotes and put it in your own words.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2006<br>Class Name: PHL320<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Tina is an excellent teaher, though she is better equipped to lecture in front smaller classes. If you are a good writer you will thrive under her tutelage.  I recommend waiting to take her courses until after you've enrolled in some substantial history, philosophy, and literature courses.  Paper is key, be prepared for that challenge.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2006<br>Class Name: PHL385<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2006<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is a very intriguing person, with an extremely quick wit.  If you like debate and argument she can throw down with the best of them.  She is a tough graDER, but mainly in matters of grammer, she is open to new ideas as long as you can support those claims.  Over all I liked the class.  She also likes interviening movies with the class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2006<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Tina has very high expectations.She has a british accent and probably a &quot;masters in philosophy&quot; from Oxford. Depaul hires the best. Chanter is the author of four publications. Lets face it (ISP 200) is a crappy Liberal Arts requirement and Tina purposely makes otherwise easy topics very hard to understand.Her method =frustration & failure.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2005<br>Class Name: FEMPHL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2005<br>Class Name: FEMPHL<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Her lectures were engaging. The material we covered was new and fresh to me. I love her accent.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: FEMPHILOSOPHY<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Slightly heavy course load, but she made sure everyone thoroughly understood the material before moving on.  Great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2004<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 04/20/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This lady is really bad at teaching. The material she taught was so boring and difficult i thought i was going to kill myself every time i stepped foot in the class, but she is very reasonable and will help you if you need it which you probably will</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2004<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Tina Chanter is very knowledgable on what she teaches, but should not be teaching. She is unclear about assignments, and her lectures are unbelievably boring (your pillow will need a pillow). Don't take her if you don't have to.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ISP101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Tina is very intelligent and knows what she is talking about, but does not do it in a very coherent manner. Her assignments are very difficult and the material hard to grasp.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ISP<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is the worst professor at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2004<br>Class Name: ISP101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2004<br>Class Name: ISP101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her class is horrible she is the most confusing person i have ever met in my life. The only good thing is she lets you revise your paper for a better grade.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

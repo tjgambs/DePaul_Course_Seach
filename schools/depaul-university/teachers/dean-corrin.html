@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Dean Corrin</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.4<br>Clarity: 4.3<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: SKETCHCOMEDY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's the nicest guy, great lectures and very prompt to respond to questions and concerns.  Really understood the subject he teaches and if i could i would take the class again.  Just pay attention and participate and you'll go a long way.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2014<br>Class Name: THE209<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Dean is a wonderful professor and very sweet man. Although he can be a bit disorganized at times, he is very laid back, and will excuse the same behavior from his students. He is very experienced and knowledgable about theatre, and this translates into each of his classes. </div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2014<br>Class Name: THE209<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Dean is awesome. He's incredibly relaxed and hilarious. His lectures were always funny.  He was really understanding about late assignments or missing a class. The assignments he gives really aren't difficult, and class is always pretty fun. Sketch Comedy was my favorite class this quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2012<br>Class Name: THE209<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dean was cool and laid back. Never strict at all on anything.  Sketch comedy was all around fun. If you like all things comedy, definitely take this class as an arts and lit requirement. Only big assignments are writing a few papers on sketches/etc. You write a lot of sketches throughout the quarter with a lot of improv and scene readings.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: DISCOVERTHEATE<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dean is fabulous, friendly, interested, and he knows his stuff.  BUT he didn't seem to understand the idea of returning papers and assignments.  I have no idea what i have in his class!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2005<br>Class Name: PLAYWRITING<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dean comes off as a very nice and quirky individual. What I did to get on his bad side I have no idea. He was my teacher,advisor and dean, and worked very hard to have me &quot;cut&quot; from the theatre school, and then while still my advisor screwed me again by telling me he'd fixed problems he hadn't. His good w/ little thing in class, clueless w/ big one</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2005<br>Class Name: DISCOVER<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I just love dean.  He is nice, helpful, funny, and smart.  TAKE ANY CLASS HE TEACHES!</div></div></div><div id="container" class="review"><div id="left">Date: 10/03/2005<br>Class Name: ISPTHEATRE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dean is so awesome.  Very laid back and understanding.  He is very helpful and creative and has a great sense of humor. gotta love him!</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2005<br>Class Name: PLAYWRITING<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dean is a great guy.  He's very concerned about his students and really wants them to write the best plays they can.  He's one of those father-like teachers that make you feel more at ease when you first go to college.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: ENG309<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome class, awesome professor. I guess you need to be a writer, or at least like writing a bunch. Very enthusiastic, great class discussion.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: ENG309<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you like writing plays, check out Dean.  He's a cool, down-to-earth theatre guy who knows his stuff.  He's been around the industry, too, so he has that going for him.  Good discussion class, but lots of writing.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

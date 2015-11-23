@@ -20,11 +20,17 @@
 </head>
 <body id="body">
 <div>
-	<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+	<span>
+		<h3>
+			<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+			<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+			<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+		</h3>
+	</span>
 	<span>
 		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 		<div style="display: inline-block; padding-right:10px">
-			<select class="prefix">
+			<select class="prefix" style="width:200px;">
 				<option value="ACC">ACC - Accountancy</option>
 				<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 				<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -197,7 +203,7 @@
 			</select>
 		</div>
 		<div style="display: inline-block; padding-right:10px">
-			<input type="text" class="number inputbox" placeholder="NUMBER">
+			<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 		</div>
 		<div style="display: inline-block;">
 			<div style="style=padding: 5%;">
@@ -212,12 +218,31 @@
 <br />
 <hr>
 <div id="overlay">
-	<div>
-	    <form action="../search.html">
-			<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
 	</div>
-</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 <button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 <h1>GEO 266 THE WORLD ECONOMY</h1><h2>A study of the spatial effects of globalization. Topics include the geography of industrialization, spatial divisions of labor, global commodity chains, and industrial development in peripheral economies.</h2></body><script>url = "https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GEO&catalog_nbr=266",$.ajax({
 	    url:url,
@@ -309,25 +334,64 @@
 
 	    	for (i of data)
 	    	{
-	    		overall = i.averageratingscore_rf;
-	    		first_name = i.teacherfirstname_t;
-	    		last_name = i.teacherlastname_t;
-	    		var list_overall = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-overall')
-	    		var list_firstn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-firstn')
-	    		var list_lastn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-lastn')
-	    		var list_cookie = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-add')
-	    		if(list_overall.length != 0)
-	    		{
-	    			for(var i = 0; i<list_overall.length; i++)
-	    			{
-	    				list_overall[i].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ overall + '</a>'
-	    				list_firstn[i].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ first_name + '</a>'
-	    				list_lastn[i].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ last_name + '</a>'
-	    				list_cookie[i].id = overall+',' + list_cookie[i].id
-	    			}
-	    		}
+		    	overall = i.averageratingscore_rf;
+		    	first_name = i.teacherfirstname_t;
+		    	last_name = i.teacherlastname_t;
+		    	var list_overall = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-overall')
+		    	var list_firstn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-firstn')
+		    	var list_lastn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-lastn')
+		    	var list_cookie = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-add')
+		    	if(list_overall.length != 0)
+		    	{
+		    		for(var j = 0; j<list_overall.length; j++)
+		    		{
+		    			if (overall != undefined)
+		    			{
+			    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ overall + '</a>'
+			    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ first_name + '</a>'
+			    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ last_name + '</a>'
+			    			list_cookie[j].id = overall+',' + list_cookie[j].id
+		    			}
+		    		}
+		    	}
 	    	}
 	    }
+	});
+
+	function updateCourseCartCount()
+	{
+		var cookies = document.cookie
+		var count = 0;
+		for (i of cookies.split(';'))
+		{
+			cookie = i.split(',')
+			if (cookie[0].indexOf('-add-') != -1)
+			{
+				count += 1;
+			}
+		}
+		document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+	}
+
+	function help() 
+	{
+		console.log('fdsa')
+		el = document.getElementById("help");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#help').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("help");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
 	});
 
 	function overlay() 
@@ -360,6 +424,7 @@
 		writeCookie(className+'-'+value.split(',')[index],value,days)
 		document.getElementById(value).src = "../../../minus.png"
 		document.getElementById(value).onclick = function() {removeFromCart(contents);};
+		updateCourseCartCount()
 		
 	}
 
@@ -372,7 +437,7 @@
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
 		delete_cookie(className+'-'+value.split(',')[index])
-		
+		updateCourseCartCount()
 	}
 
 	function writeCookie(name,value,days) 
@@ -450,6 +515,7 @@
 	});
 
 	$( document ).ready(function() {
+		updateCourseCartCount()
     	$(".prefix").select2();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
 	});

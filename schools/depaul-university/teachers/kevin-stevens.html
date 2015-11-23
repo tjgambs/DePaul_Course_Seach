@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kevin Stevens</h1><hr><div><h2>Overall Quality: 4.18<br><br>Helpfulness: 4.71<br>Clarity: 3.65<br>Easiness: 2.65</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/27/2013<br>Class Name: ACC500<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>One of the hardest classes and instructors at DePaul. We finished an entire book in just 10 weeks that was not designed for intro into accountant. If you have a strong accountant background and finance take his course otherwise take it with another instructor who teaches it as an intermediate accountant not advance.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2013<br>Class Name: ACC500<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>10 long assignment+ 10 hard quizzes + 2 exams worth 70% of your grade. This class was hard and book he chose made it worse.  His teaching is confusing if you don't understand accountant before taking this course. He is helpful if needed and replies to email fast. Kinda disorganized and seemed lost (didn't even know what chapter we were on).</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2013<br>Class Name: ACC500<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>His way of explaining concepts was confusing unless you know accountant before taking this course. He jumps from one subject to another even if it is not related to this course and keeps talking, talking for ever. I would not recommend this instructor unless you have accountant background. Overall was an OK class and he tries to help if asked</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2013<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a good person and will try to help you as much as he can. He replies to email fast and explains things as needed. What made this course hard and confusing is that the book is extremely horrible and doesn't show a strong connection to business majors. Also, all his quizzes/exams are from the book which made this course harder and confusing</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2013<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>very helpful to understand the accounting concept and interconnection. you will learn a lot out of the book.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2012<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very impressed by his teaching method. For a person who had no exposure to accountancy, he made it interesting and easy by breaking down the concepts and reiterating them. Did a completely online course, though hectic it was fun. Should be ok if you spend the time on the homework. Professor is very helpful with any queries.</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2012<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is just one of the best professors I have ever met. He makes me feel interested in Accounting!</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2011<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Kevin is the best period !! take him never regret,he knows his subject,helpful and Smart.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2009<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Stevens is an excellent professor. It can be a bit hard to follow his train of thought and explanations sometimes, but he makes up for it by being very engaging and helpful. Exams and grading were very fair. Definately one of the more fun and interesting classes Ive taken.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2009<br>Class Name: ACC500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The best accounting professor in my life.. I learned a lot from him.. i mean really a lot..in just two and a half weeks..He's very nice to his students..very patient..answers all questions and emails..he's funny, he makes the material interesting..I used to hate accounting, he made me like it..Thanks Prof. Kevin</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2008<br>Class Name: ACC309H<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Stevens is perhaps one of the best Accounting Prof. at DePaul.  After being in the business world for 2.5 years, Acc 307H and 309H are perhaps the two most useful and practical classes I had at DePaul.  Stevens has an ability to make students engaged in Accounting.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2006<br>Class Name: ACCHFINANCE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amazing teacher, very engaging and concerned about his students and their understanding of the material. Great real world examples make the somewhat difficult material more understandable. Most professional and thorough professors I've taken. If you want to become an expert in your field and actually LEARN, take Stevens!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: HONACC<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Stevens is a professional and a strong asset for the university.  He is approachable, immensely knowledgable and fair.  Not for those of you who just want to pass... take him if you want to learn.</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2005<br>Class Name: ACC307H<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Stevens strengths: meeting with students outside of class, tests are relatively easy, interacts well with students, and is open to argument on exam questions. Stevens weaknesses: is all over the board when he lectures, exams are unnecessarily long, random assignments are useless in learning ACC. Overall, he's a good professor, but not great.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2005<br>Class Name: 307AND306<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher. This guy is a class act and very helpfull. Teaches you what you need to know. More qualtative then quantative. Very professional and fair. Take him. It's a challange but you will learn tons. Carries the finance honors program</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2004<br>Class Name: 307H309H<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This teacher is by far the best at DePaul.  Although he may go through his lectures quickly, he always gives a clear indication of what will appear on his midterm and final. Really cares about his students and their effort in his class. Lots of &quot;real life&quot; examples and ties them in with topics in cl</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2004<br>Class Name: ACC307H309H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. Test are quite difficult, but he always tells you what he expects and what's gonna be on each test. He really cares about students and their success. Lectures are sometimes hard to follow, but that's cuz the material is hard. Sign up without hesitation.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

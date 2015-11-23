@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Wayne Gru</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.8<br>Clarity: 4.6<br>Easiness: 4.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: ORGC356<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Wayne Gru is one of my favorite professors at DePaul. He is very helpful and understanding. His classes are pretty easy, but he has great insight and experience to share. I definitely recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2015<br>Class Name: MCC101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>meh was not impressed</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2015<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Very fantastic professor. Very effective, great lecture style, supplies quality material, overall improves oneself, just a very awesome professor. Everything builds upon itself and being a HR concentration, i will say this was very beneficial. All students of any major should take this class with Gru, it's a great opportunity and experience. </div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2015<br>Class Name: ORG201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Gru is awesome! This class is laid back and he is an easy grader. There are 4 speeches and 2 are group presentations, usually you get to pick your topic. There are also easy reflection journals and discussion posts. Challenges you to challenge yourself.  No textbook needed.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2014<br>Class Name: ORGC201<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class was super easy. Sit by people who look smart the first day because you will be with them forever. Lots of projects and presentations but don't be scared, you always get to choose what you present on. (Like your favorite animal). No exams, tests, or quizzes. No textbook! On the first day he brought us all oreos!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Wayne Gru is by far the best professor I have ever had at DePaul. His class is always entertaining and he challenges you to challenge yourself. Not that this class is hard or has any quizzes or tests, but he is one of the few professors I have actually met at DePaul that truly cares about your future. TAKE HIM!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Wayne is the MAN! Hands-Down the best professor I have taken at DePaul!</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Prof. Gru is an awesome, caring guy. He is extremely lay-back, but does expect professionalism, which isn't much to ask for. He has a wealth of information to share if you keep your ears open. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>TAKE HIM ASAP BEFORE IT FILLS UP! WAYNE GRU IS AWESOME! This guy has a lot of experience in the finance/banking industry and is a PHENOMENAL communications professor. The class has no midterm/final/quizzes but some hw is required (easy stuff like resume and speeches). I met a bunch of cool people in this class and walked away having learned a lot</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2014<br>Class Name: ORGC201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Nice Guy, Easy class. No tests! 2 individual speeches and 2 group ones, along with some journal entries and discussion boards. He is just super annoying sometimes and will email you about 6 times a day.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

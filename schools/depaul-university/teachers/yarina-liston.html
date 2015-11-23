@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Yarina Liston</h1><hr><div><h2>Overall Quality: 3.21<br><br>Helpfulness: 3.53<br>Clarity: 2.88<br>Easiness: 3.88</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/17/2012<br>Class Name: REL143<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really straightforward professor and class. You show up, she lectures, you leave. If you pay attention, take notes, and do the reading summaries, you're guaranteed to do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2011<br>Class Name: REL143<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Liston is really knowledgeable about Buddhism, however this class was horrible. She mumbled the lectured the entire time, never asked if anyone had questions, and gave horrible notes. She gave no rubrics for any of her projects, we just had to guess what she was looking for. Dont take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2011<br>Class Name: REL103<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor is nice but her directions for assignments are unclear.  She expects more than what she leads on and punishes you for not knowing enough background on specific religions (only briefly covered in class).  Her lectures are long and difficult to follow and take notes from.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2010<br>Class Name: REL242<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have never been so disappointed with a class in my entire life. Professor Liston is nice, but this class has to be one of the most uninteresting and hard to follow classes at DePaul. Material is covered too fast, unclearly, and in the most boring manner possible. I really regret taking this class and you will too.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2010<br>Class Name: REL242<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A LOT of reading. The material is very interesting though, and she is glad to explain anything in further detail. ASK QUESTIONS!!! She won't baby you, and you will get lost and confused with the heavy amount of subject matter, if you don't stop and break down the material.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2010<br>Class Name: REL103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class.  She assigns a lot of reading, but you don't need to actually read it to do well especially since she pretty much tells you what's going to be on the quizzes.  Also, no midterm or final; the only grades are weekly hw assignments, a 1pg book review, a research paper, and 3 quizzes.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2010<br>Class Name: REL103<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>There is A LOT of reading for her class, so if you're not up for 100+ pages to read a week, don't take this class. There are only 3 quizzes and the questions come from the book, more or less. Pretty easy class if you just read and pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2009<br>Class Name: REL103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a very easy grader, and if you just either listen in class, or do the readings, you're set. She picks out the questions on the test from the book beforehand, so you know what's going to be on there. She rambles a lot, but I suggest this class if you need it, or if you want an easy grade.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2009<br>Class Name: REL201<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>,,,</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2008<br>Class Name: REL143<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Hinduism with her, shes a very easy grader. She understood that the material can be very confusing and she tried her best to make it as easiest as possible for us. Papers werent hard at all and tests were short answers that if you dont know the material you will do bad on.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2007<br>Class Name: REL143<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a really nice teacher and grades fairly easy.  There's a lot of reading, but as long as you come to class, the quizzes are a piece of cake.  Her lectures have so much information that sometimes it seems really scattered, but just write everything down and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2007<br>Class Name: REL143<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There is too much information to fit into a single class.  Her lectures are unclear because there is too much material to cover for her to focus on one thing so she does her best to touch base on everything.  There is a lot of information and a lot of reading.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2007<br>Class Name: REL143<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice teacher. Very easy teacher, basically as long as you do everything you'll get an A.  Lectures can be a bit messy. Presentations were probably the easiest part- in fact, she says a lot of your info for you it seems like. Pretty good class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2007<br>Class Name: REL143<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I thought that she was a great professor.  She makes lectures interesting and there is not a lot of reading.  She is also very helpful and is always willing to go over concepts that are unclear.  Ireally enjoyed her class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2007<br>Class Name: REL152<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very hard teacher. DO NOT take her. u've been warned</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: REL143<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Excellant Buddhism teacher...I highly recommend her. Her class is extremely interesting and the work load isn't too heavy. She has a knack for breaking down confusing information, making it easier to understand and comprehend. She also went over meditation techniques which is a huge plus.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2006<br>Class Name: REL143<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>compelling readings. her lectures were a little disorganized, but understandable due to the range of material covered. essay questions were easy. recommended to lift GPA</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

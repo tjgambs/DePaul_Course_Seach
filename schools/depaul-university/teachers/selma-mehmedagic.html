@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Selma Mehmedagic</h1><hr><div><h2>Overall Quality: 3.2<br><br>Helpfulness: 3.6<br>Clarity: 2.7<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/29/2015<br>Class Name: MAT101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: B</div><div id="right"><div>At first I was a little intimidated because I thought I wouldn't understand her (her accent is pretty strong but really cool) but you get used to it and learn to love it. She's a very sweet woman who's very chilled and laid back!! </div></div></div><div id="container" class="review"><div id="left">Date: 07/04/2015<br>Class Name: 135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: B+</div><div id="right"><div>I LOVED Selma! She was amazing! She was always available during office hours, and she basically would give you the questions on the quizzes the class before.  She can be hard to understand at times, but as long as you pay attention and ask questions, you will be fine.  I am terrible at math and I managed to get a B+.. if I can do it, you can do it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2015<br>Class Name: MAT135<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Goes by material fairly quickly and her strong accent may be a difficult to follow so prepare for some added effort outside class. Drops the lowest quiz Equations on exam are same questions, just different numbers Fairly easy class if you have a good grip on calc</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2015<br>Class Name: MAT130<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is an awesome professor! She will help you understand the material and is very caring. She gives 3 in class quizzes but drops the lowest score. The midterm was super easy if you study, its usually the same as the chapter quiz on my labs plus, the same goes for the final exam. She helped me get an A in precalculus and I suck at math! </div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2014<br>Class Name: MATH101<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice woman! Strong accent, avoid if possible. </div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2014<br>Class Name: MATH101<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>She is a sweet teacher but her class was very boring. She is an expert in her field but her accent is STRONG, I could not understand her. I taught myself through MyLabsPlus. </div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2014<br>Class Name: MAT100<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B-</div><div id="right"><div>The course mostly uses mymathlabs. Quizzes after every unit & a midterm & a final. Easy to pass with a B if you get 100% on all the homework & at least a B or C on all in-class & online quizzes. Very nice & helpful if you go to her for help. Don't really have to pay attention & takes questions directly from homework for in-class quizzesfinal</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2014<br>Class Name: MAT137<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>I really honestly don't understand all the good reviews. And this is coming from a 4.0 student. Her strong accent, as well as her COMPLETE mix-up of two different techniques, screwed me over. She was also very rude to students: "Guys, we went THROUGH this already!" when people ask for help. Please, for me, AVOID her at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2014<br>Class Name: MAT100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>You better know how to teach yourself from the website used. She barely goes over the whole section which is definitely needed. According to her, everything is easy. She does let you email her to get help though and she goes over it before the start of class. She is also very lenient </div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2014<br>Class Name: MAT135<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super easy, no surprises on the tests or quizzes. Her accent's a little strong but she explains everything very well. There are 4 quizzes, 2 exams and than the final. The exams are literally the quizzes with different numbers. Book's only use is for homework. I highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2014<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Her accent might scare people, but  I can honestly say she is one of the few teachers that made me understand the concepts in MAT 135. She is sweet and wants students to do well! TAKE IF YOU CAN :) If you have an questions, she is very helpful during office hours.  A great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2013<br>Class Name: MAT135<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy class as long as you do your homework before the quizzes and tests. Although the accent makes it difficult to understand, she will go over the material if you ask her to. She goes over the quizzes after she hands it back, so it's a good learning experience. Would take this class again if I had to.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2013<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Although she has an accent. she is a really great professor. I recommend you take her! She grades homework for completion and she gives you examples of EXACTLY what is going to be on the quiz she just changes the numbers same for the midterm .  her office hours are HELPFUL! TAKE HER</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2013<br>Class Name: MATH135<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Speaks fast, little review of the topic, and sloppy handwriting. Everyone is just trying to keep up and copy off the board. You leave class, review what you copied and end up learning the material on your own. She is nice but her accent and moving fast just leaves you confused half the time.</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2012<br>Class Name: MAT137<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>All homework assignments are online and you can retake them as many times as needed to get 100 and she gives you a lot of time to do them. You don't use the book at all. She drops the lowest 1 or 2 quiz grades. Very easy as long as you do the homework and pay attention in class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2012<br>Class Name: MAT137<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Simply not worth it, her notes are all from slides and she rushes through them so you don't learn anything from them. Then her notes are SUPER SUPER sloppy and usually have a mistake or two, making them next to impossible to follow/copy. And to top it off her broken English just awful to try and follow.  Like I said, not worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2012<br>Class Name: MAT135<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Mehmedagic is a nice professor. Her homework is checked for completion. She has quizzes every other week and homework is due once a week. Her quizzes and tests are easier than the homework problems. She drops the lowest quiz grade and there are 3 tests the whole trimester. I recommend her, her tests are too easy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ms. Mehmedagic was a wonderful teacher! She was very helpful and truly wanted her students to learn in her class. She cared about whether or not we understood.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2011<br>Class Name: MAT135<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Mehmedagic was a little tricky to understand at first with her accent, but after a while she becomes very clear. She grades with partial credit and checks homework for completion. She is very helpful if you're stuck, but if you dont understand something after she's explained it to you once, you will have to figure it out for yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2011<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor M is a overall good teacher. Homework is mandatory but she just checks it for completion. If you forget to turn in your homework, she will let you turn it in next class. The test and quizzes are as simple as they can get.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2011<br>Class Name: MAT135<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: MAT135<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>TERRIBLE professor. AVOID if possible. If you enjoy independently teaching yourself mathematics (business calculus) and love hearing the phrases &quot;You should already know this&quot; and &quot;Guys, this is easy&quot; over and over by a professor; then perhaps this class is for you. However, for the rest of the sane student population: RUN AWAY from this professor!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

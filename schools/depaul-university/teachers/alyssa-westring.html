@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Alyssa Westring</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.7<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/08/2015<br>Class Name: MGT3OO<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Lovely woman and is always there for her students if you need her. Her lectures are funny, gives a lot of great examples and we watched many TED talks. She literally spells out how to receive an A in her class. There is studying to be done, but it only requires memorizing the vocabulary. </div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2015<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She is so nice and makes class a lot of fun! Everyone should take her! Not a lot of homework at all. </div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Westing was great. Each class was entertaining. There were 2 assignments (little writing), midterm and final.  She gives in class assignments which is a part of your final grade so show up. Group participation was in every class meeting but they were fun. Study guide is exact questions on test. Hope to take her for all my MGT courses.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2015<br>Class Name: MGT300<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the easiest classes compared to what's out there. She does weekly objectives which are like the parts of a study guide. Take in class notes on the pwpt's and flip through the book where needed and you should be good to go. Papers are easy, midterm and final are mostly recalling definitions.</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2014<br>Class Name: MGT300<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>meh, easy class but kind of boring. not hard to get an A. lenient grader on essays.</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2013<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very easy class, yet she is very hard working in making you succeed and comprehend the material. She does many ted talks and group activities, which i think it's great.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2012<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Read the book and take notes. She can be dry but it is crystal clear on how to get an A in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2011<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Truly one of the best professors at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2010<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very good professor! She covers material in her class well. Exercises relate well to material. Required presentation was long in length, but I learned a lot from them. I really enjoyed her as a professor and, if it would count toward my concentration, would love to take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2009<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor. Does a great job of relating course material to real life examples. Very well-organized. Highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2009<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great instructor, well organized, well prepared. She really loves teaching the topics that she covers. Study the learning objectives and you will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2008<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Alyssa Westring = Alyssa Friede. Great class. You learn a lot, yet it's not an overwhelming amount of work. Study the learning objectives. Go to her review sessions! They are extremely helpful!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

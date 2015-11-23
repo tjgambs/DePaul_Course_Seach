@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Carolina Barrera-Tobon</h1><hr><div><h2>Overall Quality: 2.8<br><br>Helpfulness: 3.2<br>Clarity: 2.4<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/28/2015<br>Class Name: SPN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She was the one Spanish professor I have ever learned the most from out of my 7 years of learning Spanish. She is not easy and really pushes you to succeed, but she is very sweet and quirky. There is lots of group work (which is typical with Spanish classes at DePaul).</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2015<br>Class Name: SPN351<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She acts like this is the only class on your workload. She would have at least 3 lengthy assignments due every single class session. For finals, she assigned us a research paper, a 12 minute presentation, and also an in-class exam. Waaaay too much; she overkilled everything. She tried her best to be helpful outside of the classroom, though.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2015<br>Class Name: SPN351<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Don't listen to other reviews, Carolina is a GENIUS. She is the absolute best for linguistics studies and so extremely educated in her field. She is a wonderful professor who cares about her students and is always available to help. She dedicates so much time to making the class work, and naturally expects the same effort. Want to learn? Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 12/25/2013<br>Class Name: SPA201<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: D+</div><div id="right"><div>Hard professor without a doubt. She is smart and knows her stuff but too strict to her bad lesson plan. She makes us read one to two chapters before class and do homework regardless if we understood the material. This professor need to change her lesson plan or quit teaching all together. Just plain HORRIBLE!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2013<br>Class Name: SPN201<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She intimidates the heck out of the class. The assignments are unclear and the homework is required to be done before the material is taught in class. Also a really hard grader. No one in the class received an A on the midterm  before the curve and she takes forever to give back assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2013<br>Class Name: SPN201<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I feel like this Professor has too much going on in her life to focus on teaching. Her syllabus is very confusing and she makes us turn in homework before she teaches the lesson. She grades the homework extremely hard and almost everyone does bad on them. Also, sometimes she snaps on us if we don't understand something or are confused</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2013<br>Class Name: SPN101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is extremely unclear with her assignments and in her syllabus. It is as though she wants you to fail and she expects that we complete assignments before the lessons are even taught. If I was paying money to read a book and complete assignments on my own, then I would be fine with this situation, but that's not the case.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2012<br>Class Name: SPN201<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>There is a lot of work for this class, but she's a great teacher. If you have any questions whatsoever, she's more than happy to answer them. She's definitely a bit intense, but she just really wants you to do well. I'd definitely take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2012<br>Class Name: SPN103<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very enthusiastic about her subject. She teaches the class like a high school class. Students are reprimanded for leaving class, even for a minute. She is unclear about assignment guidelines and she is virtually unapproachable.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

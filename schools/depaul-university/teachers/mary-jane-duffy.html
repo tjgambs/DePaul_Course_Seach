@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Mary Jane Duffy</h1><hr><div><h2>Overall Quality: 3.43<br><br>Helpfulness: 3.59<br>Clarity: 3.27<br>Easiness: 2.95</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/14/2014<br>Class Name: EXPLORECHICAGO<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: C+</div><div id="right"><div>If you miss a class you will get a C or lower. Very unprofessional when replying to emails, gets a little attitude sometimes.</div></div></div><div id="container" class="review"><div id="left">Date: 01/21/2014<br>Class Name: ART106<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Duffy is a nice person. However, The class gets very boring and repetitive. You can miss two class periods before she lowers your grade. Be prepared to spend many hours a week drawing outside of class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2012<br>Class Name: ART106<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Had her for Beginning Drawing. Loved the class. Make sure you show up and do your homework and you're fine. Also, she requires WAY TOO MANY materials for the course. Buy as you go. Sharing paper and charcoal with friends is highly recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2007<br>Class Name: ART106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Shes a real nice teacher.  I am not talented at drawing at all, but I learned a lot from her teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2007<br>Class Name: ISP102<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Do not take this class unless you are extremely into art. This class was very boring. She is nice but the class is bad.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2007<br>Class Name: ART101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is so nice! The class can be boring if you don't try, or already know the programs well.  She wants everyone to do well, you really just have to do your work. There isn't any outside hw if you use class time wisely. I definitely recommend her, especially if your an art major! for non-art majors or people who aren't serious don't take this class</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2006<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is the nicest woman ever and super cute!! she gives good help and really wants her students to do well. knows her stuff. definitely take a class from her!!</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2006<br>Class Name: COLOR1<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>ad. color design class was incredibly long and boring.. but she is a really nice lady and i liked her personality. trys to help as much as she can but just cant communicate well. didnt really learn much, lots of tedious in class work. dont take if you cant stand being in class for 3 hrs twice a week.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: ART101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>best teacher ever.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: ART101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Don't take her if you are not an Art major even for the 100 level course, she wants art majors only.  Will not directly tell you she only wants art majors. Very passive agressive</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: COLORTHEORY<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 07/11/2005<br>Class Name: ART105<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Okay...Mary Jane's art really bored me. While I am an art major, the two classes I took with her were very non-art major oriented-that said, she expected everyone to have some kind of drawing talent. I don't draw at all and that shouldnt effect my grade in ART 105. Her grades were pretty unreasonable and she was a dull speaker.</div></div></div><div id="container" class="review"><div id="left">Date: 10/01/2004<br>Class Name: 2D<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>mary jane is wonderful. she is not only a great teacher, but a very talented artist and a warm person. i enjoyed her projects and she made the class work very engaging, which i think is very important. she has good dynamics.</div></div></div><div id="container" class="review"><div id="left">Date: 07/22/2004<br>Class Name: ART105<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I have taken a course that you have taught. The result from me taking that course has had a dramatic impact to how I now respond to art and the related. This impact is one which is very negative and grows with a hate towards almost any form of art as well</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2004<br>Class Name: BDRAWING<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I think I'm a Duffy-holic. Actually, she teaches A LOT of the classes req. for art majors. Get to know her well, and then give her your best. She assigns lots of work, but the class is only as good as the students make it. Some great, others not. B+.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2004<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Extreamly AWSOME lady. Take the class only if you're into art. She's very cool, I don't know what all these losers are talking about. Very recomendable.</div></div></div><div id="container" class="review"><div id="left">Date: 05/17/2004<br>Class Name: ART105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>everyone is not an art major and she should take this into consideration. thank god im not an art major. no more duffy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: ART105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>ugh. She grades as if everyone's an Art major. If you feel that ur the least bit creative, watch out, she'll surely turn your artwork down.Attendance is mandatory, no absences, no tardies & a great sense of creativity and you'll get a B if you're lucky.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2004<br>Class Name: ART110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>everyone says shes tough, but she really is a great teacher. you definately have to put effort into the class, but you will get so much more out of it. be careful though, she doesnt like it when you miss class.. ever.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2003<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2003<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2003<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This little art prof. is quite a bit demanding, but fairly good overall. Easy for more advanced students though.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

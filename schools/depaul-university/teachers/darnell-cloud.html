@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Darnell Cloud</h1><hr><div><h2>Overall Quality: 2.78<br><br>Helpfulness: 2.8<br>Clarity: 2.77<br>Easiness: 3.17</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2013<br>Class Name: GSB420<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Cloud is a good man and great teacher. I loved his course and plan to take him again if he teaches 509 and 555. Darnell helped us without oberwhelming us. Most of us work and with our limited assets we need the biggest bang for our dollars. He is a good teacher for working students. His assignments are clear and direct and he helps when asked.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2013<br>Class Name: GSB420<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is by far the worst class I have ever taken in my life. I am extremely disappointed in the quality, professionalism, and organization. I am going to recommend he not teach anymore at DePaul, as it taints the school's image. Do not take!!!</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2013<br>Class Name: ECO509<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice guy, casual classroom atmosphere, has good knowledge on economics but very disorganized. Syllabus and grading structure kept changing through out the quarter.  Doesn't come well prepared for the class. Macroeconomics is a dry subject, the professor does little to keep you interested. His class is not for students who want to major in ECO.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2013<br>Class Name: ECO509<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's a nice enough guy but his lectures are all over the place, weekly assignments barely related to material, and he did't seem to ever prepare for class. He uses the publisher's slides, which he seems to be seeing for the first time in class, and exam questions (one 30-question exam) so you're best bet is teaching yourself from the textbook.</div></div></div><div id="container" class="review"><div id="left">Date: 08/04/2012<br>Class Name: ECO105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Prof! Sorry to see he got BIG new job with State of Illinois. He was super nice and easy on the eyes. Prof was willing to help and made the material interesting and provided lots of online homework to help prepare for exams. Hope to work for him someday!</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2012<br>Class Name: ECO106<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible. I would never recommend to anyone.  Like everyone else said nice guy, horrible teacher.  Quizzes were not on covered material and our exam was 40 questions worth 40% of our grade. Doubtful if he will be teaching at depaul much longer with how many horrid reviews he received.  Do not take.....</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2012<br>Class Name: ECO509<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice and approachable guy, but I would not take a class of his again.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2011<br>Class Name: ECO105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I like Prof. Cloud. He's funny and his class is enjoyable. However, he gives very difficult homework assignments and exams. He doesn't mind helping students when we do not fully understand the material. He does call on ppl randomly. It really gets annoying. Please be ready to work hard!. Overall, I have learned a lot in Econ and I do recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2011<br>Class Name: ECO105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Funny guy, not so good teacher. Uses powerpoints, homework assingment, and quizzes that are made for him by McGraw Hill. Lots of errors and homework and quizzes are hard. I went to every class and still read chapters and had trouble. I would not recommend to others.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2011<br>Class Name: ECO104<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He thinks he's funny, but he's not. He also thinks he's hot, but he's not. You may as well take an online econ class because everything he teaches, at least when he feels like it, isn't on the homework. Midterms and final are so hard. There's no doubt this guy is ruining people's vision of majoring in economics.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2011<br>Class Name: ECO105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Funny guy, tells stories and uses simple examples. He calls on people randomly. Homework/midterms are ridiculously hard and time consuming. Optional mandatory but coming to class is helpful to understand material. Weekly homework. 2 midterms, 1 final (in class).</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2011<br>Class Name: ECO106<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I want to say that the class is easy because all the exams are take home online, but they are very difficult. There is no hw so its easy to fall behind and slack off. You also don't need the book. Prof means well but he just doesn't know how to explain things. Pick someone else for 105 or 106 like McWhite</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: GSB420<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I don't know what he did to get ready for this class. Seems like all he did was read the slides (that the publisher prepares!) and pull prefabricated homework assignments. He's a nice guy but after the fifth email where he apologizes for yet another miscommunication or online exam error, you just get sick of the excuses.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: ECO106<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>There were only 7 of us in Prof Cloud class. The word must be out how bad he is. He is a nice guy. But he is a terrible teacher. I hoped to major in Eco and then I took Cloud and have changed my major to History. Prof needs to read the book before he comes to class. AVOID like the others suggest. PLAGUE!</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2011<br>Class Name: ECO106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Excellent prof! He may bounce around a bit on topics, but he successfully covers everything that he had designated for that day and did so with fluidity and made the material enjoyable- heck, I had him for three hour night class, and the time flew by! I'm now considering minoring in Eco because of Prof Cloud</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2011<br>Class Name: ECO106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Cloud is a wonderful teacher and knows exactly what he is talking about, I mean, how could you not after a PHD in Economics from North Carolina and an MBA in Finance from DePaul!&#63; He is kind, engaging, and is truly superb at making difficult concepts ridiculously easy and clear. He keeps the class casual but you'll learn!</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2011<br>Class Name: ECO315<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof meant well. But he seemed to be confused by constantly changing course procedures. His exams were taken online at home. But they were ridiculously hard... so hard that he had to give the exams a second time and you got the average of the two to count as the score. CLUELESS: does not understand how to teach and express himself clearly. AVOID</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2011<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Cloud is a phenomenal. His lectures are very helpful as long as you take good notes. Show up to class, study for the exams, and you will do well. However, I should warn future students that his 2nd midterm is very difficult. That said, if you don't do too well on the midterms, he will allow you to use your final exam grade as your final grade.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2011<br>Class Name: ECO105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof is very friendly and courteous. However, he is very confused and not a good teacher. I wonder if even is interested in teaching or just making some cash to pay his bills. He reads from the textbook overheads. The exam questions are taken from the textbook web site. Darnell maybe should be modeling underwear or selling perfume at Macy's.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2011<br>Class Name: ECO315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof is one of the best if not THE best at DPU. He is such a nice guy. Dr. Cloud explains the material clearly and even lets us practice with the exams IF you visit his office. He is a HOT dude who enjoys exciting young minds to finance and banking. I never cared for Econ before his class because I did not understand it. But now I do! He is great!</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2011<br>Class Name: ECO315<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Absolutely horrible teacher.  He is nice, but does not know what he is teaching.  His tests do not reflect what is taught in class and are over 100 questions in length with a short time period (80 minutes).  He spends more time 'small talking' than he does teaching.  I doubt he will be at DePaul for much longer.  Completely incompetent teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 09/30/2010<br>Class Name: GSB410<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Darnell is awesome! He is smokin' HOT! The class can seem hard if you are a slacker. He works with you to help you understand the material. He's prompt with responding to your emails, and he will help you until you understand it. I've never had a more understanding professor. He's great! I highly recommend him! I wish he taught more grad courses!</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2010<br>Class Name: GSB420<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was lost more than we were in this class.  Nice guy, but didnt know what he was teaching.  true--It was his first GSB class but there were people in class that knew more than him---he does work with the class though and tries to be fair as he can for homework and tests.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2010<br>Class Name: GSB420<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Nice guy but a terrible teacher. He literally changed the plan for the class every week. First there was homework, then there was not; a group project/presentation magically appeared about week 6 and he threw in &quot;practice exams&quot; seemingly on a whim. The exams were auto-generated, unorganized and random. Avoid this guy if at all possible.</div></div></div><div id="container" class="review"><div id="left">Date: 12/28/2009<br>Class Name: GSB420<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>STAY AWAY from Prof Cloud if you'd like to have a successful quarter and actually learn. He is not clear when presenting lectures and cannot articulate what/how to solve the problems. Exams were impossible to study for as he wasn?t available for help or flat out refused to give it. What a waste of 11 weeks and $4k.</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2009<br>Class Name: GSB420<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Run away! I dont even know where to start other than that this class was a disaster. Unprepared and annoyingly aloof, Professor Cloud really didn't give a care about this class and it showed. I literally paid $4000 to teach myself and learn from my peers. Truthfully, there is no reason why he should be able to teach this class again.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2009<br>Class Name: GSB420<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>By far, the worse instructor I have ever come across in my life.  He babbles in class, fails to emphasize and explain core concepts and can only do the problems he has prepared for.  If you ask a q, he will go off on a tangent to avoid the q.  I learned nothing in the class and classmates taught eachother or learned from youtube.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2009<br>Class Name: ECO105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Cloud is very fun and easy-going.  If you have average intelligence you can get A's on the tests without ever going to his lectures, which consist of him reading off of Aplia powerpoints, something students can do on their own time.  Funny guy, but treats the class like they are in high school. Take for an easy A, and to be entertained.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2009<br>Class Name: ECO105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy easy easy.  He's very clear, and his class was very fun.  I think he looks like Denzel Washington, but someone earlier pointed out he looks like Obama, but you really can't go wrong with either, can you&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2009<br>Class Name: ECO105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Darnell is a great teacher and a nice guy. He knows his stuff and teaches it very well. I enjoy his class and he keeps it lively and interesting. His exams are fair and homework is manageable. Take him!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

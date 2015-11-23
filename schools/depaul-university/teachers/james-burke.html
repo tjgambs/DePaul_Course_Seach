@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>James Burke</h1><hr><div><h2>Overall Quality: 4.04<br><br>Helpfulness: 4.21<br>Clarity: 3.86<br>Easiness: 2.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/06/2015<br>Class Name: CHE135<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Help. The grading is so tough. What deserves an A will get you a B-.</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2015<br>Class Name: 133<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>God bless Burke, hes so sweet my gosh! would sit with me for an hour if he had to in order to explain a hard concept.  My reports were much better after taking his lab, he would clearly point out my errors. Not the type to make you feel silly for asking questions. His intros are long but super helpful PAY ATTENTION TO THOSE! TAKE HIM!:) 3 </div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2014<br>Class Name: 128<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Burke was great. He was very understanding when I had to miss class for personal reasons and did whatever he could to help me stay up to date with what I missed. He does speed through material really quickly so you take a lot of notes. I wouldn't advise missing class because you fall behind really fast. Great Teacher</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2014<br>Class Name: CHE129<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Grading rubric is very clear. Will take 3 weeks to return lab reports, but will give very detailed, written feedback. Lab reports are tedious, but follow the rubric and you will get an A. Will offer a regrade if necessary. Very hands-on with the students, will help you out if you just ask. Very nice, approachable guy. </div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2014<br>Class Name: CHE128<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>His lectures are very clear, comes to class prepared. Will be late sometimes. He doesn't rush through topics, will stray from the schedule in the syllabus if needed. Gives handouts and worksheets for every chapter. Show up to class and get on his good side. Will take a week on average to give back test papers. Very nice, clever & approachable guy.</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2014<br>Class Name: 131<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>James Burke is one of my favorite professors. He would do the best he can to help you improve in his course. He is very well-prepared every class, professional, and enthusiastic about chemistry. He makes students love and enjoy not only his class but chemistry overall!</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2014<br>Class Name: CHE128<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Burke is probably one of the best chemistry professors at DePaul. He is always willing to help you, and is very enthusiastic about the subject. His chemistry homework is very long, but it really helps you in the end. His lectures are very clear, and he explains everything step by step in detail. I suggest taking him</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2014<br>Class Name: CHEM128<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: C-</div><div id="right"><div>Burke is a good teacher willing to help. His lectures where well explained but to much information thrown in so little time. The work loan is outrages. I was to busy trying to keep up with the homework that I did not have any time to study and actually learn the material. He needs to ealize chem is not the only class students take.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: CHE128<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>It doesn't seem like he was ready for the responsibility of teaching. Assigns a TON of work without adequate time for learning. Late for every class, even on exam days. Spends a lot of time repeating himself, when time is short. Overall, he doesn't seem to know what he's doing. Try not to take him.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2013<br>Class Name: 128129<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class can be an overload, lots of online homework, but the professor is willing to help as much as possible. I prefer him in lab because that's where he seems the most comfortable and willing to help. To to pass this class you really have to try and get all the online homework done read the book before or after class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2013<br>Class Name: CHEM128<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Burke teaches way to fast, and to couple with that he also teaches as if his students know everything and are as well informed as him. He expects you to do alot on your own, and his office hours are horrible, only 2 hour windows , 2 days out of the week. and even when there, there are already people being helped. i would steer clear of burke</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2013<br>Class Name: 129<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>While the workload is really heavy, Professor Burke loves what he teaches and he's incredibly knowledgeable and eager to help. If you're willing to put in the effort, he'll help you out.</div></div></div><div id="container" class="review"><div id="left">Date: 10/03/2013<br>Class Name: CHEM128129<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Mr Burke needs to realize that chemistry is not the only class we have and it is definitely not the most important one. Assigning extremely long homework gets in the way of every other class. He needs to realize we have lives outside his class!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2013<br>Class Name: CHE133<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Burke needs to take a chill pill.  He thinks everyone aspires to be a chemistry superstar and that we all have hours and hours to devote to his lab reports.  He grades as though he's getting paid bonuses for each point he marks off of your paper.  One of the pickiest professors I've ever had.  I would stay away from his chem lab class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

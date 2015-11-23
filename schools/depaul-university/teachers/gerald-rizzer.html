@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Gerald Rizzer</h1><hr><div><h2>Overall Quality: 4.04<br><br>Helpfulness: 4.07<br>Clarity: 4.0<br>Easiness: 4.14</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/25/2013<br>Class Name: MUS100<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Mr. Rizzer gives boring lectures, BUT he teaches the exact material he puts in his exams. You WILL learn in his class and WILL get a good grade if you get past the fact that he has boring lectures. Oh and he wont say anything if you chose to be disrespectful and pull out your phone to mess around right in front of his face (tip for the kids).</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2012<br>Class Name: MUS101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I love classical music, but was board to tears by this mans teaching. I hated his teaching style, we just did the same thing again and again without any discussion of why or what was important about learning it. He writes on the board in crazy short hand that he never explains. Very unpleasant experience. He makes a huge fuss if your late.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2011<br>Class Name: MUS100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>EASY A! His classes are extremely boring, but everything he goes over in class is on his exams so if you want to get an A you need to go to class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: MUS101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is nice guy. No text book. It is boring class but pretty good grader.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2009<br>Class Name: MUS100<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>worst class ever! there is absolutely no direction, no textbook. randomly scribbles on the board and expects you to know every little aspect of the music structure would not recommend for an A&L requirement especially if ur not into music theory</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2009<br>Class Name: MUS100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very, very laid back professor.  He is very knowledgeable in regards of music and he is a pro in the piano.  Do not take him in the mornings, though...with him playing in the morning, I often found it hard to stay awake.  If you want an easy A in the liberal arts domain, I strongly suggest to take this class.  You wont regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2007<br>Class Name: MUS100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's a really good professor, and I enjoyed taking his class. It reminded me of those music classes you take in middle school/high school. The class was interesting, the tests were easy. Definitely an easy A to fill up your Arts & Lit requirement.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2007<br>Class Name: MUS100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He knows what he's teaching and you can really tell that he likes music.  This might be a hard class if you don't attend since there is no textbook.  Go to class, then you'll get an A or B.  If you don't go to class, then you'll probably do very poorly.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: MUSIC<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I thought this class was kind of hard.The take homes are easy and the in class exams are not bad.He is great at the piano and really educated in music.The class seems really long when you are in there though.You have to attend a concert and then write a paper about it.At times it can be a stressful class especially if you dont know musis terms well</div></div></div><div id="container" class="review"><div id="left">Date: 07/04/2004<br>Class Name: MUS100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I'm not sure if Rizzer read his ratings on this site, but he was harder than represented. He wasn't difficult, just harder than I anticipated. The final was fairly taxing (listening to music and writing EXACT music definitions), but the paper was easy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2004<br>Class Name: MUS100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Rizzer was a very laid back professor. There were 2 take-home listening exams and 2 in-class exams, which were easy, 1 paper and 1 final.  He's very knowledgeable and very talented with the piano.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: MUS102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Rizzer is a great Prof.  very relaxed Prof, and knows his subject material very well.  Go to class, and do the major assignments.  By attending you automatically get a B!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2004<br>Class Name: MUSIC<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This was an easy class.  Somehting you take just to get that one credit.  Never any homework.  There are a couple of easy tests and a final, the paper he makes you do is hard but just going to class well get u a b.  He does take attendence.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2004<br>Class Name: MUS100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The easiet Music professor ever get A&L out of your way by taking his class. Takes attendance but has easy course of only 2 tests, 1 final and 1 paper. Very thorough will explain concepts and expect you know them for the exams. Get a B by going to class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

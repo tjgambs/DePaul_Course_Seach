@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Samuel Talcott</h1><hr><div><h2>Overall Quality: 3.23<br><br>Helpfulness: 3.38<br>Clarity: 3.08<br>Easiness: 3.03</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/02/2008<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>this class was the most boring class every its the one class you wake up and dread going to it, the whole time your just checking the clock. reading consumed my shedule and topic was horrible phil of races. teacher was nice and class was easy but the class was a pain in the butt big time</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2007<br>Class Name: PHIL101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>GREAT PROFESSOR. IT'S PHILOSOPHY, SO OF COURSE YOU HAVE TOO READ, BUT HE EXPLAINS EVERYTHING SO THROUGHLY THAT YOU WILL NEVER BE LOST. I RECOMMEND HIM.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2007<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy Class. Cool Teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2007<br>Class Name: PHIL100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>starts off as a strict teacher but over time got leniant and an easy grader.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2007<br>Class Name: PHL361<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>There are a tooooon of readings, but it's impossible not to get an A. i didn't pick up the book once, but the class discussions helped incredibely. Just pay attention! He is a great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2007<br>Class Name: ISP100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The subject matter, medicine and culture, was something new to me and turned out being pretty interesting. Lots of assigned reading, some of which is pretty dense, but he did his best to make it clear. As long as you do the work and readings with some effort, show up to class, you will do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2006<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>:-)</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2006<br>Class Name: PHI100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Pretty cool, if you ask me.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you want to take an easy class, don't take this one. It seems like everything is easy, but then--wham!--you start to get your grades back. Eek! Don't take this class unless you want to really work. Participation is important.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2006<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ok the class wasn't that interesting. but com on. its philosophy. i mean he did his best to keep us awake. He's a cool and smart guy.He assigend some very complicated readings but i barely read in that class and managed a B. there's just 2 esays and an essay final. u just gota work your ass of on those 3 essays you'll be fine. Even if u dont read.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2006<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He has no clu how to explain the material. Really i think he is too a smart for his own good. I really did not learn a god damn thing from him. But the readings he assigned were hard but if you read them a few times you might get it. Just show up, take his quizzez, do the work and you will easily get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2005<br>Class Name: PHL101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Granted, the class itself was very boring, he made sure to explain things thoroughly if someone didn't get it, and overall it turned out to be a good class, though i wouldn't want to take another philosophy class</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2005<br>Class Name: PHILOSPHY<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really hates this class. one of worst classes i ever took but i mean it's nto teachers fault. theres nuthin he can do aobut it. It's the subejct that sucks not the teacher. he's a cool guy and he tries to make it as easy as possible for us and lets us do a take home test. Just subject very very very very boring. highly dont recomment takingthe cl</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy is a little anal about things, but if u do it his way (not hard at all), u won't have any problems. Lots of reading, and journaling (pointless), but tha's part of the class.  Kinda boring but if u participate, u'll get on his good side...which means a good grade for u. I would take this guy for this class over other professors any day</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: SOPHSEMINAR<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he's a cool guy and very very smart. there's way too much reading,and its not interesting. i wouldn't take him again</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2005<br>Class Name: PHIL101<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy is really good and is very helpful. Definitely worth taking for intro to philosophy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: PHL228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I found this to be an easy class..almost blowoff! There was a lot of reading to do but I honestly never opened the books. He discussed the chapters. Students also presented the chapters each class period. The quizes and final are take home and if you take notes you will be fine</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2004<br>Class Name: SOPHSEMINAR<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took him for my sophmore seminar and was not impressed at all. I learned nothing and majority of the work we did seemed pointless.  I was better off not going to class because he confused me more after he discussed the readings.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2004<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class wasn't bad.  Two essays, four homework assignments and participation.  I hardly participation and got a B+.  Lectures are boring and its a lot of reading.  Attendance is mandatory.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2004<br>Class Name: PHIL200<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ok, if you want to read 30 plus pages do them. (I sincerely put in an effort but then gave into the ease of sparknotes.com) His quiz method was b.s**t. He is nice when you have a conversation, but he fails at keeping interest for the rest in class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was such a great teacher. If u raise your hand and say something, anything about the subject matter, he really gets into it and you wont get bored at all. He is helpful when it comes to the exams,he tells u wht u need to get an A and he's soo cute!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: PHILOSPHY<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The teacher is REALLY boring just make sure you go to class because attendance is MANDATORY. Tests are essay questions and he goes over the questions that will be on the test with the answers so you should have no problem.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2004<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This wasn't a bad class at all, it was really really boring. You get 3 in class essays, and he gives you the tipics before hand. Make sure you add your own opinion into the essays you'll definitely get an A if you do that. I never read and still got an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He really is a nice guy and was helpful when I needed it.  Very quick e-mail response.  The lectures are really boring but then again, it is Philosophy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>well hes really boring & when he talks its like hearing monotone words because his voice NEVER changes once..hes really really nice though and its sad watching noone respond to what he says.. 3 tests-write what your own opinions at least youll geta B</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>nice guy just boring</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice, cute professor. All you gotta do is pay attention and read the material.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2004<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sam was a cool guy.  Philosophy was a hard class but he teaches it well and in great depth.  If you pay attention in class and participate with the discussions then you will get a good grade.  3 essays and journals.  I was 17 and I got an A.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2004<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Was a cute, nice teacher; Had to write 5 pages a week in a journal;  3 essay exams-final was take home;  participation counts</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2004<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>BORING! DULL!  Worst class I have ever taken.  Subject matter not very difficult, but this prof makes staying awake way more challenging.  Monotone, condescending...did I mention boring.  Avoid him!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2004<br>Class Name: PHI100<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>personally didnt think the class was too tough, although i can see why others complained. friendly teacher that seems to know a lot about the subject matter, but i wouldve struggled without &quot;online help.&quot; very demanding class without lenient gra</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2003<br>Class Name: PHIL100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dont take you will not do good</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2003<br>Class Name: PHI100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2003<br>Class Name: PHIL100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This teacher was very rude and even though I had 78 points out of a 100 he would not bump me two points, does not care about any one and likes to play favorites, Be carfull dont take him!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2003<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Sam is a young and cool guy. He really wants the class to be engaged in the discussions. You have to work and pay attention to get a good grade in this class. I was pleased especially since I was hesitant about taking PHL.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2003<br>Class Name: PHIL100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thought that he was a very easy teacher. If you are the person who doesnt like to read and study on your own then he is not the right teacher for u. You have to participate to get an A. GREAT SUGGESTION: do NOT take this class in the morning....</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2003<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is one of those teachers that are really nice but you also want to hate him just dont take him is my suggestion</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2003<br>Class Name: PHL200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good times...cute teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2003<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

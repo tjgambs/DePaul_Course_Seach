@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Charles Sykes</h1><hr><div><h2>Overall Quality: 1.53<br><br>Helpfulness: 1.47<br>Clarity: 1.6<br>Easiness: 2.13</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/18/2015<br>Class Name: CSC453<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>I'm not even finished with the course and feel that compelled to say bad things about him. WORST PROFESSOR EVER. He just reads from PowerPoint slides. Students ask questions, and he completely dismisses them. He sounds bored the whole time. On the plus side, you can get an A without ever going to class and having to tolerate his horrific teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2015<br>Class Name: CSC453<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The worst professors I have ever had, and I have had professors who have opened the text book and read straight from it. I find the lectures and assignments to be untangle and unclear. Most of the work from the assignments, I found that I had to look up how to do it. I have not learned in this class. I had to teach myself databases and SQL.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2015<br>Class Name: CSC435<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's an easy A, but a terrible professor. He uses dated slides, coding practices, and software. On top of that he's insanely boring to listen to and doesn't thoroughly cover his topics. I'm very disappointed with the class, especially since it was my first databases course and I feel almost as inept at it as I was going in.</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2015<br>Class Name: CSC453<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Useless lectures that always end early and have almost nothing but powerpoints, useless in terms of helping via email and then acts irked that you even contacted him, assignments are vague, you will have to teach yourself everything, your view of databases will be tainted for the rest of your life; the worst I've ever had and the worst at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2015<br>Class Name: CSC453<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Useless lectures that always end early and have almost nothing but powerpoints, useless in terms of helping via email and then acts irked that you even contacted him, assignments are vague, you will have to teach yourself everything, your view of databases will be tainted for the rest of your life; the worst I've ever had and the worst at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2014<br>Class Name: CSC309<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you are someone that did not know C++ before hand and actually trying to learn it, DO NOT TAKE THIS CLASS. Dude dont know how to teach at all, all he does is read off his ppt which is not that great at the first place.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2013<br>Class Name: IT240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>TERRIBLE. Cannot follow at all what the teacher is trying to teach. Homework & Exams are 50% each. Homework is confusing and the Exams are worse. Notes are outdated. Tutoring doesn't help, he tells them to not help on some problems. Dont bother asking for help, he'll respond with "Look at the slides and post questions on the student forums"DONTTAKE</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2013<br>Class Name: IT240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I've not met any professor worse than him in my school years. -Exams & Notes are outdated. -Does not explain material adequately. This also reflects one-on-one conferences and Discussion boards. -Will tell tutors (if DB tutors are present) to NOT help with certain problems. -Assumes you know the material. -50%HMWK/50%Exams(2of5picked). DO NOT TAKE.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2013<br>Class Name: IT240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor was simply awful. Assumed everyone already understood the material in class even though it was an intro course; Isn't clear, isn't helpful, speaks so fast you barely understand what he's saying. He has so many errors in his exams. I'm very disappointed that I was stuck with him for class. You're better off teaching yourself from the book.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2013<br>Class Name: IT240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Boring, unhelpful, lectures too fast, and responds with "look at the slides" when asked for help.  Simply does not treat this like an intro class. STAY AWAY.  Worst professor so far at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 09/18/2013<br>Class Name: IT240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I am at a loss of words.  I can't seem to wrap my head around as to why this guy is still teaching at DePaul.  He moves way to fast and just assumes that students know everything that he is saying and is simply not interesting.  If you want to learn, choose a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2013<br>Class Name: CSC233<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Avoid taking this course, professor doesnt teach well and you are left looking confused on the tests. The first one i managed to teach myself, but the other two were hard and he didnt give us enough time to complete them. I was exited going into the course, but i left hating this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2013<br>Class Name: CSC309<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Moved too fast, and assumed all students were intermediate in c++, while half the class has only just finished Python. I would not advise students whom have no expereince in c++ to take his course</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2012<br>Class Name: CSC309<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Look at his reviews on depaul's site - his lectures are 30 years old, doesn't know c++. Assignments don't match the book. at all. Wanted to learn c++, will have to do another way, since it's important for my major. AVOID!</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2011<br>Class Name: IT240<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He teaches right out of the book, all his classes are just review of what you read. The first exam was just a copy of another exam from the book. He was only avalible one day out of the week; usually when he assigns homework so no one will see him but have many questions. Do not take this teacher for this class; you would be lost later.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2004<br>Class Name: CSC224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher, explained everything well and really knows what he is talking about exams are self explanatory and open notes and books since its a programming class and he explains the homework and goes over them too and there are pretty easy.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Donna Adler</h1><hr><div><h2>Overall Quality: 2.38<br><br>Helpfulness: 2.25<br>Clarity: 2.5<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/18/2010<br>Class Name: MGT228<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Yikes! Watch out if you don't have your textbook on the first day, you'll be DOOMED! She basically rants about the problems with non-religious business people and the incongruities of society, in between giving you piles of homework. Way too much work for a Gen-Ed! Run!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2009<br>Class Name: REL228<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great teacher if you want to do a full 4 year degree worth of work in a ten week meaningless class.... i spent 3 days straight doing her case study and 2 take home final exams that were all due the same day on top of having to read endless amounts of material</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2009<br>Class Name: REL213<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The only way I could have seen myself passing this class is if it had been my only class of the quarter. Her take-home exams took me over 30 hours each. She then yelled at us for not sitting down and committing to our homework.I would never recommend her to anyone. I advise people to stay far far away from her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2009<br>Class Name: REL213<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She grades way too hard, expects way too much reading to be done, and doesn't go over all of the reading materials. The take home exams took HOURS and HOURS to finish, and even after all that hard work, the grades I received didn't reflect that. I tried so hard, and I still did terrible.</div></div></div><div id="container" class="review"><div id="left">Date: 01/27/2009<br>Class Name: MGT228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Everyone who says she is a bad teacher should look at themselves, and should start doing some real STUDYING! For all the people whining about reading 100-200 pages, here's the truth. I did not do any reading at all the whole quarter. But I did great amount of effort in writing the 3 papers in the quarter, and I ended up getting B+ for the course. A</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2009<br>Class Name: CTH205<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I thought she was a fantastic teacher. The reading was intense and she spoke a mile a minute but she really knew her material and gave her all in the classroom. As long as you can take notes you will be fine! I would recommend her. =]</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2008<br>Class Name: MGT228<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is a nice lady.But she has unrealistic standards her students. You are expected to do on average 140 or more pages of difficult reading from one class to the next. She constantly gives her oppinions on how horrible our economy and the school system is. I would not recomned taking this teacher to anyone who doesnt want to be a lawyer.</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2008<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Haha..The previous comments are really funny, and very true. She expects all the reading to be completed for every class, which is honestly impossible unless you are taking no other classes, do not have a job, and have no life. I have no problem working hard but I mean it when I say its impossible to meet her expectations.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2008<br>Class Name: REL228<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>WORST PROFESSOR EVER!! TOO MUCH WORK TO DO!! WHAT IS THIS LAW SCHOOL&#63;!&#63;! SHE MAKES YOU BUY OVER 5 TEXTBOOKS AND IN ADDITION TO ALL THAT SHE GIVES YOU SO MANY HANDOUTS! SHE EXPECTS YOU TO READ OVER 350 PAGES PER WEEK! SHE'S CRAZY! DON'T TAKE HER UNDER ANY CIRCUMTANCE! TERRIBLE TERRIBLE TERRIBLE! OH AND SHE TALKS TOO MUCH! TERRIBLE TERRIBLE TERRIBLE!</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2008<br>Class Name: REL228<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible Professor...too much work without the reward and a completely narcissistic demeanor to her students and her peers.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2008<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Worst instructor I have ever had in my years of school.</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2008<br>Class Name: MGT228<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is terrible! I have spent an hour searching for a new section or class. She expects us to read around 200 pages per week and she asked us to buy 5 text books! I'm sorry but this is a gen-ed class, not law school!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

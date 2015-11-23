@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Stanislaw Buchcic</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 3.0<br>Clarity: 2.1<br>Easiness: 2.9</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/23/2015<br>Class Name: MAT150<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There's a quiz every week and they're usually only multiple choice 10 questions, which is tough on the grade. He has a really thick Polish accent so trying to understand lecture is basically playing connect the dots with the formulas he writes. However, he's very understanding & kind and will help you if you go to his office hours. </div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: MAT137<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class, and would have been enjoyable if weren't for the disruptive middle school minded kids in our class. Professor is always there to help and explains well. Has a German accent but I could understand his speech.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2014<br>Class Name: MAT137<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Buchcic's class can get pretty tough at times, especially if you're not a math person.  But it is definitely manageable.  He really does care about his students and wants you to do well.  Just show him respect and he'll respect you.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2012<br>Class Name: CALC1<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He might not be an easy professor..But.. he is soooooo helpful! always available if you need help. He always asks if I will be taking calc 2 with him! very nice man. make sure to work really hard!! and you will get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2012<br>Class Name: MAT131<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I enjoyed having this professor! He can be hard to understand at times but not impossible to understand. He wants his students to do well in the class and will answer any questions you have. He drops the lowest quiz score at the end of the quarter and you are able to retake your lower score test before finals if you didn't have absences.</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2011<br>Class Name: MATHALGE<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>AVOID this class with the professor. I literally had to teach myself online with the online homework. Good thing I am pretty god at math if not I would have so failed this class. And the math book I bought was useless we didn't even use it, so I wasted my money for nothing.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2010<br>Class Name: CALC245<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>One of my favorite professors. Very fair, helpful. Knows what he's talking about, and alot more when you ask questions that most professors couldn't even guess at.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2010<br>Class Name: MAT100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This professor was horrible!!!!! I have taken math classes at other institutions but this professor was impossible to understand. He was not very helpful, he was disorganized, and would not answer questions correctly when asked for help. I pretty much had to teach myself. AVOID THIS TEACHER! AWFUL!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2010<br>Class Name: MAT100<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was my first college class as a freshman, and I was slightly upset. He's a really nice person don't getme wrong, and he means well, but YOU CAN'T UNDERSTAND A WORD HE SAYS! It's very hard to comprehend him, and you basically have to teach youreslf everything.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2010<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Heavy accent, confusing, somewhat disorganized. If you're looking for a prof who will guide you through the problems and help you learn how to solve them, then he's not the guy for you. But, if you're willing to teach yourself by using the online tools, then take his class. I'm not very good in math but I was able to pass w/a B by teaching myself</div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2010<br>Class Name: MAT101<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good guy. It is hard to understand him but he will go over any of the material in detail. Allows to drop lowest quiz score and offers extra credit for going to the board. All of the homework and quizes are online. Overall, good guy. If your taking him you may want to sit in the front tho. It helped me.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2009<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is difficult to understand, and  speaks quietly. I taught myself everything in this class and the homework load is unnecessarily high. He gives extra credit and drops lowest quiz grade, Not a bad person, but not a great teacher</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2008<br>Class Name: MAT101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>hard to understand him when he speaks. counts attendance. allows to drop lowest quiz score. hw n most quizes on line n able to retake them. overall decent professor.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2008<br>Class Name: MAT131<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Couldn't understand a word he was saying.... thought he was speaking his native launguage half the time. Nice guy... but a really bad teacher. The only good thing about his class was that we could use our calculators and were allowed to have formula sheets on the exams.</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2007<br>Class Name: MAT101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i really liked this professor. i had an 830am class every mwf and thought that for a math class it was really easy to sit through. he writes down everything and always makes sure the students understand. if the students dont ask them to go over problems, its their fault if they cant do the math because he goes over EVERYTHING. overall, a good prof.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2007<br>Class Name: MAT131<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Hard to understand most of the time. He really does care for his students.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2007<br>Class Name: MATH131<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is really hard to understand... does not explain ANYTHING!!! If you need a teacher to help you understand... do not take him!! he gives a lot of hw, but gives extra credit and drops lowest grade. Counts attendance too!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2007<br>Class Name: MATH101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>if you are like me and like to be able to understand what your professor is saying, do NOT take his class!! VERY HEAVY AND HARD TO UNDERSTAND polish accent! I get sooo frustrated which makes me not want to go to class cuz i could prob. learn more sitting @ home teaching myself...except u have to go...so it makes the whole situation even worse!</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2006<br>Class Name: MATH130<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

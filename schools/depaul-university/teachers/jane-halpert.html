@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jane Halpert</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.2<br>Clarity: 4.5<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: PSY340<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: Not sure yet</div><div id="right"><div>She isn't a very nice prof, so if you go ask her a question don't expect much. Her notes are different than the book and can cause confusion. Lectures are boring and she's an odd duck. Her TA is like her as well. If this class is required, wait for a different prof</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2015<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I have always DREADED math and heard that stats was particularly awful, but this class was surprisingly enjoyable and clear. I kept waiting to get completely lost, but it never happened. Dr. Halpert went out of her way to make sure we understood the material, and she was very sweet. Go to class every day though, she doesn't post the powerpoints.</div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2015<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Dr. Halpert is adorable, hilarious, and my ideal teacher. She is always available for extra Help. Offers TONS of extra credit. Explains really well. Doesn't require attendance. And will bake you cookies. 1010 would take this class again. I took stats with her and I hate stats but loved her class</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2015<br>Class Name: PSY340<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Professor Halpert is a good teacher overall, and is very eager to help anyone who needs it. The only thing to watch out for is she can get a little snippy if you ask her redundant questions, but otherwise is usually more than happy to accommodate. Make sure you get a copy of the textbook because the tests are open bookopen note.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: PSY340<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Please do your best to avoid her. She is very rude and intimidating. She will answer each question with hostility and will make you hate whatever class you take with her. Save your time and money and avoid this prof.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2013<br>Class Name: PSY340<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have no idea where the good ratings are coming from for this professor. Grade is 1/3 homework, 1/3 midterm, 1/3 final. Homework is relatively easy and I did well, however the exams have very little to do with actually understanding statistics and instead minute details she includes in her PowerPoint slides. Would not recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: PSY381<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The class average on our first exam was 77%. No study guide. Expects you to read everything. I am not sure where all the nice comments are coming from, but she is not as easy as they say here. She may be good for stats but she didn't know how to teach PSY 381. Overall nice but strict teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2012<br>Class Name: PSY381<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very boring class. Strict on attendance! Go to every class. Don't come late or make noise while leaving. Read the book! Her lectures are easy to zone out from but the amount of info you get from just being there should be enough. Easy assignments just turn them in on time! But the tests were hard - lots of information. </div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2010<br>Class Name: PSY340<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This is a ridiculously easy class.  All tests are open book and open note.  The downside is that the professor sometimes treated us like high school students and can sometimes be condescending. If you want a GPA booster, definitely take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2010<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very nice professor, easy to understand, easy A if you do your homework. She offers extra credit but only if you do all the homework.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: PSY240<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>EASY A: Three tests (non-cumulative)open book/open note, 6 homework assignemnts (only 5 are mandatory- the other counts as extra credit), teaches slowly so you will understand. Take her hands down for an easy A. If you don't get something GO TO HER OFFICE HOURS, she'll help you out 100% no doubt. Fair grader.</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2009<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is an I/O psychologist, and very enthusiastic about Stats. Everyone says stats is hard, she makes it so easy. Open note/open book for all three tests. Homeworks are easy. She is a good teacher. No Hesitations, take her.Her grading is above and beyond fair. She wants you to succeed, and enjoy stats as much as she does. :)yayaya</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2008<br>Class Name: PSY240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's a great teacher! she makes the material so easy to understand. her notes are so simple! all you have to do is come to class to get the notes and you will pass with flying colors! she knows how to teach stats extremely well! take her, go to class, and you will get an A!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2006<br>Class Name: PSY<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she always want to help you ... she wont hurt you and shes very nice... take her for sure</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: STATS1<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a great teacher. She bends over backwards to make sure students have a firm grasp on the material. I would highly recommend her. There are 3 tests and weekly homework assingments. She even offers extra credit. Easy A if you know a little bit of math.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2006<br>Class Name: STATS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>shes very helpful and makes things clear but its  very easy to get bored in her class. take good notes, and if you need to use the book cus its open notes/book.  she's always there to help to just stay awake and look interested.</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2005<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>halpert is awesome! take stats with her and u will get a good grade, and come out acutally understanding it. she is so clear, any dummy in math can get it. 3 tests, all open note/book. extra credit avail. im even going to take stats II with her as an elective just because shes a great teacher. boring material tho, but she cant help that.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2005<br>Class Name: PSYSTATS<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was a funny lady. The class was boring but he stupid hummor made it bareable.  Go to class and pay attention.  Take good notes b/c it's open note/open book.  I didn't buy the book though and I got an A.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2005<br>Class Name: STATSI<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>A very sweet lady, but just...so...boring. She kind of reminded me of Julia Child. Regardless, I learned a lot in her class, which is the point, but LAWWWWWD. Boring.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2005<br>Class Name: PSY240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>As someone who HATES math, Halpert actually made it livable.  I was skeptical about what everyone else was saying, but low and behold they were right.  She explains EVERYTHING, if you go to class and take notes, you'll be fine on the tests. If you have a good grasp on stats and math she'll probably be boring to you.</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2005<br>Class Name: STATS<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>very smart lady!</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2005<br>Class Name: PSY340<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you're gonna take stats do it with Dr. Halpert. She teachers you how to get through SPSS, her lectures are clear and her exams are not that bad. I would reccomend her for stats because she will def. help you through it.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Attention Psych majors!  If you hate stats, take this woman!  She explains things so well and makes statistics as painless as possible!</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2005<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very easy teacher, open book open note tests, but you almost don't need it because the math involved is very basic and she makes things very clear.  very very nice lady</div></div></div><div id="container" class="review"><div id="left">Date: 05/10/2005<br>Class Name: PSY240340<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i was once worried about having to take stats. however, dr. halpert is fantastic at explaining stats. however, she doesn't explain the applicability of some things. this may hinder you if you are planning on doing research in your career. chances are, you will have to figure that out on your own.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2005<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome professor for statistics. Very helpful and cares that you grasp the material. Always willing to help and explain.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2005<br>Class Name: FACTORANALYSIS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She made matrix algebra accessible and has absolutely no ego about it.  Made an 8:30 STATS class worth going to.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2005<br>Class Name: STATS1<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She explains everything in painful detail - but that's a good thing! Just pay attention in class and  you'll have no problem!</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2004<br>Class Name: FACTORANALYSIS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Made difficult subject easy to follow.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2004<br>Class Name: PSY100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very awesome!</div></div></div><div id="container" class="review"><div id="left">Date: 09/10/2004<br>Class Name: STATS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher.  YOu will not find an easier stats teacher so I would recommend her.  Very easy grader</div></div></div><div id="container" class="review"><div id="left">Date: 09/01/2004<br>Class Name: STATS<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very boring class,i could hardly stay awake.  She was very unhelpful outside of class.  Yet she is a nice lady who explains things over and over during class and who cracks a few bad, yet endearing jokes.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2004<br>Class Name: PSY105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very good teacher. She explains things as many times as she needs to and grades easily. The midterm and final are also really easy!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2004<br>Class Name: PSYCHOLOGY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good teacher</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2004<br>Class Name: PSY105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is a very good professor and is an easy grader. She also does not give many assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She tries to make stats worthwhile</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: STATS<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's cool</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2004<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very good teacher, you learn a lot and she is willing to help and supplies a tutor. Easy grader and understanding</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Stats is fun&#63;  I didn't think so either, but I would deffinately recommend Jane, she is great.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

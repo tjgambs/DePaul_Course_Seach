@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael Robinson</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.63<br>Clarity: 3.38<br>Easiness: 1.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/21/2013<br>Class Name: ACC500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i thought he was very clear, showed step by step how to execute on the problems - as long as you practiced problems in book, you will do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2012<br>Class Name: ACC500<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The professor knows his stuff. He keeps the lectures as interesting as possible (which is hard in accting) with anecdotes from his experience prior to teaching. He teaches straight from the book, which isn't ideal, but like any class, it is crucial to keep up with the material. The exams were somewhat difficult, but he grades them very fairly.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2012<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Robinson was awesome. Finally a professor below 50 who is funny and smart and gets what its like trying to understand this stuff for the first time. He went out of his way to make sure everyone participated and understood the material. Average grade on the exam was 90%! Great guy, great class. Good work DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2012<br>Class Name: ACC500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Robinson definitely knows his stuff when it comes to Financial Accounting.  I thought this class would revolve more around understanding and interpreting financial statements, not around creating them.  The tests examine your accounting skills, not your ability to read/interpret financial statements.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2012<br>Class Name: ACCOU1<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>My friend and me saw the comments below and were shocked. It shows that a the quality of a professor is different for different people. I thought he was great. And I think its strange that someone said there was no homework. There was no graded homework, but there was plenty of work in the chapters assigned. Great professor.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2012<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Not sure what the other reviewers wanted from an accounting class. He set clear reading assignments, had clear expectations, and was logical. There was homework every week, he always responded to my emails, and made time to see me after class. I thought he was funny and nice.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2012<br>Class Name: ACC500<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Avoid him!!!He's just terrible prof!His lectures are by the book only,he doesn't answer you questions clearly and doesn't respond to e-mails.His final and midterm are completely different from what he says,some questions are just unsolvable.Tough grader and doesn't seem like knowing accounting himself!The worst prof I had so far!Don't take him!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2012<br>Class Name: ACCT500<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Of all the classes that I have taken at DePaul, both undergrad and graduate levels, this was by far the worst and hardest. He assigns no HW. No classwork. 25% of grade on the midterm and 75% of grade from the final. No study guides were given and the exams were closed book, closed notes. He seems like a nice guy, but not a good educator in my opin.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

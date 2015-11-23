@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Charles Drehmer</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.8<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great instructor. Cares about his students and likes participation. Lectures are interesting and the material is not that difficult. There's a lot of group work, but it's mostly in-class. Get ready to give presentations and work with others. </div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2015<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>This course is one of the most useful ones you will take at DePaul. Professor Drehmer is an incredible professor and the skills you learn for business communication can be used in any setting. There is work outside of class and attendance is important. As long as you make an effort and show up to class you will do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2015<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is a great professor. There is a some work you have to do, but he lets you redo it if you are not happy with your grade. You learn a lot about yourself while enjoying the class. He is very funny and relates things to real life as much as possible. Would highly recommend taking him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2015<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I would absolutely  re-take him if I can !! Prof Charlie is one of those inspirational professor that make you want to learn more about the class and you'll defientely learn something about this class.  Plus he gives some amazing and funniest lecture !</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2014<br>Class Name: MKT202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Charlie is a great professor and will work with you individually when you need help. Classes include videos and Excel labs. Class is broken into group teams to work on survey and results for real life client, providing opportunity to present findings in a professional manner. Great life experience! </div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great class. This is the one class I actually looked forward to going to.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2014<br>Class Name: MKT202<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Good class. I had no real experience with Excel but picked it up pretty quickly. Almost every class has an Excel lab, and you can leave whenever you finish. I admit I was pretty slow but I ended up with an A. The final looks long but was easy. He's a nice guy. The only thing is I think this should be a 4 credit class, but that's not up to him. </div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2014<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take him, never a dull moment in his class. </div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2014<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the best Professors at DePaul. He know his stuff and class is fun!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2014<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Very clear on expectations and very helpful. MKT 376 consists of 2 group presentations and 2 short individual presentations (which are done in a group of 3-4 other students). Other assignments are not bad as long as you follow directions. Don't skip class and don't turn in assignments late. Do not buy a book - it's not needed/used.</div></div></div><div id="container" class="review"><div id="left">Date: 07/25/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the best professors if not the best at DePaul. Knows his stuff and class is a blast. Won't regret taking him!</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2013<br>Class Name: MK1376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Fantastic class! By far my favorite class and favorite professor at DePaul. He is pretty tough on the attendance policy and cell phone policy, but it's only because he really cares about his students. Overall, you learn a ton and you get to choose your group for projects. I recommend him to anyone who has the chance to take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take this class! He is a great professor.  He keeps the class really interesting and he is an easy grader.  Hardly any homework and a couple team projects. He almost always lets us out early for being a three hour class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class is very easy. Even if you're a bad public speaker, he grades based on the technicalities of the speech, not how well you are at public speaking. He is very good at giving advice when giving speeches. Not only do you learn public speaking, but you learn the necessary communication skills for business. TAKE THIS CLASS!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2013<br>Class Name: MKT202<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It is true this prof is super sweet and really wants to help his students. He clearly enjoys teaching but doesn't clutter us with meaningless info - only most important things. Classes are a breeze if you do well on Excel labs.</div></div></div><div id="container" class="review"><div id="left">Date: 12/17/2012<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Charlie is the best professor I have ever had. He is very enthusiastic about the material and his students. Teaches you techniques to use in the real world!This is a must take class!</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2012<br>Class Name: MKT202<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is very helpful in a subject that could potentially be very difficult. He doesn't respond to e-mails, but is very prompt during class time. It's a class that no one wants to take, but since it's mandatory definitely take it with Charlie. Group project, weekly labs, and some surveying. Work hard and an A shouldn't be hard to get.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2012<br>Class Name: MKT202<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Drehmer is very nice and always willing to help in class. I tried contacting him via email a few times and did not get a response. The class is all excel labs in class. He really knows what he is doing, but the class is pointless. You have a final lab to be as well as a group project for our client. Nice guy, but boring and useless class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2012<br>Class Name: MKT202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super easy class and super nice professor. Friendly and helpful. Good sense of humor. Take a class w/ Charlie!</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2011<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fantastic teacher. He really cares about the subject and his students. He can be tough at times, but it is a great learning experience. As long as you are there on time, act professionally, and do all your assignments you'll do great. You will not regret taking this class with Charlie. He's the man.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2011<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take a class with Charlie if you can! He's only part-time, but his passion for the subject is contagious. Attendance is vital, but you won't want to miss class anyways.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

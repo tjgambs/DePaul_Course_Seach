@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Harold London</h1><hr><div><h2>Overall Quality: 3.67<br><br>Helpfulness: 3.57<br>Clarity: 3.76<br>Easiness: 4.38</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/07/2014<br>Class Name: TCH495<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Hes been the worst professor I have ever had, and his class has been the biggest waste of money, and that's saying something. He gives personal anecdotes that are not helpful in any way, gets annoyed if you question his way of thinking. Don't take this class if you are a girl. He says very inappropriate things, and you wont feel comfortable.</div></div></div><div id="container" class="review"><div id="left">Date: 04/23/2009<br>Class Name: TL425<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor London is a nice guy with good intentions.  He does care about the well-being of his students, but this frequently derailed the class.  We spent a lot of time on personal stories and student issues rather than actual content.  He means well, but I didn't get a lot out of this class...Easy assignments, but no real feedback either.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2009<br>Class Name: TL424<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. London is very proud of his accomplishments in education. That is the entire content of the class. Every session is a 3 hour q&a with him. This is a required class and there are important things we're supposed to be learning and practicing. Unfortunately, we got nothing. Far too high a price to pay for an easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2009<br>Class Name: TL424<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>USELESS, TERRIBLE CLASS. COMPLETE WASTE OF TIME AND MONEY. THIS MAN DOESN'T CARE AT ALL ABOUT TEACHING YOU ANYTHING. WE SHOULD GET OUR MONEY BACK.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2009<br>Class Name: TL424<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This man shouldn't be teaching at DePaul. We came to class only to listen to random stories through which he mainly tried to make himself feel important. Didn't pay attention to you unless you were a female student willing to smile for him. Class was useless, he was not helpful at all, at times even condescending. Avoid if you can!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2009<br>Class Name: TL424<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class, good professor.  Lecture/discussion may get off topic but for the most part the content is still helpful/relevant for future educators. London is a great guy and a very knowledgeable/experienced educator. In-class discussions and textbook were more helpful than the projects (probably only assigned so he'd have something to grade us on).</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2008<br>Class Name: TL424<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really bad class. Not organized at all, everything was random, many &quot;discussions&quot; not relevant at all to class. Avoid if you can.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2008<br>Class Name: TL424<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Well, THAT was a complete waste of time (and money).This class was a joke.Unless the whole point of graduate school is taking blow off courses that are basically useless.Maybe it's just me, but I would have LOVED to learn SOMETHING.If you want the easy way out and don't really care, take him by all means.This was by far the worst class ever.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2008<br>Class Name: TL422<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great guy.  Easy class.  No worries.</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2007<br>Class Name: SEC364<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class. You have to deal with lots of students whining about their experiences. His discussions are awful. You can miss 2 classes, then its some grade deduction. you need books for weekly written assignments</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2007<br>Class Name: TL425<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. London is a funny guy who is very helpful.  Sometimes class seems to have no point, but typically you can find some value in the discussion.  Portfolio, lesson planning and some teaching strategies are what you can expect.  Take him, he's great.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2007<br>Class Name: TL425<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Quirky sense of humor, but relatively fun and keeps class interesting. Lots of years experience teaching/being a principal. Hardly any use of book in class. Really not a lot of work, but projects that are relavent to the topics being discussed. Usually lets us out 30-60-min early. I'd definitely recommend him to others!</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2007<br>Class Name: TL424<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's alright, but for my money I'd like less of a salon hour and more teaching, but that's just me. He gets off topic a ton, but he's a nice guy and his expectations are low, so that's redeeming I suppose. I hate to say this, b/c it's a required course, but it's a total blow off.</div></div></div><div id="container" class="review"><div id="left">Date: 09/21/2005<br>Class Name: EDUCATION<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sweetest man on the planet with a vast knowledge of the education system.  He has taught for many and was also a principal--so he can teach you anything you want to know.  He is incredibly understanding to the fact that you have a life outside of his class, but he is one of the few teachers who makes class relevant to your life.  Take a class wtih him...I took two.</div></div></div><div id="container" class="review"><div id="left">Date: 06/30/2005<br>Class Name: SEC363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. London is absolutely the most caring and wonderful teacher I've had at DePaul. His insights into the education profession are VERY HELPFULL. His assignments are flexible and as long you do you would get an A. Take he is the best</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: SEC364<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>nice guy, fair</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: SEC363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. London was GREAT!!His insightful stories were so interesting.  His expectations were clear and as long as you complete all your assignments you show be fine.  I RECOMMEND this professor.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2005<br>Class Name: SEC363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher.  Good sense of humor.  Makes class as bearable as possible.  I RECOMMEND THIS PROFESSOR!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2004<br>Class Name: TL405<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: SEC363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. London is absolutely the most caring and wonderful teacher I've had at DePaul. His insights into the education profession are priceless. His assignments are flexible but totally relevant to your development as a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: SEC363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. London is the best teacher you will ever have.  His experience makes him useful--the only good education class I had at DePaul.  Incredibly nice, fair, and fun.  Very interesting.  Loves to hear you talk.  BEST TEACHER EVER.  sms</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

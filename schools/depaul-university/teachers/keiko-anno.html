@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Keiko Anno</h1><hr><div><h2>Overall Quality: 3.47<br><br>Helpfulness: 3.75<br>Clarity: 3.19<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/06/2014<br>Class Name: JPN103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Anno sensei is a kind and sweet woman who really does seem to care for her students and wants everyone to excel in class. However, her teaching methods aren't that great. She skips many crucial grammar points and teaches the class as if we were children. Easy A, but I would recommend taking a different teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2014<br>Class Name: JAN101102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Just love her, always be happy to attend her class. She is easygoing, kind, always smiling, cute, funny, passionate............... Easy A!</div></div></div><div id="container" class="review"><div id="left">Date: 07/30/2012<br>Class Name: JPN103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! Doesn't speak English very well but she's still hilarious and does her best to explain the material and makes sure that you understand it as well. She also brought in food for us every week as well as friends of hers that we could practice speaking with!</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2011<br>Class Name: JPN102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I will start off by saying that I LOVE her as a person.  However, I do not like her as a teacher very much.  She is a veryyy lenient grader, but is so confusing in what she is looking for. She does not teach the lessons very well! I have to go through the book and teach myself most of the lessons.</div></div></div><div id="container" class="review"><div id="left">Date: 09/25/2010<br>Class Name: JPN101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Best teacher I've ever had!!! So funny and helpful! Love her!</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2010<br>Class Name: JPN105<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE. She made me switch my major ( I was planning on majoring in Japanese but not anymore) I had 3 1/2 years experience before her and she ruined it all. Does not explain just gives answers. DO NOT TAKE HER CLASS!!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2009<br>Class Name: JPN101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Anno Sensei is a very sweet professor. She has a cute way of teaching and is funny. However, her accent is very heavy so it may be difficult to understand her. Nonetheless, she is very sincere and kind and is more than willing to offer help for any struggling students.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2009<br>Class Name: JPN310<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible teacher, avoid her at all costs!!! Does not teach at all, just gives you answers and does not explain. DO NOT TAKE HER CLASS</div></div></div><div id="container" class="review"><div id="left">Date: 08/26/2008<br>Class Name: JPN103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Wonderful, kind, and incredible teacher!! Fed our brains as well as our mouths! She is always willing to help, to come early, stay late!! She is a diligent and flexible teacher, who is always willing to help!</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2006<br>Class Name: JPN105<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Anno sensei wants everyone to get an A, she will help you outside of class, even if you didn't ask for it. she lets you know when you are doing bad. her accent is very thick so it's hard to understand the lesson sometimes but she makes class interesting with props, candy and food!</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2006<br>Class Name: JPN102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she is a sweetheart and brings food but should NOT be teaching a 100 level class. she does not speak english and it makes it very hard to understand what is happening especially on grammer. take her if you already know what's going on or have time to teach yourself otherwise avoid as a first year language student!</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2006<br>Class Name: JPN101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very cool and very nice. Food!</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2005<br>Class Name: JAP101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Teacher. Learned a lot of Japanese. The homework is fairly easy if you know the materials. She has a very respectful manner to students. She brings Japanese food too!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2005<br>Class Name: JPN101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>BOOO!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2005<br>Class Name: JPN103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Always helpful and kind.  Anno Sensei is probably one of the funest teachers you can take for this class.  She also has a knack for bringing food.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2004<br>Class Name: JPN10110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she was so helpful you had no choice but to learn.Had so much fun in this class.I would recommend anyone to take a class with her.teaches language and culture.Brings yummy food also.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2004<br>Class Name: JPN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Anno Sensei is an excellent professor.  She teaches in Japanese but when needed explains in English.  A very positive personality, and easy to work with, if you put effort into the class.   As mentioned earlier, she does bring food for the class.</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2004<br>Class Name: JPN313<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Disorganized and ineffective.  Often taught us or showed us the same things over again.  A generally lenient grader, but not the best professor if you're actually interested in learning Japanese.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2003<br>Class Name: JPN100<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>lenient teacher...always gives us food...kinda hard to understand...</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2003<br>Class Name: JPN103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Best professor in Depaul..always prepare some japanese food to the class:)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

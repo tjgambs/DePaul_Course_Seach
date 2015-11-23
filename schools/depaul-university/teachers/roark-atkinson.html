@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Roark Atkinson</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.12<br>Clarity: 2.88<br>Easiness: 2.72</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/20/2008<br>Class Name: LHIST1900<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i love roark. please come back to new school.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2008<br>Class Name: LHIS3102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Roark is a great teacher. I can't speak to what a large class would be like with him, but he does a fabulous job with the seminar style classes at the New School. He is bright, helpful, organized and generally fun. I had never heard a South Park movie reference in a history class, but there's a first time for everything.</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2006<br>Class Name: HST<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>horribly rude and needs to learn how to communicate to students. horribly discusting</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2005<br>Class Name: HIST<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is smart, he is a decent person, but I could not help but think underdeath the mild, boring, diplomatic nature there was explosive rage. I spent most classes in anticipation of its exposure! It never came so I could be wrong&#63;  By the way what the f**k is the invisible and visible world and how much can this man drink disani&#63; haha strange!!</div></div></div><div id="container" class="review"><div id="left">Date: 09/21/2005<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thought he was great...he's very smart and knows his stuff...and I was in the class that the girl tries to leave...it was actually pretty funny!  All she had to do was explain to him at the beginning of the class that she needed to leave early.  He's actually very understanding and grades reasonably.  Once he even gave me a chance to argue a grade on the midterm...and he gave me the better grade.  He was always willing to help outside of class too.  Very nice and very smart professor. You can learn a lot!</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2005<br>Class Name: HST<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/07/2005<br>Class Name: REL278<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Not a good teacher... not understading and extremely boring</div></div></div><div id="container" class="review"><div id="left">Date: 08/07/2005<br>Class Name: RELIGION<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>VERY BORING.. starts out nice but is extremely rude to students. If you have the option SWITCH OUT!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/16/2005<br>Class Name: HST278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The people above are just lazy.Besides, who the hell walks out in the middle of class&#63;I would be pissed too; its horribly rude.Atkinson is one of the nicest professors I've had.He's knowledgeable, he cares, he's clear, he's organized, he's interesting. Most importantly, unlike many professors, he is excited about what he is teaching. He's fantastic</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2005<br>Class Name: HISTORY<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class was okay, a little boring but he knew what he was talking about, no harder than any other. BUT once when some girl tried to leave in the middle of class he absolutly embarressed her and physically stood in her way so she couldn't leave, totally out of line. be prepared to stay all of class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2005<br>Class Name: REL278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There is a lot of reading but its not hard. Just read it when it's assigned and it'll be okay. He is a very nice professor, and he is always willing to help. He is smart,organized,helpful, and clear in everything.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2005<br>Class Name: HST278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I have no idea why people hate this guy so much. He's super nice and laid back, very interesting, really knowledgable, and a very reasonable grader. There is quite a bit of reading expected, but everything on the tests is covered in class enough to where you can miss some reading & be okay.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: HST203<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i was very interested in taking this class but then he made it boring.  All he does is lecture! Don't take this class in the night...very boring!!! If you go to class and take notes and do good on your papers you should be alright</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2005<br>Class Name: HST203<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This guy is a moron.  Atkinson doesn't teach, he just paces and drinks Dasani all class. I had to teach myself all of the material because it wasn't even SLIGHTLY covered in class.  it wasn't particularly hard, just unbearable.  DON'T TAKE HIS CLASS.  YOU WILL BE DRIVEN CRAZY.  YOU WILL REGRET IT.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2004<br>Class Name: HST280<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Anyone who says this is a good teacher is an outright liar!! Who wants to see you suffer! He's very unclear on assignments and talks about random historical events that he's not going to test you on. I did great in the class but i still don't know what the hell the &quot;invisble world&quot; is.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: HST280<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>so...i def. agree with what most of the people have to say on here. HE's unclear, boring, lectures the whole time and insists on making class participation worth like 20% of grade. how are we supposed to participate when all you do is talk, Roark&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2004<br>Class Name: HST<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Whatever you do...do not take this teacher!! He never answers the question you ask and he talks way too much on things that do not deal with HISTORY!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2004<br>Class Name: HST280<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Talks way too much about things that have no importance to anything. He skips over the important parts of early US history and focuses on things that don't really matter. His intentions are good but he just needs to listen to his students more.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2004<br>Class Name: H280<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hes an ok teacher.. he talks wayyy 2 much.. he grades real hard. I didnt really understand what he wanted from us on the tests and during lecture.He wants you to participate but he doesnt shutup, I would take him as a last resort.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2004<br>Class Name: HST280<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this professor makes history interesting but is a very hard grader and is a waste of time.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2004<br>Class Name: HST280<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class turned out to be better than I thought.  Yea if you do not like history then you will be bored , but don't pay attention to the bad comments because this guy lectures very well and he tells you what you should know for exams.  So show up and take notes and you'll be ok.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2004<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2004<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a really nice guy and knows alot about his subject.  Very easy going and will help if you just ask him.  Very down to earth and did i mention and nice guy</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2004<br>Class Name: ENG<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is one of the worst teachers I had ever had.  He makes everything out to be interesting when it is not but no more interesting than my dog licking it's self clean.  He is a horrible teacher who needs to get on the same level with the students because everyone so far thinks he is a waste.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2004<br>Class Name: HISTORY<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

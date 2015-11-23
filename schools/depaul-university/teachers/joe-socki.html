@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Joe Socki</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.4<br>Clarity: 4.6<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/04/2015<br>Class Name: HAA263<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>There was a 2 page paper due every week & they were based off of online readings which I only skimmed. The tests were open note and there is one extra credit opportunity. The class could be interesting but he always cut the lights off and his voice was very soothing so it can sometimes make you sleepy. Overall, he is a really nice just a tad boring</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2015<br>Class Name: HAA263<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Socki is a nice guy, the class can be pretty boring. The whole class is lectures, he expects you to take notes here and there. Tests are very hard but he gives you a sheet of paper notecard. Readings (x3) and responses due every week, responses are one page, single spaced. Textbook is important.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2015<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Joe Socki is a nice guy who really knows what he's talking about. Went on a lot of field trips. Sometimes his lectures go on for a while but the assignments weren't too hard.</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2015<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's one  of the best professor at DePaul!!!!! the class is interesting. he really knows what he is talking about. Very clear. The tests aren't hard at all memorization in required though</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2014<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Fun class. Professor Socki really knows what he's talking about. You take field trips almost every class and get out early on most days. participation is 50% of your grade and the other half is just 4 papers. easy enough.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2013<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Socki is great professor he knows what he's talking about and is a really nice guy. If you show up to class every day and do the work you will get easily get an A</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2012<br>Class Name: HAA240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I was never into art until after this class. Text book is mandatory and there is a short paper due at each class, but it keeps you on top of readings and understanding. Clear lectures and he has a passion for what is being taught. Final and midterm straightforward, if you come prepared there is no difficulty. Highly recommended! Great professor</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2011<br>Class Name: HAA130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this may be the most boring class of all time.. no class interaction- he talks the whole time. exams are straight memorization with minor concepts. grades papers like it's an eight grade class. overall, bring coffee, or u can sleep like I did and still get a B</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2011<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Joe's the BEST! He is very kind, helpful, and clear, and extremely knowledgeable. Anyone who claims his class is hard has serious issues, because it's one of the easiest I've taken. At the same time, though, it's one of the most enlightening. My one recommendation is to not take it as a night class, because you will fall asleep. Anyway, TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2011<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>awesome and very knowledgeable prof, I recommend him to anyone that has to take an art history class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: HAA130<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Bruttalllll teacher.  Expects so much from students in a 100 level class.  Do not take, you will be bombarded with word that is completely unnecessary.  Doesn't know his role as a 100 level teacher, acts as if hes teaching an upper level class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: HAA130<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He changed his teaching &quot;strategy&quot; You have to study everyday.  So much studying is needed for this gen ed class that it is not necessary.  Goes over so much material which isn't necessary either.  I was the only one in my class to receive an A, and i strongly don't recommend him. Unless your in love with art history, don't take.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2010<br>Class Name: HAA130<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>easy class IF YOU STUDY. there is  a lot of material for the tests. you will not get an A without studying. if you study, tests arent bad. a lot of memorization. nice guy too</div></div></div><div id="container" class="review"><div id="left">Date: 09/07/2010<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Well I already took this class, but it didn't transfer. Either way, it was fun to take it again with him. Clever quips and entertaining lectures. I also asked for information on a random outside research topic and he was SUPER responsive and helpful. It's still an art history course so you really need to study. He's made of awesome though!</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2010<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>OMG! He must be the most knowledgeable professor on his subject ever! The way he talks about the paintings and makes smooth/almost invisible transitions between them is just of top class!!! Being a student of commerce he made me interested in the subject a lot! Also a fairly easy class and very respectful and helpful gentleman! Highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2010<br>Class Name: HAA130<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr Socki was very straightforward about what would be on the exams and only one paper was assigned. He never specified if attendence was mandatory, but he did take it. I strongly recommend taking him!</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2010<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>AWESOME teacher. Speaks softly and can be monotonous & make you fall asleep (not to mention classroom is dimly lit at all times) but EXTREMELY helpful. lectures. 3 exams. one paper. Lets you know everything that's going to be on the exams. Such a nice guy, and just an easy going class. Talks boring but interesting material, you dont want to miss it</div></div></div><div id="container" class="review"><div id="left">Date: 06/29/2009<br>Class Name: ART200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Guy had one of those 'put you to sleep' Bob Ross voices. Joe was laid back, and enjoyable to listen to. I hate art, but didn't mind taking his class. Wasn't stressful, assignments were basic and easy and overall, the class wasn't demanding. Highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2009<br>Class Name: HAA130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This guy is just awesome.  The class is very interesting and he adds his own excellent analysis to each piece.  Try to talk to him sometime after class; he is the best!</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2009<br>Class Name: ART102<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I attended class 4 times. The first day and the days of the three tests. Studied the slides on blackboard based on the review sheets, got an A</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2007<br>Class Name: ART238<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent!!</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2006<br>Class Name: ART239<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class is very easy. It is not very intellectually challenging. Explored the topic at a surface level, not that stimulating.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2006<br>Class Name: 20THCENTURYAR<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very easy. Take home midterm and final. One presentation which is super easy. Highly recommend him. He is probably the best for an art class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: 20THCENTART<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>easy class. take home midterm and final. 1 page reflections once a week on internet readings. dont really need to buy the book. easy a</div></div></div><div id="container" class="review"><div id="left">Date: 04/09/2006<br>Class Name: ART102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>great guy, straightforward class. just memorize, attend, listen, and youre set w/an easy A</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2005<br>Class Name: ART102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is an amazing professor! I would take any class of his. If you ever need help or your grade isn't what you think it should be just go and talk to him. He is willing to explain what you need to improve on. He is honestly a professor who cares about his students. Best Professor! But class can be a little boring w/slides but will do better on test.</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2005<br>Class Name: ART238<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I LOVE JOE SOCKI. this guy was great. final, midterm, two blow off readings and your done. he is so laid back and so helpful. he also allows you to do the midterm over if you did poorly which is a big plus. i would definately recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2005<br>Class Name: ART238<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor. Really laid back and fun. This was such an easy class. Midterm, final, 2 readings and a 5 minutes talk on a painting. As long as you did it, you got an A. You can also redo the midterm if you don't like your grade. I learned a lot, it was interesting, and not stressful at all. I recommend the class!</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2005<br>Class Name: ART238<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great, smart, funny</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: ART238<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Socki is an amazing teacher who is understanding and laid back. :) He gives 2 take home exams, 2 class discussions, and a presentation on a painting at the AIC. He assigned readings but I never did any except for my class discussions and I still got an A in the class. I would def. reccomend him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2005<br>Class Name: ART238<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>What a sweetie. Yeah, he's a laid-back kind of guy but he knows his art history too! Really loves the subject and will make it accessible for even the most artless student. You lead two discussions, make one presentation, and have two take-home exams. A+ class & prof.</div></div></div><div id="container" class="review"><div id="left">Date: 01/27/2005<br>Class Name: ARTHISTORY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is a cool teacher but I fell asleep almost every other day. He has such a calm voice and he shows powerpoints througout the quarter.I could not stay awake in that class.However, he gives class notes and study guides that are very helpful.I got a B+ in his class and I learned alot when I was awake</div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2004<br>Class Name: 20THCENT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>best prof ever!</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: ART102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Cool laid back Prof.  Knows his subject matter.  Only 3 major assignemtns, each worth 1/3 of your grade.  Cool class, and very informative.  Take this for easy Arts & Lit. requirement.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: ART239<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super easy! Had to do maybe four papers, but I never went to class. If you decide to go, keep in mind it's super boring, but he is an easy grader. I got an A for going three times the whole quarter.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Serge Karalli</h1><hr><div><h2>Overall Quality: 4.89<br><br>Helpfulness: 4.89<br>Clarity: 4.89<br>Easiness: 4.89</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/10/2007<br>Class Name: MGT301<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great Prof. However, He moved to California years ago.  He is now teaching in California State University, Sacramento.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers I have ever had.  Lectures were to the point.  Most of the time we were out of class after 30 minutes.  He didn't teach us things unless we needed to know them.  Helped out on the midterm and final.  Its too bad he left.</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>if you didn't take him, you can't anymore cuz he is gone. easiest class i have even taken- no readings, group final, basically skims the exams and gives you the A. good luck in Cali!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2004<br>Class Name: MGT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>one of the best teachers</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2004<br>Class Name: MGT301<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Totally awesome teacher!!!  Too bad this is his last quarter teaching here......</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: MGT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Definite A</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is the best but last quarter at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the coolest professors I had, he makes clear what he wants from students. In addition, his quizzes are open note and he assigns specific and short readings. No ****. It is a shame he is not gonna be teaching at DePaul next quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2004<br>Class Name: MNG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>What everyone said is what he is. VERRRRRRRRRRRRRRRY easy. But if you can take him by summer/autumn I suggest u take him, as he has got an offer at other college, so will be leaving DePaul soon.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>best teacher at depaul- very easy and you actually learn at the same time- both midterm and final are take home- quizes are a joke and you can work on the homework with other students and hand it in- very funny at the same time- ***take this teacher***</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the coolest teachers I ever had at DePaul and he was easy</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: MGT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>THE EASIEST A EVER ;)</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take home midterm and final! Gives a study-guide for the &quot;unannounced quizzes&quot; which are always announced a week ahead of time. Great teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: MGT322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: MGT322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very good teacher. Only teaches what you will need to know, OPEN BOOK TAKE HOME TESTS!! Likes to leave early :) Highly recommend!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Cool teacher, let's you out of class early epscially if you his last class, normally an hour and a half long class only last and hour max. He tell's you everything that is on the midterm ahead of time just as long as you attend class. TAKE HOME MIDTERM!</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2004<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>TAKE HOME MIDTERM. OPEN BOOK AND NOTES FINAL. really easy, he is funny and you'd have to try not to get an A! He explains the material very well. MUST TAKE!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2004<br>Class Name: MGMT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is an awesome teacher and really fun.  A great class to take!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

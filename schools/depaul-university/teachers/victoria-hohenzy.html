@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Victoria Hohenzy</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.4<br>Clarity: 3.5<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/11/2015<br>Class Name: WRD104<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>really not a fantastic teacher, and the class is basically high school english. She is nice though, and the class isn't difficult. She is great at engaging students to actually care about the work they do. would recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2015<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very young - like to the point on the first day you might mistake her as a student. That being said, she's very understanding as a teacher and seems flexible and respectful about what she requires out of students. If you hate the New York Times don't take this class - that is your textbook.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2015<br>Class Name: WRD104<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Yeah</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2014<br>Class Name: 104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I enjoyed having the NYT as a textbook and the importance the professor placed on current events and op-eds. My writing improved significantly because of both the instruction we were given and the freedom with open-ended assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: 104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Lots of work, but if you log in regularly and keep up with the weekly stuff, it's easy.  Three major papers and a final portfolio.  </div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2014<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Grading criteria inconsistent and arbitrary.  Did not grade papers objectively, nor did she offer feedback on how to improve one's writing.  It seems as if she doesn't even read the papers she assigns and just hands out a "B" to everything that she does.  Final portfolio is a huge task and although I did well on it, I received no written feedback.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2014<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>She's as clear as mud.  I definitely recommend taking this class with someone else.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2014<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Took class online. Borrow somones norton field guide book - you need it for one quiz. Theres a few easy quizzes. Four papers and big portfolio at end. Discussion post each week. Just do everything, submit on time and it's an easy A. If you do what you are taught from the readings and listen to her feedback you will get a good grade. pretty simple.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2014<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She's just bad. Can't believe how tough of a grader she is for a required 100 level course. What's worse is she takes forever to give things back so you'll likely make the same mistakes over and over again. DO NOT take her</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2014<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I never gotten worse grades than I have from her.  She doesn't grade in a very timely manner so you have a limited time to use her revisions in your next paper.  Do yourself a favor and take this course with someone else.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2014<br>Class Name: WRD104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She seemed really disinterested in the class and didn't fight back if people said dumb things. Assignments were confusing and not well written. She expects you to read in between the lines and somehow magically know what she wants outside of the assignment requirements apparently. Didn't guide the class. Take someone else if you have the option.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2013<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She has good taste in fashion and keeps class interesting.  Lectures are easy to understand and definitely not tedious. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: WRD104<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>For an professor teaching an online course, Professor Hohenzy was not on top of her game.  She was quick at grading papers and provided good feedback, but did not respond to emails in a timely manner and had small office hours.  I almost failed my midterm portfolio because she didn't respond fast enough.</div></div></div><div id="container" class="review"><div id="left">Date: 10/02/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She is nice and clear. She does not make eye contact very often though. She makes the class important but also easy. Not always the most exciting class, but it is a hard subject to make fun.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is so nice and super helpful. The class is boring but it's a pretty easy and light class compared other WRD 104. Take her if you can!</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's beautiful, is an easy grader, and makes the class interesting. What's not to love?</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hohenzy is great.  I thought this class would be extremely boring, but she made it fun and relevant.  Also her clothes are fierce.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

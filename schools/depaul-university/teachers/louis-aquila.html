@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Louis Aquila</h1><hr><div><h2>Overall Quality: 2.7<br><br>Helpfulness: 2.4<br>Clarity: 3.0<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2015<br>Class Name: MAT94<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He expects you to spend some time with this material as much as possible and notices when students are lacking and falling behind but he is willing to help you to improve your grade so you are bound to get an easy A if your okay with self teaching yourself, mainly because there's no instructor guidance because he tends to leave you to learn it. </div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2015<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>OK, so he seems like a good guy in general. However, when it comes to math, he comes off a little condescending at times. Definitely gave me no interest in participating to avoid giving the wrong answer and becoming the focus of failure in class. On a good note, extra credit options are there and if do the homework you'll be fine. </div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2014<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I've had at DePaul. Not a fair grader either. He looks for ways to mark you wrong on quizzes. AVOID!!!!!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2012<br>Class Name: MAT100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not a good teacher. Can't stay on topic. Condescending. Wouldn't recommend him to someone.</div></div></div><div id="container" class="review"><div id="left">Date: 07/31/2011<br>Class Name: MATH100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice guy. easy to understand and is very social. will tell random stories but they are usually kind of interesting. Very nice guy if you will just talk to him and pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 06/28/2011<br>Class Name: MTH100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Don't ask questions. He makes you feel dumb. Expects you to know everything already, and explains things in ways that are difficult to understand at first. Don't recomment him.</div></div></div><div id="container" class="review"><div id="left">Date: 12/17/2010<br>Class Name: MATH101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Overall, not too bad of an experience.  He definitely goes off topic quite a bit with random stories and he will call you out if you're not paying attention.  In general though, he's a pretty lenient teacher, and he'll give you extra time on unfinished assignments</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2010<br>Class Name: MAT100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super easy, but rather annoying. Long story short, he thinks were in high school still. Will call you out if you dont use your calculator the second he tells you to and calls you out if you doze off however, he constantly moves back the dates for the online quizzes which is nice. Hes super easy but treats you like a dumb high school kid.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2010<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>he is a mean teacher. like he knows his material but can't teach. he personally doesnt help at all and has an SI. degrades everyone and makes you feel real stupid. he doesnt even give you a good insight of what the material is. he just does it on board and expects you to know it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2010<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>horrible.  for the sake of your grade and your sanity, avoid his classes.  He is very condescending and rude and as the course progresses and the material gets harder, his clarity in teaching gets worse.  very difficult.  and always ends up talking, essentially to himself, about something completely irrelevant.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2010<br>Class Name: MTH100<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is very condescending and rude. He is very striked for phones and if he even see's it, he will kick you out of class. Don't bother to ask questions, he'll make you look like a fool and make fun of you. I do not reccomend him. Oh and by the end of the class he'll be talking about a topic that has nothing even to do with math.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2010<br>Class Name: LSP100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Such a cutie old man!--such a funny sense of humor, he will make u laugh during boring,long night classes. in lsp 100 he always let us retake our quizzes & tests. he definitely wants everyone do do well!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2009<br>Class Name: MAT100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>LOVE HIM. He's a great teacher, definitely knows his stuff. Pay attention, take good notes, and you'll do fine. Everything that we did was online. At the beginning of the quarter we would go over homework in class and would take quizzes at the end of each class as well..Towards the end we stopped doing that because the material he was teaching requ</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2009<br>Class Name: MATH100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Louis Aquila was incredibly helpful and managed to make my three our class with him seem much shorter. He was clear and concise about the material and was always eager to help. I felt lost when he was gone for two weeks due to personal reasons and am not so sure how I will do on the final without his guidance. anyway, he is a great guy-very sweet!</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2009<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>dude seriously this guy sent me mean emails because I was having trouble registring for his online part of the course. He is rude and unstable and I am no longer in that class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

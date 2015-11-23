@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michelle Wright</h1><hr><div><h2>Overall Quality: 4.71<br><br>Helpfulness: 4.86<br>Clarity: 4.57<br>Easiness: 3.18</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/08/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great class; very interesting assignments that help understand the topics. One of the best online course that I've had.</div></div></div><div id="container" class="review"><div id="left">Date: 07/27/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Wright is great. She encourages different opinions on assignments. My opinions hardly ever were the same as hers but she really respected that. This is very rare to find in a professor. The class was very fast pace but it was 5-weeks so it was expected. The class was well organized that it was pretty easy to keep up with assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Wright was awesome! She was well organized, answered questions fast, and gave lots of extra credit. I learned a lot from her class. There were straightforward quizzes, activities, and a final paper. As long as you work hard and keep up her class is easy. She is very willing to help as well. I would definitely take her again!</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great class. Learned more in 5 weeks than I have in some of my 10 week classes.</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Wright is A-W-E-S-O-M-E. The class is so well-organized and professor provides such quick and clear feedback. I would take a class from her again.</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I didn't find this class easy, but I did get an A. I worked ahead and it saved me time and energy that I was able to devote to other classes. This class as all the conveniences that an online class should have.</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great class! Helpful professor! All materials up on day 1 for the class to allow students to work ahead. There are not exams in the class, but there are discussions, papers, and quizzes. Dr. Wright is amazing!</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Online, convenient, interesting for the most part, and easy. Ms. Wright is extremely nice and helpful; she always e-mailed me back and had the entire course schedule posted from Day 1. If you wanted to finish the entire class in a week too, you had that option. No mid-term and only a final 3-5 page paper. Overall she was great.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof Wright is just too sweet. She is so helpful and really wants all her students to succeed and learn something in the class. Grading is quick and detailed. Assignments are interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is one of the best online classes that I have taken. It's structured well and the professor is so helpful. However, it's not an easy class, but you will learn a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2013<br>Class Name: PSY33<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good class. recommended for child psychology</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2013<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class is online and it is wonderful! All materials are ready the first day of class. Very well organized class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2012<br>Class Name: PSY334<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>All assignments build up to each other. She gives specific feedback to improve your writing and APA style. Good class and very nice instructor. I'm taking her this summer.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2012<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Interesting videos; great class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2012<br>Class Name: PSY333<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is an online course; there is a lot of work but all the assignments are very interesting. I learned a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2012<br>Class Name: PSY334<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class is over in a few weeks and I wanted to leave my feedback right away. I loved this class! I heard though that Prof Wright is leaving and won't be teaching anymore at DePaul. I just declared my major as psychology, too.......</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2012<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>good class. prof wright is very nice.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2012<br>Class Name: PSY334<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Wright is very strict about writing but she is fair. She provides specific feedback to help you become a better writer. I loved the class, though. The tests are difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2012<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I love Professor Wright! She is very sweet and a bit on the crazy side (in a good way). She tells funny stories and really tries to engage the class. I'm taking her again next quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2012<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Good class. Professor Wright is very thorough at explaining class materials and her tests are straight forward. Secondly, she is very clear about what she expects on exams.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2012<br>Class Name: PSY334<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great class</div></div></div><div id="container" class="review"><div id="left">Date: 12/17/2011<br>Class Name: PSY334<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved this class and felt like I coud really be myself. Professor Wright is very respectful to different opinions. My only complain was that there was a lot of busy work.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2011<br>Class Name: PSYALL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Wright is very sweet and dedicated to student learning. She is always willing to help. She is prompt at answering any questions. The assignments were good. The tests were a bit challenging because the class is more discussion based (requires you to take your own notes).</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2011<br>Class Name: PSY334<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Loved this class! This was probably one of my favorite this past quarter. Professor Wright is very sweet!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2011<br>Class Name: STATS103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor! She has reviews before the exams. She could not make the last reivew session and emailed everyone. The person who asked about her not showing up for the exam was actually the rude person... The review sessions were nice but she didn't HAVE to do them! This shows how much she wanted her students to learn.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2011<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I agree with the people below to an extent. But she is very irresponsible, unorganized and she just didn't show up for the final review. She snapped at people when they brought it up to her. Very rude and hates being wrong.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2011<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Statisitics is hard in general, so it's not going to be easy. She is THE BEST! She explains everything with so much detail and makes sure you understand it. She is always willing to help out. Seriously she's the best professor ever, and you need that for a stats class!! TAKE HER! Not much homework and She lets you use notes on tests and quizzes!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2011<br>Class Name: PSY240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Considering its a statistics class and not that fun of a topic, prof. Wright is so nice and helpful. she lets you use your notes for quizzes and tests (awesome). Best Statistics teacher EVER.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

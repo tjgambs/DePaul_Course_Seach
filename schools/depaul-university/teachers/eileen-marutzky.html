@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Eileen Marutzky</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.6<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/29/2015<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Loved Marutzky! Super helpful, made accounting EASY. If you want an A in accounting 2, take her class!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2015<br>Class Name: ACC370<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Her lectures are extremely entertaining and she has a funny personality. Does practice quizzes (not graded) in class. Reading the book is optional but helps, don't need it to pass. Extra credit opportunities available! She answers questions immediately too.  Two exams (midterm and final), not cumulative. TAKE HER, you won't regret it : </div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2015<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Pretty easy class.  Quizzes are basically the final and midterm. Attendance is good for your grade since you can get extra credit.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2014<br>Class Name: ACC370<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was a class i actually enjoyed going to. There is a crazy amount of content you cover, she said we did law school in 10 weeks. and we really did but she made it fun with her hilarious stories and commentary, she helps as much as you need but its very fast paced. Loved her and wish i could take her again! lots of extra credit! </div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2014<br>Class Name: 552<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Be prepared to read 6-8 chapters a week. Tests are extremely specific and very very difficult, but she does curve. Only 2 tests make up the grade. Online lectures don't cover what is tested most of the time.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2014<br>Class Name: ACC370<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Haven't finished the class yet but i know its new and this is the first time its being given at depaul. with that being said, take her! not only is she absolutely hilarious, she is very experienced in the field. 50 chapters in ten weeks is a little intense but she's very helpful and goes over problems. im expecting an A in the class. Lots of EC</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2014<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Marutzky is so freaking funny and an amazing teacher. She tells hilarious stories AND teaches you accounting. The midterm and final are nearly identical to the non-graded pop quizzes. No homework, no book, and no texting in class +show up to class for Extra credit.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2014<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Changed my major because of this teacher. She is unbelievable! Has you cracking up during class while also engaging you in the material. Amazing teacher!!!! Gives you practically what will be on the midterm and final.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2014<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really enjoyed her class and I absolutely dreaded accounting.  I took 101 more then once and was hoping this class would be better.  She is awesome! Explains everything thoroughly and is willing to help.  Can't say enough about her take her class! Register early it fills up fast!</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2014<br>Class Name: ACC102<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She has a big ego, always talking about herself. I normally wouldn't mind that except that she hates being taken off track and sometimes sneaks her way out of answering your questions. Often confused, I had to read the book to teach myself the topics.</div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2014<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>SHE IS BY FAR THE BEST TEACHER HERE IN DEPAUL. GO TO CLASS AND PAY ATTENTION.EASY A..SHE GIVES EVERYTHING THAT WILL BE ON THE MIDTERM AND FINAL. BELIEVE YOU WILL NOT REGRET TAKING HER!</div></div></div><div id="container" class="review"><div id="left">Date: 07/28/2013<br>Class Name: ACCT102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Best accounting professor ever! Just like the rest of the comments below, she really is that amazing. Easy to follow along, she's hilarious, helpful, and completely straight forward. She told us exactly what needed to study for the midterm and final; no surprises!</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2013<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Marutzky is one of the best business school professors at DePaul, she will make you like accounting and you will understand the material, ACC 101 I thought sucked, but 102 with her made all the difference, there is no debate whether or not to take her class, you must take it with her she's that good!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/13/2013<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>SHE IS THE BEST TEACHER EVER!!! THE MIDTERM IS EXACTELY LIKE THE WORKSHEETS SHE GIVES OUT. STUDY IT AND YOU WILL GET AN A! SHE IS VERY FUNNY AND MAKES YOU LIKE THE MATERIAL. TRUST ME TAKE HER!! EASY A</div></div></div><div id="container" class="review"><div id="left">Date: 05/22/2012<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Marutzky is engaging, knowledgable,and extremely passionate.I had no interest in accounting,and she made the class really enjoyable.She is so funny and gives students tons of opportunities for extra credit.There is no hw to turn in,quizzes are not graded, the exams are weighted a lot, but she tells you exactly what is going to be on it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: ACCT102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>By far one of my favorite professors at DePaul. Before taking her class, I did not like Accounting or understood it. She makes it crystal clear, and tells you EXACTLY what's going to be on the midterm and final. Got an A, Loved this class</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2012<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I literally had tears in my eyes during every class because she is SO FUNNY! She tells you EVERYTHING you need to know on the midterm and final so make sure you hold onto every worksheet because it's a replica of your exams. She goes out of her way to help students with resumes, Extra credit, etc. Truly a CREDIT to DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2012<br>Class Name: ACCT102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is absolutely fabulous! She makes so many funny jokes and makes time fly.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Marutzky has a great accounting and law background that makes you want to be that accountant.  She takes her time to explain her course the best way for us to understand.  She makes it possible for all her students to get an A. Best Accounting professor so far. :)</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2011<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>By far the most amazing professor I've had at DePaul yet. She will make you want to become an Accounting major, as a matter of fact I did. Take her if you can!</div></div></div><div id="container" class="review"><div id="left">Date: 05/14/2011<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Extremely amazing teacher! By far the best accounting teacher has at DePaul. Goes over everything in class step by step and the midterm and final are fair game. MUST TAKE!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2011<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Wonderful professor, I would recommend everyone to take her classes, she is not to hard and is very helpful. She's funny as well so class goes by fast.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2010<br>Class Name: ACC552<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Marutzky is incredibly friendly and  makes the material easy to learn. She'll go over about 2/3 of the test prior to the exam, very fair in my book.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2010<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! Teaches well and is very clear about what is expected on exams. Would recommend to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2010<br>Class Name: ACC552<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The class is very interesting and lively. You will never feel bored to take Professor Marutzky's class. However, professor always has her excuses to leave the class one hour earlier. We really hope to listen to her class more because the Business Law is not an easy topic.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2009<br>Class Name: ACT102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mid-terms (and supposedly finals) are based upon in-class quizzes which are easy. Just show up to class and you'll be fine. She always takes attendance everyday. If you're tardy make sure to tell her. Extremely nice, loves law and accounting. Knows her stuff and tries to make accounting bearable.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2009<br>Class Name: ACC552<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Eileen is one of the best professors I've had. She made studying a business law class really fun. Take good notes during the class and expecially on the exam review. I definitely recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2007<br>Class Name: ACC552<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Got an A in the class.  be prepared to take a ton of notes.  her exams are challenging but she is very generous and will curve the class.  i got a C on the midterm and prob got like an 85 on the final and still got an A</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: ACC552<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is great...makes class entertaining with witty remarks.  There is a TON of material covered but the tests are easy and she really only likes to give As and Bs.  She also nearly point blank tells you some of the questions that will be on the tests.  Good overview of business law!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2006<br>Class Name: ACCY552<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The best</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2004<br>Class Name: ACC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/15/2004<br>Class Name: ACC552BLW<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She does not post the syllabus until first day of the class and completed 8 chapters on the first day. You will be required to read around 7 chapters each week with many questions on text and the study guide. Two exams. No papers. No presentation.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

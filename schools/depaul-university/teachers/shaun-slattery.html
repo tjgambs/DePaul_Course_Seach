@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Shaun Slattery</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.61<br>Clarity: 4.72<br>Easiness: 3.83</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/18/2010<br>Class Name: ENC3250<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I never did use my book for this class, but i did learn some good useful information.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2010<br>Class Name: PROF200<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome class! Simple and easy. Class was fun and professor was helpful. Recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2008<br>Class Name: WRD204<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AWESOME! this class is not only interesting, but you would have to try to not get an A. Prof. Slattery has so much energy and actually cares about the subject and his students. If I was in LA&S, I would take him again for sure. The projects are relevant to the business world, it is one of few classes where I actually learned real world info.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2008<br>Class Name: WRD204<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I only leave comment for really good teachers,  he is a great teacher. nice, cool, laid back, fun to be in class with.  Take him for sure.  Theres nothing bad to say about him.  good class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2008<br>Class Name: WRD204<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>so we are discussing ratemyprofessor.com right now in class ... haha hes nice and really helpful! ALSO HES A VERY SMART GUY !!</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2008<br>Class Name: ENG301<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good professor, lots of energy and enthusiastic about what he teaches. NO textbook, and not too strict on attendance. Lots of work but fair class, and good teacher. Grades pretty fairly</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2007<br>Class Name: ENG309<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I'm not sure why anyone would even complain in any way about Prof. Slattery.  He is a really awesome professor -- he brings what a lot of professors and students don't have anymore -- energy!  Trust me and take a class from him or just chat with him -- you'll see what I mean -- this man has a love for what he does!</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2007<br>Class Name: NMS504<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>His lectures are fun and informative, but he does a poor job of communicating feedback on student projects. I don't think he graded any of our work until the last day of class. You have no way of knowing how you're doing until the final grades are posted. He also seems to cancel class A LOT.</div></div></div><div id="container" class="review"><div id="left">Date: 06/01/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Very clear, helpful, and fairly easy grader. Just make sure everything is completed because not doing one thing can hurt your grade badly. I wish all teachers at DePaul were this good!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2007<br>Class Name: COMP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Slattery could explain just about anything to anyone. Great teacher, really knows his stuff, is eager to help and is very pretty--he makes me feel all funny inside.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Teacher, relevant projects and a comfortable classroom atmosphere. Take him if you can. NO textbook.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor!!! Class consists of several assignments but he explains what is required  in all of them. Starts off attendance with personal questions and bumbs into things, but his assignments and things you learn in this class are things you'll actually use. Dfntly take him!</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If I could describe him with one word, it would be -- amazing.  This guy totally knows what he is doing.  I agree with the last poster, he is adorable :)</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>HE IS SOOOO AWESOME!!! I highly reccomend this professor. He keeps the class fun and is absolutely adorable. The grading is fair and the projects are helpful for your future. TAKE HIM!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2007<br>Class Name: ENG409<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a rhetorical master when it comes to text and image.  I greatly appreciated his down to earth style and his willingness to help regardless of the concern.</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2006<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a fantastic teacher, I really learned a lot about making my writing as consice as possible.  All there is like said below are major projects, no midterm or final, just a final oral report and it's not that bad.  Only thing is, is that attendence is key since there is no book all the lectures tell you what ya need to know, also he keeps track.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2006<br>Class Name: ENG<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class if you use your common sense & if you think things through carefully.  There is no text book for his class.  He teaches off of his powerpoint slides & posts them all on blackboard.  No mid-term and no final but there are major assignments due through out the quarter.  There are also in-class assignments.  So, it's a good idea to show up.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: ENG301<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>3 Projects that were a great learning experience.He is unclear at times which leads to having to redo some assignments.He is really nice and helpful but you have to think about what he wants to hear/read.There is a lot of work for the projects but its all useful for the future.No finals just the 3 projects with a presentation at the end.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael Bennet</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.7<br>Clarity: 3.9<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/04/2014<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: B</div><div id="right"><div>Bennet is an older guy that takes forever to get your work back to you and when you get it back, the feedback is minimal if it exists at all. Told the class we could revise our papers, but never even gave them back until the end of the course. The final exam was take home. The entire class was just group discussion based on the readings.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2014<br>Class Name: SOC323<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amazing class, Professor Bennet has a huge history in community organizing and knows so much about the topic.  Wonderful guest speaker, reading is a lot (you can skim) and there is a 10 page paper due.  Final and Midterm are easy if you know the topic.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2010<br>Class Name: SOC347<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Take Professor Bennett, decent amount of reading but the work is straightforward. Midterm, detailed studyguide was given and he posts on blackboard. If you attend most if not all classes you will get a good grade. Reserach paper, easy research an urban issue present findings to class. Final exam is a take home.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2010<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Horrible professor. I took the class as an elective. It was easy but I learned nothing at all. The prof didn't seem to care about the class. I had a family emergency during finals and he never replied to my emails. Insensitive, and lackadaisical.</div></div></div><div id="container" class="review"><div id="left">Date: 08/12/2010<br>Class Name: SOC105<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is very knowledgeable.  I enjoyed his class.  Although, I don't think he grades very fairly.  I should have gotten at least a B in the class and received a C+.  I was very disappointed.  Too many students in this class for the amount we pay in tuition.  3 components to grade: Midterm, 10 page term paper, and the final paper, which sucked!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2010<br>Class Name: SOC105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>His class is really easy & he really knows his stuff. I really enjoyed it. He gives a very detailed study guide. Everything on the tests is on there so make sure you know the study guide. Only 3 grades for the class: midterm, 10'ish page research paper, and final.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: SOC105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy class.  I didn't care much for the material, but he still taught it in a way that was engaging.  The class consists of a midterm(he gives you a study guide with all the answers), a take home final, and a term paper that has to be at least 10 pages.  If you are a decent writer, you should have no problem getting an A in this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2007<br>Class Name: SOC105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class teaches the intracate nature of social problems from a rational perspective. Prof was great; nice, easygoing, and intelligent guy. Although, I would have personally preferred if the class was a little less technical, and more theoretical--as to relate more to the &quot;big picture.&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2007<br>Class Name: SOCURBA<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he is an awesome Professor. you will learn a lot from him. repsonse papers and exam....take note</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2005<br>Class Name: SOC105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>wise, smart guy.... likes that students participate, all you havfe to do is write a 10 page paper on a social problem, take a mid term (essay based) and a final that includes all of the material. (you can redo essay if you didn't receive the grade you wanted)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

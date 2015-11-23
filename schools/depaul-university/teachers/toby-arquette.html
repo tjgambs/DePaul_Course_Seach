@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Toby Arquette</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 3.95<br>Clarity: 3.85<br>Easiness: 3.45</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/27/2010<br>Class Name: CMN156<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>My close friend tragically passed away before one of the first tests and he was so rude, unsympathetic, heartless and simply made a difficult time that much more difficult. Dropped the class because I was so disgusted that I couldn't look at him after he said I would need a note from my deceased friend's mother. Guess they'll give a Phd to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2009<br>Class Name: PSY101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This teacher was not fair and did not help at all. Very poor communication.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2006<br>Class Name: CMN203<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2006<br>Class Name: CMN309<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Toby is great! Not too many people like him b/c his class is really hard and he expects a lot, but if you do the readings and show up for class you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2006<br>Class Name: INTERCULTURAL<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this class is incredbibly hard!  it feels like a graduate level class!  far too much work... details and definitions for the test are fuzzy! overall, very hard class!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2005<br>Class Name: INTERCULTURAL<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I think Toby is one of the most overrated professors DePaul has. He is a little know it all who will make you feel like an idiot if you say something which is the slightest bit off from what he wants to hear. He is a little ****. The class is easy, but he is just a pain.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2005<br>Class Name: CMN291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is one of the best professors I have had in the four years I've been here. Material was difficult at first, but his examples helped us to learn the concepts. He is also more then willing to help if we are still not getting it. FIVE STARS</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2005<br>Class Name: INTERCULTURAL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher! He really wants you to learn. Makes it interesting. You have to go to class pretty regularly, so don't take him if you want to slack, but minimal homework, and open book/note midterm and final, now c'mon, easy A! He is soooo willing to help and knows his****! Can't BS this guy, but he'll help with your paper. I SO RECOMEND THIS TEACHER! even though i come in like 2 minutes late, he never makes me feel bad, even though i feel terrible cause he is just such a nice guy! take him!</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2005<br>Class Name: RESEARCHMETHOD<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is great.  The material was hard but he is so willing to help you.  He is very smart and organized in class. But don't take final and midterm lightly it is no joke even if it is open notes.  Take him if you can. I got an A-</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2005<br>Class Name: RESEARCHMETHOD<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Toby is a great teacher..he is so intelligent and knowledgable on his lectures, and very organized! His midterm is difficult, but he always allows notes and dedicated a class to a review game. He omitted the final and was always availible for questions. HES GREAT</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2005<br>Class Name: CMN230291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>TOBY!!! We LOVE Toby. He is not only THE most helpful teacher but he is also the easiest. While he trys to challenge his students, he's more than fair. He goes above and beyond, not to mention that for both classes he's extended the final paper due date and omited the final exam!</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2005<br>Class Name: CMN291<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2005<br>Class Name: 212<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2005<br>Class Name: CMNRESEARCH<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was a decent teacher but the class was hard. The materual was just hard. He lets you have notes on the final and midterm but beware becuase it is not an easy test. He is willing to help you and he wants you to do well. He does talk fast. I came to class everyday and I got an A-</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: CMN211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>VERY nice guy! Knowledgable and personable, I have a lot of fun in his class. I like how he interacts with the class and really gets to know you rather than just lecturing. He talks very fast but it's usually easy to follow.</div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2005<br>Class Name: SMALLGROUP<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>the worst professor. never returns emails regardless of endless attempts. gives out final grades with no justification. if you wanna get ripped off in ur grade take him. if you want to do a lot of busy work and get a grade u REALLY dont deserve...he is it.</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2005<br>Class Name: CMN212<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2005<br>Class Name: CMN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2004<br>Class Name: CMN212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Indeed, he talks, acts and thinks VERY FAST, which is kind of fascinating. Although sometimes your brain has a hard time catching up. I feel like I learned a lot in his class. He is certainly very knowledgeable in many fields.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2004<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Talks A LOT and FAST&gt; dont bother taking notes, he puts up full versions on blackboard. Exams arent hard and are open book open notes. He likes to think he's tough but after the first exam you see that he's pretty easy.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

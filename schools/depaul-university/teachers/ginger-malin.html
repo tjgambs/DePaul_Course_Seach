@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Ginger Malin</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.47<br>Clarity: 4.53<br>Easiness: 2.82</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/02/2011<br>Class Name: TL525<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hands down best Education professor at DePaul.  Very clear and direct.  Teaches practical knowledge about teaching. Very interesting course!  Doctor Malin is AMAZING!</div></div></div><div id="container" class="review"><div id="left">Date: 10/01/2009<br>Class Name: TL525<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She assigns an excessive amount of work and then provides absolutely no feedback on it.  My final portfolio was hundreds of pages long and took endless hours to complete---and she wrote not a single comment on it.  We can't improve without feedback!!  However, I will say that she has some interesting classroom activity ideas.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2009<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>FANTASTIC. Practices what she preaches. Charming, engaging, full of *practical* ideas for real classrooms. Inspiring. Have no idea what my grade will be but don't care - I've learned *loads* and can't wait to get out there and use it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2008<br>Class Name: SEC325<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I don't know where to begin.  This woman is amazing.  She's so funny, sweet, and she actually tries hard to accomodate to everyone in her classroom.  You can tell she's been teaching for 15 years.  She's an inspiration to any pre-service teacher.  If you have to take literacy in content areas, please take her. She will help you so much!</div></div></div><div id="container" class="review"><div id="left">Date: 07/31/2007<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great professor.  She practices what she preaches.  I learned so many great teaching techniques from her. The final portfolio was a handful, but you work on it class throughout the quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 07/16/2007<br>Class Name: SEC325<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Takes attendance, but its once a week. Not bad, lots of useful/practical info. But too much busy work. Final portfolio is a lot of work. Shes a good professor.</div></div></div><div id="container" class="review"><div id="left">Date: 04/18/2007<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent teacher. Very supportive and really gave us knowledge that helped us understand the intention and construction of a lesson. Incredibly clear, engaging, and challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2007<br>Class Name: SEC325<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor! Clear! Passionate! Lots of tips, hints, and advice that other education teachers, counselors, and advisors lack! Love her! Fair grader too!</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2007<br>Class Name: EDU325<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Learned a lot in this class. Unlike other education classes, where there are hypothetical teaching situations, Malin gives you real tips/strategies on how to manage/conduct a classroom, as well as what to expect when finding a job. She also wants everyone to do well in the class, allowing you to redo assignments until you get them right.</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2006<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Malin is great, and I feel I learned more in her class (tips, hints, activity ideas) than in any other at DePaul.  She is a great asset to the education program, and I highly recommend taking her classes if you can.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2006<br>Class Name: EDU<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher has a bizarre way of grading.  For some reason DePaul Professors equate low grades with rigorous curriculum.  Its not.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2005<br>Class Name: LST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Love her!! She practices what she preaches.  Lots of work but worth it.  She is also extremely empathetic when it comes to work.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2005<br>Class Name: 414<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good teacher, lots of work though. U can tell that she has lots of teaching experience, often her class can be conducted like a Highschool course (every one has to speak, plans 4 the day on overhead). But very nice and receptive.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2005<br>Class Name: EDUCATION<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Malin was am amazing teacher.  She was very helpful and is a good role model</div></div></div><div id="container" class="review"><div id="left">Date: 08/17/2005<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Malin is terrific.  Lots of work at times, but you see it all come together in the end.  She's extremely helpful & enthusiastic.</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2005<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very organized and so eager to help students.  Lots of experience teaching.  Knows what she's doing 100%.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2005<br>Class Name: TL414<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent class, learned what I need to teach in real life</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

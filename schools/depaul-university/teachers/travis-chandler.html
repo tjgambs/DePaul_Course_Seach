@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
-				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Travis Chandler</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 4.8<br>Clarity: 5.0<br>Easiness: 4.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: DC125<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>This guy is great, not only is he always willing to help I could actually watch his 3 hour lectures online without wanting to sleep. I actually learned a lot from this class and I'm not even a photography major. Also it's nearly impossible to fail because he always gives opportunities to better your work.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2015<br>Class Name: GAM228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Travis is the best professor I have had at DePaul no doubt. He is one of the most friendly teachers that I have had and he genuinely cares about his students. On top of that his classes were interesting. He makes sure that you understand the material and honestly you would have to make an effort to fail this class. DEFINITELY take his class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2015<br>Class Name: GAM228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Good professor, assigns a group for all projects with a short paper every week. Took the class to fill a requirement and would recommend to take him!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: DC228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's literally THE BEST, only 5 group presentations that aren't really hard, no quizzes or homework at all, you just have to read one chapter weekly, about 10-15 short pages,  and do a group presentation on it.  Super fun class and I totally recommend it. </div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2014<br>Class Name: DC125501<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof. Chandler is a very nice guy and so helpful, response to emails very fast. we had online midterm and he was reviewing it with us two days before so everyone gets an A. the prof. has never embarrassed anyone even though some students take bad photos, he always gives comments on what's good in the image and never said that's a horrible one.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2014<br>Class Name: GAM228<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Great Class. Great Movies. You get to express your opinions and make sense of how things in cinema or video games make such a big impact on addressing a topic. Controversy talks, but never judged or graded on your own personal opinion. Open and free to talk and discuss things related to the topic. TOTALLY RECOMMEND TRAVIS for you. He is great!</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: DC220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Mr. Chandler is a great teacher who is very enthusiastic. He has a good balance between interesting tangents and teaching the material. He hardly gives homework and is extremely willing to sit down with anyone to solve any problems they might have. I thoroughly enjoy having him as a teacher, I strongly recommend him.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Travis Chandler</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 4.8<br>Clarity: 5.0<br>Easiness: 4.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/22/2015<br>Class Name: DC125<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the easiest electives.  Just listen to the lecture to figure out what's due and you can take all the pictures on an iPhone probably within 50 feet of where you are sitting and get an A.  If you don't have photoshop, either use one of the labs, download the trial, or use pixlr which is pretty much the same thing and its free.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: DC125<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>This guy is great, not only is he always willing to help I could actually watch his 3 hour lectures online without wanting to sleep. I actually learned a lot from this class and I'm not even a photography major. Also it's nearly impossible to fail because he always gives opportunities to better your work.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2015<br>Class Name: GAM228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Travis is the best professor I have had at DePaul no doubt. He is one of the most friendly teachers that I have had and he genuinely cares about his students. On top of that his classes were interesting. He makes sure that you understand the material and honestly you would have to make an effort to fail this class. DEFINITELY take his class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2015<br>Class Name: GAM228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Good professor, assigns a group for all projects with a short paper every week. Took the class to fill a requirement and would recommend to take him!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: DC228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's literally THE BEST, only 5 group presentations that aren't really hard, no quizzes or homework at all, you just have to read one chapter weekly, about 10-15 short pages,  and do a group presentation on it.  Super fun class and I totally recommend it. </div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2014<br>Class Name: DC125501<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof. Chandler is a very nice guy and so helpful, response to emails very fast. we had online midterm and he was reviewing it with us two days before so everyone gets an A. the prof. has never embarrassed anyone even though some students take bad photos, he always gives comments on what's good in the image and never said that's a horrible one.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2014<br>Class Name: GAM228<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Great Class. Great Movies. You get to express your opinions and make sense of how things in cinema or video games make such a big impact on addressing a topic. Controversy talks, but never judged or graded on your own personal opinion. Open and free to talk and discuss things related to the topic. TOTALLY RECOMMEND TRAVIS for you. He is great!</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: DC220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Mr. Chandler is a great teacher who is very enthusiastic. He has a good balance between interesting tangents and teaching the material. He hardly gives homework and is extremely willing to sit down with anyone to solve any problems they might have. I thoroughly enjoy having him as a teacher, I strongly recommend him.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

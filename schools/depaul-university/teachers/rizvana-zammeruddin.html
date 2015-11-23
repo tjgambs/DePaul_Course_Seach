@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rizvana Zammeruddin</h1><hr><div><h2>Overall Quality: 3.52<br><br>Helpfulness: 3.66<br>Clarity: 3.38<br>Easiness: 2.63</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/16/2006<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's not as easy as you think but will take the time outside of class to help anyone as much as she can.  SHe's a great person if you get to know her, and a fantastic professor.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2005<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The Best accounting teacher I ever had.  Took this class as a quick refresher for Grad school acc.  Brings real world experience to the classroom, and puts it into easy to understand class.  Great class if you are already in the business world or want to get there.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2005<br>Class Name: ACCT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The WORST ACC PROF at DePaul ever!!!!  I memorized that damn accounting book and I stilled failed the Mid-term.  Never worked so hard in my life to get a &quot;C&quot; in her class.  DO NOT TAKE HER anyone else will do!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Best Teacher at DePaul take the time to get to know this amazing woman. One of the smartest professors you will ever have in college, one of the smartest people you will meet in life.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2004<br>Class Name: ACC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>WarninG: Worst ACC teacher ever..You are more worried about her yelling at you than knowing the material... half the class was gone after midterm cuz they didnt pass.. goes over material like Speedy Gonzalez.. Take Leuders for complete understanding!!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: ACC101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good looking british indian lady, easy class midterm final 50/50 easy grader i did nothing and got a C but you wont learn anything which makes acc 102 harder</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I can not put into words how much I loved this teacher. She was amazing and I belived made everybody want to do well in not just accounting but in life. She is very lively keeps your attention and curves a lot on tests. Best teacher I have had so far</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She has changed her lesson plean recently, making her class easier.  You need to go to class. She is very understanding, and nice out side of class.  It seems that she is very busy outside of class.  Over all I would definitly take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>As much as I hated accounting, I at least didn't mind this class.  She explains things clearly and seems to be excited to be teaching.  You may have to do a lot of work, but unlike some other classes, you will know what to study and work on and how much.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2004<br>Class Name: ACC101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Too easy! I hope I'm not screwed for 102. She's very experienced and has a million degrees. Very big ego that can be an annoyance sometimes as she tells her life stories. However, she seems to ramble on at times when the book provides an easier example.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>extremely smart person and wants to help you. i had to drop b/c midterm killed me. i think she expects you to pick things up the first time she explains it in class but is willing to help you after. shouldnt teach introductory course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is extremely talented, and knows her material very well. Never puts students down and always encourages questions. She Curves a lot, and allows notecards on her tests. Do the work, Extra Credit, and you'll get a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This teacher is AWESOME.. i HIGHLY RECOMMEND HER!! she KNOws her stuff and if you are lost, she will definitly HELP you..</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Prof.  She wants her students to learn, and teaches the class in a very upbeat manner.  2 tests worth 50% respectively.  Study sheets are very helpful.  Do Work and you'll get at least a B.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher! Very fair, curves alot! Yeah, there are only 2 tests, but her reviews practically tell you everything that's gonna be on the test. Very very intelligent! Helps you out as much as she can, will answer any and all questions! Very helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2004<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great teacher helps you out as much as she can.</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2003<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is probably the smartest person in the accounting department. She makes you want to succeed. You  will learn the material inside nd out if you pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2003<br>Class Name: ACC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>HORRIBLE TEACHER. she is smart but can't teach what she knows. she lets us use cards for tests, but her tests(100 questions or more in 1 hour1/2) are too dang hard. you really have to study, go to tutoring, do homework. a lot of work in this class. A LOT!</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2003<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is very hard, BUT! she's fair and if you do what she says (about the final) you can pull off a B, if you study your ass off, maybe an A-</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2003<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This lady knows her stuff. She has like 8 degrees. The only problem is that she knows is so well that she can't teach it to people who can't understand it the first time. She is willing to help you, but you have to go to class, and be on time.</div></div></div><div id="container" class="review"><div id="left">Date: 09/02/2003<br>Class Name: ACC101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>RULES: 1. Attendance is required 2. Homework is required, but is not graded. If you fail to submit your hw, it will count against you 3. There are two exams, each 50% of class. If you fail midterm, don't bother showing up on the final enjoy ...</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2003<br>Class Name: ACC102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>have to attend class to get a good grade, very helpful if you don't understand, allows many notecards for tests, gives extra credit and curves alot.  Overall, great teacher, she makes an effort to care about her students</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2003<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very intelligent woman.  Attend class, and you will get a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2003<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good class.  Teacher cared about students.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2003<br>Class Name: ACC102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She explains in her own way sometimes not clearly enough, but she allows note cards for exams so they are not hard</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2003<br>Class Name: ACC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>SHE CANNOT TEACH NOTHING SHE KNOWS...TOO BAD SHE IS WASTING HER TIME TEACHING HERE. SHE DOESN'T MAKE ANY SENSE WHEN SHE EXPLAINS SOMETHING. NOT ORGANIZED. NO LECTURE NOTES. TOO HARD.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2003<br>Class Name: ACC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>horrible teacher...she knows the material, but no teaching skills...she is too demanding and doesn't know how to explain the information given.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2003<br>Class Name: ACC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2003<br>Class Name: ACC102<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She knows what she is talking about, but way too demanding.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2003<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>awesome</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2003<br>Class Name: ACC102<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2002<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is an awesome teacher.  You will leave the class with a firm understanding.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

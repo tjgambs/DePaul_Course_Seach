@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Russell Carleton</h1><hr><div><h2>Overall Quality: 4.65<br><br>Helpfulness: 4.62<br>Clarity: 4.69<br>Easiness: 4.15</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/28/2008<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>&lt;i&gt;Love&lt;/i&gt; the prof! Hope to get him again in the future!</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2007<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>the most helpful prof. ive ever had! the whole class is based on one research paper but he helps you along with each and every step. class wasnt so entertaining but going can be helpful. i would def. recommend him to everyone!</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2007<br>Class Name: STATS1<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher....Knows his stuff and KNOWSS how to teach the material really well...pay attention and take notes and you'll do fine... sometimes akward, but usually funny..Take him!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2006<br>Class Name: PSY240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you go to class and pay attention and take notes you will be perfect. Tests are with a cheat sheet and will only have questions that are similar to homework problems which are due once a week. Always willing to help and explain anything if asked. Also more than willing to meet with students to discuss anything. Great teacher!</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2006<br>Class Name: PSY106<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice guy and class is pretty easy, but his jokes get old very fast and eventually you will want to shoot yourself.  Class would have been great had he realized he is a psych prof and not a comedian.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2006<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy teacher, but I don't know why everyone has said he's funny. His jokes are probably cheesier than my grandpa's. But he knows his stuff, and he's really approachable.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2006<br>Class Name: PSY334<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dedicated, fair, enthusiastic and usually entertaining.  Lectures are comprehensive and essay tests are easy to prepare for and do well one.  Very willing to help however possible.  Also, talks about his wife all the time... so cute.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher! Very funny,pretty easy grader. Just do all the assignments and do well on the tests and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2006<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Funny, energetic, and all around a good teacher.  Always open to questions and available to help out.  The class is actually quite a bit easier than I expected.  The only part that blows is the 5 hours of experiments you have to be a guinea pig for, but that's department policy, not his.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2006<br>Class Name: PSY333<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>easy to pass, but horrible to sit through. i think he practiced in front of a mirror to make sure he went from 6-9:15 every single night with only 1 15 minute break.  annoying and boring...do not take him</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2006<br>Class Name: PSY366<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was enthusiastic and easy. We had two papers (3 pages doubble spaced each), a midterm and a final. For both tests he gave us the questions ahead of time.  It was easy to get a good grade.  However, if you're looking to actually learn something, I doubt this is the class for you.  Most time is spent reviewing basic psychology terms and info.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2005<br>Class Name: PSY366<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is the best teacher I have ever had. I looked forward to getting up at 630AM in order to drive in rush hour traffic to his class. He does require effort to get a good grade and he might not be the easiest grader, but you will learn so much. Very energetic...keeps you interested!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2005<br>Class Name: PSY240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Anyone who has ever worried about taking a stats class, take him!  He explains homework assingments very well.  If you do well on the homework and come to class on a regular basis, there is no reason why one cannot be highly successful. Grading is fair.  Tests are fair. Minimal in class assingments (not hard).  I would definitely take him again!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Erik Beranek</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.9<br>Clarity: 3.8<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/12/2015<br>Class Name: PHL243<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Mr. Beranek is the definition of a hipster, he's against every norm possible, and his film selection reflects this completely. All the films in this class are either silent, black and white, or in French. Some give you a different perspective, but if you're taking this class to watch Titantic, choose another. Also he literally Never returns HW!! </div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2015<br>Class Name: 243<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Makes you watch movies during class and then on your own time. All movies are in French. He takes FOREVER to grade. I finally got back only 3 out of 6 assignments on the 8th week of class. I have a final essay due in a week and he hasn't told us what it about at all. I personally did not like this class at all, then again, I'm not into philosophy </div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2014<br>Class Name: 204<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: Not sure yet</div><div id="right"><div>He was such a passionate speaker, and I really admired him for that. We did have to do a lot of reading, and I honestly did fall behind which made class discussions hard. He doesn't tend to give back grades very quickly or at all. He doesn't post grades on D2L either. I had no idea where I stood in the class for the whole quarter.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2014<br>Class Name: PHL248<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Participation in class discussion is essential. Get ready to read a good portion of multiple books. The class consists of about 5 different books. He is very knowledgeable in philosophy and delivers lectures very passionately. </div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was an engaging speaker. He makes you work very hard on your papers and isn't an easy grader. I would take his class again if I wanted a philosophical challenge. You will question many things during and after this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Mr. Beranek's very passionate about his work, and works really hard to clarify the material as much as possible. The class was pretty difficult, but if you put in a lot of effort, it's extremely rewarding. He's always available to help, and he's honestly hilarious. He has an opinion about everything, though, so don't get offended; it's not personal</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is very knowledgeable and has a good sense of humor. The readings can be very confusing at first, but he goes over them in class very thoroughly. He encourages you to email him with any questions or to have him look over a draft of a paper. No textbook, easy quizzes, midterm essay, and final essay</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He knows a lot about philosophy and is an interesting guy, very witty too. You will be glad he likes to talk, because you probably won't understand the readings to the depth that he explains. Take good notes for when you have to write the midterm & final essay. Don't be afraid to ask questions..it'll help a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2014<br>Class Name: MGT248<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was a very brilliant professor and knew exactly what he was talking about. We had readings to do every weekend. Took ALOT of notes in class, but they really helped. If you pay attention you will do fine. He was always there to help if you needed it. I was very bored though in class. I dreaded it actually.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: PHL248<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's an amazing teacher. He is so brilliant and really knows what he is talking about 100%. He does lecture a lot, but he asks questions and engages you along the way. He's also so beyond adorable.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

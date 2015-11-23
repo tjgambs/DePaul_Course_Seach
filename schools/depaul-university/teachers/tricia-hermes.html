@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Tricia Hermes</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 3.9<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/20/2015<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>She is such a great professor. She gave us the opportunity to re-write and so I was always reworking papers, and I loved it, my writing style grew a lot! She created a great environment for students to get to know each other and collaborate. GREAT woman! Doesn't use letter grades until the end- always wanted you to improve!</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2015<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No textbook. Great lecturer. Everything was Crystal-clear. Recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2015<br>Class Name: BWR202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Not a hard class if you show up and follow directions.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2015<br>Class Name: WRD202<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She makes  you do pretty standard things like write emails, resumes, LinkedIn summaries, memos. So there's no essay, midterm, or final. Class only lasts half a quarter so it's nice.  Clear, simple, easy to understand. </div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2015<br>Class Name: WRD202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>TAKE HER!! She is an amazing teacher! There is no textbook, assignments are simple, and she is the nicest lady! On the last day she brought us all donuts and coffee! She is always willing to help you but honestly you won't need it because the class is so straight forward. No tests. Just show up. By far one of the greatest professors I've had!</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2015<br>Class Name: WRD202<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I can't even grade here because she never gave me the chance. I was second on the waitlist back in November, and I e-mailed her right away asking if she could let me in. No response. Now, two months later... the class starts next Monday and I find out that I've been dropped from the class without any form of previous notice. Thanks a lot...</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2014<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>The class is great and pretty entertaining!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2014<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was so easy, and decently fun (for what a composition class is). She has a "contract" set up so that if you show up for most classes, do all the work, and try, you are guaranteed a B. On top of that, she is an easy grader. Only a few essays for the whole quarter, and not even much outside reading. Great class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2014<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved Professor Hermes. If you and the rest of the class are engaged and write from the heart, you will love her class! If she isn't entertained by her class I don't think she puts forth the extra energy. I would take a class from her again in a heartbeat.</div></div></div><div id="container" class="review"><div id="left">Date: 07/07/2014<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You HAVE to show up to this class. Although you really don't want to go to a stupid english class you have to force yourself. You do a midterm & final portfolio. She really helps you with your research paper and gives plenty of time for you to do it. She's also makes it a priority to have her class be entertaining.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2014<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Hermes made me comfortable with the concept of analyzing a work of text, a speech, or an image. She is a relatable person who cares about the well-being of her students. I am happy with my decision to take her class!</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2014<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Tricia is a laid back lady that cancels class on occasion. She is intelligent and understanding. She doesn't respond to emails very quickly but if you talk to her after class you should be good. Many of the comments on here dont give Tricia enough credit. WRD104 is dry regardless of the professor. Tricia makes it bearable.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2014<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Completely lackluster.  Average professor for a relatively unnecessary required class.  Not life changing, but decent for fulfilling a requirement.</div></div></div><div id="container" class="review"><div id="left">Date: 08/10/2013<br>Class Name: WRD103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Phones it in most days. Not sure how she got a teaching job. Bad mouths other teachers. Her class is a waste of time and money.</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2013<br>Class Name: WRD104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>A lot of these ratings are false and dont portray her style of teaching whatsoever. She is unorganized, and I am unsure of how she even became an English prof. she doesn't even know how to spell and she makes us read our papers out loud to the class. Why am i spending money to read my paper to classmates with no real feedback? waste of your time!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2013<br>Class Name: WRD103<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hermes is a decent teacher. She has interesting projects but, is not very good with returning feedback in a timely manner. There were several of us in class who had received our papers back with no feedback at all. On a more personal note, I think she tries too hard to be the cool teacher. At one point she even criticized several of her colleagues.</div></div></div><div id="container" class="review"><div id="left">Date: 01/20/2013<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This is the best professor Ive ever had. Super funny and really chill. She makes class a non-pressured environment but she still has expectations that you must meet so shes awesome in terms of trust. take her class because shes the best. seriously.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2012<br>Class Name: WRD202<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I don't know what everyone else is talking about but I HATED this teacher! If she doesn't like you, youll know from the first grade you get back. Her tests are over stuff in the book that she never covered in class and shes CONSTANTLY changing the syllabus so you never know when anything is due.. so annoying. AVOID HER!</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Hermes is awesome.  She's chill and doesn't make you do stupid busy work.  Definitely take Hermes if you have the chance, she's down to earth and really knows what she's talking about.  This woman is the best!</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2011<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was very helpful and really nice. Always went out of her way to help you out on any of your assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2011<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Hermes is awesome. She is one of the best professors that i've had at depaul. She's so chill and is easy to relate to. All of the topics we were able to choose. She cancelled class at lot of my class... but maybe it was a fluke. Take hermes. You won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2011<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>TAKE PROFESSOR HERMES. She is an AWESOME WRD 103 teacher and the class is very simple. Only 5 papers to complete and the final is just a portfolio. Since WRD 103 is mandatory, you need to take a professor like Hermes because she's awesome.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2011<br>Class Name: WRDD102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was a great teacher! Lets you revise your paper as many times as you want and gives back helpful comments! Shes fun and exciting! Highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2011<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>TAKE TRICIA HERMES! she's incredibly helpful and makes a FYP class really fun! listen, ask for help, and turn your assignments in on time, and you'll get an A!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Funny teacher. Not super organized about grading papers but if you follow her grading criteria you'll do fine on the papers. Class attendance is mandatory but you have to write 3 two page papers and one 8-10 page paper. No books. Overall good</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2010<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>When she first walked into class, she was a bit intimidating. She's very engaging and sassy. She's realistic and down to earth. I would definitely recommend her for this class. I've only been in her class for about a week or so but so far discussions are interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2009<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was an amazing teacher. As long as you do the homework, you're good or else she'll crack down on you but that is very unlikely.</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2009<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>one of the best teachers i have had. her class is a lot of fun and shes an easy grader. participation was 20% of the grade, so if you dont like to speak in class you might have a bit of trouble. but i never said anything n got about Bs on my papers n still managed to pull a B in the class. i highly recommend her, i promise you will not regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 01/21/2009<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is one of the best teachers I have ever had. She's really funny, too.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

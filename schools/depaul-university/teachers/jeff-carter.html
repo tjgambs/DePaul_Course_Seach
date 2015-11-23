@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jeff Carter</h1><hr><div><h2>Overall Quality: 4.26<br><br>Helpfulness: 4.28<br>Clarity: 4.24<br>Easiness: 3.86</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/20/2015<br>Class Name: LSP112<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>While his class may be pretty easy, they are insanely boring. Each one feels like eternity and it's  very dry material. Class is mandatory. He docks you marks every time you miss class and if you don't participate. Focal points are rough and boring no matter what you take but this one I wouldn't take again. </div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2014<br>Class Name: SCULPTURE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Jeff is a really fun guy to be around! By no means is he easy, he will challenge you but it is only because he wants to see you succeed. He is one of the best art professors here.</div></div></div><div id="container" class="review"><div id="left">Date: 04/23/2010<br>Class Name: LSP112<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Art & technology, not photoshop like i thought, he will challenge the way art is defined in your mind. Fun discussion heavy class, learn about some cool art, and even fantasize about your own art in a paper. Fun class, just participate and you're guarenteed a B- do the work and get a B+ really do the work and get an A</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2010<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>jeff -very easy on the eyes ;] hehe. Otherwise, the class was enjoyable. (ART & TECH. FOCAL POINT). He is very knowledgeable & intrigued by what the students have to say. Be prepared to discuss, that in fact was my favorite part of class. This class will teach you to look at art a bit more modernly & appreciate abstraction from the norm.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2007<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>very, very easy grader.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2007<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Carter is genuinely a nice guy.  He tends to talk a lot, and reiterate things he's already said, though.  If you participate in the critiques it will be appreciated, he likes it when other people talk too.  generally easy-going even for you non-art types.  I would take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2007<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Like some others who have posted here, I have a mini-crush on Jeff.  He is just such a nice guy and is incredibly helpful, even if it didn't have to do with his class!  His classes are really fun and I liked the projects and exercises.  I wish I could take more classes with him, but he unfortunately doesn't teach any design courses!  Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2007<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took his art and technology focal point class and it was kind of cool. There were trips to the art institute and presentation. Most of the class is looking at slides, discussions, readings from packets, and meeting artist. really easy and interesting. he's laid back and helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2006<br>Class Name: ART105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Carter is a really easy going guy who is always willing to help out.  He grades easily and doesn't care too much if you get to class late.  Fun to talk to, good assignments, definitely take him.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2006<br>Class Name: ART113<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>a really nice guy  grades pretty fairly  would definately recommend for non-art majors too.  the only catch is that all of your art HAS to have some deeper meaning he hates cliches.  a lot of thought goes into this class but the creating process itself is pretty fun (1 short paper 3 projects 1 final)</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2006<br>Class Name: SCULPTURE<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/19/2005<br>Class Name: 3DFOUNDATIONS<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher, but he is so good looking it's hard to concentrate. I ALWAYS went to class. Huge crush!! Love him!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2005<br>Class Name: ART113<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher who is very helpful. Non-art majors, don’t be scared because you can easily get a A if you at least try in the class. At first I had no interest in art but after I have a whole new perspective. Just do the work and you’ll be fine…I recommend to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2005<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Real nice and easy guy...class is sometimes interesting, no tests just some bs papers analyzing/comparing art. Really laid back, just come to class, do the assignments, and you're set.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: ART113<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>this guy is awesome. and sooo dreamy! its a great class. honestly one of the best art classes at depaul. you have to spend a lot of time on the projects but he is a really easy grader. i love him!</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2005<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>easy a. art and technology seminar was the most boring class i have EVER taken. he's hot and nice but monotone. i just attended to look at him :)</div></div></div><div id="container" class="review"><div id="left">Date: 04/25/2005<br>Class Name: 3DFOUNDATIONS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This was the best art class EVER!!!  Not to mention he is nice, hot, and helpful.  Make sure your work has a deeper meaning and comes from the heart and you will do just fine.  Don't look like a slacker in class-he likes to see his students take initiative. Did I mention I had a crush on him&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 04/11/2005<br>Class Name: 3DFOUNDATIONS<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I had Jeff for Art and Technology Focal Point and he's a really cool guy. You can tell sometimes that thinks he knows more then people by the way he responds to their comments but that's probably because he does. Pretty simple class, look at slides, movies, 3 papers, visiting artists.</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2004<br>Class Name: ART200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jeff is an amazing professor. Anyone able to take a class with him definetly should. You could tell he loves teaching & really knows what he's talking about. Considering I really didn't want to take this class and ended up liking it says something. Be prepared to talk.He is absolutely gorgeous too!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2004<br>Class Name: ART105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Carter is such an awesome teacher!  He is always willing to help with ideas and techniques.  He makes taking an 8:30 studio not so aweful.</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2004<br>Class Name: ART104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>PROFESSOR CARTER MADE ART VERY ENJOYABLE FOR NON-ART MAJORS.  THE 3 PROJECTS WERE A LOT OF FUN AND HE GIVES YOU STUDIO TIME TO WORK AND DISCUSS YOUR PROJECTS WITH OTHERS IN THE CLASS.  HE ALSO PLAYS COOL MUSIC DURING STUDIO TIME.</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2004<br>Class Name: BEGSCULP<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You're missing out if you don't take a class with Carter. 3 big assignments & one paper- nothing out of the ordinary about that, but you better be a talker. The more informed you are, the better. I adore him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2004<br>Class Name: ART<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I really took a lot out of his class even though I went into the class thinking Oh it just 3d art it would be stupid and I would blow it off.....that was last year now I planning an exhibit for Depaul with found objects all because of what i learned</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2004<br>Class Name: ART113<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Carter is an artist first (his work is amazing/innovative) and a teacher second. he is an awesome prof. always willing to help/inspire. one of my favorite.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: ART113<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ok teacher, is a little full of himself and sometimes acts too cool, but is genuine and always helpful. Wasn't exactly right for this class, he would be better critiquing more experienced artist or a theory class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ART115<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The class is pretty intersting. You work with plaster and wood to mkae sculptures...not clay.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2003<br>Class Name: ART106<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A bit hard. This prof is probably better at giving you the information you need to start creating art then actually helping you create the art. Would make a great art theory prof. You decide... he's gorgeous.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2003<br>Class Name: SCULPTURE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

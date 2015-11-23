@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Mike Saporito</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 3.89<br>Clarity: 4.11<br>Easiness: 4.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/14/2012<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher! Sat class sections meets only 5 times. If you attend every class and participate a little you will have an A. While the class itself is easy, you still learn a lot. One quiz, and a few presentations which are graded by your group rather than the professor. GREAT TIME! Take him, you will not be disappointed!</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2011<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Amazing teacher !! class is fun, time goes by fast and for his Sat sessions class only meets 5 times. As long as you attend class every time and show a little interest you have an A. Only one easy quiz and a few presentations.</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2011<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teachers, things you learn will stick and time goes by fast. Makes it interesting and funny. 1 quiz, class participation and 2 team presentations. easy A with a bit of effort. Saturday class sounds harsh but goes by extremely fast and sometimes you get out early. Take it!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2010<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The class was extremely helpful.  The teacher treated everyone with a respect; we were like his friends.  I learned a lot, stuff that you can apply in real life. In addition, Mike?s teaching style is one of a kind and he has a great sense of humor. The whole class was like a big family, no one wanted it to be over.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2009<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I attended his Saturday class which was scheduled from 9am to 4.. we only had class for about 6 saturdays.. and we never stayed in class for the whole session.. always got out early! All you have to do is arrive to class early, and attend class all days and you will recieve an A! 2 tardies or absences means you'll get a W.. take the class!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2008<br>Class Name: MKT376<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>OK guy, but not a good teacher. Kind of rude if you disagree with him, and was always cancelling (or unable to attend) class. I love having a cancelled class as much as the next person, but over 4 out of 10 night classes is ridiculous. Proof that success in an office and success as an educator do NOT go hand in hand.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2008<br>Class Name: MKT376<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took him for a Saturday class yet he expected me to be able to attend a Monday-night event. I already had a monday-night class so I lost credit. Not fair, thinks he's always right and you don't learn anything useful. Just a good ol' waste of time.</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2007<br>Class Name: MKT376<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Kind of defensive when you try to &quot;coach&quot; him. For some reason he pushes the Sales Leadership Program even though this is a communication class. Kind of unfair that your class peers determine some of your more important grades. Sadly, you have to have this class to graduate.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2007<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Saporito is one of the best professors I've ever had at DePaul. Amazing enthusiasm, unbelievably kind, and the most gorgeous smile ever!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

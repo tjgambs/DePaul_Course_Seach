@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Amanda Tucker</h1><hr><div><h2>Overall Quality: 2.69<br><br>Helpfulness: 2.71<br>Clarity: 2.67<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: PSYCH<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2006<br>Class Name: PHY215HUMANSE<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Every question a student asked her in class, she responded with an &quot;I don't know&quot;.  Her tests are pretty weird, but she grades the paper pretty easily.  I just enjoyed that class because everything was on powerpoint and she looked kinda hot.  I still think she needs more experience.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2005<br>Class Name: STATS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2004<br>Class Name: PSY215<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy class, fun, and new. Excellent prof. she is young and connects with the students. People complain that she might not have her stuff together...but they're the people who sit and talk the entire time. Go to class and pay attention = A</div></div></div><div id="container" class="review"><div id="left">Date: 08/02/2004<br>Class Name: PSY<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She was very unhelpful it seemed like she gave an attitude a lot. She needs no go back to school and get better people skills</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: PSY215<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>definitely take this class with Ms. Tucker! Her class is easy and VERY interesting. There are 3 tests and the lowest score is dropped, also a paper at the end. Everything is on ppt slides. It seems she's new at teaching but the subject makes up for it</div></div></div><div id="container" class="review"><div id="left">Date: 05/22/2004<br>Class Name: PSY215<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2004<br>Class Name: PSY215<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Expect to hear &quot;I don't know, but I can find out!&quot; a LOT. She's still new at teaching and doesn't know every little detail. Class was absolutely fascinating and I never even had the desire to skip. Human Sexuality is most certainly a great class</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: PSY215<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Catch phrase: &quot;I don't know.&quot;  Expect to hear this ALOT. While she is not my favorite professor, the class is easy... so for a general education requirement, take it anyway.</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2004<br>Class Name: PSY215<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Tucker has an interesting background of studying to bring to the class, is very sweet, and is very clear and easy with grading.  However, she seems flustered or nervous a lot, which is distracting, and took of 1% of every absence, which is crazy.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2004<br>Class Name: PSYCH240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2004<br>Class Name: STATS241<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very unfair grading system...she was also very condescending and annoying...</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: PSY105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She tries to be strict, because she is new.  She is actually very nice and will meet you half way if she sees that you try.  Test are easy and material is interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: PSY215<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I think this is her first year teaching, and it shows.  She has to look things up all the time.  I give her credit for not pretending like she knows something when she doesn't, but she's the teacher, she should know these things.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: PSY240<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She doesn't deserve to teach statistics.  I knew more than she did.  Not confident about herself, so she waivers often and makes lots of mistakes.  I deserve a better education.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: PSY215<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The class is easy in itself, shes pretty hot, she get her info almost 100% from the book.  Three multiple choice tests, and an easy paper.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: PSY105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher, I highly recommend her for intro psych classes. She's really nice, young, cool and fun.  Very by the book, don't bother reading.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: PSYCH105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a terrible teacher. She doesn't know anything about the subject. She gets paid for doing othing because that is what she does, NOTHING!</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: PSY240<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>OMG do not take her for Stats. I can not tell you how many times she has messed up in class and given us the wrong formulaShe is not confident enough to be teaching Statistics. Also, she is extremely moody and seems to be on nonstop pms</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2004<br>Class Name: PSY215<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her teaching style doesn't quite do it for me. It seems like she tries to cover up her lack of knowledge on the topic by having students debate opinions. Not a bad teacher, but definitely not great.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2004<br>Class Name: PSY240<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2004<br>Class Name: 105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I loved her class. She was interesting and really helpful. I would definately recommend this class to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: PSY105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>o man, amanda is sooo beautiful, sometimes in class i would just watch her talk, mmmm...anyway, lots of note taking, but she doesnt waste your time, shes totally straightforward about the stuff you're gonna see on tests.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2003<br>Class Name: PSY105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This **** likes to talk.  Do Not, I repeat, Do Not take a night class with her!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");

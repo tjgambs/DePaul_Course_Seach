@@ -21,11 +21,17 @@
 									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
 									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
 				<div>
-					<span><h3><a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;">Course Cart</a></h3></span>
+					<span>
+					<h3>
+						<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix">
+							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -198,7 +204,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number inputbox" placeholder="NUMBER">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -213,13 +219,69 @@
 				<br />
 				<hr>
 				<div id="overlay">
-					<div>
-					    <form action="../search.html">
-							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Teacher, Course Title, or General Keyword">
-							</form>
-					</div>
-				</div>
+	    <div>
+	        <form action="../search.html">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+	    </div>
+	</div>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Once finding a good course section, press the add button in the table. This will save the course to course cart.<br />
+			6) After adding the courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press the minus button in the table then re-generate the schedule. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+
+			</h2>
+	    </div>
+	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Shayna Connelly</h1><hr><div><h2>Overall Quality: 3.4<br><br>Helpfulness: 3.2<br>Clarity: 3.6<br>Easiness: 2.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/13/2015<br>Class Name: DC227<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>Honestly, you are better off taking another course to fulfill the requirement. Sure, you get to watch movies but they are ones you have already seen and you are fishing out info and arbitrarily relating them to the philosophies .Save your gpa. If your papers aren't in conformity with her opinion, she will mark you down big time. Frustrating</div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2015<br>Class Name: DC227<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>AVOID, after 4 years there goes my beautiful 4.0 GPA. Didn't learn anything, waste of time. Class consists of extremely confusing philosophical topics  that you somehow have to associate to sub-relevant films. I'd rather just learn one or the other. Very tough grader. No rewrites. No way around her grading or personality. Papers are a nightmare.</div></div></div><div id="container" class="review"><div id="left">Date: 04/10/2015<br>Class Name: DC380<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>I love Shayna! She is honest and cares about you succeeding. I would take another one her classes in a  heart beat.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2013<br>Class Name: DC210<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is a difficult course if you praise originality and art in cinema, because Shayna does the opposite. It's hard when you go from art theory to the brain-mush form of filmmaking this course offers. Unfortunately, you have to take it if your in DC, but try to take someone else. She is fun and easy, but fails to challenge you properly.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2012<br>Class Name: DC227<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HER ONLINE CLASS. She is unclear and an extremely difficult grader. If you do not typically have a philosophical mindset and are taking this class to 'learn' you are in the wrong class. She expects her online students to already know all the answers and merely type them up in their weekly paper. Honestly, worst class at DePaul so far.</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2011<br>Class Name: DC227<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thoroughly enjoyed her class and every movie incorporated in the class was superb.  She can be a hard grader for the midterm and  final but all other paper grading was decent.  Make sure to do every paper because it can make your A an A-.  Last note: get both books.  You'll only hurt yourself if you don't because they are vital for every paper.</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2010<br>Class Name: DC110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I absolutely love Shayna. She gives great lectures and will answer any question you have. I love going to class to hear what she has to teach, and she makes everything very understandable. I would definitely recommend taking any of her classes!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2010<br>Class Name: DC110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you love learning about film, and are willing to take criticism, you will love Shayna. She tends to think she knows everything about film, but quite honestly she does. I was always excited to learn about what she had to say. Shayna always picked interesting films to screen and things to pinpoint in lectures. I recommend her if you are serious.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2009<br>Class Name: CIN207<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>My last comment field was strangely deleted. You can find MANY more reviews of Mrs.Connelly under her maiden name of Weiss and Columbia College. Condescending quality makes it difficult to learn or ask questions. She seems to dislike student or has an air of irritability. Take someone else</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2009<br>Class Name: DC601<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class is absolutely ridiculous. It's called Production 1, yet we learn NOTHING about production, and are expected to shoot 2 films...in 5 weeks.  Gee, thanks for the lesson on craft service tables.  THAT will help me know what happens on set... Shayna is dry and canonical. She claims to understand students busy lives, but it's all lip service.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2009<br>Class Name: DC210<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Shayna is a very helpful in and out of class. You can almost always get a hold of her for meeting outside class, and she knows a lot, so she can handle questions on production or anything else. I would highly recommend for any class she teaches. Just listen and do the work and all will be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2008<br>Class Name: DC205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a really cool teacher, and easy to understand. I'm always excited to hear about the stuff she lectures about and she shows us tons of clips from a lot of films. She's nice, and will help you if need be. Definitely worth taking more than once.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+					updateCourseCartCount()
+					function updateCourseCartCount()
+					{
+						var cookies = document.cookie
+						var count = 0;
+						for (i of cookies.split(';'))
+						{
+							cookie = i.split(',')
+							if (cookie[0].indexOf('-add-') != -1)
+							{
+								count += 1;
+							}
+						}
+						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
+					}
+
+					function help() 
+					{
+						console.log('fdsa')
+						el = document.getElementById("help");
+						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+					}
+
+					$('#help').mousedown(function(e) 
+					{
+						var clicked = $(e.target);
+						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+						{
+							return;
+				    	} 
+				    	else 
+				    	{ 
+				    		el = document.getElementById("help");
+							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+				    	}
+					});
+
 					function overlay() 
 					{
 						el = document.getElementById("overlay");
