@@ -143,6 +143,7 @@ def create_teacher_webpage(id,name,values):
 					</span>
 					<span>
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
+						<div id="search-box" style="visibility: hidden;">
 						<div style="display: inline-block; padding-right:10px">
 							<select class="prefix" style="width:200px;">
 								<option value="ACC">ACC - Accountancy</option>
@@ -327,6 +328,7 @@ def create_teacher_webpage(id,name,values):
 								</form>
 							</div>
 						</div>
+						</div>
 					</span>
 				<div>
 				<br />
@@ -480,6 +482,7 @@ def create_teacher_webpage(id,name,values):
 
 				 	$( document ).ready(function() {
     					$(".prefix").select2();
+    					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});
 				</script>'''
 		html += '</html>'
