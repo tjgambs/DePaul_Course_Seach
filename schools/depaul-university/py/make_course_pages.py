@@ -310,25 +310,25 @@ def create_page(full_name,description,course_url):
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
 		    	
 		    	html += '<tr>'
-		    	if(readCookie(teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add-'+classNumber)==0)
+		    	if(readCookie((teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-add-'+classNumber)==0)
 		    	{'''
-	html += '''html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+["'''+short_url+'''",classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
+	html += '''html += '<td><input class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-add"'+'id="'+["'''+short_url+'''",classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>'
 		    	}
 		    	else
 		    	{
-		    		html += '<td><input class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-add"'+'id="'+['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
+		    		html += '<td><input class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-add"'+'id="'+['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
 		    	}
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-overall">0.0</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-status">'+classStatus+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-credits">'+creditHours+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-firstn">'+teacherFirstName+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-lastn">'+teacherLastName+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-start">'+classStartTime+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-end">'+classEndTime+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-section">'+classSection+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-number">'+classNumber+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-campus">'+campus+'</td>'
-		    	html += '<td class="'+teacherFirstName.toLowerCase()+'-'+teacherLastName.toLowerCase()+'-days">'+days+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-overall">0.0</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-credits">'+creditHours+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-firstn">'+teacherFirstName+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-lastn">'+teacherLastName+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-start">'+classStartTime+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-end">'+classEndTime+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-section">'+classSection+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-number">'+classNumber+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-campus">'+campus+'</td>'
+		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-days">'+days+'</td>'
 		    	html += '</tr>';
 
 		    }
@@ -354,12 +354,12 @@ def create_page(full_name,description,course_url):
 	    	for (i of data)
 	    	{
 		    	overall = i.averageratingscore_rf;
-		    	first_name = i.teacherfirstname_t;
-		    	last_name = i.teacherlastname_t;
-		    	var list_overall = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-overall')
-		    	var list_firstn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-firstn')
-		    	var list_lastn = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-lastn')
-		    	var list_cookie = document.getElementsByClassName(first_name.toLowerCase() + '-' + last_name.toLowerCase() + '-add')
+		    	first_name = i.teacherfirstname_t.replace('\u00ED','i');
+		    	last_name = i.teacherlastname_t.replace('\u00ED','i');
+		    	var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-overall')
+		    	var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-firstn')
+		    	var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-lastn')
+		    	var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add')
 		    	if(list_overall.length != 0)
 		    	{
 		    		for(var j = 0; j<list_overall.length; j++)
@@ -368,9 +368,9 @@ def create_page(full_name,description,course_url):
 		    			{
 		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
 		    				{
-				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ overall + '</a>'
-				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ first_name + '</a>'
-				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+first_name.toLowerCase()+'-'+last_name.toLowerCase()+'.html">'+ last_name + '</a>'
+				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ overall + '</a>'
+				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ first_name + '</a>'
+				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ last_name + '</a>'
 				    			list_cookie[j].id = overall+',' + list_cookie[j].id
 			    			}
 		    			}
@@ -397,7 +397,6 @@ def create_page(full_name,description,course_url):
 
 	function help() 
 	{
-		console.log('fdsa')
 		el = document.getElementById("help");
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
@@ -441,7 +440,7 @@ def create_page(full_name,description,course_url):
 		index = 9
 		value = contents.getAttribute('id')
 		if(value.split(',').length<12) index=8
-		className = contents.getAttribute('class')
+		className = contents.getAttribute('class').split(' ').join('-')
 		days = 1
 		writeCookie(className+'-'+value.split(',')[index],value,days)
 		document.getElementById(value).src = "../../../minus.png"
@@ -455,7 +454,7 @@ def create_page(full_name,description,course_url):
 		index = 9
 		value = contents.getAttribute('id')
 		if(value.split(',').length<12) index=8
-		className = contents.getAttribute('class')
+		className = contents.getAttribute('class').split(' ').join('-')
 		document.getElementById(value).src = "../../../add.png"
 		document.getElementById(value).onclick = function() {addToCart(contents)};
 		delete_cookie(className+'-'+value.split(',')[index])

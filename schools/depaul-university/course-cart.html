@@ -274,10 +274,6 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
-	updateCourseCartCount()
-	formatCookies()
-	$("#myTable").tablesorter({sortInitialOrder: 'desc'});
-
 	function updateCourseCartCount()
 	{
 		var cookies = document.cookie
@@ -295,7 +291,6 @@
 
 	function help() 
 	{
-		console.log('fdsa')
 		el = document.getElementById("help");
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
@@ -403,7 +398,7 @@
 		{
 			index = 8
 		}
-		className = contents.getAttribute('class')
+		className = contents.getAttribute('class').split(' ').join('-')
 		delete_cookie(className + '-' + value.split(',')[index])
 		window.location.reload()
 	}
@@ -538,6 +533,9 @@
 
 	$( document ).ready(function() 
 	{
+		updateCourseCartCount()
+		formatCookies()
+		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
     	$(".prefix").select2();
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});

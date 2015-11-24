@@ -274,7 +274,6 @@
 
 	function help() 
 	{
-		console.log('fdsa')
 		el = document.getElementById("help");
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
@@ -349,12 +348,12 @@
 	    }
 	});
 
-	$( document ).ready(function() 
+	$(document).ready(function() 
 	{
     	$(".prefix").select2();
     	$('#tipue_search_input').tipuesearch();
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    	updateCourseCartCount()
 	});
-	updateCourseCartCount()
 </script>
 </html>
