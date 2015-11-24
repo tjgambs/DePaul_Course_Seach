@@ -228,7 +228,7 @@ def create_page(full_name,description,course_url):
 <br />
 <hr>
 <div id="overlay">
-	    <div>
+	    <div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
@@ -319,7 +319,14 @@ def create_page(full_name,description,course_url):
 		    		html += '<td><input class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-add"'+'id="'+['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
 		    	}
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-overall">0.0</td>'
-		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	if(classStatus == 'Closed')
+		    	{
+		    		html += '<td style="color:red;" class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	}
+		    	else
+		    	{
+		    		html += '<td style="color:green;" class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	}
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-credits">'+creditHours+'</td>'
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-firstn">'+teacherFirstName+'</td>'
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-lastn">'+teacherLastName+'</td>'
@@ -364,7 +371,7 @@ def create_page(full_name,description,course_url):
 		    	{
 		    		for(var j = 0; j<list_overall.length; j++)
 		    		{
-		    			if (overall != undefined)
+		    			if (overall != undefined || overall != '0' || overall != '0.0')
 		    			{
 		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
 		    				{
@@ -424,7 +431,7 @@ def create_page(full_name,description,course_url):
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
-		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
 		{
 			return;
     	} 
@@ -547,10 +554,12 @@ def create_page(full_name,description,course_url):
 	with open('../'+webpage_name,'w') as output:
 			output.write(html)
 	data = json.loads(urllib.urlopen(course_url).read())
-	names = []
+	tags = []
 	for i in data:
-		names.append(i['first_name'] + ' ' + i['last_name'])
-	return [full_name.replace(';',''),description,names,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
+		tags.append(i['first_name'] + ' ' + i['last_name'])
+		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
+
+	return [full_name.replace(';',''),description,tags,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
 
 def create_all():
 	with open('../classes.json','r') as input:

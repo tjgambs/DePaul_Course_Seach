@@ -334,7 +334,7 @@ def create_teacher_webpage(id,name,values):
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div>
+	    <div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
@@ -434,7 +434,7 @@ def create_teacher_webpage(id,name,values):
 					$('#overlay').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
-						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
 						{
 							return;
 				    	} 

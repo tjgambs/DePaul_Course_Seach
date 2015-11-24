@@ -220,7 +220,7 @@
 <br />
 <hr>
 <div id="overlay">
-	    <div>
+	    <div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
@@ -306,7 +306,14 @@ Individual projects due upon return from the study abroad will further allow stu
 		    		html += '<td><input class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-add"'+'id="'+['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days]+'" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>'
 		    	}
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-overall">0.0</td>'
-		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	if(classStatus == 'Closed')
+		    	{
+		    		html += '<td style="color:red;" class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	}
+		    	else
+		    	{
+		    		html += '<td style="color:green;" class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-status">'+classStatus+'</td>'
+		    	}
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-credits">'+creditHours+'</td>'
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-firstn">'+teacherFirstName+'</td>'
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-lastn">'+teacherLastName+'</td>'
@@ -351,7 +358,7 @@ Individual projects due upon return from the study abroad will further allow stu
 		    	{
 		    		for(var j = 0; j<list_overall.length; j++)
 		    		{
-		    			if (overall != undefined)
+		    			if (overall != undefined || overall != '0' || overall != '0.0')
 		    			{
 		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
 		    				{
@@ -411,7 +418,7 @@ Individual projects due upon return from the study abroad will further allow stu
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
-		if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
 		{
 			return;
     	} 
