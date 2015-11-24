@@ -221,7 +221,7 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div>
+	    <div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
@@ -246,7 +246,7 @@
 			</h2>
 	    </div>
 	</div>
-				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Christine Gimbar</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 3.0<br>Clarity: 2.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>First year teaching at DePaul. She will make you memorize every possible thing for the rest including things you will never need to know. Midterm is worth 40% of your grade and final is worth 45%. Very hard clad. DO NOT TAKE HER</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Christine Gimbar</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 3.0<br>Clarity: 2.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>This was her first quarter teaching and I wish no other students get stuck with her in the future. Class average on the midterm was 60%, and grading of the homework was tough. She told a few students to strictly worry about the 18 review questions for the final. I mastered the review questions and they barely ended up being covered in the final. </div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>First year teaching at DePaul. She will make you memorize every possible thing for the rest including things you will never need to know. Midterm is worth 40% of your grade and final is worth 45%. Very hard clad. DO NOT TAKE HER</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
 					function updateCourseCartCount()
 					{
@@ -293,7 +293,7 @@
 					$('#overlay').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
-						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
 						{
 							return;
 				    	} 

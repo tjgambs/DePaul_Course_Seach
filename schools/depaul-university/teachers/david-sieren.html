@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>David Sieren - 4.8</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>David Sieren - 4.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 
@@ -221,7 +221,7 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div>
+	    <div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
@@ -246,7 +246,7 @@
 			</h2>
 	    </div>
 	</div>
-				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>David Sieren</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 5.0<br>Clarity: 4.7<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/23/2015<br>Class Name: GD200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>David's a really cool teacher. He explains things well and helps a lot if you're willing to ask for it. Knowing Photoshop or Illustrator is important since the class doesn't spend much time going over how to use these applications.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2015<br>Class Name: GD200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>David is amazing. He gives great feedback on projects and is always willing to sit with you and give you extra helpattention on a project. My 3 hour class flies by because he makes it so fun and enjoyable! He assigns projects that actually help you develop as a designer. It has been 5 weeks and I feel much more confident than I did week 1. </div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2013<br>Class Name: GD105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>If you're a Graphic Design major, taking David for 105 is a must. As a working designer, he definitely knows what he's talking about and I've never had a teacher as passionate or creative with lectures. The workload is a bit heavy, but it's all relevant and fairly simple. He also gives tests every other week but they aren't too hard.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2013<br>Class Name: GD105802<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>David is awesome. He's really laid back, keeps lectures interesting, and you can really tell he's passionate about the subject he teaches.  I'm always surprised how quickly the 3 hour class I'm in goes by.  If you're interested in design you'll love his classes, and if you're not, he's probably still your best bet.  His class is actually fun.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>David Sieren</h1><hr><div><h2>Overall Quality: 4.4<br><br>Helpfulness: 4.5<br>Clarity: 4.3<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/23/2015<br>Class Name: GD200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>David's a really cool teacher. He explains things well and helps a lot if you're willing to ask for it. Knowing Photoshop or Illustrator is important since the class doesn't spend much time going over how to use these applications.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2015<br>Class Name: GD200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>David is amazing. He gives great feedback on projects and is always willing to sit with you and give you extra helpattention on a project. My 3 hour class flies by because he makes it so fun and enjoyable! He assigns projects that actually help you develop as a designer. It has been 5 weeks and I feel much more confident than I did week 1. </div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2013<br>Class Name: GD105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>If you're a Graphic Design major, taking David for 105 is a must. As a working designer, he definitely knows what he's talking about and I've never had a teacher as passionate or creative with lectures. The workload is a bit heavy, but it's all relevant and fairly simple. He also gives tests every other week but they aren't too hard.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2013<br>Class Name: GD105802<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>David is awesome. He's really laid back, keeps lectures interesting, and you can really tell he's passionate about the subject he teaches.  I'm always surprised how quickly the 3 hour class I'm in goes by.  If you're interested in design you'll love his classes, and if you're not, he's probably still your best bet.  His class is actually fun.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
 					function updateCourseCartCount()
 					{
@@ -293,7 +293,7 @@
 					$('#overlay').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
-						if (clicked.is('#tipue_search_input') || clicked.parents().is('#tipue_search_input')) 
+						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
 						{
 							return;
 				    	} 
