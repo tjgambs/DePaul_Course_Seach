@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Andrew Miller</h1><hr><div><h2>Overall Quality: 3.6<br><br>Helpfulness: 3.7<br>Clarity: 3.5<br>Easiness: 2.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/13/2015<br>Class Name: HIS171<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Yes, he is a super nice guy, and gave me an extension for my final paper. But his quizzes are impossible. I read every week and take notes, but end up with a 5/10 or 6/10 on every quiz. I usually get all A's, but i'm barley hanging onto a C. This is the hardest class I have ever taken at DePaul. If history is not your passion or major, avoid. </div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2015<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Overall it's was a great class. You can tell History is his life so expect very informative lectures. Quizzes every Thursday. My advice would be to jot down key information while reading the sources assigned.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher who's very interested in history. I hated history and he made me actually enjoy it. Super cool laid back guy who is pretty funny. Lectures are actually interesting. Tests every Thursday on assigned reading which are very easy if you take the time to read. </div></div></div><div id="container" class="review"><div id="left">Date: 08/04/2015<br>Class Name: 285<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: C-</div><div id="right"><div>He doesn't check attendance but I would recommend going bc there are a few questions on the quizzes that come directly from his lectures. I also would recommend REALLY reading the textbook & not just skimming bc the questions on the quizzes are  hard. I didn't have a book the whole quarter due to a shipping mishap but he was really nice about it. </div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2015<br>Class Name: HIST285<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Miller really knows his stuff. He really doesn't check for attendance but I recommend going to class. Class consists of 9 quizzes, a paper, and the final exam. I would definitely take him again. </div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2015<br>Class Name: 285<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>AVOID.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2015<br>Class Name: 285<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Take this class if you like being quizzed on very specific parts of the reading which really do nothing to increase your knowledge on Ancient Rome... Lectures are alright and the paper isn't too bad. I would definitely only take this class if you are already an expert on Ancient Rome though. </div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2015<br>Class Name: 285<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: D+</div><div id="right"><div>Heavy readings every week. Weekly tests  on those readings ask you the most difficult details, which account for a whopping 35% of your grade. 100% agree with the reviewer below. Tough grader and expects a lot... Make  sure you have a LOT of  knowledge on Ancient Rome before taking his class. </div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2015<br>Class Name: 285<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Extremely vague weekly quizzes which count for 20% of your final grade. Be prepared to be quizzed on the most obscure parts of the reading. He does not post grades online so you never know how you're doing in the class unless you ask him (be prepared for a vague answer). I would not take this class unless you already have a PhD on Ancient Rome.. </div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2015<br>Class Name: HST171<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Miller was a super great guy. Super understanding person, I remember we had a disagreement about my Midterm Paper grade, after discussing my view with him he took a second look at the paper and moved my grade up by an entire letter grade. Also, extremely clear when it comes to what he expects out of his students throughout the quarter. Take him</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2015<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Professor Miller really knows what he's teaching and this made assignments so much easier. Standard work for an honors class. I would definitely take a class with him again. </div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>I loved history with Dr. Miller! He knows EVERYTHING about the subject and he had amazing lectures. You MUST read if you want to get a good weekly quiz score. He is an incredibly nice guy and will clarify if confused. I am hoping to take his other history classes in the future. Overall, very very nice guy and amazing professor!</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>I loved history with Dr. Miller! He literally knows everything about the topic, and his lectures are amazing. He is an incredibly nice guy and is will clarify if confused. You MUST read if you want to get a good weekly quiz score. Take the class if you don't know much about the middle ages, you will learn a ton. Amazing and very nice professor!</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2014<br>Class Name: HON102<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I love Professor Miller. The lectures were more like conversations as he encouraged participation and made it easy to do so. The assignments aren't too bad and he's available for assistance. His aim is not to make it difficult to pass the class--he's there for any questions or assistance. One of my favorite professors and classes.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2014<br>Class Name: HIST290<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B</div><div id="right"><div>Very passionate about the history of England. He knows his stuff you must read if you want to do well. go to class !!!!because there is a quiz every week.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2013<br>Class Name: HIST285<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Miller is a great instructor with a real passion for history. I had him for History of Ancient Rome, and, while the class was very difficult, Prof. Miller will work with you to get you on track. Just remember to read! I had trouble with the quizzes until I began doing the readings the night before so it was fresh.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2013<br>Class Name: HIST171<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>ALOT of reading. BUT do the reading and you'll get an A. Most people in the class are people who LOVE History & read it for fun. The teacher himself is REALLY knows the subject content well and LOVES Euro History. Enthusiastic. Traveled Euro. 2 papers.  Good Teacher. Quiz every week.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2013<br>Class Name: HST292<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's absolutely phenomenal. MAKE SURE YOU DO YOUR READINGS, and you'll be set. He's funny, friendly, helpful, and a really good teacher. It's some work, but it's worth it</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2013<br>Class Name: HST171<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HIM IF YOU JUST NEED TO FULFILL A LEARNING DOMAIN.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2013<br>Class Name: HST171<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Literally the worst class I have ever taken at DePaul. Avoid HST 171 AT ALL COSTS. I have never gotten anything below an A in a class and I'm barely hanging onto a C and I'm studying for hours a week. Harder than my 3 other 300 level courses.</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2013<br>Class Name: HST171<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>uhg.. He's such a nice guy and clearly interested in the topic, but he's an awful teacher. SO much reading for a 100 level course and he picks the most obscure parts of the reading to quiz you on, so you basically have to be an expert on everything to even pass this stupid class. Awful, do not take.</div></div></div><div id="container" class="review"><div id="left">Date: 01/11/2012<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Loved the class. Loved the professor. He's a no nonsense type of guy. Will make you work for your grade which is what a good professor does. You NEED to read and NEED to go to class, you will benefit and your grade will go up. Not reading = failing. Reading isn't bad at all. You're in college, get used to it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2011<br>Class Name: HST171<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HST 171 WITH MILLER. it will be the biggest mistake you have ever made. the amount of effort he expects is atrocious and you will waste all of your time for other classes studying for his awful weekly tests.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2011<br>Class Name: HIST171<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Easy A if you are interested in history.  You must read!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2011<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Miller is great! He is really interested in teaching and he makes class fun. While there is a lot of reading of primary sources, people who are actually interested in history should be fine. I looked forward to this class every week and plan on taking every class he ever teaches!</div></div></div><div id="container" class="review"><div id="left">Date: 12/24/2010<br>Class Name: HIST171<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>AWFUL CLASS. Dont waste your time or money. He is not too hard, but the class is not enjoyable. Only used one textbook the reading the MA sources. AVOID if possible if not than bring something to class to keep you entertained because he doesn't Good luck. Im glad it's over!</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2010<br>Class Name: HST292<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Miller is my favorite teacher at DePaul and I'm not even a History major. Lots of reading, but it is interesting and if you read the quizzes are easy and ensure a good grade in the class. His lectures are engaging and I looked forward to each class. The final is a lot of writing, but if you paid attention all quarter it is not that difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 08/11/2010<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>dr miller is possibly my favorite professors at depau in the history dept. he's really intelligent and passionate about the middle ages. the class is very heavily emphasized on sources and lecture. the paper for his class i would recommend doing days ahead of its due date & the final is pretty brutal. defiantly recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2010<br>Class Name: HIST171<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Take these words from a third year student: do NOT take this class to fulfill your history requirement. His grading is not fair nor is it impartial. In fact, his grading is ambiguous and unclear. Prepare to work harder in this 100 level class than any other 300 level class. Excellent class for history majors but not for students trying to graduate!</div></div></div><div id="container" class="review"><div id="left">Date: 05/31/2010<br>Class Name: HST292<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not reccomended for non-history majors. He is very passionate about the subject, but weekly quizzes make up 35% of the grade and they are all primary sources, most of which are in old english. Too much work for a GenEd, but its a great class if you have a true interest in history</div></div></div><div id="container" class="review"><div id="left">Date: 05/24/2010<br>Class Name: HST292<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I am not a history major, but this class that focused on england was very interesting in my opinion--he is very nice and hilarious too & passionate about history! he is always willing to help as well. WEEKLY quizzes (do your readings!), one 5-6 pg paper, no midterm and a final. TAKE HIM! HIGHLY RECOMMENDED!</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2010<br>Class Name: HIST171<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>because of the ratings I took Miller. His expectations for an elective class is ridiculous. I am a hist lover, but all that he is focus on is sources, sources, sources. The weekly readings are hard to understand & his quizzes are tricky. He is a hard grader. The final is dumb, he needs to realize that not everyones a hist major. I regret taking him</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2010<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Yes, the class is a lot of reading but Dr. Miller is probably one of more laid back professors at DePaul. His lectures are interesting and is really passionate about the subject. He is really helpful outside of class and goes over the final material in-class. Overall, the class is fair if you do the work.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2010<br>Class Name: HST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers I've had at Depaul.  He knows his material, has been to the places that you discuss in class, and is very engaging.  Class is all powerpoint presentations full of personal pictures but are very entertaining.  Take good notes and do the reading and there isn't any reason you shouldn't do well even if you don't like history.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2009<br>Class Name: HIST171<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO Not take him unless you love the middle ages. If you just need a history elective this is not the class for you. Also he tells you to buy two books, You only use one so if you get stuck in this class only buy Reading th M A Source book.Final is soo much work 7 essays in class must provide sources not allowed to use note card. Stay AWAY!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2008<br>Class Name: HIST171<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher who is very passionate about Medieval History. Kind of hard class for most people...very helpful if you talk 2 him</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2008<br>Class Name: HST210<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher, very clear, and nice guy. His lectures are somewhat engaging even if you don't like history. Weekly quizzes on the readings, 5-page paper and take home final. You have to do the readings to pass and it helps when writing your paper. Highly recommend taking his class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2008<br>Class Name: HIS211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof Miller is a good teacher and is very excited about history. The biggest problem is that he is a Medievalist focusing on England and France. The first 3 classes out of ten are medieval history and he only glosses over the Renaissance. So if you are interested in the Renaissance or Italian history, you might want to try a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2008<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>LOVE him!  He is so great and I really did learn a lot in his class.  It has also made me very interested in medieval people!</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2008<br>Class Name: HST210<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>A Great Professor and a great class; however, you must have an interest in Medieval History in order to get through the strenuous weekly readings. Miller is extremely knowledgable, helpful and fair. Despite failing 60% of the weekly quizzes, I got a B+ in the class. Just do well on the 5-page paper and take-home final!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2008<br>Class Name: HST210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor & class if you're interested in learning about Medieval History. Informative and fun lectures, excellent use of Medieval sources and maps. I hope to take many more of Dr. Miller's classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2007<br>Class Name: HSTU<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Miller is one of the best teachers in the History Department. Those who complain about reading face it: to learn history you have to read primary sources. Moreover, primary sources are fun. I learned a lot and got an A.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2007<br>Class Name: HIST201<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Here is the deal w/this guy. You have to read 70pgs a week(which is fine) but they are mostly stories of what people did in the middle ages. then you take a 10 question quiz weekly. 50% mc/50% short answer. Uses pp. but not as a teaching aid DOESN'T PUBLISH THEM. After submitting e-mails he never answered the questions right. Not worth it! DR. Hst</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2007<br>Class Name: HST210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Way too much reading, if your looking to fulfil a requirement don't take him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2007<br>Class Name: HIS210<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Miller is a good teacher, but the subject matter is difficult.  His finals are NO LONGER OPEN BOOK.  Because of this, I did not do well.</div></div></div><div id="container" class="review"><div id="left">Date: 04/19/2007<br>Class Name: HST285<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>To all those complaining about the reading... have you forgotten you're a student in a university&#63;  2-3 hours of reading a week is a small workload for an easy A.  Besides, the readings are very interesting and his lectures are great; they're fun and they always end early.  If you have any interest in the subject matter, you'll enjoy his classes.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2007<br>Class Name: HIST285<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>anyone who whines about how hard prof. millers class is is an idiot.. its easy if you work hard .. and he knows his stuff you guys are probably not paying attention .. teach on prof. miller.. teach on!</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2007<br>Class Name: HST204<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>seems like he really doesn't know what he's talking about.  answer to every question is always &quot;i'm not 100% positive&quot;. isn't a teacher, especially a college professor supposed to be knowledgeable on the subject they teach&#63;  gives weekly quizzes, that aren't particuraly hard, only if you read--read every detail on the assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 12/25/2006<br>Class Name: HST285<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Miller is a very good teacher. YOU HAVE TO READ in order to do good on quizes. I took both 285 and 210 with him and enjoyed it a lot. From his classes you can really learn a lot. Havig said this, it does not mean that you can relax in his classes. You have to work hard for A-B range.</div></div></div><div id="container" class="review"><div id="left">Date: 12/20/2006<br>Class Name: HIST285<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>IDIOT! UNCLEAR, YOU ARE SUPPOSED TO TAKE NOTES OFF HIS POWER POINTS BUT IT IS ALL PICTURES, HE MAKES YOU READ LIKE 200 PAGES A WEEK OUT OF 10 DIFFERENT THINGS AND THEN QUIZZES ON THEM.  HE WAS HORRIBLE, I THOUGHT THE ROMAN EMPIRE WOULD BE FUN, TAUGHT BY HIM IT DIDNT MAKE ANY SENSE!</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2006<br>Class Name: HSTSECT<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Do not take this class unless you have a lot of time to read. He is passionate, interesting, and effective. You must do the work and pay attention in class in order to get a good grade. He is a tough grader, but recognizes hard workers. I am not a history major and I still pulled off an A. (It took a lot of time away from my other core clases)</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2006<br>Class Name: HIST285<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I thought this class was awesome.  It will take a good amount of your time and effort, so this is not a blow off class by any means.  If you're already interested in Roman History, you'll learn a ton and find out that you actually retain it, not forget it.  Anyone who complains about the reading is a baby.  THIS IS COLLEGE.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: HST285<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this class SUX SUX SUX SUX SUX! He cannot teach for the life of him; extremely unclear and reads his lectures off his notes while u look at powerpoints of stupid cartoon pictures. tests every week, huge final and paper, hard grader. avoid at all costs, if you would like to keep your sanity!</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2006<br>Class Name: ROMESECT<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took this as a night class.  The material is somewhat interesting, but his lectures are not good.  He is a medieval historian so he compares EVERYTHING with that, which makes no sense.  He reads all of his lectures and seems to not know it.  Open note final and one paper, but quizes every week, He curves the quizes, but its not worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2006<br>Class Name: HST210<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's really interesting and makes class fun, but assigns a lot of work(mostly readings) and has weekly tests.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2006<br>Class Name: HIST210<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>VERY good professor. He is really passionate abt wat he teaches but is EXTREMELY TOUGH! I have never read soooo much in my life! there is a quiz ever week...on ALLLL the readings..if u honestly have a good 2-3 hrs just to dedicate to reading all the material and memorizing and understanding..take this course, other wise STAY AWAY!</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2006<br>Class Name: HIS210<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Teacher extemely nice and helpful. Hard class!!! Quizzes each week over assigned readings. Way too much to read and remember-hardest part of class. Lectures interesting but don't try to write everything down. Be specific in notes. The last exam is comprehensive but gives you the whole exam and can bring in notes. This is most important = 50% grade</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2006<br>Class Name: HISTORY210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>great teacher, very helpful and open to talk about improving in class. gives weekly tests on reading materials. no midterm just a big final...</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: MEDIEVALPPL<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2006<br>Class Name: MEDIEVALPEOPLE<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Cool teacher but weekly tests that are very hard. LOTS and LOTS of reading for the tests. All the lectures are based on powerpoint, somewhat boring. Would not take!</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2006<br>Class Name: MEDIEVALPEOPLE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Miller's class is pretty challenging, but very interesting. There's a lot of reading, so don't sign up if you can't spare the time/effort.</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2006<br>Class Name: MEDIEVALPEOPLE<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved this class! The reading is heavy and the quizzes can be a drag, but I thought that Prof. Miller was very interesting and fun. It would help if he took his time in the lectures a bit more. However, the subject matter is interesting and the papers, presentations, and final are not that hard.</div></div></div><div id="container" class="review"><div id="left">Date: 12/31/2005<br>Class Name: HISTORY<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Lectures are all over the place, but a very helpful teacher in general. Took notes on everything, and then only got tested on 1/8!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2005<br>Class Name: MEDIEVALPEOPLE<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really nice guy, understanding.  Class is boring, just shows powerpoint presentations everyday.  Quiz on all readings, which are boring.  2 papers, group presentation, and final.  But manageable, and at least he's a nice guy!</div></div></div><div id="container" class="review"><div id="left">Date: 09/26/2005<br>Class Name: HST211<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this guy only shows powerpoint in the class and he only uses pictures to tell you the stories.  he has way too many readings and too many quizes everyday in the class there is quiz. this guy doesn't know how to teach.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

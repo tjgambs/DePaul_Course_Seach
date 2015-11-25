@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Nzingha Nommo</h1><hr><div><h2>Overall Quality: 2.9<br><br>Helpfulness: 3.0<br>Clarity: 2.8<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/19/2015<br>Class Name: LSP121<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Nommo is very sweet and soft spoken, so sit in the front! Her lectures can be a bit confusing, and she will stall the entire class until she gets a very specific answer that is verbatim to the vocabulary (which can be super annoying, but have patience). All the quizzes are extra credit, and she is very willing to help if you need it.</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2015<br>Class Name: LSP121<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Really didn't like this class. Had to take it for credit. She is a fine teacher but the way that lectures are set up bothered me and she either went too fast or too slow for my pace. Help was there but not all the time. Assignments were fine, not really hard. But I would not recommend her class, it was the class I dreaded going to.</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2015<br>Class Name: LSP121<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The professor lacks structure and takes herself too seriously. She doesn't explain, and assumes everyone knows what she's talking about with the material.  Furthermore, she never responded to emails on time when one needed help and she never graded her own homework, not to mention that the homework isn't graded before exams. Do not take her... </div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2015<br>Class Name: LSP121<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: B</div><div id="right"><div>This class is a joke. I've been in the working world and Access is not used. Haven't come across it once. This class is obscenely complicated bc of Access. If you missed a class and tried to catch up by looking at her ppt, prepare to be infuriated. They are for her, not for us. Class should be conducted way differently. DO NOT TAKE, unless u have 2</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2015<br>Class Name: LSP121<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was so sweet! Would always pause class and go over things as much as you needed, very helpful. Likes participation (calls it her "treasure chest," she wants to know the students). Hard to schedule office time with her though. Overall, good experience even though I dislike math. The course wasn't too hard, mostly tech stuff (Microsoft Access).</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2014<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>She is the type of professor that would take time out of her day to help you with whatever you need. The class can be boring and feel pointless, but i think that has more to do with the material. She is actually an interesting person. Very sweet. She does not have an accent like her name might suggest. Takes attendance 10 times randomly.</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2014<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She wants nothing more than to see you succeed. All lectures are posted online and she gives you plenty of time to complete the assignment.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2014<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>She is a fantastic teacher, she goes out of her way to make sure that everyone understands everything. She gives ample opportunities for extra credit, even quizzes count for extra credit and the homework and activities are easy. Definitely take her for LSP 121 because she goes out of her way to make sure everyone passes the class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a very nice teacher! You need to attend class because if you don't you will be completely lost. Homework is easy gives you about a week to each assignment which is really nice. You don't have any test, so that's a plus! Midterm is really easy just go to class and do the review sheet and final was pretty hard but if you study you will be fine</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2013<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nommo is so nice, funny, and a good teacher. The only thing is you have to go every day (not that it's mandatory but you'll miss a lot if you skip a class). It's not hard to learn the content, just pay attention every once in awhile. She's very sweet and willing to help you outside of class hours</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2013<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>All you have to do to succeed with Nzingha is pay attention. When everyone is actually going through the steps with her, the lessons are clear. It's when people stop paying attention and fall behind that her lessons can become less clear. Pay attention in class, do the bonus activities, and run through the activities on your own for an easy A</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2012<br>Class Name: LSP121<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Unfortunately, this was probably the worst class I've taken at DePaul. What could have been an extremely easy and useful class became unnecessarily unclear and confusing due to Professor Nommo's teaching style.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2012<br>Class Name: LSP121<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This professor may have been the worst one I have had at DePaul. Yes, she is a nice lady but that does not make up for the fact that she is very disorganized and unclear. If you are thinking of taking this class for an easy A, let me assure you that the amount of work you will have to do to understand what she is teaching will not make it easy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2012<br>Class Name: LSP121<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You guys are mean.  Nzingha is really nice and takes the time during class to ensure that all students are understanding the steps in the program. If you're slow, she always is open to walk you through during her office hours. As far as not being loud enough, yeah i have to agree. Be smart enough to sit in the first 2 rows. Problem solved.</div></div></div><div id="container" class="review"><div id="left">Date: 04/30/2012<br>Class Name: LSP121<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is terrible. You can never hear what she is saying and she rushes through the  computer programs without telling you what she is doing. She never announces due dates for homework's or assignments and is very unclear of what she wants from you. Avoid her if you can, she's very hard to learn from.</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2011<br>Class Name: LSP121<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She talks slow, but overall this class is easy. Easy midterm! just go to class & pay attention. She goes slow, but its an accurate pace to learn. Shes a good lady, not bad as these reviews seem.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2010<br>Class Name: LSP121<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sweet lady. Sucky professor. You can not hear her 9 times out of 10 and teaches as if computers are something new to us. Class drags and what could possibly take 20 min to do and learn takes the entire class and usually spills over until the next. Steer away or take as a blow off.</div></div></div><div id="container" class="review"><div id="left">Date: 09/22/2010<br>Class Name: LSP121<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AWFUL. Walks you through everything so you learn NOTHING, COMPLETELY inaudible during lecture, TERRIBLE TERRIBLE PROFESSOR. She spent two days on ten minutes worth of material...I wish I could drop.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2009<br>Class Name: LSP121<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awful! she is a nice teacher and all but the class sucks and if you hate math when you do the math parts of the homework you will hate the class. I would never take this class again.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2009<br>Class Name: LSP121<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nzingha Nommo is so nice. she talks a little soft but she tells you what you need to do sher dose that activitys with you and you are just left to do the 6 homeworks. If you get stuck you sometimes have to figure out what to do on your own. easy midterm easy final overall good class and good professor. I would take her agian</div></div></div><div id="container" class="review"><div id="left">Date: 04/23/2009<br>Class Name: LSPLSP<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thought she was a great teacher.  She was very accomodating, and she was very willing to change her teaching style. She makes it her priority that students succeed in the class.  Overall I didn't have any problems.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2008<br>Class Name: ISP121<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>sweet lady, but not a good teacher..can't hear what she's saying most of the time, didn't learn a thing throughout the quarter..would not recommend unless you are familiar with the material to be covered</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2008<br>Class Name: ISP121<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Do NOT take this class! It was pretty easy but I did not learn a thing all quarter! You can't hear what she's saying most of the time and she never actually teaches you anything...you pretty much teach yourself. The only way I did well was to make the midterm and final &quot;group&quot; and talk to everyone else while doing it!</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2008<br>Class Name: ISP121<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class is an absolute joke.  We can never hear what she's saying, half the time she messes up what she's doing on her screen, and asking her for help results in being more confused than when you started.  I don't recommend this class unless you have extensive experience with Microsoft Access, because if you don't, you won't get a thing.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

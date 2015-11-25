@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -246,8 +426,18 @@
 			</h2>
 	    </div>
 	</div>
-				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>James Riely</h1><hr><div><h2>Overall Quality: 3.3<br><br>Helpfulness: 3.3<br>Clarity: 3.3<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/14/2015<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Put simply, this is a really hard class.  Homework was reasonable and interesting.  Pretty good lectures, pretty tough exams with a tough final project.  Traffic simulation was the hardest thing I've done at DePaul.  This prof is helpful and responsive and it is clear that he cares and tries.  But this class is extremely challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2015<br>Class Name: CSC403<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>He is a one of the best professors is ever had. He explains in a concise manner. Assignments are challenging and fun to do.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2015<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Excellent Professor.  He is able to clearly explain the assignments prior to giving them to you.  Always available to assist the students with the material.  Keeps the class energized through his lectures, is hilarious.  Tests are directly related to the homework with tweeks to keep you on your feet.  If you do the work learn the material, you pass</div></div></div><div id="container" class="review"><div id="left">Date: 08/21/2014<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very concise and effective teacher. He teaches at a quick pace, but explains concepts very clearly. He is also very open to helping students outside of class. Has no sympathy for slackers.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2014<br>Class Name: CSC300AND301<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is pretty funny and lectures are interesting, but the work is very hard and he grades really tough. 2 quizzes a week, a programming assignment almost every week, and a midterm and final. He doesn't take attendance, but you have to watch the lectures for the magic word. A lot of people fail his tests so their is a big curve.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2014<br>Class Name: CSC407<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>He is my favorite professor in my Master degree yet. he knows exactly what he's doing, his assignments are practical and fun to program, and he's very helpful. I agree that his exams are pretty hard, but the knowledge you will get from his class is priceless</div></div></div><div id="container" class="review"><div id="left">Date: 01/18/2014<br>Class Name: CSC402<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I liked him and enjoyed his class. However it was very hard for me. A bit disorganized. Very late assignment correction. Didn't want to specify exam grades. He posted new things on deadline days which cause confusion.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: A-</div><div id="right"><div>The most challenging class I ever take . I liked this class in the beginning but after the midterm I hated it because I don't know how fair he was in grading the students that he even graded the exams in almost 1 day. Just think twice before taking his class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>His exams are ridiculously difficult also he is not fair in grading the exams.I saw one student exam and how he graded his exam and mine ,it was clear that he was lenient with him for some reason.Yes,you will like his class and so much to learn but you are going to get low grade at the most,and loads of assignments.I will not take his class again.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2013<br>Class Name: CSC402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>great professor for teaching, smart, clear, can definitely learn something from his class</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2013<br>Class Name: CSC400<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>if you are working full time or working at all, DO NOT TAKE THIS CLASS. For really really really intuitive java students this class may come across as "challenging but not impossible". For me this class came close to impossible. The homework questions are vague and the exams are insanely difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: CSC383<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not sure what to make of the guy. Really nice guy, definitely knows his stuff...freakishly tall...but this was the hardest class I've EVER had. EVER. Don't know if it's James or the material. You learn a lot, but exam expectations are extremely vague. Homework takes up every waking second between classes -- if you take this class, quit your job!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2012<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really difficult class, but he knows what he is talking about. Towards the end of the quarter the homework gets easier but more tedious. Expect to spend 6 hours a week on homework if you want to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: CSC373<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Have to admit sometimes I felt like he didn't know what he was talking about, but it may be his personality (goofy). I took Systems 1 & I have to say the material itself wasn't hard or out of reach. The labs are hard, I strongly recommend working in a team & maybe visiting the professor. All in all, he good but you must work.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy is hilarious. Course material is very challenging but not impossible.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm truly baffled by James Riely's low ratings.  I just completed his course, and found him to be a fantastic professor.  He really knows his stuff, he loves to teach, and his actual ability to teach the material is great!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2010<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>It's too late but I wish I did not take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2010<br>Class Name: CS373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a bad professor. Steam rolls through the course without explaining the material. Also, his labs are ridiculous and don't add value to the couse.</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Quirky, tall, super intelligent but a below-average professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I at least feel somewhat vindicated reading the other recent ratings on this site. I was doing great in the class until the midterm which wasn't what I expected it to be at all, and I sort of gave up towards the end. Prof. Riely has an impressive knowledge of the material to say the least, but I felt the pace was too fast for an undergrad course.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He needs to slow down and start teaching this course at an undergraduate level. He's not very clear, and he presents the information in a way that makes you even more confused than you walked in. Take Joe Phillips instead.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If I could go back and take another teacher I would - no one should be forced to take this class with this man.  I have gotten 100's on all HW, and am still struggling to pass the class because his exams are ridiculously hard and count for a HUGE portion of your grade.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr. Riely jumped into the material too fast for most of the class. The book isn't that helpful. I wouldn't take Dr. Riely unless you're either a very fast learner or you know a little Assembly for Computer Systems 1.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This prof is much more suited to teach advanced classes than intro.  He doesn't respect student's limited knowledge. His midterm is WAY too hard, and held too early. Describes concepts in unclear round-about ways. Take another prof for this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2009<br>Class Name: CSC372<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DONT DONT DONT DONT take this class with him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2009<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very tall so is very understandable on the Distance Learning video. Knows his stuff. Replies to email promptly.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2007<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great Professor, knows everything about the subject, teaches it well!  Recommended strongly</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Really great professor. He has a strong grasp of everything he teaches, and it's clear in his lectures. He is a busy man but will always respond to emails.  If you have little programming experience, the hw will take you a very long time, and midterm+final will be very challenging. Invest as much time as you can into this class, it is well worth it</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Riley taught me more about OO programming than I ever thought I could know.  He's clear and concise.  He explains topics thoroughly, but won't drag on about subjects while the class falls asleep.  Had to do hella lot of work, but it was all worth it</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>James Riely</h1><hr><div><h2>Overall Quality: 3.3<br><br>Helpfulness: 3.3<br>Clarity: 3.3<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: SE450<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: Rather not say</div><div id="right"><div>Prof Riely has the distinction of having taught the toughest class in my career.  This class with this instructor are not for the beginner.  This course if for fluent java programmers. If you are just getting your feet wet with Java, put off this course (with this Prof) until you have a firm grip on the language and are already familiar w/patterns.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2015<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Put simply, this is a really hard class.  Homework was reasonable and interesting.  Pretty good lectures, pretty tough exams with a tough final project.  Traffic simulation was the hardest thing I've done at DePaul.  This prof is helpful and responsive and it is clear that he cares and tries.  But this class is extremely challenging.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2015<br>Class Name: CSC403<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>He is a one of the best professors is ever had. He explains in a concise manner. Assignments are challenging and fun to do.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2015<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Excellent Professor.  He is able to clearly explain the assignments prior to giving them to you.  Always available to assist the students with the material.  Keeps the class energized through his lectures, is hilarious.  Tests are directly related to the homework with tweeks to keep you on your feet.  If you do the work learn the material, you pass</div></div></div><div id="container" class="review"><div id="left">Date: 08/21/2014<br>Class Name: CSC301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very concise and effective teacher. He teaches at a quick pace, but explains concepts very clearly. He is also very open to helping students outside of class. Has no sympathy for slackers.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2014<br>Class Name: CSC300AND301<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is pretty funny and lectures are interesting, but the work is very hard and he grades really tough. 2 quizzes a week, a programming assignment almost every week, and a midterm and final. He doesn't take attendance, but you have to watch the lectures for the magic word. A lot of people fail his tests so their is a big curve.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2014<br>Class Name: CSC407<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>He is my favorite professor in my Master degree yet. he knows exactly what he's doing, his assignments are practical and fun to program, and he's very helpful. I agree that his exams are pretty hard, but the knowledge you will get from his class is priceless</div></div></div><div id="container" class="review"><div id="left">Date: 01/18/2014<br>Class Name: CSC402<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I liked him and enjoyed his class. However it was very hard for me. A bit disorganized. Very late assignment correction. Didn't want to specify exam grades. He posted new things on deadline days which cause confusion.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: A-</div><div id="right"><div>The most challenging class I ever take . I liked this class in the beginning but after the midterm I hated it because I don't know how fair he was in grading the students that he even graded the exams in almost 1 day. Just think twice before taking his class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2013<br>Class Name: CSC402<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>His exams are ridiculously difficult also he is not fair in grading the exams.I saw one student exam and how he graded his exam and mine ,it was clear that he was lenient with him for some reason.Yes,you will like his class and so much to learn but you are going to get low grade at the most,and loads of assignments.I will not take his class again.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2013<br>Class Name: CSC402<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>great professor for teaching, smart, clear, can definitely learn something from his class</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2013<br>Class Name: CSC400<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>if you are working full time or working at all, DO NOT TAKE THIS CLASS. For really really really intuitive java students this class may come across as "challenging but not impossible". For me this class came close to impossible. The homework questions are vague and the exams are insanely difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: CSC383<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not sure what to make of the guy. Really nice guy, definitely knows his stuff...freakishly tall...but this was the hardest class I've EVER had. EVER. Don't know if it's James or the material. You learn a lot, but exam expectations are extremely vague. Homework takes up every waking second between classes -- if you take this class, quit your job!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2012<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really difficult class, but he knows what he is talking about. Towards the end of the quarter the homework gets easier but more tedious. Expect to spend 6 hours a week on homework if you want to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2011<br>Class Name: CSC373<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Have to admit sometimes I felt like he didn't know what he was talking about, but it may be his personality (goofy). I took Systems 1 & I have to say the material itself wasn't hard or out of reach. The labs are hard, I strongly recommend working in a team & maybe visiting the professor. All in all, he good but you must work.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy is hilarious. Course material is very challenging but not impossible.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2010<br>Class Name: CSC373<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm truly baffled by James Riely's low ratings.  I just completed his course, and found him to be a fantastic professor.  He really knows his stuff, he loves to teach, and his actual ability to teach the material is great!</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2010<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>It's too late but I wish I did not take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2010<br>Class Name: CS373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a bad professor. Steam rolls through the course without explaining the material. Also, his labs are ridiculous and don't add value to the couse.</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Quirky, tall, super intelligent but a below-average professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I at least feel somewhat vindicated reading the other recent ratings on this site. I was doing great in the class until the midterm which wasn't what I expected it to be at all, and I sort of gave up towards the end. Prof. Riely has an impressive knowledge of the material to say the least, but I felt the pace was too fast for an undergrad course.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He needs to slow down and start teaching this course at an undergraduate level. He's not very clear, and he presents the information in a way that makes you even more confused than you walked in. Take Joe Phillips instead.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2009<br>Class Name: CSC373<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If I could go back and take another teacher I would - no one should be forced to take this class with this man.  I have gotten 100's on all HW, and am still struggling to pass the class because his exams are ridiculously hard and count for a HUGE portion of your grade.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr. Riely jumped into the material too fast for most of the class. The book isn't that helpful. I wouldn't take Dr. Riely unless you're either a very fast learner or you know a little Assembly for Computer Systems 1.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2009<br>Class Name: CSC373<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This prof is much more suited to teach advanced classes than intro.  He doesn't respect student's limited knowledge. His midterm is WAY too hard, and held too early. Describes concepts in unclear round-about ways. Take another prof for this class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2009<br>Class Name: CSC372<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DONT DONT DONT DONT take this class with him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2009<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very tall so is very understandable on the Distance Learning video. Knows his stuff. Replies to email promptly.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2007<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great Professor, knows everything about the subject, teaches it well!  Recommended strongly</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: SE450<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Really great professor. He has a strong grasp of everything he teaches, and it's clear in his lectures. He is a busy man but will always respond to emails.  If you have little programming experience, the hw will take you a very long time, and midterm+final will be very challenging. Invest as much time as you can into this class, it is well worth it</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: SE450<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Riley taught me more about OO programming than I ever thought I could know.  He's clear and concise.  He explains topics thoroughly, but won't drag on about subjects while the class falls asleep.  Had to do hella lot of work, but it was all worth it</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

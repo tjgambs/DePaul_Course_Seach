@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael McIntyre</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.0<br>Clarity: 3.0<br>Easiness: 2.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/02/2015<br>Class Name: INT388<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>McIntyre talks a lot! if you give him one subject to go off on in class, he won't stop. He's not an easy grader, but if you do your paper and pretend to do the reading and write a couple notes here and there you'll get a B. I didn't do much, just faked it and made it with a B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2015<br>Class Name: INT388<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>This class has much potential to enlighten students on the workings of migration and forced migration. Unfortunately, the presence of McIntyre makes it difficult to learn anything about said topic. The most helpful day we had was our last day, where he was too sick to come to class. If you want to learn about migration, take up an internship.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2010<br>Class Name: ISP102<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Good teacher, understands the big picture and won't get caught up in technicalities, but does expect you to work, take him and learn some stuff while expanding your horizons, encourages class discussion based on the reading which wasn't hard at all.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2009<br>Class Name: INT202<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Told GREAT stories in class. Really nice guy, very friendly. I didn't think the class was hard at all as long as you did the reading.</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2009<br>Class Name: INT202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really awesome guy!  Great stories and really wants to get to know you.  Low-key too...its nice.</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2008<br>Class Name: INT000<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Best teacher I've ever had.  Incredible reading, amount and content. Creative. Made me the best student I could be. Was committed to students who worked hard.  Helped me challenge myself.  Well informed.  Created critical thinkers.</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2008<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Expects students to put forth a solid effort (out of class events, lots of class discussion needed) but a very reasonable prof, great knowledge of Chicago and politics. Would definitely take one of his classes again.</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2008<br>Class Name: INT203<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The man can not teach and insists on class participation when he just talks and talks - all on the basis of his own opinions while shooting down the opinions of others. AVOID AT ALL COSTS!Well, well, well, isn't this a nice little &quot;hidden transcript&quot;.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2008<br>Class Name: INT202<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's kind of a self-righteous jerk, the prototypical International Studies professor at DePaul.  Yeah he's smart, but he just lectures on his own opinions.  No tests, just extremely and obnoxiously vague paper assignments.  Advice: If you're in International studies now, get out while you still can.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2008<br>Class Name: INT202<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Guy has a great revolutionary spirit...however lectures were very indepth but rather boring. Loved material, but I hated the structure of the class. Overall pretty decent professor, but I wouldn't put him in head of INT department.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2006<br>Class Name: INT401<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Intelligent and challenging professor. Prepares students well for grad school. I wish there was more time to improve my writing skills based on his helpful critiques. Montains of reading (final week- 1200 pg book), writing, and quiz taking. Quizzes are pointless and hard. Boring class format. Be prepared to present your position papers at any time.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2006<br>Class Name: INT202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Classes are alwayd extremely interesting and he is not afraid to tell it like it is.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2006<br>Class Name: INT202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I love this guy. He really changed the way I think about the world at large. I would suggest taking him. A great guy with a better laugh.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2006<br>Class Name: FPMARX<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was one of my favorite teachers.  He is very intelligent and has a lot of knowledge on the subject areas he teaches.  His class was also entertaining.</div></div></div><div id="container" class="review"><div id="left">Date: 09/10/2005<br>Class Name: INT<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2005<br>Class Name: INT<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was awesome and one of my favorite profs.  I thought he was extremely intelligent.  This was back in '98 but I can't imagine that he's changed THAT much.  I guess so though given all the negative comments.</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2005<br>Class Name: GRAD<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Maybe he's different with grad students, but his classes were so interesting, engaging and challenging and his personality so laid back and approachable that many people from our program actually sought his opinion and help outside of class. Very intelligent and funny. Highly recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2004<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>First you have to read through a six page syllabus to figure out what he wants in a paper, and even then it still doesn't make any sense!! This man explains things in the most vague way imaginable. At least he doesn't seem to care that half the class is sleeping every day... Run.  Run now.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2004<br>Class Name: INT203<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This man is a royal pain. Runs the INT department but really has no business doing so. Seemed intelligent but was simultaneously boring and condesending. What a waste of time. A real liability to the INT program. Keep him away from prospective students!</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2004<br>Class Name: HON351<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2004<br>Class Name: ISP<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he was ok, but the class sucks</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: INT<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Worst teacher I've ever had in my life!</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2004<br>Class Name: INT202<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>incredibly arrogant, but knowledgable.  His personality is a huge turn-off for most students</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2003<br>Class Name: INT<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>hard and condescending but drives students to try harder, out of hate for him</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2003<br>Class Name: HON<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2001<br>Class Name: HON201<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>extremely boring, incredibly difficult, does not allow class participation</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

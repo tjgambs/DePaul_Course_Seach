@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rebecca Cameron</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.6<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/08/2015<br>Class Name: 382<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Prof. Cameron is excellent- Her major authors class was fabulous and she wants the students to succeed and helps all the way through make sure we all understand what is happening and the expectations! I would definitely take her again and recommend her to a friend!</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2014<br>Class Name: ENG382<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Cameron is very nice and approachable. I took her Major Authors class on Virginia Woolf and she helped with research and every step through the final paper. Open to helping students all the time on anything. Super fantastic.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2013<br>Class Name: ENGLISH<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I have had ten years or more to formulate my opinion of Ms. Cameron. She was my professor in Saskatoon.  She was the worst professor I ever had in my university career. Nothing more to be said.</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2012<br>Class Name: ENG201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I loved her Writing about Literature class! Very enjoyable and educational. She's very organized, knows her stuff, picks interesting material to study, and makes you a better writer!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2012<br>Class Name: A1<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Had her as a prof in Saskatoon in 2002  and i feel vindicated. She sounds to be just as useless now as she was then.  The worst prof i ever had. Totally inadequate as a teacher. Should have been a librarian.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2010<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>loved this class! she is a great teacher and always is willing to help if you just ask. also is very understanding when situations arise. would def recommend her. however there is a lot of reading in her classes and expect pop quizzes</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2010<br>Class Name: ENG350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I really enjoyed this class.  Rebecca is very nice, helpful, and understanding.  She does a lot of lecturing with PowerPoint presentations, but it's not as boring as it sounds.  And she likes to encourage class discussions.  She's straightforward about her expectations.  Midterms and finals are pretty much the typical English format.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2010<br>Class Name: HON100<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Her laughing drove me so nuts that I could not pay any attention to class discussions. Good intentions and super sweet but not good and enforcing rules and acts uncomfortable interacting with students. Tougher then she comes out to be. Gives quizes on the longer novels.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2010<br>Class Name: ENG383<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Cameron is sweet, enthusiastic about her subject matter, and has great taste in literature. Yes, there are a lot of (interesting) readings -- but you're in college now, babe, so suck it up and buckle down. She's a harder grader than you might expect beneath the easygoing exterior, so put some effort into those papers, but she's available to help.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: ENG359<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I fell asleep everyday in this class. Prof. Cameron has a poor choice in literature and expects you to read two 200 page novels a week. Frankly, I think she makes a lot of stuff up to kill time.</div></div></div><div id="container" class="review"><div id="left">Date: 07/31/2008<br>Class Name: ENG359<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Her class is pretty much pointless and contains the same vague pseudo-feminist rhetoric we all heard before.  What one must be wary of is her underlying scrutinying nature. Somewhat new to DePaul, the big bright lights of the city still dazzle and intimidate her so beware if you embody somethng thats outside of her insular sphere of influence.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2008<br>Class Name: ENG227<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Excellent professor!! I never thought I would ever be as interested in Drama as I am now since taking her class. The workload is very managable and her assignments are crystal clear. She grades fairly and cares a lot about helping students improve their work if needed. I will definately be taking another class with her.</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2008<br>Class Name: ENG350<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Cameron completely sucks! Her lectures are monotone and boring...attendence is mandatory and she usually gives quizzes after reading a book...although the materials were quite interesting...she doesn't allow the time to even enjoy them...drags class to the last minute and sometimes over...DO NOT TAKE her for night class! Tough grader!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2007<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>LOVED this class. she is very clear and organized and overall a great professor. Speak up as much as you can, and read the text and your set.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2007<br>Class Name: ENG379<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I've taken this teacher for 2 classes because she has a good choice in literature.  Everything i read with her I enjoyed.  She's not the most interesting but she sure knows how to put on a powerpoint discussion!</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2007<br>Class Name: ENG379<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I've taken this teacher for 2 classes because she has a good choice in literature.  Everything i read with her I enjoyed.  She's not the most interesting but she sure knows how to put on a powerpoint discussion!</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2006<br>Class Name: ENG350<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Somewhat boring class. Interesting reading choices, 2 long papers, pretty easy final paper. Overall, not too bad.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2006<br>Class Name: ENG350<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I wouldn't take her again. She needs to learn how to be a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: LIT<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i fell asleep. everyday. enough said.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2006<br>Class Name: ENG471<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>While Dr. Cameron is a nice lady, she needs a little more growth and direction as a professor. I felt like the work was tedious, and that she was nervous. At times, I felt like the class was juggling three different assignments at once. While ENG 471 is a graduate requirement, in retrospect I would have taken this class with another professor.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: ENG270<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If nervous laughter makes you nervous, shy away from prof. cameron. Otherwise, she's very helpful, and has some good insights. Work load is enough to make you think, but not overwhelming. plus you gotta love canadians.</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2006<br>Class Name: ENG350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take her. She is very enthusiastic and is an overall great person. She actually cares about her student's input on things, and doesn't automatically disregard people's opinions. My only criticism is that the first half of the class you do NOTHING and then the second 1/2 after midterms, you get all of the work.</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2005<br>Class Name: ENG350<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: ENG350<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2005<br>Class Name: ISP102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/17/2005<br>Class Name: ENG459<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Undergrad students beware: do not attempt grad school if you don't want to read.  She had to lecture to you because there was apparently no class discussion as a result of ignorance surrounding the texts.  She was terrific in our class- new at DePaul but very informed on her subject & super nice.  She's a very good prof now & will only get better!</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2005<br>Class Name: ENG350<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you want an easy class take any course with her. I've been in 2 of her classes. Both had short papers and easy finals. The one final was practically a take home. The best part is: SHE HAS NO ATTENDANCE POLICY!! I probably only went to 10 classes all quarter and still managed a 'B'.</div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2005<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Cameron is new to DePaul, and was a little nervous at the start of class, but quickly got more confident. She is a sweet lady, passionate about literature, and fair grader. Also, very willing to give extra help after class or during office hours. Plus, a cute Canadian accent, what's nottolike&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2005<br>Class Name: ENG350<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Uninspiring. She smiles nervously while she's lecturing, which is very distracting. Took the nite class-a mistake-because I found her boring. Other than that, the class is pretty easy, though I think she's a tough grader. two papers: 3pg & 10pg, in class assn. & final essay exam.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2005<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Those who are complaining, I presume, have never had a truly 'bad' teacher, b/c Prof Cameron is far from that. True, the classes may not have been the most stimulating, but they weren't that bad. If you show up and do the minimal readings, you're fine. A little bit of effort goes a long way, people.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2005<br>Class Name: ENG120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I am no idiot,nor am I a slacker.I actually like to think of myself as a very hardworking student; this was by far one of the worse teachers i've ever had. I learned nothing from her! i had to drop her class because I couldn't even stay awake in her class. Listen to all the most recent comments!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2005<br>Class Name: ENG120<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Only 1 essay other than the in class midterm essay and final take home essay. Grades pretty easy, but do need to go to class because there is a lot of in class assignments for points.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: ENG120<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The worest class Ive had at DePaul! You write 3 papers and shes so unclear with what she wants you to do. I dreaded going to the class, it was so boring. She lectures about the stories you read and that is it.  Whats the point of going to class&#63; I didnt learn anything from it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: ENGLISH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a good teacher, ill give her that. however, i am still trying to wake up from her class. her lectures are boring, yet the readings are relevant and fun.</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2005<br>Class Name: ENG120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class was sooo boring!!This class dragged on and I found her very very boring. She is very unclear as to what the papers as supposed to be about and if you dont write about what she wants you get a bad grade. Whoever thought she was a good teacher must have slept through every class</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2004<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the best teacher's I've ever had. She has a real passion for what she does and enjoys having discussions with her students. She's a very happy person. Very bubbly. She's a very fair grader. Her discussions keep you interested. I'm definitely going to take a class of hers again.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2004<br>Class Name: ENG120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One or two very short readings every day.  The 3 papers were pretty easy.  Overall it was a pretty good course and the teacher idd a good job of covering material and making it very clear of what she was expecting from papers and on the final.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2004<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was great. The papers were easy, the readings were interesting, and she had a really cool attendence policy. The class could be boring at times but overall a great course to take.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2004<br>Class Name: ENG120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she's new at DePaul. SOOO Cute though, she's kinda nervous in front of the class,and its funny.  But she's a really good teacher, and the readings are short and fun.  3 or 4 pretty easy papers. I'd have her as a teacher again.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

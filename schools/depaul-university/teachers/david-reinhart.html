@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>David Reinhart</h1><hr><div><h2>Overall Quality: 3.45<br><br>Helpfulness: 3.63<br>Clarity: 3.27<br>Easiness: 3.41</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/29/2008<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very cool guy but not an easy A. You have to basically memorize his powerpoints in order to get a good grade on the quiz. Don't spend too much time on your debate. Trust me I did so much research for it, got a A+. However, I didn't have time to worry about the final paper AND exam. You do watch a lot of movies in his class though. Not too painful.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2008<br>Class Name: REL228<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Staaay away. This guy does not know how to teach an ethics class. He is also an unfair grader and u cannot see how well ur doing in this class until he posts the grade at the end. I was Shooocked i gotta B. I thought I desreved an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2008<br>Class Name: REL110<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Do not take him. I walked in this class thinking it was going to be laid back since he is extremly laid back, but the class is hard. 3 difficult quizzes, and a final composed of the 3 quizzes and an essay. stupid presentation from students that we get tested on as well. Do not take!</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2008<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Don't underestimate this guy. While he seems laid-back at first, he expects a lot more than you think. Do the service-learning option and you'll have less to worry about. Since most of the Commerce students don't care about the class, neither does he.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2008<br>Class Name: MGT228<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not great,not awful, doesn't seem to really know what hes doing. Easy class but quizzes midterm and final will shock you,think they will be easy but are really difficult. Has everything due (2 papers, final, with exam) at the end of class on final day which makes it a lot to do towards the end. Not awful, would take him again for a semi-easy class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2008<br>Class Name: REL110<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I wouldn't take this class again if i had the choice. seems easy but has high expectations that are really tuff to understand and meet. very unorganized. Not the end of the world if you have to take him but avoid if possible.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2007<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You have a group project that is due that takes up about 4 class.  Poject is not hard nor time consuming.  Final is made up of the 3 quizes.  Kinda take attendence when he thinks of it.    He even cancelled one class.  Am taking him again the quarter</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2006<br>Class Name: MGNT228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class consists of a debate, 3 quizzes, 2 papers and final is based on all quizzes.  He likes to help his students so if you need anything he will help you.  Pretty easy class, i will recommend him to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2006<br>Class Name: MGT228<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy, not so great class.  NOT an Easy A... don't think the commenter below has seen their grade yet.  The 4 big assignments don't seem like a lot, but it definitely becomes too much since everything is due the last 3 weeks of the quarter.  The class lectures weren't nearly enough to prepare us for our papers... it made them seem brutal.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Granted the class was easy as hell, but I didnt really take anything out of it.  There is a debate, 3 quizzes, 2 long papers-all of which are easy. The textbook is not really necessary. There is a book report in which you have to prove that you read it front to back nothing too hard though. If you want an easy A and dont mind not learning, take him</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2006<br>Class Name: MGT228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I really liked the professor but the workload was a bit much.  During this course we read over 750+ pages, wrote 4 papers, and didn't have much review or any study guides for the exam.</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2006<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This is one easy class, I feel that the book is not even that necessary to read since all I did was study the slides, pay attention in class, and I got an A.  There are 2 papers one is on a movie, the other is on a book.  Lastly there is a debate, which was fun to do.  Overall pretty interesting class and kinda easy, well in my point of view.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: RELMGMT228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Three quizes, a midterm, debate and final made up most of course.  Dr. Reinhart is very very laid back and easy to get along with.  Definitely one of the best professors I have EVER had in my college experience.  Debate topics are very current and cover real moral issues in today's society.  Take his course!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2005<br>Class Name: 228<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>final comes exactly off quizzes and gives you the written part a week ahead of time. 2 papers that sound harder than end up being. debate that feels harder than it really is. then just participate and do discussion boards</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2005<br>Class Name: REL228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's really laid-back and lenient on things. He's also understanding when it comes to work. Not too much reading, 2 papers, a debate, and a final. The papers are easy, the debate wasnt bad, and neither was the final. I recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2004<br>Class Name: MGT228<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very laid back professor, barely assigns work- few books to read- not hard at all. 3 pprs, u need to read the text book for the class to actually do the ppr and pass.  No midterm, theres blackboard quizzes which are just questions from the readings.  Final consists of blackboard questions. Easy A</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class consists of 3 papers, have to take good class notes and read BK in order to do well on papers. Participate in class and he is more willing to help you. Has high expectations. Have to read the book, not a blow-off class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2004<br>Class Name: MGT228<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Somewhat disorganized and his lectures don't make sense but the class discussion was always good and easy to participate in. Participate a lot and he'll love you. Quizzes can be confusing but the final was based directly off of them so the final was easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2004<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: MGT228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Easy class, not much work involved, doesnt seem to give out many A's no matter how good your work is. Usually gives out B's and B+'s</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2003<br>Class Name: REL218<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a easy professor. But, his directions for like papers and stuff is hard to understand. I mean no body got above B+ in all three papers and I mean it. No matter how well you do that is the highest grade. Also a debate is in course so be prepared.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2003<br>Class Name: REL228<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He seems cool at first but he's really hard.  His expectations are really high and he doesn't make them clear at all.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Linda Kahn</h1><hr><div><h2>Overall Quality: 4.58<br><br>Helpfulness: 4.63<br>Clarity: 4.54<br>Easiness: 4.71</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/13/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Take this class! Professor Kahn is among the best that I've had at DePaul. Her teaching style may make you feel uncomfortable at times, but she challenges you to step out of your comfort zone in fun and creative ways! Most of her teaching is based on subjective learning which allows you to interact with others in the class. Truly a great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 07/29/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>One of the best classes I took at DePaul.  Professor Kahn is extremely helpful and passionate about what she teaches.  She guides her students to reach their full potential and push themselves to think in a new manner.  It may not be like a traditional class but you will still be asked to push yourself, and I promise it will be engaging.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2014<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn was an amazing teacher! She was open to everyone's ideas and opinions. Class was interesting and fun to go to. The class was pretty much about yourself and your own creativity, which made it really cater to each individual person. The only complaint I had was that she required us to pay to go to a dance performance that she was in...</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2013<br>Class Name: LSP111<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She obviously cared a lot about the class and her students but there was just too much work for something no one was ever going to use in their life. We had to write a 5 page paper about a dance performance and then a 10 page paper about everything we had learned, all as first quarter freshmen. Not worth the time.</div></div></div><div id="container" class="review"><div id="left">Date: 08/02/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is a very nice and helpful teacher that tries to make class as interesting as possible. She never overburdens you with work and she really lets you show your creative side. Overall I had a great  time in her class and it wasnt very hard or time consuming. A high recommendation.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Creativity & Adversity with her and I found the class to be very insightful. I learned a lot of things that I was able to directly apply to my daily life. I really appreciated her style and openness to everyone's ideas, and she made the atmosphere in the room feel like there was never a wrong answer. I would definitely recommend this class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I don't know what people are talking about, she is an AWESOME professor. It is definitely a different style of class, but what she teaches you is real world experience that is meaningful. As long as you put in some effort I don't see how you could get anything besides an A. She is a great professor, super caring, and wants you to succeed. TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn has been one of the most influential professors I have ever had. She truly cares about the success of her students, not just by their grades, but of their UNDERSTANDING of true, related-to-life content. Instead of lectures, she enjoys opinions from students as the base of her class. TAKE HER CLASSES!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took LSP112 with Kahn last year and was so inspired and loved her teaching style. But her Sophmore Seminar has been a disappointment. It is very different material of course, but it feels as if her teaching style has changed as well. I HIGHLY recommend Creativity and Adversity Focal Point, not so much her Soph. Seminar though.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Any good review here is probably from a Psychology major. I failed my first assignment because I didn't have enough color on an essay. #Synergy</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2013<br>Class Name: LSP112<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The comment I wrote below may be misconstrued! While her style may SEEM goofy or out there, I quickly learned that Professor Kahn's style is intentional, effective and intelligent. Her experiential learning is reminiscent of childhood, which leads to a high level of creative insight and self-understanding. Her approach to academia is enlightening.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If nothing else, Professor Kahn's classes are fun. Sometime the activities can seem goofy and her teaching style is a little out there, but she's a refreshing respite from the normal university experience. She is passionate and truly interested in the well-being of her students. I honestly can't describe her energy- it's wonderfully unique!</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AMAZING TEACHER so helpful and nice this is a class you actually want to show up too! She makes the class so much fun I recommend to any student looking for a non boring LSP this is the way to go!! Plus the work is pretty easy if you pay attention in class which is not hard at all</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is unlike any teacher I've ever had. She encourages her students and promotes an open, creative, and stimulating environment. I LOVE going to her class- her enthusiasm is contagious. I'll never forget what I've learned in her courses. Take her if you want a unique and fun learning experience!</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is an artist and therefore has a unique perspective on teaching - more collaborative and flexible. She makes you feel so comfortable and engaged in the class discussions. Good sense of humor and so much positive energy!</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is easily one of the best professors I've had at DePaul. Please do not miss an opportunity to have her. Her and her classes are unique, enlightening, and eye opening. I learned more about myself in her class than any other I've taken. She genuinely cares about her students and their progress. She is simply and utterly amazing.</div></div></div><div id="container" class="review"><div id="left">Date: 12/20/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Creativity & Adversity and it ended up being one of the best decisions I could have made. The class is dynamic, you are always actively learning (and sometimes you didn't even know you were!) I learned so much about myself and use the concepts in everyday life. Professor Kahn is the best. It was an eye-opening class - TAKE IT!</div></div></div><div id="container" class="review"><div id="left">Date: 12/19/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Creativity and Adversity was by far one of the best and most unique classes at DePaul. I am so glad I decided to take it.  Professor Kahn is an amazing educator and person. She is now offering a Sophomore Seminar.  I would recommend taking anything she teaches!</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was always very helpful and her class was extremely engaging. Profesor Kahn made sure to include everyone and carry an intellectually stimulating class. Every class built on the last and helped students to really understand the material. She was an amazing profesor and I would definitely recommend this class to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Lin Khan is one of those professors who change your life. I took her Creativity and adversity class and was truly inspired. Lin takes a different approach to learning, she focuses on how to serve students, instead of how for students to serve her... I have taken the knowledge she gave me and used it elsewhere in life!! finally.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2012<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The most amazing and most influential professors I've ever had the pleasure of having! Creativity & Adversity is definitely a class everyone should take. It changed my perspectives and opened my mind.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor. She is more concerned with students actually APPLYING and INTEGRATING what they learn rather than earning points. Prof. Kahn keeps students on their toes in the best way possible, and challenges and encourages us to truly learn and explore. Take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 09/28/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>c&a is an easy A but it's intellectually challenging and interesting at the same time. lots of improv activities/games in class. prof kahn is super fun and easygoing, and genuinely cares about each student's success.</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2012<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Kahn is an amazing teacher and just an amazing person in general! She's extremely kind and compassionate. I was initially SO nervous about speaking up in a seminar course, but she created such a comfortable environment where all students became eager to participate in discussions. I highly recommend her creativity & adversity seminar!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

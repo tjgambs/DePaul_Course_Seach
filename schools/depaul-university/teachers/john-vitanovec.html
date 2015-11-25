@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>John Vitanovec</h1><hr><div><h2>Overall Quality: 4.6<br><br>Helpfulness: 4.4<br>Clarity: 4.7<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/01/2015<br>Class Name: ACC554<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I loved this class, the professor was easy to understand , made the fun class. Highly recommend it . His tests are super fun. Do have mock tests and HW and you should get an A! Take his Class!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2015<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy. He explains things clearly and he's always ready to help. Do his homework, it's online, very easy. 2 exams, a little tough, but not undoable. Challenges you to rise to your potential. </div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2014<br>Class Name: ACC555<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Best Professor ever. I enjoyed his teaching style, he tried his best to make you understand the subject. he was always available & he replies to our email quickly. very cooperative & just listen to his lecture, take down notes & you will be fine.  I wish if he could teaches us the other accounting classes.</div></div></div><div id="container" class="review"><div id="left">Date: 04/30/2014<br>Class Name: ACC101H<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Vitanovec is THE man. Walking into an accounting class, I wasn't really expecting it to be entertaining in any way. He turned out to be one of the best professors I've had throughout my freshman year at DePaul. Do your homework, pay attention and you should be prepared for his exams. I recommend him to everyone!</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2014<br>Class Name: ACC101<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a nice teacher except for when it comes to problems with grading. The online homework site "cengage" will screw up your answers and he will not care to fix your grade even if you show proof. He really doesn't care about his students or how hard they're trying.</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2014<br>Class Name: ACC101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He sure was interested in accounting, but unfortunately not very interested in understanding your problems. He gives you a syllabus and if you miss an assignment for a legitimate reason he doesn't care. He'll simply reply "sorry, the syllabus says if you miss it you're stuck with a 0". So he's kind of uncaring. Not terrible but not great.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2014<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Was a great teacher, always kept the class interesting and made it relatable to us. Was very animated even when just talking about numbers! And always willing to help! Showed he cared about his students!</div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2014<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is the best. He makes accounting very fun to learn! However he talks and moves quickly in his lectures. Doing the readings before class will definitely help!</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2013<br>Class Name: ACC101<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Vitanovec comes off as a complete ass sometimes (he thought I had an IQ below 100 and treated me like a child whenever I talked to him), but he is generally a funny guy. Decent lectures, not wiling to help that much, but will adequately prepare you for his tests. Studying is required.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2013<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Vitanovec is an awesome guy and an equally awesome teacher.  Take his class, you won't regret it.  From the get-go, it is easy to tell why this guy made so much money in his prime.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>LOVED VITANOVEC! He was awesome and caring and probably one of the best teachers i've ever had. Highly recommend him. Even though i didnt do well in accounting, i would take him again in a heartbeat.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: ACCH101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My favorite professor so far. He is very engaging. The midterm and final are not too hard. If you try and do the work, you'll probably get an a or a b.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2013<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>By far one of the best professors I've ever had. He's very enthusiastic, which is extremely helpful in something dull like accounting. His handouts really help you understand; no other ACC professors give handouts like his. He loves when people ask questions and is knowledgeable &patient. He's friendly, approachable, &willing to help with anything.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2013<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is an extremely helpful professor. He doesn't take attendance, but I highly recommend attending all classes. Accounting is definitely a subject that you must work hard in and practice in order to grasp concepts. All handouts were extremely helpful, and he would tell us what problems to focus on within each chapter in order to prepare. TAKE HIM !</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2013<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>GREAT professor. Super helpful. Likes you if you pay attention and know the answers when called upon. Getting a good grade is easy as long as you do the hw and pay attention in class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2012<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Made the class easy and explained everything in great detail.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2012<br>Class Name: ACC101H<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher but a bit tough whenever students talk too much. Still, great teacher. Study because this class isn't easy.</div></div></div><div id="container" class="review"><div id="left">Date: 07/05/2012<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I've taken 3 acc classes and I still enjoyed his the best.  One of the most clear and straightforward teachers I've had at DePaul.  Would always make great analogies that would help you study. Very easy class to sit through Quizzes and tests were nothing out of the ordinary but you still had to look at the chapter to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 12/24/2011<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My favorite professor. Very funny, relateable, and knows his stuff. It was a bit of a more difficult class but he made it as easy as possible. I would recommend him to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2011<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a really good professor. He knows what he is talking about and, from what I hear about the other 101 Strobel professor, he seems to give a lot less work. This class is not the easist and requires a large amount of time devoted to studying for the final and midterm; but, you will learn a lot and find out if Accounting is right for you or not.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Incredibly hilarious! Mid term and final exam are really easy, and final exam is non-cumulative. Do the homework, take notes in class, don't fall asleep and you'll do fine. If you need extra help, the professor will gladly answer your questions during class and find time afterwards too. If you're in Strobel's, take him. HIGHLY RECOMMENDED!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2011<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>NOT my major--had to take this for Study Abroad--but learned a lot, and he helped me personally.  TAs absolutely suck (SUCK -- not fair, COM) but Vitanovec is interesting and has good stories.  And he really roots for his students.  Recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 07/31/2011<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Vitanovec is a very clear, organized and knowledgable instructor. He is one of the few teachers that know how to explain accouting. I say this bc I took this class once before.  Definitely study for the midterm and final because there is alot of content and problems. This teacher also likes you to ask questions , so dont be shy!</div></div></div><div id="container" class="review"><div id="left">Date: 07/24/2011<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Vitanovec is great. While I only got a C+ in the class, that wasn't his fault. If you take this class, especially if you're in Strobel, you need to manage your time wisely. He's extremely clear when he explains things, and when he senses that some students aren't 100% clear, he explains it again. Very fair teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2011<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AWESOMEEEEEEEEEEEE!</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2011<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>accounting is hard no matter who you take it with.....vitanovec is an excellent teacher and will make sure u get the material. highly recommend</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2010<br>Class Name: ACC101H<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Vitanovec brings decades of experience to the classroom. Formerly employed by PricewaterhouseCoopers and at one point the CFO of WGN, Vitanovec is an expert in the field of business (not just accounting) and it truly shows during his lectures. The midterm and final are relatively easy but if you don't pace yourself, you won't finish. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2010<br>Class Name: ACC101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I had him for Strobel Honors 101.  He's a really nice guy, he's only teaching for the fun of it.  It's only his second year at DePaul- before he had a big possition at WGN. Basically, he's loaded. He always will stay after class to answer questions if you have any.  He likes to randomly call on people to answer questions, all homework online.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2010<br>Class Name: ACCT101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher and guy. He is there to help you learn. The mid and final were not tough if you study and understand material. He gives plenty of handouts and questions to help you. When I asked him why his mid term was so easy he responded, &quot;I'm not here to fail anyone, I want to make sure everyone knows the stuff to get them into Acct 102&quot; Awesome</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2010<br>Class Name: ACC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is new but he is soo awesome. I absolutely love his class and i wished he taught 102. He explains it very well and in a fun way. You will not fall asleep in his class. he gives plenty of handouts and real world problems to help u understand.  I recommend anyone who needs this class to take it wit him. Btw he quotes the hangover. which is so funn</div></div></div><div id="container" class="review"><div id="left">Date: 04/09/2010<br>Class Name: ACCT101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I had him this past fall quarter and yes he's a brand new teacher.  I agree with the other post that he EXTREMELY helpful and really cares about making sure you know the concepts.  I did not find his lectures confusing at all. Homework is not mandatory, but if you do the it prior to class you will understand everything.  Take him, he was awesome!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2010<br>Class Name: ACC101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had JV fall quarter this year. He's brand new and he hasn't really figured out his teaching style yet. Even though his lectures are confusing he is the NICEST man on the planet! He is always willing to help his students out! Also, if you're having trouble in the class but you're trying your hardest and show it! JV will notice that! NICEST MAN EVR</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

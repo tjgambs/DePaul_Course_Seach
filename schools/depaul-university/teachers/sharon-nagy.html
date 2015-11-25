@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Sharon Nagy</h1><hr><div><h2>Overall Quality: 2.65<br><br>Helpfulness: 2.71<br>Clarity: 2.58<br>Easiness: 2.58</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/06/2009<br>Class Name: LSP112<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There are no textbooks but she practically has you print out entire books, so prepare to spend for ink and paper. Assignments are unclear and if you ask her, she doesn't make them any clearer for you. The reading is tedious and though perhaps interesting at first, quickly gets boring.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2009<br>Class Name: LSP112<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's generally unfriendly and flips out at people randomly. Time consuming course since you have to visit your cafe regularly. I'm actually interested in coffee/cafes but found the course and most of the reading to be a bit monotonous. Does not communicate well in regards to grades on assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2009<br>Class Name: LSP112<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She may be knowledgeable and all, but she doesn't like to share it in a way that will help her students learn or grow. The knowledge she shares is about herself. Much of the work that was done will probably never help you in life. Coffee&#63; Really&#63; There really shouldn't be a class focused on this. There are more important things in life than coffee.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2009<br>Class Name: LSP112<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Nagy is by far the worst professor I have ever encountered.  Believe me, do not waste your time on the Coffee Class. It was a complete joke and that woman is in love with herself. No joke.  She is not only miserable with her pathetic existance but is passive aggressive to the point of disgust.  Save yourself the trouble and avoid her at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2009<br>Class Name: LSP112<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Nagy literally cares about no one else or how her students do in her class.  I honestly think that she grades based on her favorites in the class, if you can call anyone a favorite.  She's absolutely no help if you have ANY questions. Don't take her if you care about your grades/gpa.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2008<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She only likes to her self speak and  has very little interest in others' opinions.  She chooses favorites which makes the class frustrating and boring.  She was indifferent when she sent my group to a cafe that she had not bothered to look into and did not know they did not exist anymore. A ton of reading, not worth the credit.</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2007<br>Class Name: ANT203<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a good teacher--definitely very knowledgable. I think she makes class very interesting and challenges us. She encourages us to go visit her during office hours. Only bad thing, for me, is that she's not very personable.</div></div></div><div id="container" class="review"><div id="left">Date: 04/11/2007<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Where do I start&#63; How about ****,  doesn't care about students, completly biased grading... I could go on and on. Point blank by far the most horrible teacher I have ever had in my life. I learned very little, I did all the work gave the class my all, and she treated me like I was simply wasting her time. NEVER TAKE HER CLASS!! TRUST ME!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2007<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>if you are taking her for the coffee class then be prepared to read a lot! the material is pretty interesting, but if you are not into anthropology, then you will prob end up getting very annnoyed. if you like anthro, then Nagy is for u, she knows what se is talking about. this class was not what i expected, but it wasnt bad.</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2006<br>Class Name: ANT102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's good ! i like the way she teached us and her exam review sheet before the exam is very2 helpful.. i guess if people really concentrate in her class then they shouldn't be having any trouble at all to get a good grades</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2006<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/01/2006<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This is the worst professor that I have had since I began at DePaul.  She is an unfair grader and loves to hear herself speak.  She will cut people off midsentence and tell them to stop talking even if you haven't said anything all class.  That happened to like 6 or 7 people in my class.  She is just plain aweful.</div></div></div><div id="container" class="review"><div id="left">Date: 05/01/2006<br>Class Name: ANT<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Do not waste DePaul's expensive tuition on this teacher. I don't know why she still teaches. She says herself that she doesn't like teaching. So do her a favor and do not take her classes. Even if you put effort into her class and attend her boring lectures, she will find something to complain about.</div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2006<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Stear clear of this one. She takes things very personally and is an inconsistant grader, especially because her assignments are not specific. She also gets mad when people in the class don't know about particular musicians.  Not an exciting or interesting teacher but expects you to respond as if she is.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: ANT102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I did not enjoy this professor. She does not seem open and is looking for very specific answers to her questions all the time.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2006<br>Class Name: ANT102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's really nice and obviously passionate about her research (and cultural anthro. in general). Her exams aren't necessarily easy, but she provides practice tests with the exact multiple choice questions that will be on the exam. She also lets you know what to study for the short answer/essay section. Helpful, etc.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2006<br>Class Name: ANT102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nagy rocks my world. She knows her sh*t, and you will learn so much from her. Talk in class, she will &lt;3 u... and because youre a loser if you dont anyways. I am pre med, with no real initial interest in anthropology... until now.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2006<br>Class Name: ANT101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she is a good teacher, but her tests are kinda hard. you have to study to do well. homework is reading, and it is interesting. class is mostly discussion, which is nice. come to class prepared to talk about the readings and your opinions, and you will have a good time in this class. warnig: dont miss class or come in late.you willget onher badside</div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2004<br>Class Name: ANT320<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I have nothing but the best to say about her.  She is wonderful.  Make sure you do your work...all of it.</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2004<br>Class Name: ISP<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She makes class fun but shes still a tough teach. She doesnt tolerate any bull. She generally knows what shes talking about and is willing to help you if you sincerly need it.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2004<br>Class Name: ANT320<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This woman really knows her stuff and is clearly very intelligent. She will not hold back from humiliating a student who has not done his homework, however. Great at incorporating her knowledge into class discussions but sometimes classes poorly organized</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2004<br>Class Name: ISPSSMW<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>bs class--- she knows what she is talking about but i feel like im a little kid--- she is super nice and super understanding but doesnt let you walk all over her</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2004<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she is an unfair grader and plays favorites.  the class i took was about coffee and she made it into something rediculous.  i suggest not to take her for focal point or her anthropology classes.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2004<br>Class Name: ISP101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Nagy is a very arrogant person, with a condesending attitude towards students.  This freshman course is supposed to aclimate a new student to a university by making learning fun and not too challenging like the other ISP courses taught here.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

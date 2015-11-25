@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jule Ward</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.2<br>Clarity: 2.8<br>Easiness: 4.11</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/06/2012<br>Class Name: REL228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This wasn't a bad class overall, though can be a bit boring. She does prefer to have students participate which isn't the most exciting for me. The readings were not the most exciting. Overall not a bad instructor.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2012<br>Class Name: REL229<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was weighed heavily on class participation. The material was very repetitive and at times, VERY boring. In my opinion, Dialogue Initiators were a waste of time and "elementary school work." Dr. Ward was also not tentative to her emails which made it difficult to find out answers form her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2012<br>Class Name: REL229<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Mrs. Ward was a very nice woman and the class was wonderful overall...a summary of the reading is due every week and one presentation that is easy overall. Also, the discussions were very interesting if you read the book</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2012<br>Class Name: REL229<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a sweet woman who's class I found interesting. The subject matter seems to get repetitive and boring by the end of the quarter,though. There are Dialogue Initiators required for every class (1 page, SINGLE spaced) which aren't bad and a group project/presentation. Participation is required.  Overall, not bad. Easy 'A'. Take her.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2012<br>Class Name: REL229<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Attendance/ Participation is of the UTMOST importance.She is a very nice woman, but she's disorganized. for this ethics class, all we had to do was a 1 page summary of the readings for every class. Not bad. The class presentation is a big part of the grade. if you can keep yourself on track, take the class and get an easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2007<br>Class Name: REL222<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>An absolutely wonderful lady.  Very honest and open to different opinions in the classroom.  A little spacy at times, but don't hold that against her.  She's a pretty decent grader is is very approachable and sweet.  Just a really genuine person.  Take her if you get the chance</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2007<br>Class Name: REL237<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher is kind of spece cadet.  Easy grade though.  Just show up and do the readings.  Shes alright</div></div></div><div id="container" class="review"><div id="left">Date: 04/09/2007<br>Class Name: REL222<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you keep the class conversation up you'll never have to discuss the reading and therefore don't have to do the reading.  She's very nice, easy, and laid back, BUT her voice is  like nails on a chalk board.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2006<br>Class Name: RELIGION<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>nice lady, very helpful. Very easy A, only have to do the work, speak up in class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: DISCOVERCHI<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really easy. Kind of seems like a flake. But over all a nice lady. Kind of a push over too.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2006<br>Class Name: ISP101<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you like to listen to boring lectures then this is the class for you. She makes outrageous claims about everything, swears by the book like it’s the bible. Drop this and take something else, very frustrating</div></div></div><div id="container" class="review"><div id="left">Date: 09/15/2005<br>Class Name: ISP101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>what the hell is wrong with depaul for hiring this woman&#63;!&#63;! she is so disorganized and will go on these tangents that will drive you crazy. if u get her as a teacher DROP HER!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: RELIGION<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Worst Professor ever at DePaul and a waste of money and time in taking her class...AVOID AT ALL COST!</div></div></div><div id="container" class="review"><div id="left">Date: 04/11/2005<br>Class Name: REL222<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I agree with others. Very nice lady, very boring class and book, she changed the syllabus to accommodate the class' interests. You do a lot of writing, not much guidance on the assignments.  Do the asignments and you'll get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2005<br>Class Name: ART222<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>AVOID AT ALL COST!!!  The worst professor ever and deaf.  Never take your opinion inconsideration, instead re-words it and completely change the meaning to it.  Waste of money and time.  Cannot calculate grades.  I warn you!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2005<br>Class Name: HON104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS WOMAN.  She was simply terrible... very disorganized, didn't grade on the quality of work.  She's confusing and impatient, and just downright BORING.  You never have any motivation to even go to class because her lectures are so USELESS.  it was the biggest waste of money and time.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: HON104<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HER! Her lectures were uninspired, her asssignments were extremely vague, and grading was arbitrary, with no feedback provided on papers. She is scatterbrained and seems unknowledgeable on the subject matter. She's very nice but I don't recommend taking her class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: REL222<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice lady, very boring class and book, she changed the syllabus to accommodate the class' interests. You do a lot of writing, not much guidance on the assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2005<br>Class Name: RELIGION<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This is the worst class you will ever take.  It is almost worth getting my degree in five years just to drop Professor Ward's class</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2005<br>Class Name: RELIGION<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Do not take her!!  I don't know why people have rated her as being so nice...I find her hard to talk to after class and just weird.  The woman is so disorganized too.  One class she spent half an hour just trying to organize people into groups.  Her lectures are awful...book is boring.  Avoid her.</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2005<br>Class Name: HON104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>A thoroughly incompitent professor.  Unclear on assignments, uses office hours to grade papers, not for students.  A nice enough person, but that doesn't make a good professor.</div></div></div><div id="container" class="review"><div id="left">Date: 01/19/2005<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very caring and involved professor. She is very open, helpful, and brings real life situations to the classroom.</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2005<br>Class Name: ISP102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>nice woman.  kinda spacy.  easy class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2004<br>Class Name: ISP102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's nice and the class is easy. Just show up and do the easy papers she assigns. That's it. Your guaranteed an A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2004<br>Class Name: ISP102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Ward is a very understanding woman. If you do the readings, and discuss in class, you will definitely get an A or a B.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>jule definitely means well and is a very nice lady... but sometimes she goes off on tangents and is a little disorganized.  but you'll get a good grade and it will be easy.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2004<br>Class Name: ISP103<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She means well, but tends to ramble and her lectures are dry. Boring, boring, boring.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2004<br>Class Name: EXPLORE<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is such a sweet lady, but participation is such a huge part of the class and she is hard of hearing it gets frustrating when you do speak up and you have to repeat yourself five times.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: CHRISTIAN<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I have never wanted to sleep through a class more.  Nice lady, but her lectures are, by far, the most boring I've had so far in college.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: BUSETHICS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>so easy, just go to class and you will get an A considering all assignments, midterms, final, etc. are take home. nice lady too</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2004<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Almost too easy. She is a great women who is smart, and loves to hear opinions. Participate in class, she really appreciates it and do the assignments you'll get an A</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: REL<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice, but not recommended for Christian Experience...</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2004<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class sounded interesting until it was required that we volunteer. She is really into class discussions goes out of her way to call on you. Easy grader.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2003<br>Class Name: MGT228<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>VERY EASY, ASSIGNEMTNS AND TESTS ARE ALL TAKE-HOME. EASY GRADER IF PARTICIPATE AND COME TO CLASS.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

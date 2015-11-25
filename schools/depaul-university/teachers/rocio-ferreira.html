@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Rocio Ferreira</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.0<br>Clarity: 4.19<br>Easiness: 3.05</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: 371<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very hard grader. She unreliable and pretty strict.  The class was good but just be sure you get on her good side.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2012<br>Class Name: SPN330<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I dont understand why people are writing bad reviews. Seriously, this is College and it should not be easy. If you are looking for an easy blow off class DO NOT take her classes, BUT if you are looking to learn and think critically take her class.This has been the hardest class but it has been the BEST class I have ever taken. Really smart.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: SPN371<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Disappointing reviews. Took Prof based on them.SO Disorganized! Completely unresponsive. No direction. Syllabus an inaccurate spanglish mess. Grades arbitrarily & provides no feedback. Complete flake. $40text not used at all. Its amazing she's survived this long w as flaky as she is. NOT RECOMMENDED. TERRIBLE 'EDUCATOR'. Makes DPU look bad. UGH!</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2010<br>Class Name: SPN331<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor, really organized and dedicated to her students. Her course load is moderate, you have to do the reading in order to receive a good grade. Really organized and really smart too! Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2010<br>Class Name: SPN331<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Ferreira is a great prof., really helpful, understanding and caring. The administration seems to put a couple of burdens on her, that ultimately make her look bad, but in reality its out of her control. She is not an easy professor, but you will learn a lot from her, and she will make things much easier for you. Take her, you won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2009<br>Class Name: SPN115<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is so rude. You try to by nice to her and it does not help. She is unorganized...but it would not of been a problem if she was at least nice.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2008<br>Class Name: SPN115<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>There is alot of homework. Expect to spend alot of time with her class. Do all her homework in the end points do add up. I recommend her expecially since we all speak spanish it's a fun class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2008<br>Class Name: SPN331<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Don't take her. She is very disorganized and flighty. A nice lady, but not too great a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2008<br>Class Name: SPN331<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Cinema class: LOTS of work, sometimes unorganized, syllabus chgd often (cuz she's a busy woman). Even so, I learned a lot & I think she's way better than other professors I've had for adv spn. Tests are easy if you pay attn in class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/02/2006<br>Class Name: SPN207<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2006<br>Class Name: SPN116<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Rocio is a wonderful professor, one of the best I have had in my three years at DePaul.  She is all about helping the student and making sure that everyone understands.  She gave a lot of work, but in the end it helped everyone succeed!</div></div></div><div id="container" class="review"><div id="left">Date: 04/19/2006<br>Class Name: SPN220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This professor is my favorite at DePaul. Her classes are a lot of work but you learn a lot and she is always there to help. She has some great fashion too and always looks nice. Her Spanish is very understandable and she has the cutest accent. DEFINITELY RECOMMENDED! Couldn't have a better Spanish class at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2006<br>Class Name: 114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Fer..is the shizniz...she is very helpful and if you don't understand she'll help you through it. She's really friendly and understanding.. she's one of the best professors I've had at Depaul. Take her for spanish!</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2006<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Senora Ferreira is amazing! I learned so much in this class! She is very understanding and knows that not everyone is going to get stuff right away. She always reviews before tests, and does not hesitate to put back a test a day or so. Some people thought it was a lot of work-- especially the workbook, but it's never due before the weekend! =)</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2005<br>Class Name: SPN371<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This profesora is AMAZING.  She is all about helping her students out and improving their Spanish.  She goes out of her way for them and is interested in their futures.  I definitely recommend her for any Spanish class.  There is a lot of work, but the end results are well worth it.  Buenas Suerte!</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2005<br>Class Name: SPN371<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was really laid back.  We just showed up every week and watched a movie and turned in a short paper after each film.  Def recommend to anyone who needs an easy, educational 300 level class. Learned a lot about film analysis too. 2 big papers weren't too bad either.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2005<br>Class Name: SPN114116<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you need a spanish class, make sure you take her. She is really easy and really nice! Great teacher!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2005<br>Class Name: SPN115<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she grades you on your progress, is very understanding and is real chill and laidback. the guys thought she was cute, girls think she has an admirable tan. overall wonderful teacher that knows what she is teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2005<br>Class Name: ESPANOL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>one of the best professors in the university hands down.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2004<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor, always understandable and helful.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2004<br>Class Name: SPN114<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was very hepful, if you don't understand something, she is quick to help you understand. The work load isn't bad. And she is very nice and definitely the type of teacher that will stop and talk to you on the street. The guys in my class think that she is one hot very educated woman.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

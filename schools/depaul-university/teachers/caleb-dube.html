@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Caleb Dube</h1><hr><div><h2>Overall Quality: 2.85<br><br>Helpfulness: 2.98<br>Clarity: 2.73<br>Easiness: 3.44</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/24/2006<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>RIP Caleb.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2006<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Rest in peace Dr. Dube, you were the coolest!</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2006<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>RIP Caleb.  You were a great guy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2006<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I don't know what these fools are talking about. Caleb is the coolest guy in the world.  If you're an idiot and don't know how to write or talk, you will not succeed.  As long as you voice your opinion and do what little is asked of him, you will get an easy A.  Exams are easy and the papers are not difficult. I highly recommend Caleb for any class</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2006<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>would not recomend him, hard grader, can be rude, not very helpful. Can be fun, as long as you do all your work on time and the exact way that he wants it, I think getting at least a B is possible</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2006<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Teaches that the human genome project is a **** conspiracy. Doesn't know Kazakhstan is not some &quot;made up&quot; Arab country. Told students they have no right to own pets. Thinks Jimmy Hendrix was a sellout for making &quot;white music&quot;. He is dead serious about all of it, too. Not only is he an idiot, he dogmatically refuses to hear a dissenting opinion.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2006<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Perfect class to take if you want to feel guilty for being white, or get scolded for being black and having the audacity to be an individual. He said that Tiger Woods was an Uncle Tom because he dyed his hair. I guess blacks do not deserve the same freedoms as everyone else. What a ****! Not bright either - thought Kazakhstan was a fake country.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2006<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Hey, I don't have any idea what these people are talking about. This man is smokin' hot and a fine dancer. Plus, his classes are incredibly informative and fact filled. He makes me want to become a social worker just to stare at his dreamy face. But, I might not be the best judge of him because I am a genius</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2006<br>Class Name: ISP202<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Caleb is an awesome person, but he is a horrible teacher.  He doesn't explain anything very well and is kind of snotty if you don't agree with him.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: ISPBLUESJAZZ<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Teacher was pretty unclear.  The class seemed pretty pointless and not what I expected.  I would not recommend it!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: ISP<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>What he wants from his students is perfectly clear if you actually listen to him. His syllabi suck, but if you npay attention youll learna lot of cool things. His sense of humor takes getting used to, but once you get it he is the funniest little man ever! If you take the night section of his ISP class you don't do any volunteer work.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2005<br>Class Name: ISPJAZZBLUES<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>do not ever sign up for this class! if you have do anything you can to get out of this class!! he happens to be one of the worst teachers i've ever had, and he's a stupid isp teacher. you do unnecessary work ie:journals, and makes you write a rediculous paper on your volunteer work and that is usless too 15 hrs vol. work. get out of this class!</div></div></div><div id="container" class="review"><div id="left">Date: 08/17/2005<br>Class Name: MEDIACULTURE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: ISP202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Caled was the nicest, coolest, most engaging professor i have had at depaul. the class gives hands on experience and shows how the real world and social constructs work.short papers due fairly often but its not too bad. he usually gives extensions if the class wants it. take him. hes great. exams are easy. dont listen to these kids.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Dube is very unclear and expects you to read his mind for papers and overall class discussion. Though he encourages classroom discussion and debate, you ultimately have to agree with everything he says or he'll make an ass of you in front of the class. We watched a lot of videos though.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2005<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Unclear-- Does not explain assignments well yet he expects us to read his mind and write what pleases him. Rude-- you ask him a question and he responds very abruptly to you in front of everyone. He makes you feel stupid. I will never take him again!</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The worst professor I've had!  He is very unclear! If you don't say exactly what he wants you to say in your reflections, you are penalized.  This class was horrible!  Too many readings and he is sometimes very rude when you ask questions! Dont take him, unless you wanna be miserable!</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2005<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The guy needs to understand what the class he teaches is all about. He also needs to tell his students. He expects commitments that aren't identified; before, after, during, NEVER. He expects too much and grades too hard. AVOID TAKING DUBE. Dube will make you feel like your in high school again.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2005<br>Class Name: SOC213<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>NOT organized...NOT clear...NOT a class you should take as an elective. Dube is cool as hell, a very funny man, I will give him that. But as a teacher..HE SUCK'S!!!. HE gives loads of work, mostly reflection papers then grades you on what he thinks you should have learned instead of what was assigne</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2005<br>Class Name: JAZZBLUES<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Horrible teacher. He gives you ridiculous amounts of work, especially for a focal point class.  He also expects you to read his mind and is very unclear about everything. Sometimes the directions he gives in class are different from the syllibus so you are left to figure it out on your own.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2005<br>Class Name: JAZZANDBLUES<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Honestly the worst teacher to ever grace the planet.  First of all, you can't understand what he is saying, not to mention he is a very bizarre idividual.  He obviously doesn't pay close attention to detail and is very incompatable.  He doesn't care about your future and won't think twice to fail yo</div></div></div><div id="container" class="review"><div id="left">Date: 12/13/2004<br>Class Name: ISP<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I had him fall Freshman year. He is so nice and funny, cool guy. It is a lot of work, and sometimes he's unclear, but if you ask he'll tell you exactly what he wants and how to get an A. He's patient and gives lots of chances if you want an A you'll get it I did. I'm taking him again in my 2nd year</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2004<br>Class Name: ISP<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>cool guy, easy work, participate in class and u'll be fine</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2004<br>Class Name: BLUESANDJAZZ<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>oh Dube. After class all I wanted to do was roll a big fat DOOBIE!! It made the 9,000 pg. per week packets a little more interesting, but it still sucked. Trust me, do not take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2004<br>Class Name: EXPLORE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>ABSOLUTE WORST TEACHER EVER!! DO NOT TAKE EVER!</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2004<br>Class Name: CHICAGOBLUES<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This is with a doubt the worst class ever offered in any school. The purpose of the class, in his exact words, &quot;How are you exploring Chicago through jazz and blues.&quot; Without any references we are expected to make connections on our own. THIS CLASS IS NOTHING BUT FACTS AND DATES. DON&quot;T TAKE!!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2004<br>Class Name: BLUESJAZZ<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I cannot say enough bad things about his teacher.  Impossible to understand.  Sometimes goes by syllabus, expects you to read his mind as to when to follow it.  Turns class from music to race- ten weeks of how blacks have been segregated against!  Inconsistent grading.  Not recomended.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2004<br>Class Name: ISP102<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>can be fun, but not clear on what he wants in class.  very contradictory on what he says to what he does.  bad teacher, a lot of writing and reading homework ut he doesnt expand on it in class and goes back and forth between what he wants.  avoid taking him if possible</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2004<br>Class Name: ISP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good guy-but bad teacher.  too much work assigned and hard to understand.  again-good for a laugh, but not for a grade</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2004<br>Class Name: ISP102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Not a very well organized course, but Dube is an intelligent, nice, funny teacher. He grades a little too hard on papers for an ISP course.</div></div></div><div id="container" class="review"><div id="left">Date: 09/14/2004<br>Class Name: BLUESJAZZ<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>caleb is the dude. he is awesome. 'nuff said.</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2004<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A nice guy and an interesting person, but not a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2004<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class was the most unorganized frustrating class I have ever had in my life.  He is so unorganized it is crazy.  He is a nice guy and the class is relatively easy but I still hated it.  Requires volunteer work which I hated.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2004<br>Class Name: JAZZBLUES<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great!</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2004<br>Class Name: BLUESJAZZ<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is from Zimbabwe, Africa and he has been so far the best professor i have had at DePaul. He is really cool and really funny. His class is a lot of fun. The only thing i don't like is the volunteer hours (15) that you have to do, but its in easy 'A'</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2004<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Easy, but turn your stuff in on time.  He gives a lot of extra credit.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class consists of writing a few papers but more anal than a English teacher when it comes to punctuations. Service Learning (15 HR)to the class, on your own time. Lots of reading. Take advantage of the extra credit it really helps your grade at the end.</div></div></div><div id="container" class="review"><div id="left">Date: 04/15/2004<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Caleb unfortunately lied profusely about his ethics as a teacher throughout the semester. In written form acknowledged that I could turn in a paper 1 day late. Later he refuse my work forfieting my grade after the written aproval.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2004<br>Class Name: BLUESJAZZ<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he is an awesome teacher</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2004<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>not easy on grade, male international students better not take his class</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: BLUESJAZZ<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Possibly the most unorganized teacher I have ever had. Prof. Dube will put the same notes on the board several times, making class at times a re-run so to speak. I got an A in his class, but you have to figure out what he wants, there is no lee way at all</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>his class(Race&Ethnic Relations) = discussions, videos, volunteer work, short lectures and food. funny guy, sometimes unorganized and a little annoying.no midterm, no final, one long paper and few short ones.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I really liked the Dubster!  He's a funny guy, and I stronly recommend this class to anyone.  Ask him to speak Zulu (Clicks) to you, it's pretty cool.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Caleb was probably one of the best teachers I've ever had.  He was very enthusiastic about the material and helped students a lot.  We had to do volunteer work for the class, but it still was a great class.  TAKE HIM ASAP!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Caleb is the best teacher I have ever had. He's a &quot;Love Monster.&quot; Partake in class discussions and write a few papers and you'll do well in his class. Great sense of humor and fantastic knowledge of subject. TAKE THIS CLASS.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2003<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Dube is awesome, to say the least! knows ALOT of people in Chicago (especially on the blues circuit). His class is fun, informative, and has occasional snack days! What more could you want? Hmmm?</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2003<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took Caleb for Soph. Sem. Race and Ethnic Relations and he is the bomb dot com!!!  He starts awesome discussions in class and really relates well with his students, take him if you ever have the opportunity!</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2003<br>Class Name: EXPLORE<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I had Dr. Dube for Explore Chicago.  He's a great teacher with a great sense of humor!  He works well with his students. Go for it!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

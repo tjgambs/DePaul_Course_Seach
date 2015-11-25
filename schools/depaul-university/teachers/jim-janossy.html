@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Jim Janossy</h1><hr><div><h2>Overall Quality: 3.6<br><br>Helpfulness: 3.8<br>Clarity: 3.5<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/23/2015<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Be warned! Avoid completely if expecting a simple history class. A metric ton of reading and assignments. Class requirements purchase of work, which, fun fact: Prof. Janossy wrote himself. Do all quizzes and give up any free time you have for eating and sleeping because this class expects your absolute attention.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2015<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Most other reviews are right about him. Although it's entirely online, the class is tough and comes with lots of work including lots of reading and watching lectures he posts to Youtube. Can set your own due dates, but there is lots of work scattered across the bookD2L. If you have lots of time, you can take him, but I would not recommend him</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2015<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Janossy was awesome!! Tell me of another class where you could set your own schedule and are allowed to re-do quizzes and assignments until you reach 100%.. Yes there is a lot of reading involved but he did make the quarter easier for everyone by making one specific lecture for each unit.. I actually learned a lot from his class!! </div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst class I have taken at DePaul. Most unorganized, hard, heavy load class I have ever taken. He requires the most ridiculous assignment and looks for every detail in each assignment. Big regret taking this class-huge waste of my time.  Be prepared for multiple emails a day from him. Save yourself the stress and do not take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2015<br>Class Name: GPH205<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I am 34 through this course and have never taken a more disorganized or infuriating credit in my life.  The online quizzes will make you want to throw your computer against a wall, the unit summary templates refuse to be of any help when adding text, and the final paper is excessive and silly.  </div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2015<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B-</div><div id="right"><div>Worst online class I have ever taken. He was never available to assist on what were truly some of the most difficult, convoluted, and poorly organized assignments I have ever attempted. His class website and book, literally his as developed them himself for this class, are riddled with spelling and grammar mistakes, unanswerable questions, ETC.</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2015<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This online class is so confusing and lots of work. He doesn't use D2L-uses his own website and book that isn't clear. His online quizzes are super hard even though you can retake them, I've never gotten 100%. Regret taking this class. You can take a better class with less work not online.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2015<br>Class Name: CSC200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Janossy is the man! This class is not a blow off and is pretty hard to get used to. However, he will give the best feedback to all your work and you will get to revise it for full credit. Take this course if you can but don't expect to just finish a weeks worth of work in one day. </div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2014<br>Class Name: CSC200<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome online class to take. Just one book that's cheap and Janossy wrote it. You make your own deadlines and everything is repeatable until you get 100%. Loads of easy extra credit offered and Janossy gives super specific feedback. There is definitely a lot of work in the course, but it's not very hard and Janossy makes it very easy to get an A</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2014<br>Class Name: CSC200<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You'll either love or hate him. uses a textbook that he wrote himself for CSC200 which I found to be wordy and convoluted most of the time, but it had a lot of good information. The work is easy once you've read everything carefully, and for an online class you can't complain about the workload. Overall he is of course nice but wordy beyond belief.</div></div></div><div id="container" class="review"><div id="left">Date: 09/26/2014<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He doesn't use D2L, instead has his own blog full of words yet nothing is helpful. Emails you all the time, at least 3-4 emails throughout the day. This online class is a disaster, I regret taking this. Sends you to a different website to take his "quizzes" that aren't really quizzes, just another workbook or exercise. So confusing. </div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2014<br>Class Name: CSC200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Take him! If you do all of the work you will get an A. He lets you correct everything. Make sure to stay on top of the work in each unit. It's a fun class! He's super nice and he is always willing to help!</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2014<br>Class Name: CSC200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Super easy! textbook was $9 and you just use that to go through the exercises. Jim is a little quarky but lets you redo ALL assignments to get perfect score. Such an easy online. I highly recommend for science non lab domain requirement!</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2014<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I put a lot of hours into this online course. A LOT. And I got no where near the grade I expected (a lot worse). He told me I was fine util the last few days when he never responded.  He's really kind, but if you want to learn, don't take this course.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2013<br>Class Name: CSC200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super nice guy and a ridiculously easy class. Most of the assignments just test your ability to use the most basic forms of technology, like Microsoft Office and photo editing programs. He also lets your resumbit basically everything to improve your grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2013<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS CLASS. The amount of work you will do is insane. Not to mention the workbook being inconsistent and leaving you to find information between pointless material he "likes", a great textbook, and videos that put you to sleep. He expects to give feedback on your work and with an online class that shouldn't be necessary. Save yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2013<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>HIs online class is a lot of work. He is hands down the worst professor. Lets you revise but gives a lot of work and long e-mails that are pointless. **IF YOU WANT AN EASY A HISTORY REQ. DO NOT TAKE. LOTS OF WORK. EVEN THOUGH I GOT AN A IT WAS MY MOST STRESSED CLASS EVEN MORE STRESSED THAN MY BUSINESS MAJOR CLASSES**</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2013<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This course is a lot of work. Start early! Buy the workbook that he asks you to buy. Follow directions. Watch the lectures on youtube. He lets you resubmit your work to raise your grades. If you need anything just email him.</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2013<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took this class online. Whenever I needed help he was always there to assist. Is very vocal thru emails and will let you know when stuff is coming up. Work consisted of online quizzes THAT ARE REPEATABLE, so you can't get a bad grade on them. Also there are chapter summaries you have to do as well as 3 projects per section (4 sections)+paper-10pa</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2013<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Terrible, pointless class. You use his poorly written, mistake filled workbook for guided exercises which take far more time and effort to complete than is necessary. There's 4 hours of lecture per week, 8 minutes of which is important. He lets you resubmit work and the online exercises are guess and check so missing an A is impossible.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2012<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>.....*sigh*  Reallyyyy nice guy!One of the nicest I've had at DePaul.  But unfortunately the book he uses is one that he wrote which is SO confusing.  You have to take online quizzes which he says are not for a grade....but they are. He just graded my first assignment this past week..the end of the quarter.  Nice professor, not the best class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2012<br>Class Name: CSC200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>THE BEST PROFESSOR AT DEPAUL. VERY NICE GUY!!. GLAD I MET HIM REALLY!.</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2011<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>BEST TEACHER I HAVE EVER HAD.  He is so helpful and really cares about what and how much you are learning.  He lets you take quizzes many times to get a high grade.  I honestly learned so much in this class.  Would highly recommend.  As long as you actually read his e-mails, his online system (not D2L) is so easy to use!</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2011<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Wow! This guy is amazing! Take him, you will not regret it! He was so understanding and open to new ideas, and I liked that his assignments weren't too hard. I took his online class, and I definitely learned more than I thought I was going to from an online class. He definitely makes the online class experience worthwhile.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2011<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice guy but stinks as a teacher.  His class is embarrassingly easy and he lectures about nothing for hours. I attended his Chicago Architecture through Photography class and we did nothing but learn about Indians, the Chicago River, and Immigration.  You tell me how those assignments correlate with Photography or Architecture.</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2010<br>Class Name: GPH262<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took his online class and liked it a lot. He assigns a lot of reading and the website can be confusing, but if you work through the materials you will do well. (he requires very little writing and a lot of non-traditional/more fun assignments)His online class has soft due dates. Great for HIST requirement.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2010<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>BEST PROFESSOR AT DEPAUL! Took this course online. CARES about students, BEYOND UNDERSTANDING. Knows his stuff. Learned so much from intro level course I thought I'd half-ass. Really USES the internet and new technologies to help students. (Could've done without the projects, though). Offers extra credit. Impossible to fail.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2010<br>Class Name: CSC298<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Best teacher at DePaul! Really cares about his students. I took this class online and it is seriously hard to do bad in it unless you don't do the homework. If I could take another class with him, I definitely would!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2010<br>Class Name: EXPLO1ST<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>a very awsome professor, always care about you, if do what you got to do which homework, online test, projects(love the projects,u can just learn alot of stuff from it),that will be no problem to get A at all,and James a very nice, funny guy, so totally should take him!</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2009<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I will admit he is a great guy. Very nice and likes to make jokes here and there. However, if you have no interest for the topic, DO NOT TAKE THIS CLASS!! He give a lot of busy work! You will be extremely bored if you do not feel PASSIONATE for art. This art class gave more work than any other class I've taken at Depaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2009<br>Class Name: GPH205<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Want to write on index cards for your papers&#63; Be told that you probably can't write an academic paper&#63;  Get your weekly dose of belittlement&#63; Feel like you're in the same room as a god&#63;  Use obscure paper formats&#63;  Read the most pointless 400 pages of your life&#63;  Do more busy work than you ever though possible&#63; Take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2009<br>Class Name: GPH205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this guy is a real piece of work, his class is like being in kindergarden, so if you like being talked down to, by all means enroll in this lame course</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2009<br>Class Name: EXPLO1ST<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Disorganized, messy office, requires lots of busywork, wrote his own textbook.  Wants to be friends, but isn't.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2008<br>Class Name: DISC101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher is a joke and doesn't teach anything</div></div></div><div id="container" class="review"><div id="left">Date: 09/10/2008<br>Class Name: GPH205<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you don't have any prior interest in art or art history, don't take this class. Too much work to do if this subject is not for you. Final was ridiculous, and not in a good way. Quiz at the end of each class on notes you took. Weekly art projects which are done mostly in class with partners. Great class to take if you like the topic.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2008<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>great teacher easy going just do your homework on time and go to class and paper easy A</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2008<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a very nice professor however, he assigns A LOT of work and the final is very difficult. And DO NOT expect to get papers back on time. It takes him MANY weeks to get your papers back. Which can be annoying. Attendence is MANDATORY. YOU NEED TO GO TO THE CLASS in order to do well. Honestly, I WOULD NOT recommend this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2008<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>lots of work!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2008<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Super super super nice guy, and pretty easy. He's very specific about what he wants in his assignments and papers, so it's hard not to get an A. Very laid back. Definitely take him!</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2008<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I had him for my Discover Chicago class. He's such a nice guy and really funny. The class was interesting and his assignments were so easy!</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2007<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very good teacher!  Probably one of the most passionate at depaul.  Very relaxed and lets you decide if you want to learn the material or not.  Attendance is not mandatory, but he praticly gives you all the midterm/final questions in class each day.  If you need a class thats a bit more laid back because of some harder courses, this is TAKE this!</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2007<br>Class Name: ISP103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a good guy- he's very interested in what he's teaching. He puts a good amount of his lecture notes online. Tries to get people involved and make people laugh and have a good time. Not too hard of a  grader and assignmets aren't hard.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2007<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is very laid back but can be a tough grader. He likes to make jokes and get you interested in what he's teaching. There are quizzes every class and he let you know your grade so you know whether or not to do the extra credit options.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2007<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's a cool and laid back kinda of guy. Smart and witty. Realy easy class and fun too. Sometimes he lets class out 20-30 minutes early.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2007<br>Class Name: CSC298<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took the internship class. He turned out to be a pretty rough grader, but overall a good teacher. Still, I had a rough time with the requirements of the class, as I didn't have much interest in what I was learning/doing, nor did I care to be there. However, I'd take the class looking back, as the other classes available for the jr. req sucked.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2007<br>Class Name: GPH205<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Quizzes every session, no midterm, sample final given at the start of the class, lots of homework, and extra credit projects. Gives review before quizzes.  Easy class to get a high grade just do all the requirements..</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2007<br>Class Name: IT201<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice guy, boring lecutres... but the final was easy as****... he gives each question to you in the book in a &quot;sample final&quot; then on the last day of class he tells you what is questions he changed on the real final.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2007<br>Class Name: GPH205<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This guy is easy, but the homework assigned is designed for elementary schoolers. no joke. somewhat interesting class, but long, boring lectures. nice guy.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2007<br>Class Name: GPH205<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This guy straight up sucks. The class is actually semi-easy, but involves pointless assignments that will have you going out to buy an array of office supplies to use once, then discard. The HW requires a tedious attention to detail and really doesn't teach you anything. His lectures are god-awful boring and he is a tough grader. Also very rude if you fall behind!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2006<br>Class Name: IT201<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's alright.  Class was between rocks and wood on the boring scale, easy as hell.  Attendance is not mandatory but you have a quiz every other class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2006<br>Class Name: GPH205<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This was one the most easiest classes ever!  He says to do the hw to know what will be on the quizzes but not necessary at all since he gives hints throughout his lectures.  For example he can say, If I were to word it this on the test the answer would be...so pay attention in class cause the slides help with teh quizzes.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: GPH205<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Can be an easy A, just be smart about it. Don't spend too much time on the arts&craftsy hw assignments. For the homeworks where you have to answer questions based on readings-he can be a picky grader. Difficult to prepare 4 the quizzes-just try your best and do the e.c. to build some insurance. No midterm, and a very helpful practice final exam.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2005<br>Class Name: EXP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He isn't a hard grader at all. Basically, if you use the right font, spacing, and margins, you're going to get an A on the assignment.  It seems like he's in love with what he teaches so he goes on and on about the same topic forever, but he's a nice guy and an easy teacher, so no one really cares.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2005<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was really nice, a little weird, but nice. The work was soooo easy and he outlined everything.Willing to help you out or clarify things if you ask. SUPER EASY CLASS!</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2005<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very helpful and lenient if you are honest and make an effort in class.  The only complaint I have isn't his fault; I thought the class would go more into photography, but it's mainly architecture.  Really into what he teaches and gives good (if long) presentations.</div></div></div><div id="container" class="review"><div id="left">Date: 07/10/2005<br>Class Name: ECT250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Janossy is my favortie prof by far at DePaul.  I have had him as a prof 3 times and all three times he was excellent. I am honored to say he was the most motivating of all my profs and I now have a great job in the tech field thanks to his leadership. I would reccomend him to all who want to do something with there life. He is the best!</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2004<br>Class Name: IT130<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor!  His midterm and final are straight from the notes, so study them.  Reading the book is pointless.  Also, if you're lucky, if you do better on the final than the midterm, he'll take the final exam score over the midterm score.  Definitely benefits the student.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: INTERN<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Wow, this guy is a real relic. He's out of touch, plays hilariously bad &quot;corporate team&quot; movies, and brought in a speaker who was such an 80s relic it was pathetic. He also assigned a 12 page paper on a topic we didnt even discuss in class. AVOID!</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2004<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This man is super cool. He is sooo helpful, very leanient, and accepts late work with no penalty. He also took the time to show us exactly how to write a good research paper. Really helpful teacher who genuinley cares about his classes .</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2004<br>Class Name: CSC210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>VERY GOOD TEACHER!!! He is extremley helpful and wants everyone to pass. The material was presented fairly easy. One of my favorite professors at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2004<br>Class Name: CSC211<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took this as a distance learning summer school class.  The class and homework were pretty easy until the end of the quarter.  Very late with grading and getting back to you sometimes.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

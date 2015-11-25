@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Frank Rzeczkowski</h1><hr><div><h2>Overall Quality: 4.53<br><br>Helpfulness: 4.47<br>Clarity: 4.59<br>Easiness: 2.74</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/18/2006<br>Class Name: HST280<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Attendance counted only on Fridays, when we had discussion.  Fairly easy course. Talked a lot about the working man, stress, drinking, etc..</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: HIST181900<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher. very nice, clear and helpful. Tests are easy, but he gives you a lot of material to remember. gives you a study guide. 2 out of 3 papers. hard grader, but nice man. i would take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: HST1819THCEN<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Holy majolie. Best teacher of history probably alive. or ever living. long lectures almost every class,but pretty funny and easy going.THE most intersting lectures on broad history of this time period. so helpful,gives study sessions where he'll answer any questions. just talk and engage and it'll be the best!oh, AND you get to call him frank yesss</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2006<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>great professor, long and detailed lectures. you have to read a book per week, but you only have to write 2 out of 3 essays, no homework, exams are easy. discussion class once a week.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2006<br>Class Name: HST279<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Didn't think I'd like this class but I ended up loving it.  Not an easy grader and you need to do the reading but he really turned a class I was ambivalent about into a great course, very interesting lectures.</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2006<br>Class Name: HST279<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awesome guy! He's very interested in the subject so it makes class bearable..offers a lot of help with papers, gives a study guide for midterm/final. You need to read, and do the work, but overall great class. I'd take him again</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2006<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great Professor, not that easy, but interesting.  You have to do the work in order to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2006<br>Class Name: HST279<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Warning, there is A LOT of reading.  He's not an easy teacher but he is def an awesome teacher though.  He really knows his stuff and so it makes class bearable.  He gives a study guide for the tests (midterm and final), there are 3 essays but you only have to do 2.  Overall...I highly recommend this teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2006<br>Class Name: HIST281<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>You will take a lot of notes, but he is probably the best lecturer that I have ever heard. He is willing to help whenever you need it. But warning... there is a lot of reading...</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2006<br>Class Name: HST350<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>he was a good guy, really clear and only spoke about what we were tested on. but he is a real tight ass when it comes 2 marking! make sure u no what ur talking about u cant bs any paper in this class</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2005<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He's awesome. Students need to work and write in order to do well in his class, and you'll take tons of notes. But he has a way of teaching where the info just sticks in ur head. He's very interesting and really likes class participation. He enjoys getting everyone in on class discussions so come prepared. He will call you out for not speaking.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class was really interesting. If you like lecture classes, take it, because he is probably THE BEST LECTURER at DePaul. Very clear! I agree with the comments below...focus on the 'why.' 2 papers (3-5 pages), midterm and final are both short answer and essay...very fair grader.  Would definitely recommend to others :)</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2005<br>Class Name: WESTERNHISTORY<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/01/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>frank is awesome. yeah he lectures a lot, but hes not monotonous. take your notes or bring a recorder. 2 papers. short midterm and final. best prof at depaul, imo</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not the easiest class ever but the most interesting given the period of history.  More concerned with the how and why than the names and dates...which is a good thing!</div></div></div><div id="container" class="review"><div id="left">Date: 08/16/2005<br>Class Name: HIST280<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I agree mostly with the previous mentioned, he is helpful and will take time out of class in order that you fully understand the course material presented during his lectures.</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2005<br>Class Name: HST280<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is in no way easy but he does the best he can to prepare his students for the exams and papers. If you hate history don't take the class but if you want a challenge he is the professor to take. He is very sweet and helpful and tries his best to accomodate to students' needs. I reccommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/27/2005<br>Class Name: HST281<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I filled almost an entire notebook with lecture notes. Most of the class is writing (notes from lectures and papers) and he's a hard grader on papers. Although the class is not easy, hes an awesome educator and expects a lot out of his students because he gives a lot to begin with. Dont waste your $ on the books.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Frank's a cool guy. but your hand might hurt from lectures and he's a tough grader, but still worth taking. However, don't waste your money by buying the books he assigns... he discusses them for 10 minutes and that's it.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: HST281<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Frank previously taught at Northwestern and it shows. His class is completely based on lecture and reading 6 texts.  He grades pretty tough, so it's not a blow off class like some other DePaul classes.  Discussion is mandatory, so I wouldn't recommend it if you don't like to talk. Minimal effort would get you a C.. so an A is definitely attainable.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Frank is by far the best professor I have had at DePaul. His classes are interesting and he is a great guy. 3 papers one is optional and a midterm and final that are easy. He is a hard grader but pay attention and it will be easy. Haven't read one book yet and I am dominating this class. Overall a great guy you want to have him for any US class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: WESTHIST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>BORING! But who likes history&#63; He's a real nice guy who loves his history man! Lectures are impt. and reading is impt. Papers were hard but he's an easy grader! I really liked him! Barley did any work and recieved a decent grade! Never read!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/03/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Ver interesting class, lots of interesting info, and i mean lots.  Bring a voice recorder to get all the notes.  3 papers, 1 of them are optional.  midterm and final aren't hard if you pay attention in class.  i read 2 of 6 assigned readings and passed with a B</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: HST281<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I thought the class was not hard, but you surely had to work to get a good grade. 2/3 papers (1 is optional) mid-term and final. He is a very tough grader, but he won't give you lower than a C, unless you really did not do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I read one of the 6 assigned books and walked away with an A. The midterm and final are so easy, but he's a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2005<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amazing Teacher! You might get away without readings.. kinda weird grader though! but makes the course and lectures very very interesting! And ofcourse..very cute!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2005<br>Class Name: HST281<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>dont take as a night class bcuz lectures are long, but hes a good speaker. very intel man. Lots of reading, but u can get away w/o reading ALL. Short papers are fairly easy. Tests cover class lectures, no suprises, arent too difficult if you pay attn/take good notes. Good class all in all.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2005<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He has the cutest dimples.  Also, he is a fantastic teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2004<br>Class Name: HST281<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Frank is a nice, approachable professor. He is a difficult grader and it was often hard to keep up with his lectures. Our exams were approapriate and covered the right material.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2004<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome professor. There is a lot of reading, but it is a History calss. Lectures could be a little boring and he is very hard when it comes to papers. If you are prepared to learn and ask questions, you will be fine. I got a B+ in his class and I did not read the book, just the course packets and I</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2004<br>Class Name: HST281<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He's a really nice guy and the lectures are quite boring. However, he grades anonymously on his tests and papers (which can be good and bad). Sort of a weird grader and is not really consistent with grading.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2004<br>Class Name: HST282<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>really great teacher.  very approachable and makes history interesting.  lot of reading, and the papers take some work, but if you try you will get by.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2004<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Best History Teacher I have had at DePaul.  Tells the other sides of stories through out history, lectures are a little long.  But still a great teacher.  Be prepared to be challenged on your papers. I Got a D, B-, B+.  Best 2 out of 3 count.</div></div></div><div id="container" class="review"><div id="left">Date: 09/28/2004<br>Class Name: HST281<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice guy, lectures a tad boring but you don't have that many assignments.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

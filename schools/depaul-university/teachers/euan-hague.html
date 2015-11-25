@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Euan Hague</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 3.9<br>Clarity: 4.2<br>Easiness: 3.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/09/2015<br>Class Name: GEO172<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: Not sure yet</div><div id="right"><div>Friendly guy. Lectures are long. Readings are long. Pop quizzes are somewhat difficult and worth a significant portion of your grade. </div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2015<br>Class Name: GEO 172<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>His lectures are so long and so boring. He assigns a lot of reading for a 100 level course and his pop quizzes are about the smallest details from the reading. Then he complains that students didn't do well. He's a very arrogant professor and he doesn't deserve to be.</div></div></div><div id="container" class="review"><div id="left">Date: 05/22/2015<br>Class Name: 133<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>You will create the most time wasting excel spreadsheet on pilsen that is unbelievably stupid. This will take you a minimum of eight hours, on top of your weekly papers that are due. Then when you think its finally over, you will create graphs for this spreadsheet, which takes another 5 hours. You will then write an 8 to 10 page paper. DO NOT TAKE.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2015<br>Class Name: GEO103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>Prof Hague is a good professor that keeps class interesting and engaging. Got to go out on a couple of field trips to see things first hand. He can be strict sometimes but overall is a good guy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2013<br>Class Name: GEO172<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>It's easy to do well in this class if you read the syllabus, do the readings, and pay attention in class. Prof. Hague provokes thought and discussion, and is always available for appointments outside of class. Great class, great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: GEO143<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a wonderful professor and very willing to help his students succeed. I have enjoyed his classes and perspective incredibly.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2013<br>Class Name: GEO172<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Not very clear with assignment goals, and has way too high expectations for 100 level class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2011<br>Class Name: GEO172<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Pretty fair grader, interesting subjects but he lectures literally the entire class. uses a lot of outside sources like movies and paintings so that makes things more interesting</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2010<br>Class Name: GEO103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Class was a tad dry but surprisingly interesting once in awhile.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2010<br>Class Name: GEO172<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was his first quarter teaching Cultural Geo & He was fabulous. You can't slack, but it's so interesting & he is so helpful. The class was fully engaged all quarter b/c of his teaching methods and it was brilliant! TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2010<br>Class Name: GEO103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No textbook cost was nice and this is one of the best teachers I have had at Depaul.  He is anything but charming, but you will learn all about this subject and the way he structures the class forces you to do so.  Certainly not an easy class but one worth taking, great professor.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2009<br>Class Name: GEO170<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This guy can be an ass at times. Makes you print out 30+ pages of reading a week yourself, and makes an example of you in front of the whole class if you can't afford it. Smart guy who knows what he's talking about. Although, I'm not sure if I understand the point of this class and how it relates to Geography.</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2009<br>Class Name: GEO133<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Hague was awesome. He obviously knows a lot about what he is teaching and wants everyone else to understand. If you actually want to learn and still get a good grade, he is the man</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2008<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I really liked Prof. Hauge. He was really cool and the class was not hard at all as long as you went on the feild trips and paid some attention. He can be a tough grader but hes a very knowledgeable teacher! He made things interesting and was also funny. if you can TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2008<br>Class Name: ISP102<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hague is a perfect example of what an university professor should be. Everything he teaches pertains to the midterm, and will definitely help for the final paper. He is very friendly, yet will be strict if necessary. I really enjoyed this class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2008<br>Class Name: GEO170<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>so im going against most of these comments. i did not like professor hague. his grading policy did not make any sense at all and his assignments required you to take one side and not consider a counter-argument. i hope i do not have to take him again</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2008<br>Class Name: GEO170<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>So I am kind of in love with Prof. Hague.  His lectures were absolutely beautiful, the class material was engaging, critical and moving.  The papers were challenging and thought-provoking.  The exams asked not only for memorization but also for opinions.  Everything I could ask for in a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 01/15/2008<br>Class Name: GEO133<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A lot of out of class work.  You have to go to Pilsen at least 3 times to complete the assignment.  You also have to memorize very small details of the readings for the quizes and exams.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2007<br>Class Name: GEO133<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awesome Professor. He is really cool, but can be a littl uptight. Just do what you have to and you will do completely fine in this. I would definately take him again!</div></div></div><div id="container" class="review"><div id="left">Date: 07/02/2007<br>Class Name: GEO133<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Took his 100-level learning experiential course. Don't take the course level for granted, he expects hard work from you. If you respect him he will show you the same back; if you slack on the readings and half-ass your work you're certain to struggle. (Hard grader and gives pop quizzes)VERY interesting class and great experience in Pilsen. Take it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2007<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Pah-lease, the department does not require 20 pages of writing for these classes.  Even if they do, most teachers do not abide by the rules, except for him.  he was a really cool guy and made class fun, but it was unnecessarily hard.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2007<br>Class Name: ISP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a very nice guy, and keeps class interesting. A lot of work, but you get a good grade if you do it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: GEO170<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I LOVED THIS CLASS. YOU HAVE TO DO ALL OF THE READING BUT IT IS INTERESTING AND IT ISNT TOO LONG. HES A BIG FAN OF CLASS PARTICIPATION BUT HE GRADES PRETTY FAIRLY ON PAPERS. THE MIDTERM AND EXAM ARE REALLY EASY TOO. I DEFINITELY RECOMMEND THIS CLASS. ITS INTERESTING AND HES A GREAT TEACHER!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2006<br>Class Name: GEO170<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i guess he can be pretty uptight sometimes but don't let that deter you. he's a great prof, lectures are ususally pretty interesting and as long as you do the readings the class is pretty easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2006<br>Class Name: GEO170<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Definitely an amazing teacher. The class was incredibly interesting and I learned so much. He is very helpful also. Highly recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2006<br>Class Name: GEO170<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This is one of the most mentally stimulating classes I have taken here at DePaul. It makes you think about the subject material, there is a clear connection for the whole course. The readings were a little annoying (only b/c I don't like 2 read) but were easy. READ THEM...POP QUIZZES!! Easy A if you apply yourself, take notes, and do the two papers</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2006<br>Class Name: GEO133<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>this guy definetly needs to relax! He graded a 100 level class like it was a 400 level class!! I would not take him!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2006<br>Class Name: GEO170<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a good lecturer and keeps the class interesting. He is a little too uptight and sometimes mean. He needs to relax. Overall, a decent class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2006<br>Class Name: GEO170<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Interesting, reading was always like a short article, no text book.  But you do have to print everything of Blackboard, which can get expensive.  He gives 4 pop quizzes, but if you've done the homework, they're totally easy.  Papers were kind of a pain, but I did all of them the night before they were due and got an A in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2005<br>Class Name: GEOSCI150<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2005<br>Class Name: GEO333<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Psycho. Seriously needs to chill out. He kept freaking out and screaming at all of us &quot;This is a 300 level class, I EXPECT nothing less than graduate work&quot; GOOD LUCK!</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2005<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved his class.  He was totally clear on the assignments and all of the other class work.  He is a fair grader and he truly cares about his students.  He was very sweet and funny.  He made every class enjoyable and i would definitley recommend his class. Take him you, won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: GEO170<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Excellent prof, one of the better I've had here at DePaul. Class is straightfoward - midterm, final, with 3 papers.  This class is not diffiuclt at all as long as you read, take notes, and pay attention in class - likes it if you participate.  Highly recommend if intersed in learning about culture.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: GEO170<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Whoever said they hated this class is an idiot. Take notes and you will get an easy A. His papers are very straight foward as long as you can read directions!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2005<br>Class Name: GEO170<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Annoying accent, good luck understanding him. Not fair on papers and test if you dont participate in class. He calls on the same people in class all the time, and hes funny looking...</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2005<br>Class Name: GEO170<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>dont believe the negative comments, Euan Hague is a great teacher and the only people who do bad in his class and dont like it are those who never showed up or did the work. Go to class, do the work, get a A. EASY</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: GEO6363<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I apologize to anyone who actually respects this man; there is nothing about him that would ellicit a kind word from my lips. I worked hard in his course (Earth's Cultural Landscape) and he gave me an F! I took the course again to not much avail; and he gave me a D. Not nice, don't take him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2005<br>Class Name: GEO170<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I hated this teacher with a passion. His class is ok but I hated his way of teachin.  Too much reading and his papers where on weird subjects and he is a weirdo about analyzing.  I had trouble writing his papers and I really don't know the point of this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2005<br>Class Name: GEOGRAPHY<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>earths cultural landscape is a different class but he made it better. he has interesting new topics to discuss. i reccommend him ...the isnt even my major...papers are ok kinda weird topics. but its ok.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2005<br>Class Name: FOCALPOINT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Euan Hague is an awesome dude. He is very friendly toward the class and has a great sense of humor. He used a lot of class discussion to understand the readings (which weren't too hard). He's a tough grader, but he's pretty clear about his expectations. I suggest taking him if you get the chance.</div></div></div><div id="container" class="review"><div id="left">Date: 01/20/2005<br>Class Name: GEO170<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>earth's cultural landscape was a fairly intersting class. it's a lot like anthropology. his accent is kewl. the midterm wasnt too bad but the final was quite a bit harder. there's a lot of reading and he has pop quizzes on some of them. overall a nice teacher and knows his stuff.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2004<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Fun class and very interesting subject (Explore Chicago).  Dr Hague is very clear on what he requires from his students and always very keen for students to see him during office hours if they have a problem to discuss.  Overall, great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2004<br>Class Name: GEO233<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I liked class but he is a Nazi about the work load. He had us on contract! class was really intense and saturated w/ dates and abstract ideas that he got through in lectures but was really hard to keep up w/in papers & test time. just insane work.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2004<br>Class Name: HON204<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Officially my new favorite prof! He's entertaining (not just his accent), informative, and a very, very nice person. Tough grader, long assignments, yes... but he's flexible. After midterms, he reduced our workload drastically... take him!! He's the best!</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: GEO110<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he is very knowledgable about the subject he teaches.  I thought he was very patient and helpful to all the students in class.  he made class a lot of fun with various activities and projects eventhoguh we were learning about geography!</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2004<br>Class Name: GEO233<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was by far the worst class I have taken at DePaul.  It reminded me of a class I would have taken in high school with all of the busy work that was required.  In addition, what he wants is very unclear!</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2004<br>Class Name: HON204<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Get ready to work! 4pps of writing and 100pp of reading for every class. Also, 2 10p. papers, a 15p. research paper, and an in class midterm and final. It would be tolerable if he wasn't such a tough grader. Hardest honors class thus far!</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: GEO110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr Hague is one of the best profs I've had at DePaul. Very organized and INTERESTING! Very easy to talk to, even outside of class. I really got into the coursework in his class because I found it so interesting. I would recommend Dr.Haugue to anyone...</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2003<br>Class Name: GEO110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>my favorite teacher  of the semester by far</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2003<br>Class Name: GEO<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2003<br>Class Name: GEO133<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Clearly the best teacher that I've had at DePaul.  He's very well organized and his grading system is spread over many assignments.  He incorporates book, lecture, recent articles, movies, music, etc. into the class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2003<br>Class Name: GEO110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very personable and very organized. Interesting class lectures and instructions for tests, quizzes and papers are very clear. Definitely recommended.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

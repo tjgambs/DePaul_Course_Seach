@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Geri Flynn</h1><hr><div><h2>Overall Quality: 3.96<br><br>Helpfulness: 3.89<br>Clarity: 4.03<br>Easiness: 4.09</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Every class was like a therapy session. Prof. Flynn use to be a counselor and it shows. I loved this class and her. The quizzes/tests were right from the books - you have to read. They were easy too. Final ended up being two small paper assignments instead of a test.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2012<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Religion and Psychology, seems weird but it was actually extremely interesting. Not super religion based. Take this for liberal studies requirement. She's hands down the nicest most caring professor I've had. Lots of reading -> lots of in class discussions. Exams are kinda hard. Learned a lot of applicable life skills, took a step towards wisdom.</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2012<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Flynn is so passionate about this class that it makes it great. The reading in the first half of the quarter is kind of boring but the discussions are good and the papers are easy. She tells a lot of stories for her own life. This class is really interesting</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2012<br>Class Name: REL220<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's super sweet and understanding. Basically the whole class you just talk about your personal experinces and feelings, so it's not a boring lecture.Although she isn't very clear about the reflections. I usually write good papers and she said mine needed more clarity. She also doesn't respond to emails, atleast when I tried once.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2010<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Textbook: 1 (Need to read whole thing for course). Grade is highly depended on participation so prepare to speak up. It's an easy A if you know what you're talking about and if you want to understand more about Religion and Psychology. Overall, 8.5/10.</div></div></div><div id="container" class="review"><div id="left">Date: 07/29/2010<br>Class Name: REL220<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Flynn is genuinely interested in the subject she teaches, which makes the class that much more enjoyable to be in.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2009<br>Class Name: REL225<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class is easy. Minimal material to learn, don't need book, but must attend class. Be sure to get to know her well personally because she finds her favorites on day one. She is also very optimistic, so when participating make sure it is &quot;something she would like to hear&quot; or agree with. Not a very fair grader, but pretty simple class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/14/2008<br>Class Name: REL225<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Flynn is such a nice lady. She always stimulated class discussions, and chose very good films to show in class. Take this course, easy A, and quite fun if you like movies!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2008<br>Class Name: REL220<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Was in class everyday. Got A's in everything. Participated but not everyday. Ended up with a 0/10% for particiapation. So basically if you don't participate every single day more than once, you will get 0. Trust me theres not inbetween. She sucks with the participation thing. Really unfair grader!</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2008<br>Class Name: REL220<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Material is not hard if you read. Papers are easy. She is vey big on partiicaption. It's 10% of your grade so if you are not actively involved in the discussions you will get a grade LOWER than what you deserve. so be prepared to participate. Over all not bad.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2008<br>Class Name: REL225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor. Very easy A. The 2 tests are easy, otherwise you write 5 film critiques and watch a movie every class. She's a very sweet lady and the class and the discussions are not very religious.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2008<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class is really easy. Attendance is mandatory only allows two absences. Make sure you do the readings there pretty short. 2 really easy tests, one 4 page informal paper, and a final exam.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2008<br>Class Name: REL225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A great teacher. Made the subject fun. Enjoyed the movies. Attend class and you will do fine. Easy A</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2007<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the sweetest teachers I have ever had--she is so caring and lovable! Before taking the class I was sort of dreading the religion part of it, but she really made it pretty interesting, and it was not hard to do well.  Definitely take her if you have the chance!</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2007<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really wasnt looking forward to this class, but it ended up being awesome. She is so sweet and understanding. It is pretty easy class and it was actually pretty interesting. There is a lot of class discussion, so if you're not into sharing parts of your life dont take it, but if you are this class is great. Love her!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2007<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>this class was very interesting not to mention very easy. she explains the work really well and keeps it simple but at the same time you learn a lot. the exams and assignments are not too hard. you dont need to be a psych major to get an A. discussions are fun and educational and she even gave us a take hm final. recommend her to everyone.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2007<br>Class Name: REL220<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She does act like a therapist. However, if you pay attention in class you will do well. Tests are easy in my opinion, just study the note sheets. Ok class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2007<br>Class Name: CMN212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is a very nice lady who encourages participation. She talks to her students as apposed to at. She belives that it's important not to just lecture students but to allow them to speak as well. Not much homework in the class but some readings. the tests were okay.</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2007<br>Class Name: REL220<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class was SO BORING and useless that staying home and sleeping would be more educating. The woman is supposed to a porfessor, NOT a therapist, but she tries to act like one. BORING, USELESS, DEPRESSING, WASTE OF TIME CLASS!</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2007<br>Class Name: REL220<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Terrible teacher, talks about depressing things in life (death, sorrow, greef). I did not learn anything. Talk about wasting time. This is the class! The teacher just talks about what she believes in.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2006<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really great teacher.  A lot of reading but it is not necessary, you just have to study the handouts and take notes during class. Participation is big in this class - if you do participate she will do anything she can to help you.  I would definetly recommend taking her, she's great</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2006<br>Class Name: PSYCHANDRELIG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Flynn was an amazing woman.  She always gave personal anecdotes to help the class understand concepts.  Sort of a lot of reading, but not neccessarily needed to pass the course.  Listen in class and take notes and you should be fine. She gave 3 or 4 tests throughout and the final was NOT cumulative!  Take this class--you won't regret it!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: REL220<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is a great teacher and also nice lady. it's ture that there are tons of readings for this class but I pretty enjoyed this class. you will not regret this class if you do your things.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2006<br>Class Name: REL220<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>boring boring BORING. if i wanted to talk about my feelings, i would have found a therapist. beginning of the quarter, it was all &quot;history of psychologists&quot; and then the second half of the quarter, grief and feelings. you take 3 tests, which are easy, and then final is a take-home. but seriously, i have never EVER been this bored in a class before.</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2006<br>Class Name: REL220<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>so unhelpful, class is super boring and i dont like her teaching stlye...she was rude and not easy 2 approach...dont take her!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2005<br>Class Name: REL220<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i asked her 4 studying tips and she said well just participate more in class! she didnt give me any helpful study tips..she's one of the worst teachers I have come across at DePaul. Unhelpful and rude. Material covered in class is intresting though. Lots of reading!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2005<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ms. Flynn is a very sharp cookie. Do the readings and participate in class and you won't have anything to worry about.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2005<br>Class Name: REL220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very cool teacher and knowledgeable.  gives good examples to get a point across.  only three tests. big on attendance and participation.  for the test study the hand outs and read the chapters that are assigned.  easy A if you do the work</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2005<br>Class Name: REL202<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Flynn was very kind and knowledgable. She gives clear instruction and notes--you have to study for the tests which are short answer/essay, but as long as you take the time you will do very well. Flashcards are really helpful for this course for memorization. Fairly interesting material.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2005<br>Class Name: PSYCHANDREL<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very knowledgeable. Helpful. Very informed teacher. Kind person, too.</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2005<br>Class Name: REL<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy A if you do the readings. If you do not do the readings you will not do good. So keep up and you will do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2005<br>Class Name: REL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>THIS PROFESSOR SUCKS.  SHE DOES NOT KNOW HOW TO TEACH AND WHAT EVER SHE TEACHES, IT IS NOT IN THE TEST.  BAIL WHILE U CAN OR ELSE U GUYS GOING TO BE SORRY U DID NOT LISTEN TO ME.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2005<br>Class Name: PSYCHANDREL<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>ew ew ew. she's a nice old lady, granted, but the class is boring as all hell and i wanted to shoot myself. its not hard..just a lot of reading and notes every lecture. a lot of people split during break cuz we were so bored. please try not to take her if u have any interest in psych</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2005<br>Class Name: REL261<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>BORING!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: PSYANDREL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof. Flynn is a lovely lady. She is extremely plesant and very nice. She is very educated in different religions and how they effect our lives. The class was interesting and flew by. She only gave us two tests, which are graded too easily, so if you seem like you know the material, you'll get an A.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

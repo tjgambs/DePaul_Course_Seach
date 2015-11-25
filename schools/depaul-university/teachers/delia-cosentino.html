@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Delia Cosentino</h1><hr><div><h2>Overall Quality: 3.91<br><br>Helpfulness: 3.8<br>Clarity: 4.03<br>Easiness: 3.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/08/2014<br>Class Name: HAA244201<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took Art of Mesoamerica with Prof. Cosentino Prof. Cosentino was passionate about the material. She is also very nice, helpful, and laid back. I am an HAA major who now loves this subject matter thanks to this class and professor. As long as you go to class and pay attention it's not too hard. She's willing to help you if you need it</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2014<br>Class Name: HAA397<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>It's really a joy to have Delia as a professor. Her Mexican and Chicano art class is one of the best art history courses I've taken during three years as a major. I highly recommend her to majors especially, though she's also very accommodating to non-majors.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2013<br>Class Name: HAA145<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I have taken an HAA class before and am fully aware that the classes are not easy and require much time however I  know what it takes to get an A in the course. Lots of time and studying. She is absolutely useless as a teacher. Confusing to follow, reads off her ppt. notes and is extremely unhelpful. overally horrific experience and shes rude</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2013<br>Class Name: HAA145<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is really interested in the subject matter and makes it fun to learn. I am an Art History major, but didn't know a whole lot about Art of the Americas. She made me really interested and I wanted to know more.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2013<br>Class Name: HAA375<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take her class if given the chance! Even if you don't think you like art from the Americas, she'll make you interested. She has so much passion for what she teaches and is very helpful in and out of class if you need it. There was a lot of reading on pdfs but it's worth it. She's great and one of the best in the art history department!</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2012<br>Class Name: HAA145<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Probably the lesser evil out of all the 100 level HAA teachers. She's knowledgeable and passionate, but overall a boring class. Memorizing artworks is a given in art history, nonetheless her standards are not on par for this level. She also insists you reference articles in your 10 minute midterm and final exam essays, which is nearly impossible.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: HAA145<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Took this class as a way to fulfill A & L req, and I will never take another class in this subject area.The class was extremely boring and sometimes it was hard to follow along or contribute unless you already have some type of art background. The 2 papers are easy, but the midterm and final required a lot of memorization. Wouldn't recommend class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2010<br>Class Name: HAA145<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's a great teacher! She speaks with such passion about the subject, which makes the lectures a lot easier to get interested in. Try not to skip a class, because she covers a lot! She's also extremely helpful and always available to help you. I had an enjoyable experience in her class.</div></div></div><div id="container" class="review"><div id="left">Date: 08/12/2010<br>Class Name: HAA247<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took this teacher in spring 08/09.  I like the content, but I hate this teacher.  I would not take another class with her even if someone paid me.  She expects you to learn her life long passion in 10 weeks; get real!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2010<br>Class Name: HAA247<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm an art major and I have never gotten lower than an a or b in an art class, but somehow in this class I got a c minus. Her grading is ridiculous. for the final she made us memorize 28 slides and only 6 were on the final. I went to every class. Her expectations are ambitious and unrealistic. She is also extremely boring.</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2010<br>Class Name: HAA247<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you are interested in art form, content, etc then take the class otherwise don't even bother. Personally it's boring but she tries to make it interesting. You must bring in the readings she assigns on blackboard. If your absent don't even bother emailing her even though in the beginning of the quarter she says you can, email a classmate.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2010<br>Class Name: HAA375<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Loved her. Even if your not interested in the topic, she makes it interesting! Readings are not necessary to do good in the class but attendance is grades are based on one paper and midterm and final which she gives you study guides for.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2010<br>Class Name: HAA375<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The class I took, Mexico City, was at times extremely boring and the readings were long and often uninteresting.  Professor Cosentino, however, is very nice and passionate about her subject.  I would recommend this class only if you are extremely interested in the subject matter.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2009<br>Class Name: HAA397<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Absolutely. Love. This. Woman. I wish all my other professors were like her!</div></div></div><div id="container" class="review"><div id="left">Date: 07/10/2008<br>Class Name: ART249<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>It was a pleasure having this teacher.I learned so much. Read the book it will help you follow and remember all you need to know for the tests. They are not bad, no comparison questions.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2008<br>Class Name: ART248<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you are very interested in art history take this class. Professor Cosentino is a good teacher but a bit boring. The class is not very intersting but easy enough to complete as long as you go to class and do the readings.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2008<br>Class Name: LATINART<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>good teach. took her for latin american art.. didnt read any of the text and got an A. midterm and final are all from her lectures so take notes.. easy material.. easy class.. easy professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/10/2006<br>Class Name: ART338<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Delia is a wonderful teacher. She is really passionate about her topic of study (Latin American Art History). Yet, the class was a complete bore. If your not into art history, and deep analysis of Mexico City (in ART 338), don't take this course. If you require this course or any other with Delia as a teacher, take it. She is a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2006<br>Class Name: ART243<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>never read the e-reserves & barely touched the texts.  all u need to do is pay attention in class & jot notes (it all comes from the slides!) that said, she expects precision on her midterm & final.  she is very articulate with her lectures & passionate about the topic so it rarely got boring & actually kept me interested.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: ART243<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great class--really cool art from Latin America. I had no idea! Teacher is passionate and made the class interesting. She is also willing to help.</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2005<br>Class Name: HON202<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she was a nice lady. just do not take her early. she was very boring lecturer. not much discussion, just her talking about slides.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2005<br>Class Name: ART243<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is so excited bout teaching this and its refreshing bc she doesn't let it get boring. the class is interesting. she assigns lots of reading on e-reserves. i never read the book or the readings and did really well. just go to class and take notes and you're set.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2005<br>Class Name: HON202<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2005<br>Class Name: HON202<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She thinks more of her field than it is (then again, what artist/art history prof here doesn't). If you disagree with her or correct her, prepare for her to give all of your papers B's. The only reason I got an A- was because of my tests & my art lab prof. (who was soooo much better than this twit).</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a great proffesor and really helpful. She really knows what she's talking about.</div></div></div><div id="container" class="review"><div id="left">Date: 05/17/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is so nice! She definately loves what she does and it shows. Her workload is not bad but she grades papers harder than I would have expected her to-it's not even that bad though! She's fun and nice and smiley and will listen to everyone's viewpoints.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: HON202<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Best 8:30 I've ever had, deffinately teaches art history well, keeps your attention and makes you care about what you are looking at.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: HON202<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is always in a good mood and enthusiastic about what she teaches. She is interesting and encourages participation. Grades papers a little hard, but you learn a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2003<br>Class Name: HON202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor and so willing to help!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2003<br>Class Name: HON202<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2003<br>Class Name: LST<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A really nice person, but some courses she teaches(that are required) are for beginners only. So it gets BORING when you know all the material there already. Just read the readings, take notes, and you're all set.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

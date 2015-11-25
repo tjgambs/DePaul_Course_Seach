@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Michael Meyer</h1><hr><div><h2>Overall Quality: 2.4<br><br>Helpfulness: 2.46<br>Clarity: 2.34<br>Easiness: 2.46</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/14/2007<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Not a passionette or particularly smart teacher. The format for our class was comparable to a junior high English class, with the exception of an incredibly thoughtless final paper. His fave part of teaching is bringing up ridiculously polarized issues like abortion, gay rights, and Iraq just to rile students up and waste time. Class was a nightmar</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2006<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really picky with grammar, nice guy though!</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2006<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>umm... Yes Meyer isn't the best english teacher i've ever had but definitely the least demanding.  You do a few readings, a hand full of assignments and a few 2-3 page papers. whats not to like&#63; He proof reads the papers before they are due.  I got an A and didnt even try.  He could be entertaining at times too.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2006<br>Class Name: ENGLISH104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>bad teacher...very bad</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2006<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a ****, ****, and he failed our whole 104 class my freshman year. We complained to the Dean odviously they never did anything about it. What an ****. And the guy who recommend him was his favorite and no one else was...your a **** too...</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2006<br>Class Name: ENGLISH103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>People who don't like him don't do the work. He is very clear and tells you what he wants. I really liked him, got an A, and spent very little time doing work for the class. I liked him so much I requested him for English 104</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2006<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>For the love of God, don't become a teacher if you don't like to teach. This guy needs to go back to scool for a teaching re-qualification.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2005<br>Class Name: ENGLISH<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2005<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's really nice and a very easy grader. He doesn't mind if you miss class and his assignments are not hard as long as you made it through high school ok.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2005<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His class was probably the easiest class I had all quarter. He doesn't always spell everything out for you, but is a more than fair grader. Yes, he is obsessed with punctuation. Just do all your work and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2005<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This teacher is so mean, he's an angry, bitter individual and try to avoid him at all costs. He has a negative attitude and doesn't try to get to know the students. He's all high and mighty, PHD guy-he needs to stop looking down on the students. Also, he is so anal about grammar, it's the only thing he cares about. Worst. Class. Ever. :(</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2005<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I didn't really learn a whole lot of new stuff in this class, we spent a lot of time talking and the assignments made me feel like I was back in high school.  Plus the assigned readings are some of the most boring passages I've ever read, and he bases the assignments off of them.  Not awful, I just wouldn't want to have another class with him.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2005<br>Class Name: ENG103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is very funny and makes class interesting.  he is a little obsessed with punctuation, but it's only because he doesn't want us to look stupid.  he's a relatively easy grader and is interested in what you have to say.  although he likes his punctuation, he still cares about the content of your paper. highly recommended!    no midterm/ 4 papers</div></div></div><div id="container" class="review"><div id="left">Date: 10/01/2005<br>Class Name: ENG103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/20/2005<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Does not under stand the writing for context and quality.  Only cares about correct punctuation.  Not one for critical thinking skills.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2005<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>HE'S A JERK. He gave my a C while all along the class I kept thinking I was on the A and B border line... he surprised me by saying that my last 'couple' of assignments were 'not so good' and that these few things droped my whol grade... save yourself the drama and don't take this useless class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2005<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>run away as fast as you can.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2005<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HIM, I should have believed all the bad reviews he received!  I repeat, DO NOT TAKE HIM!  All he cares about is punctuation and organization, not actual learning or material.  STAY AWAY.  I love English and writing and have never hated a class like I despise his.  DON'T TAKE HIS CLASS!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2005<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you want to know exactly about this professor, read this post: 3/11/05 eng 104 1 1 1  3</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2005<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I don't particularly like him, but I want to be fair in my evaluation. He is very accessible, planned and quite generous, BUT his teaching style is horrible. I never before hated a class that much. He is a convinced Christian, so be prepared to read many texts with religious backgrounds.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2005<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: ENG104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: ENG104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I didn't think he was unreasonable. the people that gave him poor reviews are just lazy and don't listen. He tells you exactly what he wants and is availible for help when you need it. I would definately take his class again. Oh and he is a great baker and brings food to class!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This teacher gave me my only B in 24 classes. He is a complete jerk.he is very rude in grading. He compensates for his lack of understanding complex ideas, by grading papers simply on minor comma mistakes ( something editors fix).He is a professional bibliographer, that is all il need to say.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>ANAL as hell</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2005<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>HE IS NOT A BAD PROFESSOR. HE IS CLEAR IN WHAT HE WANTS AND IF YOU DO JUST THAT THAN YOU'LL BE FINE. I LIKED HIS CLASS AND I WOULD TAKE HIM AGAIN FOR ANOTHER ENGLISH COURSE. HE IS FUNNY LOOKING THOUGH, WHEN I FIRST SAW HIM I THOUGHT OF SANTA CLAUS AND HE DOES HAVE MESSED UP LIPS.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2005<br>Class Name: ENG101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I am an English major and he helped me a ton. If you're not willing to work hard, it will definitely reflect upon your grade. Very particular about grammar. Sets up conferences with you to ensure that you are writing the way he likes. I would definitely take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: ENG104<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He has the ugliest lips i've ever seen. Commas and periods worth 100 % of your grade. If they aren't &quot;dark&quot; enough, he stil drops a letter grade.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HIM! STAY AWAY!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is very clear on what he wants on your papers and while looking over your paper in class, he will be loud and point out everything wrong, even publically mentioning it to the entire class the big problem with your paper. Besides that, he's a good professor, just a little odd.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2005<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's definitly not as bad as everyone says he is. He is very clear with what he wants and goes over the grammar (which is basically what he grades the papers on). Do the work with correct grammar and you'll get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2004<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is a complete jerk. He gets a laugh at making fun of people's papers in front of a full class. He is not smart, just rude and disgusting. I hated his class and his rude, degrading personality.Hard grader too! Crazy about bibliographies&#63;&#63;&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2004<br>Class Name: ENG103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>very particular in details of writing, but very helpful with preoofreading and being clear on what he wants.  pay attention to grammar details and do the work and you'll do fine.  fun guy, sometimes brings breakfast</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2004<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>he is NOT that funny. he plays favorites and is a big jerk. VERY anal on papers.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2004<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2004<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>um..hes not as bad as everyone says he is. I actually really liked his class...it was soo easy. He's a nice guy with a sense of humor..just do what he says..and u'll be fine</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2004<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he's not that bad. just do things right and you'll get along fine.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2004<br>Class Name: ENG103<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This guy is not that bad, boring at times, sometimes has a bad attitude, but nothing to be afraid of at all. Listen to what he says and apply it to your work and you should be straight. Also this is sort of like a creative writing class...</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Do NOT take him. Hard grader, insensitive and does not care about the students. Do everything in your power to make sure you don't have him.</div></div></div><div id="container" class="review"><div id="left">Date: 09/30/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is not cool at all.  He can be a real jerk.  He is half as smart as he thinks he is.  HARD GRADER!</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2004<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>VERY PICKY GRADER, can be mean too. But always lets class out early</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2004<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>he is a pretty picky guy....the only reason i stuck with him was because i wanted to get it over with. wouldn't recommend him, kind of a jerk.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: ENG106<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He isn't as bad as some people say. He is just very specific. Write all the guidelines down and do all the work and you'll be fine. He proofreads your papers for you.. you can't help but get a good grade on them.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: ENG104<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>very hard grader for this class.  helpful though, and can be very nice if treated with respect.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2004<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i dont know what u guys are talking about he is ****in awesome</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: WRC208<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Well, for all you English 104 students, maybe you will not consider taking him. However, when I was in his class for WRC, it was so much fun and easy. He lets you be yourself and the discussions are very open and straightforward, no matter what topic.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy amazed me at how mean he could be. He was such a jerk.....he made a lot of students cry. Very picky grader. Wouldn't recommend him. Hard for me to get through the quarter with him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have seen who the DEVIL is, and it is this man.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ENG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>What kind of man fails you on a project for a missed comma&#63;  This guy is intensly into his grammar, and all of his projects are crazy hard to get right.  Really Really REally don't take this guy.  That is, unless you like pain.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: 103104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>true definition of the word: horse's butt. makes a lot of kids feel very bad about their work, and extremely hard grader on papers. i had to drop the class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2004<br>Class Name: ENG101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>hated him, hated him, hated him. please dont put yourself through that.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Quite Possibly one of the WORST teachers I have ever had. Very Anal about grammar, & doesn't seem to care about the context of a paper.  He is rude and very picky, will not listen to other peoples comments & feels that the only way to do things is his own</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2004<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very hard to approach about anything and is very picky. I had to drop the class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2003<br>Class Name: WRC108<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Meyer is extremely unorganized, unclear on what he wants, but, he is  very strict on his grading. He is always late and cancels class without notice. Most of the times he dismisses class early. I think he is an Anal. I don't recommend for one to take</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2003<br>Class Name: ENG103<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Thought I would get a better grade. Dr.Meyer is way too particular and often inconsistant with his grading. Even after going to the writing center, peer edits, and having him revise, he still found things wrong with my paper. I think he needs to chill out</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2003<br>Class Name: ENG103<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is super picky, unorganized, and indecisive.  He is not clear on what he wants and doesnt give boundries to allow you to work around.</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2003<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Gives way too much work.  Very anal on little things and hard to approach.  Made this class a lot harder than it had to be.  Lot of people dropped including me.</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2003<br>Class Name: ENG103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very intelligent, very particular on grammar and punctuation and mechanics of writing. Often dismisses classes early (English 103). Readily available to help. I'd suggest Prof. Meyer if you'd like a personal editor (in all seriousness).</div></div></div><div id="container" class="review"><div id="left">Date: 09/11/2003<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very strict on punctuation, esp. in the works cited page (eng 104).  Extremely fair grader.  Sometimes dismissed class early or cancelled class, but again, this is due to 104's main focus on the research paper.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2003<br>Class Name: ENG104<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very knowledgable. Class goes by pretty fast. Likes to make jokes, but can be unclear and anal at times.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

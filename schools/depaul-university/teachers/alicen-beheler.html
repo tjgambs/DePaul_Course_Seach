@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Alicen Beheler</h1><hr><div><h2>Overall Quality: 4.53<br><br>Helpfulness: 4.45<br>Clarity: 4.6<br>Easiness: 4.05</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/07/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ali was extremely interactive and structured her class in a way that made it almost impossible for you to get bored. Philosophy is a hard subject to teach and she did it in a way that made it very easy to comprehend. Also, she was a very fair grader. I would definitely recommend taking her, especially if you know nothing about philosophy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/19/2013<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Beheler was a decent teacher. But it pissed me off that I was not able to find out that philosophy and its issues could mean anything, and for her it is the philosophy of love. I would have chosen something else if I could have, but she did not make the class as bad as I thought it would be.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2013<br>Class Name: PHL240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>She wants you to call her Ali. Super sweet and extremely into what she teaches. A little rough on papers. Final paper is 8-10 pages and midterm is about 4 i think. Lots of outside reading, but she takes the class after each assignment to go over what the readings were about.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2013<br>Class Name: PHL100402<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ali is very nice and very passionate about what she does. Philosophy is not my best subject, but that is not her fault. She tries to promote discussions in class but my class was very quiet and somewhat awkward. She is very blunt and somewhat harsh at grading but you always leave with a headache cause of how deep the conversations go.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2013<br>Class Name: PHL240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Beheler's class was very easy.  The lectures were clear and if you do the readings as well the papers and quizes will be a piece of cake.  If you dont mind paying attention to a class that can be at times boring then take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2013<br>Class Name: PHL240<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Loved this class. Philosophy of love hatred and resentment. Really easy as long as you go to class. You don't really have to do the reading as long as you REALLY pay attention during class. Easy A and cool teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2012<br>Class Name: SOPHSMULT<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Took her for Sophomore Seminar on Multiculturalism and it was the worst class ever. She may be nice but when you ask her for help she ll either cancel on you or not help you AT ALL. This class could have been so much better but it was so boring that people fell asleep. WAY too many projects/papers at once. Veryyyy repetitive. Basically try to avoid</div></div></div><div id="container" class="review"><div id="left">Date: 12/11/2011<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Easy class if you pay attention. Jot down notes and the papers write themselves. Show up to class to do the quizzes. Will help you out of class if you need it. Overall, great professor, and easy class if you want it to be.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2011<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a good teacher but be prepare for a boring lecture. It gets very boring sometimes. She is kind of a hard grader as well. But she will try to help you a lot for you hw/papers. Very nice teacher and she won't treat you bad. I would recommend her to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2011<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a nice person and is really wants students to succeed. The class was not very difficult. Three papers, easy reading quizzes most days, and I think about 5 HW assignments. My only complaint is that lectures could be very monotonous, making 90 minutes drag very slowly. She should use multimedia to make class more interesting. Good prof. overall</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Before taking this class I thought it was going to be a nightmare. She makes the subject very interesting, and will explain things well. All you have to do ask that you don't understand and you're good. Be prepared for some class discussions and 3 papers, which are really easy if you stay awake in class. No exams!</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2011<br>Class Name: BUS248<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took her for Biz ethics. Shes a good teacher, the material really sank in with me. Not going to repeat what others said, but as long as you go to class, participate, ace the daily quizzes, and write the papers well, you will be fine. Will need some elbow grease, but definitely not a nightmare class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2011<br>Class Name: PHL248<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ali is awsome! She is very helpful and truly cares about the subject and her students. She is not hard to understand and the class consists mainly of discussions. The final and midterm both are papers, but you just answer questions, no research. Would recommend to everyone, take this class with her she's a great professor!</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2010<br>Class Name: PHL248<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Beheler is a great professor! When I thought I was going to fail the class because I wasnt understanding the readings and did poorly on the 1st test, she gave me confidence and helped me get back up! Honestly,take her! You'll love her!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>GREAT professor!  She was very helpful, and always eager to look over papers to help students.  TAKE HER.  She is always open to students opinions and is just a sweet person.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was an amazing teacher, one of my favs at depaul.  As long as you turn in a paper early for her to look over it will be an A.  Could not have asked for someone better for PHL100.</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No hesitations, take her. The class is interesting and an easy A. She is a good teacher. She is young and full of energy and enthusiasm.Some weekly reflections that she doesnt collect, and 2 papers (2 & 6 pgs) She explains the reading and theories in detail during class. You wont want to miss class even if its at 8am. You'll love this class,promise</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This was one of the most energetic instructors i have ever had , she not only makes class engaging but very productive as well. She has the perfect balance of guidance and independancy. She doesnt force feed the material but her methods for clarification are nothing short of Superb</div></div></div><div id="container" class="review"><div id="left">Date: 04/22/2009<br>Class Name: PHIL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is the nicest teacher ever, She's very helpful if you need it, and is sweet as pie.  Just show up, say something even if its not smart she'll tell you that you're great.  This class was Great! And I hate Philosophy</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2009<br>Class Name: PHL105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>omg hotnessssss!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

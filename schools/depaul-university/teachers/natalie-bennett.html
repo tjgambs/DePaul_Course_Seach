@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Natalie Bennett</h1><hr><div><h2>Overall Quality: 2.25<br><br>Helpfulness: 2.22<br>Clarity: 2.28<br>Easiness: 1.68</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/28/2014<br>Class Name: GWS102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: D</div><div id="right"><div>You get two to three readings with lots of pages to read per week. Get ready to read a lot, if you don't read, you will be lost and not do well. If she asks you a question on the reading and you cannot answer correctly or at all, you will be dismissed. Although the content is super interesting, you need to read and comprehend all of the reading.</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2014<br>Class Name: GWS102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I am taking her at UIC. The most arrogant teacher Ive ever had. I am passionate about equalitywomens rights, I wanted to major in Womens Studies but she has completely MADE ME CHANGE MY MIND. I feel like if I dont agree wwhat shes saying, that I wont get a good grade I hate it. I wish I would have dropped this class when I had the chance  </div></div></div><div id="container" class="review"><div id="left">Date: 08/04/2014<br>Class Name: GWS101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: A</div><div id="right"><div>Very unprofessional. She got big attitude. Stay away from her classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2012<br>Class Name: GWS102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I am currently taking her in UIC and I hate the class!! A lot of reading, she is not organized and it is hard to keep up with the lectures.  Right now I am trying to figure out my grade for that class and she does not give me a straight up answer and seems very snobby!  Don't take this class! I really regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 09/20/2012<br>Class Name: GWS102<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Honestly, this class is basically to just read. The final exam is a big Media Paper. It can get interesting at times, but overall, I really don't recommend this class. Too much work!</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2011<br>Class Name: LSP112<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>HORRIBLE!!!! NEVER TAKE HER! SHE IS NOT ORGANIZED, VERY LITTLE GUIDANCE WITH EACH ASSIGNMENT. GIVES YOU ASSIGNMENTS AT THE LAST MINUTE. EXPECTS YOU TO READ HER MIND. I HAVE NEVER HAD SUCH A BAD PROFESSOR.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2011<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>stay away. please please please please STAY AWAY</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2011<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>VERY hard, she expects eveyone to talk all the time and sits and stares at you until someone is brave enough. LOTS of reading.</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2011<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Just an add on: Her personality seem unfriendly, ****y, unhelpful and arrogant just talking one on one with her. the school cost me so much money, dont want to waste time money on teachers like her.</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2011<br>Class Name: LSP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>BC of all these comments I dropped her course IMMEDIATELY and proudly know i did the smartest choice. I attended her 1st day of class, she got an 11 page in dept &quot;expectation&quot; syllabus, lecture is so dragging and boring, her jokes does NOT help. After class i asked for help, she gave unclear direction and rudely skip me and chat with the guy behind</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2009<br>Class Name: WMS100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a very knowledgable woman. She is not an easy A, but if you participate and dedicate an appropriate amount of time to the 3 small papers then you should be fine. She also has a sense of humor, which is a plus</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2009<br>Class Name: WMN100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Ugh, I do not recommend this teacher.  Not only can her class be difficult, especially papers, but she is not helpful at all.  She's rude and be prepared to have your email inbox SWAMPED with emails from her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2009<br>Class Name: WMS200<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She's a tough teacher! It's tough work and must read... participation is expected daily!</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2008<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is one of the hardest teachers I have ever had. BUT, i think she is also one of the best! I had to read everything, take copious notes, and participate EVERYDAY, which I did. I did lots of EC and went to a lot of department events. She loves a person who knows what they're talking about and can support what they believe. DON'T BS OR SKIP CLASS!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2007<br>Class Name: ISP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Well she is not easy, but the class makes you think and you learn a lot.  A lot of mandatory reading which you must do, since the class is all discussions based on the readings, don't wait untill the last minute with the final paper. Oh, and she gives extra credit for attending events. Overall the class is hard, but interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2007<br>Class Name: WMS391<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I am so sorry if you had to take her class. she is aweful, un clear and gives an awful impression of Women studies. AVIOD IF YOU CAN! she talks about herself, and is easily distractable, but she is tough and unapproachable. I hated her class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2007<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Whoever said down there that she is a good teacher is OUT OF THEIR MIND.. or is probably just a suck up and was liked by this crazy terrible MEAN lady. She's probably the WORST POSSIBLE TEACHER that i have ever had.. stay away from this lady she is terrible..</div></div></div><div id="container" class="review"><div id="left">Date: 09/11/2007<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Bennett is a hard teacher but I learned more in her class than any other thus far in my education. She challenges hardcore but you LEARN about yourself and the biases you hold. That is not comfortable so be ready to grow. She is so smart!!!Great teacher, but you better work. Its worth it!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2007<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>WORST TEACHER EVER! Unfriendly, unorganized, does not respond to any emails, does not help you, does not care about anyone besides herself or so it seems. She should be fired.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2007<br>Class Name: WMS391<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This woman is the biggest B ever!  I've been forced to take 2 of her classes, b/c they weren't offered by other professors, and these were the worst experiences ever! She is unapproachable, intimidating and stand-offish and uses class time as a platform for her own beliefs.  She rarely coherently explains anything and is generally not good at getti</div></div></div><div id="container" class="review"><div id="left">Date: 12/22/2006<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>please, stay away for your own sake!! whoever said she is a good teacher needs their head examined!</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2006<br>Class Name: ISP200<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Bennett is a good teacher.  She forces you to think about what you say, she does question your responses not to put you down just to make you really think about what comes out of your mouth.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2006<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>attitude problem!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2006<br>Class Name: ISP<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>All I have to say is: DO YOUR READINGS FOR ANY CLASS THAT YOU HAVE WITH PROF. BENNETT. I cannot stress that enough! She is a great teacher, though.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Natalie Bennett is one of the most biased people i have ever met. She makes people feel stupid if they dont agree with her liberal ideas. when give an answer she rewords it and takes at as her idea. Very frustrating. If you want to speak your mind dont take her classes She has her mind in a dream world and cant survive in reality.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: WMS401<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof. Bennett can be easily mistaken for harsh or judgemental, and students get easily flustered when she (inevitably) pushes them to question their preconceptions. If you make your statements with confidence in a clear concise manner, you will feel more at ease</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2005<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Good teacher, calls on people who don't talk and makes them give their opinions. Makes you think harder than you might want to at times, but that is a good thing.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2005<br>Class Name: WMS100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>SHe changed my life</div></div></div><div id="container" class="review"><div id="left">Date: 09/24/2005<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>SHE DEFINITELY PICKS FAVORITES!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2005<br>Class Name: WMS290<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>NB is spectacular/intense, requiring that students think critically/articulate their sources of info. She esp. calls students out on vague pronouns/terms. Some hear her challenges as judgment of their statements, but she's generally seeking to help students fully articulate their statements. I don't know any WMS students who aren't amazed by her. T</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: WMS200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I LOVE professor Bennet.  She makes you think out of your comfort zone and analyze in different ways.  Her class was hard, but it was worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2005<br>Class Name: WMN100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2005<br>Class Name: WMS101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>prof. bennet is incredibly intellectual and wise.  she changed my perspective on life. she is very challenging and you must work hard, but she is progressive in teaching in depth about the intersections of race and class and gender, and her ideas are at the forefront of current wms theory. take her</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2005<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Oh.. my.. God. I signed up for this to SPECIFICALLY RATE THIS LADY! That should say it all. AVOID HER AT ALL COSTS! She takes forever to get grades up! Your opinion means nothing if it's not same as hers. All about race/how hard immigrants have it. Take someone else.. you won't regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2005<br>Class Name: WMS<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Watch out for her! Very condescending, picks favorites. Papers seem easy but she is actualy a very tough grader.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2005<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very tough 100-level class- tons of reading that def. didn't entail use of the pricy book.  Directions for writing assignments unclear, plus there were a lot of them.  Talked mostly about race.  Condescending in class, but very nice outside of class.  Very intelligent prof. and interesting material.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2005<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof.Bennett has a lot to say and is quick to challenge your reasons. Your views have to match hers and if they don't, then your opinion is senseless.Also,the class was mostly about lesbianism, a topic I didn't care to discuss as much. Note:You can get by without the book, everything is on blackboar</div></div></div><div id="container" class="review"><div id="left">Date: 12/14/2004<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>tons of hard work for a 100-level course, doesn't utilize the $70 textbook, not very accepting of alternate viewpoints, difficult final exam...but she is full of information and very knowledgable and I learned more in this class than any other so far</div></div></div><div id="container" class="review"><div id="left">Date: 12/13/2004<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This is not a blow off class! She is very hard and it is true that the focus is mostly on race, not gender and class as much.A lot of reading and class participation. Very hard final exam also! But nice teacher when not in class setting.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2004<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>avoid this woman at all cost. seriously. every other professor in the womens studies field are fine. some are incredible. but this woman...oh dear. stay away.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2004<br>Class Name: WMS100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I knew nothing about womens studies going into the class and I got an A. You just need to work hard (harder than most 300 classes)...and go to her office hours. She seems intimidating in class, but she's actually very nice. She also gives paper extensions. :)</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2004<br>Class Name: WMS100<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>worries me that she will cause students to not take interest in the Women's Studies department</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2004<br>Class Name: WMS100<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>in order to do well on the papers, you really  have to say what she wants to hear. she shoots down a lot of things you say and is not a very kind woman. this class IS titled race/class/gender so you do talk about race a lot, but I think she does establish who she wants to hear from in the beg.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2004<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I have had at DePaul.  I had 3x as much work in this class as I did in any of my 300 level classes.  Avoid her at all costs!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The class has little to do with women and it's more targeted to race. So if you want to take a womens class dont take this one!!! The only thing you will be hearing about is race. If you express your veiws on the current topic you will get shut down. She will give you dirty looks when talking.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: WMS100<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This professor had a tendency to irritate the entire class.  She is very quick to challenge your beliefs. Be prepared to speak up in class, otherwise, the opposing viewpoint will never, ever be heard.  She does not respond well to silence from the class, so keep the discussion flowing.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i will agree to the previous comments on the amount of reading she gives is slightly above average amount.  but i think professor bennet was a very effective professor. there is lots of work, but worth it if this is your area of interest.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2004<br>Class Name: WMS100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you are really into WMS, as stated below, take it. Otherwise, steer clear from her. She's very arrogant and butchers all your papers. Very picky on reflection papers and has you read way too much for a 100 level class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2004<br>Class Name: WMS100<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Only take this class if your really into Women's studies. There is a lot of reading/printing out.  Plus a paper is due every week.  But if you know anything about gender studies she'll give you a good grade on papers.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: WMS100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>For a 1oo level class there was a lot of weekly reading that she made you print out as well as a textbook. She is very picky on papers, there are papers due every week. Sort of arrogant too.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

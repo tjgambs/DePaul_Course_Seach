@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>R Isackson</h1><hr><div><h2>Overall Quality: 3.16<br><br>Helpfulness: 3.54<br>Clarity: 2.78<br>Easiness: 3.87</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/31/2013<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher is the sweetest and funniest teacher I've had so far. I took her LSP class and she makes the class. She doesn't believe in grades so it's an easy pass class. However, she does get off topic a lot and struggles with equipment, which can be very funny. As long as you have a positive attitude you'll enjoy the class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2013<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>RJ is the best professor you will ever have. She is helpful, kind, and always willing to stick her neck out for someone who needs it. She cares unwaveringly for her students and has changed my life for the better. Take RJs class, whatever it is. Make it a priority. It will be great.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: LSP113<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Literally the worst teacher ive ever had. Myself and four other students in her class were singled out every class and she did not value our opinions whatsoever.you will want to run out of the class ten minutes in once you realize that you have 4 hours to go. She keeps you late after the four hours and don't get home till 4:30. She's extremely rude</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2012<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>RJ is the best teacher I have ever had. She truly has a good heart. Although she is easily distracted which bothers some people, but if you go into her class with an open mind and positive attitude you will enjoy it. I suggest checking out the books for class from the library. Take her class if you can, it's an easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved Prof. RJ's class. She has one of the best personalities; she is really funny and easily distracted which I think is adorable. She is very sweet and the only way to get on her bad side is to 1. miss class 2. talk too much during class when others are talking or 3. turn in crap for work or don't turn in anything at all.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2011<br>Class Name: LSP112<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>TAKE HER CLASS. She is the cutest, sweetest old lady ever and she really cares about her students. She's very social and gets off-topic easily, but usually that topic can be related back to whatever it is we're doing in class. Would definitely take another class with her if she taught more than first-year program stuff!</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2010<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is such a sweet lady and great professor.  She is very wise and truly cares about each and every student and helps them reach their fullest potential.  She made the class fun and interesting and struck an interest of the subject of Jewish Culture that I wold not have had before taking this course.  A great professor to have.</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2010<br>Class Name: LSP112<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is an sweet, intelligent woman, but she is very easily side-tracked. She knows a LOT about music. Her expectations are not as clearly defined as she may think they are. She really cares about every student, and will make the effort to push a student to his or her full potential.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2010<br>Class Name: JEW00<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Well, I learned nothing about Judaism but it was an awesome class. You sit in a circle and just talk the entire time. If you are opinionated and not shy this is perfect. the work was minimal. write about personal experiences to do well. you have to read some novels that can all be found on spark notes. she's a really weird but interesting lady.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2010<br>Class Name: LSP111<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is a decent professor. She genuinely cares for her students. I do think she is a bit scatterbrained though. I felt like the class was fun and we always had a great experience, but when it came down to doing the assignments I had NO clue on what she expected. It was a bit challenging..but would recommend otherwise</div></div></div><div id="container" class="review"><div id="left">Date: 09/18/2009<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is awesome! I've only had 2 classes with her so far this year in my Chicago quarter but I love it. She is extremely chill about everything, and for someone who is 96 she has a great sense of humor. She does tend to go off on tangents but thats what makes the class enjoyable. She is extremely helpful, and a great prof to have.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2008<br>Class Name: ISP120<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Absolutely crazy. Our class sat in class for 4 hours cause it rained a little, humiliates people in front of others on purpose, stops random people and gets an inch away from their face, and went to &quot;china town&quot; when actually it's Viet town.</div></div></div><div id="container" class="review"><div id="left">Date: 08/29/2008<br>Class Name: FP1<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>TAKE A CLASS THAT SHE TEACHES!!!!! RJ is awesome!! she loves her students and sees the best in them. I always looked forward to her class and her wisdom. She does trail off a lot but that makes her so much fun. She has a lot of passion and spunk.  I loved her and her class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2008<br>Class Name: ISP102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Rj teaches relevant classes that students would love to take... too bad just doesn't actually TEACH them! she rambles about her boring life and never actually get to the topic she's paid for teaching. get on her bad side and she'll single you out forever. if you like to be bored out of your mind by an incompetent teacher take this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2008<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>R.J. is a hilarious, retired hippy of a woman. She may not teach you what you expect to learn in the course you are taking, but having R.J. is truly an experience you should have. She spices up all the other boring professors we come in contact with, and she will always be your friend!</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2008<br>Class Name: EXPLORE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>As sweet as she is, she can not teach! She rambles about random stuff and then gets back to what she was originally talking about when the class is over. At first I figured it would be an easy blow off class, but just hearing her talk made me want to switch classes. And to top it off she grades papers really hard.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2007<br>Class Name: EXPLORE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i love RJ! had her for explore, she is super random and trails off alot but is so sweet and cares about her students alot. not sure what she is like as an english teacher, but i love her as a person and she is very good-hearted and a kind woman. i signed up for her focal pt. seminar class next sem.!</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2007<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>R.J. is a very sweet person and she truely cares about her students.</div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2007<br>Class Name: BRIDG101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>RJ is a ****. She is the most ignorant person I have ever met in my entire life. She talks just to her herself speak, and never has any idea about what shes talking about. avoid this teacher the best you can.</div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2007<br>Class Name: ISP120<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is awesome! She truly cares about her students and although she trails off at times and may not make much sense, she does care about each and every one of her students and will help you in any way possible even after you are through with her class!</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2006<br>Class Name: ISP102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she's really unclear, scattered like everyone's been saying. Unfortunately, she was also my advisor and i got little to no help with scheduling. i don't recommend the class unless you like to rip out your hair at the roots.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2006<br>Class Name: FOCALPOINT<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>R.J is very scattered. She goes off on tangents like its her job and  she seems very disorganized.  weekly logs are due and on the plus side you watch a lot of movies.  Shes kinda strange, but not hard.  Her syllabus is unclear, so make sure to ask questions about due dates or else you may lose points without realizing there was something due.</div></div></div><div id="container" class="review"><div id="left">Date: 04/30/2006<br>Class Name: BRIDGE<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you are in the bridge program, take her! She takes the class to interesting places and you actually learn and see the environment of Depaul. Very caring teacher who rememebers a lot of her students' names. Take her if you're in Bridge.</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2006<br>Class Name: BRIDGEPROGRAM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>RJ Isackson is one of the only professors at DePaul University that genuinly cares about her students and their success. As the director of the Bridge Program for almost 20 years, she is still able to remember the names of thousands of students.  She is a GREAT instructor, who you will never forget should you take her.  A real treat!</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2006<br>Class Name: FOCALPOINT<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>RJ is awesome!! she is a horrible professor and is very scattered. but her classes are so easy you just listen to her crazy stories and she gets sooo sidetracked. but she is fun and if you have a problem she is very understanding and very easy, i mean very easy. take her if you want an A. i got one and i am not smart at all</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2005<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>By far the worst class I have ever taken!  She is so unclear and doesn't give you any assignments until the end of the semester.  You'll probably get a poor grade on the papers because everyone does.  She is disrespectful to everyone. This class is SOOOO BORING!  Don't take it!</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2005<br>Class Name: ISP102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>DO NOT HAVE HER AS A TEACHER! she's awful. really unstructured. disrespectful. by the end of the class i couldn't even stomach listening to her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2005<br>Class Name: ISP102<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>RJ is a nice person, but she defintely shouldn't be teaching at the college level. She is more suited for the kindergarten level. None of the classes are structured, and the songs she played made no sense at all. She gave assignments that were clearly pulled out of her but. Our excursions were pointless, and I didn't learn anything. If you can avoi</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2005<br>Class Name: ISP<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>RJ is a nice woman but a very bad professor, is not clear about things AT ALL. exphasizes her willing to help but doesn't actually help. asks for opinon but gets offensive of students response-don't take this class</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2005<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great person poor professor. She is the worst professor I've ever had. When it comes to assignments you will then have to interpret the assignments and the due date on your own. She wants us to be able to help ourselves becuase we are college students but we end up doing her job.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2005<br>Class Name: ISP<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Do Not, I repeat Do Not take her class this woman has no business teaching anybody. The class was very unstructured and irrelevant to the course title. In class she made us listen to music that served no purpose for the class or topic. She is a good person and very nice but she should't be teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2005<br>Class Name: ISP102<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Isackson is the worst professor. Assignments are unclear and are not explained as they should be. She means well but she is all over the place. Classes are poorly structure and the places we visited in our class were irrelevant to the class as described in the syllabus. I wouldn't recommend her to anyone but her class is an easy A. If you are looking for a challenge this isn't the class for you, don't waste your parents' money.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2005<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>R.J. is the nicest teacher you will ever have. Sure she's all over the place but that's what makes the class fun and interesting. She is always willing to help and if she can't help you she will find someone who can. I wish she could be my professor throughout my college careee. The class assignments are so easy.</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2005<br>Class Name: FIRSTYEAR<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ms. Isackson is great!  She is always available to help.</div></div></div><div id="container" class="review"><div id="left">Date: 08/04/2005<br>Class Name: FIRSTYEAR<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Are people joking&#63; I'd like to be civil but this teacher is just horrible. I was so annoyed by this class I wanted to scream. If I could travel back in time I would save myself the agony and not take her class. Never again! Not to mention she is extremely rude.</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2005<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>very bad class...she is very unclear, do not take any of her classes. Waste of time and money</div></div></div><div id="container" class="review"><div id="left">Date: 05/17/2005<br>Class Name: ISP102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>well she's a nice lady but this was probably the most unstructured class i have ever taken- due dates are unclear and if u get on her bad side your screwed- dont take her- save your parents money for something worth while</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2005<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a horrible teacher, I would not even consider her a teacher. She is all over the place,she herself is unable to keep focused in class. Always going off on useless and incredibly stupid political tangents. Her sylibus is poorly written with unclear assignments and due dates Dont take her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2005<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you get on her bad side, theres no turning back.  expect bad grades on everything you do, even if its good work.  shes a nice lady but she favors people way too much.  plus she really has no idea what shes talking about. She definately has a lot of stories, but she makes most of them up!</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2005<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>R.J. is one of those people who is an extremely nice person, but not necessarily someone you want as a professor.  She means well, but she is very vague when it comes to classwork and it takes her 10 minutes to say what could be said in 1.  But she is a very nice person and class is easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2005<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Isackson is a very kind woman. She really cares about her students, both inside and outside of class. With her bringing of food, among other aspects, she reminds me a lot like a grandmother rather than a professor. However, she is pretty disorganized when it comes to managing class time.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2004<br>Class Name: ESP2<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a great person, and enjoys teaching students very much.  She is very generous, and is always willing to help.  YOu can not go wrong by having RJ as a teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 05/14/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the nicest, laid back professors at DePaul. She knows a ton about music, and her stories are funny and always relevant. Class is more like a big conversation, and you learn just as much.</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2004<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the best professors at DePaul. She is such a caring and helpful person. I would recomend taking any one of her classes, and trust me you will not regret it. She is awsome, and has an awsome personality.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nicest and most caring teacher i have ever had. Teaches through her own expieriances, which i found effective and easy. will go out of her way to help you in any way that she can. Great class and great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher to work with, a mentor for life and her ideas are still helping me to this day. She was very welcoming and helpfull to all the freshmen since we were new at this.</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2004<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The professor was a sweet one, she cared about the students as if they were her own childern.  I admired her because she's one professor that actually cares.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2003<br>Class Name: ISP101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2003<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2003<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very personable, entertaining, and interesting woman. Goes out of her way for students and respects them as individuals. However, her classes were unorganized and she often ran out of time. Often hard to figure out what she wanted from assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2003<br>Class Name: ISP<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This teacher was very nice.  She really cares about her students, and she is always looking for different ways to keep the class fun.  Also, she would often bring fun snacks!</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2003<br>Class Name: FOCALPOIN<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2003<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Little class structure. Similiar to a hs class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

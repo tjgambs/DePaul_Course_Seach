@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Charles Benson</h1><hr><div><h2>Overall Quality: 1.97<br><br>Helpfulness: 2.2<br>Clarity: 1.74<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/21/2015<br>Class Name: MAT135<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Benson is a horrible teacher. Nobody should ever take a course with him. He doesn't use the textbook nor does he speak very clearly. He is extremely old and should not be teaching such a tough course because you can barely understand what he is saying. </div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2015<br>Class Name: MAT135<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>TERRIBLE teacher. He pulls up powerpoints that don't make sense. When he does problems on the board, he speaks so quiet and sounds like he is talking to himself. I've had to teach myself everything. Homework questions are nothing like test questions. AVOID AT ALL COSTS IF YOU'RE NOT GOOD AT MATH. </div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2015<br>Class Name: MAT135<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I cannot understand what he is saying. ever. Teach yourself if you want to pass. That's what I'm doing. I believe he is genuinely a very nice man, but he is not the type of teacher one would want to teach them math if you don't know what's going on. </div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2014<br>Class Name: MAT101<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: D</div><div id="right"><div>he just conducts class from the book's powerpoints which you could do yourself.. there is a lot of hw and quizzes you should keep up with and the tests are very hard.. he is very nice and all but just not engaging or helpful when conducting class. i am quite surprised i passed the class </div></div></div><div id="container" class="review"><div id="left">Date: 11/02/2014<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a nice professor but he does not know how to explain how to do a problem. He stands in front of the class with the back to the students and goes through a powerpoint. He does give us practice problems that we do in class but he still does not know how to really explain how to do a problem. When asking for help, he will take the time to help. </div></div></div><div id="container" class="review"><div id="left">Date: 09/29/2014<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>By far, the worst professor I've ever had. He starts class and basically skims the powerpoint and talks to himself. If you're a person who needs to be constantly engaged, your in the wrong place. The T.A. is the one who will be teaching you, not him. I highly encourage you NOT, I REPEAT *DO NOT TAKE HIS CLASS*. </div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2014<br>Class Name: MAT137<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: C-</div><div id="right"><div>Attendance isn't mandatory, and class is very boring.  All the homework is online on my math lab, so if you're good at teaching yourself then this is the man for you.  Midterm and final were in class multiple choice.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2014<br>Class Name: MAT135<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Proffesor Benson isn't the greatest teacher but he goes out of his way to make sure you understand. I taught myself a lot with the hw, took notes on his example worksheets, and went to class everyday. Additionally, he is awesome when it comes to curving tests. I didn't seek help from him or a tutor and surprisingly passed with an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2014<br>Class Name: MAT135<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is a nice professor, but don't take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/31/2013<br>Class Name: MAT130<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor does not care much about his students. Likes to keep back turned on his students as he rewrites the powerpoint slides that he takes from the book.  His teaching is not helpful.. If you want to suceed you will need to get a tutor or teach yourself all of the information based on doing the homework. 2 tests, 1 midterm.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2013<br>Class Name: MAT130<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Professor Benson is a nice guy, but he was often confusing when working out a problem on the board. This class is mostly online (daily homework and quizzes) and it's pretty easy to ace both of those. Tests aren't too hard as long as you are familiar with the material.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2011<br>Class Name: MTH101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HIM!! Worst teacher ive ever had. Marks you off for every single minute your late. Stares at people</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2011<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is absolutely the worst professor I have ever experienced. HE DOES NOT TEACH!! All he does is read from the text book and rights slim to none examples. He is also extremely inconsiderate to his students and he should be fired IMMEDIATELY! DO NOT TAKE HIM!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2011<br>Class Name: MAT101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He lacks clarity. But good Prof. He gives out his number so you can call him if you have any questions.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2010<br>Class Name: MAT140<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He really makes sure that you have a clear understanding of the material and relates to your degree considering this math class is only really meant for CDM students. He is available at all times and gives you his number so that you can get help over the phone if necessary.Recommend him if your looking to really understand the material</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2010<br>Class Name: MAT101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I agree that his teaching lacks clarity. He goes over things a little too fast and often confused himself. BUT he is a very nice man and as long as you do the hw you will pass the class with a B. I failed my in class quizzes and somehow passed it with a B. He's boring but not hard to get a passing grade.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2010<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>he's an awful professor. he reads crap outta the book. he writes it on the board. i could teach better math than he can. he's a prick when it comes to missing class, even if you do have a doctors note. if the note isn't to his standards he will not listen to anything you have to say. DO NOT take him.</div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2009<br>Class Name: MATH101<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Mr. Benson was a very nice old man. He tried to be helpful when he saw a student struggling, however he wasn't that clear. He is boring! He lectures all the time and does no hands on work. Instead of letting students do problems on the board, we had to watch him work them out for an hour an a half. He does try to get some computer lab time in.</div></div></div><div id="container" class="review"><div id="left">Date: 05/11/2009<br>Class Name: MATH105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Mr. Benson was a nice teacher...He is terrible with teaching and will give you a bad grade no matter how much you attend class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2009<br>Class Name: MAT101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I LOVED HIM!!! MAYBE HE DIDNT UNDERSTAND SOMETIMES BUT HE ALWAYS WAS WILLING TO HELP! GAVE OUT HIS PHONE NUMBER AND SAID TO CALL AT ANYTIME! I WOULD DEFINETLY RECCOMMEND HIM AND HIS TESTS ARE EASYY!HE IS SO NICE AND TRIES TO CRACK JOKES TOO!</div></div></div><div id="container" class="review"><div id="left">Date: 01/14/2009<br>Class Name: MATH101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>HE IS SO NICE!! I LOVE THIS CLASS. YOU GUYS ARE JUST HATERS. NICEST MAN EVER, GIVES HIS PERSONAL HOME PHONE SO YOU CAN CALL FOR HELP!!! HES A PROFFESSOR. HES SUPPOSED TO JUST GIVE WORK AND HELP IF YOU NEED IT. GET YOUR HEADS OUTTA YOUR ASSES PEOPLE!!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2009<br>Class Name: MAT101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Mr. Benson is a very sweet guy but I had a very difficult time understanding what he was teaching. He isn't very helpful but nice enough to talk to. I struggled the whole ten weeks and still don't know college algebra. He isn't really interested if his students understand the material.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2008<br>Class Name: BMS125<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Worst class ever. He's a nice guy, but seriously can't teach. Every single student complained. The best score from the first midterm was like a C. If you like teaching yourself math, this is definately the class for you. otherwise, better spend your tuition money on something worth while.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2008<br>Class Name: BMS126<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>class almost pointless to attend, except that every day you must take a quiz and these quizzes cannot be made up later, so missing class hurts your grade.  he is not good at teaching students, simply does problems out of the book.  often confuses himself and erases, its sad. helpful outside of class, however. wouldnt reccommend.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2008<br>Class Name: MAT101<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's a very nice teacher, but shouldn't be teaching. Saying come on guys be nice when you're spending thousands of dollars on education is ludicrous. If you want to teach yourself(Which I ended up doing), take his class. It's very simple: Some are meant to teach, and some aren't.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2008<br>Class Name: MAT131<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I've had a lot of bad teachers over the years, but prof Benson is easily the worst. Biggest waste of tuition money ever.  Under no circumstances should anyone take his class, avoid at all costs, unless of course you love to take tests that have nothing to do with the material he &quot;taught&quot; and love to spend countless hours studying what wont be teste</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2008<br>Class Name: MAT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you like teaching youself that is what your going to do in this class. He has no idea what he is doing! He is a nice guy but just really shouldnt be teaching</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2007<br>Class Name: MAT130<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Come on guys Prof Benson isn't that bad.  I took him last quarter and yes, he does get confusing but he's a really sweet man and if you ask him for help he's totally willing to help you out.  He's also hilarious.  Some of his comments were just hysterical.  I'm not good at math, but I still managed a B in his class.  Give the man some credit!</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2007<br>Class Name: BMS142<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>just dont take him</div></div></div><div id="container" class="review"><div id="left">Date: 09/04/2007<br>Class Name: MATCALC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>ok i'm pretty good at math and i took cal. thinking ok i dont need this class but i would like to learn more and yeah i didnt learn anything i got a d+ almost everyone else failed i was even getting tutored maybe thats why i didnt fail but he is horrible, waste of money, mumbles, looks lost and couldnt help the class when we needed it</div></div></div><div id="container" class="review"><div id="left">Date: 05/14/2007<br>Class Name: BMS126<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is HORRIBLE!!!  All these comments are accurate! DO NOT, I repeat, DO NOT TAKE THIS CLASS!! He does not know how to teach, and at the same time he confuses himself!! He looks at the board and mumbles to himself the whole time he teaches. I've just wasted $2500, don't make the same mistake!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/17/2007<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>a math teacher can teach you anything about math, but this one can not do anything. all he knows how to do is read-he should be n english teacher..but he mumbles!! confuses him self when he goes through the problems. grades homework and everything unfairly!!! DO NOT TAKE THIS CLASS!!!!!!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2007<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is worthless piece of your parents' hard earned money. DO NOT TAKE THIS CLASS UNLESS YOU ARE PROFOUNDLY INTELLECTUAL AT PRECALCULUS. YOU WILL FAIL OTHERWISE.DOES NOT KNOW HOW TO TEACH or EXPLAIN.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2007<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>don't take him if you want to pass! my passion really is math, but he just killed it! i found out that i was failing and my only hope was the final, studied forever on it and the final even seemed easy when i took it...but nope...still failed! now i have to retake mat 130, he's a waste of time and money!</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2007<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This guy is a joke, don't waste your time... you will fail! i think he wakes up every morning thinking how many people he should fail that day. Waste!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2006<br>Class Name: BMS142<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you are going to take this professor, then you will get a guarantee F! One of the worst at DePaul. Can't explain anything, lots of hw, annoying voice, unprepared.......shall I go on&#63; Even if this class is one of the last one available for you, don't take him. Just wait until next quarter to register for someone better.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2006<br>Class Name: MATH130<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>everything said about him is true. hes not the best teacher at all. grades harshly, mumbles, and confuses himself and well as everyone in the room.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2006<br>Class Name: MATH130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>worst teacher ever, dont take him if you want to pass, dude is a clown, dont know why depaul hired this joker</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2006<br>Class Name: MAT130<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE! VERY HARD GRADER AND UNFAIR. HE MAY MEAN WELL BUT HE REGURGITATES INFO FROM THE BOOK. HMWK GRADED HARSHLY FOR CORRECTNESS. EVEN STUDENTS WHO TAKE THE CLASS AS A &quot;REFRESHER&quot; FIND THEMSELVES FAILING!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2006<br>Class Name: MAT130<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Can't understand him at all, he'll further confuse you if you ask questions, hes very intelligent just cant teach the material... i would not recommend him to someone new to the material!</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2006<br>Class Name: MAT140<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This man needs to leave DePaul!  He mumbles each time he tries to explain an example.  He confuses himself and the bad thing is he's reading from a book!  STAY AWAY!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2005<br>Class Name: BMS125<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This guy should not teach.  Although he means well, he is completely unable to educate.  He confuses himself while teaching let alone his students.  Unreasonable grader but does drop the lowest three of nine quizz scores.  Be warned.. I had to teach calculus by myself and work very hard on my own.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2005<br>Class Name: BMS125<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His class is not hard, but you must understand that Calulus is just not for everybody. He does grade pretty harshly, but he is very flexible. For example he dropped 3 of our lowest quiz grades after we did bad on one, and he cuved the midterm so that my grad went from B- to A-. Very helpful and nice</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2005<br>Class Name: BMS125<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>horrible teacher! mumbles when he talks and difficult to follow. he also grades the tests VERY harshly. DO NOT TAKE</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2004<br>Class Name: MAT348<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Super Nice guy, very accessible outside of class.  Tough grader, rough tests.  I agree with the last post, if you're looking for an easy A, you're better off taking business stats</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2004<br>Class Name: MAT348<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>really is a nice guy who wants to help you but hes just so tough when it comes to grading. fits too much material in a single quarter course. take business stats if you can.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Dan Strunk</h1><hr><div><h2>Overall Quality: 4.37<br><br>Helpfulness: 4.27<br>Clarity: 4.47<br>Easiness: 3.93</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/08/2015<br>Class Name: MKT384<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>The class was a bit disorganized at times but I ended up with an 'A' so I can't complain too much. Your team does store checks, 3 CatMan minutes, a final project; + a take-home final. Overall not too much work until the last week or two. All three of the category management classes were pretty chill with lots of guest lectures so I recommend them.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2015<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Gives clear instructions on all the assignments as well as walks you through all the steps to ensure you get a good grade. There were two marketing minutes and a case, which are extremely easy, and a take home final. Everything you need to pass his class are on his powerpoint slides. You would have to try very hard to get anything lower than a B </div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2010<br>Class Name: MKT578<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Good professor - very passionate about the subject matter. I'd take this class with him if you are in sales. It turned into too much of a Salesman 101 class. But it's an easy class and I did learn salesforce.com, which will add to my resume. Little homework, no assigned reading, as long as you can stomach a heavy sales focus, I'd take it.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2009<br>Class Name: MKT578<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Passionate about the material, very consumer goods sales driven subject matter. Learned several relevant and new technologies I could add to my resume. Fun teacher, friendly, and fair.</div></div></div><div id="container" class="review"><div id="left">Date: 08/26/2008<br>Class Name: MKT555<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Little to learn in this class.  Seemed more appropriate for an undergrad class than an MBA course.  Also material seemed about 10 years out of touch.</div></div></div><div id="container" class="review"><div id="left">Date: 06/27/2007<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is one of the best marketing professor. Only 4 project is assigned, and they r all in the same format. Don't bother buying the book!not needed if u wanna buy the bk, do wha i did buy it online for 75, sold it back to the bookstore for 80! it was one of those classes that i actually wanted to go to class and listen to his lectures!simply the best</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2007<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Attendance not required, but why would you want to miss his class&#63; There are 4 or so presentations, all the same format. Take home final, same as a presentation. Book is only useful as source for PPT's, but not necessary. He makes so many compromises, always funny, knows his stuff. Couldnt ask for a better prof. I recommend him for ANYONE.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2007<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor. This class was so enjoyable that I didn't miss one class. His teaching style is great, and he always makes you laught. Many presentations (I think 5) but they are VERY EASY! Take Home FINAL, also very easy. I think their should be professor like him in every class. I would take this professor again.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2006<br>Class Name: MKT378<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>A very unorganized class. The professor is very knoledgable but I felt a lack of organization and borrrrrrrrrrriiiiiiiiinggggggggggggggggggggggg</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>two marketing minutes, two group projects and a take home final. what do you think&#63; take him you'r learn a lot</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>knows his stuff, everything his says is based on real world experience.  does not teach you BS, but what you'll really need to succeed in the Marketing field.  great prof.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2005<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Strunk is a professor that expects his students to be prepared. As long as you stay on top of the reading and pay attention to what he is saying, you should do fairly well with relatively little difficulty. Very straightforward; not in the business of trying to trick students. If I was a Marketing major, I would definitely take him aagin.</div></div></div><div id="container" class="review"><div id="left">Date: 09/27/2005<br>Class Name: MKT<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Highly recommend. I took it as a summer class. 2 marketing minute group presentations(only 1 person from group had to present). Midterm and final were take home. They are marketing minutes on paper. He is an interseting guy and presents a lot of good information. No attendance taken.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2005<br>Class Name: MKT398AND310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>man oh man is this guy cool. totally reccomended. take him before anyone else very laid back, down to earth, and above all he is there to help the students. easy marketing mins, group projects, and group case study. seriously, its an easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This guy was really awsome.. 2 marketing mins, 2 simple group cases....take home final and your done......he is very picly on the postioning statment so under stand that...ALL Group work not the final though..</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>good class, take home final, a bit unclear.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2005<br>Class Name: FIN310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dan is the man!</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Marketing minutes were great, assignments fair</div></div></div><div id="container" class="review"><div id="left">Date: 01/27/2005<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The class is pretty cool and it is based mainly on group work and a final. The class is not to hard but find good group members. I got like a B or B+ so it is not bad. Teacher is pretty fair and intelligent.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2004<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>if you hate working in groups this is not the class for you!! however professor was great, actually had real-world experience unlike many of the soly academic professors at depaul...grades seem ambiguous at times but i ended up with an A. you will need to put time into your projects but easy overall</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>very down to earth professor, brings in a lot of real world experience, and has some good examples.  no midterm.  just 2 group markeeting minutes and 2 group projects and a take home final--HIGHLY RECOMMENDED!!!!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2004<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Often cancels class, but group projects make up for that. The whole class is based on group projects and having to do our own research helped us really learn the concepts. Take him if you can. He is a very helpful and understanding grader.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I learned a lot in his class and he was very fair in terms of grading. Marketing minutes were OK and the final was as promised.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: B2BMKT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Has lots of real world experience and is very helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 04/23/2004<br>Class Name: MRK310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Strunk is probably one of the coolest teachers at DePaul.  He actually is doing us a favor by teaching there.  You can learn a lot, has lots of experience, and final/projects are easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2004<br>Class Name: MKT365<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2004<br>Class Name: MKT310<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy teacher and grader.  Pretty much all it is group projects and a take home final.</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2003<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2003<br>Class Name: MKT130<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

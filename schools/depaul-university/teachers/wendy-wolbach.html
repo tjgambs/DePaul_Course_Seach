@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Wendy Wolbach</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.0<br>Clarity: 3.1<br>Easiness: 2.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/14/2015<br>Class Name: CHE143<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr. Wolbach was very hard to engage with and was not much help. Do not take her if you need things to be explained in lecture and not just through the book.</div></div></div><div id="container" class="review"><div id="left">Date: 04/20/2015<br>Class Name: CHE142<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She gave very straightforward lectures and did a lot of example problems in class. Although she didn't give much partial credit on exams, her exam questions, which  were much more calculation-based than theory-based, were not very difficult. Overall, Dr. Wolbach was the best professor I had in the gen chem sequence and I would take her class again!</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2015<br>Class Name: CHE142<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: WD</div><div id="right"><div>Absolutely terrible. I hated having her. Terrible at helping students. She is not very approachable. Do not take unless you are extremely good at Chemistry. </div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2014<br>Class Name: 204<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is clear during lectures and gives many examples on different types of problems. Overall a great lecturer during class and definitely knows the topic. Exams are tough  but if you study you should be on top of your stuff and do well on them on top of the extra-credit she gives out occasionally. </div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2014<br>Class Name: 138<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>She seems very strict and mean at first but that goes away within the first week. Her tests are very hard, most problems seen on exams have never been seen before. If you genuinely want to learn chemitsry take her class, otherwise it will probably be really stressful. She offers a lot of extra credit and curves the class too so it's not too bad.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: HON225<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's awesome. Totally brilliant, helpful, and friendly. Class is always interesting. If you have the option, take her classes.</div></div></div><div id="container" class="review"><div id="left">Date: 08/02/2013<br>Class Name: CHE205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr. Wolbach knows what's she is talking about. She is clear in class and is always available for questions. Not going to lie, her tests are extremely hard, but they are designed to push you to think critically about the problem, just like you would have to do in real life. Can come off as intimidating, but is really super nice.</div></div></div><div id="container" class="review"><div id="left">Date: 07/27/2013<br>Class Name: CHE202<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took this class over the summer. It was pretty easy. If you go to lecture, pay attention, and do all the homework problems, you should be good. She will test you on most things covered in class so make sure you review your lecture notes. The key to this class is knowing how to use/program your graphing calculator to solve statistics problems.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2010<br>Class Name: LSP120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I don't really know why she is getting bad comments, she is seriously the nicest woman ever. She really cares about her students and creates opportunities to better your grade if you had a rough test. She prefers groups and gives extra credit for groups, but it's not mandatory. Pay attention and you'll do just fine :)</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2009<br>Class Name: CHE205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Honestly, I could not ask for a better teacher. She taught both Gen Chem and Quantitative Analysis, and she was always clear and organized in lecture and approachable outside of class. Granted, her tests were challenging and designed to push, but I feel that I am a better student because of her. Love this woman!</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2009<br>Class Name: CHE205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Wolbach is extremely smart and will challenge her students. Nonetheless, she is always there to answer any questions whether it be pre-grade a lab report or answer a homework question. To do well in CHE 205/207, you better do all the assign problems and get the lab reports pre-graded with her.</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2009<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class is awful. If you can you should test out of it as soon as possible. She's nice but I found the homework to be hard and the activities to be aggravating. You do everything with a partner so make sure you get a person you like and is smart. The group activities are maddening. Take this class as a night class with a different teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2009<br>Class Name: CHE106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome. Super smart and explains things well. Granted I took a 100-level class, but it was very easy. I didn't have to study for her weekly quizzes and still did well. She's nice and eager to help. I would highly recommend taking her!</div></div></div><div id="container" class="review"><div id="left">Date: 06/27/2008<br>Class Name: CHE150<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>HORRIBLE!! AVOID HER AT ALL COSTS! SHE LOVES TO FAIL AND HAS NO TIME FOR HER STUDENTS.  VERY UNFAIR ON EXAMS.  WORST TEACHER IN MY LIFE!!! DEFFINETELY WORST TEACHER AT DEPAUL!</div></div></div><div id="container" class="review"><div id="left">Date: 04/20/2008<br>Class Name: CHE321<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>...bit boring, dont like her teaching style.</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2008<br>Class Name: CHE115<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Wolbs is a chemistry titan. She is one of those people that knows how intelligent she is and makes you feel like an idiot when you ask questions. Her tests are 50% fair 50% stuff you have never seen before. She said that her tests are supposed to show that you have mastered the material.. not simply memorized it. Hardest class I have ever taken.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2007<br>Class Name: CHE113<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Ok... here's the rating on Wsquared.  She knows her****. Insanely smart geochemist and a nice/funny/nerdy woman... BUT if you're looking for an A you will have to work your ass off! and work really hard just to pass. we started the yr last year w/about 180 students and ended in the spring with 60 maybe.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2007<br>Class Name: CHE115<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This teacher is evil! She failed me and 3 others in class. loves to fail. Helps a little in office hours but she still cant explain it right. I really do not recommend taken her.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2007<br>Class Name: CHE115<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She goes too fast. Does not slow down. Her tests are horrible. U need to study 500 hours day to pass her tests. Really what a horrible teacher. PLZ try to avoid!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2007<br>Class Name: CHE113<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr.Wolbach is a great professor. You need to study a lot for her tests to pass them with a satisfactory grade. If you don't study and do your homework, you will be lost in her class. I like her way of teaching because I learned a lot.Some people think that it is the most boring subject in the world, but I really enjoy it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2007<br>Class Name: CHEM113<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Overall I think Dr. Wolbach is a hard teacher but if you study (a lot) you will be fine.  Her tests are very difficult and long and you need to know what's going on.  She is extremely helpful outside of class and helps you understand the material better.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2007<br>Class Name: CHE106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class is not easy, but Prof. Wolbach is so helpful and writes everything you need to know for the tests on the board in detail.  As long as you study hard you will do great in this class.  I recommend her, she's awesome!  A lot of people didn't like how she gives 1 quiz a week, but I think that really helps boost your grade and know the info.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2007<br>Class Name: CHE127<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I usually didn't bother with the text. I just went to class and did all of the homework.  Her explinations are very clear and she did tons of examples.  To all of the Gen Chem'ers (esp. complainers): did you go to class&#63; did you see the tutor&#63; did you do the homework&#63; I'm sure your exams were taken directly from the homework.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2007<br>Class Name: CHEM111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I don't even know where to begin! I went to every single class, and studying an inhumane amount of time and I still failed over half of the tests. The tests are all calculations and the numbers come out of nowhere. I would have been better off not wasting time studying. She is unavailable out of class, and encourages students to drop the class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2007<br>Class Name: CHEM111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Avoid taking her if you can. You have been warned!</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: CHEM111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>awful can not even begin to describe this woman. writes notes so fast that no matter what u cant keep up. pulls numbers out of no where on calculations...dosent care if the entire class fails. average for two tests last quarter was 49 / 100. nearly 3/4 of class had D or lower. had to change syllabus cause scores were so low. DO NOT TAKE THIS CLASS!</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2007<br>Class Name: CHE111<br>Helpfulness: 2<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She's very good with her lectures. However, her tests are extremely difficult. She has a nice and funny personality but does not cut slack to anyone. Truth be told, I came out crying after a few of her tests. I managed to pull off a C, and I'm an A student.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2007<br>Class Name: CHE113<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I agree with the people on here that all she seems to care about is her research. She really should just be a full time researcher and not teach. She never offers help even when you ask her because she has to do her research. Don't take her unless you plan on teaching yourself chemistry striaght from the book or you have taken AP Chemistry...</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2007<br>Class Name: CHE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She only cares about her stupid research and doesn't care about her students at all. She rushes through everything and than rushes out. HORRIBLE! Her status as a teaching professor should be severly audited.</div></div></div><div id="container" class="review"><div id="left">Date: 01/11/2007<br>Class Name: CHEM111<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She does not have a mean personality but she is very stern; she will try to help you if you ask.  However, I found the exams for her Chem111 class to be extremely difficult.    I would not recommend a student to take her class unless they were extremely good in chem.  The average for her final exam was a 55%</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2006<br>Class Name: CHE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This teacher is a nightmare come true.  DO NOT TAKE HER CLASS.  She is unwilling to help students outside of class and she doesn't care if you fail.  This teacher believes that it is normal for a class to recieve 40% averages on a test.  Trust me, stay away if you can!</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2006<br>Class Name: CHE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this class sucked. she wasn't available to help, the SI thing was messed up. i hate chemistry.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2006<br>Class Name: CHEM111<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I couldn’t disagree more with the previous post; yes, the class average was 42%, this is because material she covers in class is only half of her exams, the other half involves calculations or methods that were RARELY discussed in class. Don’t take any chemistry at DePaul, by far the worst department within the University; Wolbach is no exception</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2006<br>Class Name: CHE111<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>One of the best chem teachers in the department, she explains everything from the book notes are from the book. unfortunately last test was 43% ave. obviously ppl dont listen in class nor even show up. show up take notes and u'll be fine. a very dedicated teacher when it comes to chem. kinda dorky at times.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2006<br>Class Name: CHEM111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Stay away! It troubles me that she finds it &quot;normal&quot; for a class to have a 40% average on her test. She crams in as much info as she possibly can into 1 lecture. She isn't willing to help outside of class, b/c she's too busy doing her research, even though over half her class is failing, which explains why over 1/2 the class dropped out. HORRIBLE!</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2006<br>Class Name: CHE111<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She really isn't bad a teacher.. Don't listen to what other people are saying. If you enjoy chemistry and are willingly to work hard and go over the problems she assigns you will do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2006<br>Class Name: CHE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>the class size has literally decreased by at least 1/2 after the withdraw deadline passed. does she know chemistry&#63; abo****ely! can she teach it&#63; NO! the way she teachs is very unclear, unorganized and generally very confusing. she is competent as a chemist but incompetent as a teacher</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2006<br>Class Name: CHE111<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She literally only gives lectures and does not offer any outside help nor does she provide study guides or tell you what is going to be on the exams. Exams are generally very long and difficult. It is highly recommened that you avoid her unless you have taken AP chemistry before and/or are familiar with chemistry.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2006<br>Class Name: CHE207<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Be warned, she has standards but if you apply yourself you will be successful in the course.  And as you will see, she really knows what she is talking about.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2006<br>Class Name: CHESOMETHING<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very involved with the class. Wants students to do well, and offers help whenver it's needed. Nice grader (gave me something I didn't deserve). Helluva a nice person. I'd recommend her unless, of course, you're too stupid to grasp any of the subjects at hand.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: CHE147<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>What can I say about good old Dr. Wolbach that hasn't been said already&#63; She's very competent, yes. Knows her stuff definitely, but I think she likes to see the devastated look on your face when you fail her impossible exams. The class could be a lot easier if she wanted it to be. She can be helpful though as long as you go to her.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2005<br>Class Name: CHE147<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a great professor! Her competency is great, and her passion for the subject matter inspiring.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: ISP<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>WORST TEACHER EVER!!! (if we can call her a teacher).... SHE IS VERY **** AND EGOCENTRIC!!! NOT WILLING TO HELP STUDENTS AT ALL</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2004<br>Class Name: CHE147<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Her lectures are great so make sure you take good notes. She is also very amusing and loves chocolate and diet coke. The class starts early so make sure you are on time otherwise you miss the helpful hints.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2004<br>Class Name: CHE147<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good Prof.  Tests are similar to homework and in class examples.  The book isn't very helpful, so pay attention in class and take good notes and you should be fine.  Lab final is really easy as long as you put EVERYTHING in it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: ISP120<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's a chem prof teaching ISP 120 - DISASTEROUS. she knows nothing about excell - you almost always leave early - very little lecture, easy A if you do all the work - the only homework was the final project - total BS</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

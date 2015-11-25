@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Judith Bootcheck</h1><hr><div><h2>Overall Quality: 1.71<br><br>Helpfulness: 1.78<br>Clarity: 1.65<br>Easiness: 2.68</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: SOC101<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Oh my.... She is a character very knowledgeable woman, however whenever she lecture it has nothing to do with sociology. If you suck up to her she will love you. Only study the textbooks, the tests are insane our grades were ok's ok +, or ok-. we also made the syllabus nit her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2014<br>Class Name: SOC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HER CLASS. She was always 10 to 15 minutes late to class. Rambles on about pointless things. I learned nothing from this class and dreaded going. Worst professor ever.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2013<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>NEVER TAKE THIS TEACHER. class is an unorganized waste of time. not clear, unhelpful, and poorly structured. the final project is a joke and she doesn't help you with it at all. you'll ask a question and she'll say "I can't answer that." almost went to the Dean of Students. sucks. pick another class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2012<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS TEACHER UNLESS YOU HAVE TO. She is never clear on any of the assignments you are supposed to do does not answer questions and is confusing.  She talks about nothing that is relevant to the class.  I learned absolutely nothing.  WORST CLASS EVER TAKEN IN MY COLLEGE CAREER and I'm a senior.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2011<br>Class Name: SOC207<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took Youth and Society class with her and she wasn't that great. She rambles on about random things and she doesn't relate the reading to her lectures. Her test are ridiculous and unpredictable. She is never clear on what is on the test or what she wants for her final paper. You have to ask her a million times to get a clear idea. beware....</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2010<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The worst professor. She comes to class late(15 minutes),she doesnt take interest in the class.Dont participate in discussion-she'll give you this face like your crazy. Quizzes are easy as long as you read the chapter. Midterm and final are essay tests(read 10 articles-she wont tell you which are one the test). most of what she says is irrelevent.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2010<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This professor is by far the WORST professor at Depaul. She is ignorant, rambles on and on about useless things, you cant understand what shes talking about ever. The assignments are useless. You take quiz's every thursday, and the final project is absoluely ridiculous. SHe makes you collect newspapers for weeks. WORST TEACHER EVER. DO NOT TAKE HER</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2010<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>HORRIBLE. Work load was super easy just read the chapter, have her talk about it in class, and then take a quiz on the chapter. It seems super easy but she never returns emails or phone calls, gives little description on the final, and does not give back or discuss the final paper or essay exams. Plain out horrible, but good for independent workers</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2010<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Nice lady.  Would like to know her more.  But the class is a waste of time.  She rambles a lot; although her stories are funny.  THe final sucks; such a stupid project.</div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2009<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS CLASS! I am a sociology major and love the subject matter, yet this professor made me want to pull my hair out during the quarter. She is disorganized and incomprehensible. Don't expect to understand a thing she says! Seriously! She poorly prepares you for tests and the final project is HUGE and not assigned until the last minute.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2009<br>Class Name: SOC380<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I have never been so frustrated with a class in my life. When people in the class ask her if she will answer a question for them she flat out told them no. She rambled about things that had nothing to do with the class and it was unclear what she wanted from out papers and research. I recommend another teacher for this class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2009<br>Class Name: SOC380<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I read all the other ratings and I have to say that I really enjoy Bootcheck as a professor. This is the second class that I have taken with her. She is in general a nice lady, can ramble at times yet is very knowledgeable about the topics and a published author. She is actually a sociology professor that does research and has a few published works</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2009<br>Class Name: SOC101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i have not taken a class with her. However, I have had to help friends with their research methods project because she was too lazy to create the template needed to have an accurate account. She also likes to belittle people and terribly messy and unorganized. Just lazy overall!</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2008<br>Class Name: SOC000<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If I could give anyone the most imporant advice at Depaul is do NOT TAKE HER! Please don't think how I did &quot;how bad can it be&quot;. I regret it. She is the RUDEST, most UNCLEAR prof in all the 5 school i've been to. She literally hates her job. Shes always on the defense and will teach you NOTHING.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2008<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Without ranting and raving, she's a very poor teacher and the quarter with her has been extremely frustrating. Very incoherent, disorganized, somewhat disrespectful, arbitrary grading (you will typically have NO IDEA how she decided your grade) - class is essentially a mess. So I'd recommend avoiding her.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2008<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>WORST TEACHER EVER! I'm taking her right now & I can't stand her. She is SO RUDE & DISRESPECTFUL! She INSULTS THE WHOLE CLASS! She throws papers around and has a horrible attitude. She never talks about the topic and doesnt engage students. She shuts you down when you ask a question. Does explain her grading, tells class our work is crap & swears!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2007<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>um...this teacher is very F*ed up.....i think she comes to class stoned or ****....stay far....far away.....</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2007<br>Class Name: SOC107<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Craziest lady ever, but in a good way. Probably the easiest class I have ever taken. Just read the chapters and daily quizes are so easy. If you want to be a soc major do not take because she will not in anyway talk about anything relavent to what you are learning. No final just an easy project.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2007<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she is pretty knowledgable about what she teaches, but she's not a very good teacher.  she is not very clear about explaining things and wastes a lot of time going off on tangents.  i would not take a class offered by her again</div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2007<br>Class Name: SOC326<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I enjoyed this professor...although her class lectures often have nothing to do with the topic of the class, she is a very interesting woman and I learned a lot. I like her style of teaching and have taken classes with her more than once.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2006<br>Class Name: SOC207<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I can't tell if she's really crazy or just likes to mess with her students. Overall she wasn't bad. You have to study for the Midterm and Final and complete all class readings, also attendance isn't mandatory but you will miss important class notes that show up on the tests. She expects hard work out of her students, and I learned a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2006<br>Class Name: SOC107<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I like her a lot. She talked a lot and sometimes really went off on tangents but overall it always just taught you more about life and people in general. She knows a lot, she is well experienced and when you read what she asks you to you do fine on her tests. The multiple choice test every week simply require reading the chapter for an A.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2006<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Horrible! Can't make a declarative/clear sentence to save her life. Gives really hard weekly multiple choice quizzes on the chapters. Essay test are easy if you read the articles, which can pile up so read them on time. Topics are semi-interesting but her lectures (if you can call them that) make me want to shoot myself. Avoid at all costs!</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2006<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Amazingly bad.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2006<br>Class Name: SOC207<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fine professor.  She sometimes doesn't get her point across, but she'll explain the information fairly in-depth.  People don't like her, but I think this is just because they don't understand her and how she teaches.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2006<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible professor. She is very unclear and gives ridiculous exams. She also is not willing to help and when you ask a question she never knows how to answer it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/17/2006<br>Class Name: SOC200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Horrible. Quizzes are poorly worded so that what should be an easy quiz becomes a nightmare. There doesn't seem to be any point in taking notes because she doesn't relate her verbal material into the next class or classes. She is quite knowledgable on current topics, though, yet she mumbles throughout her lectures, so its easy to miss everything.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>judith bootcheck is the worst professor i've had in my college career.  it's not that she's too hard, she's just an idiot.  her class is youth and society yet she is completely removed from youth.  a comple waste of time.</div></div></div><div id="container" class="review"><div id="left">Date: 01/19/2006<br>Class Name: SOC326<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2006<br>Class Name: SOCIALPROBLEMS<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2005<br>Class Name: SOCIALPROBLEMS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>so so boring. by far this is the worst class i have ever had at depaul. she isn't a hard teacher at all, but the class is simply pointless. undergrads if you need the credit and the easy grade then go for it. but if you can't handel wasting three hours of your life a week then AVOID THIS CLASS!</div></div></div><div id="container" class="review"><div id="left">Date: 09/29/2005<br>Class Name: FAMILY<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>As a grad. student I was challenged and really enjoyed Dr. Bootcheck.  She's not a prof. everyone will like - she's got her own way.  But if you're truly interested in the material you will see the value of taking her.</div></div></div><div id="container" class="review"><div id="left">Date: 04/15/2005<br>Class Name: SOC500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had dr. bootcheck in grad. school and i thought she was very knowledgeable about the subject.  she has her own way, but you know what&#63;  do the damn work!  i think too many dpu students want their old high school days back, were the teacher is your buddy and does the work for you.  grow up and lear</div></div></div><div id="container" class="review"><div id="left">Date: 04/03/2005<br>Class Name: INTROSOCIOLOGY<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>BOOTCHECK! WHAT A CRAZY LADY. THE CLASS IS EASY. ALL YOU DO IS TAKE QUIZES EVERY WEEK AND THE FINAL IS OPTIONAL. YOU ALSO HAVE SHORT ESSAY QUESTIONS. SHE HAS A SHORT INTENTION SPAN, MAKES YOU NOT WANT TO GO TO CLASS AND HER LECTURES ARE NOT ENTIRELY BASED OFF WHAT WILL BE ON THE QUIZ. STUDY THE BOOK</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2005<br>Class Name: SOC207<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a pretty easy teacher, you'll do fine if you read the assigned books. Beware that the final and midterm make up 80% of your grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2005<br>Class Name: SOCIALPROBLEMS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>worst teacher at DPU, never talks about material, rude & disrespectful towards students, unclear and unhelpful, someone actually filed a complaint letter with the department because she was so bad...DO NOT TAKE, u will regret it</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2005<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Sociology was on of my favorite subjects. However, this is the worst class i have ever taken. this professor knows nothing of the subject matter, she does not lecture and she is unorganized always late and is disrespectful towards students.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2005<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE ANY CLASS FROM THIS PROF!! Bootcheck talks about abosolutely anything EXCEPT the material at hand. The quizzes are nonsense and force the students to learn the material on their own since the topic is not even touched till the following week. Save your time and money and skip her!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2005<br>Class Name: SOCIOLOGY<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>social problems class is a waste of time. she gets off topic....doesnt talk enough about what she assigns. then gives crazy ass quizes. i only go on thursdays because thats when we have quizes...the rest of the time is a waste.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2005<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is extremely unorganized.  She talks in circles.  She is a really nice lady, but not qualified to teach.  I thought her class wasa really easy, nd she bumbed me up to an &quot;A&quot; because I had good attendence and good class participation.  The class itself was really boring.  sit in the front row!</div></div></div><div id="container" class="review"><div id="left">Date: 01/11/2005<br>Class Name: SOC203<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If someone could only record one of her lectures and play it for a dean, I'm almost certain she would be replaced.  Lectures have NOTHING to do with the subject whatsoever.  Really.  It's quite ridiculous and leaves you wondering why you're present.  Kind woman, but don't take her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2004<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Though a very kind and considerate person, she tends to digress a bit too much for a class where most kids have little clue about the subject matter.  She assumes you know the material before she teaches it, and grades based on this.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2004<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she's fairly disorganized and tests on esoteric facts that she (almost always) fails to even breach the territory of.  she also manages to take interesting subjects and turn them into a sleeping pill.</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2004<br>Class Name: SOC205<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Bootcheck has to mention her family members at least 15 times during a lecture. She goes off on tangents that have no relevance to the subject she's lecturing about. She honestly needs to be replaced. If you're a SOC major (I am), don't let this teacher bum you, the rest of the profs. rock.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2004<br>Class Name: SOC<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>nice person, but i dont recommend her. if you do, you have to suck up cuz almost all grading is based on whether she likes you</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She talks in circles about nothing. None of her lectures for our class are relevant to what we're studying. Also has no control of some immature people in our class. Is a very nice person once you talk to her but her class is unbearable! Pick another prof</div></div></div><div id="container" class="review"><div id="left">Date: 05/24/2004<br>Class Name: SOC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>INSANE.... had to drop her class... her lectures don't apply to the readings and her essay tests are based off of those readings only... put us into groups to &quot;discuss&quot; while she went and had a cigarette.. only reason she's still there is bc she</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2004<br>Class Name: SOC306<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>the only soc professor at depaul that i say &quot;DO NOT TAKE!&quot; she's extremely old-fashioned and completely discombobulated when it comes to grading.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: SOC<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>most people hate her because her tests are hard and she's a difficult grader on essays. but in all honesty, she's not that bad. just don't expect a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: SOC306<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I dropped the class after the first three sessions because she was AWFUL. Read an entire sheet of statistics for nearly an hour that most prof's would just give us for further reference; rambled on and on about unnecessary stuff. Not recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Completely off her game.  Disorganized, she twice forgot to bring in tests to class.  Had not even written the final exam to hand to class at end.  Totally awful.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The woman is tenured, so she is able to get away with murder in the classroom. She is irrational with her grading and teaching. There is no way to get a good grade in her class. Don't even try.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: SOC<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2003<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>i dont know why shes teaching</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2003<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very unhelpful and admits to only being around on account of tenure.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2003<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/07/2003<br>Class Name: SOCIO101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She does ramble but shes got some interesting stories to tell if you can learn to appriecate a different style of teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2003<br>Class Name: SOC207<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Not organized enough to be teaching. Constantly rambles, then expects students to do well on book-based quizes. DO NOT TAKE A CLASS WITH BOOTCHECK.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2003<br>Class Name: SOC105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2003<br>Class Name: SOC105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

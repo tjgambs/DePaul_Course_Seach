@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Todd Parker</h1><hr><div><h2>Overall Quality: 3.43<br><br>Helpfulness: 3.26<br>Clarity: 3.6<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/18/2006<br>Class Name: ENG472<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Parker is a very good teacher whose lectures can seem boring at times, but he somehow manages to make the class interesting. His constant one liners and dry humor throughout each class helps keep the class on it's toes. At times you ask, &quot;Did he really just say that&#63;&quot; Parker is clear, concise, and will push you to make you a better writer</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2005<br>Class Name: ENG280<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>prof. parker is a great teacher. he is hi-f***in-larious and he knows the material. take him if you can laugh at yourself, and if you cant than your going to have a hard time living in the real world.</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2005<br>Class Name: BIBASLIT<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very knowledgeable, but not as knowledgeable as he thinks.  He'd sooner chew off his own arm than admit he's wrong or incorrect. If he doesn't know something, he will feign that it is beneath him to even answer, and that it's your job to find these things out on your own.  But still, not a bad guy underneath it all, and you will learn.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2005<br>Class Name: ENGBIBLEASLIT<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great teacher-dry sense of humor-very knowledgable about what he is teaching and class is well-planned...take him!  10% participation/attendence, 40% midterm, 50& final (tests are in class essays)...only hw during quarter is reading...thorough discussions about readings in class...just take notes</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2005<br>Class Name: ENG434<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2005<br>Class Name: GRADLIT<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Arrogrant and bratty with a fake elitist accent to boot. I got an 'A' but what a jerk!</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2005<br>Class Name: ENG280<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He definitely pompous and picks his nose sometimes, but I learned A LOT in his class and would definitely recommend him.  Just don't sit in the front row :)</div></div></div><div id="container" class="review"><div id="left">Date: 09/04/2005<br>Class Name: LITCRITICISM<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I second the vote on not getting papers back. I could have done much better had he decided to not return most of our papers. How can you improve without feedback&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2005<br>Class Name: MYTHOLOGY<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>this guy was such a jerk!  I just remember him openly belittling students.  How is that a good learning environment&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 08/11/2005<br>Class Name: BIBLERESTORAT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Parker is hysterical. Very dry humor (you'll either get it and love him or not get it and think he's pompous).  Everyone should be forced to take the Bible as Lit. I learned a lot from Dr. Parker.</div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2005<br>Class Name: ENG330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Parker can't help but seem pompous since he knows a great deal regarding just about anything!  Thoroughly enjoyed his classes and his sarcastic sense of humor.  I disagree that he is misogynistic.  He went out of his way to include readings by Restoration/18th Century female authors.  I recommend his Bible & Horror Lit classes!</div></div></div><div id="container" class="review"><div id="left">Date: 07/11/2005<br>Class Name: RESTORATIONLIT<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2005<br>Class Name: ENG<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>i hate him and you will too</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2005<br>Class Name: ENG204<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: ENG280AND284<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Parker is great. He is extremely smart and really funny as well. He is very clear on what he expects of his students and gives students a chance to improve their grades with an extra credit paper. Go to class and listen to what he says. You might learn something. He is the best professor at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2005<br>Class Name: ENG280<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: ENGLISH<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class is interesting.  He's funny.  Write down most of what he says.  It will be on the exams.  Exams are easy.  Go to class and you will do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: ENG280284<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers at DePaul.  He is clear about his expectation on all material.  He gives you the oppurtunity to pull up grade with papers. He does not take attendence and has a great sense of humor.  If you need art and lit take this teacher!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2005<br>Class Name: ENG280<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>ppl who say he is REALLY hard are lazy.An A is attainable, but he will challenge u.Involve urself in the material and u'll do well. Talk in class. True he likes to talk a lot but he is VERY intelligent. Good sense of humor. Only 2 exams, paper is optional to replace a bad midterm grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2005<br>Class Name: ENG280<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>probably one of the most intelligent people on earth, and he knows it. he was one of my favorite teachers of all time. he doesn't just gets you interested in the subject, he inspires a passion for it. he is the type of teacher who makes you want to absord all you can just to better yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2005<br>Class Name: CRITBIBLE<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i had him for a few classes and i lvoed him. i put average work into classes and worked hard on the papers and got As in both classes. he is funny but he can be a jerk if you get on his bad side. he still remembers my name and i am a girl so i think its not about gender.as a prof he knows his stuff!</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2005<br>Class Name: BIBLEWORDLIT<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2005<br>Class Name: 284BIBLE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The best prof I've ever had, period.  He seemed to know everything about he Bible and almost never had to check his notes.  He's hard, but really fair to all his students.  His bible class is famous and your shouldn't miss it!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: LITCRIT<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Maybe I'm being harsh..he's taken the courses to know everything about lit crit, but I didn't learn much from him and I really wanted to.  Highly unprofessional in not getting papers back to his students & not backing up his grades.  I wish I liked him, but...</div></div></div><div id="container" class="review"><div id="left">Date: 01/21/2005<br>Class Name: ENG472<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>We didn't apply any criticism, we only read about it, which wasn't very useful. I found it totally unprofessional that he didn't return all our papers.  He managed to make difficult reading interesting.  If he thinks DePaul students are morons, why does he teach at DePaul&#63;&#63;&#63;&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2005<br>Class Name: ENG280<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2004<br>Class Name: ENG<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Absolutely horrible teacher, likes to make people feel bad about themselves</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: ENG<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Went into class knowing NOTHING about the bible and Parker taught the bible without injecting any religious aspects. You have to attend every class and take decient notes but otherwise the class is interesting and entertaining.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: ENG472<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Parker LOVES to hear himself talk. During class, extremely challenging readings were not explained. The focus of class was on individual readings and not schools of critism--the purpose of the class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2004<br>Class Name: ENG379<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>There are not enough good things to say about Parker. Probably the most interesting and intelligent people I've ever met. He makes mildly interesting material and makes you laugh out loud. First time I've ever laughed like that in a class.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2004<br>Class Name: ENG284<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Have had him a couple times and he is one of the smartest, most knowledgeable people I have met.  He makes tough, potentially boring material fun to read and learn about.  Extremely helpful outside of class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/25/2004<br>Class Name: LIT<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>i took 2 classes with him and i loved them.anyone who can make literary reaserch and writing interesting wins my vote. i love his sarcasm but if u are on his bad side or one of those abnoxious people i seem to have in every class drop it or you'll hate it</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2004<br>Class Name: ENG280<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class was fun and pretty easy, go to class take notes and class is a breeze.  You might even learn a bunch of stuff as well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: ENG280<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>this professor is by far one of the more intelligent people you may ever meet.  He has an uncanny ability to make the most boring readings understandable and interesting.  He is honest and informative.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2004<br>Class Name: ENG280<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: ENG280<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My first impression of him was OH GOD(in a bad way)but now I take that back. From his looks, he looks mean but he said he isnt as bad as he looks, which is true. I liked his class and I'm gonna miss it after next week. He made the Inferno sound interestin</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: MULTIPLE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is one of those rare professors who can take painfully mundane reading material, and through his brilliant lectures, not only make it interesting, but immensely enjoyable. If you are easily offended, however, consider taking another teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ENG330<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: ENG280<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Parker is brilliant. He's hilarious though some may consider him lacking in sophistication or subtlety. The reading material is semi-interesting, but Parker makes it great. Do not take this class if you're easily offended.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: BIBLELIT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awsome, great class...very intelligent</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2004<br>Class Name: GRAD<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Quite possibly the most brilliant man I've ever known.</div></div></div><div id="container" class="review"><div id="left">Date: 07/29/2003<br>Class Name: ENG284<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Stay on top of the readings!</div></div></div><div id="container" class="review"><div id="left">Date: 04/15/2003<br>Class Name: ENG284<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

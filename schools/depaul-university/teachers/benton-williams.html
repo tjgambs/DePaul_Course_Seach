@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Benton Williams</h1><hr><div><h2>Overall Quality: 3.57<br><br>Helpfulness: 3.55<br>Clarity: 3.59<br>Easiness: 2.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/26/2015<br>Class Name: HIS183<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>I thought his lectures where interesting and he's a pretty easy grader when it comes to papers. Just participate everyday and your pretty much golden. </div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2015<br>Class Name: HST183<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>His attendance policy is a joke. He misses many days but wont even let you have one. If you want a good attendance grade you have to go everyday and and answer more questions than he asks during class. Vague feedback on hw and I don't think he ever read the assigned book because when you answer directly from text, only his answer is right, not his.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2015<br>Class Name: HST183<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Beware. He expects you at act in the way that is written on his syllabus and blatantly acts the opposite himself. Grades do not match the comments he makes (gives good grades and rude comments). Attendance is mandatory, even if you're puking. </div></div></div><div id="container" class="review"><div id="left">Date: 12/08/2014<br>Class Name: 388<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Williams was great. Sometimes the lectures didn't seem to connect to the final paper, but they were always interesting. </div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2014<br>Class Name: HST183<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I'm not really interested in history, but this was a fantastic class. I thought about switching to a history major, but I want to get a job.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2014<br>Class Name: HST298<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Williams is very knowledgable and generates interest in the subject. Granted I am already a history major, but I was not falling asleep in his class! (PS-he's really funny!)</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2014<br>Class Name: HST388<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class was super hard, but the best I have ever had at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2013<br>Class Name: LSP110<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The professor was very enthusiastic of his class and I really enjoyed the lectures, learned a lot!! The only problem was that I didn't get any feedback on how the quarter was going....</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2013<br>Class Name: LSP110<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was a generally fair guy and funny at times. I wish he had elaborated more on some of the assignments. He'd ask a lot of questions in class and was trying to promote dialogue among the students rather than give away the answer. I'd have no problem taking one of his classes again. He wasn't my favorite but I definitely enjoyed his class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2013<br>Class Name: LSP110<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Worst professor EVER. He is extremely annoying, has no idea what he's talking about, and doesn't answer anyones questions. He is VERY UNSPECIFIC which made me question his credibility. He assigns papers but never talks about them in class. He is annoying AF, rude, and BORING. I hated his class because of him and how he taught. SO unorganized.</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2012<br>Class Name: HST183<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A very difficult grader, though he claimed he wasn't on day one.  Very hard to take notes, cause he was always on off-topic tangents.  To study for his essay tests, I had to really learn the material on my own terms, not from his minimal notes.  Lectures are long and boring.  I was really looking forward to History, and felt disappointed.  Avoid!</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2011<br>Class Name: HST183<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>It was so hard to stay awake in this class. He was disorganized and went on random tangents. So difficult to take notes, as well. Your best bet is to read the text on your own. If you don't already have knowledge of American History, you will be totally lost in this class because he lectures as if you already know the material. Two thumbs down.</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2010<br>Class Name: HST183<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Williams was horrible! He is a ridiculously hard grader and his lectures were torture. He goes so far off topic that I did not even know what to take notes on. His powerpoints consisted of about 2 slides for the entire lecture, and I was very disappointed in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2010<br>Class Name: HST183<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Williams' class was very interesting. He kept me enganged in the topics for someone who finds history challenging and boring. The exams weren't very hard, but he was somewhat of a hard grader. I pulled off a B though without opening the text book! :)</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2010<br>Class Name: HST183<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Williams was very knowledgeable, however he rarely stayed on task with the material.  He would go on tangents and then never get to the vocabulary words for the day which made it hard to study for exams.  Exams were fairly easy.  One essay and four vocab words to write about.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2009<br>Class Name: HST183<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>It was a very boring class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2009<br>Class Name: HST183<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Williams is a talker and goes on tangents about things that are not relevant to what we are learning in class. He is very biased towards certain subjects as well. Work is very straight forward: 2 tests and 2 papers. I would not recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2009<br>Class Name: HST282<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I'm sorry but this man is a hard grader. I got an 80 on his midterm that i studied for DAYS for. He loves essay tests. I hate it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2008<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>B-Willi was an awesome professor and my first. three papers, group project, and no final. Was insightful on our tours on immersion week. Best discover teacher by far. Went way over budget on our lunch breaks. I was scared about this class, was one of the last choices but ended up changing my view on the city and made me think about sociology degree</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2008<br>Class Name: ISP103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE HIS DISCOVER CLASS!! I'm sure he's great for other history classes, but he makes the adjustment from high school to college harder than it has to be. There are only 2 papers and 1 group project and he's SUCH A HARD GRADER!! He's such a nice guy, but his charm is not worth the stress or struggle for an A</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2008<br>Class Name: ISP103<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>he made an interesting topic extremely boring. he literally talks for two hours straight. Race, politics, and housing in Chicago should have been the most interesting class, but he made it the worst. he does not care if you understand the material or not.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2008<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>My favorite professor at Depaul. Hard to concentrate in class, though. I got wrapped up in that charming accent and lost in those dreamy eyes.</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2008<br>Class Name: HST282<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Interesting professor, likes to tell little stories about history which made it fun.  He has a cute Arkansas accent that makes listening to him more fun!  He is kind of a hard grader though, but there are only two papers, a midterm and a final.  He gives you GREAT study guides for the tests as well.</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2007<br>Class Name: HST386<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>kick ass teacher. not easy but is very passionate about the subject and makes classes very interesteing.</div></div></div><div id="container" class="review"><div id="left">Date: 08/23/2007<br>Class Name: HIST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>1. Don't buy the required book, he is great at presenting material to class, not once did i get a B on his midterm nor a test! He is very interesting and funny. Great sense of humor and very helpful. Recommend! He does require some thinking, but it's pretty easy to get an A if you attend the class and study a little!</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2007<br>Class Name: ISP100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>B-Dubs was a blast during my chicago quarter. He obviously loves his job, and though he was probobly a little different in my class than his usual classes, he connected really well with his students. However, he can be vague(purposely) to the point of confusion, and is definitly a hard grader- great guy though</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2007<br>Class Name: HST282<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved this guy. He made class fun and interesting. Has a great sense of humor and tells great stories. Only one paper to write, and he is a pretty easy grader on exams. Books are hardly used at all, though they come in handy on exams. Take good notes and you'll be fine. Start losing points on grade after one miss however.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2007<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Good teacher.  Listen to the lectures. He explains everything in a very easy way to remember. Take good notes because theyll be handy for the paper and exams</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2006<br>Class Name: HST386<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good teacher, good class. Williams is a fair grader although sometimes alittle easy.  He did a very good job in trying to keep the class interesting. Class had a lot of information but he didn't force you to know everything. As long as you write good papers based with a good understanding on what he is asking then you should do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2006<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Its a decent class, he doesn't use the book at all, the mid-term and final are essay, definitions, and objective.  He does grade a little hard, otherwise easy B</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2006<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>professor williams grades a little hard but he has all the right to because he gives you test questions before the test.  he lectures the whole class which can sometimes get boring but he does his best to keep it interesting.  i loved him and the class because i don't know how much more interesting history can be.  he's also really helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2006<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's awesome. I just reviewed him so I could give him a pepper.</div></div></div><div id="container" class="review"><div id="left">Date: 02/01/2006<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i hate history but LOVED this class--his reading are easy and interesting and his lectures fly by.. midterm is easy and you do learn intersting things.. best of all u dont have to memorize dates of events in history!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2005<br>Class Name: HST388<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Williams is great. Intelligent and funny lectures, engages the class, time flys by. The people that complained are the ones that probably never showed up and are rather stupid to begin with. Take Williams if you have the chacne you won't regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2005<br>Class Name: HON<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2005<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is such an awesome teacher, he even wrote a recommendation for my study abroad program.  An all around amazing class.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2005<br>Class Name: HST<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Looks very highly on participation - which is why doing the weekly reading is important, even if he doesn't take a lot of it directly for the test.  Very funny and uber-smart.  I've taken him twice.</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2005<br>Class Name: WORLDHISTORY1<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>AT FIRST I WAS A LITTLE SCARED AFTER READING EVERYONE'S COMMENTS. I HAD HIM FOR A NIGHT CLASS AND FELL ASLEEP SOMETIMES. HOWEVER, WONDERFUL PROFESSOR AND KNEW HIS MATERIAL. NOT HARD AT ALL, JUST TAKE GOOD NOTES. FAIR GRADER AND I USED TO HATE HISTORY BUT I GOT A &quot;B&quot;. I LEARNED SOME NEW INTERESTING THINGS.</div></div></div><div id="container" class="review"><div id="left">Date: 05/22/2005<br>Class Name: HON<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Williams is great! He always had time to go over papers with me and if you participate in class he does give you extensions. He's also one of the funniest professors I have. Great prof! Don't take if you don't want to do work, lots of reading lots of writing. Write at the college level & you'll be fine!</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Favorite teacher. Very smart, more casual teaching style but pushes students to do best work. Recommend!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2005<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great prof!Act interested and write well,you'll be fine.He REALLY expects that you know how to write at the college level- possible why some people had problems.Go to his office hours for extra help and/or for him to look at your paper and you'll get an A.Very nice prof who cares! Very funny!</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2005<br>Class Name: HON102<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He seemed very interested in what he was trying to teach, and tried to challenge his students, but at times he was very vague.  He also called on the same people in class the whole quarter. Also seemed condesending at times.  Nice, but semi-tough grader and sometimes rediculous projects.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2005<br>Class Name: HON102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Probably the biggest waste of my time and the biggest waste of my parents money to date.  All I have to say is that I have no idea what the f*** he is trying to accomplish by being purposely vague and grading ridiculously hard.  He seems cool at first, but don't fall for it--terrible professor.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2005<br>Class Name: HST282<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you work hard and go to class you'll do great. He's clear, and percise on what he expects, and if you're still confused just ask. Books are helpful and interseting. They are a good example of the theory. Plus class is fun and applicable to current issues.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2005<br>Class Name: HST280<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>What are you people talking about&#63; I took this guy & enjoyed coming to his class (funny southern guy). Ok, maybe he was a little hard on grading, but I'm tired of people expecting the easy way out (even though he gives the essay &#63;s that will be on the exam!). And no,not a history major (Bio major).</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2004<br>Class Name: HST282<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>he seems like a good guy, but once you get his grades, that is no longer the truth. i got a 78 for participation even though i never missed a class, stayed awake and, yes, participated. the lectures were long and he went on too many tangents. the books were HORRIBLE and were of no help to me at all.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2004<br>Class Name: HST282<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2004<br>Class Name: HIS282<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I went to class everyday, paid attn.wrote everything he said in class on the test, and still did bad in the class. He checked this website, and found out someone in his class talked bad about him (who was getting an A), and gave everyone bad grades.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: ANY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Williams is funny, interesting and kind.  His grading can be hard, but he is fair.  This is a very helpful professor.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2004<br>Class Name: HST<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Grade was composed of 2 exams and 1 paper. Very unclear and vague on expectations for assignments. Lectures were difficult to follow. Professor digresses and goes off on tangents.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2004<br>Class Name: HST282<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Extremely hard grader.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2004<br>Class Name: HST282<br>Helpfulness: 1<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very hard grader.  Lectures are really boring.  You definitely have to read the material.  1 paper, 2 really difficult exams.</div></div></div><div id="container" class="review"><div id="left">Date: 07/25/2004<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Grades reasonable - if you work hard youll do well. He knows his stuff and is very smart, and really cute to boot! Take him.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2004<br>Class Name: HON103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very good guy, GREAT lecturer! Very funny! He grades fairly; he expects that you know how to write, but he is open as far as what citation you want to use. Always makes himself available if you need help or have questions. Take him definetly!</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2004<br>Class Name: HST282<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I WISH HE WAS SINGLE!!!! Funny, smart, fair- what else could a girl want&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 04/12/2004<br>Class Name: HST281<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you enjoy history and reading the texts, you should enjoy the class. Professor Williams does lecture for most of the class, but elicits class participation, and is overall, nice. Requirements are minimal for the course, which is a plus. 1 paper, 2exams</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2004<br>Class Name: HST280<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Most boring class I've ever been in.  Half the people were sleeping if they showed up at all.  Tests were extremely difficult and it was hard to take notes.  Not recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2004<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I loved Benton!! He was great. Made history interesting because he is a charismatic speaker who can explain things very clearly. Listening to him is like listening to a story except you just have to take notes as hes writing it. Well prepared lectures.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2004<br>Class Name: HISTORY<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof Williams is my favorite teacher at DePaul, i dont care if he is a little hard, when all is said and done he gave me the kind of education i felt i went to college for in the first place.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: HON103<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Williams is a good teacher and although he can be challenging at times, he is very reasonable.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: HISTORY<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2004<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>very funny and nice guy. i learned a lot in his class. paper was easy. tests were kind of difficult, essay portion at least. id take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2004<br>Class Name: HST280<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very nice man, however, very HARD grader.Tries to start class participation, however, he always ends up talking throughout the whole class period.Do not go to class sleepy, because he will totally put you to sleep.I find it impossible to keep my eyes open</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2004<br>Class Name: HST280<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you want to have your head buried in a book--take him.  No Quizzes, one paper and 2 exams.  HARD GRADER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2004<br>Class Name: HST280<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor-DO NOT search for the answers ALL THE TIME, use other types of learning like group projects.I enjoy how you relate HST to modern day!Also,biggest mistake was telling your students that getting an A was impossible, then why try&#63;&#63;&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2004<br>Class Name: HST218<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a good professor, but you must work hard to get an A.  Only take this class if you are a serious student.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2004<br>Class Name: HON103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>VERY knowledgable in history, and very interactive, but I'm not good at speaking in class discussions, so I don't feel I'm getting enough out of it, which is my fault I know.  Still, be sure you talk a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: HON102<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Difficult class, the man is hilarious though. The papers were difficult topics and did not really relate to what he lectured on. He grades very hard I thought. Other than that, he is funny.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2003<br>Class Name: HST218<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Talks the entire time, so if you usually sleep in class you'll be sound asleep in this one. He is very knowledgable and makes you feel comfortable in answering questions in class. Great personality and sense of humor.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2003<br>Class Name: HIS101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice guy that tries REALLY hard.. history is just boring. Be careful though--he grades harder than one would expect. You have to force yourself to pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2003<br>Class Name: HST282<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this class is reeeeally boring. i thought i was gonna fall asleep in every class. Hes a nice guy, and he tries hard, but it doesnt always work. Easy&#63; hard to say. yes IF u prepare for the tests, if not ur screwed.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2003<br>Class Name: HST218<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good sense of humor, great knowledge of history</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2002<br>Class Name: HON1023<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

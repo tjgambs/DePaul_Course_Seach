@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Stephen K Koerning</h1><hr><div><h2>Overall Quality: 4.51<br><br>Helpfulness: 4.47<br>Clarity: 4.56<br>Easiness: 3.38</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/29/2011<br>Class Name: MKT398<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Terrible & Confusing grading system. He could careless about his students. Horrible professor! AVOID HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: MKT315<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Be prepared for a lot of WORK!i assure you if you have slacked of at all at Depaul you will not here. great stuff that he teaches you, very helpful explaines and rexplaines everything. speak up if you dont understand something. tough grader</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2008<br>Class Name: MKT300<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Ok...yea, nice guy.  But honestly he is a hard grader!  I did the extra credit, came to class everyday, did the project (basically on my own) and still got a C+...Study study study...you have to!  Or prepare to do poorly!</div></div></div><div id="container" class="review"><div id="left">Date: 09/15/2008<br>Class Name: MKT315<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>lot of work!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2008<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great professor, a lot of work, but it helps you apply your knowledge to real life. Very clear, passionate about his subject. I ended up with low grade, because I am not a good test taker, and I hate it when entire exams are multiple choice. If you're marketing major, then do take him. He is great!</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2008<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a great teacher. Very helpful, smart, hands on, but a hard grader. The project is a lot more work than you think, so don't put it off. Do the extra credit, it got me from a B to a B+.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2008<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher.  For a class I was not interested in he made the material bareable.  Offers Extra credit and exams are relatively easy.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2007<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great professor. Really knows marketing and if you put in the effort you will really learn.Do the extra credit it's so easy and really helps. Take him!! You have to come to class but class is fun and you learn a lot and its not boring.I would take him again for any class if I could.Definetly recommend but don't take if you want to slack.</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2007<br>Class Name: MKT301<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's a nice professor and all but he is a HARD grader. Concentrate on the midterm and final don't take it as a joke it's a big part of your grade! Know the concept and terms- its more than notes you have to read. So don't think you'll get by with notes. I got a C- and I worked hard, people in my group slacked for the project.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2007<br>Class Name: MKT310<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very knowledgable teacher.  Engages class.  A good amount of work (3 mini projects, one group project and then midterm and final) all of which aren't too bad if you make the effort.  Also offers extra credit.  Interesting class.  Will definitely take him again if I can.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2007<br>Class Name: MKT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i love koernig =) he is the BEST!!!! he's a professor that really cares for his students. make time to know him!</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Steve is AMAZING! Wow, he makes class sooooo much fun and brings real life examples into the classroom. TAKE HIM IF YOU CAN! He's fun and funny and sooooo willing to help every chance he can get! He really cares about his students and their success. Grade is distributed amongst little projects and tests. Great class..one of my favorites! Him too!</div></div></div><div id="container" class="review"><div id="left">Date: 12/28/2006<br>Class Name: MKT315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was the hardest class I have ever taken at DePaul, but the most useful. He is a great teacher but be prepared to do hours (3-4plus) of work each week.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2006<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I love Steve's enthusiasm.  He really is a good teacher.  The tests are straight from the powerpoint so there is really no need to purchase the book.  The mimi projects and final project are easy and straight forward.  I highly recommend this teacher.  He actually enjoys teaching and is very helpful. I learned a lot from his class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: MKT315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Steve is very knowledgeable and very wnthusiastic about the material.  Send him drafts of your tool summaries before they are due; he will always help you out.  He is always available to help out with anything.  The group project is a lot of work; but fun and rewarding.  Take home final is a lot of work.</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2005<br>Class Name: MKT310<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Don't take him.  I did good on the midterm and final but ended up with a C in the class.  Gave my group a D- for the final project w/o any explanation.  Watch out.  May be biased toward certain students.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Exams all from Powerpoint slides. He does give three mini project assignments. Group Project was very fun and you do learn a lot. Class time does seem to fly by. Take him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Koerning is a pretty cool teacher. If you don't like PowerPoints don't take him because that is all he uses. The midterm and final were pretty easy. Group project does take a long time, but you learn a lot from it. Allows 5% extra credit on your final grade for doing article summaries.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>EVERYONE should take him. he's awesome. he's funny, smart,and cute. he makes the time fly. material is fun and easy. tests he only makes up by power point slides. Its not hard at all. Group project is a lot of fun. TAKE HIM, he's the best proff i've had at Depaul.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This was one of my favorite classes.  I also wanted to change to be a marketing major after taking his class. I would recommend him to anyone.  He really gets you interested in the class.  Offers extra credit and his assignments are not to bad.  The group project takes a lot of time but you actually learn a lot from it so it's worth your time.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class wan't hard, lots of HW the first couple weeks but its really easy.  Tons of Extra Credit, one group project.  Exams not tricky, combination of book and lecture.  He does what he can to keep it interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His class is anything BUT boring.  Very nice prof. ... always open and friendly. If you go to class, you'll have no problems with the tests and homework.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He gives lots of extra credit assignments, but he never showed up for the final, and we had to wait an 1/2 hr before someone came to give us the test.  Take someone else, the class is BORING!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/18/2005<br>Class Name: MKT315<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Class isn't meant to be easy; pay attention, do your work - and you will do really well. He is extremely personable and is always willing to help his students. Show him respect and he will do the same for you.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2005<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is so adorable. Go to class pay attention & the class is easy. Very helpful if you dont understand- but that wont be a problem. Take him hes hot:)</div></div></div><div id="container" class="review"><div id="left">Date: 11/02/2004<br>Class Name: MRKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>HOT HOT HOT HOT HOT HOT HOT HOT oh, and a good teacher, helpful and enthusiastic about his job.  do well on the presentations.  do the extra credit (it helps a lot) and study for the mid term and final. tests were from lecture notes.</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2004<br>Class Name: MKTG310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i think i might have been in the class with the last person...t Two groups were 20 minutes late for the big presentation on the last day of class...he didn't really change at the end, he just let the late groups know they were rude!!! overall pretty cool</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2004<br>Class Name: MARKETING<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a ok teacher ,the way his class is setup seems like very easy but its not, and he becomes a different person after his evalution.so be carefull when you take him.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a good teacher. He enjoys what he is teaching and makes it fun. He makes his expectations very clear.  Go to class and you'll do fine. He's cute too!</div></div></div><div id="container" class="review"><div id="left">Date: 06/24/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>good teacher, he's still new. very clear, don't really need the book, exams are not as easy as you would think, but go to every class and study the powerpoints and you'll do fine. do the group project by yourself- it's so much easier! Easy A and he's hot</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent teacher. Interesting class. But I thought his exams where much harder than what one expects.Youll do fine if you pay attetnion in class and read the book but tough to get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a really good teacher! The tests are harder than you think they are going to be, but they are not bad if you read the book! I didn't think he was anal or unfair in grading. He is very clear on what he wants. He makes class interesting. He's cute too</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher! Treats you like an adult and expects you to be prepared. Thats not a bad thing. Totally willing to help. He is very fair. He does not take things out on the class. I think everyone should take him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>cool guy, but is an ass when you have to do your presentations.  he's also too critical at grading stuff and has to have it his way all the time. oh, and he was upset one time and totally took it out on the class, on the day of my presentation!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is the greatest teacher I have ever had.  He is young and funny.  Test are not very hard but you have to study.  Gives extra credit and is not a tough grader.  Great teacher.  I totally recommend him!</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. He's is really clear on his expectations. His test are not bad if you study. He is always willing to help. One of the best teachers. Cool guy and not bad to look at.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Wow! Probobly the best professor that I've had!!  Don't know where to start-He is very helpful and clear about what to do and to expect. The tests are quite easy, class was ALWAYS a blast, and he has the greatest sense of humor. Get yur A!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2004<br>Class Name: MKT310<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class can be boring at times because it usually consists of lecture on PP slides, but he adds comic relief.  Assignments (4 of them total) are fairly easy, but make sure you start on the final project early!  2 tests (Midterm and Final) are not too hard</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>awesome teacher..gives great examples..class is fun and he makes it exciting!! the fact that he's a cutie is a plus too..nice to look at and listen too!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very punctual, be on time to class and w/ H.W. Mini-Proj's are easy but have to read BK for midterm and final. Take advantage of the extra credit(5%+ grade), he talks about it at the beginning of class but no one does it till the end when it's too late.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ok, he is a good teacher, you need to study as well. He is verrrrrrrry anal about things. He will cut points for very small things. 4 mini projects one large, but he won't give you time to get to know your group, PAIN! Late 4 ur presnt and u cn't give one</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sooo helpful - VERY understanding about certain horrors of group work.  Fair, but make sure that you read the book for the tests.   I'm so tired of people thinking that they'll do well in a class simply by showing up.  he's funny too.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2004<br>Class Name: MKT310<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Lectures are boring/dry (powerpoint slides).  The midterm and final are not that easy.  The miniprojects are easy but he takes off points for small things.  He is very picky and anal. He does not like giving A's at all.  So I suggest you DON'T take him!</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2004<br>Class Name: MKG310<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>OK prof, lectures were fine and interesting, but exams are very hard. Didn't give enough time for the groups to break up, need as much time as possible.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2004<br>Class Name: MKT310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He genuinely cares about his students. You do about 4 mini 1 page papers. You have a midterm and final. He makes it seem like the tests are gonna be a piece of cake but you do need to study.  The midterm was 20%.  Plus one group project but it is fun!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

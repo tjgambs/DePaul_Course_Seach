@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Scott Erlinder</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 4.2<br>Clarity: 3.6<br>Easiness: 2.9</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: DC210<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>He knows what he is talking about, but is not a good teacher for this class. He is very documentary style and this was taken at Cinespace studio where we did not get to use the stage and equipment much. I learned more from the students that work there than from the teacher. </div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: DC377<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>I have had Scott at least three times. He is an excellant teacher and if you need help outside of class he is always willing. I find that students who come in with the I make iphone movie attitudes will bump heads with him. It is a respect thing. He is full of knowledge and I recoomend that you strike up a conversation with him during the breaks.</div></div></div><div id="container" class="review"><div id="left">Date: 08/05/2013<br>Class Name: DC274<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Funny. Also very knowledgeable in the field of cinematography, and image optics. This is a science class, but you'll spend most of your time studying the theory of image optics, and less time practicing it. None the less if your a filmmaker the information is invaluable and truly fascinating. You'll learn technically how certain shots are achieved.</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2013<br>Class Name: DC375<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Scott really helped me with some tough technical problems I encountered with various projects, but never held my hand and let me do my thing. A real resource at DePaul compared to others.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2013<br>Class Name: DC371<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very knowledgeable and willing to help anyone with questions.  Probably one of the top classes I've taken at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2011<br>Class Name: DC275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Knowledgeable</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2011<br>Class Name: DC375<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Scott knows his stuff. He integrates design theories with the science behind it. It's all current and critically examined with reference to various works, past and present. Some may not like tech aspects, but maybe they need to realize that these are simply modern tools for new mediums and the tried and true essential principles of light and glass.</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2010<br>Class Name: DC274<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I just don't think teaching is his strong suit. Good at what he does, maybe. Just not an easy person to get along with. Can't say much more.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2009<br>Class Name: DC274<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I honestly can't believe how many people bash this professor.  Scott cares about his students.  It's obvious because he makes his lectures hard and RELEVANT.  Who would've known we would actually have to study here at depaul.  Suck it up and study so you can be prepared for your career.  That's all he's trying to do.  Pick his brain when you can.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2009<br>Class Name: DC275<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Lectures were a little boring to sit through and a lot of the topics and techniques he covers are also taught in lower level classes so its a decent amount of review.  However he is a great resource so make the effort to talk to him and/or meet him outside of class so he knows you are really interested and he will be of great help.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2008<br>Class Name: DC225<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Telling students not to listen to ratings defeats the purpose of this sit. Did you ever thinkg that some students might agree with your opinion of Scott and it has nothing to do with laziness&#63; Personally, I think he isn't a very good teacher. If you challenge him, he becomes defensive and holds a grudge. Hopefully they don't resign him. AVOID!</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2008<br>Class Name: DC901<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Having Scott as a resource is invaluable.  He wants you to do good work and not make an ass out of yourself when you go out professionally. If you don't take advantage of Scott's knowledge you are wasting your time in school.  He keeps up to date with all of the new technology, and understands it!  ignore the bitter students who didn't do the work.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2008<br>Class Name: DCHD<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Prof. Erlinder is a very useful resource and will do everything in his power to help students when they ask for it. His classes are difficult and kind of a lot to swallow, but talking to him outside of class is a simple way to shine some light on confusing ideas.</div></div></div><div id="container" class="review"><div id="left">Date: 06/25/2007<br>Class Name: PRODU2<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Digital Cinema needs a new cinematographer.   He's incomprehensible and unmotivational.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2007<br>Class Name: DC215<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Took Editing w/Scott. The class was a little dry, but Scott was very helpful outside of class. I did most of my editing outside of class. He knows a great deal about Cinematography. One of the better profs in DC. His assignments were a little vague and unclear at times, but he corrected this later.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2007<br>Class Name: DC375<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Scott is a man who knows his stuff.  The only recommendation I would give to him would be to try and explain things in &quot;lay man's&quot; terms a bit more.  Sometimes he speaks a little advanced, but he is EXTREMELY USEFUL AS AN OUT OF CLASS TUDOR!  He cares people, just ask him a question and he loves to help.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2007<br>Class Name: DCHD<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Knows his stuff. Isn't great at lectures, but makes up for it with knowledge (ASK QUESTIONS!) Packet is VERY helpful and offers a pretty up to date insight on some very nerdy tech stufbut study for exam hard. Very accessible, and I can see how his attitude can be perceived as 'ass-like' but honestly that means you have low self esteem if u think so</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2006<br>Class Name: DC278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I'm actually taking Scott's special effects class right now.  I had him for 3 of my previous DC classes including and cinemetography and editing.  He really know his stuff when it comes to cimentography.  I reccommend him to anyone majoring in Digital Cinema</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: CINEMATOGRAPHY<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Scott is awesome. Read the packet, check out the equipment. Make your stuff look good.  Subscribe to the hi-def magazines, research out of class.  Ask him questions, he really knows a lot.  I can't wait to take another class from him.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2005<br>Class Name: DC275DC375<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Scott Erlinder is a terrible teacher. He doesn't care about the students or their learning. He is only interested in getting equipment for his own personal use by teaching at DePaul. He is perhaps the most unprofessional teacher I have ever met. I would be suprised if he even had a college degree. His exams are ridiculous</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: CINEMTOGRAPHY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this guy is awesome. study hard and read his awesome packet.  get into your projects and make them look good. you should love this class if you love digital cinema or the field you are entering into.  This guy is really smart when it ocmes to the techs..</div></div></div><div id="container" class="review"><div id="left">Date: 01/13/2005<br>Class Name: <br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor has an attitude issue. Frankly he just comes off as being an ass.</div></div></div><div id="container" class="review"><div id="left">Date: 01/11/2005<br>Class Name: CINEPRAC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Scott knows his stuff. Ill take as many classes as he can offer.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2004<br>Class Name: DC<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The guy rocks. He knows his stuff and is willing to give you his time to help on anything you need.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: CINEMATOGR<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>this man totally knows his stuff.  and he is so damn creative.  all i have to say is &quot;that's so sexy&quot;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Kalyani Menon</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.9<br>Clarity: 3.8<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/16/2015<br>Class Name: HON104<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: A-</div><div id="right"><div>Three papers make up your entire grade. Very difficult grader. We had thought-provoking discussions in class but she is overall a very serious professor. I was interested in the general content of the class (conflict and religion, focusing on three religions) but it was hard to get a good grade on the papers, which made the class less enjoyable.</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2015<br>Class Name: REL305<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Dr. Menon is an amazing prof. If you're an REL major, you have to have her. The readings in 305 are dense, but its also a 300-level so that's expected. She will totally help you with ANYTHING if you're struggling or need help synthesizing ideas. Meet with her as much as possible if you can and you can easily get an A! READ ALL THE READINGS!</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Menon has a great syllabus that gives you a large overview of world religions. If you do the readings and participate in class, you'll learn a lot and do well. Definitely go to her office hours for the paper assignments, she's extremely helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2014<br>Class Name: REL242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Dr. Menon is great--she is so incredibly intelligent in her field & will do a great job imparting this knowledge to you. This is not a blow-off class. Her paper assignments require critical thinking & effort. The readings are dense, but well-chosen, intriguing, & informative. Participation is key. You will learn so much! Definitely recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2014<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Dr. Menon is one of my favorite professors at DePaul. She is very professional and expects a lot of work, but she is more than willing to help you out and the material is very interesting. I highly recommend her as a professor.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2014<br>Class Name: HON104<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Don't take this class if you're not willing to put in like three hours of work a week. i like her but this class caused too much stress. I do not recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2013<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Doctor Menon was an amazing teacher. She offers a perspective completely different from what many others could offer. She is interesting to listen to and the material is fascinating. The class is definitely best when people have read and participate because she loves discussion. She is a relatively easy grader as long as she can tell you read. LOVE</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2013<br>Class Name: AAS222<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Super great prof! Very knowledgeable in the subject matter. Her passion kept me interested throughout the quarter. I would highly suggest her if you're serious about the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 12/15/2011<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Menon was really amazing. She's incredibly intelligent, has an incredible amount of knowledge on her subject, and is a very gifted orator. Her lectures were always fascinating. She does have a bit of understated, dark humor which just makes the class that much more enjoyable. I looked forward to this class every week.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2011<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Menon is a great teacher, you'll definitely learn a lot from her class. However, you need to stay on top of the readings to do well in the class, so if you're not a fan of weekly readings you might want to reconsider taking her. If you're up for the work, I definitely recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2011<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>One of the best classes and professors I have ever had. She is so brilliant and  so helpful. TAKE THIS CLASS. It is very hard but so so so so worth it. You have to go to class and YOU HAVE TO READ SHE CHECKS. If you participate, read, and think you will do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>REL260 was a great experience. The books were excellent with an interesting take on religious violence. She's super knowledgeable, funny, cute and very engaging. Discussion is encouraged and interesting. No tests, just papers, generally 5-page max. Would definitely recommend, especially as a religion credit for a PSC, ANT or SOC major.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2010<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher! She is very clear and sometimes she can be strict in doing the readings. Her papers are exactly what we discussed in class. So if you pay attention and show up you will get atleast a B.</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2010<br>Class Name: REL260<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Interesting class. There are no exams but she is very strict on papers and there is quite a bit of reading.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2010<br>Class Name: REL221<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you're someone who want to get around doing real homework and couldn't care less about religion you'll likely hate this class. But she is pretty awesome and knowledgeable. Makes the class sound scarier than it is. It's three books and three papers. If you're intelligent and contribute to discussions you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2009<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved this class. it really opened up my mind and all the material was relevant to the world today and interesting. She knows what she is talking about and lecture and discussion was always interesting. I would love to take another class she's teaching sometime. You wont regret taking her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2009<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She said she was a tough grader but I always got the maximum points on anything I turned in.  She really likes participation and to ensure a good grade you gotta at least throw out some critical thinking questions.  She is HILARIOUS in a very sarcastic, dry humor sorta way.But then again I was always soo interested in the subject matter.Great class</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2009<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>she knows her stuff! and she is awesome and loves what she does and is very very helpful if you need help. she admits that she is a hard grader and the class will be difficult but dont get scared off like i almost did, she helps you get through and in the end it really is a GREAT class</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2009<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>AWESOME! i loved her. She talks to whole time but she's definately a story tell and she has a sense of humor. Some small easy assignments and a couple papers. Everything she says is interesting. Attendance is almost mandatory but its not bad being there. I'd suggest her to anyone...</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2009<br>Class Name: REL260<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Make sure you are ready to work if you take her class. She's a great teacher and even though she is tough, you will learn a lot from her. This class really taught me a lot about a part of the world I had little knowledge about. I would recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2009<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher, and really interesting topics.  Just keep up with the reading and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: REL242<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class is interesting and pretty easy. 2 essays, and 2 quizes. As long as you show up to class, its really easy. Prof Menon is also a great teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2008<br>Class Name: REL242<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Really great teacher, easy to reach , helpful. take-home mid-term and final . Two informed quizzes. thats about it. anybody taking this class and wants books contact me, Thanks. 630-344-2867</div></div></div><div id="container" class="review"><div id="left">Date: 08/20/2008<br>Class Name: REL268<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took Menon for Women and Religion not knowing much about either.  I was competel fascinated by everything she had to say. She is very thorough and outlines her expectations right away. Yes there is alot of reading but all of it was interesting and you discuss it each class so everything is understood.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2008<br>Class Name: REL278<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you're taking her class to fulfill a gen ed, GET OUT!  There are easier gen eds than hers.  There is a lot of reading .  Some of it is interesting.  The class is based on 3 papers and 10% attendance.  She wants everyone to learn, but if you don't like the subject, don't take the class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2008<br>Class Name: REL260<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She isn't easy, gives you a huge amount of reading and some of it is hard to digest. But she tells you this up front, she is crystal clear on all everything and is a very talented teacher. She can be surprisingly funny at times and her knowledge about the subject was incredible. She is still figuring out her teaching still, will be great someday</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2008<br>Class Name: HON104<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's very knowledgeable, and the grade was based entirely on 3 different papers.  I really enjoyed this class, though. It was very interesting, and I highly recommend this teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2006<br>Class Name: PAX200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Really disliked her. Aside from her frigid personality, she required ridiculous mandatory trips with a peace/religious organization (30hrs! ), grades oddly and inconsistently. She made interesting material uninteresting. If you have other options take them.</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2006<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor, great class! Read, participate in the discussions, and know how to organize a paper.</div></div></div><div id="container" class="review"><div id="left">Date: 03/22/2006<br>Class Name: HON104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was very helpful. Wasn't as easy as I expected.  Keep up on the readings and pay attention in class and you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2006<br>Class Name: REL142<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Thought she was going to be hard on the first day, she was a totally easy grader and the class was a breeze.  Take good notes, they're all you need for the exams and papers!  You don't really have to do the reading, just go to class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2005<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This is the kind of professor that simply expects you to get involved in the class...is that so much to ask for&#63;  Write a few papers, take no tests, and get involved in class discussions.  I like her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2005<br>Class Name: REL142<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>great class. great teacher, very hard, doesn't take any crap</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2005<br>Class Name: REL142<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 09/24/2005<br>Class Name: REL242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's super serious, so be ready to work. If you're a good writer, you'll do fine. Powerpoints are posted on blackboard. Interesting reading. Participate in class so she gets to know who you are. Beware of group project.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2005<br>Class Name: REL263<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I took &quot;Religion and Political Conflict in South Asia.&quot; One of the strongest and most fascinating courses I've taken at DePaul. Amazing readings. Excellent balance of lecture and discussion. Knows how to keep conversation on track while synthesizing even the most inane comments. This course ignited my ongoing obsession w/ the Hindu Right.</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2005<br>Class Name: HINDUTHOUGH<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>If you have no idea on Hinduism, then don't take her. Only take her if you have a good idea on Hinduism. For example, Brahim&#63; Atman&#63; if you have no idea what that means, then don't take her. Only take her if you know a good amount of hinduism. Very tough grader, went to the writing center and still got B's on my paper. &quot;I don't give A's&quot; (Menon)</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2005<br>Class Name: REL242<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Shes strict on attendance.  Shes really not that hard, her tests are very straightfoward, generally vocab identification and 2 essays which she tells you will be on there.  Papers are a little harder she doesnt really say what she wants clearly.  She is safe to take to fit your schedule or if no one else is available.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2005<br>Class Name: REL242<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very hard teacher, she expects you to know every single detail and grades very hard.</div></div></div><div id="container" class="review"><div id="left">Date: 05/16/2005<br>Class Name: REL242<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is 100% unbiased. I did not like, however, that she was able to take a subject as interesting as Hinduism and make it dry & boring (especially surprising b/c she is a Hindu herself). I felt she could have offered more personal accounts, or more of a Hindu perspective. She grades pretty tough on papers (B-) but received A's on the tests.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2005<br>Class Name: REL260<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I ignored the mediocre rating for this prof and took her anyway.  MISTAKE.  I did the readings, carefully wrote pretty good essays, and went to all classes but one.  Barely got a B-.  Unless you're perfect, don't expect an A, or even an A-.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2005<br>Class Name: REL260<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>find a better class for your money. Getting an A is almost impossible. No tests,tho. u'll do well in the class if ure really interested or if youre already educated on the subject. If not, good luck. She doesnt engage the student enough, can be rude. Very tough grader. Take an easier rel req.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2005<br>Class Name: HINDU<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Menon gave me a good grade and didn't work me too hard. Her classes and readings are interesting.  Just talk in class and do OK on the papers.  You'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2005<br>Class Name: REL242<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>sucks dont take unless You have nothing better going on in your life.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2005<br>Class Name: 224<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome professor. Be ready to work though, because she takes crap from no one. Highly recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2005<br>Class Name: REL221<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I really did not care for her at all.  I thought her lectures were boring and her way of teaching was awful.  I dreaded going to this class, she did not entertain or grab my attetion in any way.  Her papers seemed to be easy until you get it back and she did not like anything you wrote.  Don't take!</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2005<br>Class Name: REL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent teacher. Her lectures are very in-depth, intelligent and she gives a multi-faceted view of the conflicts involved. Don't know where people got that she is trying to get you to &quot;buy&quot; Hinduism, b/c in this class she's v. unbiased. Her accent is fine. Learned a lot and loved it. V smart woman</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2004<br>Class Name: REL221<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class was not bad at all. Three papers and no mid-term or final. The paper topics were a little unclear at first, but if you to go to her and ask her what she wants, she tells you pretty much what your paper should consist of. You don't have to take notes b/c there are no quizzes or tests.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2004<br>Class Name: REL220<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Has such a terrible accent, you simply can't understand her if you don't stand right next to her.    She constantly boasts around the class.  She expects you to do basic field work! Its a gen-ed class! BE CAREFUL IF YOU TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2004<br>Class Name: REL221<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this class was sounded interesting though quickly vanished. There is reading to be done...not a lot. she likes everyone to participate, goes out of her way to call on people. very strict on attendance. three papers no final.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2004<br>Class Name: REL221<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She was not a good professor. Her lectures were always boring & so many people around me were falling asleep all the time!! Her accent is hard to understand too. She doesn't make class interesting. She's not a good teacher at all.</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2004<br>Class Name: REL221<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She seem like a good teacher but she is very bad at doing lectures. She soundd like a inexperince highschool student and doesn't end a sentence with out say (UM or UH).</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2004<br>Class Name: REL221<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I read 3 books for the class, one about Hindus, one about Blacks, and one about Laoiation.  She spends most of the quarter on the Hindu book, expecting you to buy into Hinduism.  Don't take, her ego is to BIG!</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2004<br>Class Name: REL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Uhhhhhh, NO!</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2004<br>Class Name: REL242<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>WOW i love her</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: REL242<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>awesome</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2004<br>Class Name: REL221<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Chose interesting books to compliment class. No final or midterm, just three papers which she outlines carefully so you know exactly what to write and what she expects. A tough grader, I worked hard for a B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: REL242<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>if you show up, she teaches a good class with a moderate workload. If you like being late or skipping, drop her while you still can.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: REL242<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is a great teacher.Very knowlegable when it comes to the topics brought up in class.I enjoyed the class very much.</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2004<br>Class Name: HINDUISM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>she is real nice. easy grader, just listen, take notes, and as long as you pay attention, the exam is easy, the papers are easy, class is only 100 points, so every point counts. Very nice lady.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2003<br>Class Name: REL242<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Participation grade is based in attendance.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2003<br>Class Name: REL242<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>hindu's tough. there are only 100 points, and she takes them even for tardiness.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie

@@ -221,13 +221,193 @@
 				<br />
 				<hr>
 				<div id="overlay">
-	    <div id="advanced-container">
+				<div id="advanced-container">
 	        <form action="../search.html">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
 	    </div>
 	</div>
 	<div id="help">
@@ -248,6 +428,16 @@
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>Valentina Tikoff</h1><hr><div><h2>Overall Quality: 3.72<br><br>Helpfulness: 3.91<br>Clarity: 3.53<br>Easiness: 2.24</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/22/2015<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Professor Tikoff is super nice and is obsessed with history. She asks you to read and answer source questions - do them. Do the readings and prove that you read during discussion. She appreciates thoughtful participation. If you need help with papers, go to her office hours and talk about them. She's happy to help so take advantage of that. </div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2014<br>Class Name: HST298<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>Professor Tikoff? More like Professor TicksMeOff. I am really questioning my major because of her and this class. She is pretty disorganized and makes you read SO much, it's almost unbearable. The way she speaks just annoys me. She means well, but she seems very condescending when you talk to her. I recommend you avoid her at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2014<br>Class Name: HIST297<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I had to drop this class. I only started it because there was nothing left when I registered. She is a nice person but is so scattered. Huge amounts of reading and primary documents. I was hugely confused from day 1. I personally need a teacher who is organized. If you do too, don't take her as a teacher. You will go mad!</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2011<br>Class Name: HST172<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Miss Tikoff broke my heart. B+ :'(.Ha- Anyways, she is extremely intelligent and passionate about the material. Book is very vague and readings are very long. Essays are manageable but complicated. If you do take her, don't give her a hard time and participate. She's a very warm person and will help you out after class if you did not understand.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2011<br>Class Name: HST172<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Tikoff is really interesting. She does not choose the best books though. She loves class discussion and lecture. Her tests are difficult, but she drops your lowest one, and you have two chances for the paper. She is really smart and knows her history.</div></div></div><div id="container" class="review"><div id="left">Date: 12/20/2010<br>Class Name: HIST172<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's a very interesting woman. Very scatter-brained, but extremely intelligent. She really knows her material and teaches it pretty clearly. Her lectures were very helpful; but I, personally, hated the text books.  She does give a lot of reading, but with the lectures it's a pretty simple class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2010<br>Class Name: HST172<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Loved her! Very passionate about the subject, full of information. Class is fast-paced with lots of reading but worth it. She's very nice and always willing to help out.</div></div></div><div id="container" class="review"><div id="left">Date: 01/23/2010<br>Class Name: HST335<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Circle time, all the time. We sit around and listen to students present on material they haven't read. Total garbage, I want my money back.</div></div></div><div id="container" class="review"><div id="left">Date: 04/25/2009<br>Class Name: HST271<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Tikoff is by far my favorite teacher at DePaul.  Her class was challenging, but very rewarding.  Be prepared for a lot of reading and great lectures!  This class will give you a very good understanding of the history of France up to the Revolution.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2009<br>Class Name: HIS271<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Tikoff is great!! ,Very passionate, energetic, and knowledgeable about the French Revolution. Lots of reading,but interesting class discussions. I loved this class and enjoyed Professor Tikoff lectures.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: HIST271<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I have never met a more dysfunctional professor. All of her lectures are led by students, and she's a huge fan of &quot;circle time&quot;. She will sit there in silence until someone makes a comment about the reading, which there is a LOT of. Don't expect to get anything back on time. I'm still waiting for my grade in the class. She's nice.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2008<br>Class Name: HIST332<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor is very clear with objectives and is very passionate about subject 9(in this case French Revolution).  There was a fair amount of reading, but it was all relevant and she did her very best to ensure that every student had a chance to do very well.</div></div></div><div id="container" class="review"><div id="left">Date: 08/11/2008<br>Class Name: HIST211<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The need for a Jewish state seems much, much clearer.  Her lectures were empowering, inspiring and transforming.  It has questioned and shakened my stance as a believer, a women, and an American in a the world of today. I am forever changed and I have an appreciation for others more.  I highly recommend taking her courses. (-F. Alam-)</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2007<br>Class Name: HON102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Reading takes up hours and hours of time if it is actually done. Grade is 75% five page history papers (3), 25% participation. Discussions are student lead. Felt lost, uninterested, and couldn't please the professor. She is passionate about what she does, and is a very intelligent woman. The class was, however, the bane of my existence.</div></div></div><div id="container" class="review"><div id="left">Date: 10/04/2007<br>Class Name: HON102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>ok so you're supposed to read stuff, but nobody will, so she's gonna ask the class a question, and the smart kid's gonna answer. rinse and repeat. very nice and helpful but horrible at teaching. makes you teach yourself. lectures seem to be all over the place and don't flow well.hard class. period. read what she assigns!</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2007<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is insanely tough. If you can handle it, then take the class. It was my hardest honors class. All classes are discussions of readings from hw. She's passionate and willing to help, but if you're looking for an easy honors class this isn't it</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2006<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I LOVED prof tikoff!!  She was such an engaging professor who you could tell really loved the subject, but also wanted YOU to love it as well.  She valued our opinion and feedback a lot and while there was a lot of reading, it was worth it! Great class and EXCELLENT professor! She makes learning history a lot easier than most professors!</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2006<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is so tough, but so good. She made me very interested in a class I didn't think I would like much. She is very interested and makes you interested. Plus she's kinda hot in a ****/teacher kind of way. (Very curvy!)</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2006<br>Class Name: IMPERIALSPAIN<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Wow, I didn't know this course was delivered in Spanish too!  It wasn't really delivered in Spanish but Tikoff seemed like she was speaking in a foreign language the entire time.  Her lectures had no direction or organization and she is the epitome of &quot;going off on tangents.&quot;  For someone who doesn't have a prior knowledge of Spain, dont take this!</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: FRENCHREV<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Wonderful lectures, wonderful readings(TONS, though), huge focus on &quot;the argument,&quot; which can be rather frustrating if you don't read 2 or 3 times.  But great class.  She has a great passion for the subject.  If you enjoy history/historiography, TAKE this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2006<br>Class Name: HST297<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There is so much reading in her class...! But quiz and paper grading is fair, she likes what she's teaching and her lectures are helpful. I'm really not into history but I would recommend her as a history teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2005<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Tough to get a read on her.  She does lay out what she expects for the course on her syllabus, but getting the finer points of it is difficult.  She is not always clear when responding to questions about assignments.  She tries really hard, though.  She is engaging in class, she is always available to additional assistance, just unclear sometimes.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2005<br>Class Name: HON102<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The homework isn't fun, but she's very engaging and entertaining.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: HST199<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Professor Tikoff inspired me to teach History and not just study it.  Her class wasn't easy by any means but I worked my ass off for my A and when it was all done I learned so much from her.</div></div></div><div id="container" class="review"><div id="left">Date: 06/30/2005<br>Class Name: HST355<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>SHE IS VERY PASSIONATE ABOUT WHAT SHE TEACH, SHE ASSIGN LOT OF READING. IT IS A VERY HARD CLASS. MEASURE TO DO ALL THE READINGS.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2005<br>Class Name: HISTORY<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Tikoff is really passionate about her material.  She'll squeeze blood from a turnip to get class participation even when there's none to give.  Her tests are fair.  She demands a ton of READING.  Her voice can be annoying.  Fair teacher though.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2005<br>Class Name: ISP101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A class on sugar, what can I say&#63; She assigns a lot of readings, but not too much homework. A couple papers and a group project. Mainly class discussion based. Her voice can get annoying since she's usually the one talking. Not bad, not great.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2005<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's very creative and cares about each student. Her grading is fair, and she gives you lots of feedback. She wants everyone to learn to think critically and cares less about content. I recommend taking her, and definitely go to her office hours when writing a paper, she loves to help you.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2005<br>Class Name: HON202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor, really down-to-earth</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2004<br>Class Name: HST<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have has professor Tikoff for three classes, and although she assigns a lot of reading you learn a lot from her, and she is very easy to talk with. She is very helpful when it comes to questions on projects or topics. I highly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2004<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very interesting class.  A lot of reading but not a ton of homework otherwise.  Teacher is helpful and well organized.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2004<br>Class Name: HON103<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Nice lady, but boring as all h*ll. Dreaded going to her class. Demands too much from students. Way to much reading, even for honors. Calls on people out of nowhere, so make sure you've got your reading on point. Good prof if you enjoy history, i guess.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2004<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent Professor, a lot of reading required. Tests are not hard, and she is very attentive to her students.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2004<br>Class Name: HST217<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: HST211<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's so interseting. Her class is definetly hard, but so worth it. It's a typical college course. I would recommend her. She's so passionate about the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2004<br>Class Name: HISTORY<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very nice but very difficult (especially as a freshman fall quarter).  Material is very difficult to understand and then recall for essay tests</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2004<br>Class Name: HISTORY<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The worst class I have ever had. Tests are all essay based, 3-4 essays in an hour and a half. If you read all of the material which is close to impossible, it doesn't guarantee that you will even get a C on the test. RUN AWAY!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2003<br>Class Name: HST211<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>the worst teacher ever i never want to take history again</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2003<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very difficult class.  Passionate teacher, but way too much info jammed into a quarter.  You'll learn a lot about dead white guys, maybe some about religion, but mostly you'll end up confused.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2003<br>Class Name: HST211<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>the worst teacher ever...demands too much for a 200 level history servey class..avoid her at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2003<br>Class Name: HON103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2003<br>Class Name: HST211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is so passionate about History and wants her students to really understand the subject matter.  She is also willing to go above and beyond the standard to help students.  Lots of reading, but a very interesting class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2003<br>Class Name: HIS211<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>there's a lot of reading for this class, and the class discussions sometimes tend to be boring. do NOT rely on your lectures when studying for exams (they provide only a small fraction of what u need to know). this class is definitely not lecture-based</div></div></div><div id="container" class="review"><div id="left">Date: 01/15/2003<br>Class Name: HON102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>overwhelming brilliance</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2001<br>Class Name: HON103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she knows sooo much and is also really nice. you'll learn a lot!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 					updateCourseCartCount()
+					function creditSearch()
+					{
+						prefix = document.getElementsByClassName('credit-prefix')[0].value;
+						credit = document.getElementsByClassName('credit-input')[0].value;
+						search = prefix.toLowerCase()+'-credits='+credit
+
+						document.getElementById('tipue_search_input').value = '"'+search+'"'
+						document.getElementById('field').submit()
+					}
+
 					function updateCourseCartCount()
 					{
 						var cookies = document.cookie
