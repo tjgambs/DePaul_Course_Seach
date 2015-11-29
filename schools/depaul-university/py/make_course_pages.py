@@ -433,7 +433,19 @@ def create_page(full_name,description,course_url):
 			</h2>
 	    </div>
 	</div>
-<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button><h1>'''
+<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 1 -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-6459268015898332"
+	     data-ad-slot="2063538800"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script><h1>
+	'''
 
 	html += full_name.replace(';','')
 	html +='</h1><h2>'
