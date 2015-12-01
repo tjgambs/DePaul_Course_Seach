@@ -14,7 +14,7 @@ def format_data():
 					ret = []
 					for i in range(len(d['isbns'])):
 						number = isbnlib.to_isbn10(d['isbns'][i])
-						name = ','.join(d['names'][0].split(',')[:-1])
+						name = ','.join(d['names'][i].split(',')[:-1])
 						if not number: 
 							number = ""
 						url ='http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&tag=mock09-20&linkId=EMBDL7BV7IXRB44G'
