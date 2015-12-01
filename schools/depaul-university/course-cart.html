@@ -769,6 +769,7 @@
 		$.ajax({
 			url:'books.json',
 			type:'GET',
+			datatype: 'json',
 			
 			success: function(response)
 		    {
@@ -788,7 +789,6 @@
 			    			name = data[numbers[i+1].innerHTML][j][2]
 			    			isbn = url.split('/')[5]
 			    			html += '<h2><strong>' + status + '</strong></h2>'
-			    			console.log(url)
 			    			if(url != '#')
 			    			{
 			    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2></a>'
