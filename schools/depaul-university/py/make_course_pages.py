@@ -562,7 +562,7 @@ def create_page(full_name,description,course_url):
 		    	{
 		    		for(var j = 0; j<list_overall.length; j++)
 		    		{
-		    			if (overall != undefined || overall != '0' || overall != '0.0')
+		    			if (overall.length != 0 || overall != '0' || overall != '0.0')
 		    			{
 		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
 		    				{

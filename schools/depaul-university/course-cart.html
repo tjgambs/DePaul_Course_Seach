@@ -432,6 +432,9 @@
 			</h2>
 	    </div>
 	</div>
+	<div id="books">
+	    <div id="books-container"></div>
+	</div>
 	<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
 	
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -456,7 +459,10 @@
 			<h2>Your course cart is currently empty. Search for courses <a href="search.html" style="color: #333;">here.</a></h2>
 		</div>
 		<div id="body"></div>
-		<div style="padding: 2%;">
+		<div style="padding-top: 2%;">
+			<button class="generate" id="displayBooks" onclick="books()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Course Books</button>
+		</div>
+		<div style="padding-top: 2%;">
 			<button class="generate" id="mocksched" onclick="createCalendarData()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Generate Mock Schedule</button>
 		</div>
 		<div>
@@ -490,6 +496,29 @@
 		}
 		document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
 	}
+
+	function books() 
+	{
+
+
+
+		el = document.getElementById("books");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+
+	$('#books').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#books-container') || clicked.parents().is('#books-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("books");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
 
 	function help() 
 	{
@@ -544,11 +573,13 @@
 				classes.push(temp)
 			}
 		}
+		document.getElementById('displayBooks').style.visibility='hidden';
 		document.getElementById('mocksched').style.visibility='hidden';
 		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
 		document.getElementById('empty').innerHTML = '<h2>Your course cart is currently empty. Search for courses <a href="search.html" style="color: #333;">here.</a></h2>'
 		if (classes.length > 0)
 		{
+			document.getElementById('displayBooks').style.visibility='visible';
 			document.getElementById('mocksched').style.visibility='visible';
 			document.getElementById('empty').innerHTML = ''
 			html = '<table id="myTable" class="tablesorter">'
@@ -733,12 +764,60 @@
 	    }
 	});
 
+	function load_books()
+	{
+		$.ajax({
+			url:'books.json',
+			type:'GET',
+			
+			success: function(response)
+		    {
+		    	data = jQuery.parseJSON(response);
+		    	names = document.getElementsByClassName('name')
+		    	numbers = document.getElementsByClassName('number')
+		    	html = '<h1 align="center">Required Books</h1>'
+		    	for(var i = 0; i<names.length; i++)
+		    	{
+		    		html += '<h2>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</h2>'
+			    	if(data[numbers[i+1].innerHTML].length != 0)
+			    	{
+			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
+			    		{
+			    			status = data[numbers[i+1].innerHTML][j][0]
+			    			url = data[numbers[i+1].innerHTML][j][1]
+			    			name = data[numbers[i+1].innerHTML][j][2]
+			    			isbn = url.split('/')[5]
+			    			html += '<h2><strong>' + status + '</strong></h2>'
+			    			console.log(url)
+			    			if(url != '#')
+			    			{
+			    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2></a>'
+			    			}
+			    			else
+			    			{
+			    				html += '<h2>' + name + '</h2>'
+			    			}
+			    		}
+			    	}
+			    	else
+			    	{
+			    		html += '<h2>No Books Needed</h2>'
+			    	}
+			    	html += '<br />'
+		    	}
+		    	document.getElementById('books-container').innerHTML = html
+		    }
+		    	
+		});
+	}
+
 	$( document ).ready(function() 
 	{
 		updateCourseCartCount()
 		formatCookies()
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
     	$(".prefix").select2();
+    	load_books()
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
