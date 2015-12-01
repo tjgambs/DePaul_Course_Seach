@@ -767,13 +767,12 @@
 	function load_books()
 	{
 		$.ajax({
-			url:'books.json',
+			url:'http://mocksched.com/schools/depaul-university/books.json',
 			type:'GET',
-			datatype: 'json',
 			
 			success: function(response)
 		    {
-		    	data = jQuery.parseJSON(response);
+		    	data = response;
 		    	names = document.getElementsByClassName('name')
 		    	numbers = document.getElementsByClassName('number')
 		    	html = '<h1 align="center">Required Books</h1>'
