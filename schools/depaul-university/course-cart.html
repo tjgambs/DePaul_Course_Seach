@@ -787,18 +787,22 @@
 			    			if (status == 'Required')
 			    			{
 				    			url = data[numbers[i+1].innerHTML][j][1]
-				    			name = data[numbers[i+1].innerHTML][j][2]['Title']
-				    			authors = data[numbers[i+1].innerHTML][j][2]['Authors']
 				    			isbn = url.split('/')[5]
-				    			image_html = '<img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a='+isbn+'" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
-				    			if(url.length != 0)
+				    			if(data[numbers[i+1].innerHTML][j][2]!=null)
 				    			{
-				    				html+=image_html
-				    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2><h2>' + authors.join(', ') + '</h2></a>'
-				    			}
-				    			else
-				    			{
-				    				html += '<h2>' + name + '</h2>'
+					    			title = data[numbers[i+1].innerHTML][j][2]['Title']
+					    			year = data[numbers[i+1].innerHTML][j][2]['Year']
+					    			authors = data[numbers[i+1].innerHTML][j][2]['Authors']
+					    			image_html = '<img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a='+isbn+'" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+					    			if(url.length != 0)
+					    			{
+					    				html+=image_html
+					    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2><h2>Author(s): ' + authors.join(', ') + '</h2></a>'
+					    			}
+					    			else
+					    			{
+					    				html += '<h2>' + name + '</h2>'
+					    			}
 				    			}
 				    		}
 			    		}
