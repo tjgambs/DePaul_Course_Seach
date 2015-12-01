@@ -1,8 +1,6 @@
 import json
 import isbnlib
 import glob
-import urllib2
-import json
 
 def format_data():
 	with open('../books.json','w') as output:
@@ -16,7 +14,6 @@ def format_data():
 					ret = []
 					for i in range(len(d['isbns'])):
 						number = isbnlib.to_isbn10(d['isbns'][i])
-						default = {'Publisher': '', 'Language': '', 'Title': '', 'Authors': [''], 'ISBN-13':'', 'Year':''}
 						name = ','.join(d['names'][0].split(',')[:-1])
 						if not number: 
 							number = ""
