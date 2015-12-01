@@ -2,7 +2,6 @@ import json
 import isbnlib
 import glob
 import urllib2
-import time
 
 def format_data():
 	with open('../books.json','w') as output:
@@ -16,11 +15,11 @@ def format_data():
 					ret = []
 					for i in range(len(d['isbns'])):
 						number = isbnlib.to_isbn10(d['isbns'][i])
-						if not number: number = "#"
+						if not number: number = ""
 						url ='http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&tag=mock09-20&linkId=EMBDL7BV7IXRB44G'
 						if not check_url(url):
-							url = "#"
-						ret.append([d['status'][i],url,d['names'][i]])
+							url = ""
+						ret.append([d['status'][i],url,isbnlib.meta(number)])
 					dic[d['title']] = ret
 		json.dump(dic,output)
 

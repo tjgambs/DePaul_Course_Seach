@@ -460,10 +460,10 @@
 		</div>
 		<div id="body"></div>
 		<div style="padding-top: 2%;">
-			<button class="generate" id="displayBooks" onclick="books()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Course Books</button>
+			<button class="generate" id="displayBooks" onclick="books()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Mock Required Books</button>
 		</div>
 		<div style="padding-top: 2%;">
-			<button class="generate" id="mocksched" onclick="createCalendarData()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Generate Mock Schedule</button>
+			<button class="generate" id="mocksched" onclick="createCalendarData()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Mock Schedule</button>
 		</div>
 		<div>
 			<div class="calendar" id="calendar" style="padding-top:1%; visibility: hidden"></div>
@@ -775,7 +775,7 @@
 		    	data = response;
 		    	names = document.getElementsByClassName('name')
 		    	numbers = document.getElementsByClassName('number')
-		    	html = '<h1 align="center">Required Books</h1>'
+		    	html = '<h1 align="center">Mock Required Books</h1>'
 		    	for(var i = 0; i<names.length; i++)
 		    	{
 		    		html += '<h2>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</h2>'
@@ -784,18 +784,23 @@
 			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
 			    		{
 			    			status = data[numbers[i+1].innerHTML][j][0]
-			    			url = data[numbers[i+1].innerHTML][j][1]
-			    			name = data[numbers[i+1].innerHTML][j][2]
-			    			isbn = url.split('/')[5]
-			    			html += '<h2><strong>' + status + '</strong></h2>'
-			    			if(url != '#')
+			    			if (status == 'Required')
 			    			{
-			    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2></a>'
-			    			}
-			    			else
-			    			{
-			    				html += '<h2>' + name + '</h2>'
-			    			}
+				    			url = data[numbers[i+1].innerHTML][j][1]
+				    			name = data[numbers[i+1].innerHTML][j][2]['Title']
+				    			authors = data[numbers[i+1].innerHTML][j][2]['Authors']
+				    			isbn = url.split('/')[5]
+				    			image_html = '<img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a='+isbn+'" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+				    			if(url.length != 0)
+				    			{
+				    				html+=image_html
+				    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h2>' + name + '</h2><h2>' + authors.join(', ') + '</h2></a>'
+				    			}
+				    			else
+				    			{
+				    				html += '<h2>' + name + '</h2>'
+				    			}
+				    		}
 			    		}
 			    	}
 			    	else
