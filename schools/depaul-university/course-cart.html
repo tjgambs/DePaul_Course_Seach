@@ -780,7 +780,7 @@
 		    	html += '<h3><button class="generate" onclick="openAllBooks()" align: center;">Click All Books</button><h3>'
 		    	for(var i = 0; i<names.length; i++)
 		    	{
-		    		html += '<h2><strong>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</strong></h2>'
+		    		html += '<span style="display: block; padding-bottom: 50px;"><h2><strong>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</strong></h2>'
 			    	if(data[numbers[i+1].innerHTML].length != 0)
 			    	{
 			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
@@ -791,26 +791,26 @@
 				    			url = data[numbers[i+1].innerHTML][j][1]
 				    			name = data[numbers[i+1].innerHTML][j][2]
 				    			isbn = url.split('/')[5]
-				    			console.log(isbn)
 				    			if(isbn != undefined)
 				    			{
-					    			image_html = '<dl><img style="float: left;" border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a='+isbn+'" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
-					    			console.log(url)
-					    			if(url.length != 0)
+					    			image_html = ''
+					    			if(isbn != '#')
 					    			{
-					    				
+					    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a='+isbn+'" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
 					    				html += '<a target="_blank" style="color:#333;" href="' + url + '">'
 					    				html += image_html +'</a>'
-					    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h3 style="padding-left:100px;">' + name + '</h3></a></dl>'
+					    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h3 style="padding-left:100px;">' + name + '</h3></a></span>'
 					    			}
 					    			else
 					    			{
-					    				html += '<h3 style="padding-left:100px;">' + name + '</h3></dl>'
+					    				console.log('fdsa')
+					    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg" ></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+					    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span>'
 					    			}
 				    			}
 				    			else
 				    			{
-				    				html += '<h3 style="padding-left:100px;">' + name + '</h3></dl>'
+				    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span>'
 				    			}
 				    		}
 			    		}
@@ -819,7 +819,6 @@
 			    	{
 			    		html += '<h3 style="padding-left:100px;">No Books Needed</h3>'
 			    	}
-			    	html += '<br />'
 		    	}
 		    	document.getElementById('books-container').innerHTML = html
 		    }

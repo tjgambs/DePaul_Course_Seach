@@ -522,7 +522,7 @@
 	});
 
 	$.ajax({
-		url:'https://crossorigin.me/http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery111003276446736417711_1446762506495&q=*%3A*+AND+schoolid_s%3A1389&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows=1000000000&start=0&fl=teacherfirstname_t+teacherlastname_t+averageratingscore_rf',
+		url:'https://crossorigin.me/http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery111003276446736417711_1446762506495&q=*%3A*+AND+schoolid_s%3A1389&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows=1000000000&start=0&fl=pk_id+teacherfirstname_t+teacherlastname_t+averageratingscore_rf',
 		type:'GET',
 		async: false,
 		
@@ -549,6 +549,10 @@
 		    			{
 		    				if(list_overall[j].innerHTML.indexOf('<a style')==-1)
 		    				{
+		    					//url = 'http://www.ratemyprofessors.com/ShowRatings.jsp?tid='+String(i.pk_id)
+		    					//list_overall[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ overall + '</a>'
+				    			//list_firstn[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ first_name + '</a>'
+				    			//list_lastn[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ last_name + '</a>'
 				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ overall + '</a>'
 				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ first_name + '</a>'
 				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ last_name + '</a>'
