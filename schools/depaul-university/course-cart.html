@@ -781,7 +781,8 @@
 		    	for(var i = 0; i<names.length; i++)
 		    	{
 		    		html += '<span style="display: block; padding-bottom: 50px;"><h2><strong>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</strong></h2>'
-			    	if(data[numbers[i+1].innerHTML].length != 0)
+		    		console.log(data[numbers[i+1].innerHTML])
+			    	if(data[numbers[i+1].innerHTML] != undefined && data[numbers[i+1].innerHTML].length != 0)
 			    	{
 			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
 			    		{
