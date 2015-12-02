@@ -777,7 +777,7 @@
 		    	names = document.getElementsByClassName('name')
 		    	numbers = document.getElementsByClassName('number')
 		    	html = '<h1 align="center">Required Books</h1>'
-		    	html += '<h3><button class="generate" onclick="openAllBooks()" align: center;">Click All Books</button><h3>'
+		    	html += '<h3><button class="generate" onclick="openAllBooks()" align: center;">Buy Books</button><h3>'
 		    	for(var i = 0; i<names.length; i++)
 		    	{
 		    		html += '<span style="display: block; padding-bottom: 50px;"><h2><strong>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</strong></h2>'
@@ -803,13 +803,15 @@
 					    			}
 					    			else
 					    			{
-					    				console.log('fdsa')
-					    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg" ></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+					    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg"></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+					    				html += image_html
 					    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span>'
 					    			}
 				    			}
 				    			else
 				    			{
+				    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg"></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+				    				html += image_html
 				    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span>'
 				    			}
 				    		}
