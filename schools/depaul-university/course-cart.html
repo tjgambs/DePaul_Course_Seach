@@ -461,7 +461,7 @@
 		<div id="body"></div>
 		<div style="padding-top: 2%;">
 			<button class="generate" id="displayBooks" onclick="books()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">
-			Required Books</button>
+			Buy Required Books</button>
 		</div>
 		<div style="padding-top: 2%;">
 			<button class="generate" id="mocksched" onclick="createCalendarData()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">Mock Schedule</button>
@@ -780,7 +780,7 @@
 		    	html += '<h3><hr><button class="generate" onclick="openAllBooks()" style="top:-20px; align: center;">Buy All Books</button><h3>'
 		    	for(var i = 0; i<names.length; i++)
 		    	{
-		    		html += '<span style="display: block;"><h2><strong>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</strong></h2>'
+		    		html += '<span style="display: block;"><h2><strong><big>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</big></strong></h2>'
 			    	if(data[numbers[i+1].innerHTML] != undefined && data[numbers[i+1].innerHTML].length != 0)
 			    	{
 			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
@@ -810,9 +810,9 @@
 				    			}
 				    			else
 				    			{
-				    				image_html = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg"></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
+				    				image_html = '<span style="display: block; height: 150px;"><img style="float: left;" height="110px" width="90px" border="0" src="http://ebookbay.co/images/default_cover.jpg"></a><img src="http://ebookbay.co/images/default_cover.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
 				    				html += image_html
-				    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span>'
+				    				html += '<h3 style="padding-left:100px;">' + name + '</h3></span></span>'
 				    			}
 				    		}
 			    		}
