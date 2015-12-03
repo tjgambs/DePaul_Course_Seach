@@ -458,6 +458,10 @@
 		<div id="empty">
 			<h2>Your course cart is currently empty. Search for courses <a href="search.html" style="color: #333;">here.</a></h2>
 		</div>
+		<div align="left" style="padding-bottom:10px;">
+			<button class="generate" id="removeAll" style=" visibility: hidden; display: inline;" align="left" onclick='removeAll()'>Remove All</button>
+		</div>
+		
 		<div id="body"></div>
 		<div style="padding-top: 2%;">
 			<button class="generate" id="displayBooks" onclick="books()" style="visibility: hidden; font: 300 15px 'Open Sans', sans-serif;">
@@ -473,6 +477,18 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
+	function removeAll()
+	{
+		for (i of document.cookie.split(';'))
+		{
+			if(i.indexOf('-add')!=-1) 
+			{
+				delete_cookie(i.split('=')[0])
+			}
+		}
+		window.location.reload()
+	}
+
 	function creditSearch()
 	{
 		prefix = document.getElementsByClassName('credit-prefix')[0].value;
@@ -500,9 +516,6 @@
 
 	function books() 
 	{
-
-
-
 		el = document.getElementById("books");
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
@@ -574,12 +587,14 @@
 				classes.push(temp)
 			}
 		}
+		document.getElementById('removeAll').style.visibility='hidden';
 		document.getElementById('displayBooks').style.visibility='hidden';
 		document.getElementById('mocksched').style.visibility='hidden';
 		document.getElementsByClassName('calendar')[0].style.visibility='hidden';
 		document.getElementById('empty').innerHTML = '<h2>Your course cart is currently empty. Search for courses <a href="search.html" style="color: #333;">here.</a></h2>'
 		if (classes.length > 0)
 		{
+			document.getElementById('removeAll').style.visibility='visible';
 			document.getElementById('displayBooks').style.visibility='visible';
 			document.getElementById('mocksched').style.visibility='visible';
 			document.getElementById('empty').innerHTML = ''
