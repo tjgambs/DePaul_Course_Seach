@@ -15,6 +15,7 @@ __PASSWORD__ = '***REMOVED***'#getpass.getpass('Password: ')
 
 def login():
 	driver.get(__URL__)
+	time.sleep(10)
 	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(__USERNAME__.upper())
 	driver.find_element(By.XPATH,'//input[@name="pwd"]').send_keys(__PASSWORD__)
 	driver.find_element(By.XPATH,'//input[@name="Submit"]').click()
@@ -25,11 +26,13 @@ def navigate_to_course_search():
 				ENROLLMENT.HC_SSR_SSENRL_CART_GBL&IsFolder=false&IgnoreParamTempl=FolderPath%2cIsFolder'''
 	driver.get(new_url)
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
 	driver.find_element(By.XPATH,'//td[@class="SSSTABINACTIVE"][1]').click()
 	driver.switch_to_default_content()
 
 def amount_of_subjects():
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
 	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divSSR_CLSRCH_WRK_SUBJECT_SRCH$0"]/select'))
 	options = select.options
 	driver.switch_to_default_content()
@@ -37,12 +40,14 @@ def amount_of_subjects():
 
 def select_term(index):
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
 	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divCLASS_SRCH_WRK2_STRM$35$"]/select'))
 	select.select_by_index(index)
 	driver.switch_to_default_content()
 
 def search_subject(index):
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
 	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divSSR_CLSRCH_WRK_SUBJECT_SRCH$0"]/select'))
 	select.select_by_index(index)
 	driver.find_element(By.XPATH,'//a[@name="CLASS_SRCH_WRK2_SSR_PB_CLASS_SRCH"]').click()
@@ -50,7 +55,7 @@ def search_subject(index):
 
 	try:
 		if driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]'):
-			print driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]').text
+			#print driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]').text
 			return -1
 	except:
 		pass
@@ -63,9 +68,25 @@ def search_subject(index):
 	driver.switch_to_default_content()
 	return 0
 
-def take_all_data():
-	time.sleep(30)
+def select_course_career(index):
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
+	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divCLASS_SRCH_WRK2_ACAD_CAREER"]/select'))
+	select.select_by_index(index)
+	driver.switch_to_default_content()
+
+def amount_of_course_careers():
+	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
+	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divCLASS_SRCH_WRK2_ACAD_CAREER"]/select'))
+	options = select.options
+	driver.switch_to_default_content()
+	return len(options)
+
+def take_all_data(code):
+	time.sleep(60)
+	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	time.sleep(10)
 	end = int(driver.find_element(By.XPATH,'//td[@class="SSSGROUPBOX PSLEFTCORNER"]').text.split()[0])
 	file_name = str(driver.find_element(By.XPATH,'//div[@id="win0divSSR_CLSRSLT_WRK_GROUPBOX2GP$0"]/table/tbody/tr/td/table/tbody/tr/td').text.split()[0])
 	all_books = []
@@ -84,7 +105,7 @@ def take_all_data():
 		all_books.append(format_book_data(title,isbns,status,names))
 		driver.find_element(By.XPATH,'//a[@id="CLASS_SRCH_WRK2_SSR_PB_BACK"]').click()
 		time.sleep(10)
-	with open('../course_books/'+file_name+'.json','w') as output:
+	with open('../course_books/'+file_name+str(code)+'.json','w') as output:
 		json.dump(all_books,output)
 	driver.switch_to_default_content()
 
@@ -100,28 +121,21 @@ def format_book_data(title,isbns,status,names):
 	dic['names'] = names
 	return dic
 
-def iterate_over_all():
-	login()
-	navigate_to_course_search()
-	for subject in range(1,amount_of_subjects()):
-		select_term(4)
-		flag = search_subject(subject)
-		if flag == 0:
-			take_all_data()
-		navigate_to_course_search()
-
 def iterate_over_one(index):
-	login()
-	navigate_to_course_search()
-	select_term(4)
-	flag = search_subject(index)
-	if flag == 0:
-		take_all_data()
-	navigate_to_course_search()
+	try:
+		login()
+		navigate_to_course_search()
+		for i in range(1,amount_of_course_careers()):
+			select_course_career(i)
+			select_term(4)
+			time.sleep(3)
+			flag = search_subject(index)
+			if flag == 0:
+				take_all_data(i)
+			navigate_to_course_search()
+	except:
+		print index
 
 if __name__ == '__main__':
 	iterate_over_one(int(sys.argv[1]))
 	driver.close()
-
-
-
