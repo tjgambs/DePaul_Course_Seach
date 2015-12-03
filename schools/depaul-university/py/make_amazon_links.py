@@ -16,7 +16,7 @@ def format_data():
 					number = isbnlib.to_isbn10(d['isbns'][i])
 					name = ','.join(d['names'][i].split(',')[:-1])
 					try:
-						url ='http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&tag=mock09-20&linkId=EMBDL7BV7IXRB44G'
+						url ='http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&tag=mocksched-20&linkId=EMBDL7BV7IXRB44G'
 						url_for_checking = 'http://www.webproxy.net/view?q=http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&linkId=EMBDL7BV7IXRB44G'
 						if not check_url(url_for_checking):
 							ret.append([d['status'][i],'',name])
