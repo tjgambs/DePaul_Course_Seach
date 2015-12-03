@@ -761,6 +761,7 @@ def create_page(full_name,description,course_url):
 	tags = []
 	for i in data:
 		tags.append(i['first_name'] + ' ' + i['last_name'])
+		tags.append(i['class_nbr'])
 		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
 
 	return [full_name.replace(';',''),description,tags,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
