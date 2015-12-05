@@ -1,7 +1,7 @@
 import json
 import isbnlib
 import glob
-import httplib2
+import requests
 
 def format_data():
 	file_names = glob.glob("../course_books/*.json")
@@ -29,13 +29,14 @@ def format_data():
 		json.dump(dic,output)
 
 def check_url(url):
-	h = httplib2.Http(".cache")
-	h.add_credentials('user', 'pass')
-	r, content = h.request(url, "GET")
-	if r['status'] == '404':
+	try:
+		r = requests.head("http://stackoverflow.com")
+		if r.status_code < 400:
+			return True
+		else:
+			return False
+	except requests.ConnectionError:
 		return False
-	else:
-		return True
 
 if __name__ == '__main__':
 	format_data()
