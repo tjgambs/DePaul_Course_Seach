@@ -793,6 +793,8 @@
 		    	numbers = document.getElementsByClassName('number')
 		    	html = '<h1 align="center">Required Books</h1>'
 		    	html += '<h3><hr><button class="generate" onclick="openAllBooks()" style="top:-20px; align: center;">Buy All Books</button><h3>'
+		    	html +='<h3 align="center">Books are updated once a week</h3>'
+
 		    	for(var i = 0; i<names.length; i++)
 		    	{
 		    		html += '<span style="display: block;"><h2><strong><big>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</big></strong></h2>'
@@ -837,6 +839,7 @@
 			    		html += '<h3 style="padding-left:100px;">No Books Needed</h3>'
 			    	}
 		    	}
+		    	html += '<p>If the book required for a class is not clickable, then the book is not availabe on Amazon and must be purchased elsewhere.</p>'
 		    	html += '<p style="font-size:8px; text-transform: none;">Mocksched.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.</p>'
 		    	document.getElementById('books-container').innerHTML = html
 		    }

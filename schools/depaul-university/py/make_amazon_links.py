@@ -30,7 +30,7 @@ def format_data():
 
 def check_url(url):
 	try:
-		r = requests.head("http://stackoverflow.com")
+		r = requests.head(url)
 		if r.status_code < 400:
 			return True
 		else:
