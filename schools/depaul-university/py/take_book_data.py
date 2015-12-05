@@ -134,7 +134,7 @@ def iterate_over_one(index):
 				take_all_data(i)
 			navigate_to_course_search()
 	except:
-		print index
+		iterate_over_one(index)
 
 if __name__ == '__main__':
 	iterate_over_one(int(sys.argv[1]))
