@@ -10,10 +10,8 @@ driver = webdriver.Firefox()
 def format_data():
 	file_names = glob.glob("../course_books/*.json")
 	dic = {}
-	good_urls = []
-	bad_urls = []
-	#good_urls = json.loads(open('../good_urls.json', 'r').read())
-	#bad_urls = json.loads(open('../bad_urls.json', 'r').read())
+	good_urls = json.loads(open('../good_urls.json', 'r').read())
+	bad_urls = json.loads(open('../bad_urls.json', 'r').read())
 	for f in file_names:
 		print f	
 		with open(f) as input:
@@ -30,7 +28,6 @@ def format_data():
 							ret.append([d['status'][i],url,name])
 						elif url in bad_urls:
 							ret.append([d['status'][i],'',name])
-							print 'This is more efficient'
 						elif check_url(url_for_checking):
 							ret.append([d['status'][i],'',name])
 							bad_urls.append(url)
@@ -52,7 +49,6 @@ def check_url(url):
 		driver.get(url)
 		return 'Looking for something?' in (driver.page_source)
 	except:
-		print 'There was an error. Trying again.'
 		check_url(url)
 
 if __name__ == '__main__':
