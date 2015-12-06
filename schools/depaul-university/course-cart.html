@@ -611,7 +611,14 @@
 					course_name = 'classes/'+i[1].replace(' ','-').toLowerCase() + '.html'
 					html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 					html += '<td class="overall">' + i[0] + '</td>'
-					html += '<td class="status">' + i[2] + '</td>'
+					if(i[2] == 'Closed')
+					{
+						html += '<td style="color:red;" class="status">' + i[2] + '</td>'
+					}
+					else
+					{
+						html += '<td style="color:green;" class="status">' + i[2] + '</td>'
+					}
 			    	html += '<td class="hours">' + i[3] + '</td>'
 			    	html += '<td class="fname">' + i[4] + '</td>'
 			    	html += '<td class="lname">' + i[5] + '</td>'
@@ -621,7 +628,14 @@
 		    		course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '.html'
 		    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 		    		html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>'
-		    		html += '<td class="status">' + i[2] + '</td>'
+		    		if(i[2] == 'Closed')
+					{
+						html += '<td style="color:red;" class="status">' + i[2] + '</td>'
+					}
+					else
+					{
+						html += '<td style="color:green;" class="status">' + i[2] + '</td>'
+					}
 			    	html += '<td class="hours">' + i[3] + '</td>'
 			    	html += '<td><a class="fname" style="text-decoration:none;" href="' + href + '">' + i[4] + '</td>'	
 			    	html += '<td><a class="lname" style="text-decoration:none;" href="' + href + '">' + i[5] + '</td>'	
