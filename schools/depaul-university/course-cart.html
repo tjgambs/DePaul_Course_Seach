@@ -486,7 +486,8 @@
 				delete_cookie(i.split('=')[0])
 			}
 		}
-		window.location.reload()
+		formatCookies()
+		updateCourseCartCount()
 	}
 
 	function creditSearch()
@@ -516,6 +517,7 @@
 
 	function books() 
 	{
+		load_books()
 		el = document.getElementById("books");
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
@@ -599,7 +601,7 @@
 			document.getElementById('mocksched').style.visibility='visible';
 			document.getElementById('empty').innerHTML = ''
 			html = '<table id="myTable" class="tablesorter">'
-			html += '<thead><tr><th class="header">Remove</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
+			html += '<thead><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>'
 
 			for (i of classes)
 			{
@@ -609,6 +611,7 @@
 				if (i[0] == '0.0') 
 				{
 					course_name = 'classes/'+i[1].replace(' ','-').toLowerCase() + '.html'
+					html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
 					html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 					html += '<td class="overall">' + i[0] + '</td>'
 					if(i[2] == 'Closed')
@@ -626,6 +629,7 @@
 		    	else 
 		    	{
 		    		course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '.html'
+		    		html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
 		    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 		    		html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>'
 		    		if(i[2] == 'Closed')
@@ -653,6 +657,19 @@
 		document.getElementById('body').innerHTML = html
 	}
 
+	function updateCheck(data)
+	{
+		tag = document.getElementById(data.id)
+		if(tag.checked)
+		{
+			tag.className = "checked"
+		}
+		else
+		{
+			tag.className = "unchecked"
+		}
+	}
+
 	function removeFromCart(contents)
 	{
 		index = 9
@@ -663,7 +680,8 @@
 		}
 		className = contents.getAttribute('class').split(' ').join('-')
 		delete_cookie(className + '-' + value.split(',')[index])
-		window.location.reload()
+		formatCookies()
+		updateCourseCartCount()
 	}
 
 	function delete_cookie(name) 
@@ -673,6 +691,7 @@
 
 	function createCalendar(events)
 	{
+		$('#calendar').fullCalendar('destroy')
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -699,6 +718,7 @@
 				}
 				$('#calendar').fullCalendar('unselect');
 			},
+
 			editable: false,
 			eventLimit: true,
 			selectable: false,
@@ -707,6 +727,7 @@
     			element.find('.fc-title').append('<div class="hr-line-solid-no-margin"></div><span style="font-size: 6px;">' + event.description + '</span></div>');
 			},
 		});
+
 		$('html, body').animate({
     		scrollTop: $("#calendar").offset().top
 		}, 1000);
@@ -714,7 +735,15 @@
 
 	function createCalendarData()
 	{
-		courses = document.getElementsByClassName("course");
+		all_courses = document.getElementsByClassName("course");
+		courses = []
+		for(var i = 0; i<all_courses.length; i++)
+		{
+			if(all_courses[i].getElementsByClassName("checked")[0])
+			{
+				courses.push(all_courses[i])
+			}
+		}
 		events = []
 		for(var i = 0; i < courses.length; i++)
 		{
@@ -803,24 +832,33 @@
 			success: function(response)
 		    {
 		    	data = response;
-		    	names = document.getElementsByClassName('name')
-		    	numbers = document.getElementsByClassName('number')
-		    	html = '<h1 align="center">Required Books</h1>'
-		    	html += '<h3><hr><button class="generate" onclick="openAllBooks()" style="top:-20px; align: center;">Buy All Books</button><h3>'
-		    	html +='<h3 align="center">Books are updated once a week</h3>'
+		    	all_courses = document.getElementsByClassName("course");
+				names = []
+				numbers = []
+				for(var i = 0; i<all_courses.length; i++)
+				{
+					if(all_courses[i].getElementsByClassName("checked")[0])
+					{
+						names.push(all_courses[i].getElementsByClassName('name')[0])
+						numbers.push(all_courses[i].getElementsByClassName('number')[0])
+					}
+				}	
+		     	html = '<h1 align="center">Required Books</h1>'
+		     	html += '<h3><hr><button class="generate" onclick="openAllBooks()" style="top:-20px; align: center;">Buy All Books</button><h3>'
+		     	html +='<h3 align="center">Books are updated once a week</h3>'
 
 		    	for(var i = 0; i<names.length; i++)
 		    	{
-		    		html += '<span style="display: block;"><h2><strong><big>' + names[i].innerHTML + ' - ' + numbers[i+1].innerHTML + '</big></strong></h2>'
-			    	if(data[numbers[i+1].innerHTML] != undefined && data[numbers[i+1].innerHTML].length != 0)
+		    		html += '<span style="display: block;"><h2><strong><big>' + names[i].innerHTML + ' - ' + numbers[i].innerHTML + '</big></strong></h2>'
+			    	if(data[numbers[i].innerHTML] != undefined && data[numbers[i].innerHTML].length != 0)
 			    	{
-			    		for(var j = 0; j<data[numbers[i+1].innerHTML].length; j++)
+			    		for(var j = 0; j<data[numbers[i].innerHTML].length; j++)
 			    		{
-			    			status = data[numbers[i+1].innerHTML][j][0]
+			    			status = data[numbers[i].innerHTML][j][0]
 			    			if (status == 'Required')
 			    			{
-				    			url = data[numbers[i+1].innerHTML][j][1]
-				    			name = data[numbers[i+1].innerHTML][j][2]
+				    			url = data[numbers[i].innerHTML][j][1]
+				    			name = data[numbers[i].innerHTML][j][2]
 				    			isbn = url.split('/')[5]
 				    			if(isbn != undefined)
 				    			{
@@ -884,7 +922,6 @@
 		formatCookies()
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
     	$(".prefix").select2();
-    	load_books()
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 </script>
