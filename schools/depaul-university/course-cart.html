@@ -479,6 +479,7 @@
 <script>
 	function removeAll()
 	{
+
 		for (i of document.cookie.split(';'))
 		{
 			if(i.indexOf('-add')!=-1) 
@@ -578,6 +579,7 @@
 
 	function formatCookies()
 	{
+		unchecked = Array(readCookie('unchecked').split(','))[0]
 		classes = []
 		html = ''
 		for (i of document.cookie.split(';'))
@@ -611,7 +613,28 @@
 				if (i[0] == '0.0') 
 				{
 					course_name = 'classes/'+i[1].replace(' ','-').toLowerCase() + '.html'
-					html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+					if(document.getElementById(i[9]+'-checkbox'))
+		    		{
+		    			if(document.getElementById(i[9]+'-checkbox').className == "checked")
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)"></td>'
+		    			}
+		    		}
+		    		else
+		    		{
+		    			if(unchecked.indexOf(i[9]) == -1)
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)"></td>'
+		    			}
+		    		}
 					html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 					html += '<td class="overall">' + i[0] + '</td>'
 					if(i[2] == 'Closed')
@@ -629,7 +652,28 @@
 		    	else 
 		    	{
 		    		course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '.html'
-		    		html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+		    		if(document.getElementById(i[9]+'-checkbox'))
+		    		{
+		    			if(document.getElementById(i[9]+'-checkbox').className == "checked")
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)"></td>'
+		    			}
+		    		}
+		    		else
+		    		{
+		    			if(unchecked.indexOf(i[9]) == -1)
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)" checked></td>'
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox" onclick="updateCheck(this)"></td>'
+		    			}
+		    		}
 		    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>'
 		    		html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>'
 		    		if(i[2] == 'Closed')
@@ -655,6 +699,28 @@
 			html += '<tbody></table>'
 		}
 		document.getElementById('body').innerHTML = html
+		saveUnchecked()
+	}
+
+	function saveUnchecked()
+	{
+		all_courses = document.getElementsByClassName("course");
+		courses = []
+		for(var i = 0; i<all_courses.length; i++)
+		{
+			if(all_courses[i].getElementsByClassName("unchecked")[0])
+			{
+				courses.push(all_courses[i])
+			}
+		}
+		save = []
+		for(var i = 0; i<courses.length; i++)
+		{
+			save.push(courses[i].getElementsByClassName('number')[0].innerHTML)
+		}
+		console.log(save)
+		writeCookie('unchecked',save,1)
+		console.log(save)
 	}
 
 	function updateCheck(data)
@@ -668,6 +734,7 @@
 		{
 			tag.className = "unchecked"
 		}
+		saveUnchecked()
 	}
 
 	function removeFromCart(contents)
@@ -682,6 +749,41 @@
 		delete_cookie(className + '-' + value.split(',')[index])
 		formatCookies()
 		updateCourseCartCount()
+	}
+
+	function writeCookie(name,value,days) 
+    {
+        var date, expires;
+        if (days) 
+        {
+            date = new Date();
+            date.setTime(date.getTime()+(days*24*60*60*1000));
+            expires = "; expires=" + date.toGMTString();
+        }
+        else
+        {
+            expires = "";
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) 
+	{
+    	var i, c, ca, nameEQ = name + "=";
+    	ca = document.cookie.split(';');
+    	for(i=0;i < ca.length;i++) 
+    	{
+       		c = ca[i];
+        	while (c.charAt(0)==' ') 
+        	{
+            	c = c.substring(1,c.length);
+        	}
+	        if (c.indexOf(nameEQ) == 0) 
+	        {
+	            return c.substring(nameEQ.length,c.length);
+	        }
+    	}
+    	return '';
 	}
 
 	function delete_cookie(name) 
