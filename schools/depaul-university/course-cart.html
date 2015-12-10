@@ -521,7 +521,7 @@
 		}
 		$(".userinput").keyup(function (e)
 		{
-		    if (e.keyCode == 13) 
+		    if (e.keyCode == 13 && document.getElementsByClassName('userinput')[0].value.length > 0) 
 		    {
 		        var title = document.getElementsByClassName('userinput')[0].value;
 		        var courses = [title].concat(checkedCourses);
@@ -799,7 +799,8 @@
 				{
 					html = '<div id="' + index + '" class="tab">'
 					html += '<div align="left" style="padding-bottom: 10px;"><button class="generate" id="deleteSelected' + index + '" style="display: inline;" align="left" onclick="deleteSave(';
-					html += "'" + classes[index][1] + "'";
+					html += "'" + classes[index][1] + "',";
+					html += "'" + index + "'";
 					html += ')">Delete</button>&nbsp;&nbsp;';
 					html += '<button class="generate" id="excludeAll' + index + '" style="display: inline;" align="left" onclick="excludeAll(';
 					html += "'"+index+"'";
@@ -942,10 +943,11 @@
         });
 	}
 
-	function deleteSave(name)
+	function deleteSave(name,index)
 	{
-		deleteCookie(name)
-		formatCookies()
+		deleteCookie('unchecked'+index);
+		deleteCookie(name);
+		formatCookies();
 	}
 
 	function saveUnchecked()
@@ -1027,7 +1029,7 @@
 		var value = _new.join('|').split('=').slice(1).join('=')
 		if(value.indexOf('|') == -1)
 		{
-			deleteSave(name)
+			deleteSave(name,table)
 		}
 		else
 		{
