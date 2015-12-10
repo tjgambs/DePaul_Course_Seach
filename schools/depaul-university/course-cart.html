@@ -552,6 +552,7 @@
 
 	function removeAll()
 	{
+		deleteCookie('unchecked0')
 		for(i of document.cookie.split(';'))
 		{
 			if(i.indexOf('-add')!=-1) 
@@ -943,7 +944,6 @@
 
 	function deleteSave(name)
 	{
-		console.log(name.split('-')[1])
 		deleteCookie(name)
 		formatCookies()
 	}
