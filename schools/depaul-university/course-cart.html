@@ -504,10 +504,10 @@
 		{
 			if(all_courses[i].getElementsByClassName("checked")[0])
 			{
-				var value = all_courses[i].getElementsByTagName('input')[0].id
-				var name = all_courses[i].getElementsByTagName('input')[0].className.replace('-add','') + '-' + value.split(',')[9]
-				var together = name + '=' + value
-				checkedCourses.push(together)
+				var value = all_courses[i].getElementsByTagName('input')[0].id;
+				var name = all_courses[i].getElementsByTagName('input')[0].className.replace('-add','') + '-' + value.split(',')[9];
+				var together = name + '=' + value;
+				checkedCourses.push(together);
 			}
 		}
 		if(!readCookie('numberSaved'))
@@ -527,7 +527,14 @@
 		        var courses = [title].concat(checkedCourses);
 				var name = 'saved-' + String(parseInt(readCookie('numberSaved')));
 				writeCookie(name,courses.join('|'),365);
-				formatCookies();
+				if(table != 0)
+				{
+					formatCookies(table);
+				}
+				else
+				{
+					formatCookies();
+				}
 				document.getElementById("userInput").style.visibility = 'hidden';
 			}
 		});
@@ -535,24 +542,24 @@
 
 	function convertDate(date)
 	{
-		var hours = date.getHours()
-		var minutes = date.getMinutes()
-		var ampm = 'AM'
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var ampm = 'AM';
 		if(hours > 12)
 		{
-			hours -= 12
-			ampm = 'PM'
+			hours -= 12;
+			ampm = 'PM';
 		}
 		if(minutes < 10)
 		{
-			minutes = '0' + String(minutes)
+			minutes = '0' + String(minutes);
 		}
 		return String(date.getMonth() + 1) + '/' + String(date.getDate()) + '/' + String(date.getFullYear()) + ' ' + hours + ":" + minutes + ampm;
 	}
 
 	function removeAll()
 	{
-		deleteCookie('unchecked0')
+		deleteCookie('unchecked0');
 		for(i of document.cookie.split(';'))
 		{
 			if(i.indexOf('-add')!=-1) 
@@ -577,8 +584,8 @@
 					if(document.getElementById('excludeAll'+i))
 					{
 						document.getElementById('excludeAll'+i).innerHTML = 'Include All';
-						var button = document.getElementById('excludeAll'+i)
-						button.setAttribute('onclick','includeAll('+i+')')
+						var button = document.getElementById('excludeAll'+i);
+						button.setAttribute('onclick','includeAll('+i+')');
 						document.getElementById('excludeAll'+i).id = 'includeAll'+i;
 					}
 				}
@@ -587,8 +594,8 @@
 					if(document.getElementById('includeAll'+i))
 					{
 						document.getElementById('includeAll'+i).innerHTML = 'Exclude All';
-						var button = document.getElementById('includeAll'+i)
-						button.setAttribute('onclick','excludeAll('+i+')')
+						var button = document.getElementById('includeAll'+i);
+						button.setAttribute('onclick','excludeAll('+i+')');
 						document.getElementById('includeAll'+i).id = 'excludeAll'+i;
 					}
 				}
@@ -640,8 +647,8 @@
 		if(document.getElementById('includeAll'+table))
 		{
 			document.getElementById('includeAll'+table).innerHTML = 'Exclude All';
-			var button = document.getElementById('includeAll'+table)
-			button.setAttribute('onclick','excludeAll("'+table+'")')
+			var button = document.getElementById('includeAll'+table);
+			button.setAttribute('onclick','excludeAll("'+table+'")');
 			document.getElementById('includeAll'+table).id = 'excludeAll'+table;
 		}
 	}
@@ -657,10 +664,10 @@
 	
 	function updateCourseCartCount()
 	{
-		var length = '0'
+		var length = '0';
 		if(document.getElementById('0'))
 		{
-			length = document.getElementById('0').getElementsByClassName('course').length
+			length = document.getElementById('0').getElementsByClassName('course').length;
 		}
 		document.getElementById('course-cart').innerHTML = 'Course Cart (' + length + ')';
 	}
@@ -926,7 +933,7 @@
 			allHtml += (html + '</div>')
 		}
 		document.getElementById('cart').innerHTML = allHtml
-		if(value)
+		if(value && document.getElementById(value))
 		{
 			document.getElementById(value).className = 'tab active';
 			document.getElementById('0').className = 'tab';
@@ -947,7 +954,7 @@
 	{
 		deleteCookie('unchecked'+index);
 		deleteCookie(name);
-		formatCookies();
+		formatCookies(index-1);
 	}
 
 	function saveUnchecked()
