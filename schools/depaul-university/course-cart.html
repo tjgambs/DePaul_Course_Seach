@@ -463,6 +463,99 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
+	function updateStatus()
+	{
+		var courses = document.getElementsByClassName('course');
+		var urls = []
+		for(var i = 0; i < courses.length; i++)
+		{
+			var prefix = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[0];
+			var number = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[1];
+			var url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=' + prefix + '&catalog_nbr=' + number
+			if(urls.indexOf(url) == -1)
+			{
+				urls.push(url)
+			}
+		}
+		for(var i = 0; i < urls.length; i++)
+		{
+			$.ajax({
+				url:urls[i],
+				async : true,
+				type:'GET',
+				success: function(response)
+			    {
+			    	formatStatus(response)
+			    }
+			});
+		}
+	}
+
+	function formatStatus(response)
+	{
+		var courses = document.getElementsByClassName('course');
+		var data = jQuery.parseJSON(response);
+		var courseIndex = [];
+		var courseStatus = [];
+		for(var i = 0; i < courses.length; i++)
+		{
+			var number = courses[i].getElementsByClassName('number')[0].innerHTML;
+			for(course of data)
+			{
+				if(course.class_nbr == number)
+				{
+					var tempStatus = course.enrl_stat;
+					switch(tempStatus) 
+					{
+					    case 'O':
+					    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Open')
+					    	{
+					    		fixCookieStatus(courses[i],'Open')
+					    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:green;" class="status">Open</td>'
+					    	}
+					        break;
+					    case 'C':
+					    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Closed')
+					    	{
+					    		fixCookieStatus(courses[i],'Closed')
+					    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:red;" class="status">Closed</td>'
+					    	}
+					        break;
+					    case 'W':
+					    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Waitlist')
+					    	{
+					    		fixCookieStatus(courses[i],'Waitlist')
+					    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:yellow;" class="status">Waitlist</td>'
+					    	}
+					    	break;
+					}
+				}
+			}
+		}
+	}
+
+	function fixCookieStatus(course,status)
+	{
+		var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
+		var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
+		var number = course.getElementsByClassName('number')[0].innerHTML;
+		var cookieName = [firstName,lastName,'add',number].join('-').split(' ').join('-');
+		var oldCookie = readCookie(cookieName)
+		if(oldCookie.split(',').length == 11)
+		{
+			oldCookie = ['0.0'].concat(oldCookie.split(',')).join()
+		}
+		var newCookie = []
+		for(var i = 0; i < course.getElementsByTagName('td').length; i++)
+		{
+			if(i == 2) newCookie.push(status);
+			else newCookie.push(oldCookie.split(',')[i]);
+		}
+		newCookie = newCookie.filter(Boolean)
+		writeCookie(cookieName,newCookie,1)
+		formatCookies()
+	}
+
 	function readSaved()
 	{
 		var allCookies = document.cookie.split(';');
@@ -1330,6 +1423,7 @@
 	$(document).ready(function() 
 	{
 		formatCookies();
+		updateStatus();
 		updateCourseCartCount();
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
     	$(".prefix").select2();
