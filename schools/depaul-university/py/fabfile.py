@@ -1,8 +1,15 @@
 from fabric.api import local
+import take_book_data as Book
 import time
-#157
-def update(number_of_courses):
-	for index in range(1,int(number_of_courses),10):
+
+def update():
+	Book.login()
+	Book.navigate_to_course_search()
+	number_of_courses = Book.amount_of_subjects()
+	Book.driver.close()
+	first_run = int(number_of_courses)/10*10
+	second_run = int(number_of_courses)%10
+	for index in range(1,first_run,10):
 		local('python take_book_data.py %s &' % str(index))
 		time.sleep(5)
 		local('python take_book_data.py %s &' % str(index+1))
@@ -23,6 +30,10 @@ def update(number_of_courses):
 		time.sleep(5)
 		local('python take_book_data.py %s &' % str(index+9))
 		time.sleep(1000)
+	for index in range(first_run+1,second_run+first_run):
+		local('python take_book_data.py %s &' % str(index))
+		time.sleep(5)
+
 #0- 
 #1-Accountancy
 #2-Administration & Supervision

@@ -55,7 +55,6 @@ def search_subject(index):
 
 	try:
 		if driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]'):
-			#print driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]').text
 			return -1
 	except:
 		pass
