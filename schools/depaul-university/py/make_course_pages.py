@@ -30,13 +30,13 @@ def create_page(full_name,description,course_url):
 <div>
 	<span>
 		<h3>
-			<a href="../course-cart.html" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+			<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 			<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
 			<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
 		</h3>
 	</span>
 	<span>
-		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search.html" style="text-decoration:none; color:#333;">MockSched</a></h1>
+		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search" style="text-decoration:none; color:#333;">MockSched</a></h1>
 		<div id="search-box" style="visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
 			<select class="prefix" style="width:200px;">
@@ -216,7 +216,7 @@ def create_page(full_name,description,course_url):
 		</div>
 		<div style="display: inline-block;">
 			<div style="style=padding: 5%;">
-				<form onsubmit="submitForm()" action="../search.html" id="field">
+				<form onsubmit="submitForm()" action="../search" id="field">
 					<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
 					<input class="inputbox" type="submit" value="SEARCH">
 				</form>
@@ -229,7 +229,7 @@ def create_page(full_name,description,course_url):
 <hr>
 <div id="overlay">
 	    <div id="advanced-container">
-	        <form action="../search.html">
+	        <form action="../search">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
@@ -569,9 +569,9 @@ def create_page(full_name,description,course_url):
 		    					//list_overall[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ overall + '</a>'
 				    			//list_firstn[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ first_name + '</a>'
 				    			//list_lastn[j].innerHTML = '<a traget="_blank" style="text-decoration:none;" href="'+url+'">'+ last_name + '</a>'
-				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ overall + '</a>'
-				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ first_name + '</a>'
-				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'.html">'+ last_name + '</a>'
+				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>'
+				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>'
+				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>'
 				    			list_cookie[j].id = overall+',' + list_cookie[j].id
 			    			}
 		    			}
@@ -764,7 +764,7 @@ def create_page(full_name,description,course_url):
 		tags.append(i['class_nbr'])
 		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
 
-	return [full_name.replace(';',''),description,tags,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html']
+	return [full_name.replace(';',''),description,tags,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'']
 
 def create_all():
 	with open('../classes.json','r') as input:
