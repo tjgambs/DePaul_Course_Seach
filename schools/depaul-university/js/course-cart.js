@@ -46,21 +46,18 @@ function formatStatus(response)
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Open')
 				    	{
 				    		fixCookieStatus(courses[i],'Open');
-				    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:green;" class="status">Open</td>';
 				    	}
 				        break;
 				    case 'C':
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Closed')
 				    	{
 				    		fixCookieStatus(courses[i],'Closed');
-				    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:red;" class="status">Closed</td>';
 				    	}
 				        break;
 				    case 'W':
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Waitlist')
 				    	{
 				    		fixCookieStatus(courses[i],'Waitlist');
-				    		courses[i].getElementsByClassName('status')[0].innerHTML = '<td style="color:yellow;" class="status">Waitlist</td>';
 				    	}
 				    	break;
 				}
@@ -71,11 +68,20 @@ function formatStatus(response)
 
 function fixCookieStatus(course,status)
 {
+	var cookies = document.cookie.split(';');
 	var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
 	var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
 	var number = course.getElementsByClassName('number')[0].innerHTML;
 	var cookieName = [firstName,lastName,'add',number].join('-').split(' ').join('-');
 	var oldCookie = readCookie(cookieName);
+	var saveCookies = [];
+	for(i of cookies)
+	{
+		if(i.indexOf('saved-') != -1)
+		{
+			saveCookies.push(i);
+		}
+	}
 	if(oldCookie.split(',').length == 11)
 	{
 		oldCookie = ['0.0'].concat(oldCookie.split(',')).join();
@@ -87,7 +93,20 @@ function fixCookieStatus(course,status)
 		else newCookie.push(oldCookie.split(',')[i]);
 	}
 	newCookie = newCookie.filter(Boolean);
-	writeCookie(cookieName,newCookie,1);
+	for(j of saveCookies)
+	{
+		var savedCookieName = j.split('|')[0].split('=')[0];
+		var arr = j.split('|').slice(1);
+		var completeArr = [j.split('|')[0].split('=')[1]];
+		for(k of arr)
+		{
+			var tempArr = k.split(',');
+			tempArr[2] = status;
+			completeArr.push(tempArr.join());
+		}
+		writeCookie(savedCookieName,completeArr.join('|'),365);
+	}
+	writeCookie(cookieName,newCookie,365);
 	formatCookies();
 }
 
