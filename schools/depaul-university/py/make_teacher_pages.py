@@ -540,8 +540,7 @@ def create_teacher_webpage(id,name,values):
 	    </div>
 	</div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Test -->
+				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<ins class="adsbygoogle"
 	     style="display:block"
 	     data-ad-client="ca-pub-6459268015898332"
@@ -549,7 +548,7 @@ def create_teacher_webpage(id,name,values):
 	     data-ad-format="auto"></ins>
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>'''
+	</script> -->'''
 		html += '<h1>'+name + '</h1><hr><div><h2>'
 
 		#Adds the professors overall rankings

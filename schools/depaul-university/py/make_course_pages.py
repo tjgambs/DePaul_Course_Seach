@@ -434,7 +434,7 @@ def create_page(full_name,description,course_url):
 	    </div>
 	</div>
 <button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<ins class="adsbygoogle"
 	     style="display:block"
 	     data-ad-client="ca-pub-6459268015898332"
@@ -442,7 +442,8 @@ def create_page(full_name,description,course_url):
 	     data-ad-format="auto"></ins>
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script><h1>'''
+	</script> -->
+	<h1>'''
 
 	html += full_name.replace(';','')
 	html +='</h1><h2>'
