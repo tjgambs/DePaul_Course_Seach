@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Michael Carlton - 2.5</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Michael Carlton</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.4<br>Clarity: 2.6<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/23/2015<br>Class Name: ECON305<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Laid back in class but expects you to work.  Gave clear parameters for exams and gave study guide with solutions.  You work thru that and you will do very well. Tests are long and tough but he uses a curve.  </div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2015<br>Class Name: ECON305<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Worst professor At DePaul hands down. The most unclear professor I have ever taken. STAY AWAY Unless you want to take the class over.</div></div></div><div id="container" class="review"><div id="left">Date: 06/19/2015<br>Class Name: ECO305MICRO<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Micro covers a lot of ground. If you're not willing to work you wont do well.  The midterm was take home, 2 weeks to complete - I'm not sure how you don't get an A. He told us what would be on the exams, what to study & problem solutions.  He makes you figure out what you are doing & why.  Really learned a lot! Real life examples were awesome. </div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2015<br>Class Name: INTMICRO<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He had absolutely no interest in teaching. You won't learn the subject material since he will hardly bother teaching you it. This was a waste of tuition and a GPA killer.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2015<br>Class Name: INTMICROECON<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He seems like a cool guy, but he's not a great teacher. The grade was 50% midterm, 50% final, and the grading was unforgiving. The test content and class content are full of disparities. I can't find anyone who got above a D on the midterm. Wouldn't recommend. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

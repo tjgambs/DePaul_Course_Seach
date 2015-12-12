@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Kasey Windels - 3.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Kasey Windels</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.4<br>Clarity: 4.2<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: DIS101<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>None</div></div></div><div id="container" class="review"><div id="left">Date: 09/01/2011<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took her for Psychology of Advertising and loved it!  Need to read and come prepared.  She kept the class interesting all quarter. Felt like I learned a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2010<br>Class Name: PRAD392<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Challenging class, but in a good way.  Lots of freedom to explore our own ad ideas and make them better. She pushes you, but doesn't tell you it has to be done this way or that way.  I liked that a lot.  If you don't like that kind of freedom don't take this class. The people she brought in who worked at ad agencies were great.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2010<br>Class Name: PRAD392<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I was really excited to take her Creative Portfolio Development Class, but it was a colossal waste of time. She strikes me as the &quot;if you can't do, teach&quot; type. She has an attitude/is annoyed easily, is confused often and doesn't seem particularly bright in general. Her knowledge of the industry is limited to academia. Never handed back a grade.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2010<br>Class Name: PRAD244<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's really nice and funny sometimes, she gives lectures on the reading, pretty easy grader but somehow i ended up getting a B+ its an ok class but boring</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

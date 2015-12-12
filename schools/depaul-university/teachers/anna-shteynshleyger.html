@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Anna Shteynshleyger - 3.0</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Anna Shteynshleyger</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.25<br>Clarity: 2.75<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/10/2009<br>Class Name: PHOTO2<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Anna is late quite a bit, but cut her some slack she's got a couple of kids... she definitely knows a lot about fine art and I always learn a lot just by hearing here talk about images. I would recommend her to anyone who is honestly interested in becoming a better photographer.</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2006<br>Class Name: BEGININGPHOTO<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>excellect class! It was really fun, professor is very knowledgable and enthusiastic, easy going, flexible, respectful of students, reasonable workload, she makes you work, so this way you actually learn.</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2006<br>Class Name: BEGPHOTO<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE ANY CLASS FROM HER!!!  She appears laid back and easy but will give you way too much work (more than the other sections of the class) and will grade you harshly and unfairly.  Always late to class and doesn't even bother to teach you- she'd rather sit in her office than help.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2006<br>Class Name: BEGPHOTO<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Anna is a nice person and all, but she was always late to class. She was never prepared for class. It's kind of hard to show effort and interest when the professor doesn't care about the class. Workload was unfair, and gave us a pop-Final. Terrible class and professor, take someone else.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

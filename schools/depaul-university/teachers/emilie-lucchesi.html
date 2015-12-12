@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Emilie Lucchesi - 2.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Emilie Lucchesi</h1><hr><div><h2>Overall Quality: 2.8<br><br>Helpfulness: 2.7<br>Clarity: 2.8<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/26/2014<br>Class Name: CMN102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Rudest, hardest entry level class I have ever had. Coming from someone who has their masters. She isn't worth the headache. </div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2014<br>Class Name: CMN102<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was actually a very good teacher. She's very passionate about her work, and ensuring us that we understand the concepts from each chapter. Very helpful one on one, she was my favorite teacher of the trimester.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2013<br>Class Name: CMN102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's ridiculous. Will insult you at will. If you're working on a group project and you're struggling, she wants to take a member out. How will that help? Her online quizzes are highly subjective. Will tell you to read a chapter and then quiz you on a whole different chapter. Extremely rude to you. Gets annoying.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2013<br>Class Name: MCS271<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Prof Luccesi comes off strong, especially at first, but when it comes to projects, she is extremely helpful and really knows what she is talking about. This was the first communication course that I didn't feel bored in, and actually sparked my interest in the subject and really changed the way I view media.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2013<br>Class Name: MCS271<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She was one of my favorite teachers. She comes off a bit strong. However, she was always willing to answer any questions I had and would push me in the right direction. readings and online quizzes each class. Tricky questions. Analyzed the reading you should do well. Don't miss class and work hard and you'll get a High B or A. and Use her advice!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2013<br>Class Name: MCS271<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Although she may seem funny and relaxed at first, this woman is insensitive and misuses her "power." Many students had a hard time with her, as she particularly enjoys slapping people down with counts of "academic dishonesty." She's merely a professor, not a resource, an aide, or a human to be frank. There are many other professors, avoid her.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

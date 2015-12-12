@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Chris Kalis - 4.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Chris Kalis</h1><hr><div><h2>Overall Quality: 4.4<br><br>Helpfulness: 4.0<br>Clarity: 4.8<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/10/2015<br>Class Name: 230<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! Really helpful! and easy on the eyes as well!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/10/2015<br>Class Name: GD200<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>v knowledgeable and up to date on current style and trends in graphic design. not hard on the eyes, either. </div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2014<br>Class Name: GD220230<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>SO helpful. I know my way around Adobe but he was nice enough to help others who weren't. Made classes easy and fun. Not much time required out of class which was great. </div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2014<br>Class Name: GD105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>Took his GD 105 class and he was a very good instructor! He is very informative and always willing to help out. He gave some interesting assignments didn't really enjoy the animation portion of the class but beside that it was fairly easy if you have knowledge of Illustrator. His quizzes were also not very hard as long as you read. Would recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2014<br>Class Name: GD105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Chris is a great instructor. He's knows what he's teaching and shows a genuine interest for it. I took his intro to visual design class. Though I found Illustrator/Flash frustrating to use at times, his guides and lectures help make it a lot easier. Would recommend!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

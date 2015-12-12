@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>James Nowotarski - 3.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>James Nowotarski</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.9<br>Clarity: 3.7<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/04/2015<br>Class Name: PM430<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>He has real life experience and is clear on the subject. But be prepared for a LOT of work... You have to put extra effort to get a good result..</div></div></div><div id="container" class="review"><div id="left">Date: 06/29/2015<br>Class Name: IS421<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>provide little feedback tough exams tough homework. final tough. </div></div></div><div id="container" class="review"><div id="left">Date: 09/04/2014<br>Class Name: IS430<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great Professor (one of the best I've ever had). Professor Nowotarski has real world experience which translates well in his classes. There is a lot of work in the course, but the assignments do an excellent job of reinforcing what we learn in lecture.  Buckle down, do the work and ask questions--He is very helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2014<br>Class Name: IS421<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This professor is awesome! I wish I could take all my classes with him. He is the best professor at DePaul bar far. I recommend this professor if you really wanna learn something.</div></div></div><div id="container" class="review"><div id="left">Date: 07/04/2013<br>Class Name: IS430<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Try to avoid him. He is very ticky in his hw, quizzes, and in the final.</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2013<br>Class Name: IS421<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This professor rocked my world.  He created an interest in System Analysis and Project Management in me that changed the course of my education.  I wish I could take all of my classes with him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2012<br>Class Name: IS421<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He has real life experience, so he is very knowledgeable and he makes the class more interesting.He starts every lecture by reviewing the previous lecture content. His quizzes, final, assignments are easy, but you will need the book for the quizzes only, and you need a bit long time to do the homework. I highly recommend taking classes with him.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2009<br>Class Name: IS372<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very knowledgable and has real world experience. Very clear, and good teacher. Subject matter got kind of dry, and the teaching style can get a little dry, but no big complaints. Approachable, very smart, good professor.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2007<br>Class Name: SE425<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor. Brings real world experience to his teaching which is very helpful.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

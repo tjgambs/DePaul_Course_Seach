@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Lawrence Hamer - 3.5</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Lawrence Hamer</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.6<br>Clarity: 3.3<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/26/2014<br>Class Name: MKT356<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Doctor Hamer is the man.  The IME program is exceptional.  I have learned so much in this program already and I still have two more trimesters to go.  Doctor Hamer is there when you need him and is willing to go that extra mile for his students.  If you get the chance, take the IME program, you will not regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2014<br>Class Name: MKT356MKT357<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Dr. Hamer is one of the most influential professors I have ever had the pleasure of knowing in my entire academic career. I have learned so much in the honors marketing program that will help prepare me for success than I could have ever imagined. Dr. Hamer is tough, he expects a lot out of you, but he wants to see his students succeed. :)</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2011<br>Class Name: MKT356<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hamer approaches teaching with a hands off approach. u have to try to figure out what hes acking of you. Not clear on what he wants. hoenstly, i think hes just lazy. the class basically involves the students teaching each other. If the client sucks, the quarter will suck. Hes good for career advice.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2010<br>Class Name: MKT356<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Too much group work and class exercises. if you have a good client it will be interesting. the class is very helpful and i learned a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 12/24/2009<br>Class Name: MKT356<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Learn more in 10 weeks in the IME program than what can be taken out of my first 3 years of college. Dr. Hamer is willing to go the extra mile for his students. Class is tough! But you learn so much from the Honors Marketing Program. If you think you can handle pressure, apply for the program. It will do wonders for you!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2008<br>Class Name: MKT356<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Hamer is one of the most respectful, caring and passionate professors I've ever had. You will learn a lot in his honors classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: MKT356<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This professor is one of the best I have ever taken @ DePaul.  I learned soooo much in this class.  He is definately demanding, however, very helpful and terrific teaching style!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

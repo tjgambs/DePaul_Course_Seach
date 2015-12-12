@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Janice Madrecki - 3.61</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Janice Madrecki</h1><hr><div><h2>Overall Quality: 3.61<br><br>Helpfulness: 3.67<br>Clarity: 3.55<br>Easiness: 2.56</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/04/2007<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Always has an open door policy for questions; willing to stay late to help students in need.  Very helpful in pursuing employment opportunities and in writing reference letters.  Thanks!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2007<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very worthwhile class... Excellent methodologies and instructional suggestions for both regular ed and special education.  Let's definitely get her back next quarter!</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2006<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I just ran into this professor again as I was student teaching and she provided me with a wealth of real-world clinical and student teaching information that will undoubtedly serve me well in terms of securing a full-time position next summer/fall.  It's great that DePaul has such truly caring instructors.  I would definitely highly recommend her!</div></div></div><div id="container" class="review"><div id="left">Date: 07/05/2006<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Got to know her a little, and made sure I kept working hard, and ended up getting a true &quot;total-education&quot; in the process.  Expects alot out of her students -- hard work + integrity.  Enforces said expectations, and does what few profs have the guts to do -- give realistic grades, catches cheating, gives 2nd chances. A++!  Hot too, I'm older (38)</div></div></div><div id="container" class="review"><div id="left">Date: 07/05/2006<br>Class Name: TL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A remarkably rewarding experience.  Taught me so much about what it is really like to be math teacher in a multi-cultural urban environment.  Connects with students, works hard to keep the grad school classroom as fresh/fun as possible.  Actually teaches the math to us as we should teach the math to students.  Occasionally late, brings chocolates.</div></div></div><div id="container" class="review"><div id="left">Date: 07/05/2006<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>wow...can some people be harsh!!! y'all need to chill -- Ms. Madrecki is a wonderful addition to the DePaul university staff.  She is one of the few teachers i know who will set aside the time to help her students outside of class.  If u work hard, and put forth good work her class will reward you.  she's not mean - she just wants you to work a bit</div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2006<br>Class Name: TL<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Comes to class late, unprepared, and speaks negatively about DePaul students. She has good information, however it is impossible to learn from her because she creates such a negative repore with her Adult students, her tatics & personality are her downfall. Definately liability to DePaul School of Ed. (Dr. Cobb is a better choice).</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2005<br>Class Name: TL416<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2005<br>Class Name: TL416<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

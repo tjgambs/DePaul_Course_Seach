@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Peter Casarella - 4.65</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Peter Casarella</h1><hr><div><h2>Overall Quality: 4.65<br><br>Helpfulness: 4.72<br>Clarity: 4.57<br>Easiness: 3.28</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/06/2013<br>Class Name: GLOBALCTH<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor! One of the kindest men at DePaul! Readings are long and hard- but he has discussions. Completely recommend this class for any incoming freshman. Took many field trips, food adventures, and learned great things about Chicago's Catholic churches. 1 paper, 2 quizzes, 2 group assignments.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2012<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is one of my favorite teachers at Depaul being a transfer from City Colleges I was scared and I am not catholic but it really open my eyes he gives 4 quiz 2 papers and a mid term and final and 1 in class writing but he is very kind guide you when you need help</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2012<br>Class Name: CTH180<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the smartest men and DePaul is very lucky to have him teach. I learned more from his class than any other class I've ever taken. I would highly recommend him - readings are hard but he explains things amazing. He truly is brilliant and loves what he is doing.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2012<br>Class Name: CTH180<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I'm a Catholic and I learned more in his class than I did in my 19 years of attending Church. He is a Yale Grad and a genius in field. You have to read a lot and it can be confusing, but he explains everything well. He emails back even around 11 p.m at times. He loves what he does and treats all students with respect. I would recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2011<br>Class Name: HON111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Took him for Discover class. Has a genuine enthusiasm about what he teaches and he will love you if you participate. Extremely intelligent and not at all arrogant.  Kind of has a sexy middle aged man thing goin on. Reminds me of Spencer Tracy. Class is hard but if you go in for help on papers he will remember that when grading.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2010<br>Class Name: CAT369<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Depaul is very lucky to have Dr. Casarella. He is one of the most humble individuals you will ever meet for how intelligent he is. I would recommend him to anyone. Very invested in his students both in and outside of the classroom.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2008<br>Class Name: HON100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he loves what he does. Even if you may not share his interest, you can find something interesting through him. Very knowledgeable, helpful and dedicated</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

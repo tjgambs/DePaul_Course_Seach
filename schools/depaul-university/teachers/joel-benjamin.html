@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Joel Benjamin - 4.1</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Joel Benjamin</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.2<br>Clarity: 4.0<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/27/2015<br>Class Name: ANI230<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really helpful teacher that teaches you the basics to 3d modeling. You get an assignment to do every week with a WIP that you have to turn in the class after it's announced. If you enjoy making things on the computer, you'll enjoy this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2015<br>Class Name: ANI230<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very clear in his lectures, and he's willing to help. He's a little bit of a tough grader, but he gives very helpful and detailed feedback, and he offers the option to resubmit assignments. He's very strict on deadlines, though, so make sure you get your work done on time. I would definitely recommend and I'd absolutely take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2014<br>Class Name: ANI230<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: C+</div><div id="right"><div>So, I don't know about other professors who teach this class but I would sort of recommend taking his class if its available. Just saying this now, I wouldn't call this an easy class to take. The first couple of assignment are relatively easy but the second half of the quarter takes A LOT of time. </div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2014<br>Class Name: ANI230<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was clear the first few classes but then we just ended up watching him demo lessons on screen while not getting any understanding of how to do it ourselves. There was really not enough time to do homework (assigned part of a project Monday, due Wednesday) unless you don't have anything else to do for your other classes. </div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2012<br>Class Name: ANI230<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Joel's cool. He's not my favorite teacher, but if I has to take him again, I wouldn't be opposed to it. He grades kind of hard, but he gives some good feedback. Sometimes he got me frustrated because he wouldn't help me with certain things and would tell me to  figure it out, but overall he's decent.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2011<br>Class Name: ANI230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was really nice and knew everything you'd need to know about Maya. Graded fairly. I had done a little bit of animation in Maya before but this class really added to my skills. It was good for animating in Maya and teaching me about design things like poly count, construction model, all sorts of things that are useful in animation.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

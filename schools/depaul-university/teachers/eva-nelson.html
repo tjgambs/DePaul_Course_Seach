@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Eva Nelson - 4.3</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Eva Nelson</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.5<br>Clarity: 4.2<br>Easiness: 4.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/23/2015<br>Class Name: MGT302<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>This is the best management professor i've had so far! Lectures provide great insight and understanding of the business world, The hw-readings are very great and new ideas are learned. The midterm and final are very fair and other teachers should follow her lead. Amazing professor who actually applies her job to the classroom and teaches amazing. </div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2015<br>Class Name: MGT302<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice lady. There are only discussion, one 6 pages midterm paper (super easy), and a final. Questions on final are exactly from the study guide. Recommend to take her</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2015<br>Class Name: MGT302<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: Not sure yet</div><div id="right"><div>3 hour night class that was let out early every time. Passes attendance sheet around in the beginning of each class and that counts for your participation. One essay, then the final. Easy class just don't disrespect it by not showing up cause then you won't pass. Really nice, clear with expectations and easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2014<br>Class Name: MGT361<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Took as a night class, always got out early. Very easy midterm, just read over the notes packet provided. Group project that requires getting info on an organization, still pretty simple. You don't need the book, I'd say take it!</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2013<br>Class Name: MGT302<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a very nice lady.  She usually ends class early.  She  reads off of the book's powerpoint slides.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2012<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great class. Keeps it interesting by getting students involved. Relys on book PPT. Two exams w. study guides the week before test. It is pretty easy if you study</div></div></div><div id="container" class="review"><div id="left">Date: 07/10/2012<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>What a breath of fresh air! Eva is a wonderful, caring professor. She grades fairly, is entertaining (a little quirky), but fun. Class was interesting. She's passionate about the topic. Would take her again in a heartbeat. A+</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2012<br>Class Name: MGT361<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Grades easy, but you have to study. Tests are all short answer no multiple choice. I missed 3 of the 10 night classes and still got a B. she's AWESOME.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2011<br>Class Name: MGT370<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's a good professor, does not require a lot of homework and task; however you do need to study for mid-term and final. She gives you a review study guide which helps you study better. I'm taking her again for MGT 370</div></div></div><div id="container" class="review"><div id="left">Date: 05/16/2007<br>Class Name: MGT361<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Prof.Eva is one of the best Prof. at DePaul. She is very down to earth type of a person. She is very understanding and willing to help whenever you need her for anything. Her class is based on a midterm, final, and a paper. She is great makes class go by fast with her real life example that she brings to class. Overall this is one of the best MGT P</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

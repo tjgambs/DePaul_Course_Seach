@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Ellis Confer - 2.5</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Ellis Confer</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.5<br>Clarity: 2.5<br>Easiness: 2.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/18/2014<br>Class Name: ECT582<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A bit disorganized. Late for class which I didn't mind. One of the assignments was 10 years old or so. There's always errors in his links, didn't fix them quickly or even notice. I mostly got higher grades than expected. Eventually got the letter I deserved. Midterm was %50 from the study guide, final %0. Easy grader, always check after him</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: IT230<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Homework is easy, class isn't completely relevant but not too bad, the midterm was alright, but the final project was much harder than what you were prepared for. It's doable if you have programming experience, but otherwise expect a challenge at the end.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2009<br>Class Name: IT230<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Awful, absolutely awful. His lectures are boring, and usually he never explains how they pertain to the class, you're left to just decipher it all on your own. It's not too bad at the start, and the homework is cake, but the final is just sadistic. I got unexplained errors all over the place, and he is largely ignoring all my emails. Don't take him</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2006<br>Class Name: ECT455<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>amazing professor who takes plenty of time to find interesting material for an uninteresting class.  He puts in the time and effort to help with understanding the material.  a good role model for any young student trying to be successful! Most other people are salty because they put in the effort to succeed.</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2006<br>Class Name: ECT455<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Alright teacher but don't rely on him to help you with problems.  He teaches straight from the book so you have to read to get a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2006<br>Class Name: ECT582<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This instructor is an industry professional.From my previous experience, this type of instructor might be knowledgeable, however they are usually too busy to collaborate with students because of their day job.He rarely answers email, comes to class late, takes forever to grade HWs and exams and his lectures aren't that great. His exams are essay.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

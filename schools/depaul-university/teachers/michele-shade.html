@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Michele Shade - 4.0</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Michele Shade</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 3.88<br>Clarity: 4.13<br>Easiness: 4.13</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/20/2015<br>Class Name: CAPSTONE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Shade-McCay is a wealth of knowledge and you can see her passion in her lectures!  All of her past experiences make for good examples going through the content.  This class is a lot of work, but if you stay on top of it, it is not difficult and gives you some good knowledge of vulnerable populations in Chicago. Would take again for sure!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2014<br>Class Name: HEALTH202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice teacher and very easy class. Show up to class everyday (counts towards participation) and get an easy A. She lectures from powerpoints and has multiple choice exams that are very straight forward.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2013<br>Class Name: HLTH210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She might seem like a nice professor but she is not a good teacher at all. She goes way too fast in class to the point that I can't get enough notes to study off of. The worst part is that she never talks about her exams nor quizzes, which makes it hard to study. If you want to learn take someone else that is fair and has a good pace not her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2013<br>Class Name: HLTH210<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a nice professor and gives a lot of information during class. The only problem is that she goes way too fast that she doesn't let anyone take enough notes and she never talks about what is going to be in the exams she just writes chapters to study and she's not specific about it. It's very aggravating.</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2013<br>Class Name: HLTH202<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She just lectures with her powerpoints during class and everything is very straight forward. Show up to class and study the powerpoints for the tests and you will get and A.</div></div></div><div id="container" class="review"><div id="left">Date: 12/19/2012<br>Class Name: HLTH202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Shade is DA BOMB.COM, she was very easy to listen to. She was also very helpful with the final project. The exams were super easy. And she gave you what to know for the final. Loved her so much!!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2012<br>Class Name: HLTH202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy class and the exams are extremely easy. It's everything in the slides basically. She's really nice and easy to talk to.</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2012<br>Class Name: HLTH202<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Shade was an excellent professor. I took her class over summer, and it was a breeze. The quizzes were simple, info came from lecture slides. The final was also easy. The research project was not hard at all, I actually enjoyed it. She is super helpful, and makes lectures interesting. Easy class!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

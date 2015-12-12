@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>James Shilling - 4.1</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>James Shilling</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.4<br>Clarity: 3.7<br>Easiness: 2.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/27/2015<br>Class Name: RE353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Dr. Shilling is the most fascinating professor I have had at DePaul. He is also one of the best. His wealth of knowledge in terms of real estate finance is unsurpassed and its hard to not learn a lot simply from talking to home. Pay close attention to his lectures. The tests will make you cry but you will learn and develop useful hard skills. </div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2014<br>Class Name: RE352<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Amazing professor! Definitely the best professor I have ever had at DePaul ! He is incredibly helpful and has a great way of teaching. He lectures first and explains things and then the class breaks up into groups to solve problems as he walks around and helps you if you have trouble. I recommend him to EVERYONE no matter your skill or interest!</div></div></div><div id="container" class="review"><div id="left">Date: 11/01/2011<br>Class Name: RE531<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Shilling is incredibly smart.  I'd agree that he comes off as assuming everyone understands the material like he does, but his personality is very easy going, and his knowledge in real estate finance is stunning.  He's definetly more of an &quot;academic&quot; vs. &quot;real life&quot; in terms of teaching style.  He is very easy going and approachable.</div></div></div><div id="container" class="review"><div id="left">Date: 04/16/2010<br>Class Name: RE352<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Great Professor.  You will learn more from Professor Shilling then you will with probably any other professor.  I wish he taught more courses.</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2009<br>Class Name: RE531<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Shilling is a very nice person. He is EXTREMELY smart. However, he is one of those people who is so smart they cannot teach to people who are on a lower level. If you are a banker who does this stuff everyday, you will be fine. If not, plan on a lot of self-teaching and lots of time studying. Great man, should do all research.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2008<br>Class Name: FIN531<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>WOW! This guy must be one the most intelligent professors I've ever had. I mean, while at Depaul all of my grad Prof's have been awesome no doubt, but he takes the cake in this industry. Class was great and interesting, Prof was very clear and helpful, exams were challenging but open book open note. There's no reason why you shouldn't do well in th</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2008<br>Class Name: FIN352<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

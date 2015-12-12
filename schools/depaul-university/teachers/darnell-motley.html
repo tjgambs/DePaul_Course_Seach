@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Darnell Motley - 2.9</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Darnell Motley</h1><hr><div><h2>Overall Quality: 2.9<br><br>Helpfulness: 2.6<br>Clarity: 3.2<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/20/2015<br>Class Name: PSY363<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>His class is very demanding.  There will be "pop quiz" before every class to make sure that you did a reading. 94% to get A. Every quiz is 1% - total 14%. Group presentation 10%. Paper 10%. 2 Exams 40%. Discussion board 16%. Attendance 10%. 75 MC questions in each exam. Long and boring lectures. If you did reading and understand it, lecture's bored</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2014<br>Class Name: PSY363<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Don't expect to get any feedback on your assignments for about a month after they are due. Also don't expect to get a final grade for weeks after the class ends. Professor Motley is very engaging and attentive in class but he doesn't seem to be able to make time for his students outside of the classroom. </div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2014<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I enjoyed his class.  He's a really cool guy and we talked about some very eye-opening issues.  Some lectures felt pointless but I do feel like I came out of it knowing more about multiculturalism and enjoyed listening to his point of view.</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2014<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I am neutral on this class. If you have no other options, then take Motley's class. But, he is not the best. He also complains a lot about how the class does not talk enough. The readings are busy work, and the documentaries were ok, but not revolutionary. I don't recommend this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/07/2014<br>Class Name: PSY<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>AWFUL. Do not take classes with this prof - SUCH boring lectures (literally reads the power points verbatim), and once a week he uses "class time" to grade papers while we watch a useless documentary. NICE guy, but extremely inflexible, unresponsive, and unhelpful. I REPEAT; DO NOT TAKE CLASSES WITH HIM.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

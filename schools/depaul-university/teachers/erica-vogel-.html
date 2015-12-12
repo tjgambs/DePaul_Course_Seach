@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Erica Vogel  - 2.92</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Erica Vogel </h1><hr><div><h2>Overall Quality: 2.92<br><br>Helpfulness: 3.17<br>Clarity: 2.67<br>Easiness: 2.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: CHM340<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B</div><div id="right"><div>Dr. Vogel's biochem class had a rocky start. The exams were hard & she graded tough. She was often corrected in class by students, didn't seem like she knew the topics  &was kinda rude. But towards the last 2 weeks there was a huge turn around& I started to really like Dr. Vogel. The final wasn't as bad as the exams and she seemed so much sweeter. </div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: CHE340<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B</div><div id="right"><div>It is Dr. Vogel's first year at DePaul, and unfortunately she got a class with a few disrespectful know-it-alls who are always disrupting class. By the sounds of it, they probably wrote some of these reviews. I've still learned a lot from Dr. Vogel despite my embarrassing classmates. I hope she keeps reaching here after her experience in this class</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: CHE340<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Dr. Vogel's class is challenging. If you are trying to avoid being challenged academically and mentally, then avoid this class (and maybe rethink college). However, contrary to other reviews, Dr. Vogel knows the material very well, and is really quite talented at interpreting it simply enough to understand, even if it's your first time hearing it. </div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: CHE340<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: D+</div><div id="right"><div>You could learn more biochemistry from a beaker of spit than you could from dr vogel. AVOID.</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2015<br>Class Name: CHE340<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: B-</div><div id="right"><div>Erica is a new teacher at DePaul and it's pretty apparent. Her office hours are helpful, but in class she's very unsure of the subject matter. I wouldn't recommend her for biochemistry.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2015<br>Class Name: CHE340<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Dr. Vogel (yes, she has a PhD.) is a poor choice for a biochem. generally unclear, and unsure of key concepts in lecture, students must consult a textbook if they want to ensure accuracy in the information she very often misrepresents. Lecture is mostly occupied with students correcting her. MasteringChem homework is disjointed from lecture topics.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

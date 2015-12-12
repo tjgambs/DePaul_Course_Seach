@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Shanesia Davis - 3.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Shanesia Davis</h1><hr><div><h2>Overall Quality: 3.4<br><br>Helpfulness: 3.0<br>Clarity: 3.8<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/20/2015<br>Class Name: THE291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div> Very professional. Gave me the inspiration to excel and succeed.</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2014<br>Class Name: PRF290<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Shanesia's performance workshop was my favorite class I have ever taken. She is very passionate and has a lot to offer. She expects a lot out of you, but if you're dedicated and take acting seriously you will do just fine. Definitely recommend her and the class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2013<br>Class Name: PRF290<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very unclear with direction, more focused on herself and her career than the class which was not very helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2012<br>Class Name: ACT101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2010<br>Class Name: PRF290<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No book for one. And these other rates are just whining. True she only cancel classes a few times but one she was pregnant and two, she is still and actress! Her class gets your mind and body in shape. Take her to have a better understanding of presence. And the &quot;3&quot; papers are super easy.</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2010<br>Class Name: PRF290<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I just don't understand this woman. It's Week 9 and I still don't know what grade I will be getting. We never received grades for our monologue presentations at midterms.. We have final scene performances next week abut she canceled class so no one has any idea what we will be performing. We have 3 papers due the next week also....</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2010<br>Class Name: PRF290<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I have ever had. She cancels class, but doesn't bother to notify the class. She scheduled an audition during class. After preparing for monologues, she told us the class was going on a field trip to her audition instead. I could have been devoting time to class assignments that actually mattered. Worst experience ever at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2010<br>Class Name: PERF101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was pretty awesome, and she is an experienced actress. Although she makes you do core workouts, she really wants your body and mind to be one. And to her everything is &quot;clear as mud&quot;. I enjoyed taking her class, it helped improve my acting skills prior to the class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2010<br>Class Name: PRF290<br>Helpfulness: 1<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Seriously a great teacher. Pretty intense with core workouts but got me in shape. I feel as if I could be an actor in a play after this course. Worth it, she knows what shes talking about.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

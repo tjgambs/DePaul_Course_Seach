@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Billy Johnson Gonzalez - 4.93</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Billy Johnson Gonzalez</h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 5.0<br>Clarity: 4.86<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/26/2013<br>Class Name: ENG275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of my absolute favorite classes! The knowledge this professor possess is astonishing. He is so funny. He is so passionate. & is such an amazing teacher. You have a couple quizzes, three major papers, and a final. He grades the papers intensely but gives great feedback. I loved attending every single class. He also dresses really nice--so fab</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2013<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor BJG is hands down my favorite professor that I've had in college.  He is extremely knowledgeable and his lectures are always full of life and spunk.  He did a great job of keeping the class engaged and getting us to think outside of the box.  That being said, he is not an easy grader but he is fair, so you get the grade you earn.</div></div></div><div id="container" class="review"><div id="left">Date: 04/08/2013<br>Class Name: ENG363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>My favorite English professor at DePaul. When he does lecture he is so well spoken it is impossible not to be captivated. Class discussions were usually student lead which was great. He is genuinely interested in hearing what you have to say and will help in any way he can. A must take in my opinion, especially from 363. Three papers and a final.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2013<br>Class Name: ENG472<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Gonzalez could not get any better at doing his job:  he explains everything thoroughly while not taking for granted that you've understood what he's said.  He asks you if you have understood each reading, and, if you haven't, goes through it step-by-step while asking for your input along the way.  Lots of reading but totally worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2011<br>Class Name: ENG398<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I love this professor. His ability to make you rethink every character in a book or movie is amazing. I walked into my first literature class terrified that it would be overwhelming. And it was at firsr but Bill's sense of humor and good attitude make it easy to care about the material.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2011<br>Class Name: LST310<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor BJG is awesome! He gets you to think without even trying! All you need to do is keep up with the readings. He doesnt have pop quizzes or long papers to write. He will help you in anyway possible if you just ask. I recommend him to all DePaul students. You really wont regret it (:</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2010<br>Class Name: ENG369<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I had Bill in Fall '07. It was my first quarter as a transfer stdnt, and his first at DePaul. One of the nicest profs at DePaul. Very lively and engaging. He is vastly knowledgeable, yet not at all pompous. He exemplifies good teaching. Take him, you won't regret it for a second.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

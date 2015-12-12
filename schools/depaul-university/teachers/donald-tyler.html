@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Donald Tyler - 2.08</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Donald Tyler</h1><hr><div><h2>Overall Quality: 2.08<br><br>Helpfulness: 2.33<br>Clarity: 1.83<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/15/2012<br>Class Name: PSY310<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really passionate about the program. Loves his students and wants us to succeed. Somewhat disorganized but always makes up for it.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2010<br>Class Name: PSY333<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>There were instances of disorganization, the syllables changed. However, the professor provided plenty of opportunities to make up for this. How can one complain about take-home tests&#63; The big upset was that people had to work in groups for extended periods of time. The material wasn't confusing. It's college people, do the readings.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2010<br>Class Name: PSY333<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This was the worst class I've taken in my life. Might as well have been an independent study. His blatant disrespect for students was evident through his nasty e-mails, defensive disposition, and chronic tardiness. His expectations were unclear and totally disorganized. When we asked for clarification he made us feel stupid. A total waste of time.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2010<br>Class Name: PSY333<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>obviously he does not know how to teach, and has no respect for his students. gets to class late everytime then proceeds to check his email, does not respond to email, changes his mind on everything, doesn't stick to syllabus. we had no grades because he took forever to grade, and we have no idea how he will calculate final grade. get it together!</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2010<br>Class Name: PSY333<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Wow- um, highly disorganized, we learned next to nothing, half of the exams weren't fair so they became take homes... every class something changed, he chose random topics to cover instead of covering background information. Unfortunately this was the worst DePaul class I've been in.. and going into Child psychology, I'll be lost.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2010<br>Class Name: PSY241<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>terrible. terrible. disorganized and seems to know nothing about the topic. can't even explain spss. avoid.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

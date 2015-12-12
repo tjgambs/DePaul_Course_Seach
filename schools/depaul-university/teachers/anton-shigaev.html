@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Anton Shigaev - 3.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Anton Shigaev</h1><hr><div><h2>Overall Quality: 3.4<br><br>Helpfulness: 3.6<br>Clarity: 3.2<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/30/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Although it can be difficult to understand Professor Shigaev because of his Russian accent, he gave us optional review exams online for each chapter for both the midterm & the final. They were time consuming but worth the extra 5% for each grade.  You only had to get above a 70% on each weekly hw assignment & quiz online for it to count as a 100%.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2015<br>Class Name: ACC102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Great guy, cares about his students doing well and will offer a lot of opportunities to redeem any low scores you may have. All 70s are rounded to 100s on HWQuizzes. Only issue here, is a language barrier- so lectures are boring and slow. But who really learns accounting from the in-class lectures anyways?  I'd take him again, and I recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2015<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is very helpful! If you go to his office hours he will do problems  in detail with you. He emails the class a lot and I mean alot he truly cares about you learning the material. He offers 10% of extra credit a quarter, but it's a lot  of work to get the extra credit.  Reading the book is a must especially with him.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2015<br>Class Name: ACC102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Anton Shigaev is Amazing! He talks for a long time, but just read the book and you'll be able to follow him. His tests are crazy curved and gave everyone better grades than they deserved. He's so nice and extremely helpful! </div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2015<br>Class Name: 102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Please spare yourself. If this is the only professor available, then hold off on this business core requirement. This class was my own personal hell. Professor is god awful.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Terri Williams - 3.1</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Terri Williams</h1><hr><div><h2>Overall Quality: 3.1<br><br>Helpfulness: 3.4<br>Clarity: 2.8<br>Easiness: 2.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/25/2010<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I loved this teacher she is fun but hard grader. I learned a lot in her class about multiculturalism which was the theme of the seminar. It was fun to go to class and she cares a lot about the student. I love the way she grades because she helps you with your writing and by the end I got an A in my paper and in the class. &lt;3 her</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2009<br>Class Name: HISTSYST<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I was hoping to take this class to prepare for the Psych Gre...but I learned absolutely nothing. I was shocked that this women was going to receive a Phd, and didn't know how to correctly pronounce famous philosophers.  She pronounced PLATO wrong and Socrates...how, with a college degree or even a highschool degree can you do that&#63;&#63;&#63;&#63;&#63;&#63;&#63;&#63;&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2007<br>Class Name: PSY361<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very nice person, and cares about student. All you do in class is go over ppt notes, and discuss them. Open notes quizzes and exams. one paper, 5 journals, and extra credit available. you turn everything in at the end of quarter. Interesting class for me would recomend her.!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2007<br>Class Name: HSTSYST<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>just terrible. Didn't really know the material herself, but expected students to memorize the whole book in ten weeks. Tests students on everything but what was lectured about, and study guide was just a list of everything not on the exam. Never turned anything back on time. Do yourself a favor and take the calss with someone... ANYONE else.</div></div></div><div id="container" class="review"><div id="left">Date: 01/03/2007<br>Class Name: PSY361<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took History and Systems of Psych with her.  It is possible to get an A in the class, but you have to work hard for it because she is very particular when she grades.  There was a lot of textbook reading, but as long as you do the reading, you will do fine in the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

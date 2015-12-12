@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Raphael Nash - 4.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Raphael Nash</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.5<br>Clarity: 5.0<br>Easiness: 4.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/24/2015<br>Class Name: DC120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a great professor! My video editing class wasn't that hard. You just need to put effort into all your assignments and then it's an easy A. I recommend taking him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2015<br>Class Name: DC120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>The projects he gives a very enjoyable and did not seem like busy work at all. The projects were unique and may take a decent amount of time, but is very rewarding since the final result is a video you yourself made. He loves when you think out of the box and often encourages it.</div></div></div><div id="container" class="review"><div id="left">Date: 01/27/2015<br>Class Name: DC120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A-</div><div id="right"><div>Nash is great. He's cool, clearly involved outside of class, and is organized. He seems aware that the class is very basic material and is pleasantly surprised when someone's work not only meets the criteria, but is artistically bold or ambitious. He also remembers you after the class if you actually interact with him. Easy class, chill professor.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2014<br>Class Name: DC120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Nash is cool. Really laid back dude. Very helpful at teaching students techniques for video editing. Exercises are very helpful to learn various techniques that will then be incorporated into projects. 3 projects total. Couple quizzes. Gives a lot of time for projects. Popcorn on finals day! </div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2014<br>Class Name: DC120<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A-</div><div id="right"><div>Really easy class. Lots of working on your own, may require work on your own time. Nash is really chill about attendance as long as you get your stuff in on time. He gives you plenty of time to get assignments done. He likes when you think outside the box about your editing, but you feel like he has more important stuff going on in his own life.</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2013<br>Class Name: DC120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Attendance is mandatory on quiz days but other than that, on work days he did not take attendance. Very helpful, answers every question by coming around to you. Three main projects that weren't difficult but did take time. Highly recommend him and this class!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

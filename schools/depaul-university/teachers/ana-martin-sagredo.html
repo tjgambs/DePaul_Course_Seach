@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Ana Martin-Sagredo - 4.7</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Ana Martin-Sagredo</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 5.0<br>Clarity: 4.4<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/10/2011<br>Class Name: SPN102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took her last quarter and shes alright. She's nice and responds well to email if you need help. Only problem was tests were fairly hard. I had the 2nd highest grade, which was a 89, a borderline A. You will have to put in time understanding the material. Not a nightmare class, but definitely a tough A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2011<br>Class Name: SPN105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A great teacher that's extremely helpful. She takes the time out of the boring/monotonous text book course to truly explain aspects of the language that are useful. She's also funny and entertaining. I will always try and select her class if she's teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2010<br>Class Name: SPN104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I had her for 104 and then wanted to have her again for 105, she is a great professor! She speaks in Spanish all the time, but if it's important things we need to know for a test, then she would tell us in english and all the study items are clear and everything thats in the book that you read or do on myspanishlab is on the test. Take her classes!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2010<br>Class Name: SPN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ana is a good teacher. She is really nice and makes class really interesting which is helpful if youre just taking the beginning spanish classes. I would suggest her, just make sure you do your homework</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2010<br>Class Name: SPN105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ana is a really good teacher.  She speaks in spanish the whole class, and always explains vocabulary. As long as you do the homework, you should get a good job.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Byron Javier - 3.19</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Byron Javier</h1><hr><div><h2>Overall Quality: 3.19<br><br>Helpfulness: 3.5<br>Clarity: 2.88<br>Easiness: 3.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/08/2005<br>Class Name: ISP120<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Good Professor. Very motivated to help his students. I did not want to take any math class, but this was a great experience.</div></div></div><div id="container" class="review"><div id="left">Date: 02/03/2005<br>Class Name: DISCCHICAGO<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had him for Discovery Chicago.  He was alright!! I got a B+.  Never take him for an 8:30 class.  He will put you to sleep.  Just participate and suck up to him you will be fine!!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2005<br>Class Name: QUANTREASON<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>The fact that Javier speaks very softly only makes his accent more difficult to understand.  The man needs a microphone.  Seems very impatient or agitated at times when you don't give the exact response he wants.  Not evil, but not a great class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2004<br>Class Name: QR<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>At first he is difficult to understand, however it gets better.  He wants his students to do well and he will help you! Believe me, I had 100 questions a class! However, if you show him you want to understand the info you'll get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2004<br>Class Name: ISP120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he's a good professor, fair grader, he helps you when you need it.  somewhat hard to understand, but he's at the ISP lab every day, if you need help with homework or if you have any questions.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2004<br>Class Name: QR<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Can't understand him half of the time.  Never really clear on the work.  When it's hard, he gets a little mad that you're asking him questions.  Pretty fair grader.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2004<br>Class Name: ISP120<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class is very easy. It's hard to understand him sometimes, but it's not that big of a problem.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: ISP120<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A little hard to understand what he is saying sometimes.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

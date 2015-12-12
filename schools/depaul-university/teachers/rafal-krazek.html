@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Rafal Krazek - 2.07</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Rafal Krazek</h1><hr><div><h2>Overall Quality: 2.07<br><br>Helpfulness: 1.86<br>Clarity: 2.29<br>Easiness: 3.29</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/05/2005<br>Class Name: FCH101<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He isn't really that good of a teacher, but I did all the work and showed up most of the time so I got a good grade. He is pretty easy</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2005<br>Class Name: FCH105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Def. easy A--even though he gave me an A- and thats with me doin everythin..ppl dint even do nethin and got an A...he skipped class more than u did--which was all good for me...if u actually want to learn and get somewhere---this guy is not for you---if ur like me-filling a requirement-by all means...best thing ull do.</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2005<br>Class Name: FRENCH103<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not very good at teaching. hard grader</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2005<br>Class Name: FCH105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This came ditched class more often then I did. I think we missed like 4-5 sessions out of the ten week period! Bad at returning tests and homework - he lost one of my tests! But, it is an easy A, so I would recommend it just for the GPA boost.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2004<br>Class Name: FCH<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2004<br>Class Name: FRENCH<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>We had like 20 people in our class and the class was very big on participation,however, he did not learn anybody's name. An hour and a half seemed like eternity, he was also a little rude at times. Some people thought that he was okay.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2003<br>Class Name: ISP101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This is a french teacher, but for anything that deals with English...DO NOT TAKE HIM.  I was forced into a non-french class with him and it was worse than hell.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Monu Uwodi - 3.25</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Monu Uwodi</h1><hr><div><h2>Overall Quality: 3.25<br><br>Helpfulness: 3.25<br>Clarity: 3.25<br>Easiness: 4.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/07/2007<br>Class Name: PHL100<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Most boring class ever....very easy to get an A but their are a good amount of papers and it is really hard to follow what the heck is going on in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2007<br>Class Name: PHL248<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easiest class I have ever had. DO NOT buy the books. They are expensive and I have not opened them at all and I always read for my classes. Grade = Midterm, Final, and 4 Reflections (these are easy A).  Midterm and final are 1 question each and you get a choice of 5 questions. So easy but SO boring.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2007<br>Class Name: PHL231<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>VERY easy class. I cant see how you could lose a single point all year. Other than his accent and language issues, not much to complain about. Sometimes boring, didnt really follow syllabus. Super easy hw and project, minimal effort. Don't really need books except as unnecessary supplements.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2006<br>Class Name: PHL231<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>he is VERY easy. i'm pretty sure everyone got A's on the midterm and he lets the students grade your presentation (we all got A's on that too) he doesn't speak prefect english so it's kind of hard to understand him. he's very nice. and he is funny in his own little way. you just have to get over the language thing.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Adar Cohen - 4.88</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Adar Cohen</h1><hr><div><h2>Overall Quality: 4.88<br><br>Helpfulness: 4.88<br>Clarity: 4.88<br>Easiness: 4.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: PAX212<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Adar is, by far, my favorite professor that I have had at DePaul. His interest in the subject is contagious. Discussion was a huge part of the class, but they definitely helped in understanding the topics and others' opinions. Would recommend a course by him to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2012<br>Class Name: PAX381<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Adar is such a sweetheart. I don't think anyone could not like him. Take his class. </div></div></div><div id="container" class="review"><div id="left">Date: 01/31/2012<br>Class Name: PAX210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Adar is AWESOME!  He truly cares about what he teaches.  I'm a Biology major, and I thought I would hate his class, but I loved it.  It really, truly changed my outlook on life.  This guy really wants you to succeed.  He is EXTREMLY helpful when it comes to papers; he gives everyone sources!  Take Adar! You owe it to yourself and won't regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2012<br>Class Name: PAX200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Adar is wonderful. I have already signed up for another class with him. He is very laid back and makes the material acessible. Discussion is the entire class, he lets students lead it and does almost no lecturing. for the final project I did a painting, it could have been anything we wanted. Also, hes really young and kinda cute.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2011<br>Class Name: PAX210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor was fantastic. Explained the material really well and encouraged lots of participation / discussion.</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2011<br>Class Name: PAX210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor. Must read and write summaries of the readings every time. Attendance and participation is mandatory. There are also two papers/projects. Overall great class, and great lectures/discussions.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2010<br>Class Name: PAX200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Best class I have had so far at DePaul. Easy professor, doing the readings isn't entirely necessary as they are gone over in class before discussion but get ready to get very interested in international politics and world peace policies because this is definitely a discussion based class. Super fun and interesting, Adar is great!</div></div></div><div id="container" class="review"><div id="left">Date: 11/21/2009<br>Class Name: PAX210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take his class. Adar is one of the best professors I have had at DePaul. He makes the class very interesting and enjoyable. If you don't like talking, you might have trouble, because he heavily encourages discussion. I left the class with more interested in the subject matter, and I will most definitely take more of his classes.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Dale Buccholz - 3.58</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Dale Buccholz</h1><hr><div><h2>Overall Quality: 3.58<br><br>Helpfulness: 3.5<br>Clarity: 3.67<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/27/2009<br>Class Name: TDC363<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Knows his stuff. If you are unable to understand something he is always willing to help. While he might take time to respond it is best to access him personally. Willing to sit down with you and help with any problems.</div></div></div><div id="container" class="review"><div id="left">Date: 04/04/2006<br>Class Name: TDC463<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Gave grades very late like a month late for homeworks. Example: If you submitted homework in Feb, I got the grades in March after finals (around final grades submission) week. Doesnt adjust grading scale on average marks obtained.</div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2006<br>Class Name: TDC463<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I'm a DL student.He does not give enough examples to complete HW assignments.You can ask for help but don't count on a timely reply.I've email'd the prof or posted in the online forum, but he takes a few days to answer &#63;s or emails!!And his replies usually don't help much!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2006<br>Class Name: TDC463<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is a very good professor. If you dont understand something, you have to go and ask him. He is very helpful but you have to take the initiative. You will really learn a lot of real world stuff. I will take his class any time.</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2006<br>Class Name: TDC463<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Knows his stuff but pretty much breezes through lectures without any solid examples.Come HW time you learn from the textbook.Take home exams,but he doesn't give examples in class so you're left to figure out how to do problems on your own.Lectures are worthless!And he is not a Professor, just an industry professional.The book teaches you not him!</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2003<br>Class Name: ECT250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really freaking easy!  Doesn't take attendance, real laid back!  Makes talks interesting, but explains material well!  I'd take another class from him anytime!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Lou Rutigliano - 4.21</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Lou Rutigliano</h1><hr><div><h2>Overall Quality: 4.21<br><br>Helpfulness: 4.57<br>Clarity: 3.86<br>Easiness: 4.14</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/15/2013<br>Class Name: JOUR275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Note to the wise: TAKE HIM NOW! Seriously awesome professor. He's engaging, knowledgeable, helpful, funny - among the best and I took him for an online course. I got an A and learned a lot; wish I could take him for all my journalism classes. Highly recommended!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: JOUR275<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took his online class and he was still very involved and helpful with feedback. I got an A in the class without much trouble and actually learned quite a bit from his feedback.</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2012<br>Class Name: CMN3396<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Chillest professor I ever had at DePaul. Even though the class was extremely dry, he made everything a lot more interesting. He is really funny and is helpful. I would definitely take him again!</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: JOUR275<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>STEER CLEAR! Seriously. Before I took this class I was really interested in Journalism, and then I took this class and I hated it. I learned honestly, nothing. He gives 85% on assignments no matter how much time you spend on them. I am not taking the next JOUR course because I know I will not be prepared.</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: COMM1311<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 07/02/2009<br>Class Name: CMN363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Such a great professor! Incredibly helpful and extremely nice. He's one of those rare young & cool professors. He was always there if you needed extra help on something and would give extensions if you really needed them. Easy grader as well; I definitely did not deserve a B. I was thinking more along the lines of a D. :) Definitely take him!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2008<br>Class Name: JOUR363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very helpful professor, makes the topic interesting, always willing to help, genuinely cares about students, and he'll cut you some slack when you need it. I would recommend him 100%</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

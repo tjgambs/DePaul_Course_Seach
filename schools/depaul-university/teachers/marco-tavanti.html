@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Marco Tavanti - 3.67</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Marco Tavanti</h1><hr><div><h2>Overall Quality: 3.67<br><br>Helpfulness: 3.83<br>Clarity: 3.5<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/11/2012<br>Class Name: LSP110<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's nice, but he is straight from Italy, so it's hard to understand him. He knows what he's talking about, but when you ask a question he doesn't answer it directly..he sort of beats around it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2012<br>Class Name: MPS590<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is very helpful and resourceful. The only thing that I did not like was the syllabus. the assignments were vague and need modification. Classes were good and full of information. He is very prompt in replying your queries.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2011<br>Class Name: LSP110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Knows a lot of information but also has a lot of connections.</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2009<br>Class Name: ETHIC501<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's cool!  :)</div></div></div><div id="container" class="review"><div id="left">Date: 08/11/2009<br>Class Name: MPS590<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I've had Marco for several classes now (590, 511, and 614).  When I was in 590 I felt intimidated by Marco, but once I got to know him he was very helpful, nice, and wants best for students. I loved the 511 class in Chiapas - the topics covered, guest speakers, and site visits were great. Gave me an extension due to family crisis. Highly recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 04/10/2007<br>Class Name: MPS503<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Class is interesting but lectures are all over the place. Teacher doesn't explain assignments and the syllabus is vague yet 22 pages long and seems intimidating. However, if you follow the guidelines you'll do fine.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

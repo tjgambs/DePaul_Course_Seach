@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Thomas Long - 4.35</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Thomas Long</h1><hr><div><h2>Overall Quality: 4.35<br><br>Helpfulness: 4.7<br>Clarity: 4.0<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/27/2015<br>Class Name: IT130<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Teacher is helpful and sincerely will help you if you need it. If you have at least a vague of idea of programming you will do well in the class. If you are a total n00b to coding and have never taking a class this may be challenging. Course is based on simple web page design. Assignments will take long but are easy. Books not necessary at all.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2015<br>Class Name: IS215<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: Not sure yet</div><div id="right"><div>This is one of the easiest classes I've taken at DePaul, only 4 assignments one final project which could be done in groups and attendance wasn't mandatory. </div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2014<br>Class Name: LSP121<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Literally the easiest class I have ever taken in my entire life. Take LSP121 with him and you will get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 03/29/2014<br>Class Name: IS215<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Long's class was very easy as long as you read the book and follow along with the lectures. Their were only 4 assignments which were all pretty basic and self explanatory as well as a final project that wasn't too hard. He is an easy grader and attendance was not mandatory so never went to a class after the first week. Would recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2013<br>Class Name: IS201<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Great Professor!  Always willing to help.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2013<br>Class Name: IT130<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's CSS javascript and html 5, he was good at teaching, and made us all use the newer models of html 5, but also gave us things in older code to use. good projects, and is helpful to an extent in class</div></div></div><div id="container" class="review"><div id="left">Date: 05/13/2013<br>Class Name: IT130<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very hard to follow his lectures -- and they don't seem to align with projects due. However, if you ask for help he is more than willing to sit with you all class and help you complete your assignment!</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2012<br>Class Name: IS215<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Extremely nice, passionate professor with considerable experience in the field. Some times rambles on in class and occasionally gets off topic, but is one of the sweetest professors at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2010<br>Class Name: IS578<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent professor, I would recommend him. He has the relevant experience required for this class and very helpful. Excellent experience in the business of consulting. Definitely take it?.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2008<br>Class Name: IS578<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took IT Consulting with Professor Long and the class was somewhat interesting. The course was 40% HW, 40% Term Paper, and 20% Presentation.  You could work in a team for the term paper and presentation. We analyzed selected case studies each week and were responsible for submitting a case study analysis via COL. Take DL if you can. Good content.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

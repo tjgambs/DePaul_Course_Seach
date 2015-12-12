@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>David Degras - 2.25</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>David Degras</h1><hr><div><h2>Overall Quality: 2.25<br><br>Helpfulness: 2.5<br>Clarity: 2.0<br>Easiness: 1.17</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/03/2013<br>Class Name: MAT451<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Bad at teaching applications of the theorems, in an applied math program. More interested in the proof and the concept and its use. Tests and homework did not reflect purpose of program.</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2013<br>Class Name: MAT137<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Final project was a disaster, his expectations were incredibly unrealistic.How can you apply statistic concepts do a data set when those concepts WERE NOT covered in class?? Tutors said one thing, he said another, the book said something. Total disaster. Even after bringing this to his attention, he still graded the projects very harshly. Not fair.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2013<br>Class Name: MAT137<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>As others stated, he's a nice person but this class was not very well taught. The group project was very unrealistic and a lot of what he asked wasn't covered very well in class. From what I heard from a few, even the tutor center couldn't explain what he was asking. I don't recommend him for anyone taking a business stats class</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2013<br>Class Name: MAT137<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's a nice person but did not do a very good job at explaining concepts. Pointless final project that was so difficult because concepts weren't explained well. Weekly quizzes based on homework. Seemed like he felt he was teaching Grad Level, instead of Undergrad which he should adjust to. I don't recommend taking for this course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2013<br>Class Name: MAT137<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Nice guy. Quiz in each class, midterm exam, final project. Final project is hard because he didn't cover some of the material, or he went through it really fast. Hard to apply concepts in a project when you are not thought the concepts properly. His style of teaching isn't at undergrad level, he is smart but needs to realize this is undergrad level</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2013<br>Class Name: MAT451<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Top notch teacher. Will fall over himself to help you. If you want to be challenged and actually learn the material, he's your guy.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

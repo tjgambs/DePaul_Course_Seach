@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Lisa Catherine Barcy - 3.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Lisa Catherine Barcy</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/19/2015<br>Class Name: ANI201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's great! </div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2014<br>Class Name: 201<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: WD</div><div id="right"><div>She expects you to already have a lot of knowledge behind animation. Not a great first class to have. Her lectures are all over the place and she uses her own work as examples. Shes sooooo vague and you have to make copies of everything you turn in because she loses everything. Had her twice sadly.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2014<br>Class Name: ANI201<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Fun class, good learning experience. She can be unorganized and a little all over the place, but everything you do in class and everything she shows you is useful. You learn how to use a lot of different medias and you do a lot of projects. She also gives good criticism for every project.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2010<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I honestly don't know what everyone is complaining about. She was very helpful, friendly, and she showed good videos. Animation is very time consuming, but I learned a lot. She was interested in the projects, but suggested ways you could improve. If you show up and do the simple assignments it's an easy A. I'd take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2009<br>Class Name: ANI101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Lisa Barcy...she is quite the airhead in class. She needs to really step it up in the way of being prepared for class. She would often attempt to show the class how to use some of the equipment but she would have trouble doing it herself. She expects the work of majors yet this class is listed specifically for non-majors. I wouldnt take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 09/01/2008<br>Class Name: DC380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Down to earth, good teacher. She knows what she's doing in animation. Bluelight was not a lecture class, but Lisa was good at showing what we needed to get done while giving broad creative freedom</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

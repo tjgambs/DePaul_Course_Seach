@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Laura Washington - 3.0</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Laura Washington</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.0<br>Clarity: 3.0<br>Easiness: 2.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/28/2009<br>Class Name: JOUR378<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>When I signed up for the class, I thought we'd learn advanced reporting through different topics. Instead, every week I had to teach myself about Bronzeville & the 2016 Olympics which I have no interest in. Nowhere on the course description did it say this class was a special topics class, and that's what frustrated me the most throughout the cours</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2009<br>Class Name: JOUR378<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you're interested in broadcast journalism.. do NOT take this class.. Unless you want to work on a specific print type of topic about bronzeville, then this class is a waste if you have better classes to take .. Didn't learn something phenomenal .. Don't take it a night class either ..</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2007<br>Class Name: CMN364<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Not an easy class by any means.  Although I also didn't like having to go into Humboldt Park, I did learn a lot. Take her if you are willing to put forth effort, because she has a lot to teach. Oh, and don't miss class!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2007<br>Class Name: CMN364<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class did not turn out as expected. I thought we were going to investigate stories, not just ONE story the entire semester on the vacant lots. I did not feel comfortable going into Humboldt Park ALONE when the people I was interviewing were telling me there is constant open fire everywhere. What a let down</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2007<br>Class Name: CMN364<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>THE WORST CLASS EVER.  She does not teach-you will teach yourself. She gave us worksheets, and then sent us into Humboldt park (alone) to blindly knock on doors and find a story about our assigned 10 vacant lots. Oh, your lots didn't result in an earth-shattering story for your final project&#63;  Sorry, too bad. I was so disappointed with this class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2007<br>Class Name: ISP200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This class is kinda like pouring acid in your eyeballs.  You have to go to every class and she makes you go to a freaking 3 and half hour seminar on multiculturalism.  I sort of wanted to kill myself.  Avoid this lady like the plague.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2004<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the best professors at DePaul.  She is very intelligent, interesting and very accomplished.  If you get the chance, I would definitely recommend taking her.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

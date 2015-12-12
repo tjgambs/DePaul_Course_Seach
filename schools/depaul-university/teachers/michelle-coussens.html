@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Michelle Coussens - 1.2</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Michelle Coussens</h1><hr><div><h2>Overall Quality: 1.2<br><br>Helpfulness: 1.2<br>Clarity: 1.2<br>Easiness: 1.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/01/2008<br>Class Name: ISC395<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very difficult class and useless professor. She does not even attempt to help students, she's literally  the worst instructor I've ever had.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2008<br>Class Name: ICS395<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>You defiantly do not want to take this professor, extremely during your senior year.Professor talks down to the students and not helpful. This is suppose to be not a difficult class, but when you have quizzes every week, speakers every week (extremely boring speakers), CapSim, homework it is a bit too much.  We are not graduate students, this is an</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2007<br>Class Name: ICS395<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Horrible, and avoid.Its your senior year, and you don't want to ruin your entire DePaul impression over this increditbly useless class. Do NOT take her for the summer, she literally takes a normal depaul quarter into a summer session. She favors, and ashames her students infront of hte entire class. I really don't know why I did this to myself.</div></div></div><div id="container" class="review"><div id="left">Date: 04/18/2007<br>Class Name: ICS395<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Coussens acts as if she is totally better than you. Excuse me but I can stay at home and download the PowerPoints versus you reading them in class to me. DePaul really has you on staff and you are being paid to teach. Don't talk her because she can't teach, the exams are terrible. She want to control you versus teaching you.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2007<br>Class Name: ICS395<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Winter Quarter '07 was her first one here at DePaul. You talk about a primadonna, she is better than you. She makes you feel like you are in grammar school. Why are you here, you have a full-time job, your own consulting business and now you teach. Don't challenge her on anything because she cannot handle it. Please leave you can't teach</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

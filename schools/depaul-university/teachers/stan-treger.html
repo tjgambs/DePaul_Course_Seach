@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Stan Treger - 3.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Stan Treger</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.9<br>Clarity: 3.7<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/24/2015<br>Class Name: 106<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Stan is a great guy, cheerful and fun to be around, but he does not always have good control of his class. He gives ten quizzes at specified times and assignments. It a lot to do but easy A if done well.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2015<br>Class Name: PSY397<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Stan is great, and he's a really cool guy. But he's an adjunct professor, and that was really obvious in my class. The organization was super iffy, but it's an easy class to pass as long as you show up and complete the assignments. Beware, though- there are pop quizzes abound. </div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: PSY347<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Clear, well thought out lectures. Definitely wants meaningful participation. He has assignments, but as long as you are doing meaningful work and are in-class participating, you will do just fine. Hilarious, always willing to help, and super cool. </div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2015<br>Class Name: PSY347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Super engaging professor who clearly loves what he does. None of the work is too rigorous, but you will learn a lot! You do not need the textbook.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2015<br>Class Name: 241<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>He is young and knows his stuff. He can be confusing at times and sometimes goes on and on when asked a question. He likes to give quizzes and the tests were hard but not impossible. If you're up for a challenge then he is the one for you. Overall very helpful, smart, flexible. As a psych major, I would recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2015<br>Class Name: 347<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's young, but knew his stuff. This was a social psych class which is what he specializes in. Really responsive to the class. Ten quizzes(easy if you pay attention to lecture), activity write ups( super funeasy), and 1-3 page papers that are super easy. No tests!!!!! Cool guy who loves what he does, I'd recommend taking his classtake him again!</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2015<br>Class Name: PSY241<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Stan was vague and frustrating. It was difficult to understand what he wanted, and often what he was trying to teach. He was super nice, and would try and give us chances to get points back. Overall, I wish that I had taken this class with a different professor. He needs a lot more practice before he becomes a real professor.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

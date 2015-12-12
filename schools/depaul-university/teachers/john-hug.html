@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>John Hug - 4.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>John Hug</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.8<br>Clarity: 4.8<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/25/2015<br>Class Name: ACC545OR308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>He's very nice and truly wants you to learn the material. He emphasizes the importance of his students actually learning vs. doing well on exams. There are weekly quizzes so you should review the chapter (not necessarily read it all because that may make it more confusing). Amazing notes on D2L are the key to doing well </div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: ACC545<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's very nice and funny and he makes advanced topics in accounting theory fun and easy to learn. He gives you plenty of material to study from, including previous exams and study guides. Would take again.</div></div></div><div id="container" class="review"><div id="left">Date: 06/13/2015<br>Class Name: ACC308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>He gives you weekly quizzes on the topic and HW so you can keep up to date with the work and not procrastinate. It is good because 308 is the most difficult accounting course. He only teaches nights, so lectures are long and boring because of that. He tells you most of what is on the exams and lets you use a note card in it.  Great professor</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2015<br>Class Name: 308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Professor Hug made consolidation easy and fun! I recommend him!! HE IS THE BEST! Weekly quizzes, midterm and final. He is straight forward. Nothing unexpected. </div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2015<br>Class Name: ACC308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a great professor. The midterm and final is based on the practice exams from the previous years and for the exercise he assigns from the book. You have to attend all his classes so you can get the credit for the quizzes as well, usually he distributes them by the end of the class. He is very straight forward and clear. I would take him again </div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: ACC308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great! Makes consolidations easy! quiz every week BUT NO PROJECTS!!! midterm Qs were almost completely taken from the study guides and/or last year's midterm. Overall great professor, highly recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: ACC308<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Do the HW. MCQ test. NIce guy. Easy grader. Very lenient. One of the nicest professors Ive had at Depaul</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

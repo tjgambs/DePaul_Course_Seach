@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Keith Mikos - 4.6</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Keith Mikos</h1><hr><div><h2>Overall Quality: 4.6<br><br>Helpfulness: 4.6<br>Clarity: 4.6<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/15/2015<br>Class Name: ENG275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Took a film and lit class with him that was incredible. I highly recommend his classes to anyone. He is very passionate about everything he teaches and I always looked forward to his class. The class I took was also a night class that he kept so engaging time flew by. He also does not give busy work.</div></div></div><div id="container" class="review"><div id="left">Date: 04/09/2015<br>Class Name: ENG265<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>He's not as spectacular as everyone else thinks, in my opinion, but he's a good guy. Read spark notes and you'll get by, but actually read it cause he has reading quizzes. No laptops or cells allowed in class, and he even wants you to ask to use the bathroom...</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2015<br>Class Name: ENG265<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Bottom line- this guy knows how to lead a discussion. Seamlessly integrating philosophy and literature, he makes talking for 1.5hrs fly by, and explores difficult concepts with clarity and fluidity. If literature and critical analysis doesn't interest you, you won't get much out of it.. But i loved this course; high recommendations</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2015<br>Class Name: 200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took him for LSP and he was amazing. He guided discussion really well and always kept the conversation light but really got into good issues. Also if you weren't one of those kids to openly participate then you had the option not to </div></div></div><div id="container" class="review"><div id="left">Date: 07/17/2014<br>Class Name: ENG275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>Professor Mikos is amazing. The English Lit & Film class based on tragedy I just took with him was wonderful. He is extremely knowledgeable and his lectures are so thought provoking. I highly recommend taking him. Don't be afraid to talk to him and ask for help because he really cares about his students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Brian Golchert - 2.77</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Brian Golchert</h1><hr><div><h2>Overall Quality: 2.77<br><br>Helpfulness: 2.91<br>Clarity: 2.64<br>Easiness: 2.36</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/15/2005<br>Class Name: BMS125<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He was a little boring but he was clear and to the point. He gives alot of pop quizzes so you need to study. I think that he is one of the best math teachers.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2005<br>Class Name: BMS125<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's hard to understand what he's talking about. I would not recommend him but he's not a hard grader. The homework takes hours and hours to do.</div></div></div><div id="container" class="review"><div id="left">Date: 07/07/2004<br>Class Name: CALC<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very hard to understand what he is talking about.</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2004<br>Class Name: BMS126<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Brian Golchert is an excellent teacher who explains Calculus in a way in which students can understand.  I definitely recommend him for BMS 125 or 126.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: BMS126<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He's very hard but he does a good job to offer help if you need it.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2004<br>Class Name: BMS126<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Way to difficult for me, I would not recommend taking this class if you are not already very good at calculus</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2004<br>Class Name: BMS125<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>LOTS N LOTS OF HOMEWORK..FINAL IS 40%..HW-20%....2 TESTS AT 20% EACH....NO CALCULATORS..EASY IF U DO HOMEWORK..TOUGH GRADER THOUGH--HE EVENS GRADES THE HOMEWORK</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2004<br>Class Name: BMS126<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>horrible horrible dont ever take him</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: BMS126<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I'm not sure if this is normal, but the teacher would walk into the classroom stumbling.  Then he would ask us for homework he didnt assign.  He would mark right answers wrong to see if we knew what we were doing.  HeHateMe</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2004<br>Class Name: BMS126<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2003<br>Class Name: BMS126<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you do the homework for this class you should be fine. This professor is actually an engineer. He teaches on a concept and understanding based curriculum, and he doesn't allow calculators. He'll definitely help you if you ask him.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

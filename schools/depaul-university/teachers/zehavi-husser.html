@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Zehavi Husser - 4.93</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Zehavi Husser</h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 4.86<br>Clarity: 5.0<br>Easiness: 4.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/04/2012<br>Class Name: MOL211<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My favorite classes (took two with her) and professor! If you are interested in mythology please take her classes!If you like to miss a lot of class though, not the classes  for you!But it is well worth attending. Also I have to admit there is a lot of reading but if you are interested you won't mind reading it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2012<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a great professor. She really knows what she's talking about and she wants you to understand Greek tragedy, too. She's so extremely giggly and animated. The only downside is the amount of reading she assigns. Overall though if you're interested in the class there's no way that you can fail.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2011<br>Class Name: MOL212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was a great teacher. I'm planning on taking a lot more of her courses. Easy and really nice. It's clear that she knows what she's doing and she wants you to understand the topic. Classical Tragedy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's by far one of my favorite professors I've ever had at DePaul. She's really passionate about what she teaches and it shows when she teaches. There's usually a lot of reading but not an unreasonable amount. She gives tons of EC and is always available for extra help! She makes mythology so much more understandable and interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This was by far my favorite elective. She requires a lot of reading but its fun because its all stories and fun. Her weekly quizzes are simple if you read and she does everything she can to make sure you get a good grade. She gives out plenty of extra credit and is very easy to talk to if you need help. Take this class!</div></div></div><div id="container" class="review"><div id="left">Date: 05/10/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. She was able to get and maintain my attention more often than not, which is surprising given the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I've had her twice & she is amazing! She teaches something that could be so hard & boring but makes it easy to comprehend and fun to learn about. She is extremely nice and cares about what she teaches & how you do in this class. to do good you MUST READ & there's alot. If u can devote time to read alot, take her it's treat!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Hartwig Stein - 3.83</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Hartwig Stein</h1><hr><div><h2>Overall Quality: 3.83<br><br>Helpfulness: 3.67<br>Clarity: 4.0<br>Easiness: 4.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/20/2014<br>Class Name: AI167<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Easy class, but no feedback was given until after the course ended, and he made no interactions during class discussion posts. Learning from other students is nice, but not helpful to the actual learning part. Too much focus on editing and not enough on composition.</div></div></div><div id="container" class="review"><div id="left">Date: 12/31/2013<br>Class Name: AI167<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>This class was enjoyable but I didn't learn as much as I had hoped.  Prof Stein was concerned with students getting their monies worth, but my personal preference would have been to spend more time on composition than digital editing.  At times Prof Stein took a long time to grade my work.  I would recommend this prof.</div></div></div><div id="container" class="review"><div id="left">Date: 08/20/2013<br>Class Name: AI167<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Hartwig Stein is a very passionate online instructor. His main goal is for his students to learn something and you are guaranteed to learn a lot. He is extremely helpful to his students and he even has phone conversations with students to measure their progress and give them a chance to improve their grade. Definitely recommend him!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>David Lee - 4.2</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>David Lee</h1><hr><div><h2>Overall Quality: 4.2<br><br>Helpfulness: 4.1<br>Clarity: 4.3<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/20/2015<br>Class Name: IS430<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Great guy, Project need hard work but don't worry about the grades. 2 project submissions 2 exams that's all. </div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2014<br>Class Name: IS540<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>One of the best professors for IS540</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2013<br>Class Name: IS422<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you are looking for an easy grade without much effort, then he is the guy to go to.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2012<br>Class Name: IS430<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is very easy and helpful however he can be disorganized and unprepared for the class. Grading is very easy and grades are return in very fast response.</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2012<br>Class Name: PM430<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is helpful and u can learn alot from this class. He is fair grader. If u attend all classes it is easy to get good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2010<br>Class Name: IT215<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Messy assignments. Overall more interested in trying to win a laugh rather than explain the material. Very generic homework assignments and exams with answers often open to interpretation rather than based on things learned in the class. Would not recommend</div></div></div><div id="container" class="review"><div id="left">Date: 02/27/2009<br>Class Name: IS425<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is good while explaining</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2008<br>Class Name: CS1000<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Guy.  Smart, devoted, and educated.  Fair and understandable.  All around great teacher.  He presents the information just as good if not better than anyone else could.</div></div></div><div id="container" class="review"><div id="left">Date: 12/21/2006<br>Class Name: IS540<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very detail, passionate about the topic and gives real life examples. I don't feel there was enough material for 10 week course.</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2006<br>Class Name: IS570<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a good teacher, prepared and knows about what he is speaking. To clarify things he often uses real examples what helps a lot. Only the grading is sometimes too hard but it is still fair.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

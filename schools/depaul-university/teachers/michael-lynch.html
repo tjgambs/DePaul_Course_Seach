@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Michael Lynch - 4.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Michael Lynch</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.7<br>Clarity: 4.9<br>Easiness: 4.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/19/2015<br>Class Name: HSP333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Professor Lynch is a really great guy who knows EVERYTHING about wine! Some lectures were long, but he always made jokes and told stories to go along w/ the info! Overall, it was really fun elective and we tried 3-4 wines each class! Easy group proj and open note/book/comp final exam! Learned so much about wine and had a good time! </div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2015<br>Class Name: HOS333<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>It's a wine tasting class - you expect an easy A and to listen the the droning on and on of lecture before getting to the good stuff.  However, Lynch's lectures really engage you and draw you into more than drinking. What I, unexpectedly, LEARNED from him has given me an edge when I interview and network. It really helps to appreciate wine flavors.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: HSP333<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Great instructor! Awesome class! Took Beverage Management with Professor Lynch. This class is the "cousin" to the Wine class. Get to drink just as much, Learn just as much, and be instructed by a cool guy! Absolutely take!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2013<br>Class Name: HSP333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This was my second class with professor lynch. His classes are the best classes you will take. I learned a lot about wine in this course and it is a fun class! TAKE HIM</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2013<br>Class Name: HSP333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Best teacher at depaul. Keeps class interesting. Go to class, participate by drinking WINE.</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2013<br>Class Name: HSP332<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>HSP  332 - BEVERAGE MANAGEMENT. Best class at DePaul. U got out to Goose Island, Paris club and Bub City. Midterm and final were easy. TAKE HIM!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: HSP333<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>FREAKING AWESOME. fun class he makes you always want to go. why not you drink wine! very interesting. lecture is all slides. which you get to use for the final. final is open everything expect your peers. group project is the biggest portion of your grade but fun and easy(you present a wine of your choice). easy/fun A</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2012<br>Class Name: HSP333<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>LOVED him! fun class! fun guy! If you have an open elective, interested in wine, or just want to take a class where you'll learn a lot, but without all the pressures of exams and homework- this is your class! Learned a lot, but had a blast! How can you not when drinking wine?! 100% take it!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2012<br>Class Name: HSP396<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>An excellent teacher. One of the finest professors at DePaul. Teaches courses without putting unwarranted stress on students. I came out feeling like the class was a walk in the park, but have retained more info from his class than any other class I've taken at DePaul. He has vast experience in the industry and has sweet internship hook ups.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2011<br>Class Name: HSP100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great Professor. Makes class a lot of fun. Take him if you get the chance.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

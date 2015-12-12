@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Joseph Marconi - 4.11</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Joseph Marconi</h1><hr><div><h2>Overall Quality: 4.11<br><br>Helpfulness: 4.44<br>Clarity: 3.78<br>Easiness: 4.44</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/10/2010<br>Class Name: PRAD336<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Knows a ton about the industry, is super nice/friendly, entertaining, and lenient but we didn't actually work on ad campaigns like in all of the other professors' ad campaigns courses. Felt like a repeat of Principles of Advertising which is frustrating because I feel like it was a waste of time and I didn't learn anything new.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2009<br>Class Name: PRAD244<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Mr. Marconi is an amazing guy.  He has published over 15 books and REALLY knows what he is talking about.  One of those classes that you wish would be longer so that you could learn more from him.  TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2009<br>Class Name: PRAD256<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Loved him! He is an expert in his field, an easy grader, but his personality/knowledge makes you want to attend class. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 12/28/2008<br>Class Name: PRAD244<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy prof. A little too easy because then you think you can get away with skipping class and still getting an A, but keep to the attendance because it counts heavily on your grade at the end.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2008<br>Class Name: PRAD124<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Mr Marconi is one of the greatest teachers I have has in college!! I am not an early person and he made me want to come to each class.  Everything we talked about was relevant and he has a TON of experience.  His sense of humor is half the class and the other is him trying to relate to the students by being very understanding! TAKE HIM!!!!!</div></div></div><div id="container" class="review"><div id="left">Date: 06/23/2008<br>Class Name: CMN337<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The easiest teacher ever.</div></div></div><div id="container" class="review"><div id="left">Date: 01/01/2008<br>Class Name: CMN256<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. I learned alot!! Very helpful and understanding, will work with you to improve your grade. He is also funny, great class I really enjoyed it. Take him!</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2007<br>Class Name: CMN256<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>this guy is hilarious.  knows the ins & outs of every communication industry.  he would kill me if he knew i used an ampersand.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2007<br>Class Name: CMN244<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very dry sense of humor, lots of experience in advertising/PR that he talks about regularly.  All around a really good professor, not very clear on expectations with assignments, but will clarify if you ask him.  Highly reccommended professor.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

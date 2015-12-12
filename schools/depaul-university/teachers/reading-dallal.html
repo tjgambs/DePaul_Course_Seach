@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Reading Dallal - 2.81</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Reading Dallal</h1><hr><div><h2>Overall Quality: 2.81<br><br>Helpfulness: 3.62<br>Clarity: 2.0<br>Easiness: 3.62</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/09/2006<br>Class Name: ARABIC103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>he knows what to teach and how to teach the language</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: ARB101<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>WOW- WHERE DO I START&#63;! Well, first off, Professor Dallal is a wonderful, sweet old man. His teaching, on the other hand, is quite lacking. I don't mind his accent, or the fact that he is hard of hearing. What I do mind, however, is that he does not teach. If you are prepared to basically teach yourself the language feel free.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: ARB101<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His homework assignments change on a whim.  He'll tell u to do these pages in the workbook then in class add another 30 on to be done in class.He really didn't teach.I spent most of my time in class doing pages that was assigned in class.I taught myself the Arabic I know.It is not hard to get a good grade in his class just learn the Alphabet.</div></div></div><div id="container" class="review"><div id="left">Date: 10/31/2005<br>Class Name: ARABIC101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a wonderful teacher . He cares about his students . so what if he has an accent &#63; everybody in this country has an accent. take the class and enjoy his stories .</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2005<br>Class Name: ARB101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>His first language is Hebrew so he has a terrible accent. If you take this class expect to learn on your own.</div></div></div><div id="container" class="review"><div id="left">Date: 09/25/2005<br>Class Name: ARABIC101HEBR<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>good class take it</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2005<br>Class Name: ARB103<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>A kind, warm professor and eager for his students to speak, read and write Arabic well.  But, his accent makes it hard to understand him, even in English.  And, he's hard-of-hearing, so don't be afraid to raise your voice in class.  If you want to learn Arabic, you can make alot of progress with him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2005<br>Class Name: ARB101<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Dallal is a great guy.  And he definitely knows Arabic.  He's always prepared and positive in class.  But his crazy accent, and a slight lisp, and a little bit of a hearing problem make communication &quot;difficult&quot;.  Be prepared to teach yourself... but go ahead and take his classes.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

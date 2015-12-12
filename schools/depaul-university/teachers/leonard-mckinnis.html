@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Leonard McKinnis - 3.75</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Leonard McKinnis</h1><hr><div><h2>Overall Quality: 3.75<br><br>Helpfulness: 4.17<br>Clarity: 3.33<br>Easiness: 2.83</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/14/2010<br>Class Name: REL101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Dr.McKinnis is wonderful.I really enjoyed his class.I recommend him to anyone who likes to engage in dialogue.The coursework is far from easy,so if you are a slack then,he is not the professor for you.I personally love the structure of the class,and he is extremely knowledgeable.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2010<br>Class Name: HST262<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. McKinnis is a phenomenal theologian and professor. His knowledge base and instruction is tremendous. If you do the reading and show up to class, the least you should receive is a B. One midterm, one take home test, one paragraph weekly responses, and a final paper. Great understanding guy. Very beneficial class. TAKE HIM.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2010<br>Class Name: REL214<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is one of the smartest professors I've ever had. His test were super easy because he goes over the material so much. I highly recommend taking him! And hes cute ;)</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2010<br>Class Name: REL000<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof Mckinnis is one of the best I've had here at DePaul. Class format was more discussion based and it was always interesting. I was able to participate whether I did the reading or not. He removed one of the exams and by simply doing a night-before-cram-sesh exams [which were essay format] were easy to BS. The class was easy, i'm taking him again</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2010<br>Class Name: REL200<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. McKinnis was a great professor.  The students who put these bad remarks probably never came, didn't put forth an effort, and didn't try.  As a graduating senior I was thrilled with his performance and was challenged in they college ought to challenge.  I would take him again.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2010<br>Class Name: REL214<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This one is hard. He knows his stuff and doesn't shove his religious views down your throat. On the other hand, he is a bit disorganized and fishes for answers. He isn't bad or good. Just meh. His midterm was pretty easy. He just treats the class like we know all about religion, but can't quite grasp what he's said 80 times.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

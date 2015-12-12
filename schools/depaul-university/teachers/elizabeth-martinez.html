@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Elizabeth Martinez - 1.5</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Elizabeth Martinez</h1><hr><div><h2>Overall Quality: 1.5<br><br>Helpfulness: 2.0<br>Clarity: 1.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: LST200<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>By far the worst professor I have had at DePaul, and probably the hardest as well. Coming from a senior with a 3.9 this should say a lot. She was unclear, condescending, and not qualified to teach a history class, considering she studied literature. Absolutely refused to provide a rubric for our class yet gave no feedback on our papers. DONT TAKE! </div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2015<br>Class Name: LIT200<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>What I got was a professor who relies on wikipedia for history and a book (that is fairly easy to read) that isn't that helpful with trying to learn about the conquest in Latin America. She is incredibly passive aggressive, rude, and talks to the whole classroom as if we were in pre-k. She thinks she's funny but she just makes it uncomfortable.</div></div></div><div id="container" class="review"><div id="left">Date: 09/08/2015<br>Class Name: HON101<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>The readings felt pretty irrelevant. A lot of outside research was expected for the papers, and she always graded very specific and odd aspects of the papers. Not necessarily a super harsh grader (though this class did ruin my 4.0). Seems very condescending when talking to students, and I had a hard time developing any interest in the lectures. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

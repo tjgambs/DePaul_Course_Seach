@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Christine Gimbar - 2.6</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Christine Gimbar</h1><hr><div><h2>Overall Quality: 2.6<br><br>Helpfulness: 2.7<br>Clarity: 2.5<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/02/2015<br>Class Name: ACC102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This was Dr. Gimbar's first year of teaching so obviously there are are some things she needs to work on. Saying that though, she's a good professor.  It's essential that you attend class and do the homework because if you don't, you will fail.  Also, if you don't understand something from class be sure to see her or send an email .</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ACC102<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: Rather not say</div><div id="right"><div>She should be teaching a graduate class. Her class is tough because you have to memorize alot. She gives midterm reviews but exam is really different. She is a nice person but really hard. The weights of exams are too high</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>This was her first quarter teaching and I wish no other students get stuck with her in the future. Class average on the midterm was 60%, and grading of the homework was tough. She told a few students to strictly worry about the 18 review questions for the final. I mastered the review questions and they barely ended up being covered in the final. </div></div></div><div id="container" class="review"><div id="left">Date: 11/03/2015<br>Class Name: ACC102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>First year teaching at DePaul. She will make you memorize every possible thing for the rest including things you will never need to know. Midterm is worth 40% of your grade and final is worth 45%. Very hard clad. DO NOT TAKE HER</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

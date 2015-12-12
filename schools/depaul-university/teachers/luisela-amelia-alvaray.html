@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Luisela Amelia Alvaray - 2.6</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Luisela Amelia Alvaray</h1><hr><div><h2>Overall Quality: 2.6<br><br>Helpfulness: 3.0<br>Clarity: 2.3<br>Easiness: 1.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/04/2015<br>Class Name: MCS271<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Lectures are really dry like others have said. She is willing to help if you ask for it. The class I was in didn't really participate and she seemed kinda annoyed by that, though the students including me are to blame on that one as well. There are quizzes every now and then which are pretty easy if you do your readings.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2014<br>Class Name: MCS209<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This was a hybrid class (half online half in class) and I only took it because it fit my schedule. Dry, REALLY DRY lectures, and online quizzes are not always easy, tough grader when it comes to essays. Would not take this class again.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2014<br>Class Name: MCS271<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Avoid. Dry Lectures, All quizzes short answer and essay. Notes do not correspond directly to the readings, and she does not post notes online. Tough grader.</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2013<br>Class Name: CMN<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Latin American Cinema is more like a historical study of socialism, poverty and repression of Latin Americans as documented through various films. Surprisingly, this is not an easy or particularly fun class. Dry, serious, intense. Tough grader.She expects a LOT of in class participation. My advice: Choose another instructor.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

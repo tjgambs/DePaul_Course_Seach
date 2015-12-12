@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Chuck Suchar - 4.64</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Chuck Suchar</h1><hr><div><h2>Overall Quality: 4.64<br><br>Helpfulness: 4.86<br>Clarity: 4.43<br>Easiness: 4.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/16/2005<br>Class Name: SOC105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Chuck is a great guy and teacher who truly cares about his students. Sometimes the class could be boring because he loves to talk but overall he is great. Recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2004<br>Class Name: DISC<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Chuck was a fantastic prof. and knew so much about the material.  During immersion week be prepared to be caught in the middle of the cross walk when there are cars coming. Overall, I would take his class again.</div></div></div><div id="container" class="review"><div id="left">Date: 10/12/2004<br>Class Name: DISCOVER<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class was very fun, there is a lot of reading and journals but no tests.  He keeps the class interesting and is always there to help students.  Overall a nice teacher and guy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2004<br>Class Name: DISCOVER<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Chuck is awesome! One of the best teachers at DePaul! Very funny and has a great way of teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2004<br>Class Name: DISCOVER<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ha, Chuck was awesome! He did occasionally lead us across busy streets without looking for traffic...but I loved his class and learned a lot. He's a very cool guy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2004<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>AMAZING GUY!!!! I really recomend him. For my Discover class he was so interested in what he was teaching, that the class was just so amazing. GO FOR THIS GUY</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2003<br>Class Name: ISP104<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This guy is a legend. Although it was my only Discover class and only discover class I will ever take I already know it will probably be the most fun I have ever had in a class. His lame jokes make the class fun as hell. It's a really easy class!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Donna Mau - 3.79</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Donna Mau</h1><hr><div><h2>Overall Quality: 3.79<br><br>Helpfulness: 3.57<br>Clarity: 4.0<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/25/2012<br>Class Name: TL425<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She taught the class lazily.  She was condescending, unavailable by email, and discouraging.  Take the class from an instructor who cares. Very middle-school-oriented.  Avoid.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2010<br>Class Name: TL424<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is quite funny. Definitely grades harder than most and sometimes I found her grading system hard to understand. Will let you improve your grade. She's been in this profession for a long time. A bit hard to communicate with through email. Try reaching her over the phone. That may help. You will learn a lot about lesson plan preparation.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2009<br>Class Name: TANDL424<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Mau is one of the best. She's personable, professional, and knowledgable about education, plus she dresses great!We learned practical skills to use in the classroom and really helped build a solid foundation in teaching. We delved into portfolio development, teaching philosophies, and lesson presentation. Ideas are respected in her class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2009<br>Class Name: TL425<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>very helpful lot of unit planning for teachers must have all work completed and in! However she is very easy going and full of knowledge about the subject area</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2009<br>Class Name: TL425<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This is the sweetest person on earth! She's extremely helpful, obviously passionate about contributing to our development as teachers, she's funny and flexible and always prepared - you cover a lot in class, and she shares with you little details about teaching (she's still teaching in middle school). Great prof, highly recommended!!</div></div></div><div id="container" class="review"><div id="left">Date: 09/16/2006<br>Class Name: TL405<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Ms. Mau is not readily available by e-mail or appointments if you need to speak to her outside of class. She also has a very dry personality, which I found quite uncomfortable. There was a general consensus among many of us in the course that we were not always comfortable during open discussion, because she could be somewhat condescending.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: TL405<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Absolutely fantastic teacher.  Funny, interesting, and very clear on assignments and making sure you're on track.  Grading on reflections a little harder than I'm used to, but with just a little bit of work, you can still pull off an A.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

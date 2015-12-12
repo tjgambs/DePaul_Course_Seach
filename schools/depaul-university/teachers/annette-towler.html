@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Annette Towler - 4.19</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Annette Towler</h1><hr><div><h2>Overall Quality: 4.19<br><br>Helpfulness: 4.25<br>Clarity: 4.13<br>Easiness: 4.38</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/22/2013<br>Class Name: PSY105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Such a sweet lady! Annette is incredibly laid back and the class is pretty easy. She shares a lot of her personal life in the class, and she has a great sense of humor. And a cute british accent too!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2013<br>Class Name: PSY105<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>TAKE TAKE TAKE! Towler is awesome. Super nice, tells lots of stories, talks abouther love life and personal life. Class is super easy. 4 homeworks. Have to participate in research studies and obtain 5 credits. Recommend u read the book and right down the vocab in a notebook. She shows lots of videos/interesting documentaries. Class ends early alot</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2011<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Towler is awesome. A real down to earth person with an awesome record as a professor, from students and colleagues. Keeps things interesting and fun. She likes a good writer so give it your best!</div></div></div><div id="container" class="review"><div id="left">Date: 06/08/2010<br>Class Name: LSP112<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She's a funny upbeat person. There is no final but 2-3 page papers per week. She grades the papers very hard. Even if you make her revisions you still wont get an A. She said she barley gave out A's on papers. She grades like this is a 300 level class yet its only a freshman focalpoint. If youre looking for an easy A, than this class is not for you</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2010<br>Class Name: LSP120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I absolutely loved Professor Towler. She is extremely helpful and passionate about her field. The class isn't difficult, but be sure to be involved in the discussions! The class was fun and interesting, and she was very easy to get along with and talk to. Very caring and sweet. Definitely take her!</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2010<br>Class Name: PSY105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>SHE WAS THE BEST TEACHER EVER! A FEW HOMEWORK ASSSIGNMENTS, MID TERM AND FINAL-30 &#63;'S MULTIPLE CHOICE! VERY EASY CLASS.. YOU DONT NEED THE BOOK AT ALL.. I DONT THINK I EVER EVEN OPENED IT. GOTTA LOVE HER ADORABLE ACCENT! SUCH A SWEETHEARD!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/25/2009<br>Class Name: PSYCH105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I love her adorable accent. She talks about running and swimming alot but it itsn't annoying. She tries to make class fun and seems like a genuine sweetheart. Two tests and 4 homeworks. Book isn't used in class but it is usefull in taking the tests. Take her! I want to again.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2009<br>Class Name: PSY105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's pretty easy and cool.  Gotta love the accent.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Joseph Mello - 4.3</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Joseph Mello</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.1<br>Clarity: 4.5<br>Easiness: 2.9</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/07/2015<br>Class Name: 399<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>IF YOU WANT a PHD TAKE AN INDEPENDENT STUDY WITH MELLO!   took an independent study with Professor Mello in which he taught me quantitative skills, which I applied to a paper on gay marriage. It was a difficult task,but in the end it got published in a student journal. Learned more one on one about social science than any class at depaul.  </div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2014<br>Class Name: PSC120<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is very interested in politics, however the class was not very interesting to me. All lectures, and not much student engagement. He is also a very tough grader! Final and midterm are all essay, along with the two other papers. Not a lot of work but grades hard</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2014<br>Class Name: PSC263<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's not an easy grader, but he's not tough either. Class discussions were kept interesting. His lectures were great too. If you pay attention and take good notes, you can learn a lot in his classes. PSC majors should definitely take him.</div></div></div><div id="container" class="review"><div id="left">Date: 04/09/2014<br>Class Name: PSC263<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He was a good teacher, and the class was very interesting too. The topics were interesting and current. He's not a push over, but not super easy either. Take his class, you will learn a lot and enjoy his lectures.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2014<br>Class Name: PSC120<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>This class seemed easy but Professor Mello is a very tough grader. His political views were crystal clear and he didn't make an effort to hide them. Very knowledgeable</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2013<br>Class Name: PSC269<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great prof, always excited by the class material, did a great job encouraging discussion, often playing the devil's advocate. Definitely has high expectations for the writing assignments, but his criticism is constructive and detailed.</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2013<br>Class Name: PSC269<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>By far one of the best professors I have had at DePaul. He keeps you engaged during class with discussions and he goes over basically everything in the textbook; minimal reading done in this class and I still did very well. I am looking forward to taking more classes with this professors. Weekly journal assignments, midterm, and final.</div></div></div><div id="container" class="review"><div id="left">Date: 12/04/2013<br>Class Name: PSC269<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great professor and a great course.  Does a great job of keeping the class discussion flowing and does not put his opinion above the students.  Can be a hard grader but if you do the reading and come to class ready to talk you will do fine.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

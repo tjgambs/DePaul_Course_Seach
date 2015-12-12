@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Thomas Tresser - 2.57</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Thomas Tresser</h1><hr><div><h2>Overall Quality: 2.57<br><br>Helpfulness: 2.43<br>Clarity: 2.71<br>Easiness: 3.57</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/09/2008<br>Class Name: HC215<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Do not take a class from Tresser. The material should be interesting, but he does a good job keeping it mundane. Many, many busy work assignments - 3 long papers, 3 presentations, 2 short papers and a weekly homework assignment for a 10 week class. He schedules the class really tight and we almost always run over. Skip it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2008<br>Class Name: PAX250<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I'm sure he has good intentions, but Tresser is not a good teacher.  Some people are made to act and some to teach, and he should act.  Don't take his classes.  He's self-absorbed, the material is dull when it doesn't have to be, and the projects are lame.</div></div></div><div id="container" class="review"><div id="left">Date: 07/31/2006<br>Class Name: CULTACTIVIST<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He's obviously passionate and knowledgeable about what he teaches and very creative. My major complaint is receiving NO feedback during the course, then left to do a TON of work at end w/out guidance. He has a lot of potential, but should guide and empower students, rather than lecture hypercritically or cut students off mid-sentence.</div></div></div><div id="container" class="review"><div id="left">Date: 07/28/2006<br>Class Name: CULTURACTIV<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This was Tresser's first time teaching the course, so we all cut him some slack for a few scheduling glitches (papers & presentations due same day). He loves what he does, we loved learning how to stop being apathetic Gen X-ers and get involved. Class is worth taking, its a 101 on how to do something about politics that you're not cool with.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2006<br>Class Name: CULTURALACT<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2006<br>Class Name: CULTURALACT<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Tom has a passion for this subject.  I loved the way he creatively combined his theater background with the organizing aspects of cultural activism.  Every week he featured an artist, showed a film and played music to stress the different viewpoints on activism.  One drawback was planning two final assignments at the same time.</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2006<br>Class Name: AI148<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Although the initial subject matter was interesting, the class itself was very superficial, disorganized and poorly planned out.  I learned very little, and the teacher did not give adequate feedback.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

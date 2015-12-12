@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Gloria Alter - 2.75</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Gloria Alter</h1><hr><div><h2>Overall Quality: 2.75<br><br>Helpfulness: 3.0<br>Clarity: 2.5<br>Easiness: 3.13</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/27/2013<br>Class Name: EE355<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Pro:  A lovely woman who is passionate about social sciences education.  She always hands out lots of freebies.Con:  A disorganized educator who is inconsistent and sloppily prepares work.  We hardly used our texts and homework was a joke.  You should do your homework but you'd be successful even if you did not read/write up/turn it in late.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2013<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Dr. Alter loves what she does.  She is passionate, intelligent, helpful, and supportive.  If you have difficulties with the coursework or with anything else teaching related, she is informative, supportive, and understanding.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2012<br>Class Name: EE355<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class was a headache. I would tell you to avoid her, but I doubt you will have an option. Ask anyone what was going on in class and they couldn't tell you because no one knew. We didn't learn a single teaching method. Got nothing out of it. Also, we used 1 text for one assignment and didn't use the other at all. So get them from the library.</div></div></div><div id="container" class="review"><div id="left">Date: 10/17/2012<br>Class Name: TL419<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>DePaul needs to hire a new social studies teacher. Do not take 419 with Alter (unfortunately you might not have an option). We did not learn about how to teach social studies. We spent class time doing useless activities. Alter is very confusing, most of the time you will have no idea what is going on in class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2012<br>Class Name: EE355<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This Professor is a ball of agony! please stay away because if you don't, you leave her class more confused than you entered each day. FYI her rubric is super vague and no matter how many times you ask her to clarify you end up more confused. Her "guide" geared to help you understand the rubric is also useless and waste of paper.Enjoy hersuitcases!</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2012<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Gloria is totally awesome!  She's passionate about social justice and goes out of her way to help her students. I don't understand how anyone can have an issue with her.  She's literally one of the nicest people I have ever met.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2011<br>Class Name: TL419<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Wow....that previous reviewer seems a little angry. Well, I had a very good experience with her. She was really kind and very patient. By the way, previous reviewer....when we watch videos and do group work, independent work, etc, that's called differentiating instruction, and it's generally hailed as a hallmark of a good teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2010<br>Class Name: EE355<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Gloria did not teach a single method.  Take this class if you want to watch movies every class period and waste your money.  Treats the class as a social justice class and the assignments don't connect with material. Worst class taken at DePaul yet.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

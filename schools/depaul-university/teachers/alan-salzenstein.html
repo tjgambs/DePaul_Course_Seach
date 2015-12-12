@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Alan Salzenstein - 4.44</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Alan Salzenstein</h1><hr><div><h2>Overall Quality: 4.44<br><br>Helpfulness: 4.44<br>Clarity: 4.44<br>Easiness: 4.22</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/17/2013<br>Class Name: PAM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Very interesting man, stimulates thought, very knowledgable and in-touch with the music industry. Not too many harsh assignments. Just an average class and an average grader. I've only taken his intro class so far.</div></div></div><div id="container" class="review"><div id="left">Date: 05/23/2012<br>Class Name: PAM200<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very knowledgeable, very connected to the music industry. Readings from two books each week but gives you the entire week to read them. Midterm and final are take home. Usually shows funny/interesting youtube clips about what we're reading about.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2011<br>Class Name: PAM201<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor, great guy. Extremely knowledgeble in the field, and has incredible experience that adds to his instruction and class discussions. Assignments are at times tedious, but if you get into them can be fun and used with other classes. Looking forward to class with him again!</div></div></div><div id="container" class="review"><div id="left">Date: 05/30/2011<br>Class Name: PAM200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Alan is Fantastic.  He is incredibly knowledgeable in music business and is a entertainment lawyer.  TAKE THIS CLASS if you are a musician or want to get into the industry.  He uses Passman, the book regarded to be the best among the highest execs in the industry.  He helped me bounce back after missing work and was down 2 earth  This dude is dope.</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2009<br>Class Name: PAM301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>If you are a PAM student, make sure you become friends with Alan. He is a good guy and has amazing connections throughout the city, and he might be the best professor in the School of Music.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2008<br>Class Name: PAMYAY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>An amazing professor and a sophisticated gentleman.  I feel I learned a lot and I always looked forward to his class.  He treated us like adults.  Additionally, he is simply adorable and a funny, warm-hearted guy.  He should teach all 3 of the non-profit quarters of PAM.  Yay Alan!</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: PAM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He is fairly new at teaching the PAM sequence level course and should be teaching all 4 classes.  Assigns group projects and lectures the chapters in the book. Midterm and final exam--open book usually.  The structure of the class is weak,  not much learned. (mission, budgets, and organizational chart)</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2005<br>Class Name: PAM302<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>So easy. A fair grader but there just isn't that much to grade. Class can be more then a little boring, but lets be honest, it is the best that way. Being a lawyer he will ALWAYS play devil's advocate even if your point is the correct one.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2004<br>Class Name: THE<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very unorganized teaching style, but super easy class. Tangent chip anyone&#63;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

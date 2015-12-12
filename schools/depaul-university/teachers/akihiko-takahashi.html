@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Akihiko Takahashi - 3.64</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Akihiko Takahashi</h1><hr><div><h2>Overall Quality: 3.64<br><br>Helpfulness: 3.86<br>Clarity: 3.43<br>Easiness: 2.86</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/17/2013<br>Class Name: MATHMETHODS<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>To build future educators, yes he expects a lot. But we as educators do the same with our students. He is not clear but it is because he is from a different country, he does his best and speaks well for English being his second language. Absolutely brilliant man when you get to know him and his work.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2013<br>Class Name: MAT110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice professor! Take it if you want an easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2007<br>Class Name: TL416<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Takahashi is a great professor!! For a future teacher, he gave the class a lot of great tools to instruct math in the classroom. There are a lot of writing assignments yes, but if you wait until the last minute, then it's your own fault. I would highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 07/17/2007<br>Class Name: TL416<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hard to understand.  Obscene amount of writing for a math class.  A complete waste.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2006<br>Class Name: TL416<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Yes he expects A LOT of work, and is very specific on his objectives and guidelines.  But he is VERY intelligent and has great insight on the way to teach math to students.  If you're looking for an easy A, then maybe you're not made for this class. It's not hard to get an A but you have to work at it.  GREAT PROFESSOR!!! Worth all the work!</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2005<br>Class Name: MAT110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very knowledgable on how to teach young children and very clear objectives for class.  He teaches very hands on and is very approachable.  He explains every unit clearly. Take him if want to know how to teach math to any level.</div></div></div><div id="container" class="review"><div id="left">Date: 09/26/2005<br>Class Name: MATHMETHODS<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Horrible! He is picky in every way possible and expects pages worth of write-ups per class and per tutoring sight.  He overloads you with work and takes off points if you get to class late.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

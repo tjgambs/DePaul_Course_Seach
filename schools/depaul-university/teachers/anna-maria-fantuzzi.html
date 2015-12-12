@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Anna Maria Fantuzzi - 4.9</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Anna Maria Fantuzzi</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 5.0<br>Clarity: 4.8<br>Easiness: 4.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/29/2015<br>Class Name: ITA101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Fantuzzi is amazing. She is sweet, funny, and loves teaching Italian. Show up, participate, do the homework, and you'll be fine! Class is made up of working through the textbook and speaking lots of Italian. She randomly calls on you and asks questions; it keeps you on your feet and forces you to learn the wonderful language. 10/10</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2015<br>Class Name: ITA105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is the best Italian professor! She knows how to explain grammar and she makes class and fun. She's also pretty funny and super relaxed. My Italian has improved so much from her classes!</div></div></div><div id="container" class="review"><div id="left">Date: 07/10/2013<br>Class Name: ITA101103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is one of my favorite professors at DePaul. I had her for my entire first year and she is amazing. She is always willing to help and doesn't always teach straight from the book. She teaches about Italian culture, which is nice. She is also the nicest person ever. I wish I could take her next year. Tests are easy. Getting an A is easy.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2013<br>Class Name: ITA103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fantuzzi is by far my favorite professor at DePaul. I had her for my whole first year of italian and she was the best. Very  helpful, so funny, and such a sweet person. Please take her class, you will not be disappointed. :)</div></div></div><div id="container" class="review"><div id="left">Date: 07/05/2012<br>Class Name: ITA103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really is a great teacher. Would always take time before quizzes if you asked any questions.  She would also have classes where you would discuss Italian culture.  Always made Italian class enjoyable</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: ITA102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Anna Maria Fantuzzi is my favorite teacher ever!!! She is so helpful and hilarious. She makes the class a fun environment and tells a lot of funny stories. She also, takes time out of her schedule to help you. TAKE HER CLASS!!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2012<br>Class Name: ITA101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Profesoressa Fantuzzi is the best!!! She is super nice and hilarious. If you are taking an italian class, take hers. She makes learning a language very fun and easy</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

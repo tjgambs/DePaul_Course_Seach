@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Emily Oess - 2.81</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Emily Oess</h1><hr><div><h2>Overall Quality: 2.81<br><br>Helpfulness: 2.87<br>Clarity: 2.75<br>Easiness: 1.38</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/06/2011<br>Class Name: GPH211<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I don't know why everyone's giving Emily such a hard time. I took her Fall quarter this year. The class was fun and she knew what she was talking about. She seemed helpful and encouraged classroom cooperation. My only complaint would be that the assignments are a lot of work, and the projects hold a lot of weight.</div></div></div><div id="container" class="review"><div id="left">Date: 10/03/2010<br>Class Name: ANI101<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Seriously, I always read comments about bad professors but end up taking them because it fit my schedule. This was def the biggest mistake of my life. honestly. there is so much work you cannot keep up with your ACTUAL MAJOR CLASSES. its seriously horrible and shes horrible at getting back to you. seriously AVOID AT ALL COST. TAKE ANYTHING. ANYTHIN</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2009<br>Class Name: GPH259<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>0. NOBODY PASSES THE MIDTERM. 1. She expects you to know everything about geometric design beforehand 2. Does not teach, only goes over stuff once. 3. she will go back on her word. 4. FAVORTISM 5. TUFF GRADER 6. Hope this is the only course you're taking that quarter 7. May God help those who enroll in her course, BOTTOM LINE</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2009<br>Class Name: GPHGPH<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This class is not an easy A.  You get 2 hour homework assignments every week,  and at the beginning of every class there is a quiz.  She does try to help her students but she doesn't care about them.  She helps because its apart of her job.  I worked my tail off in this class, went to every class and studied and passed with a D.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: GPH259<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Took GPH 259 during the Winter Quarter of 2008-2009.  Emily is a cool person but is a horrible teacher! She does not care about effort at all.  You can try as hard as you want and you might still fail.  Every week there is homework and a quiz.   Homework requires a minimum of 2 hours per assignment.  Don't be fooled, this class is NOT easy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: GPH259<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Took this teacher during winter quarter 2008-2009 and she was horrendous.  She was there to help students when they needed it.  But, she could care less about effort. You can work your ass off and you might still fail.  You get homework every week, and a quiz every week.  and the class is boring and useless.</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2009<br>Class Name: GPH259<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Don't be fooled! This is NOT an easy A. But it IS a really fun class. Emily is a really fun person who always has a smile on and is willing to be real with the students and help them out. Fun, interesting, but tough!</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2009<br>Class Name: GPH259<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Emily is very friendly and kind but this class is far from an easy A. She shows favortism, mercy & leniency to suck-ups. She expects absolute perfection or your grade will reflect harshly. I worked really hard in the class and only managed a C, after the curve. Very time consuming and not worth the time--take Chem or something! Save yourself!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

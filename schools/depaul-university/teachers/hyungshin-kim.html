@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Hyungshin Kim - 1.92</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Hyungshin Kim</h1><hr><div><h2>Overall Quality: 1.92<br><br>Helpfulness: 2.0<br>Clarity: 1.83<br>Easiness: 1.83</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/11/2011<br>Class Name: CMN103<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Hyunghsin can be a very nice person, but she is a hard grader.  She goes over some information in class, but she doesn't always do a thorough job of explaining the concepts.  This made the class frustrating since everything revolves around the concepts.  The class subject overall is interesting, but I recommend finding a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2011<br>Class Name: CMN103<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is nice most of the time.  Her grading was way too hard for the material.  Her lectures where boring.  Wish I would have taken a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 04/27/2011<br>Class Name: ART176<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She can be funny at times, but her expectations of students are very high.  She is also a VERY picky grader. Work wise, there are readings every class which are generally a bit on the long side.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2010<br>Class Name: CMN102<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I agree that her accent does something make class frustrating but overall I think she is a pretty decent teacher. She is extremely funny in my opinion.It's not hard to get a good grade. Just review the notes ahead of time and do the readings and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2010<br>Class Name: CMN102<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Hyunghsin is a very nice person, but I did not click at all with her teaching styles.  She is a new professor at DePaul and had very high expectations for her students.  She is a VERY hard grader.  If you don't plan on studying a lot for this class, do not take this class with her.</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2010<br>Class Name: CMN102<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hyungshin is so sweet and I found her Asian antics hilarious. Unfortunately, she has a very heavy accent and her sentences don't always make sense. I found myself frustrated in the class because Mass Comm could have been awesome, but instead I spent all class trying to decipher what she was saying.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

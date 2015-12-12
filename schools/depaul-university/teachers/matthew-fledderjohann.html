@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Matthew Fledderjohann - 4.07</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Matthew Fledderjohann</h1><hr><div><h2>Overall Quality: 4.07<br><br>Helpfulness: 4.0<br>Clarity: 4.14<br>Easiness: 3.57</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/22/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy teacher, and hes so very nice! Quite funny, super easy going, easy to talk to and really made class interesting. I would highly recommend him, really great guy.</div></div></div><div id="container" class="review"><div id="left">Date: 07/24/2013<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Matthew has been my favorite professor so far at DePaul. He has great energy which keeps the class exciting and really opened my mind to why my own personal writing may be just as important as anyone's.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>For a WRD class, Matthew really keeps the attention and makes it interesting and sometimes even fun. If you need to take this class, you should choose him for a teacher because he is excellent</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2013<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Definitely one of those professors that if you put in the effort you will get something good out, but Matt is a really cool guy and has a ton of knowledge. Get to class early and talk to him about anything English and you'll be in a world of help.</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2012<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Fledderjohann is the man. So much swAg. Kind of a hard grader, but still class is so easy. Discussion boards are a piece of cake. I recommend taking him if you want a good grade.</div></div></div><div id="container" class="review"><div id="left">Date: 11/05/2012<br>Class Name: WRD103<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Super annoying with directions.. he always makes his assignment pages really hard to understand by using odd phrases and unnecessarily big words. Very hard to understand the assignments and isn't too helpful. Harsh grader and takes off a lot of points for little mistakes. Also very boring. Not the worst, but i wouldn't recommend either.</div></div></div><div id="container" class="review"><div id="left">Date: 10/11/2012<br>Class Name: WRD103<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Such a nice professor! you can tell he loves what he's teaching. Very helpful and the work isn't too challenging as long as you're paying attention</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

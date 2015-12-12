@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Kathy Purnell - 2.21</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Kathy Purnell</h1><hr><div><h2>Overall Quality: 2.21<br><br>Helpfulness: 2.14<br>Clarity: 2.29<br>Easiness: 2.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/05/2006<br>Class Name: PSC231<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The writing assignments were challenging and interesting.  Knows her material.  Was willing to help students that bothered to ask.  Class participation was low, but she was always prepared to carry the course. Definitely not easy, though.</div></div></div><div id="container" class="review"><div id="left">Date: 06/05/2006<br>Class Name: PSC231<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very busy person, challenging readings. Cared enough about students in class to offer them choices in assignments. Could not believe taught the course even though her father died during the quarter.  Answered questions well.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2006<br>Class Name: PSC231<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Words cannot describe how bad this class was.  It was worse than a riding in a car with the windows closed and no air conditioning in the middle of July.  I know it's been written in the other reviews, but avoid at all costs.</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2006<br>Class Name: PSC231<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Honestly, she is the worst teacher I have had in my ENTIRE academic career.  Monotone voice that's hard to hear, unclear objectives, disorganized, and doesn't know how to teach.  I would rather watch paint dry then take her again.  DO NOT TAKE HER.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: PSC231<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Worst professor I've ever had.  Knows so much but she doesn't know how to explain anything.  Just because you're a good student doesn't mean you can be a professor.  Worst class I've ever taken, avoid at all costs.  DON'T TAKE HER!</div></div></div><div id="container" class="review"><div id="left">Date: 03/24/2006<br>Class Name: PSC231<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>BAD!!!Painful, really really painful. Don't ever take her!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2006<br>Class Name: PSC231<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>A visiting professor.  This was the only course she taught.  Boring would not describe it...Maybe brain dead would fit but even lacks the ability to describe what it was like to attempt to survive this night class.  This is a case of a very good student with no people skills becoming a teacher for some god foresakken reason.  Just bad.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

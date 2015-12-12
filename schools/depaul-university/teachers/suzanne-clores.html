@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Suzanne Clores - 2.06</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Suzanne Clores</h1><hr><div><h2>Overall Quality: 2.06<br><br>Helpfulness: 2.0<br>Clarity: 2.11<br>Easiness: 2.89</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/04/2006<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very spacey lady... is not clear at all of her expectations and pretty much treats you like an idiot if you do not say what she wants to hear during discussions.  DO NOT TAKE HER.  Waste of time.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2006<br>Class Name: ENG103<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/19/2006<br>Class Name: ENG104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is the most disorganized and incompetant teacher that I have ever had.  Doesn't follow the syllabus at all, isn't clear on assignments,  and she always seems like her head is in the clouds.  I would NOT recommend her to anyone!</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2006<br>Class Name: ENG103<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Miserable class, awful teacher. Even when you think you're doing what she wants, it ends up being completely wrong. Clearly a rookie teacher. Never discusses assignments in class, rather sends out emails so even if you have questions it's too late by the time you get to class. Awful at explaining what she actually wants. DON'T TAKE HER! You'll regr</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2006<br>Class Name: ENG104<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>don't take her. says she will do something and never does. Sends email's regarding homework one-three hours before class. do yourself a favor, just don't take her</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>good professor....</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2005<br>Class Name: ENG102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is not a bad teacher but she can be unclear at times. I really liked her class and I got an A from just paying attention and coming to class. She is good at explaining if you ask questions and over all she is very nice and class involved. I loved my class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/26/2005<br>Class Name: ENG102<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/05/2005<br>Class Name: WRT102<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>If you naturally contribute to class in a socratic seminar type manner, she will not appreciate you at all.  Even though college classes are supposed to be more accepting to open discussions without high school-type regulations, she seems to retain those trivial and unimportant regulations...not to mention her OBVIOUS liberal bias; total hippie</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

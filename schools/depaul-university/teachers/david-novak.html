@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>David Novak - 1.6</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>David Novak</h1><hr><div><h2>Overall Quality: 1.6<br><br>Helpfulness: 1.5<br>Clarity: 1.7<br>Easiness: 1.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/11/2015<br>Class Name: ORG212<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>Reading the other reviews I concur he is a tough grader however I'm not ready to slam the door shut on him yet. It was his first year here since teaching abroad so maybe it's a bit of adjustment. Personally I found him really intelligent, funny and relatable. Despite tough grading I actually enjoyed the class environment a lot. </div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2015<br>Class Name: ORG212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: D+</div><div id="right"><div>I concur with the previous comments. He's the worst professor i've had at DePaul. He grades way hard and feels students don't deserve an A. He does not deserve to be a professor, he should be a cab driver. Wicked man</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2015<br>Class Name: ORGC212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Worst professor at DePaul. Seems like a cool guy at first but grades you as if you are a PhD student. Assignments are unclear and you'll get them back with terrible grades and ask why and he will say "I mentioned that in class." He didn't. Oh, also expect an INSANE work load to come week 4 through finals. </div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ORG212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Stay away from his class. He's a very hard and tough grader</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ORG212<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: WD</div><div id="right"><div>Toughest Grader on planet Earth, avoid his class</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ORG212<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 1<br>Grade Received: Not sure yet</div><div id="right"><div>Don't take him please</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: ORG212<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 1<br>Grade Received: C-</div><div id="right"><div>David Novak is the worst professor i've had at DePaul. He's a very Tough grader. He thinks students don't deserve an A. His comments on the presentations were two pages long. I regret taking him and I don't advise anyone to take him. It was his first time at DePaul and he's very strick in grade. Run far from from his class if you don't want to fail</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

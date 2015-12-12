@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Kenneth George - 4.1</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Kenneth George</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.4<br>Clarity: 3.8<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/13/2013<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I personally enjoyed this class. He explained things well and was always helpful on projects. He was relaxed on the due dates of projects, extended them out within a reasonable amount of time. Was a nice way to be creative and have fun.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2012<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Knowledgable on the material and helps his students as much as he can. Easy grader and knows how difficult animation can be for non-majors. Reccomend him for a fun and easy elective course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: ANI150<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Horrible classroom with terrible glare on the projector and no recording of the lectures. He teaches by doing, over and over so it's hard to catch what he's doing and learn it. If you want After Effects boot camp then this class is not for you. He is a really nice guy and knows After Effects well, he just doesn't translate it to teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy who tries really hard. He needs to learn how to teach, rather than show, a little better. I enjoyed the class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2011<br>Class Name: ANI101<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A little disorganized, but overall a great prof.  Wants his students to be successful, and understands that this class should be fun.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

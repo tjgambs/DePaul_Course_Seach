@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Suchitra Shenoy - 3.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Suchitra Shenoy</h1><hr><div><h2>Overall Quality: 3.4<br><br>Helpfulness: 3.4<br>Clarity: 3.4<br>Easiness: 3.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/02/2013<br>Class Name: ORGC251<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>She was one of the hardest classes I have taken. Not clear and a difficult grader. She responds and can be helpful, but I would not recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2011<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof. Shenoy is a very young and knowledgeable woman. She is highly interested in the subject matter that she teaches, however her class lectures may appear dull for some. She offered extra credit in the class, which is a rarity in many college courses. She is also an easy grader.</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2010<br>Class Name: CMN101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy grader and class. Not a hard subject matter. Lectures got a little dull but the easy grading made it so worth it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2010<br>Class Name: CMN101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice lady, but her half of the class was so obvious that it almost didn't need a teacher. Organizational communication is something I thought everyone could figure out through common sense. I left class usually at least 30 minutes early because I wasn't learning anything and would pack up and leave. Very nice and helpful but BORING.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2010<br>Class Name: CMN251<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DO NOT take this prof! She is extremely hard,there are pointless powerpoints every single day,her grading is ridiculous!!Her final has 350 terms you had to memorize half of them students said they have never seen.She give 20 point quizzes EVERY class. Not to mention if you ask for help she responds with &quot;theres nothing I can do&quot;. Hardest earn B eve</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

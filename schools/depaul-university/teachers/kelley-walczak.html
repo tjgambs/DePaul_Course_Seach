@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Kelley Walczak - 4.5</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Kelley Walczak</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 5.0<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/20/2015<br>Class Name: 382<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>most assignments are very easy. there is one easy final that she uploads a great study guide for. you might only spend 1-2 hours per week doing homework. buy the book.  the one group project can be time consuming if you get stuck with the wrong people. teams have freedom in how they will complete project, though this could be a pro or con </div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2015<br>Class Name: MKT382<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: Not sure yet</div><div id="right"><div>Nevermind, my team got it together near the end. My advice: start early and make sure everyone is playing their part. I guess this is obvious advice but just do it. Also, make sure your data backs up whatever recommendations you come up. She responds to e-mails fast if you ever need some assistance. </div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2015<br>Class Name: MKT382<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's very nice and the first 8 weeks of class are not difficult. My main problem with the course has been my team for the final project (30% of your grade).  Teams were selected "randomly" supposedly, but I couldn't help but notice that two teams were stacked with the good students while I got stuck with the worst team possible. Boo. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

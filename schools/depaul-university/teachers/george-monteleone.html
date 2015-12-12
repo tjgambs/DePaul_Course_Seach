@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>George Monteleone - 4.21</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>George Monteleone</h1><hr><div><h2>Overall Quality: 4.21<br><br>Helpfulness: 4.16<br>Clarity: 4.25<br>Easiness: 3.84</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/23/2011<br>Class Name: IT228<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>A nice, young, cool professor. He's slightly disorganized. Two tests, both open note, can be a bit tricky, but if you actually went to class and paid attention, you'd do just fine. Two more papers that are a little vague but he was a generous grader. I was amazed to see I got a B+ when in reality I probably deserved a C at best.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: DC228<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Interesting class. Lays everything out to help understand difficult topics. 2 tests with notes sheets, fairly easy. 2 papers however a little more difficult. Overall good teacher, not a boring lecture.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: ANI110<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>It surprised me to see how hipster this guy actually is (and I totally mean this in a good way.)</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2010<br>Class Name: ANI105<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very boring. lectures a lot and the quizzes have a lot of names and things to memorize. The text book was the most boring thing ever, he even admitted it. The only good thing was there was no exam for this class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/03/2010<br>Class Name: ANI105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's probably one of the coolest teachers at DePaul. He combines lessons with interesting pop culture references. Plus, he knows how to make people laugh. I'd take a class by him again. Also, his beard is just great.</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2010<br>Class Name: DC274<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Acknowledges when the material may be boring, but does his best to make it fun. Also had him for Ani 105. Both classes were equally enjoyable. Take his classes when you have the chance.</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2010<br>Class Name: DC233<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>SO CUTE. And class is easy.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: ANI105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really awesome professor. Cares about the subject, and is extremely helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2009<br>Class Name: ANI105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He knows what he's talking about and makes the class interesting. He's pretty funny and very helpful. Kind of slow grader though.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2009<br>Class Name: ANI105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Assignments are challenging, but he doesn't grade harshly at all. Very interesting, knows what he's talking about.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2009<br>Class Name: ANI105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>George is a great teacher! He's really helpful and knows what he's talking about.</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2009<br>Class Name: ANI105<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Nice guy and pretty good teacher.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>John Koval - 4.57</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>John Koval</h1><hr><div><h2>Overall Quality: 4.57<br><br>Helpfulness: 4.57<br>Clarity: 4.57<br>Easiness: 4.14</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/27/2006<br>Class Name: SOCIOLOGY206<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The most interesting professor ever! I looked forward to his class. Learned alot!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2006<br>Class Name: SOC206<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very interesting topics.  Passionate about his work.</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2005<br>Class Name: SOC101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Colonial Sanders...to a T. But a seriously awesome man. He'll fight his opinions to no end, but it's good practice if you're considering litigation. He's really smart and likes to tell stories. His class was something I always looked forward to.</div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2005<br>Class Name: SOC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice guy, just study the vocab and you will get an A. Midterm was optional and he gave us the questions for the final to take home and study. He is very flexible. and drops the lowest quiz. Good class</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2005<br>Class Name: SOC101<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Overall, this class is boring, but it is extremely easy.  Your grade is based on vocabulary quizzes each week which are very easy if you study.  The lectures are not that exciting, but it is not really necessary to pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2005<br>Class Name: SOC101<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This professor is so nice and understanding. He looks like Santa Claus, and he seems to be the ideal American. We take a vocab quiz every week, and the midterm was optional. Great guy!</div></div></div><div id="container" class="review"><div id="left">Date: 02/17/2005<br>Class Name: SOC101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This professor is so nice and understanding.  He looks like Santa Claus, and he seems to be the ideal American.  We take a vocab quiz every week, and the midterm was optional.  Great guy!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

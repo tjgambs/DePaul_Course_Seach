@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Karen Fitzner - 2.63</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Karen Fitzner</h1><hr><div><h2>Overall Quality: 2.63<br><br>Helpfulness: 2.5<br>Clarity: 2.75<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: ECON105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Of all my professors at DePaul, I was most disappointed with her. She is extremely nice and cares about her students, however is so disorganized with how to run the class. She rarely knows any due dates for assignments  and does not offer help outside of class.  Never ask this professor anything about grades, she will lose her temper!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: ECO326<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Fitzner is very unorganized and is truly just all over the place. She is very nice, and has had great work experience but her teaching methods are not on point. Be ready to back track a lot in this class and do most of the work on your own. </div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2015<br>Class Name: ECO105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was a pretty good professor.  You have to show up and pay attention in order to get an A or B I feel.  Quizzes every other class, but they are straight forward and from the book.  Half of the midterm and final (the only tests) were take home.  I showed up every class,  never read the book, and did all the homework (from the book).  Got a 95%</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2015<br>Class Name: ECO105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DON'T TAKE THIS PROFESSOR, she is the worst professor I saw in my life. her tests and quizzes super difficult. I am blaming my self cuz I took this class with her and got C while there other good and easy professors who you can with them easy A</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

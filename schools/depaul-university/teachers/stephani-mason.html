@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Stephani Mason - 2.8</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Stephani Mason</h1><hr><div><h2>Overall Quality: 2.8<br><br>Helpfulness: 2.8<br>Clarity: 2.8<br>Easiness: 1.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: ACC305<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>DO NOT TAKE HER. Worst accounting class ever. I'm good at accounting but she does a terrible job teaching you and DOES NOT GIVE PRACTICE MIDTERMS OR FINALS TO STUDY like all the other professors. AVOID AT ALL COSTS.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have read reviews from here and other places she has taught and they are pretty accurate. Can be rude and condescending to students. Seems more interested in bragging about herself. Tests are as difficult as advertised.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is rude! Often talks down to the class. Avoid!</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2014<br>Class Name: ACC305306<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mason's class is not easy, but if you got into accounting so you didn't have to work hard, quit while you still can. You will learn more in her class than in any of your other classes at DePaul and she is EXTREMELY helpuful in office hours and via email. My favorite teacher I've had at DePaul, BY FAR. and Im a fin major!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2013<br>Class Name: ACC305<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Professor Mason's class is definitely not easy. She is clear during class and explains concepts fairly well. However, her midterm and final are very difficult. They are much more complex than the examples learned in class. The midterm and final are CPA like if not harder. Many people failed and no one got A's. Final project and large curve.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

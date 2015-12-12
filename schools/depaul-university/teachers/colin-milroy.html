@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Colin Milroy - 4.71</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Colin Milroy</h1><hr><div><h2>Overall Quality: 4.71<br><br>Helpfulness: 5.0<br>Clarity: 4.43<br>Easiness: 3.71</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/05/2007<br>Class Name: ENG104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's really nice and laid-back. All u need to do is participate and read to chime in during discusions. The group projects are easy and the class is fun.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2007<br>Class Name: ENG104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very helpful, usually clear, if you feel he isn't he is definitely willing to help if you're willing to put in the effort as well.</div></div></div><div id="container" class="review"><div id="left">Date: 02/26/2007<br>Class Name: ENGLI102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is the best English teacher.  I learned so much in his class.  Just make sure you do the readings and all of your papers and you will get a good grade in his class.  I love him and I wish I had him for all of my classes</div></div></div><div id="container" class="review"><div id="left">Date: 02/21/2007<br>Class Name: WRC108<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>ok, he is AN AWESOME GUY! I tell you, he is understanding and he isnt very very hard grader. Do the reading and good on his papers and you should be good to go. Makes class so much fun, i honetly had a blast in his class. I TOTALLY RECOMEND HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 12/06/2006<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Best teacher ever! He's an awesome guy and extremely helpful!Do the readings and participate in class and your bound to get a good grade. You also learn a lot in class from the class discussions.</div></div></div><div id="container" class="review"><div id="left">Date: 10/20/2006<br>Class Name: ENG102<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice guy. Just do the readings, homework, and fairly well on the essays and your bound for a good grade. Very helpful and is just a relaxed teacher. Recommend him if you are taking ENG 102.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2006<br>Class Name: ENG103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very nice & accessible.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

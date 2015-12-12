@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Peter Sibilio - 2.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Peter Sibilio</h1><hr><div><h2>Overall Quality: 2.4<br><br>Helpfulness: 2.0<br>Clarity: 2.8<br>Easiness: 1.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/12/2009<br>Class Name: REL233<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Pretty difficult class. His grading scale makes it really difficult to get an A. He's an interesting guy and does a good job making things simple.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2009<br>Class Name: REL233<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I thought he was funny. We had to read a lot and pay attention in class. We had a quiz every two weeks multiple choice, a five page paper and a final essay exam. As long as you participate, attend class and pay attention, you should be fine</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2009<br>Class Name: REL233<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a great guy with a great sense of humor, although it can be a bit offensive. If your sensitive do not take this class otherwise read the chapters and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/19/2008<br>Class Name: REL233<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very boring class. Tries making jokes all class that are not funny at all. Really annoying voice sounds like carrot top. Hard class, makes the material harder than it has to be. Quiz every two weeks, Final, Paper. Do yourself a favor and don't take this prof.</div></div></div><div id="container" class="review"><div id="left">Date: 11/16/2008<br>Class Name: REL233<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>100+ pages of heavy, heavy reading per week for a 200-level class.  He has a very inappropriate sense of humor.  The quizzes are moderately hard, but his lectures are incomprehensible due to his habit of getting side tracked and off topic.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});

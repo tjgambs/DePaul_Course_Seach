@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>Oyku Potuoglu-Cook - 4.36</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
 
 				    <link href="../../../css/select2.css" rel="stylesheet"/>
 					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
@@ -436,39 +437,6 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script><h1>Oyku Potuoglu-Cook</h1><hr><div><h2>Overall Quality: 4.36<br><br>Helpfulness: 4.43<br>Clarity: 4.29<br>Easiness: 2.14</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/17/2012<br>Class Name: ANTH176<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very very passionate about her class/her field of study. Unfortunately in her middle eastern studies class I felt very behind (like there was a pre-requisite) by the first session and it just went downhill afterward. There's a crazy amount of reading assigned to each class session, which is only doable if you have a genuine interest in the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2008<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>lots of work but so worth it</div></div></div><div id="container" class="review"><div id="left">Date: 11/12/2008<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Cook is a gem. take all her courses NOW!</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2008<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>she was pretty tuff but brilliant. take whatever she offers!</div></div></div><div id="container" class="review"><div id="left">Date: 11/04/2008<br>Class Name: ANTRO102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>AWESOME TEACHER! Invested, passionate, and caring. She likes to challenge us to think differently about culture. I loved the fieldtrips in Humboldt Park. Wouldn't trade this class for any other.</div></div></div><div id="container" class="review"><div id="left">Date: 10/30/2008<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>3 papers midterm 4page and final one and seven page and she will pick on you most if you do not read it.Sometimes discussions become very uncomfortable.The project is fieldwork!! it can be humboldt park and you have to go there three to four times.Its really time consuming and really stupid !!</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2008<br>Class Name: ANTHR102<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was overall very good, if you pay attention, take good notes and study you should be fine, for this class there was only a couple of quizzes, a few papers and no real test/final, but there was a project at the end pf the quarter that required a presentation, but she made it very fun, enjoyable and interesting, opened my eyes about how interesti</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					updateCourseCartCount()
-					function creditSearch()
-					{
-						prefix = document.getElementsByClassName('credit-prefix')[0].value;
-						credit = document.getElementsByClassName('credit-input')[0].value;
-						search = prefix.toLowerCase()+'-credits='+credit
-
-						document.getElementById('tipue_search_input').value = '"'+search+'"'
-						document.getElementById('field').submit()
-					}
-
-					function updateCourseCartCount()
-					{
-						var cookies = document.cookie
-						var count = 0;
-						for (i of cookies.split(';'))
-						{
-							cookie = i.split(',')
-							if (cookie[0].indexOf('-add-') != -1)
-							{
-								count += 1;
-							}
-						}
-						document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-					}
-
-					function help() 
-					{
-						console.log('fdsa')
-						el = document.getElementById("help");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
-
 					$('#help').mousedown(function(e) 
 					{
 						var clicked = $(e.target);
@@ -482,12 +450,6 @@
 							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
 				    	}
 					});
-
-					function overlay() 
-					{
-						el = document.getElementById("overlay");
-						el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-					}
 
 					$('#overlay').mousedown(function(e) 
 					{
@@ -503,26 +465,6 @@
 				    	}
 					});
 
-					function submitForm()
-					{
-						var prefix = document.getElementsByClassName('prefix')[0].value
-						var number = document.getElementsByClassName('number')[0].value
-						if(isNaN(number) == false)
-						{
-							search = prefix.toUpperCase() + '  ' + number
-							document.getElementById('tipue_search_input').value = '" '+search+'"'
-							document.getElementById('field').submit()
-						}
-					}
-					function matchStart (term, text) 
-					{
-						if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-						{
-					    	return true;
-					    }
-				    	return false;
-					}
-				 
 					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 					{
 						$("select").select2({
@@ -534,11 +476,12 @@
 					{
 					    if (e.keyCode == 13) 
 					    {
-					        submitForm()
+					        submitForm();
 					    }
 					});
 
 				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 					});
