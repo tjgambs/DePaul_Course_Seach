@@ -452,6 +452,14 @@ The subjects scheduled are diversified in nature and scope. They cover many fiel
 	    }
 	});
 
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

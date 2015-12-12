@@ -457,6 +457,14 @@ Student will have an opportunity to speak at each class as there will be 3 short
 	    }
 	});
 
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

@@ -452,6 +452,14 @@ WRD 103 or HON 100 is recommended.</h2></body><script>
 	    }
 	});
 
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

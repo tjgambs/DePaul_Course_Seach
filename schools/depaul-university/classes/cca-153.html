@@ -453,6 +453,14 @@ Speech, whether we call it dramatic or declamatory, has the potential to move th
 	    }
 	});
 
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

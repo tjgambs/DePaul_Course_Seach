@@ -452,6 +452,14 @@ This course will be a mix of lecture, discussion, videos and other supplemental 
 	    }
 	});
 
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

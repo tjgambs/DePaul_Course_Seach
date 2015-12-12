@@ -11,6 +11,7 @@
         <link href="css/select2.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/tipuesearch.css">
+        <script src="js/general.min.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -443,22 +444,6 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
-	function creditSearch()
-	{
-		prefix = document.getElementsByClassName('credit-prefix')[0].value;
-		credit = document.getElementsByClassName('credit-input')[0].value;
-		search = prefix.toLowerCase()+'-credits='+credit
-
-		document.getElementById('tipue_search_input').value = '"'+search+'"'
-		document.getElementById('field').submit()
-	}
-	
-	function help() 
-	{
-		el = document.getElementById("help");
-		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-	}
-
 	$('#help').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
@@ -472,13 +457,6 @@
 			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
     	}
 	});
-
-	function overlay() 
-	{
-		el = document.getElementById("overlay");
-		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-	}
-
 	$('#overlay').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
@@ -492,50 +470,12 @@
 			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
     	}
 	});
-
-	function submitForm()
-	{
-		var prefix = document.getElementsByClassName('prefix')[0].value
-		var number = document.getElementsByClassName('number')[0].value
-		if(isNaN(number) == false)
-		{
-			search = prefix.toUpperCase() + '  ' + number
-			document.getElementById('tipue_search_input').value = '" '+search+'"'
-			document.getElementById('field').submit()
-		}
-	}
-
-	function matchStart (term, text) 
-	{
-		if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) 
-		{
-	    	return true;
-	    }
-    	return false;
-	}
-
-	function updateCourseCartCount()
-	{
-		var cookies = document.cookie
-		var count = 0;
-		for (i of cookies.split(';'))
-		{
-			cookie = i.split(',')
-			if (cookie[0].indexOf('-add-') != -1)
-			{
-				count += 1;
-			}
-		}
-		document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')'
-	}
- 
 	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 	{
 		$("select").select2({
 	    	matcher: oldMatcher(matchStart)
 	    })
 	});
-
 	$(".number").keyup(function (e) 
 	{
 	    if (e.keyCode == 13) 
@@ -543,9 +483,16 @@
 	        submitForm()
 	    }
 	});
-
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
 	$(document).ready(function() 
 	{
+		$(".prefix").select2();
     	updateCourseCartCount()
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});

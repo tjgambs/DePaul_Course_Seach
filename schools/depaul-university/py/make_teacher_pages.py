@@ -612,6 +612,14 @@ def create_teacher_webpage(id,name,values):
 					    })
 					});
 
+					$(".credit-input").keyup(function (e) 
+					{
+					    if (e.keyCode == 13) 
+					    {
+					        creditSearch();
+					    }
+					});
+
 					$(".number").keyup(function (e) 
 					{
 					    if (e.keyCode == 13) 
