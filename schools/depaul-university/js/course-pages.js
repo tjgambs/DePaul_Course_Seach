@@ -106,15 +106,18 @@ function updateRanking()
 		    	{
 		    		for(var j = 0; j<list_overall.length; j++)
 		    		{
-		    			if (overall.length != 0 && overall != '0' && overall != '0.0')
+		    			if(overall)
 		    			{
-		    				if(list_overall[j].innerHTML.indexOf('<a style') == -1)
+		    				if (overall.length != 0 && overall != '0' && overall != '0.0')
 		    				{
-				    			list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
-				    			list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
-				    			list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
-				    			list_cookie[j].id = overall+',' + list_cookie[j].id;
-			    			}
+		    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
+		    					{
+				    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
+				    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
+				    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
+				    				list_cookie[j].id = overall+',' + list_cookie[j].id;
+			    				}
+		    				}
 		    			}
 		    		}
 		    	}
