@@ -49,7 +49,7 @@ def update_website():
 		local('git checkout master')
 		local('git rebase gh-pages')
 		local('git push')
-		local('git checkout master')
+		local('git checkout gh-pages')
 
 def delete_courses_teachers():
 	with lcd('../'):
@@ -59,7 +59,8 @@ def delete_courses_teachers():
 		local('mkdir classes')
 
 def update():
-	print 'Start:' + strftime("%Y-%m-%d %H:%M:%S")
+	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
+	local('git checkout gh-pages')
 	#local('python take_class_data.py')
 	#delete_courses_teachers()
 	#local('python make_course_pages.py &')
@@ -67,5 +68,6 @@ def update():
 	#get_all_books()
 	local('python make_amazon_links.py')
 	update_website()
-	print 'Finish:' + strftime("%Y-%m-%d %H:%M:%S")
+	local('rm *.pyc')
+	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
 

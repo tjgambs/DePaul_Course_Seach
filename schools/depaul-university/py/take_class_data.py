@@ -34,21 +34,20 @@ def download_classes():
 
 	courses = []
 
+	for ul in soup.findAll('ul',{'class':'columnlist medium'}):
+		a = ul.findAll('a')
+		for i in a:
+			url = 'http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses'
+			start = i['href'].rindex('?dtl=Y') + 6
+
+			html = urllib.urlopen(i['href'])
+			soup = Soup(html)
+			course_description = soup.find('p',{'class':'nopadding-top'}).text
+
+			#print 'Downloaded ' + str(url+i['href'][start:])
+			courses.append([i.text,course_description,str(url+i['href'][start:])])
+			
 	with open('../classes.json','w') as output:
-
-		for ul in soup.findAll('ul',{'class':'columnlist medium'}):
-			a = ul.findAll('a')
-			for i in a:
-				url = 'http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses'
-				start = i['href'].rindex('?dtl=Y') + 6
-
-				html = urllib.urlopen(i['href'])
-				soup = Soup(html)
-				course_description = soup.find('p',{'class':'nopadding-top'}).text
-
-				#print 'Downloaded ' + str(url+i['href'][start:])
-				courses.append([i.text,course_description,str(url+i['href'][start:])])
-
 		json.dump(courses, output)
 
 def main():
