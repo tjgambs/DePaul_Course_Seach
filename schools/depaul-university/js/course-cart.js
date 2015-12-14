@@ -1,3 +1,73 @@
+function run()
+{
+	$(".number").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        submitForm();
+	    }
+	});
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		var el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+	$('#userInput').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#userInput-container') || clicked.parents().is('#userInput-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		var el = document.getElementById("userInput");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+	$('#books').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#books-container') || clicked.parents().is('#books-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		var el = document.getElementById("books");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+	$('#help').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		var el = document.getElementById("help");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+}
+
 function updateStatus()
 {
 	var courses = document.getElementsByClassName('course');

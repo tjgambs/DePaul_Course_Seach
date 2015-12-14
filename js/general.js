@@ -1,3 +1,53 @@
+function run()
+{
+	$('#help').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("help");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+	$('#overlay').mousedown(function(e) 
+	{
+		var clicked = $(e.target);
+		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
+		{
+			return;
+    	} 
+    	else 
+    	{ 
+    		el = document.getElementById("overlay");
+			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
+    	}
+	});
+	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
+	{
+		$("select").select2({
+	    	matcher: oldMatcher(matchStart)
+	    })
+	});
+	$(".number").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        submitForm();
+	    }
+	});
+	$(".credit-input").keyup(function (e) 
+	{
+	    if (e.keyCode == 13) 
+	    {
+	        creditSearch();
+	    }
+	});
+}
+
 function matchStart (term, text) 
 {
 	return text.toUpperCase().indexOf(term.toUpperCase()) == 0

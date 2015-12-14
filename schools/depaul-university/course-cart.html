@@ -466,72 +466,6 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		var el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-	$('#userInput').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#userInput-container') || clicked.parents().is('#userInput-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		var el = document.getElementById("userInput");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-	$('#books').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#books-container') || clicked.parents().is('#books-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		var el = document.getElementById("books");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		var el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	}); 
 	$(document).ready(function() 
 	{
 		formatCookies();
@@ -540,6 +474,7 @@
 		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
     	$(".prefix").select2();
     	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    	run();
 	});
 </script>
 </html>
