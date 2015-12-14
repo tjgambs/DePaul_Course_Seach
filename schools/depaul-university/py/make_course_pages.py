@@ -3,9 +3,18 @@ import json
 import urllib
 
 def create_page(full_name,description,course_url):
+	ignore = ['a','an','the','and','at','around','by','after','along','for','from','of','on','to','with','without']
+	tempArr = []
+	for index,i in enumerate(full_name.replace(';','').split(' ')[2:]):
+		if index == 0:
+			tempArr.append(i.capitalize())
+		elif i.lower() in ignore:
+			tempArr.append(i.lower())
+		else:
+			tempArr.append(i.capitalize())
 	short_url = ' '.join(full_name.split()[:2]).replace(';','')
 	html = '<!DOCTYPE html><html><head><title>'
-	html += full_name.replace(';','')
+	html += ' '.join(full_name.replace(';','').split(' ')[:2]) + ' - ' + ' '.join(tempArr).replace('Ii','II').replace('Iii','III').replace('IIi','III')
 	html +='''</title>
 	<meta charset="UTF-8">
 	<script src="../../../js/jquery.min.js"></script>
