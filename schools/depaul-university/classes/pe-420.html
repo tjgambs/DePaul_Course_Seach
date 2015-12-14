@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>PE 420 FACILITY AND RISK MANAGEMENT IN SPORT, FITNESS AND RECREATION</h1><h2>Students will be introduced to the planning, designing and management of sport, recreation, and fitness facilities. Students will identify strengths and weaknesses of major facilities and will design their own facility upon completion of this course.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PE&catalog_nbr=420","PE 420");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

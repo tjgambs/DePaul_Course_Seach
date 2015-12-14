@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>DC 450 DIRECTING ACTORS FOR THE CAMERA</h1><h2>This course will consist of scene studies emphasizing the actor/director relationship, the relationship between the camera and performer, casting, blocking for the camera, and scene analysis.  Each week students will shoot and edit short dialogue scenes.  The scenes will be analyzed for the quality of the performance and effectiveness of direction.  Students will work toward the creation of a final, polished short film.  Digital Cinema students are expected to enter the class with a shoot-able five to ten minute script they can use as their final project.  Prerequisites: DC 460, DC 461, DC 462</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=450","DC 450");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>ITA 395 FOREIGN LANGUAGES ACROSS THE CURRICULUM</h1><h2>The two credit FLAC course allows students to enrich their experience in the co-required course through added reading, writing, listening and speaking activities in Italian. Students must have the equivalent of 106 or higher ability in Italian to take this two credit component. Please contact the Department of Modern Languages if you have questions about this course or about language placement.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ITA&catalog_nbr=395","ITA 395");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

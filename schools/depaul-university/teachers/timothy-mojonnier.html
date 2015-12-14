@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Timothy Mojonnier</h1><hr><div><h2>Overall Quality: 3.58<br><br>Helpfulness: 3.67<br>Clarity: 3.5<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/13/2014<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is a really boring teacher. Grade is based on mid-term, final, online hw, attendance, and discussion posts. He is straight forward and grades quite leniently on tests. You get to use the formula sheet for tests. Overall, would recommend</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2014<br>Class Name: MGT301<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Mojonnier is a very boring lecturer; however, his class is pretty straight forward. 90% of the final was a take home(he has a family emergency), and it is not that hard of the subject. He hands out a decent amount of busy work as well. Overall a very manageable class, but not the easiest class ever either.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2014<br>Class Name: MGT301<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Really nice guy, but such a boring class. The class consists of online homework, class attendance, online discussion posts, midterm, and final. The exams aren't hard but definitely not easy either, you need to study. Overall not a bad class.</div></div></div><div id="container" class="review"><div id="left">Date: 07/18/2013<br>Class Name: MGT301<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's really nice. Class is basically lecture, some group discussions. 4 or 5 online work. You don't need the textbook, just buy the code for homework. 5 d2l forum posts for participation grade. 1 mid term exam, you can bring 1 sheet of formulas, and 1 final group presentation.</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2013<br>Class Name: MGT301<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>BORING teacher, monotone but COOL person. I probably missed 4-5 classes and ended up with a B in the course. Used MYomLab for EASY hw grade. We had a quiz which was SUPER EASY!  Midterm easy if you do the hw. final had a bunch of the video cases we watched in class on it but not bad.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2013<br>Class Name: MGT301<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Class isn't too bad, just boring lectures. Midterm is easy, make sure you study the concepts as well as problems. Final is horrible. Study problems and concepts but your main focus (for concepts) should be JIT and the video cases. That's majority of the multiple choice. He's not a bad teacher but can sometimes be unclear about the topics.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

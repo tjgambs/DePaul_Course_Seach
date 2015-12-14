@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Emily Bidari</h1><hr><div><h2>Overall Quality: 4.17<br><br>Helpfulness: 4.5<br>Clarity: 3.83<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/09/2014<br>Class Name: ENV150<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She's great! At first, I didn't expect a lot from this class but she really wow-ed many ways. She is smart, passionate, funny, and care for her students. No quiz, only a midterm and final, two class presentations(fun ones), and 2 short reflection papers. Lots of reading and discussions but overall a fun, easy class, you will enjoy sitting through!</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2014<br>Class Name: ENV230<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS CLASS WITH BIDARI. she is really nice, but is one of those people that should NOT be a professor.  Very passionate about what she teaches but is so confusing and hard to follow.   It seems that she enjoys taking off points from tests and presentations, even if it doesn't make much sense. Take this class with a different professor.</div></div></div><div id="container" class="review"><div id="left">Date: 01/11/2013<br>Class Name: ENV230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Bidari was awesome. I really enjoyed the class and I learned a lot without feeling overwhelmed. There is consistant hw and engagement needed for the class, but nothing really hard. You can tell she really loves what she teaches and she's really quirky and fun!</div></div></div><div id="container" class="review"><div id="left">Date: 12/17/2012<br>Class Name: ENV230<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Take Bidari's class! She is extremely well-versed in the subjects covered and is honest when she isn't sure about something. She is very enthusiastic and was always available over email and in office hours. Taking her class has made me seriously consider changing my major to Environmental Studies!</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2012<br>Class Name: ENV230<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Solid class overall. Not too difficult and it really teaches you something new about climate change. Not the most engaging professor, but she gets the job done.</div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2012<br>Class Name: ENV230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Great teacher! Really hard material so you have to go to class. Grades really only rely on final project and final exam, and a few Tuesday reflections. You'll learn a lot from Bidari, good freshman rec class</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

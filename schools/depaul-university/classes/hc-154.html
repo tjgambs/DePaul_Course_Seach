@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>HC 154 RACE AND ETHNIC RELATIONS</h1><h2>How do we understand and heal the wounds of racism?  How do we build bridges that allow diversity to flourish in the United States?  What are the connections among forms of racism such as ethnic cleansing and "pacification programs"? In this course, we will explore the roots of racism,  look at the changes brought about by the civil rights movement, and examine ongoing work aimed at bridging the gaps caused by racism.  Students will study a variety of topics through discussion, readings, films, debate, guest panels, and field excursions.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HC&catalog_nbr=154","HC 154");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

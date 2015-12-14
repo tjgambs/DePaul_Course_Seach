@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>EE 356 ASSESSMENT IN THE ELEMENTARY CLASSROOMS</h1><h2>This course focuses on study, use, and evaluation of assessment practices in diverse, K-8 contexts. Assessment is addressed as part of instructional systems, attending to issues including: the appropriate use of standardized measures, formal and informal classroom assessment, portfolio development, as well as reporting to all stakeholders. This course also emphasizes ways of involving students and parents in assessment processes, how to observe and assess children individually and in classroom settings, and the use of numerous technologies as components of a classroom assessment system.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=EE&catalog_nbr=356","EE 356");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

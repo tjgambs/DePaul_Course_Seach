@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Maureen Dolan</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.3<br>Clarity: 3.6<br>Easiness: 4.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/05/2015<br>Class Name: PAX200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>She is a very nice Professor, who knows a lot  about her field. 5 response paper, 1 Final 8 pages paper and services learning 25 hrs. She gives opportunities for revising. TAKE HER!!!! EASY A</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2013<br>Class Name: SW275<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Dolan is very kind, and there wasn't too much work. I would recommend her to anyone.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2012<br>Class Name: PAX200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I don't know why people are talking negative about her but I think she is one of the best professors I ever had at De Paul. She is very helpful. Class is boring a times but assignments and stuff we do in class is very easy. Just put some time in it and you will pass with a A. Also be ready to do some service learning hours (25hrs)</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2009<br>Class Name: PAX200<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>always believes her views are the ONLY accurate ones When students have questions she gives a name of a website to look up, never explains the content.Also when someone raises an opposing view she fires back.the assignments are not hard and non of the material is anything new or worth paying money for that the avr. joe didn?t learn in high school.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2006<br>Class Name: PAX200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's not that bad.  You have to come to class and look interested.  Just do the work and you will get a good grade.  The class is not that hard.</div></div></div><div id="container" class="review"><div id="left">Date: 08/23/2006<br>Class Name: SW275<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took a Yoga Class with Professor Dolan. Very motivating, inspirational, warm hearted, understanding. Kind.</div></div></div><div id="container" class="review"><div id="left">Date: 01/26/2006<br>Class Name: SW275<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Authoritative,unmotivating,not recomanded.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

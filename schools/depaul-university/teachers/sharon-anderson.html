@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Sharon Anderson</h1><hr><div><h2>Overall Quality: 4.67<br><br>Helpfulness: 4.67<br>Clarity: 4.67<br>Easiness: 3.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/13/2014<br>Class Name: MKT377<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sharon is a decent teacher. I really did not learn much, but I was expecting that because this is really a blowoff class (aside from the $300 you have to raise for 20% of your grade). Takes maybe 2-3 hours of work a week at most and is an easy A. She is genial, and laid back, which is a double-edged sword in an upper-level class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2013<br>Class Name: MKT377<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>Sharon is a very experienced sales professional. She attended Notre Dame and has a masters. She has an extensive work experience- and from what I gathered, she knows alot of people in many different industries. Her class shows you how to best use your sales skills. You meet alot of different companies, and if you show up to class everyday your fine</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2013<br>Class Name: MKT377<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>It's her first year teaching! But she did a good job. She gives out good instruction and lectures. The class is like no other classes you take before: 1 huge group project for the whole quarter which involves raising money! And a sales pitch and an easy final.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

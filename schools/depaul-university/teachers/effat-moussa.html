@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Effat Moussa</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.33<br>Clarity: 2.67<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/12/2009<br>Class Name: MAT451<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2007<br>Class Name: BMS142<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took her over the summer. She is very detailed in her examples. Seemed organized and well prepared. Open book on the midterm and notes for the final. She was very helpful and nice; made time for questions. Collected homework.</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2005<br>Class Name: MAT451<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class was not well organized,we were behind of schedule halfway through the class then she decide to cut the last chapter to next course. She works on example right in the class w/o preparation, and sometimes she screw up and had to re-do, which was very confusing. But this was improved later on in the class. fairly easy grader though.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

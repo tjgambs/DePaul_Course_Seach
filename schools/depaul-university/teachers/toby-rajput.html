@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Toby Rajput</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.2<br>Clarity: 4.0<br>Easiness: 4.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/04/2006<br>Class Name: EE347<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This class is very easy, no midterms, just come to class, and do the homework. One paper 2-3 pages, and a final. This class was fun, but at times really boring. She really likes talking about books, so get prepared for a book waved coming at you. But if you want an easy A, this is the class, to take.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2006<br>Class Name: CHILDLIT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class. no tests. easy homework. long boring lectures. you get a lot of handouts at least 8 pieces of paper a day. easy class though. kind of fun you feel like you are little again. i would take her again.</div></div></div><div id="container" class="review"><div id="left">Date: 07/01/2004<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is very passionate about the subject.  At times class could be boring, but overall she does her best to make it fun.  It feels as if we are all in 5th grade again.  She is very knowledgeable and is extremely helpful, considerate and understanding.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2004<br>Class Name: EE347<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She does love the subject and knows what she is talking about, but if you are an ECE major, i advise you to take a different teacher.  Although I learned a lot, I do not feel I learned enough about the area I am going into.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2004<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a very nice professor.  She was very knowledgable and passionate about the subject, you can tell she really enjoys children's literature.  The class was a lot of fun and helpful, makes you feel like a kid again!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

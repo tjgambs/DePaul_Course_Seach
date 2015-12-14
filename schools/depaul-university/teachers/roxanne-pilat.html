@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Roxanne Pilat</h1><hr><div><h2>Overall Quality: 4.9<br><br>Helpfulness: 4.8<br>Clarity: 5.0<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/20/2015<br>Class Name: ENGL102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>She is a really sweet professor that cares for you. She will make time outside the class to help you with your papers. As long as you write well and study for her vocabulary quizzes, it is pretty easy. </div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2013<br>Class Name: MATH161<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Professor Pilat now teaches at UIC and boy am I happy I had her! She was a great teacher; understanding, nice, and relatable. Easy A class if you do everything that is required of you.</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2007<br>Class Name: ENG301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor! I took this class as a freshmen and came out with an A.  She loves what she teaches and she has tons of experience.  As for attendence, sometimes I showed up, sometimes I didn't.  The class was interesting though and I usually a little dissapointed when I didn't go.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2006<br>Class Name: ENG301<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Eng-301- Writing in the professions seemed like it would require alot of work when we got the syllabus...I was completely wrong!!! I got an A in this class and is not to hard to pull that off as long as you show up to class and complete the weekly assignments. THERE ARE NO TESTS, JUST 8 ASSIGNMENTS (for night class), 10 online practice quizzes (cou</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Mikael Kreuzriegler</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.7<br>Easiness: 2.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/29/2015<br>Class Name: DC210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Mikael was a great professor! I had him when I was at Depaul. The "student" review before me is very strange - first of all, he hasn't worked at Depaul for 5-6 years, so why would you write a review after all these years? Also, it's completely wrong, Mikael has worked on industry projects and films that got into Cannes, Palms Spring, and Emmy. </div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2015<br>Class Name: DC210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Depends what you are looking for in a teacher. He has never worked in the real world and has only taught his entire career. He has absolutely no practical knowledge he can give you about what it's really like to work in film. He shoots, but they are all non-professional projects with his friends. If you want career advice, he is useless.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2009<br>Class Name: DC210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He really understands story and film making.  I would totally take this guy's class again.  And he's kinda'a hot.</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2009<br>Class Name: DC475<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>very interesting teacher, smart and fun</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2008<br>Class Name: DC210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I had Mikael for Cinematography. I think he's an awesome teacher, he obviously knows what he's doing. I recommend him to anybody who really wants to be a filmmaker. And seriously, he's a talented guy.</div></div></div><div id="container" class="review"><div id="left">Date: 04/07/2008<br>Class Name: DC210<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is an incredibly rude man who  only sees his opinions as right. He talks about himself more than he does his class.  If you disagree with him, he makes you look like a fool in front of the entire class. If you can take this class with anyone else at all, please do.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

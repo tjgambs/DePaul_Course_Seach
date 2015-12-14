@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Ginny Rowe</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.83</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/28/2008<br>Class Name: CMNADVS<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ginny is always helpful and prepared and on top of it all, actually remembers who I am even though we only meet once a quarter. Appointments take only minutes because she totally knows her stuff.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2008<br>Class Name: ADV001<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is great! She always answers my questions and she helps me out whenever i need it!</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2008<br>Class Name: CMN001<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is very helpful but it took a lont time to see her because some other student talked and talked. This isn't happy hour boyz. And all the boyz that keep saying she's hot make me laugh becasue i here she is with a prof who teaches LATE.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2008<br>Class Name: ADV001<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I was not gonna graduate on time but Ginny saved me and now I only need 1 extra class. And she is so hot.</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2008<br>Class Name: CMNAVD<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I have been to a couple schools and Ginny is by far the best advisor I have had anywhere. She knows her stuff so appointments never take to long. She's funny, straightforward, and really easy to talk to. She's also really easy to look at.</div></div></div><div id="container" class="review"><div id="left">Date: 04/10/2008<br>Class Name: ADVIS101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ginny is an amazing advisor and saved the day by helping me graduate on time. She is not only committed to her job, but also to the students whom she helps. If they could clone Ginny, students nationwide would all graduate on time yearly.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

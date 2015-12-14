@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Mika Obana</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 3.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/11/2014<br>Class Name: JPN102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Best Japanese teacher at DePaul BY FAR! She explains the subject very throughly and ensures that everyone in the classroom understands. If she sees common mistakes on the homework she will go over it during class. Always available before or after class to help. I Highly recommend taking Obana-Sensei</div></div></div><div id="container" class="review"><div id="left">Date: 08/08/2013<br>Class Name: JPN303<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Just the most wonderful human being... and coincidentally teacher. Take advantage of her office hours and ask questions in class. Laugh! Breath! It'll be OK you have Obana Sensei!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2012<br>Class Name: JPN102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent teacher. Taught the class with another teacher and basically spent her time cleaning up the other teacher's mess. Explained material well, was able to work with students individually to help their understanding of the language, and repeatedly drilled information to solidify the classes' understanding of course concepts.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2011<br>Class Name: JPN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Obana sensei is wonderful, takes time to fully explain current and past material. She will answer any question, always available outside of class, responds to e-mails. She really cares about each individual student and their progress through out the course.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

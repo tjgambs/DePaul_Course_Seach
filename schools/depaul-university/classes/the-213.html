@@ -437,63 +437,20 @@
 	</script> -->
 	<h1>THE 213 SCI-FI AND OTHER GENRE FICTION IN THEATRE</h1><h2>Science Fiction, Horror, Fantasy, and Superhero as genres of fiction are prevalent in popular culture and successful (almost saturated) in Film, Television, Prose Literature, Graphic Novels, and other forms of storytelling media. Why, then, are they underrepresented in the world of the theatre? And why are the few more well-known examples of these genres in theatre so often unsuccessful, commercially and critically? How can these genres translate to the stage successfully?  Which technical characteristics of the theatre and of the theatrical language of storytelling are advantages and disadvantages for bringing these genres to life, as opposed to the other media in which they are more prevalent and successful? This course will attempt to answer these questions by examining extant theatrical works of "genre" fiction and their financial successes and critical receptions. We will also examine critically-acclaimed pieces of "genre" fiction in other media to determine why
 those pieces were successful and how to translate that success to the stage.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=213","THE 213");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

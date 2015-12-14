@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Ana E Schaposchnik</h1><hr><div><h2>Overall Quality: 2.8<br><br>Helpfulness: 2.4<br>Clarity: 3.1<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/05/2015<br>Class Name: HON102<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is an expert in her field and expects you to learn at least basic things on all subjects in the content area.  There is a lot of reading assigned.  I didn't do any of it and ended up with a B in the class.  She uses honors grading (95 is A, 91 is A-, 88 is B, etc).  She's a nice woman.</div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2009<br>Class Name: HON102<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Lots of powerpoint. No homework except for two papers and a take-home essay assignment. She makes sure that students understand the topic and makes time to answer any questions.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2008<br>Class Name: HST205<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ok her class is boring, and there are alot of power points! but she is really nice, and you dont' have to go to most of the classes anyway (but they do help). There is one paper, 2 tests and one hw assignment, its all easy if you just read or go to class. I would recommend this class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2008<br>Class Name: HST202<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The one good thing about her was that she effectively ended my career as a history major.  Every day was filled bell to bell with monotonous power points.  Discussion was limited and steered back to the power points.  The class was Latin American History, yet we spent 80 percent of the course on her home country Argentina.  DONT TAKE !</div></div></div><div id="container" class="review"><div id="left">Date: 02/15/2008<br>Class Name: HIST203<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Lots of power point...easy test...everyone should get an A</div></div></div><div id="container" class="review"><div id="left">Date: 02/11/2008<br>Class Name: HIST203<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>one of the worst history classes I have taken. Dull and Boring thank goodness she doesn't care if you show up or not in fact who has ever heard of taking a multiply choice test for a history class&#63;</div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2007<br>Class Name: HSTHST<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

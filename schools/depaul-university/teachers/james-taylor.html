@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>James Taylor</h1><hr><div><h2>Overall Quality: 3.4<br><br>Helpfulness: 3.4<br>Clarity: 3.4<br>Easiness: 2.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/16/2015<br>Class Name: ANI337<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Excellent professor. 15+ years of experience at studios. He knows his stuff. He is very brutal when you deserve it. Ask for even more brutal grading it will help you. Take him if you can.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2014<br>Class Name: ANI344<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A</div><div id="right"><div>James Taylor has come from a background in game development and is very knowledgeable regarding 3d modeling and art production. He is at times laconic, but he is honest and intelligent with feedback. Lectures do not last long and half of the class is generally studio time.</div></div></div><div id="container" class="review"><div id="left">Date: 02/18/2013<br>Class Name: ANI33801<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He is okay. He is good at what he does, but definitely not with teaching. He is generally rude and disrespectful.</div></div></div><div id="container" class="review"><div id="left">Date: 03/05/2012<br>Class Name: GAM230<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I took game production with him. He knows a lot about art production and he translates that a little into other areas. His lectures are interesting and insightful so I learned a lot. Exam wasn't that hard. His assignments are the most unclear things I've ever done. Very hard to gage what he expects and do it up to par. We got out an hour early too.</div></div></div><div id="container" class="review"><div id="left">Date: 12/23/2011<br>Class Name: ANI330<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>He shouldn't be a Professor.  He has the skills to work in the industry, but he is not good at teaching.  He also has ridiculous attendance policies and his grading expectations are unreasonable.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

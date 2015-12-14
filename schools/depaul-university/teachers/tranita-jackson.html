@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Tranita Jackson</h1><hr><div><h2>Overall Quality: 4.75<br><br>Helpfulness: 4.83<br>Clarity: 4.67<br>Easiness: 3.17</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/08/2014<br>Class Name: LL260<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Tranita is a amazing.  Her positive attitude just makes your week.  I never considered writing fun but her style makes it an amazing experience not to fear.  Thank you Tranita I'm waiting on you to teach much more classes.  You have a way of understanding students and painting such a clear picture.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2012<br>Class Name: ACADMWRIT<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Tranita is a wonderful teacher for this class.  If you are looking for a teacher who is going to refresh your memory on writing basics and give you tools you will use for all of your future papers, take this class with Tranita.  She is very encouraging, supportive and will give you a hug at the end of the class :)</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2011<br>Class Name: LL150<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent experience.  Tranita is tough but great.  She knows her stuff and if you pay attention you will be set for writing.  Also very nurturing and cares about students.</div></div></div><div id="container" class="review"><div id="left">Date: 04/19/2010<br>Class Name: FA353<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Fun and interesting approach. She is a retired elementary teacher and has a lot of good information about personal things in her field that contribute to learning.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2009<br>Class Name: ENG200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Loooooove Tranita! She genuinely cares about her students and their future.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2008<br>Class Name: SNL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Knows her stuff.  Wish she would teach more classes</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

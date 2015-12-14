@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Amy David</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 4.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/06/2013<br>Class Name: MANAGEMENT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Took this class over winter intercession.  4 quizes plus participation grade.  class is long but Ms. David makes it interactive.  She tells you whats on the quizes.  You have issues if you get anything less than an A</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2013<br>Class Name: MGT301<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Interesting and interactive class, a lot of real world examples. Grade consists of participation 30%, three simple quizzes 30% and final exam 40%. If you attend the class, read chapters and do simple homework problems, there is no way you will not have an A. Highly recommended</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2013<br>Class Name: MGT301<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Take any other professor if you do not want to teach yourself. Too much time spent on current event articles. This class should not be so confusing. Class examples are vague and unclear. Class is 30% midterm, 40% final, 20% homework, and 10% participation.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Lawrence Hamer</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.6<br>Clarity: 3.3<br>Easiness: 2.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/26/2014<br>Class Name: MKT356<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Doctor Hamer is the man.  The IME program is exceptional.  I have learned so much in this program already and I still have two more trimesters to go.  Doctor Hamer is there when you need him and is willing to go that extra mile for his students.  If you get the chance, take the IME program, you will not regret it.</div></div></div><div id="container" class="review"><div id="left">Date: 01/30/2014<br>Class Name: MKT356MKT357<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Dr. Hamer is one of the most influential professors I have ever had the pleasure of knowing in my entire academic career. I have learned so much in the honors marketing program that will help prepare me for success than I could have ever imagined. Dr. Hamer is tough, he expects a lot out of you, but he wants to see his students succeed. :)</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2011<br>Class Name: MKT356<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hamer approaches teaching with a hands off approach. u have to try to figure out what hes acking of you. Not clear on what he wants. hoenstly, i think hes just lazy. the class basically involves the students teaching each other. If the client sucks, the quarter will suck. Hes good for career advice.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2010<br>Class Name: MKT356<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Too much group work and class exercises. if you have a good client it will be interesting. the class is very helpful and i learned a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 12/24/2009<br>Class Name: MKT356<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Learn more in 10 weeks in the IME program than what can be taken out of my first 3 years of college. Dr. Hamer is willing to go the extra mile for his students. Class is tough! But you learn so much from the Honors Marketing Program. If you think you can handle pressure, apply for the program. It will do wonders for you!</div></div></div><div id="container" class="review"><div id="left">Date: 11/22/2008<br>Class Name: MKT356<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Dr. Hamer is one of the most respectful, caring and passionate professors I've ever had. You will learn a lot in his honors classes.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2006<br>Class Name: MKT356<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This professor is one of the best I have ever taken @ DePaul.  I learned soooo much in this class.  He is definately demanding, however, very helpful and terrific teaching style!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

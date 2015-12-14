@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Darrell Moore</h1><hr><div><h2>Overall Quality: 3.25<br><br>Helpfulness: 3.5<br>Clarity: 3.0<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/08/2014<br>Class Name: PHL231<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Darrell is one of the most amazing professors I've EVER had. This course fulfilled a requirement, but ended up being much more. Darrell pushed me to greatly improve my reading/writing as we dissected many academic works. His comments on papers were very helpful. He kept regular AND flexible office hours, working individually w/ students. TAKE HIM!</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2014<br>Class Name: PHL243<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>If you're black definitely take him. He hooks it up. Smart guy, but you never know where you stand with him or what he wants out of you. Grades papers very harshly for a class that is about the philosophy of film - focuses more on writing than he does on content.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Gregory Fernandes</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.4<br>Clarity: 4.6<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: PSY242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Take his class, he is very easy, helpful, and wants his students to learn. If you don't understand something, ask him, go to his office, he gives very clear information and explanation. He tries to give many extra credit as much as possible. His lectures is very easy to understand, many examples, and they are all posted online. </div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2014<br>Class Name: PSY385<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Show up for class, don't be late, and participate and he will like you. Kind of dry content but he really tries to make it interesting and compelling. Overall, not that hard of a class as long as you put in effort. </div></div></div><div id="container" class="review"><div id="left">Date: 07/14/2014<br>Class Name: PSYCHOLOGY105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>As a non traditional student, I was not sure if taking a class with such a young professor would have been the best choice for me. By the end of the course, besides grasping a thorough understanding of the subject, I learned that "you cannot judge a book by its cover". I wholeheartedly recommend taking professor Fernandes' classes. Great guy!</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2014<br>Class Name: PSY105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's the reason i switched my major to psych..awesome, cute, fun teacher! Cracks jokes..may seem a little monotone at first but you learn to love him. Very helpful and makes class fun. His lectures aren't boring. Gives quizzes but it kinda became into attendance. Midterm and final are kinda hard..must study! if you study its easy. great prof!</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2013<br>Class Name: PSYCH380<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>This professor is fairly new to depaul, He is a great guy really knows his stuff when explaining the material I suggest people to take him if your taking intro to industrial organizational psych</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

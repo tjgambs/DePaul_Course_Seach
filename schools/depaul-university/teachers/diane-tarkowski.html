@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Diane Tarkowski</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 3.7<br>Clarity: 4.3<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/24/2015<br>Class Name: MIS140<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Took her for 140.  This is a survey class, meaning you learn a little about a variety of things.  This can make the class seem boring, or the subject seem dry.  But I loved this class and this professor.  This class was easy, and she was helpful.  If you're wanting to see if the MIS field is for you at all or just looking for an A, take her.</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2015<br>Class Name: 140<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Diane is a great professor and she is very knowledgeable . she takes attendance. . No midterm or final. but there are about 5 quizzes and she drops the lowest one, papers and group project.  easy Excel and Access assignment. Take her and you will learn a lot in the field of business and information technology.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2015<br>Class Name: MIS140<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Very boring lectures but aside from that very nice lady! She does not assign tests but instead requires 5 reading quizzes, a individual paper, and a group project. Quizzes are easy and she is a rather lenient grader in general.  </div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2015<br>Class Name: MIS140<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This professor knows that her class is taken as part of the cores. She explains material thoroughly and even does a recap of her previous lecture in the beginning of class. She wants you to get an A, and there's no final, just quizzes and a group project that are all manageable. She responds promptly and thoroughly to students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

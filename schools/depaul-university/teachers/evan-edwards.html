@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Evan Edwards</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.5<br>Clarity: 3.5<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/26/2015<br>Class Name: PHL248<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: B-</div><div id="right"><div>Young professor who is a very good lecturer and engages students very well for a boring subject. Structuring of lectures tend to be hard to follow. Very hard grader when it comes to tests and makes questions extremely tricky with multiple answers that could be correct. </div></div></div><div id="container" class="review"><div id="left">Date: 08/13/2015<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Professor Edwards is a very cool guy and is very down to earth. He is one of DePaul's younger professors and understood that we all have 3 or 4 other classes in addition to his. Read the texts you are given and do the homework and you'll do great. Essays aren't too hard but he always wants to push students. Offered 3 extra credit opportunities.  </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

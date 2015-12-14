@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Michael Skelley</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 2.8<br>Clarity: 3.2<br>Easiness: 2.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/13/2014<br>Class Name: LL250<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Easy to work with. Have taken two different courses with him in addition to having him as faculty mentor. Not sure about the negative remarks on the site; I've found him to be very forthright and helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 08/29/2014<br>Class Name: LL250<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: P</div><div id="right"><div>A confusing and poor advisor who was unsupportive and difficult to read a good deal of the time--changing his mind and position so often I never knew where I stood with him. I would recommend looking for someone else to guide you through the program. There are better teachers at DePaul than him.</div></div></div><div id="container" class="review"><div id="left">Date: 08/29/2014<br>Class Name: LL250<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Michael Skelley was so unsupportive, if he was my only teacher I would have dropped out. Has a short memory and is inflexible. Stay away. Much better advisors and teachers at DePaul than him.</div></div></div><div id="container" class="review"><div id="left">Date: 07/21/2014<br>Class Name: HC117<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Great professor, really nice. takes the time to listen to each student and respond to assignments in a timely manner with constructive feedback</div></div></div><div id="container" class="review"><div id="left">Date: 09/27/2008<br>Class Name: LL250<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

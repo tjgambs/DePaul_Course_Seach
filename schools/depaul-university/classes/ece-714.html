@@ -438,63 +438,20 @@
 	<h1>ECE 714 SEMINAR IN DEVELOPMENT, RISK, AND RESILIENCE</h1><h2>This seminar will examine the concept of risk and its influence on child development within various frameworks such as environment, genetics and neurobiology, psychopathology, family, public policy and education. An issue of interest will be the development of children who are at-risk due to environmental factors.  The U.S. policies in addressing this population will be examined. 
 
 The seminar will have the following objectives:  1) In-depth analysis of the concepts of risk and resilience through examination of the original research literature. 2) Examination and analysis of various risk factors (e.g.: genetics, biology, poverty, family, socio political influences) with attention given to neurobiological risk factors, including disabilities. 3) Examination and analysis of factors of resilience (including implications for intervention and early childhood education). 4) Examination and analysis of U.S. Policies in relationship to promotion of resilience via early childhood intervention and education programs.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECE&catalog_nbr=714","ECE 714");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

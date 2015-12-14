@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Michael Squillace</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.2<br>Clarity: 4.4<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/13/2007<br>Class Name: SCG406<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Prof Squillace is highly intelligent with a plethora of information about the growth and development of adolescents.  Come to class, take good notes, study and do the reading and you are fine.  What a concept&#63;!  Highly reccommended.</div></div></div><div id="container" class="review"><div id="left">Date: 04/03/2007<br>Class Name: SCG406<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great guy.  Has some great stories about teaching. He is approachable and offers good insight. Def take him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2005<br>Class Name: LSI346<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Squillace was GREAT! He was super laid back and he had a hugh amount of interesting stories.  Take his class and complete his assignments and you'll be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 02/08/2005<br>Class Name: LSI446<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Good class, but exams very unclear. Not sure exactly how exam was to be worded.</div></div></div><div id="container" class="review"><div id="left">Date: 09/30/2004<br>Class Name: MAINSTREAM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice teacher.  Tries to make class interesting, pretty laid back.  Projects/papers/exams pretty easy.  He ususally lets class out early, usually takes attendance.  I would definitely take him again though, he's a fair guy. :)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Catherine Cederoth</h1><hr><div><h2>Overall Quality: 3.33<br><br>Helpfulness: 3.67<br>Clarity: 3.0<br>Easiness: 3.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/22/2013<br>Class Name: MIS140<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy professor. She explained what she wanted on each project clearly and then let us have computer lab days where we could just go in and work and ask her questions. During her midterm, she allowed cheat sheets but some kids used their book so final was no cheat sheet. Very easy to do well in her class if you pay attention.</div></div></div><div id="container" class="review"><div id="left">Date: 11/29/2012<br>Class Name: MIS140<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Wasn't very clear on what she wanted in the homework assignments. Also the quizes and tests are graded unfairly. She is a good professor, just not very clear in what she wants. You'll do fine in the class, just make sure she you know all the main ideas. She doesn't care about details, just what she thinks is most important.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2012<br>Class Name: MIS362<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>COuld be a lot easier, but some students took advantage of her so she's a lot harder.  Very nice tho</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

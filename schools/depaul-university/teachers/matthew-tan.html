@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Matthew Tan</h1><hr><div><h2>Overall Quality: 3.42<br><br>Helpfulness: 3.67<br>Clarity: 3.17<br>Easiness: 2.83</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/31/2014<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 2<br>Grade Received: C+</div><div id="right"><div>His lessons are interesting to listen to. Cool guy. Cool accent. Paid attention in his, every lesson. But very harsh grader. His midterm is not written, it is verbal. Don't know exactly how he grades it and each student. Most of the class was disappointed with the grades they were given. So yeah, cool guy. Very harsh grader though.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2014<br>Class Name: CTH389<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>Dr. Tan is brilliant, but if you don't pay attention closely, you will miss the impact of his synthesis.  Speaks a bit fast but that's probably because he has a sharp intellect.  Lecture format so bring your coffee.</div></div></div><div id="container" class="review"><div id="left">Date: 01/27/2014<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Professor Tan is a funny person. He took an unique approach to Catholicism by making it into more of a philosophical story. The pop quizzes are challenging. The midterm is an interview and the final  is made up of short answers. The course seems easy, but the grading is very hard.</div></div></div><div id="container" class="review"><div id="left">Date: 12/26/2013<br>Class Name: CTH180<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Expected more out of this class, he took a philosophical approach on Catholicism which was complicated and unappealing. Boring lectures. Complicates assignments and due dates with his use of Australian slang words. Overall, I think you can find an easier and more worthwhile religion class than his.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2013<br>Class Name: INTROCTH180<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>The overall class is okay. There are 4 pop quizzes, an oral interview mid-term, read a novel & 8-page paper, and a written final. He is a harsh grader. This is his first year teaching at DePaul</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2013<br>Class Name: CTH180<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>professor has vast knowledge on the subject. its all power point presentation so listen and take notes! It could get boring at many times. There are pop quizzes which count for 20% an interview for midterm. final and a major paper 13 pages for the term also worth 20%. Its different view on Catholicism,it leans more on philosophy...</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

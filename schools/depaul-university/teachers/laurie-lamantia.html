@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Laurie Lamantia</h1><hr><div><h2>Overall Quality: 3.71<br><br>Helpfulness: 3.71<br>Clarity: 3.71<br>Easiness: 4.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/16/2012<br>Class Name: ICS394<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy class. Find a good group. Do the work as far as the group assignments are concerned and you should be fine.</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2011<br>Class Name: ICS394<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Took her after seeing good reviews on here but trust me they are way off.  She thinks she knows everything about being an entrepreneur because she had a couple successful businesses.  She will grill you with dumb questions about your business plan.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2005<br>Class Name: MGT573<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class was very interesting for the first few weeks, then we seem to run out of material.  It is also a class where you have to be willing to be very interested in improving your creative self.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2005<br>Class Name: MGT360<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. One of the easist A's I ever got. She lets you meditate every day in class. No tests, only papers.</div></div></div><div id="container" class="review"><div id="left">Date: 01/17/2005<br>Class Name: ICS394<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy easy class, take it. but be careful she might lose your homework assignment and drop your grade 20%.  you'll need to be drinking to make it through an 3 hours of meditating and bell ringing.  swear to god!!!  class was a joke.</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2004<br>Class Name: ICS395<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Hands down one of the best professors here. She not only engages you, but makes you want to get out and work!</div></div></div><div id="container" class="review"><div id="left">Date: 08/19/2004<br>Class Name: ICS394<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she was a great teacher who used traditional and alternative methods to teach her class. she really cared for each and everyone in her class. No midterms, finals or quizzes. 2-3 short papers and a group project.Gain knowledge and easy A!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

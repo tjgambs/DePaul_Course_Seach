@@ -46,7 +46,7 @@ def download_classes():
 				soup = Soup(html)
 				course_description = soup.find('p',{'class':'nopadding-top'}).text
 
-				print 'Downloaded ' + str(url+i['href'][start:])
+				#print 'Downloaded ' + str(url+i['href'][start:])
 				courses.append([i.text,course_description,str(url+i['href'][start:])])
 
 		json.dump(courses, output)

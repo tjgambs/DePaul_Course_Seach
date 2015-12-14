@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Eric Sedgwick</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 5.0<br>Clarity: 4.7<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/27/2015<br>Class Name: CSC241<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Fantastic teacher. Generally very clear when he teaches and is always willing to answer questions. He is very excited about the topic at hand and really shows a lot of enthusiasm for teaching. He is a "type A" personality and this really helps keeping the class interesting. Responds well to criticism. Study and practice the code and you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2015<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Highly recommended</div></div></div><div id="container" class="review"><div id="left">Date: 11/17/2015<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best teacher I've ever met. Great  and solid start for programming. Strongly recommend</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2015<br>Class Name: CSC241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Awesome teacher! </div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2015<br>Class Name: CSC241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Take him and you won't regret!</div></div></div><div id="container" class="review"><div id="left">Date: 05/19/2015<br>Class Name: CSC242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Professor Sedgwick is an amazing teacher. He explains everything well and really cares about the students. He is passionate and fun to be around. Take him if you can</div></div></div><div id="container" class="review"><div id="left">Date: 01/08/2015<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>very nice professor. helpful, cooperative, easy to understand and always there for you.  although some students struggled with CSC 401 (Python) especially those who have no previous coding background, I find that Mr. Eric tried his best in clarifying the material with so many examples and helpful notes. The final exam was fairly easy to pass ..</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2014<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: Rather not say</div><div id="right"><div>What can I say? This guy loves his work. Just enough coolness to inspire, but sincerely interested in student success. I emerged from his class an enlightened student. He painstakingly takes you through the steps, but doesn't expect you to absorb it all at once. Hits the important stuff in earnest. Whatever the course, this guy is the best choice.</div></div></div><div id="container" class="review"><div id="left">Date: 10/27/2014<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the best teachers I've had so far. His lectures are well structured, and he covers material thoroughly.  I've never taken a programming class before this, and he made it very understandable. Highly recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 09/26/2014<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher!!  Retook this class because of a bad teacher.  Eric is very enthusiastic and helpful.  I learned tricks in python my other class never covered.  Perfect for first time programmers.  Take this class!!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2013<br>Class Name: CSC401<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great professor. Very helpful and is not a hard grader</div></div></div><div id="container" class="review"><div id="left">Date: 08/30/2010<br>Class Name: IM230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awesome Class! Learned so much. He is very helpful as an easy grader. Take this class!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

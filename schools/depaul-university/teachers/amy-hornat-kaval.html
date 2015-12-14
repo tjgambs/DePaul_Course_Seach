@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Amy Hornat-Kaval</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.6<br>Easiness: 4.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/13/2014<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>She's one of the best professors at DePaul. </div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2014<br>Class Name: WRD204<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Don't bother buying the book. The class is pretty easy, and she's incredibly nice. I was disappointed that she hardly emailed back though. Nevertheless, she was a good teacher. Probably one of the sweetest professors. She also clearly loves DePaul!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2013<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A-</div><div id="right"><div>She's probably one of the sweetest teachers I've ever had. Her class is sometimes pretty entertaining, and you learn a lot. There's only three essays which you spend a large amount of time editing, and a final portfolio assignment at the end of the course.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2013<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Amy is hands down one of the best teachers I have ever had. She makes sure you understand the assignment, and tailors each lecture to the class's needs. She is great at explaining things and she can be really funny. The class consisted of 3 essays and a final portfolio.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2013<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Hornat-Kaval is the most clear, articulate professor I have ever had the pleasure of taking at DePaul. She is extremely nice, and will go out of her way to help you if you seek it. She can be a tough grader, but if you put the effort in, participate, and go to her office hours once or twice, you will do fine. Easy A, and I learned a lot!</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2012<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Honestly, she is one of the nicest professors that I have ever had the chance to learn from. She is very understanding of the time constraints put on students and has helped me enjoy a class in which I had no intention of liking. She is a fair grader and does not give an overabundance of homework. If you can, take her for WRD 104 or any other class</div></div></div><div id="container" class="review"><div id="left">Date: 12/16/2011<br>Class Name: WRD102<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The people in WRD 102 were beginners at writing. We covered the basics and started from point A. I basically got 10/10 on all of my essays. We have alot of 1 pg essays. She is very kind and talks to us like we are toddlers. She has a high-pitch cute voice. She is willing to work with students. Class was cancelled about 4 times. Take this class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

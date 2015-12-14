@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Tim Gregory</h1><hr><div><h2>Overall Quality: 3.0<br><br>Helpfulness: 3.0<br>Clarity: 3.0<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/08/2008<br>Class Name: PERF290<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He really knows what he's talking about from experience. Very helpful and kind. Doesn't make you feel dumb. I really enjoyed this class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/18/2007<br>Class Name: THE101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Really horrible. Honestly, he is not worth your time. The class is a joke because he doesn't care about it, so why should you&#63; You will hate yourself if you take his class.</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2007<br>Class Name: THEAT140<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>LOSER,ASS,NOT-ACADEMIC. His class appeared to be easy for a couple reasons:1) he never showed up, so his expectations must be low (right&#63;);and2) our assignments WERE NOT GRADED. At the end of the year if you appeased his ego enough you got an A, I got an A- even though I was one of the hardest workers in our class. Totally ignorant, creepy, dated.</div></div></div><div id="container" class="review"><div id="left">Date: 12/29/2006<br>Class Name: THEA101<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Easy-going, nice guy (nice smile too). Class isn't too hard and sometimes the class just consisted of watching snippits of movies for an entire class. He required us to see two plays and read several more, overall I enjoyed the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

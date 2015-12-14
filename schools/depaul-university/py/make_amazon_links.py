@@ -13,7 +13,7 @@ def format_data():
 	good_urls = json.loads(open('../good_urls.json', 'r').read())
 	bad_urls = json.loads(open('../bad_urls.json', 'r').read())
 	for f in file_names:
-		print f	
+		#print f	
 		with open(f) as input:
 			data = json.loads(input.read())
 			for d in data:

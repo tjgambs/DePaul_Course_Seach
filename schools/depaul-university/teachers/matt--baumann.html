@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Matt  Baumann</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.5<br>Clarity: 3.5<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/30/2015<br>Class Name: MOL210<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A+</div><div id="right"><div>Not the easiest class for a liberal arts requirement, but he is an enjoyable teacher.  lots of quizzes online, two papers, a midterm, and a final.  Not a first choice class, but is a very nice backup class.  Knowledgeable teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 11/26/2014<br>Class Name: MOL210<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He is clearly very intelligent and knows a lot of about whatever he is teaching, but this class was way too hard for a liberal arts requirement. Obviously a lot of reading, but there are online quizzes due every day, two papers, a midterm and a final.  He almost seems too intelligent to be teaching an intro class which made the class confusing</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

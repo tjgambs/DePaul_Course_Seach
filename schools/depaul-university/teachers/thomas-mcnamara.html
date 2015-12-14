@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Thomas McNamara</h1><hr><div><h2>Overall Quality: 4.19<br><br>Helpfulness: 4.5<br>Clarity: 3.88<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/12/2011<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor McNamara is a really helpful professor! He is a hard grader and there's always homework, but if you're struggling he is happy to help!</div></div></div><div id="container" class="review"><div id="left">Date: 05/07/2010<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Pointless required class, but easy teacher.  Class can be incredibly boring due to the subject matter.  Entire quarter is spent working on one general argumentative paper.  Nice guy and easy grader.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2009<br>Class Name: WRD102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>he is soooooo hooooottttt! marry me siiir</div></div></div><div id="container" class="review"><div id="left">Date: 05/15/2009<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>McNamara is awesome! He wants all of his students to do well and makes himself available almost always whether it be office hours or e-mail. He will put your writing skills to the test but you will become a better write because of it. He's down to earth and very understanding of student's needs...but don't take advantage of him!</div></div></div><div id="container" class="review"><div id="left">Date: 01/15/2009<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Tom is a good professor.  The class is not hard, but you have to do the work.  Show him you're willing to try and he will ALWAYS help.  He's very down to earth, very realistic about the work he gives... and he tells a lot of stories about his college life.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2008<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>There are a lot of assignments but Tom is always willing to help with them. He's really organized and great at returning e-mails quickly. Also, he encourages students to e-mail him rough drafts so that he can proof them and tell you what you have to do to get an A. Stay awake in class and you'll do well- you can tell he truly wants you to.</div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2008<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's a new teacher so he's learning the ropes but he is definitely there to help you learn. Sometimes gives a lot of random assignments even if you have papers due but spend time with him and he'll definitely help you.</div></div></div><div id="container" class="review"><div id="left">Date: 10/24/2008<br>Class Name: WRD103<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He's down to earth. He's new to teaching so he is still learning how to do things. He tends to be really vague with his assignments, and he gives a lot of homework (sometimes last minute). If you need extra help though, he is willing to work with you, so that's a plus. Just make sure you know what it is you're doing in his class and you'll do fine.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

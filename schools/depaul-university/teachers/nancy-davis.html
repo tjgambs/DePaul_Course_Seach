@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Nancy Davis</h1><hr><div><h2>Overall Quality: 2.64<br><br>Helpfulness: 2.57<br>Clarity: 2.71<br>Easiness: 4.29</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/18/2014<br>Class Name: FA387<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>SO EASY. One discussion post per week. Occasionally an assignment. So much reading which I barely did, still got 100% on everything. BUT, she is disorganized and hard to reach. Had to chase her up about things I didn't get turned back, didn't respond to emails or class questions. Easy grader though, Overall positives outweigh negatives. EASY A</div></div></div><div id="container" class="review"><div id="left">Date: 05/28/2012<br>Class Name: LL250<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is very unorganized and not very helpful. I taught myself in this course.</div></div></div><div id="container" class="review"><div id="left">Date: 12/13/2010<br>Class Name: L2<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>.</div></div></div><div id="container" class="review"><div id="left">Date: 05/09/2008<br>Class Name: GIS215<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Took a guided independent study with Nancy. Exchanged 2 emails the entire term. No feedback on early assignments, despite promises. No feedback on work at all. The material is easy, I think, as I said, one email to say hello and then a grade when the class ended. Unresponsive to other communication.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2008<br>Class Name: DO1534<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I love nancy I think she is the best teacher ever we need a lot more like her</div></div></div><div id="container" class="review"><div id="left">Date: 09/07/2006<br>Class Name: LL300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 07/28/2004<br>Class Name: E1E2<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This gal was just painful. Painful, painful. Non-responsive, non-participatory, and unclear. But, it's probably an &quot;A&quot; if you don't mind ZERO feedback throughout the course. In essence, you're rolling the dice.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

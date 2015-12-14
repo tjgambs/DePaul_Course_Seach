@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Jason Pecho</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/10/2009<br>Class Name: GAM224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Jason, or he likes to be called Jay is a really nice guy. Class is pretty simple, but just pay attention and show you and you'll be fine. For the 5 papers you write, they are very very simple, and not more then 1 page long. YOU PLAY A GAME FROM A LIST, and write a 1 page paper about it.... how easy can it get&#63; and their ps3/xbox 360 games..</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2009<br>Class Name: GAM224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class was kinda redundent, but he was a really cool guy.  Fun to talk to if you like video games and very chill about grading/homework.  Easy class, but still enjoyable.  Makes you really think about how games are thought up, as obvious as some things covered may seem.  Plus, playing video games for homework!!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2009<br>Class Name: GAM224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jays an amazing teacher, have to write 5 papers (1 page each). Always let out 20-30 min. early, if not earlier.  1/2 class lecture 1/2 a game.  No Final exam, but project.  He is an extremely helpful teacher, allows you to retake pretty much anything.  Test are simple, just take notes on the lecture notes.  No text required.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2009<br>Class Name: GAM224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Jay's an excellent teacher!  He puts all of his material online so it's easy to keep up, and he also allows for questions and answers them thoroughly.  He's a fair grader and the class is a great experience.  I learned a lot! ^_^</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2009<br>Class Name: GAM224<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>amazing teacher. explains everything whether u kno about games or not. really nice guy.friendly to all students. easily one of the best teachers around. classwork is fun, hw is reasonable and easy. open note tests and no midterm.  final is making a board game which is fun. basically an awesome class and teacher</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

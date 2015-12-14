@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Kelli Marshall</h1><hr><div><h2>Overall Quality: 2.5<br><br>Helpfulness: 2.3<br>Clarity: 2.7<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: CMN102<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: C+</div><div id="right"><div>Intro to Mass Communication was supposed to be a pretty easy class. It was alright. She makes you do "Session Starters" which are like mini quizzes on the readings you do the night before. They're actually really easy if you read and look over the questions she has on her website. The mid-term was stupid. She lets you out pretty early too (10 min).</div></div></div><div id="container" class="review"><div id="left">Date: 04/13/2014<br>Class Name: MCS273<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 2<br>Grade Received: B</div><div id="right"><div>Kelli Marshall is great! This is my 3rd time taking a class with her, and I found her teaching and the content interesting and rewarding. Yes, she was particular and passionate about certain films..but she's a film professor. She is actually my favorite professor at Depaul! I'm a MCS major so that might make me biased.</div></div></div><div id="container" class="review"><div id="left">Date: 01/07/2014<br>Class Name: MCS273<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Horrible. Made me cry in class.  Would study for hours on end and still couldn't manage to do well on a quiz, and she was unwilling to help me.  Impossible for non-MCS majors- Stay away! She is not a nice woman.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2013<br>Class Name: MCS351<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: B-</div><div id="right"><div>No clear class notes, no midterm but unclear expectations for final exam. Video essay worth 40% and expectations of high quality work when half the class doesn't know to how make it and she doesn't provide help other than "do it." Very difficult to understand what is important and what is not... but it all is. It's all on the exam. Save yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2013<br>Class Name: MCS351<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: C+</div><div id="right"><div>Warning: DO NOT TAKE. For the love of god, save yourself.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2013<br>Class Name: MCS386<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very particular, yet very helpful at the same time. Make sure you are interested in whatever she is about to teach, otherwise you'll have a lot of trouble keeping stimulated. She hates tardiness and missed classes too.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

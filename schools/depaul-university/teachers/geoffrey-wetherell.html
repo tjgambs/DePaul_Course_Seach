@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Geoffrey Wetherell</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.7<br>Clarity: 5.0<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/13/2015<br>Class Name: 105<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Wetherell is  one of the best professors I've ever had. He was incredibly clear with his expectations, very funny and respected everyone. On top of all of this, he was also very easy to talk to about papers and grades, and was clearly passionate about the subject he was teaching. If you're wondering whether or not to take his class, do it</div></div></div><div id="container" class="review"><div id="left">Date: 08/25/2014<br>Class Name: PSY343<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He made the topics really easy to understand and made it impossible to get less than an A. Attendance was mandatory and weekly quizzes were given, but they all followed the lectures. This class also required a group project, but grades and assignments were individual and didn't require frequent group meetings. Overall a really helpful professor!</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2014<br>Class Name: PSY347<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's really nice and makes class funny. Short online weekly quizzes, attendance mandatory. Has book as necessary, but his lecture covers what he tests. Easy and learned a lot</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

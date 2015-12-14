@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>James Winikates</h1><hr><div><h2>Overall Quality: 4.75<br><br>Helpfulness: 4.8<br>Clarity: 4.7<br>Easiness: 3.8</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/22/2012<br>Class Name: ACC620<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very knowledgeable and clear. We discuss real world cases every week. You can learn a lot in his class. The multiple choice questions in the exam are tricky, but he gives crystal clear study guide and curves fairly.</div></div></div><div id="container" class="review"><div id="left">Date: 10/15/2010<br>Class Name: ACC374<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Very nice professor! Knowledgeable and interesting. We have written homewhork every class, mid/final, group presentation, individual project, and some cases. Sounds like a lot, but really not that bad. His classes are interesting, though midterm was kind of tough. I would definitely recommend him especially if you are aiming for auditing position</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2009<br>Class Name: ACC374<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Amazing professor! A very nice person and such a knowledgable professional! I wish I had a chance to take more classes with him (though he doesn' teach any other if I'm not wrong). Together with McCarthy, he is absolutaly the best ACC teacher at DePaul. Highly recommended, would definitely take again!</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2009<br>Class Name: ACC620<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Amazing professor,a very nice person. I would suggest to take the course with him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2008<br>Class Name: ACCT620<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Made the class very interesting with personal stories from his many years of audit experience with KPMG.</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2006<br>Class Name: AUDIT1<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent professor.  You learn a lot.  He is also a very, very nice person.  He is very personable - not snobby like some - and always available to students.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2005<br>Class Name: ACC374<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Best Professor at DePaul, period.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2005<br>Class Name: ACC372<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great guy, very laid back. Teaches well and assignment grades may be misleading. His exams are though, I didn't study for the midterm and I studied a lot for the final and I came out with the same grade on both exams, doesn't seem right to me, this is a class that should be taken seriously</div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2005<br>Class Name: ACC372<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor.  Straight forward and fair grader.   Gives excellent exam reviews and lectures are interesting.  Homework problems are easy and the readings in the book are not too bad.  Online quizzes from the book website is helpful in preparing for exams.</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2005<br>Class Name: ACC550<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He organizes class very well. Two exams, one presentation, and a case. Exams are very fair.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

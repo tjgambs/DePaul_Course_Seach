@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Darrin Aase</h1><hr><div><h2>Overall Quality: 4.33<br><br>Helpfulness: 4.0<br>Clarity: 4.67<br>Easiness: 4.67</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/06/2011<br>Class Name: PSY105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I love Psychology it is like my life.. Professor Aase is a major hottie and is an easy grader and like on the work but he is so not approachable. When i talked to him i felt he talked to me as if i was stupid and never real wily answered my questions. His class was good but i like connections with my teachers and he just was not the teacher for it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: PSY241<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>If you need to take research methods, take it with this teacher. I think he already has his PhD(&#63;), even though he's super young, so everything is fresh in his mind. Tests/hw are straightforward. He's always willing to make time for you if you're confused, but he's very clear in the first place. He makes a req. class pretty painless, & he's funny.</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2011<br>Class Name: PSY363<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good stuff!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

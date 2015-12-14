@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Trina Davis</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 5.0<br>Clarity: 4.0<br>Easiness: 4.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/30/2015<br>Class Name: PSY333<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>There's a fair amount of work (two reflection essays, one article review, and a 5-page research brief), but if you put in the effort you should be fine.  All quizzes and tests are done on D2L so they can be done at your own convenience.  Dr. Davis is very nice, approachable, and down to earth.  Great person and a very enjoyable class.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2015<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>PSY 106 has weekly online quizzes, two online exams, one essay, and five mini (one page) essays for the final. Davis is very friendly and adorable! She's also obviously interested in the subject, which creates a great learning environment. I recommend taking this class with her. Hint: she uses quizlet for all of her quizzestests ;)</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

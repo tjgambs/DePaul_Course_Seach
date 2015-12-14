@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Elyse  Warren</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 3.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/10/2015<br>Class Name: PSY334<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Professor Warren is really helpful and good at teaching material. The only really challenging part for our class was the two essay assignments, which are graded by an assistant of hers and are graded pretty strictly. Overall though, I would recommend her to anyone for her sense of humor and knowledge of the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 04/28/2015<br>Class Name: PSY105<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Her lectures are interesting and she does a lot of class "experiments" which are enriching and fun. Minimal homework, midtermfinal exam (all multiple choice). She also shows interesting videos that pertain to class materials. She is easy to contact and replies to emails quickly. </div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2015<br>Class Name: PSY105<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I was in love with psychology going into this class but there was just no passion what so ever and honestly it killed my love of the field and was absolute torture. She is super sweet and I really liked her as a person but as a professor she lacked excitement and passion, she just didn't seem to love what she did. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

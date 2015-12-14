@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Jon Norman</h1><hr><div><h2>Overall Quality: 1.3<br><br>Helpfulness: 1.3<br>Clarity: 1.3<br>Easiness: 1.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2014<br>Class Name: SOC221<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I highly suggest avoiding taking any course the he teaches. I am a hard working Senior that has been on track to graduate with honors but I am so worried that professor Norman's poor style of teaching is going to affect my GPA. He is honestly the worst teacher I have had in college because of his poor teaching</div></div></div><div id="container" class="review"><div id="left">Date: 10/29/2014<br>Class Name: SOC221<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Wolf in sheep's clothing. Looked super nice AT FIRST - got super aggressive when students were disinterested in his boring lectures. Seemed to give bad grades to the smartest kids, A's and B's to the not so bright kids that never did anything. Very strange. Commentary on essays made no sense, it's like he just had it out for some people. </div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2014<br>Class Name: SOC221<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>His instructions lack to the detail of the specificity he desires in the end results. Nearly everyone in the class was dumbfounded when receiving grades back. He talks at the class the entire time. Literally, reading from pages and pages of typed notes. I am a senior with a 3.5 and this is the hardest class I have taken. Avoid him at all costs!!!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

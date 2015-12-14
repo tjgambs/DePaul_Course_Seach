@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Susan Reed</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 2.57</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/18/2008<br>Class Name: SNLSNL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Susan was a great teacher. She had a lot of ideas on how to succeed as an adult student.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2008<br>Class Name: LL250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Susan is my faculty advisor and has been fantastic to work with in SNL.  She is an asset to DePaul and truly has a positive attitude. Susan really cares about education and is truly inspiring. If you have the opportunity, sign up for one of her classes. You will NOT be disappointed!</div></div></div><div id="container" class="review"><div id="left">Date: 01/09/2007<br>Class Name: LL250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Reed is one of the better professors that I have had in my academic career. She is extremely competent and passionate about her profession and the subjects that she teaches. She is truly a remarkable women and I would recommend that anyone take as many of her classes as possible.</div></div></div><div id="container" class="review"><div id="left">Date: 08/23/2006<br>Class Name: LL250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Took Research Seminar with her. She made a grueling class much easier. Enthusiastic, helpful, motivating and good at giving direction and support to get material accomplished.</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2006<br>Class Name: LL250<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Excellent teacher, patient, smart.  Class is a bore, but a requirement... not her fault.</div></div></div><div id="container" class="review"><div id="left">Date: 06/27/2006<br>Class Name: SNLCOURSES<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Susan is a really awesome teacher. Some say that she may require a lot of work, but if you are truly interested in academics then she will help you any way possible. She will work with you to create your own education and learning path.</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2006<br>Class Name: SNL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Awesome and Caring but does require a lot of work.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

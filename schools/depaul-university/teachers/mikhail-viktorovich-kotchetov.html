@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Mikhail Viktorovich Kotchetov</h1><hr><div><h2>Overall Quality: 1.83<br><br>Helpfulness: 1.83<br>Clarity: 1.83<br>Easiness: 1.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/22/2006<br>Class Name: MAT141<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>he's bad</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2006<br>Class Name: MAT140<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Seriously, I think this Professor is great! I really liked him: he was helpful, knowledgable, and fun! All the crap that you wrote guys is bs. If you are stupid not to get the material in this class, then nobody can really help you...Everyone whom I know likes this Professor a lot.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2006<br>Class Name: MATH140<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>This is by far the worst teacher that i have ever had in my life. I wouldn't advise anyone to take this class. Look for another prof. for this class. Anybody is better than him</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2006<br>Class Name: MAT140<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Reading the book was just as helpful as listening to the lectures in class.  Even the math tutors don't know some of the stuff he is teaching.  Wait for another professor to teach this class.</div></div></div><div id="container" class="review"><div id="left">Date: 01/25/2006<br>Class Name: MAT140<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>bad teacher. Instead of spending class time showing examples of problems that will be for homework and on quizzez, he copies down crappy notes with zero enthusiasm and makes up shi*ty examples that will never appear on any Test or Quiz. The Text Book does a better job of teaching the material don't waste time listening to Mikhail just read the text</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2005<br>Class Name: MTH262<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Lecture format approach an equivalence of a vocalized catatonic zombie trance by merit of the format.  No enthusiasm is exhibited at all.    Don't take at night, you will fall asleep.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

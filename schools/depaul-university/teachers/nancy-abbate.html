@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Nancy Abbate</h1><hr><div><h2>Overall Quality: 4.45<br><br>Helpfulness: 4.3<br>Clarity: 4.6<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/31/2013<br>Class Name: SOC322<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She has a sign up sheet for attendance, which she totally keeps up with. There are a lot of videos during class which will be on tests.  And there are two textbooks which are not to long in length and are a bit interesting. Overall, class was a bit dull.</div></div></div><div id="container" class="review"><div id="left">Date: 07/17/2008<br>Class Name: SOC322<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>OK teacher. . easy though. . 30% 8 pg paper, 30% presentation, 30% take home final, 10% attnd/ part. just do the work and u should easily get a good grade</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2007<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a good teacher and taught a good class. The material was interesting and were focused on class discussion. Assignments were very fair, along with her grading style. I would recommend!</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2006<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really enjoyed the delinquency course! Professor knows her material and shows a genuine interest in the subject. Great course!</div></div></div><div id="container" class="review"><div id="left">Date: 05/25/2006<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She knows her stuff, the class is easy but it can get boring.  I know a lot about the subject so that may be why it is boring to me.  She's a real hip lady!</div></div></div><div id="container" class="review"><div id="left">Date: 09/27/2005<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I really enjoyed the delinquency course!  Professor knows her material and shows a genuine interest in the subject.  Great course!</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2004<br>Class Name: SOC<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 08/20/2004<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>great class.  you can tell you knows a lot in her field.  she grades well and requires a lot of discussion.  take her.</div></div></div><div id="container" class="review"><div id="left">Date: 08/19/2004<br>Class Name: SOC322<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class goes very smoothly no midterm exam, but lot of class discussions about the issues of juvenile delinquency and programs to help combat the problem. Take the class if you are interested with the material she is a fair grader.</div></div></div><div id="container" class="review"><div id="left">Date: 08/18/2003<br>Class Name: SOC322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She really enjoys teaching this class. I believe its the only class she teaches. Take it if you are interested in the material. I think she's a pretty fair grader.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

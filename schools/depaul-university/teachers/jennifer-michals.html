@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Jennifer Michals</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.7<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/24/2015<br>Class Name: LSP200<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I absolutely adore Professor Michals! Her class seriously changed my perspective on  so much. I really enjoyed writing her papers and I feel like I gained so much from her class. She definitely expects that you participate in her class but that shouldn't be too hard considering the topics. </div></div></div><div id="container" class="review"><div id="left">Date: 08/24/2010<br>Class Name: SOC101<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a really nice lady and has the best intentions. She's also very passionate about the subject, but idk if her teaching-style is what you expect in college. She does try to peak everyone's interest -and i give her this she's one crazy character at times- but sometimes it's hard to stay in with her. No reason to pass her up.</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2010<br>Class Name: LSP200<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Prof. Michals is really sweet, really helpful. Don't miss class, and do the work and you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 10/10/2006<br>Class Name: SOC206<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's hott.  She knows what she's talking about and she's young and fun.  Couldn't ask for more.  She is pretty easy, but it only seems that way cuz of how she teaches. Overall, A+++</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2005<br>Class Name: SOCIOLOGY<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>OMG! this is one of the worst teachers ever! she definately knows nothing about teaching. i could NOT stand being in her class bc it was so boring! she practically reads you the book. For an easy A and a blow off class, take her! i got an A and made little effort, seriously.</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: SOC200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The class is easy as hell...but the teacher teaches the class like your in grade school. She seems like a really nice lady, but as far as her teaching, shes boring and reads off a sheet what she plans on saying all class. I skipped the last 2 months of class and am going to get a A. Maybe she needs more experience, but she cool...but boring as hell</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2005<br>Class Name: SOC206<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was a great teacher, and a great help to all her students! Take this class!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

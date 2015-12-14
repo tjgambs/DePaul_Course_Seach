@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Dana Turner</h1><hr><div><h2>Overall Quality: 2.0<br><br>Helpfulness: 2.2<br>Clarity: 1.8<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/12/2015<br>Class Name: WRD104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B</div><div id="right"><div>Teaches out of the book, does not communicate well with students. VERY UNCLEAR about pretty much everything. Class was always awkward, and I don't think I learned anything the whole quarter. She is really nice, and well educated, but not a good teacher. AVOID AT ALL COSTS. 1010 would NOT recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 05/12/2015<br>Class Name: WRD104<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Dana is a nice person, terrible teacher. She's super unclear, completely awkward, and not a good speaker. She doesn't know how to keep class discussion going and although it is required for you to go to class it's basically pointless to go. But she does give good feedback on papers, so that something.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2015<br>Class Name: 27311<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>teaches straight out of the book for everything</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2015<br>Class Name: WRD104<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Quite honestly she was the worst teacher I've ever had. For being an English professor she was a bad communicator. Her assignments were confusing and vague. The course material that we studied in class had almost nothing to do with the papers we were writing which made the reading and discussion virtually useless. I would not recommend her.   </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Larry Maturin</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 5.0<br>Clarity: 4.6<br>Easiness: 2.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/26/2015<br>Class Name: NSG322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: B-</div><div id="right"><div>I was dreading starting nursing school with pharmacology, it was as I feared, overwhelming and intense. Professor Maturin was patient and provided all the support and help I needed.  He demands your best but does it in a way that inspires you to succeed.  </div></div></div><div id="container" class="review"><div id="left">Date: 11/20/2015<br>Class Name: NSG322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: B+</div><div id="right"><div>Lecture style is engaging, promotes critical thinking.</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2015<br>Class Name: NSG303<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: B</div><div id="right"><div>Lectures, not stale.  Provides the most up to date material he can find.  Taught me to think for myself, not accept current trends.  Question everything for better outcomes.  Treats students like adults and with respect.</div></div></div><div id="container" class="review"><div id="left">Date: 08/13/2015<br>Class Name: 303<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>goes the extra mile for students if he sees that they are interested or investe in the topic. if you don't come to class or are on FB during class, he won't fight for your attention or time. treats students like adults and is very respectful. comes off as very hardabrasive but just takes his work seriously</div></div></div><div id="container" class="review"><div id="left">Date: 05/10/2015<br>Class Name: NSG322<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Was willing to help me understand the material and learn how to critically think.</div></div></div><div id="container" class="review"><div id="left">Date: 11/06/2014<br>Class Name: 302<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Is really there to help you out if you show that you are a hard worker and want to do well.</div></div></div><div id="container" class="review"><div id="left">Date: 08/12/2014<br>Class Name: NSG303<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A-</div><div id="right"><div>Goes the extra mile to help, always available, best professor ever!</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2014<br>Class Name: NSG302<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>A natural teacher, puts the interest of the students first.</div></div></div><div id="container" class="review"><div id="left">Date: 05/18/2013<br>Class Name: NURCLIN232<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This Professor is amazing!  I learned so much and he is so helpful.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

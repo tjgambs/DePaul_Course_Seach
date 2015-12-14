@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Joshua Gray</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.2<br>Clarity: 4.0<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/13/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Josh is an awesome guy and great teacher. My favorite professor. I took his class over a year ago and recently reached back out to him about internships at his company and others. He means it when he says keep in touch. He always kept class fun & funny and has super high energy level. Has high standards (be on time) but you will learn a ton.</div></div></div><div id="container" class="review"><div id="left">Date: 02/24/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Josh is an excellent professor. He always goes the extra mile with his students and is great at engaging the class. Teaching from 6-9 pm isnt the easiest, but his energy and enthusiasm made coming to class fun. Highly recommend.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2012<br>Class Name: MKT376<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Don't bother. He appears uninterested in the content and the students. He always appears to be eager to get out of there. By the end he couldn't even learn your name. There are better professors to take this class with.</div></div></div><div id="container" class="review"><div id="left">Date: 05/26/2012<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Nice guy. Kind of mean and demeaning towards students sometimes. Class is SO simple and so much common sense. It's a struggle to sit through every night. He could be a little clearer with assignments too but overall if you have half a brain you will do well in this class.</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2010<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Josh is my favorite teacher at DePaul so far. He is highly charismatic and engages the class.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>MKT 357 MANAGEMENT OF MARKETING</h1><h2>The second course in the IME sequence acquaints the student with the knowledge and skills necessary for the management of marketing activities including marketing plan preparation and tactical decision-making in changing situations. (1) Students will build upon the situation analysis and presentation skills acquired in the IME Level l, by developing skills necessary to prepare and present a marketing plan. (2) Tactical managerial decisions to be addressed include product/service management, competitive pricing decisions, distribution, and promotion decisions as faced by the manager of marketing activities in the day-to-day life of the firm. Students will learn to develop sales forecasts and budgets and apply control and analysis techniques to evaluate marketing operations. Course milestones will include market plan development and presentation to internal as well as external groups, and the presentation of analysis and recommendations to address the day-to-day management of marketing operations. Students will work in teams to address a marketing problem provided by a sponsoring Chicago-based company. This problem will require students to use available secondary data to analyze the current market situation and analyze and interpret primary data necessary to make decisions. Offered every Winter.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MKT&catalog_nbr=357","MKT 357");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

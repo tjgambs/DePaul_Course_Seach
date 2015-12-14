@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Joe Clark</h1><hr><div><h2>Overall Quality: 4.17<br><br>Helpfulness: 4.0<br>Clarity: 4.33<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/26/2013<br>Class Name: MUS100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He has charisma, is pretty funny, and is very enthusiastic about music. There is a lot of information to cover, however there are only a handful of quizzes and two essays done throughout the quarter. There's not homework every night or anything. The quizzes, midterm, and final were not very hard. Great class to take and a nice guy!!</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2013<br>Class Name: MUS100<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>i don't play an instrument or sing or non of that. BUT, this class was still easy! you just take notes take a quiz and do 2 essays which are fairly easy. Take his class if you need a learning domain! Easy work</div></div></div><div id="container" class="review"><div id="left">Date: 01/22/2013<br>Class Name: MUS121<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>For an early morning class, this guy is the best professor you could have. He's young and new to the system so he isn't the greatest at explaining how to do things that you struggle with but he's funny and enthusiastic and really makes class fun. The class is somewhat structured so that a lot of progression made needs to be done on your own.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

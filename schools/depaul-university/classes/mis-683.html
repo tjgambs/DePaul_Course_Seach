@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>MIS 683 INFORMATION TECHNOLOGY STRATEGY AND ARCHITECTURE</h1><h2>This course focuses on key aspects of formulating a business-driven information technology (IT) strategic plan and an enabling technology architecture to optimize enterprise value-chain functions, and improve shareholder value. Students will explore opportunities on how to leverage IT, of their own firm, for competitive advantage and growth. The course will include lectures, case study, project presentation, and discussion of current developments in IT industry. Class discussion will be centered around the importance of the alignment of business and technology, and the critical role IT has on optimizing mission-critical business processes. Key course topics include: Business Strategy Alignment, Strategic Analysis, IT Strategic Planning Framework, IT Strategy Tools & Methods, Baseline Assessment (applications, data, infrastructure, TCO, organization), IT Effectiveness Review, Applications Portfolio Strategy, Data Management Strategy, Technology Infrastructure Strategy (hosted, cloud/SaaS, and on-premise), Spend/TCO, Investment Plan, and Organization Strategy.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MIS&catalog_nbr=683","MIS 683");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

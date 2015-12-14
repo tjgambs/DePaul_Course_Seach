@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Richard Fesl</h1><hr><div><h2>Overall Quality: 4.1<br><br>Helpfulness: 4.1<br>Clarity: 4.1<br>Easiness: 4.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/20/2015<br>Class Name: CNS440<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>You can not dislike this guy! assignments are strait foreword. Complete all assignments and you're good. </div></div></div><div id="container" class="review"><div id="left">Date: 04/15/2015<br>Class Name: CNS440<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>He's an awesome professor. No exams, no midterms, homeworks and labs are take home. </div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2015<br>Class Name: CNS440<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>10 homework, no midterm, no final. extremely  easy.</div></div></div><div id="container" class="review"><div id="left">Date: 11/14/2011<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He brought Ice Cream to the last class. Plus he gave me an A</div></div></div><div id="container" class="review"><div id="left">Date: 11/07/2011<br>Class Name: IS433<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very Knowledgeable. Fesl knows what he is talking about. Just watch out with assignments stay on top of him with grading. Email response could be better, but very understanding guy. Easy to talk to and does a good job with a dry topic.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2011<br>Class Name: IS433<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>The guy is totally out of his mind. Lowered my grade by one letter, because of his own incompetence. Beware all, this guy is very treacherous.</div></div></div><div id="container" class="review"><div id="left">Date: 04/20/2011<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Clear & easy A</div></div></div><div id="container" class="review"><div id="left">Date: 08/31/2010<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Excellent Professor, extremely knowledgeable in IT Security. Practical experience in IT Security technically and conceptually.</div></div></div><div id="container" class="review"><div id="left">Date: 06/15/2010<br>Class Name: IS433<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>very informative professor but boring. Homework is graded fairly except for the final paper.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2010<br>Class Name: IS433<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is organized, clear, grades quickly.  He in knowledgeable and seems interested in the topic. He is helpful too.  Nice person. Topic got a little boring for me since format is all lecture but I learned a lot. Use his slides.  Book not that usefule.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2009<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Solid professor. I would certainly recommend him to other students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

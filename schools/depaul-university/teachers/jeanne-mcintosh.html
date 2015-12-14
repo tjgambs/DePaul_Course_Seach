@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Jeanne McIntosh</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/04/2006<br>Class Name: PSY399<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>excellent</div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2005<br>Class Name: COMMUNITYPSYCH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>A wonderful woman, excellent teacher, and just an overall breath of fresh air. She clearly cares about her students, and is passionate about her subject--a great combination. She's very good with communicating, and is smiley and welcoming if you need anything from her. Just a wonderful teacher--one of the best at DePaul.</div></div></div><div id="container" class="review"><div id="left">Date: 10/01/2005<br>Class Name: PSY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This teacher is awesome, great all around, her class was interesting and she is a fair grader. Great class, great teacher; everyone should take this class!!</div></div></div><div id="container" class="review"><div id="left">Date: 09/10/2005<br>Class Name: PSYCH240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's the best.  Always interested in life outside the classroom and totally tries to be  more than just the professor.  Professional, but with a nice human touch to her classes.</div></div></div><div id="container" class="review"><div id="left">Date: 09/06/2005<br>Class Name: SEVERAL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I love this teacher. She is very sweet and educated.</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2005<br>Class Name: INDSTUDY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Simply wonderful. I totally reccommend her if you want to experience the best DePaul has to offer.</div></div></div><div id="container" class="review"><div id="left">Date: 05/03/2005<br>Class Name: PSY<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's such a nice professor and pretty easy too. She gives lots of extra credit!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2005<br>Class Name: PSY218<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. Mc is one of the best teachers I have ever had. She is sooo sweet and acts as if she is the mother to everyone in the class. Her lectures are fun, I went because I wanted to hear what she had to say. She has one current event, a midterm exam, and a final paper and even offers extra credit.GREAT</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

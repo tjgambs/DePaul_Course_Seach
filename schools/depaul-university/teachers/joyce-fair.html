@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Joyce Fair</h1><hr><div><h2>Overall Quality: 3.33<br><br>Helpfulness: 3.33<br>Clarity: 3.33<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 09/09/2006<br>Class Name: ECE091<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is a very easy teacher but a huge wast of time and money because we did absoultly nothing.  She showed up late every day and we left early.  We sat in groups and talked, about nothing, just wastine time.  Although it was a clinical class, we were not resonible for obsearving.  Easy A, but big waste of time and money.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2005<br>Class Name: ECE091<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy teacher, however very unorganized, always late to class, and classtime was a waste of my time. She did allow papers to be turned in late and when class was held it was always let out early.</div></div></div><div id="container" class="review"><div id="left">Date: 01/06/2005<br>Class Name: ECE092<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she is so nice and understanding. if you go to class and participate you will get an A. she lets you turn in all papers late as long as you talk to her.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

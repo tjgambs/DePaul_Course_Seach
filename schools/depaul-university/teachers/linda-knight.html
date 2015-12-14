@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Linda Knight</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.4<br>Clarity: 4.3<br>Easiness: 4.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/29/2015<br>Class Name: IS500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Outstanding teacher</div></div></div><div id="container" class="review"><div id="left">Date: 02/16/2015<br>Class Name: IS500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: A+</div><div id="right"><div>Excellent professor one of the best if not the best I have taken.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2014<br>Class Name: IS430<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A+</div><div id="right"><div>Pretty standard class. You cannot avoid buying the textbook. Its absolutely horrible. Never read a damn thing in that book. But she'll assign problems from specific page numbers so I didnt want to risk using an older version. Otherwise wkly quizzes, 1-page assignments and 1 final assignment. You can take the quizzes three times. Not a hard class.</div></div></div><div id="container" class="review"><div id="left">Date: 04/17/2013<br>Class Name: IS433<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I learned a lot in this class. Dr. Knight is easy to reach and always willing to help. What I appreciate about this class no 3 hrs lectures to listen to. She took her time to make powerpoint presentations that focus on the core of her learning objective. Great teacher and looking forward to taking PM430 with her.</div></div></div><div id="container" class="review"><div id="left">Date: 12/02/2012<br>Class Name: IS500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took IS500(Leadership) class with Dr.Kinght. It was online. Weekly quizzes which were fairly easy. The class was a lot of work, but she's very understanding and helpful. Easy A if you do the work! Highly recommended</div></div></div><div id="container" class="review"><div id="left">Date: 11/30/2009<br>Class Name: HCI201<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a great professor. She is very clear and helpful. She takes her time teaching so students don't fall behind. There's a take home final and the work is your website and a group study project. Attendance isn't mandatory but it's worth it to show up. It's a pretty easy class but if you don't do the work you won't do well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2009<br>Class Name: HCI201<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class and professor are really easy!!! If you need a good grade for your quantitative science class take this one! Although if you need help your going to have to rely on the other students, because she appears to be quite clueless at times. All and all really easy though, Take home final that she gives you in the beginning of the quarter!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

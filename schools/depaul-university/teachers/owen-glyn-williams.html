@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Owen Glyn-Williams</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.3<br>Clarity: 4.4<br>Easiness: 3.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: PHL240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>This is my second class with Owen because he is so great. If you want a philosophy class that isn't that much work and not boring then take him! He's super nice and helps you with papers if you are lost. Wants you to do well if you put in the time! Great guy, great professor, great classes. You'd be missing out if you don't take him. </div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2015<br>Class Name: PHL240<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>The NICEST man, EXTREMELY intelligent, and has a fun sense of humor. Took Love, Hatred, and Resentment  w/ him and LOVED it. His lectures are so interesting. One easy take-home Midterm, one 5 pg essay, and some readings we discuss in class. Pay attention, take good notes, and ask him questions, and you will do well. (also he's pretty attractive).</div></div></div><div id="container" class="review"><div id="left">Date: 06/09/2015<br>Class Name: PHL248<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Super smart, inspirational lectures that had a ton of real-world application. He is great at getting his students to think, and he's relatable because he's around the age of his students (yes, he's good looking as well!). But more importantly, he communicates philosophy extremely clearly to students and relates it very well to real-world topics. </div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2015<br>Class Name: PHL236<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Took Philosophy and the City with Owen and he was absolutely fabulous. He has a lot to say and real life experiences to relate to his subject. 1-2 reading reports that weren't graded and a final paper but that was it. No tests. Would totally take another class with him. Amazing professor. </div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2015<br>Class Name: 100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: C-</div><div id="right"><div>bad proffessor </div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Owen is one of my absolute favorite professors at DePaul. He made a difficult subject that I had little interest in fascinating. The readings he assigns are super short and manageable and there is not much written work. I would definitely take another class with him. He really seems like wants you to do well, and he's cute. Always a plus.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2014<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Owen was by far one of the best professors at DePaul. So knowledgeable on the subject. You can tell he really loves philosophy and gets the class excited too! Not to mention easy on the eyes.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

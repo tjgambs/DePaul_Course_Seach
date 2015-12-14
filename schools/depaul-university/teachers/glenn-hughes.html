@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Glenn Hughes</h1><hr><div><h2>Overall Quality: 4.8<br><br>Helpfulness: 4.5<br>Clarity: 5.0<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/12/2015<br>Class Name: MAT140<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Glenn is a great professor. As another commenter mentioned, there is a lot of homework and quizzes, but they're not bad. Discrete is challenging and the practice is necessary to do well. Exams are straightforward, and he is available ALL the time to help, including study sessions on his own off time. He's dedicated to teaching students this subject</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: MAT140<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Gives a lot of hw and takehome quizzes, but they're fairly easy and are most of your grade. Do well on them! 2 Tests and 1 Final, final replaces the lowest test grade. Drops a quiz and a hw. Willing to help outside of class. He has some corny jokes but I think they're funny! Fair grader and a nice guy. Only downside is how monotone his voice can be</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2015<br>Class Name: MAT140<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I like to be challenged, and the coursework was challenging. He was very clear in-class, and encourages you to question what he says (yes, he actually ENCOURAGES it) as well as to ask clarifying questions during and outside of class. If you don't understand something, just raise your hand and he'll always explain it until you understand completely.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

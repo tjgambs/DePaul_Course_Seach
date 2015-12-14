@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Marshall Goldman</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.7<br>Easiness: 4.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/28/2015<br>Class Name: PRAD244<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>The best teacher at DePaul, he knowns so much about AD. His super understanding, and always gives back feedback! TAKE HIM!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/13/2015<br>Class Name: PRAD244<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Amazing professor! He does not take attendance and there are very few projects and papers. He has so much experience in the advertising field and he made me love my major. Class is actually fun because he engages you to think. If you do the work you'll get an A! Oh and the group that wins the final project will get a Leo Burnett pencil!</div></div></div><div id="container" class="review"><div id="left">Date: 06/18/2015<br>Class Name: PRAD244<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>First time professor, an excellent teacher. Clear with expectations and always there to help. He really sparked my interest in advertising, so much that I'm changing my major. A lot of real life experience in the advertising world which he brings to the class! Not text book heavy (I never used it). Lots of creativity based assignments! Loved it.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

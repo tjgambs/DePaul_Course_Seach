@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Daniel Selcer</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/31/2005<br>Class Name: EXISTENPHL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>a very enthusiastic cool guy. knowledgable and has an amazing reading list. also encourages creativity. fun stuff, but you have to think.</div></div></div><div id="container" class="review"><div id="left">Date: 02/02/2005<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>i enjoyed his class very much.. managed a B even though im not usually good with philosophy</div></div></div><div id="container" class="review"><div id="left">Date: 09/30/2004<br>Class Name: PHL100<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Overall a nice guy.  He's kinda funny and dorky all at the same time.  His lectures get boring FAST, but he's a pretty easy grader and he makes the class not bad for philosophy.  He's pretty strict w/attendance and quizzes though.</div></div></div><div id="container" class="review"><div id="left">Date: 09/20/2004<br>Class Name: PHIL<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Selcer can be compared to TV Seinfeld's Kramer, or better yet the guy on Mad TV who is addicted to coffee. Interesting teacher, cool and funny guy, but kinda hard on grading.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2004<br>Class Name: EXISTNTLSM<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>One of the smartest people I've ever met. He's funny too.</div></div></div><div id="container" class="review"><div id="left">Date: 11/25/2003<br>Class Name: PHL100<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is not a very easy topic, but he is a fair and easy grader as long as you do the readings and participate once in awhile.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

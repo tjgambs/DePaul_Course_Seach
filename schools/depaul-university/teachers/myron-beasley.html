@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Myron Beasley</h1><hr><div><h2>Overall Quality: 4.83<br><br>Helpfulness: 4.83<br>Clarity: 4.83<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/14/2006<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He has inspired me to not accept the world around me, but to challenge it and experience it!!! He is the best professor I've had & I'm sorry to say that he is no longer teaching at DePaul :(  I am so greatful that I took this class and hope that if he decides to teach again, which he will, his students leave the class feeling as enlightened as I do</div></div></div><div id="container" class="review"><div id="left">Date: 05/02/2006<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Mr. Beasley was by far my favorite professor I've had at DePaul.  Very loving, understanding, and informative.  The class wasn't too challenging, but had me engaged more than any course I've taken here.  He actually cares about his students and their success.  If you have an opportunity to take him during the short time he is here, do it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2006<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Beasley is THE BEST professor that I've had at DePaul! Too bad he's just visiting! His class was very thought provoking, interactive,& informative. He's absolutely hilarious & he has such an animated personality...kinda makes you want to come to class! Take him if u really want to learn, think, & you'll anticipate more of what he has 2 say.</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2006<br>Class Name: ISP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>HE IS GREAT!NO MIDTERM,QUIZ,OR FINAL!JUST A FEW ESSAYS N JOURNALS.EASY TO LISTEN TO AND GETS ALONG WITH STUDENTS.FUNNY 2!STRONGLY RECOM.IF U DON'T LIKE HW/TESTS,TAKE BEASLEY.HE KEEPS U ENTERTAINED W/STORIES OF HOW HE LIVES IN BRAZIL N FRANCE!TAKES ATTEND.THOUGH.SHOW UP.CLASS IS MOSTLY DISCUSSIONS.HE GETS 2 KNOW U BY NAME!</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2006<br>Class Name: CMN203<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>class was awesome! he's such a cool teacher, and is very clear on what he wants. There is no midterm or final so all you really have to do is write 4 or 5 papers and your done. He's hilarious, and easy to listen to.  I loved attending his class! highly recommend</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: CMN203<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is, by far, one of the best teachers here at DePaul. He's super smart and so fun to listen to. I looked forward to going to this class (ALMOST) every day! He is a doll and will keep you in stitches the entire quarter. No mid-term or final (if you choose do write 5 papers during the quarter).  Seriously, EVERYONE MUST TAKE THIS CLASS!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

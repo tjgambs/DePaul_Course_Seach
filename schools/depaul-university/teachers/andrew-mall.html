@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Andrew Mall</h1><hr><div><h2>Overall Quality: 4.69<br><br>Helpfulness: 4.75<br>Clarity: 4.63<br>Easiness: 4.13</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/13/2012<br>Class Name: LSP202<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Took his punk politics class. Interesting discussions but quite a bit of reading. Too much for my interests. Essays due every thursday. Most work i've done for a class in a long time....But cool professor.</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2012<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Walk into class on the first day and say &quot;yo teach&quot;, and you will get an A in the class. Mention his cat Lulu, too. His class is awesome. I was surprised at the depth of discussion that he got students into. Also, there is a lot of time outside of the classroom. You would not regret having this professor!</div></div></div><div id="container" class="review"><div id="left">Date: 05/27/2010<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amazing professor! I took his Punk and Politics class and he really knows what he's teaching in the class. It's a seminar class, but he's always available for you outside of class, either through email or office hours. He will try his best to make you succeed in class, and he's not a bad grader at all. Extremely fun teacher.</div></div></div><div id="container" class="review"><div id="left">Date: 01/13/2010<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I took Andrew's Explore Chicago class, the Explore Chicago's Music Scene. He was a really fun guy, and I really enjoyed his class. If you enjoy music and culture, I'd definitely recommend this class!</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2009<br>Class Name: LSP111<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Andrew is really cool and its obvious that he has a lot of interest in music when he's talking about it. He made the class fun by choosing pretty good concerts for us to see. The papers were easy and he graded them really fair and, again, easy. A good Explore class to take (Music Scene). There are weekly readings that are pretty boring though.</div></div></div><div id="container" class="review"><div id="left">Date: 10/08/2009<br>Class Name: LSP111<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's the ONLY Yo Teach out there! He's the OFFICIAL Captain Planet! And not only that but he loves snuggle naps with his cat LuLu. If you could choose any professor for this class, choose Captain Planet! Yo Teach, I'm out!</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2009<br>Class Name: LSP112<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I loved his class! I took him for Chicago Music Scene Chicago quarter class and Punk and Politics focal point seminar. He was very informative and interesting; he grades papers fairly easily and he is easy to reach for questions. A plus is he cooks dinner for his classes at the end of the quarter and he is a great cook!</div></div></div><div id="container" class="review"><div id="left">Date: 03/27/2009<br>Class Name: ISP102<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher for a great class.  There was a decent amount of reading, but it was all related to class discussions.  There were two papers and other work was minimal. Recommended.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

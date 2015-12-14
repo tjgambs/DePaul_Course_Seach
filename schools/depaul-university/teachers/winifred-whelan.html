@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Winifred Whelan</h1><hr><div><h2>Overall Quality: 3.44<br><br>Helpfulness: 3.5<br>Clarity: 3.38<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/24/2005<br>Class Name: REL278<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This woman is so adorable.  Her class was really easy, but I didn't learn a whole lot.</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2005<br>Class Name: REL278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>sweet lady open to other ppls opinions and respects all her students.assignments r  easy.attendance and part. is a big part of ur grade,our class was small so we didn't have quizzes,3 tests, 1 paper.not such a boring class but not too exciting either,take her at 8:30 cuz the class will be small,u won't have quizzes and it's more interesting.</div></div></div><div id="container" class="review"><div id="left">Date: 04/26/2005<br>Class Name: WOMENANDREL<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Boring. She talks a lot. Kind of how you feel more than what you know. Hard to make it through her 8:30...Easy enough, but wouldnt suggest it if you're looking for somthing exciting.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2005<br>Class Name: REL278<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I really would not suggest taking a class with her-she has no organization and the lectures consist of her asking other students what they feel but than she tests you on material that was never discussed. For being a nun-it seems like she has no idea what she's talking about. Never again.</div></div></div><div id="container" class="review"><div id="left">Date: 03/26/2005<br>Class Name: REL278<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I tend to disagree with the other comments. She's ignorant on her subject matter. She teaches women and religion but knows nothing about other religions. Insults non-chiristian students because she doesn't know anything about them. TONS OF READING ABOUT UNHEARD MATERIALS! stay away from her.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2005<br>Class Name: REL278<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She has so much ambiguity. Easy going. Mostly discussion. Enought reading to get you occupied. My class was women and religion and she taught Chiristianity and religion.</div></div></div><div id="container" class="review"><div id="left">Date: 02/13/2005<br>Class Name: REL278<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>this teacher really is sweet. her classes can be sort of boring, there are lots of readings, but it's an interesting class. just do all the readings, and you'll do fine. and she's very strict about attendance.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2005<br>Class Name: REL278<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Sister Whelan is a very sweet woman. Her assignments are relatively easy, but sometimes her quizzes can kick you in the butt. This was a required course, and it wasn't awful, so I would recommend it to others.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>  Goran  Kuljanin </h1><hr><div><h2>Overall Quality: 3.6<br><br>Helpfulness: 3.8<br>Clarity: 3.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/24/2015<br>Class Name: PSY210<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>We always work in groups. No homework is given outside of class, but if you skip, it's all on you to finish whatever we were doing in class. I recommend taking a laptop to class as you will need it every day. I highly recommend taking him because it's an easy A if you do all the work. </div></div></div><div id="container" class="review"><div id="left">Date: 07/19/2015<br>Class Name: PSY380<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>He is young and very easy. He does not lecture much. Most of the class time, he will assign you in group and do group work. He will answer any questions you have. Two exams - open books and laptop. So it is very easy to pass.  Attendance is not mandatory, but it will be easier to be in class and do group work rather than do it alone. </div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2015<br>Class Name: PSY343<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Attend and pay attention! He introduces a software called R and its not the easiest to understand at first but goes over it step by step. Gives assignments in class with enough time to work on them and puts you into groups to complete it. If you're not in class and want credit for the assignment you  missed you have to do it alone which is terrible</div></div></div><div id="container" class="review"><div id="left">Date: 12/12/2014<br>Class Name: PSY343<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Class easy. Open booknotes on test. In class assignments, gives answer too. He is helpful, but not always clear. Did not really care for the class. Would take another class with him for an easy A. He is young and easy going. Hate R, but it is doable for this class. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

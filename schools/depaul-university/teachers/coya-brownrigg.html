@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Coya Brownrigg</h1><hr><div><h2>Overall Quality: 4.72<br><br>Helpfulness: 4.78<br>Clarity: 4.67<br>Easiness: 4.33</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/22/2014<br>Class Name: LSP110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Coya was a great first professor in college. She is encouraging and as long as you speak up in class it's easy to pass.</div></div></div><div id="container" class="review"><div id="left">Date: 10/19/2014<br>Class Name: LSP110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I would absolutely take her class again if I ever got the chance. She's a wonderful professor with an awesome sense of humor. Choose her as your instructor and you won't regret it!</div></div></div><div id="container" class="review"><div id="left">Date: 04/05/2014<br>Class Name: THE100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Paz is an enjoyable teacher who is passionate about her subject matter. I had no interest in theater going into this class, and came out with an appreciation of the subject.She grades fairly, she expects attendance, and participation. Overall, I would recommend her class to anyone needing an art credit.</div></div></div><div id="container" class="review"><div id="left">Date: 03/19/2013<br>Class Name: HDL205<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is very mild mannered, but sweet. Sometimes she seemed disinterested in teaching the class and discussions often turned into feminism, which was alright for some of the plays we read, but got repetitive after a while. Overall she was helpful when I asked for help and offers revisions on papers which is awesome in my book.</div></div></div><div id="container" class="review"><div id="left">Date: 03/01/2013<br>Class Name: THE205<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is amazing and nice. She is the best to have in HDL. We never just did a "quiz" she always made it into a game. She love for us to work in groups. She speaks in such a carefree way. She always makes my day!</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2012<br>Class Name: THE100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Made class enjoyable. Not too much work. You read plays. It's not an acting class. Attendance is really important. Defintely Reccomended.</div></div></div><div id="container" class="review"><div id="left">Date: 11/08/2012<br>Class Name: THE100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Made class enjoyable. Not too much work. You mostly read plays. It's not an acting class. Attendance is really important. Defnitely reccomended.</div></div></div><div id="container" class="review"><div id="left">Date: 02/14/2012<br>Class Name: THE101<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Oh my gosh is my favorite. She is funny and makes class interesting. The plays we had to read weren't so long. The work was easy, no hard midterms or long papers. She is super nice and if she sees the class is not into it, she will change the subject or end class early. She is awesome and very interesting</div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2009<br>Class Name: CMN220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took Coya for Public Speaking. I would recommend taking this class. If you like to speak or if you don't- you'll learn either way. It's a class that basically gives you a chance to practice speaking in front of people BEFORE you really have to do it (in the Real world). Really nice teacher.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>James Sherman</h1><hr><div><h2>Overall Quality: 3.1<br><br>Helpfulness: 3.0<br>Clarity: 3.3<br>Easiness: 4.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/11/2015<br>Class Name: THE223<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Fun and easy, we did improv exercises every day. You HAVE to go to class because it's a participation based class! Only requires two papers that involves seeing and evaluating shows. A very comfortable and fun environment where everyone has a chance to shine. Really enjoyed and recommend. </div></div></div><div id="container" class="review"><div id="left">Date: 03/16/2015<br>Class Name: THE250<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>He's passionate and knowledgable .... Too bad the class itself is more of a joke. Would be a fun class without taking into consideration how much money we spend per class. American Funny is extremely easy, and while you learn a lot of fun facts, you don't really learn a lot about comedic structures themselves. Teacher is a little full of himself</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2014<br>Class Name: THE250<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>James Sherman is passionate about comedy, but not very funny himself. Every class was spent watching a film, which is fun and easy, but not what most of us pay thousands of dollars a quarter for. Additionally, he is very unclear with instructions and feed back, did not follow his syllabus in any way, and made no use of D2L (hard copies only)</div></div></div><div id="container" class="review"><div id="left">Date: 11/11/2014<br>Class Name: THE250<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: Not sure yet</div><div id="right"><div>Take his class! He is so knowledgable about theater and his speciality is comedy, so its a really fun class. We usually watch plays that were adapted into films during class and do write-ups. Some theater viewing outside of class is mandatory and the final project is writing a short comedy. He also shows a play that he wrote and directed himself.</div></div></div><div id="container" class="review"><div id="left">Date: 01/28/2014<br>Class Name: THE250<br>Helpfulness: 5<br>Clarity: 2<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>The professor was great, definitely know lots of plays, pretty helpful, did not need to buy textbooks since we just watched plays everyday.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2013<br>Class Name: THE250<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>The class is American Funny, we just watched movie everyday and the hw we had was one response paper each week and they weren't even for grades. Not a lot of project, the final is to write a 8-12 page play. He knows a lot about theater, great guy.</div></div></div><div id="container" class="review"><div id="left">Date: 03/17/2006<br>Class Name: THE244<br>Helpfulness: 1<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He is very passionate about this course but he gets misdirected and absent-minded. He is a good playwright but not a great teacher. He doesn't manage class time very well and discusses stuff outside the subject matter. But the class is easy and fun. He is a cool guy but often he talks too much about stuff not relevant to theater studies.</div></div></div><div id="container" class="review"><div id="left">Date: 02/06/2006<br>Class Name: THE244<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He likes to talk about himself long after any educational value has dissipated, but he knows his stuff and he's very supportive of your work.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

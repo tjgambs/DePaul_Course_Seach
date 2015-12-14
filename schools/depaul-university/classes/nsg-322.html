@@ -436,63 +436,20 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
 	<h1>NSG 322 BASIC PATHOPHYSIOLOGY AND PHARMACOLOGY</h1><h2>This course is designed to integrate the principles of pathophysiology and pharmacology in order to set the knowledge base necessary to manage pharmacological therapy for both acutely and chronically ill patients. The nursing role in facilitating safe and effective pharmacotherapy is emphasized. The registered nurse plays a vital role in the education and treatment of patients undergoing drug therapy. To function successfully in this role, the nurse must understand the relationship between: a) pathophysiologic mechanisms and manifestations of disease, b) the fundamental principles of drug action, c) the application of specific drugs in the treatment of disease, and d) related nursing care considerations. The course recognizes the importance of patient teaching as a nursing function and provides greater emphasis on this topic. Guidelines for and specific examples of patient teaching are covered in each session. Changes in structure and function as a result of normal development and aging are addressed. Fundamentals of drug administration and calculations related to pharmacotherapy in a way that ensures the patient's safety and satisfies medical and legal concerns are being reviewed.</h2></body><script>
-	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-	{
-		$("select").select2({
-	    	matcher: oldMatcher(matchStart)
-	    })
-	});
-
-	$(".number").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        submitForm();
-	    }
-	});
-
-	$(".credit-input").keyup(function (e) 
-	{
-	    if (e.keyCode == 13) 
-	    {
-	        creditSearch();
-	    }
-	});
-
-	$('#overlay').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("overlay");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
-
-	$('#help').mousedown(function(e) 
-	{
-		var clicked = $(e.target);
-		if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-		{
-			return;
-    	} 
-    	else 
-    	{ 
-    		el = document.getElementById("help");
-			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-    	}
-	});
 
 	$(document).ready(function() 
 	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=322","NSG 322");
 		updateRanking();
 		updateCourseCartCount();
     	$(".prefix").select2();
-		$("#myTable").tablesorter({sortInitialOrder: 'desc'});
+		$("#myTable").tablesorter({
+			sortInitialOrder: 'desc',
+	    	headers: {
+	        	6: { sorter: 'time'},
+	        	7: { sorter: 'time'}
+	   		}
+		});
+		run();
 		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>

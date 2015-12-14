@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Amy Hasapis</h1><hr><div><h2>Overall Quality: 4.2<br><br>Helpfulness: 4.2<br>Clarity: 4.2<br>Easiness: 4.6</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/02/2015<br>Class Name: ORGC212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>Need an easy BS class this quarter? TAKE THIS! DON'T waste money on the book- answers are in lectures & on the internet. 2 group projects, weekly posts, 2 written assignments, midterm and final exams. She handed out As to everyone like pencils so you can get away with minimal effort.</div></div></div><div id="container" class="review"><div id="left">Date: 07/27/2015<br>Class Name: SPEECH<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>She is an AWESOME teacher!!! You will not regret by taking a speech class with her. If you attend her lectures, give speeches using her instructions, do homework and take tests you can easily get an A. </div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2015<br>Class Name: ORGC212<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Amy is so nice and she is available for help pretty much anytime.  Group project can be hard since it was an online class, but she will help you with that if needed.  Midterm and final along with some homeworks and discussion board posts, but not very hard.  Would love to take a class with her in person!</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2015<br>Class Name: ORGC212<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: A+</div><div id="right"><div>By far the easiest class I have ever taken. Could have aced this class as a freshman in high school. If all you want is an easy A then take her, but you will not learn anything. Also she makes you buy a super expensive book we used like 3 times. Huge waste of money if you ask me. </div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2014<br>Class Name: RELC211<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Amy is really sweet. Her class has a lot of busy work but it is so easy. She does a lot of interactive activities instead of lectures so the class isn't that boring. She also cancelled class a total of four times and we ended two weeks before finals week so it is insanely manageable.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

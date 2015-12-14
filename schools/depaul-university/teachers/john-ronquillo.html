@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>John Ronquillo</h1><hr><div><h2>Overall Quality: 3.81<br><br>Helpfulness: 3.88<br>Clarity: 3.75<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/10/2014<br>Class Name: MPS542<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very laid back, easy professor. Appears to lack confidence and preparation. I managed to receive an A but not sure how that happened.</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2014<br>Class Name: MPS542<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very easy A. Must take class with him.</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2014<br>Class Name: MPS542<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Ronquillo is awesome. He might not be everyones cup of tea, but hands down, he is the most caring professor I've ever had. I made sure I attended office hours and corresponded with him, and I feel that he might be better on a personal level than a group level. Kind and respectful to all of his students.</div></div></div><div id="container" class="review"><div id="left">Date: 06/11/2014<br>Class Name: MPS542<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Ronquillo is an excellent instructor. This was my first course with him and I can honestly say that he met and exceeded (at times) my expectations. The course material and assignments were both interesting and challenging for what I had hoped to learn in this course. He was very respectful of his students & always made himself available.</div></div></div><div id="container" class="review"><div id="left">Date: 06/10/2014<br>Class Name: MPS542<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Ronquillo worked hard to make sure we understood how to conduct a concise and quality-driven policy memo.  He not only wanted our class to learn how to collaborate with each other, but to work independently. He is very strong at bringing in personal examples and making personal connections to students in the class.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2013<br>Class Name: MPS542<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: A</div><div id="right"><div>Didn't really know what to expect as I had never had Prof Ronquillo before, but I thoroughly enjoyed his class. I found him to be very engaging in and out of the classroom. He was challenging but accessible. Would definitely take another course with him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2013<br>Class Name: MPS542<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Ronquillo is one of the best professors in the School of Public Service if not all of DePaul University. I had him for 501 and 542, and in neither case did he disappoint. He is well versed in so many areas and is a champion for his students. If you work hard in his class, you will do well. Would take him again without hesitation.</div></div></div><div id="container" class="review"><div id="left">Date: 12/27/2012<br>Class Name: MPS501<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ronquillo is a very easy grader. He keeps his topics broad and vague. He isn't a quick grader and inconsistently replies to emails. He's a nice guy who is extremely busy, just keep that in mind.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

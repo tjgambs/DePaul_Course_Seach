@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Kathleen Fleming</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/12/2010<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I absolutely love this teacher. I learned a lot in this class about how to teach younger children and how to look for age appropriate material for the children you want to teach. I found this class to be very fun.  Kathleen is very enthusiastic and is passionate about what she does. I have always found her to be extremely helpful.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2009<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Fleming is one of the greatest professors I've had a DePaul. If you need help, don't hesitate to ask. Final is easy if you pay attention in class and do the assignments, its an easy A! Our class went through hard times this quarter and she was there every step of the way. I would without a doubt take her again!</div></div></div><div id="container" class="review"><div id="left">Date: 07/22/2008<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Sometimes it seems that Professor Flemming has a difficult time switching from teaching her 6th graders to teaching college students.</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2007<br>Class Name: EE347<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Kathleen is amazing. She teaches 4th grade and during class she sometimes forgets that we are not her 4th grade class, but she is great!  She keeps class interesting and if you do the simple assignments it's an easy A.  She is one of those teachers who tries to give everyone an A.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

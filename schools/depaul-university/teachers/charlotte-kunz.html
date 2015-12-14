@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Charlotte Kunz</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 3.88</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/28/2006<br>Class Name: ABNORMAL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she was a great professor.  i would take a class with her again in a heartbeat....she's clear, understanding, and very nice.  take her</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: PSY353<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's a great teacher. There isn't a lot of homework. Two tests, a paper, and a group presentation. I thought she was a very reasonable grader. The material was interesting and she taught it well.</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2006<br>Class Name: PSY357<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She was so boring and classes felt soooooo, long. Class was pretty easy except for the exams. Basically she just reads of the powerpoints for three hours.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2006<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>theres a midterm, final, paper and group presentation.  she grades very easy on the paper and group project. the tests are kinda tough..  very easy teacher overall</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2006<br>Class Name: PSY353<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>As a night class, its really boring. Mid/Final, and you have to study cuz its pretty tough. However, you will get an a or b as long as you try. I would take her again</div></div></div><div id="container" class="review"><div id="left">Date: 10/21/2005<br>Class Name: PSY105<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She is really nice and understanding. Her lectures are really boring though. She also doesnt assign a lot of homework at all but it kind of hurt me cuz i did bad on my tests and there are no other assignments to improve my grade. I think she is cool though</div></div></div><div id="container" class="review"><div id="left">Date: 03/20/2005<br>Class Name: ABNORMAL<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Knows how to structure things well, and uses movie segments to show a disorder in action to offset the lecture. Very nice, holds reasonable expectations, and paces the three hours pretty well. A pleasant surprise and solid pick for the abnormal requirement.</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2005<br>Class Name: PSY353<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher, very open to helping students...lectures are interesting and so are the movies!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

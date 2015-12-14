@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Michael Elias</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.7<br>Clarity: 4.7<br>Easiness: 5.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/10/2015<br>Class Name: 394<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Not a fan of this class. You're already learning the things he's trying to teach by having an internship. To add classwork on top of your other classes while also being in an internship is just ridiculous. Internships should equal academic credit wo having to take a class. Other than that, this class is obscenely easy. He will grade you on grammar</div></div></div><div id="container" class="review"><div id="left">Date: 03/04/2013<br>Class Name: CMN394<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great teacher. Really kind, helpful, and easy to understand. Online section of CMN internship is very easy and is all about you and your career growth. You'll breeze through with him as your professor!</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2006<br>Class Name: ISP103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I liked him much more than the student mentor.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Dianne Barnette</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 4.9<br>Easiness: 3.9</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/28/2015<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: Not sure yet</div><div id="right"><div>I took NSG 230 for my science+lab requirement, and had her for lab. She is incredibly sweet, patient, and is willing to repeat anything that a student doesn't understand the first time! Absolutely loved her. I'd take another class with her. </div></div></div><div id="container" class="review"><div id="left">Date: 03/03/2014<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She is amazing! I took this class to cover a lab requirement and I regret not taking it earlier. The class is demanding for everyone that is taking NSG 230, but Barnette makes it fun! She is so sweet and helpful and extremely knowledgeable about the subject.  I always looked forward to going to her Lab. If you can, take her! you wont regret it :)</div></div></div><div id="container" class="review"><div id="left">Date: 06/04/2013<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is wonderful! A great teacher who is interested in the subject and engages the students. She's fun and lighthearted and understands that people might have other classes and jobs. A very easy grader and always hands out assignments with clear instructions on what she expects. She was excellent and I recommend her for your lab portion!</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2013<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Barnett is by far the best professor I've had at DePaul! If you need to fulfill your lab requirement or are simply looking for a fun/interesting class, take her class! You won't regret it. She is extremely nice and helpful. The material is not difficult and you will enjoy class. Rarely will you be bored in her class.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2012<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is the most amazing teacher. She understands that you have a life outside of class but still manages not to be a push over. She honestly is in the top 5 teachers I've had at DePaul. As someone else in these reviews said, I wish I would have had her earlier because I might have changed my major! Take her class!</div></div></div><div id="container" class="review"><div id="left">Date: 03/13/2012<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I wish I had her my freshmen year because I would've changed my major to be in all her classes. She is extremely nice and gives great feedback. This is the first time I never wanted to miss a class. Top professor I have ever had.</div></div></div><div id="container" class="review"><div id="left">Date: 03/06/2012<br>Class Name: NSG230<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Ms. Barnette is one of the easier teachers that teach the lab course for Women's Health. Two quizzes, one paper, and lab assignments (which are handed in in two groups, labs 1-6 due mid quarter and labs 7-11 due end of quarter). You can only miss two classes though but at least she is worth taking as far as easy coursework and grading.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

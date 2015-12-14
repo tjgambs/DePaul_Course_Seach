@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Madalina Rujoi Lau</h1><hr><div><h2>Overall Quality: 2.0<br><br>Helpfulness: 2.25<br>Clarity: 1.75<br>Easiness: 2.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/03/2011<br>Class Name: LSP120<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Very tough professor for a class that is a first-year requirement. Not sympathetic to the different situations and grade levels of her students. There's NO LENIENCY as she wants the assignments with EXACT PRECISION! VERY tough grader as well.</div></div></div><div id="container" class="review"><div id="left">Date: 11/23/2010<br>Class Name: LSP120<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>DO NOT TAKE THIS CLASSSSS. She is ridiculous and hard to understand.  She spent an entire class ripping every single group apart for no reason.  It doesnt matter what you do for your final presentation because she wont like it anyways.  SWITCH TEACHERS</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2010<br>Class Name: CHE111<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I LOVED Dr. Lau.  At first I was a little nervous because she has a thick accent, but once you get used to her she is one of the nicest professors ever.  It was a lab, so it gave us the opportunity to interact and we had some great discussions not even chemistry related! Didn't grade very difficultly on the lab reports, and I got an A!</div></div></div><div id="container" class="review"><div id="left">Date: 03/08/2010<br>Class Name: CHE261L<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She's tough and not very nice!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>

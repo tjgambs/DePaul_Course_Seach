@@ -436,60 +436,10 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> --><h1>Robert Wilcox</h1><hr><div><h2>Overall Quality: 3.5<br><br>Helpfulness: 3.17<br>Clarity: 3.83<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/24/2014<br>Class Name: UIP254<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>I was a little nervous about taking this course after reading the syllabus and requirements. He graded, however, incredibly easily and as long as you do each assignment you will be able to get a good grade. Would recommend as an easy summer class to get credit for your internship.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2013<br>Class Name: ECO106<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>Now to start off, professor Wilcox is a very professional and nice guy; however, I took him for a summer intro to micro class and it was a nightmare. He assigns papers that are graded off a few key words that he mentions vaguely in class, and his finals come from a work bank. Lectures are solely powerpoint. I got an A but had to work my but off.</div></div></div><div id="container" class="review"><div id="left">Date: 07/23/2013<br>Class Name: UIP254202091<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He graded a summer internship class like he was teaching rocket science at Harvard. He needs a reality check.</div></div></div><div id="container" class="review"><div id="left">Date: 06/06/2011<br>Class Name: ECO106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hes a nice guy, easy credit work, does curve, non cumulative, but dear lord his tests arent easy. They contain stuff that wasnt taught in class, laced with trick questions, tricky wording. Studying can help, but you really have to master the material, like inside out. Just pray that the kids in your class arent smart, the curve will help.</div></div></div><div id="container" class="review"><div id="left">Date: 10/07/2010<br>Class Name: ECON106<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>He's a good lecturer and fair teacher.  His exams are straight forward and he shares practical, real life examples with students.  It's not difficult to get an A.</div></div></div><div id="container" class="review"><div id="left">Date: 07/15/2009<br>Class Name: ECO106<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>took him for a summer night class. lectures straight from powerpoints that are on BB. Assignments were easy. Midterm and Final were multiple choice. Final is non-comprehensive so you can forget everything from the first half of the class the day after the midterm.. if that's your style.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
-					$('#help').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#help-container') || clicked.parents().is('#help-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("help");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$('#overlay').mousedown(function(e) 
-					{
-						var clicked = $(e.target);
-						if (clicked.is('#advanced-container') || clicked.parents().is('#advanced-container')) 
-						{
-							return;
-				    	} 
-				    	else 
-				    	{ 
-				    		el = document.getElementById("overlay");
-							el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
-				    	}
-					});
-
-					$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
-					{
-						$("select").select2({
-					    	matcher: oldMatcher(matchStart)
-					    })
-					});
-
-					$(".credit-input").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        creditSearch();
-					    }
-					});
-
-					$(".number").keyup(function (e) 
-					{
-					    if (e.keyCode == 13) 
-					    {
-					        submitForm();
-					    }
-					});
-
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
 					});
 				</script></html>
