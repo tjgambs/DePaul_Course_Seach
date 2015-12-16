@@ -176,49 +176,50 @@ function updateRanking()
 		    		}
 		    	}
 	    	}
-	    }
+	    },
 	    error: function()
 	    {
-	    	$.ajax({
-			url:'http://mocksched.com/schools/depaul-university/backupRankings.html',
-			type:'GET',
-			async: false,
-			success: function(response)
-		    {
-		    	var begin = response.indexOf('"docs":') + 7;
-		    	var end = response.length - 151;
-		    	var data = jQuery.parseJSON(response.substr(begin,end));
-		    	for (i of data)
-		    	{
-			    	var overall = i.averageratingscore_rf;
-			    	var first_name = i.teacherfirstname_t.replace('\u00ED','i');
-			    	var last_name = i.teacherlastname_t.replace('\u00ED','i');
-			    	var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-overall');
-			    	var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-firstn');
-			    	var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-lastn');
-			    	var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add');
-			    	if(list_overall.length != 0)
+		    $.ajax({
+				url:'http://mocksched.com/schools/depaul-university/backupRankings.html',
+				type:'GET',
+				async: false,
+				success: function(response)
+			    {
+			    	var begin = response.indexOf('"docs":') + 7;
+			    	var end = response.length - 151;
+			    	var data = jQuery.parseJSON(response.substr(begin,end));
+			    	for (i of data)
 			    	{
-			    		for(var j = 0; j<list_overall.length; j++)
-			    		{
-			    			if(overall)
-			    			{
-			    				if (overall.length != 0 && overall != '0' && overall != '0.0')
-			    				{
-			    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
-			    					{
-					    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
-					    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
-					    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
-					    				list_cookie[j].id = overall+',' + list_cookie[j].id;
+				    	var overall = i.averageratingscore_rf;
+				    	var first_name = i.teacherfirstname_t.replace('\u00ED','i');
+				    	var last_name = i.teacherlastname_t.replace('\u00ED','i');
+				    	var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-overall');
+				    	var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-firstn');
+				    	var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-lastn');
+				    	var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add');
+				    	if(list_overall.length != 0)
+				    	{
+				    		for(var j = 0; j<list_overall.length; j++)
+				    		{
+				    			if(overall)
+				    			{
+				    				if (overall.length != 0 && overall != '0' && overall != '0.0')
+				    				{
+				    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
+				    					{
+						    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
+						    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
+						    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
+						    				list_cookie[j].id = overall+',' + list_cookie[j].id;
+					    				}
 				    				}
-			    				}
-			    			}
-			    		}
+				    			}
+				    		}
+				    	}
 			    	}
-		    	}
-	   		}
-	    }
+			    }
+	    	});
+		}
 	});
 }
 
