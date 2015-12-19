@@ -61,6 +61,7 @@ def delete_courses_teachers():
 def update():
 	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
 	local('git checkout gh-pages')
+	local('python take_rmp_rankings.py &')
 	local('python take_class_data.py')
 	delete_courses_teachers()
 	local('python make_course_pages.py &')
