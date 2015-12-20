@@ -479,106 +479,103 @@ function formatCookies(value)
 			var courseNumbers = [];
 			for(i of classes[index].slice(2))
 			{
-				if(i[4] && i[5])
+				var classValue = i[4].toLowerCase() + '-' + i[5].toLowerCase() + '-add';
+				var href = 'teachers/' + i[4].toLowerCase() + '-' + i[5].toLowerCase() + '';
+				var course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '';
+				if(index != 0)
 				{
-					var classValue = i[4].toLowerCase() + '-' + i[5].toLowerCase() + '-add';
-					var href = 'teachers/' + i[4].toLowerCase() + '-' + i[5].toLowerCase() + '';
-					var course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '';
-					if(index != 0)
+					html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromSave(';
+					html += "'"+i[9]+"','" + index + "'";
+					html +=')"></td>';
+				}
+				else
+				{
+					html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromCart(this)"></td>';
+				}
+
+				if (i[0] == '0.0') 
+				{
+					if(document.getElementById(i[9]+'-checkbox-'+index))
+		    		{
+		    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    			}
+		    		}
+		    		else
+		    		{
+		    			if(unchecked.indexOf(i[9]) == -1)
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    			}
+		    		}
+					html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
+					html += '<td class="overall">' + i[0] + '</td>';
+					if(i[2] == 'Closed')
 					{
-						html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromSave(';
-						html += "'"+i[9]+"','" + index + "'";
-						html +=')"></td>';
+						html += '<td style="color:red;" class="status">' + i[2] + '</td>';
 					}
 					else
 					{
-						html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromCart(this)"></td>';
+						html += '<td style="color:green;" class="status">' + i[2] + '</td>';
 					}
-
-					if (i[0] == '0.0') 
-					{
-						if(document.getElementById(i[9]+'-checkbox-'+index))
-			    		{
-			    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
-			    			{
-			    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
-			    			}
-			    			else
-			    			{
-			    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
-			    			}
-			    		}
-			    		else
-			    		{
-			    			if(unchecked.indexOf(i[9]) == -1)
-			    			{
-			    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
-			    			}
-			    			else
-			    			{
-			    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
-			    			}
-			    		}
-						html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
-						html += '<td class="overall">' + i[0] + '</td>';
-						if(i[2] == 'Closed')
-						{
-							html += '<td style="color:red;" class="status">' + i[2] + '</td>';
-						}
-						else
-						{
-							html += '<td style="color:green;" class="status">' + i[2] + '</td>';
-						}
-				    	html += '<td class="hours">' + i[3] + '</td>';
-				    	html += '<td class="fname">' + i[4] + '</td>';
-				    	html += '<td class="lname">' + i[5] + '</td>';
-					}
-			    	else 
-			    	{
-			    		if(document.getElementById(i[9]+'-checkbox-'+index))
-			    		{
-			    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
-			    			{
-			    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
-			    			}
-			    			else
-			    			{
-			    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
-			    			}
-			    		}
-			    		else
-			    		{
-			    			if(unchecked.indexOf(i[9]) == -1)
-			    			{
-			    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
-			    			}
-			    			else
-			    			{
-			    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
-			    			}
-			    		}
-			    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
-			    		html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>';
-			    		if(i[2] == 'Closed')
-						{
-							html += '<td style="color:red;" class="status">' + i[2] + '</td>';
-						}
-						else
-						{
-							html += '<td style="color:green;" class="status">' + i[2] + '</td>';
-						}
-				    	html += '<td class="hours">' + i[3] + '</td>';
-				    	html += '<td><a class="fname" style="text-decoration:none;" href="' + href + '">' + i[4] + '</td>';
-				    	html += '<td><a class="lname" style="text-decoration:none;" href="' + href + '">' + i[5] + '</td>';	
-			    	}
-			    	html += '<td class="start">' + i[6] + '</td>';
-			    	html += '<td class="end">' + i[7] + '</td>';
-			    	html += '<td class="section">' + i[8] + '</td>';
-			    	html += '<td class="number">' + i[9] + '</td>';
-			    	html += '<td class="location">' + i[10] + '</td>';
-			    	html += '<td class="days">' + i[11] + '</td>';
-					html += '</tr>'
+			    	html += '<td class="hours">' + i[3] + '</td>';
+			    	html += '<td class="fname">' + i[4] + '</td>';
+			    	html += '<td class="lname">' + i[5] + '</td>';
 				}
+		    	else 
+		    	{
+		    		if(document.getElementById(i[9]+'-checkbox-'+index))
+		    		{
+		    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    			}
+		    		}
+		    		else
+		    		{
+		    			if(unchecked.indexOf(i[9]) == -1)
+		    			{
+		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    			}
+		    			else
+		    			{
+		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    			}
+		    		}
+		    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
+		    		html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>';
+		    		if(i[2] == 'Closed')
+					{
+						html += '<td style="color:red;" class="status">' + i[2] + '</td>';
+					}
+					else
+					{
+						html += '<td style="color:green;" class="status">' + i[2] + '</td>';
+					}
+			    	html += '<td class="hours">' + i[3] + '</td>';
+			    	html += '<td><a class="fname" style="text-decoration:none;" href="' + href + '">' + i[4] + '</td>';
+			    	html += '<td><a class="lname" style="text-decoration:none;" href="' + href + '">' + i[5] + '</td>';	
+		    	}
+		    	html += '<td class="start">' + i[6] + '</td>';
+		    	html += '<td class="end">' + i[7] + '</td>';
+		    	html += '<td class="section">' + i[8] + '</td>';
+		    	html += '<td class="number">' + i[9] + '</td>';
+		    	html += '<td class="location">' + i[10] + '</td>';
+		    	html += '<td class="days">' + i[11] + '</td>';
+				html += '</tr>'
 			}
 			html += '<tbody></table>';
 			html += '<div align="left" style="padding-top: 10px;">';
