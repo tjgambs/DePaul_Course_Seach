@@ -571,14 +571,14 @@ function formatCookies(value)
 				    	html += '<td><a class="fname" style="text-decoration:none;" href="' + href + '">' + i[4] + '</td>';
 				    	html += '<td><a class="lname" style="text-decoration:none;" href="' + href + '">' + i[5] + '</td>';	
 			    	}
-			    }
-		    	html += '<td class="start">' + i[6] + '</td>';
-		    	html += '<td class="end">' + i[7] + '</td>';
-		    	html += '<td class="section">' + i[8] + '</td>';
-		    	html += '<td class="number">' + i[9] + '</td>';
-		    	html += '<td class="location">' + i[10] + '</td>';
-		    	html += '<td class="days">' + i[11] + '</td>';
-				html += '</tr>'
+			    	html += '<td class="start">' + i[6] + '</td>';
+			    	html += '<td class="end">' + i[7] + '</td>';
+			    	html += '<td class="section">' + i[8] + '</td>';
+			    	html += '<td class="number">' + i[9] + '</td>';
+			    	html += '<td class="location">' + i[10] + '</td>';
+			    	html += '<td class="days">' + i[11] + '</td>';
+					html += '</tr>'
+				}
 			}
 			html += '<tbody></table>';
 			html += '<div align="left" style="padding-top: 10px;">';
