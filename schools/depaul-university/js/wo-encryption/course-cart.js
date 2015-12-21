@@ -137,6 +137,7 @@ function updateTerm()
 	var term = document.getElementsByClassName('term')[0].value;
 	writeCookie('depaul-university-term',term,1);
 	formatCookies();
+	updateCourseCartCount();
 }
 
 function readPreviousTerm()
@@ -204,7 +205,7 @@ function fixCookieStatus(course,status)
 	var saveCookies = [];
 	for(i of cookies)
 	{
-		if(i.indexOf('saved-') != -1)
+		if(i.indexOf(term + '-saved-') != -1)
 		{
 			saveCookies.push(i);
 		}
@@ -240,12 +241,12 @@ function fixCookieStatus(course,status)
 function readSaved()
 {
 	var allCookies = document.cookie.split(';');
-	var term = '';
+	var term = document.getElementsByClassName('term')[0].value;
 	var savedCookies = [];
 	for(i of allCookies)
 	{
 		var course = [];
-		if(i.indexOf('saved-') != -1)
+		if(i.indexOf(term + '-saved-') != -1)
 		{
 			var name = i.split('|')[0].split('=')[1];
 			var number = i.split('|')[0].split('=')[0];
@@ -301,8 +302,9 @@ function saveSelected(table)
 	    if (e.keyCode == 13 && document.getElementsByClassName('userinput')[0].value.length > 0) 
 	    {
 	        var title = document.getElementsByClassName('userinput')[0].value;
+	        var term = document.getElementsByClassName('term')[0].value;
 	        var courses = [title].concat(checkedCourses);
-			var name = 'saved-' + String(parseInt(readCookie('numberSaved')));
+			var name = term + '-saved-' + String(parseInt(readCookie('numberSaved')));
 			writeCookie(name,courses.join('|'),365);
 			if(table != 0)
 			{
@@ -337,11 +339,15 @@ function convertDate(date)
 function removeAll()
 {
 	deleteCookie('unchecked0');
+	var term = document.getElementsByClassName('term')[0].value;
 	for(i of document.cookie.split(';'))
 	{
 		if(i.indexOf('-add')!=-1) 
 		{
-			deleteCookie(i.split('=')[0]);
+			if(i.indexOf(term)!=-1) 
+			{
+				deleteCookie(i.split('=')[0]);
+			}
 		}
 	}
 	formatCookies();
@@ -494,21 +500,18 @@ function formatCookies(value)
 	}
 	var classes = ([['Current Cart',''].concat(classes)]).concat(readSaved().slice(1));
 	var ul = '<ul style="display: inline-block; padding: 0px;" class="tab-links">';
-	if(readSaved()[0] == document.getElementsByClassName('term')[0].value)
+	for(var index = 0; index < classes.length; index++)
 	{
-		for(var index = 0; index < classes.length; index++)
+		var tabName = classes[index][0];
+		if (readSaved().length > 1)
 		{
-			var tabName = classes[index][0];
-			if (readSaved().length > 0)
+			if(index == 0)
 			{
-				if(index == 0)
-				{
-					ul += '<li class="active"><a href="#' + index + '">' + tabName + '</a></li>';
-				}
-				else
-				{
-					ul += '<li><a href="#' + index + '">' + tabName + '</a></li>';
-				}
+				ul += '<li class="active"><a href="#' + index + '">' + tabName + '</a></li>';
+			}
+			else
+			{
+				ul += '<li><a href="#' + index + '">' + tabName + '</a></li>';
 			}
 		}
 	}
@@ -728,10 +731,11 @@ function updateCheck(data)
 function removeFromSave(number,table)
 {
 	var allCookies = document.cookie.split(';');
+	var term = document.getElementsByClassName('term')[0].value;
 	var savedCookies = [];
 	for(i of allCookies)
 	{
-		if(i.indexOf('saved-') != -1)
+		if(i.indexOf(term + '-saved-') != -1)
 		{
 			savedCookies.push(i.split('|'));
 		}
@@ -774,13 +778,14 @@ function removeFromSave(number,table)
 function removeFromCart(contents)
 {
 	var index = 9;
+	var term = document.getElementsByClassName('term')[0].value;
 	var value = contents.getAttribute('id');
 	if(value.split(',').length < 12) 
 	{
 		index = 8;
 	}
 	var className = contents.getAttribute('class').split(' ').join('-');
-	deleteCookie(className + '-' + value.split(',')[index]);
+	deleteCookie('depaul-university-('+ term + ')-' + className + '-' + value.split(',')[index]);
 	formatCookies();
 	updateCourseCartCount();
 }

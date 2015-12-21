@@ -284,6 +284,8 @@ function creditSearch()
 
 function updateCourseCartCount()
 {
+	var term = window.location.href.split('/').slice(-3,-2)[0];
+	if(readCookie('depaul-university-term') != term) writeCookie('depaul-university-term',term,1);
 	var cookies = document.cookie;
 	var count = 0;
 	for (i of cookies.split(';'))
@@ -291,7 +293,10 @@ function updateCourseCartCount()
 		var cookie = i.split(',');
 		if (cookie[0].indexOf('-add-') != -1)
 		{
-			count += 1;
+			if(cookie[0].indexOf(term) != -1)
+			{
+				count += 1;
+			}
 		}
 	}
 	document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')';
@@ -325,13 +330,15 @@ function addToCart(contents)
 
 function removeFromCart(contents)
 {
+	var term = window.location.href.split('/').slice(-3,-2)[0];
+	if(readCookie('depaul-university-term') != term) writeCookie('depaul-university-term',term,1);
 	var index = 9;
 	var value = contents.getAttribute('id');
 	if(value.split(',').length < 12) index = 8;
 	var className = contents.getAttribute('class').split(' ').join('-');
 	document.getElementById(value).src = "../../../../../add.png";
 	document.getElementById(value).onclick = function() {addToCart(contents)};
-	delete_cookie(className + '-' + value.split(',')[index]);
+	delete_cookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index]);
 	updateCourseCartCount();
 }
 

@@ -136,13 +136,22 @@ function creditSearch()
 function updateCourseCartCount()
 {
 	var cookies = document.cookie;
+	var term = readCookie('depaul-university-term');
+	if(!term)
+	{
+		writeCookie('depaul-university-term','winter-2016',1);
+		term = readCookie('depaul-university-term');
+	}
 	var count = 0;
 	for (i of cookies.split(';'))
 	{
 		var cookie = i.split(',');
 		if (cookie[0].indexOf('-add-') != -1)
 		{
-			count += 1;
+			if(cookie[0].indexOf(term) != -1)
+			{
+				count += 1;
+			}
 		}
 	}
 	document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')';

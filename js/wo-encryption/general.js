@@ -50,19 +50,20 @@ function updateTermSearch(flag)
 	code.src = '../../js/tipuesearch.min.js';
 	$("head").append(content);
 	$("head").append(code);
+	updateCourseCartCount();
 }
 
 function updateTermIndex()
 {
 	var term = document.getElementsByClassName('term')[0].value;
 	writeCookie('depaul-university-term',term,1);
+	updateCourseCartCount();
 }
 
 function run()
 {
 	readSelections();
 	readCreditSelections();
-	$('#tipue_search_input').tipuesearch();
 	$('#help').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
@@ -159,13 +160,17 @@ function creditSearch()
 function updateCourseCartCount()
 {
 	var cookies = document.cookie;
+	var term = document.getElementsByClassName('term')[0].value;
 	var count = 0;
 	for (i of cookies.split(';'))
 	{
 		var cookie = i.split(',');
 		if (cookie[0].indexOf('-add-') != -1)
 		{
-			count += 1;
+			if(cookie[0].indexOf(term) != -1)
+			{
+				count += 1;
+			}
 		}
 	}
 	document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')';
