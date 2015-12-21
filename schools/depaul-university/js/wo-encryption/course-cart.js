@@ -1,32 +1,3 @@
-function saveSelections()
-{
-	var prefix = document.getElementsByClassName('prefix')[0].value;
-	var number = document.getElementsByClassName('number')[0].value;
-	writeCookie('depaul-university-standard-prefix',prefix);
-	writeCookie('depaul-university-standard-number',number);
-}
-
-function saveCreditPrefix()
-{
-	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
-	writeCookie('depaul-university-standard-prefix',prefix);
-	writeCookie('depaul-university-standard-number','');
-}
-
-function readCreditSelections()
-{
-	var prefix = readCookie('depaul-university-standard-prefix');
-	document.getElementsByClassName('credit-prefix')[0].value = prefix;
-}
-
-function readSelections()
-{
-	var prefix = readCookie('depaul-university-standard-prefix');
-	var number = readCookie('depaul-university-standard-number');
-	document.getElementsByClassName('prefix')[0].value = prefix;
-	document.getElementsByClassName('number')[0].value = number;
-}
-
 function run()
 {
 	readSelections();
@@ -92,19 +63,44 @@ function run()
 		{
 			return;
     	} 
-    	else 
+    	else
     	{ 
     		var el = document.getElementById("help");
 			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
     	}
 	});
-	if ("onhashchange" in window) 
-	{
-    	saveSelections();
-	}
 }
 
-function updateStatus()
+function saveSelections()
+{
+	var prefix = document.getElementsByClassName('prefix')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number',number);
+}
+
+function saveCreditPrefix()
+{
+	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number','');
+}
+
+function readCreditSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	document.getElementsByClassName('credit-prefix')[0].value = prefix;
+}
+
+function readSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	var number = readCookie('depaul-university-standard-number');
+	document.getElementsByClassName('prefix')[0].value = prefix;
+	document.getElementsByClassName('number')[0].value = number;
+}
+
+function updateStatus(term_number)
 {
 	var courses = document.getElementsByClassName('course');
 	var urls = [];
@@ -112,7 +108,7 @@ function updateStatus()
 	{
 		var prefix = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[0];
 		var number = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[1];
-		var url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=' + prefix + '&catalog_nbr=' + number;
+		var url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=' + term_number + '&subject=' + prefix + '&catalog_nbr=' + number;
 		if(urls.indexOf(url) == -1)
 		{
 			urls.push(url);
@@ -129,27 +125,6 @@ function updateStatus()
 		    	formatStatus(response);
 		    }
 		});
-	}
-}
-
-function updateTerm()
-{
-	var term = document.getElementsByClassName('term')[0].value;
-	writeCookie('depaul-university-term',term,1);
-	formatCookies();
-	updateCourseCartCount();
-}
-
-function readPreviousTerm()
-{
-	var term = document.getElementsByClassName('term')[0].value;
-	if(readCookie('depaul-university-term'))
-	{
-		document.getElementsByClassName('term')[0].value = readCookie('depaul-university-term');
-	}
-	else
-	{
-		writeCookie('depaul-university-term',term,1);
 	}
 }
 
@@ -200,7 +175,7 @@ function fixCookieStatus(course,status)
 	var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
 	var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
 	var number = course.getElementsByClassName('number')[0].innerHTML;
-	var cookieName = ['depaul-university','('+term+')',firstName,lastName,'add',number].join('-').split(' ').join('-');
+	var cookieName = ['depaul-university','(' + term + ')',firstName,lastName,'add',number].join('-').split(' ').join('-');
 	var oldCookie = readCookie(cookieName);
 	var saveCookies = [];
 	for(i of cookies)
@@ -236,6 +211,27 @@ function fixCookieStatus(course,status)
 	}
 	writeCookie(cookieName,newCookie,365);
 	formatCookies();
+}
+
+function updateTerm()
+{
+	var term = document.getElementsByClassName('term')[0].value;
+	writeCookie('depaul-university-term',term,1);
+	formatCookies();
+	updateCourseCartCount();
+}
+
+function readPreviousTerm()
+{
+	var term = document.getElementsByClassName('term')[0].value;
+	if(readCookie('depaul-university-term'))
+	{
+		document.getElementsByClassName('term')[0].value = readCookie('depaul-university-term');
+	}
+	else
+	{
+		writeCookie('depaul-university-term',term,1);
+	}
 }
 
 function readSaved()
@@ -342,9 +338,9 @@ function removeAll()
 	var term = document.getElementsByClassName('term')[0].value;
 	for(i of document.cookie.split(';'))
 	{
-		if(i.indexOf('-add')!=-1) 
+		if(i.indexOf('-add') != -1) 
 		{
-			if(i.indexOf(term)!=-1) 
+			if(i.indexOf(term) != -1) 
 			{
 				deleteCookie(i.split('=')[0]);
 			}
@@ -359,27 +355,27 @@ function excludeOrInclude()
 	var howMany = document.getElementsByClassName('tab-links')[0].getElementsByTagName('li').length;
 	for(var i = 0; i < howMany; i++)
 	{
-		if(document.getElementById('myTable'+i))
+		if(document.getElementById('myTable' + i))
 		{
-			var tags = document.getElementById('myTable'+i).getElementsByClassName('checked');
+			var tags = document.getElementById('myTable' + i).getElementsByClassName('checked');
 			if(tags.length == 0)
 			{
-				if(document.getElementById('excludeAll'+i))
+				if(document.getElementById('excludeAll' + i))
 				{
-					document.getElementById('excludeAll'+i).innerHTML = 'Include All';
-					var button = document.getElementById('excludeAll'+i);
-					button.setAttribute('onclick','includeAll('+i+')');
-					document.getElementById('excludeAll'+i).id = 'includeAll'+i;
+					document.getElementById('excludeAll' + i).innerHTML = 'Include All';
+					var button = document.getElementById('excludeAll' + i);
+					button.setAttribute('onclick','includeAll(' + i + ')');
+					document.getElementById('excludeAll' + i).id = 'includeAll'+i;
 				}
 			}
 			else
 			{
-				if(document.getElementById('includeAll'+i))
+				if(document.getElementById('includeAll' + i))
 				{
-					document.getElementById('includeAll'+i).innerHTML = 'Exclude All';
-					var button = document.getElementById('includeAll'+i);
-					button.setAttribute('onclick','excludeAll('+i+')');
-					document.getElementById('includeAll'+i).id = 'excludeAll'+i;
+					document.getElementById('includeAll' + i).innerHTML = 'Exclude All';
+					var button = document.getElementById('includeAll' + i);
+					button.setAttribute('onclick','excludeAll(' + i + ')');
+					document.getElementById('includeAll' + i).id = 'excludeAll'+i;
 				}
 			}
 		}
@@ -388,7 +384,7 @@ function excludeOrInclude()
 
 function excludeAll(table)
 {
-	var tags = document.getElementById('myTable'+table).getElementsByClassName('checked');
+	var tags = document.getElementById('myTable' + table).getElementsByClassName('checked');
 	var flag = true;
 	var index = 0;
 	while(flag)
@@ -402,18 +398,18 @@ function excludeAll(table)
 		tags[index].className = 'unchecked';
 	}
 	saveUnchecked();
-	if(document.getElementById('excludeAll'+table))
+	if(document.getElementById('excludeAll' + table))
 	{
-		document.getElementById('excludeAll'+table).innerHTML = 'Include All';
-		var button = document.getElementById('excludeAll'+table);
-		button.setAttribute('onclick','includeAll("'+table+'")');
-		document.getElementById('excludeAll'+table).id = 'includeAll'+table;
+		document.getElementById('excludeAll' + table).innerHTML = 'Include All';
+		var button = document.getElementById('excludeAll' + table);
+		button.setAttribute('onclick','includeAll("' + table + '")');
+		document.getElementById('excludeAll'+table).id = 'includeAll' + table;
 	}
 }
 
 function includeAll(table)
 {
-	var tags = document.getElementById('myTable'+table).getElementsByClassName('unchecked');
+	var tags = document.getElementById('myTable' + table).getElementsByClassName('unchecked');
 	var flag = true;
 	var index = 0;
 	while(flag)
@@ -427,12 +423,12 @@ function includeAll(table)
 		tags[index].className = 'checked';
 	}
 	saveUnchecked();
-	if(document.getElementById('includeAll'+table))
+	if(document.getElementById('includeAll' + table))
 	{
-		document.getElementById('includeAll'+table).innerHTML = 'Exclude All';
-		var button = document.getElementById('includeAll'+table);
-		button.setAttribute('onclick','excludeAll("'+table+'")');
-		document.getElementById('includeAll'+table).id = 'excludeAll'+table;
+		document.getElementById('includeAll' + table).innerHTML = 'Exclude All';
+		var button = document.getElementById('includeAll' + table);
+		button.setAttribute('onclick','excludeAll("' + table + '")');
+		document.getElementById('includeAll' + table).id = 'excludeAll' + table;
 	}
 }
 
@@ -486,11 +482,23 @@ function formatCookies(value)
 	var classes = [];
 	var allHtml = '<div class="tabs" style="padding:0px;">';
 	var term = document.getElementsByClassName('term')[0].value;
+	switch(term)
+	{
+		case 'winter-2016':
+			updateStatus('0965');
+			break;
+		case 'spring-2016':
+			updateStatus('0970');
+			break;
+		case 'summer-2016':
+			updateStatus('0975');
+			break;
+	}
 	for(i of document.cookie.split(';'))
 	{
 		if(i.indexOf('-add') != -1 && i.indexOf(term) != -1) 
 		{
-			temp = i.substring(i.indexOf('=')+1).split(',');
+			temp = i.substring(i.indexOf('=') + 1).split(',');
 			if(temp.length == 11) 
 			{
 				temp = (['0.0'].concat(temp));
@@ -528,7 +536,7 @@ function formatCookies(value)
 			{
 				html = '<div id="' + index + '" class="tab active">';
 				html += '<div align="left" style="padding-bottom: 10px;"><button class="generate" id="removeAll' + index + '" style="display: inline;" onclick="removeAll()">Remove All</button>&nbsp;&nbsp;<button class="generate" id="excludeAll' + index + '" style="display: inline;" align="left" onclick="excludeAll(';
-				html += "'"+index+"'";
+				html += "'" + index + "'";
 				html += ')">Exclude All</button></div>';
 			}
 			else
@@ -539,7 +547,7 @@ function formatCookies(value)
 				html += "'" + index + "'";
 				html += ')">Delete</button>&nbsp;&nbsp;';
 				html += '<button class="generate" id="excludeAll' + index + '" style="display: inline;" align="left" onclick="excludeAll(';
-				html += "'"+index+"'";
+				html += "'" + index + "'";
 				html += ')">Exclude All</button></div>';
 			}
 			html += '<table id="myTable' + index + '" class="tablesorter">';
@@ -553,8 +561,8 @@ function formatCookies(value)
 				if(index != 0)
 				{
 					html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromSave(';
-					html += "'"+i[9]+"','" + index + "'";
-					html +=')"></td>';
+					html += "'" + i[9] + "','" + index + "'";
+					html += ')"></td>';
 				}
 				else
 				{
@@ -563,26 +571,26 @@ function formatCookies(value)
 
 				if (i[0] == '0.0') 
 				{
-					if(document.getElementById(i[9]+'-checkbox-'+index))
+					if(document.getElementById(i[9] + '-checkbox-' + index))
 		    		{
-		    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
+		    			if(document.getElementById(i[9] + '-checkbox-' + index).className == "checked")
 		    			{
-		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    				html += '<td><input type="checkbox" class="checked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)" checked></td>';
 		    			}
 		    			else
 		    			{
-		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    				html += '<td><input type="checkbox" class="unchecked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)"></td>';
 		    			}
 		    		}
 		    		else
 		    		{
 		    			if(unchecked.indexOf(i[9]) == -1)
 		    			{
-		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    				html += '<td><input type="checkbox" class="checked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)" checked></td>';
 		    			}
 		    			else
 		    			{
-		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    				html += '<td><input type="checkbox" class="unchecked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)"></td>';
 		    			}
 		    		}
 					html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
@@ -601,26 +609,26 @@ function formatCookies(value)
 				}
 		    	else 
 		    	{
-		    		if(document.getElementById(i[9]+'-checkbox-'+index))
+		    		if(document.getElementById(i[9] + '-checkbox-' + index))
 		    		{
-		    			if(document.getElementById(i[9]+'-checkbox-'+index).className == "checked")
+		    			if(document.getElementById(i[9] + '-checkbox-' + index).className == "checked")
 		    			{
-		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    				html += '<td><input type="checkbox" class="checked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)" checked></td>';
 		    			}
 		    			else
 		    			{
-		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    				html += '<td><input type="checkbox" class="unchecked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)"></td>';
 		    			}
 		    		}
 		    		else
 		    		{
 		    			if(unchecked.indexOf(i[9]) == -1)
 		    			{
-		    				html += '<td><input type="checkbox" class="checked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)" checked></td>';
+		    				html += '<td><input type="checkbox" class="checked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)" checked></td>';
 		    			}
 		    			else
 		    			{
-		    				html += '<td><input type="checkbox" class="unchecked" id="'+i[9]+'-checkbox-'+index+'" onclick="updateCheck(this)"></td>';
+		    				html += '<td><input type="checkbox" class="unchecked" id="' + i[9] + '-checkbox-' + index + '" onclick="updateCheck(this)"></td>';
 		    			}
 		    		}
 		    		html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
@@ -692,9 +700,9 @@ function saveUnchecked()
 	if(howMany == 0) howMany = 1;
 	for(var j = 0; j < howMany; j++)
 	{
-		if(document.getElementById('myTable'+j))
+		if(document.getElementById('myTable' + j))
 		{
-			var all_courses = document.getElementById('myTable'+j).getElementsByClassName("course");
+			var all_courses = document.getElementById('myTable' + j).getElementsByClassName("course");
 			var courses = [];
 			for(var i = 0; i < all_courses.length; i++)
 			{
@@ -708,7 +716,7 @@ function saveUnchecked()
 			{
 				save.push(courses[i].getElementsByClassName('number')[0].innerHTML);
 			}
-			writeCookie('unchecked'+j,save,1);
+			writeCookie('unchecked' + j,save,1);
 		}
 	}
 	excludeOrInclude();
@@ -832,8 +840,8 @@ function deleteCookie(name)
 
 function createCalendar(events,number)
 {
-	$('#calendar'+number).fullCalendar('destroy');
-	$('#calendar'+number).fullCalendar({
+	$('#calendar' + number).fullCalendar('destroy');
+	$('#calendar' + number).fullCalendar({
 		header: {
 			left: 'prev,next today',
 			center: 'title',
@@ -855,9 +863,9 @@ function createCalendar(events,number)
 					end: end,
 					dow: dow
 				};
-				$('#calendar'+number).fullCalendar('renderEvent', eventData, true);
+				$('#calendar' + number).fullCalendar('renderEvent', eventData, true);
 			}
-			$('#calendar'+number).fullCalendar('unselect');
+			$('#calendar' + number).fullCalendar('unselect');
 		},
 		editable: false,
 		eventLimit: true,
@@ -868,7 +876,7 @@ function createCalendar(events,number)
 		},
 	});
 	$('html, body').animate({
-		scrollTop: $("#calendar"+number).offset().top
+		scrollTop: $("#calendar" + number).offset().top
 	}, 1000);
 }
 
@@ -893,12 +901,12 @@ function createCalendarData(table)
 		var courseLocation = courses[i].getElementsByClassName('location')[0].innerHTML;
 		var days = convertDays(courses[i].getElementsByClassName('days')[0].innerHTML);
 		var course = courses[i].getElementsByClassName('name')[0].innerHTML;
-		var description = "Teacher: " + firstname + ' ' + lastname +"<br>" + "Location: " + courseLocation;
+		var description = 'Teacher: ' + firstname + ' ' + lastname + '<br>' + 'Location: ' + courseLocation;
 		events.push({'title':course,'description':description,'start':start,'end':end,'dow':days});
 	}
-	var number = table.substring(table.length-1);
+	var number = table.substring(table.length - 1);
 	createCalendar(events,number);
-	document.getElementById('calendar'+number).style.visibility = 'visible';
+	document.getElementById('calendar' + number).style.visibility = 'visible';
 }
 
 function convertDays(days)
