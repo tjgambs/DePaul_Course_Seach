@@ -1,1 +1,2 @@
-var tipuesearch = {"pages": []};
+var tipuesearch = {"pages": [
+]};

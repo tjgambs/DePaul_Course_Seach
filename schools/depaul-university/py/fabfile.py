@@ -4,15 +4,15 @@ import take_book_data as Book
 import time
 from time import gmtime, strftime
 
-__TERMNAME__ = 'spring-2016'
+__TERMNAME__ = 'winter-2016'
 # winter-2016
 # spring-2016
 # summer-2016
-__TERMNUMBER__ = '0970'
+__TERMNUMBER__ = '0965'
 # 0965 - Winter 2016
 # 0970 - Spring 2016
 # 0975 - Summer 2016
-__TERM__ = 4
+__TERM__ = 3
 # 3 - Winter 2016
 # 4 - Spring 2016
 # 5 - Summer 2016
@@ -68,11 +68,11 @@ def update():
 	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
 	local('git checkout gh-pages')
 	local('python take_rmp_rankings.py &')
-	local('python take_class_data.py "{0}" "{1}"'.format(__TERMNAME__,__TERMNUMBER__))
-	local('python make_course_pages.py "{0}" &'.format(__TERMNAME__))
+	local('python take_class_data.py {0} {1}'.format(__TERMNAME__,__TERMNUMBER__))
+	local('python make_course_pages.py {0} &'.format(__TERMNAME__))
 	local('python make_teacher_pages.py &')
 	get_all_books()
-	local('python make_amazon_links.py "{0}"'.format(__TERMNAME__))
+	local('python make_amazon_links.py {0}'.format(__TERMNAME__))
 	update_website()
 	local('rm *.pyc')
 	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
