@@ -13,8 +13,6 @@
 		<script src="../../js/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.js"></script>
 		<script src="../../js/tipuesearch_set.js"></script>
-        <script src="tipuesearch/tipuesearch_content.js"></script>
-        <script src="../../js/tipuesearch.min.js"></script>
         <script src="../../js/general.min.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,12 +34,18 @@
 	<div align="center">
 		<h1><a href="search" style="text-decoration:none; color:#333">MockSched</a></h1>
 		<h3>DePaul University</h3>
-		<h3>Winter 2016</h3>
+		<div id="term-div" style="width:15%; padding-top:10px; visibility: hidden;">
+			<select class="term" style="width:100%;" onchange="updateTermSearch(true)">
+				<option value="winter-2016">Winter 2016</option>
+				<option value="spring-2016">Spring 2016</option>
+				<option value="summer-2016">Summer 2016</option>
+			</select>
+		</div>
 	</div>
 	<div id="search-box" style="text-align: center; visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
 			<div style="padding: 3%; text-align:left;">COURSE PREFIX</div>
-			<select class="prefix">
+			<select class="prefix" onchange="saveSelections()">
 				<option value="ACC">ACC - Accountancy</option>
 				<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 				<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -451,10 +455,24 @@
 <script>
 	$(document).ready(function() 
 	{
+		if(readCookie('depaul-university-term'))
+		{
+			var term = readCookie('depaul-university-term');
+			document.getElementsByClassName('term')[0].value = term;
+			updateTermSearch(false);
+		}
+		else
+		{
+			updateTermSearch(true);
+		}
+    	setTimeout(function()
+    	{ 
+    		document.getElementById('search-box').style.visibility = 'visible'; 
+    		document.getElementById('term-div').style.visibility = 'visible';
+    	}, 200);
     	$(".prefix").select2();
-    	$('#tipue_search_input').tipuesearch();
-    	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
     	updateCourseCartCount();
+    	readSelections()
     	run();
 	});
 </script>

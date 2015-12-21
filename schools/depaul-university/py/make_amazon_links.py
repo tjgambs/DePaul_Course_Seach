@@ -5,15 +5,14 @@ import isbnlib
 import glob
 import time
 
-driver = webdriver.Firefox()
+__TERMNAME__ = 'winter-2016'
 
 def format_data():
-	file_names = glob.glob("../course_books/*.json")
+	file_names = glob.glob('../terms/' + __TERMNAME__ + '/course_books/*.json')
 	dic = {}
 	good_urls = json.loads(open('../good_urls.json', 'r').read())
 	bad_urls = json.loads(open('../bad_urls.json', 'r').read())
 	for f in file_names:
-		#print f	
 		with open(f) as input:
 			data = json.loads(input.read())
 			for d in data:
@@ -37,7 +36,7 @@ def format_data():
 					else:
 						ret.append([d['status'][i],'',name])
 				dic[d['title']] = ret
-	with open('../books.json','w') as output:
+	with open('../terms/' + __TERMNAME__ + '/books.json','w') as output:
 		json.dump(dic,output)
 	with open('../good_urls.json','w') as good:
 		json.dump(good_urls,good)
@@ -52,5 +51,7 @@ def check_url(url):
 		check_url(url)
 
 if __name__ == '__main__':
+	global driver
+	driver = webdriver.Firefox()
 	format_data()
 	driver.close()

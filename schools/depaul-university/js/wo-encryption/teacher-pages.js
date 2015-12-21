@@ -1,5 +1,36 @@
+function saveSelections()
+{
+	var prefix = document.getElementsByClassName('prefix')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number',number);
+}
+
+function saveCreditPrefix()
+{
+	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number','');
+}
+
+function readCreditSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	document.getElementsByClassName('credit-prefix')[0].value = prefix;
+}
+
+function readSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	var number = readCookie('depaul-university-standard-number');
+	document.getElementsByClassName('prefix')[0].value = prefix;
+	document.getElementsByClassName('number')[0].value = number;
+}
+
 function run()
 {
+	readSelections();
+	readCreditSelections();
 	$('#help').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
@@ -50,15 +81,56 @@ function run()
 	        submitForm();
 	    }
 	});
+	
+	if ("onhashchange" in window) 
+	{
+    	saveSelections();
+	}
+}
+
+function writeCookie(name,value,days) 
+{
+    var date, expires;
+    if (days) 
+    {
+        date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else
+    {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) 
+{
+	var i, c, ca, nameEQ = name + "=";
+	ca = document.cookie.split(';');
+	for(i=0;i < ca.length;i++) 
+	{
+   		c = ca[i];
+    	while (c.charAt(0)==' ') 
+    	{
+        	c = c.substring(1,c.length);
+    	}
+        if (c.indexOf(nameEQ) == 0) 
+        {
+            return c.substring(nameEQ.length,c.length);
+        }
+	}
+	return '';
 }
 
 function creditSearch()
 {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
 	var credit = document.getElementsByClassName('credit-input')[0].value;
-	var search = prefix.toLowerCase()+'-credits='+credit;
-	document.getElementById('tipue_search_input').value = '"'+search+'"';
+	var search = prefix.toLowerCase() + '-credits=' + credit;
+	document.getElementById('tipue_search_input').value = '"' + search + '"';
 	document.getElementById('field').submit();
+	saveCreditPrefix();
 }
 
 function updateCourseCartCount()
@@ -98,6 +170,7 @@ function submitForm()
 		document.getElementById('tipue_search_input').value = '" '+search+'"';
 		document.getElementById('field').submit();
 	}
+	saveSelections();
 }
 
 function matchStart (term, text) 

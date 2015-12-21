@@ -1,5 +1,36 @@
+function saveSelections()
+{
+	var prefix = document.getElementsByClassName('prefix')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number',number);
+}
+
+function saveCreditPrefix()
+{
+	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number','');
+}
+
+function readCreditSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	document.getElementsByClassName('credit-prefix')[0].value = prefix;
+}
+
+function readSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	var number = readCookie('depaul-university-standard-number');
+	document.getElementsByClassName('prefix')[0].value = prefix;
+	document.getElementsByClassName('number')[0].value = number;
+}
+
 function run()
 {
+	readSelections();
+	readCreditSelections();
 	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
 	{
 		$("select").select2({
@@ -50,6 +81,11 @@ function run()
 			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
     	}
 	});
+
+	if ("onhashchange" in window) 
+	{
+    	saveSelections();
+	}
 }
 
 function updateTable(url,shortUrl)
@@ -61,6 +97,7 @@ function updateTable(url,shortUrl)
 	    success: function(response)
 	    {
 	    	var data = jQuery.parseJSON(response);
+	    	var term = readCookie('depaul-university-term');
 	    	var html = '<table id="myTable" class="tablesorter"><thead><tr>';
 	    	var headers = ['Add','Overall Rating','Class Status','Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
 	    	for (i of headers)
@@ -99,13 +136,13 @@ function updateTable(url,shortUrl)
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
 		    	
 		    	html += '<tr>';
-		    	if(readCookie((teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add-' + classNumber) == 0)
+		    	if(readCookie('depaul-university-(' + term + ')-' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add-' + classNumber) == 0)
 		    	{
-					html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl,classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days] + '" type="image" src="../../../add.png" width="20" onclick="addToCart(this)"/>';
+					html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl,classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days] + '" type="image" src="../../../../../add.png" width="20" onclick="addToCart(this)"/>';
 		    	}
 		    	else
 		    	{
-		    		html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add"' + 'id="' + ['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days] + '" type="image" src="../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
+		    		html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add"' + 'id="' + ['WRD 103',classStatus,creditHours,teacherFirstName,teacherLastName,classStartTime,classEndTime,classSection,classNumber,campus,days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
 		    	}
 		    	html += '<td class="'+(teacherFirstName+'-'+teacherLastName).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'-overall">0.0</td>';
 		    	if(classStatus == 'Closed')
@@ -168,9 +205,9 @@ function updateRanking()
 			    				{
 			    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
 			    					{
-					    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
-					    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
-					    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
+					    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
+					    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
+					    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
 					    				list_cookie[j].id = overall+',' + list_cookie[j].id;
 				    				}
 			    				}
@@ -221,9 +258,9 @@ function useBackup()
 		    				{
 		    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
 		    					{
-				    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
-				    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
-				    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
+				    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
+				    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
+				    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
 				    				list_cookie[j].id = overall+',' + list_cookie[j].id;
 			    				}
 		    				}
@@ -242,6 +279,7 @@ function creditSearch()
 	var search = prefix.toLowerCase() + '-credits=' + credit;
 	document.getElementById('tipue_search_input').value = '"' + search + '"';
 	document.getElementById('field').submit();
+	saveCreditPrefix();
 }
 
 function updateCourseCartCount()
@@ -274,12 +312,13 @@ function overlay()
 function addToCart(contents)
 {
 	var index = 9;
+	var term = readCookie('depaul-university-term');
 	var value = contents.getAttribute('id');
 	if(value.split(',').length < 12) index = 8;
 	var className = contents.getAttribute('class').split(' ').join('-');
 	var days = 1;
-	writeCookie(className + '-' + value.split(',')[index],value,days);
-	document.getElementById(value).src = "../../../minus.png";
+	writeCookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index],value,days);
+	document.getElementById(value).src = "../../../../../minus.png";
 	document.getElementById(value).onclick = function() {removeFromCart(contents);};
 	updateCourseCartCount();
 }
@@ -290,7 +329,7 @@ function removeFromCart(contents)
 	var value = contents.getAttribute('id');
 	if(value.split(',').length < 12) index = 8;
 	var className = contents.getAttribute('class').split(' ').join('-');
-	document.getElementById(value).src = "../../../add.png";
+	document.getElementById(value).src = "../../../../../add.png";
 	document.getElementById(value).onclick = function() {addToCart(contents)};
 	delete_cookie(className + '-' + value.split(',')[index]);
 	updateCourseCartCount();
@@ -333,7 +372,7 @@ function readCookie(name)
 
 function delete_cookie(name) 
 {
-		document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 function submitForm()
@@ -346,6 +385,7 @@ function submitForm()
 		document.getElementById('tipue_search_input').value = '"' + search + '"';
 		document.getElementById('field').submit();
 	}
+	saveSelections();
 }
 
 function matchStart (term, text) 

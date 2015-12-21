@@ -146,7 +146,7 @@ def create_teacher_webpage(id,name,values):
 						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search" style="text-decoration:none; color:#333;">MockSched</a></h1>
 						<div id="search-box" style="visibility: hidden;">
 						<div style="display: inline-block; padding-right:10px">
-							<select class="prefix" style="width:200px;">
+							<select class="prefix" style="width:200px;" onchange="saveSelections()">
 								<option value="ACC">ACC - Accountancy</option>
 								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>

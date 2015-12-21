@@ -2,6 +2,8 @@
 import json
 import urllib
 
+__TERM__ = 'winter-2016'
+
 def create_page(full_name,description,course_url):
 	ignore = ['a','an','the','and','at','around','by','after','along','for','from','of','on','to','with','without']
 	tempArr = []
@@ -17,16 +19,16 @@ def create_page(full_name,description,course_url):
 	html += ' '.join(full_name.replace(';','').split(' ')[:2]) + ' - ' + ' '.join(tempArr).replace('Ii','II').replace('Iii','III').replace('IIi','III')
 	html +='''</title>
 	<meta charset="UTF-8">
-	<script src="../../../js/jquery.min.js"></script>
-	<script src="../../../js/select2.full.js"></script>
-	<script src="../js/course-pages.min.js"></script>
+	<script src="../../../../../js/jquery.min.js"></script>
+	<script src="../../../../../js/select2.full.js"></script>
+	<script src="../../../js/course-pages.min.js"></script>
 
-    <link href="../../../css/select2.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
-	<script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
+    <link href="../../../../../css/select2.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../../../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
+	<script type="text/javascript" src="../../../../../js/jquery.tablesorter.min.js"></script>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
-	<link rel="shortcut icon" href="../../../icon.png">
-    <link rel="stylesheet" id="tipue3" type="text/css" href="../../../css/tipuesearch.css">
+	<link rel="shortcut icon" href="../../../../../icon.png">
+    <link rel="stylesheet" id="tipue3" type="text/css" href="../../../../../css/tipuesearch.css">
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,16 +42,16 @@ def create_page(full_name,description,course_url):
 <div>
 	<span>
 		<h3>
-			<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+			<a href="../../../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 			<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
 			<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
 		</h3>
 	</span>
 	<span>
-		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search" style="text-decoration:none; color:#333;">MockSched</a></h1>
+		<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../../../search" style="text-decoration:none; color:#333;">MockSched</a></h1>
 		<div id="search-box" style="visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
-			<select class="prefix" style="width:200px;">
+			<select class="prefix" style="width:200px;" onchange="saveSelections()">
 				<option value="ACC">ACC - Accountancy</option>
 				<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 				<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -226,7 +228,7 @@ def create_page(full_name,description,course_url):
 		</div>
 		<div style="display: inline-block;">
 			<div style="style=padding: 5%;">
-				<form onsubmit="submitForm()" action="../search" id="field">
+				<form onsubmit="submitForm()" action="../../../search" id="field">
 					<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
 					<input class="inputbox" type="submit" value="SEARCH">
 				</form>
@@ -239,7 +241,7 @@ def create_page(full_name,description,course_url):
 <hr>
 <div id="overlay">
 	    <div id="advanced-container">
-	        <form action="../search">
+	        <form action="../../../search">
 				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
 			</form>
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
@@ -480,7 +482,7 @@ def create_page(full_name,description,course_url):
 	});
 	</script>
 </html>'''
-	webpage_name = ('classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'.html')
+	webpage_name = ('terms/' + __TERM__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'.html')
 	with open('../'+webpage_name,'w') as output:
 			output.write(html)
 	data = json.loads(urllib.urlopen(course_url).read())
@@ -490,18 +492,18 @@ def create_page(full_name,description,course_url):
 		tags.append(i['class_nbr'])
 		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
 
-	return [full_name.replace(';',''),description,tags,'classes/'+'-'.join(full_name.split()[:2]).replace(';','').lower()+'']
+	return [full_name.replace(';',''),description,tags,'terms/' + __TERM__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'']
 
 def create_all():
-	with open('../classes.json','r') as input:
+	with open('../terms/' + __TERM__ + '/classes.json','r') as input:
 		data = json.loads(input.read())
 		to_be_indexed = []
 		for i in data: 
 			to_be_indexed.append(create_page(i[0],i[1],i[2]))
-		send_to_be_indexed(to_be_indexed)
+		send_to_be_indexed(to_be_indexed,__TERM__)
 
-def send_to_be_indexed(items):
-	with open('../tipuesearch/tipuesearch_content.js','w') as output:
+def send_to_be_indexed(items,term):
+	with open('../terms/' + term + '/tipuesearch/tipuesearch_content.js','w') as output:
 		output.write('var tipuesearch = {"pages": [\n')
 		for i in items:
 			title = '""'

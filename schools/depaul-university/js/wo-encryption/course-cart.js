@@ -1,5 +1,37 @@
+function saveSelections()
+{
+	var prefix = document.getElementsByClassName('prefix')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number',number);
+}
+
+function saveCreditPrefix()
+{
+	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
+	writeCookie('depaul-university-standard-prefix',prefix);
+	writeCookie('depaul-university-standard-number','');
+}
+
+function readCreditSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	document.getElementsByClassName('credit-prefix')[0].value = prefix;
+}
+
+function readSelections()
+{
+	var prefix = readCookie('depaul-university-standard-prefix');
+	var number = readCookie('depaul-university-standard-number');
+	document.getElementsByClassName('prefix')[0].value = prefix;
+	document.getElementsByClassName('number')[0].value = number;
+}
+
 function run()
 {
+	readSelections();
+	readCreditSelections();
+	updateTerm();
 	$(".number").keyup(function (e) 
 	{
 	    if (e.keyCode == 13) 
@@ -66,6 +98,10 @@ function run()
 			el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
     	}
 	});
+	if ("onhashchange" in window) 
+	{
+    	saveSelections();
+	}
 }
 
 function updateStatus()
@@ -93,6 +129,26 @@ function updateStatus()
 		    	formatStatus(response);
 		    }
 		});
+	}
+}
+
+function updateTerm()
+{
+	var term = document.getElementsByClassName('term')[0].value;
+	writeCookie('depaul-university-term',term,1);
+	formatCookies();
+}
+
+function readPreviousTerm()
+{
+	var term = document.getElementsByClassName('term')[0].value;
+	if(readCookie('depaul-university-term'))
+	{
+		document.getElementsByClassName('term')[0].value = readCookie('depaul-university-term');
+	}
+	else
+	{
+		writeCookie('depaul-university-term',term,1);
 	}
 }
 
@@ -138,11 +194,12 @@ function formatStatus(response)
 
 function fixCookieStatus(course,status)
 {
+	var term = document.getElementsByClassName('term')[0].value;
 	var cookies = document.cookie.split(';');
 	var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
 	var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
 	var number = course.getElementsByClassName('number')[0].innerHTML;
-	var cookieName = [firstName,lastName,'add',number].join('-').split(' ').join('-');
+	var cookieName = ['depaul-university','('+term+')',firstName,lastName,'add',number].join('-').split(' ').join('-');
 	var oldCookie = readCookie(cookieName);
 	var saveCookies = [];
 	for(i of cookies)
@@ -183,6 +240,7 @@ function fixCookieStatus(course,status)
 function readSaved()
 {
 	var allCookies = document.cookie.split(';');
+	var term = '';
 	var savedCookies = [];
 	for(i of allCookies)
 	{
@@ -196,6 +254,7 @@ function readSaved()
 			course.push(number);
 			for(var j = 1; j < classArray.length; j++)
 			{
+				term = classArray[j].split('=')[0].split('(')[1].split(')')[0];
 				var temp = classArray[j].split('=')[1].split(',');
 				if(classArray[j].split('=')[1].split(',').length == 11)
 				{
@@ -209,7 +268,7 @@ function readSaved()
 			savedCookies.push(course);
 		}
 	}
-	return savedCookies;
+	return [term].concat(savedCookies);
 }
 
 function saveSelected(table)
@@ -217,13 +276,14 @@ function saveSelected(table)
 	document.getElementsByClassName('userinput')[0].value = '';
 	var all_courses = document.getElementById('myTable'+table).getElementsByClassName("course");
 	var checkedCourses = [];
+	var term = document.getElementsByClassName('term')[0].value;
 	for(var i = 0; i < all_courses.length; i++)
 	{
 		if(all_courses[i].getElementsByClassName("checked")[0])
 		{
 			var value = all_courses[i].getElementsByTagName('input')[0].id;
 			var name = all_courses[i].getElementsByTagName('input')[0].className.replace('-add','') + '-' + value.split(',')[9];
-			var together = name + '=' + value;
+			var together = 'depaul-university-(' + term + ')-' + name + '=' + value;
 			checkedCourses.push(together);
 		}
 	}
@@ -377,6 +437,7 @@ function creditSearch()
 	var search = prefix.toLowerCase() + '-credits=' + credit;
 	document.getElementById('tipue_search_input').value = '"' + search + '"';
 	document.getElementById('field').submit();
+	saveCreditPrefix();
 }
 
 function updateCourseCartCount()
@@ -418,9 +479,10 @@ function formatCookies(value)
 {
 	var classes = [];
 	var allHtml = '<div class="tabs" style="padding:0px;">';
+	var term = document.getElementsByClassName('term')[0].value;
 	for(i of document.cookie.split(';'))
 	{
-		if(i.indexOf('-add') != -1) 
+		if(i.indexOf('-add') != -1 && i.indexOf(term) != -1) 
 		{
 			temp = i.substring(i.indexOf('=')+1).split(',');
 			if(temp.length == 11) 
@@ -430,20 +492,23 @@ function formatCookies(value)
 			classes.push(temp);
 		}
 	}
-	var classes = ([['Current Cart',''].concat(classes)]).concat(readSaved());
+	var classes = ([['Current Cart',''].concat(classes)]).concat(readSaved().slice(1));
 	var ul = '<ul style="display: inline-block; padding: 0px;" class="tab-links">';
-	for(var index = 0; index < classes.length; index++)
+	if(readSaved()[0] == document.getElementsByClassName('term')[0].value)
 	{
-		var tabName = classes[index][0];
-		if (readSaved().length > 0)
+		for(var index = 0; index < classes.length; index++)
 		{
-			if(index == 0)
+			var tabName = classes[index][0];
+			if (readSaved().length > 0)
 			{
-				ul += '<li class="active"><a href="#' + index + '">' + tabName + '</a></li>';
-			}
-			else
-			{
-				ul += '<li><a href="#' + index + '">' + tabName + '</a></li>';
+				if(index == 0)
+				{
+					ul += '<li class="active"><a href="#' + index + '">' + tabName + '</a></li>';
+				}
+				else
+				{
+					ul += '<li><a href="#' + index + '">' + tabName + '</a></li>';
+				}
 			}
 		}
 	}
@@ -481,7 +546,7 @@ function formatCookies(value)
 			{
 				var classValue = i[4].toLowerCase() + '-' + i[5].toLowerCase() + '-add';
 				var href = 'teachers/' + i[4].toLowerCase() + '-' + i[5].toLowerCase() + '';
-				var course_name = 'classes/' + i[1].replace(' ','-').toLowerCase() + '';
+				var course_name = 'terms/' + term + '/classes/' + i[1].replace(' ','-').toLowerCase() + '';
 				if(index != 0)
 				{
 					html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromSave(';
@@ -873,6 +938,7 @@ function submitForm()
 		document.getElementById('tipue_search_input').value = '" ' + search + '"';
 		document.getElementById('field').submit();
 	}
+	saveSelections();
 }
 
 function matchStart(term, text) 
@@ -889,8 +955,9 @@ $.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher)
 
 function loadBooks(number)
 {
+	var term = readCookie('depaul-university-term');
 	$.ajax({
-		url:'http://mocksched.com/schools/depaul-university/books.json',
+		url:'http://mocksched.com/schools/depaul-university/terms/' + term + '/books.json',
 		type:'GET',
 		success: function(response)
 	    {

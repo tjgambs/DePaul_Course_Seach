@@ -32,7 +32,13 @@
 	<div align="center">
 		<h1><a href="/" style="text-decoration:none; color:#333;">MockSched</a></h1>
 		<h3>DePaul University</h3>
-		<h3>Winter 2016</h3>
+		<div id="term-div" style="width:15%; padding-top:10px; visibility: hidden;">
+			<select class="term" style="width:100%;" onchange="updateTermIndex()">
+				<option value="winter-2016">Winter 2016</option>
+				<option value="spring-2016">Spring 2016</option>
+				<option value="summer-2016">Summer 2016</option>
+			</select>
+		</div>
 	</div>
 	<div id="search-box" style="text-align: center; visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
@@ -440,14 +446,24 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script> -->
-	
+
+	<div id="tipue_search_content"></div>
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
 	$(document).ready(function() 
 	{
+		if(readCookie('depaul-university-term'))
+		{
+			var term = readCookie('depaul-university-term');
+			document.getElementsByClassName('term')[0].value = term;
+		}
+    	setTimeout(function()
+    	{ 
+    		document.getElementById('search-box').style.visibility = 'visible'; 
+    		document.getElementById('term-div').style.visibility = 'visible';
+    	}, 200);
 		$(".prefix").select2();
-    	setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
     	updateCourseCartCount();
     	run();
 	});

@@ -7,11 +7,11 @@ import json
 import getpass
 import sys
 
-driver = webdriver.Firefox()
-
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 __USERNAME__ = 'TGAMBLE2'#raw_input('Username: ').upper()
 __PASSWORD__ = '***REMOVED***'#getpass.getpass('Password: ')
+__TERM__ = 4
+__TERMNAME__ = 'winter-2016'
 
 def login():
 	driver.get(__URL__)
@@ -104,7 +104,7 @@ def take_all_data(code):
 		all_books.append(format_book_data(title,isbns,status,names))
 		driver.find_element(By.XPATH,'//a[@id="CLASS_SRCH_WRK2_SSR_PB_BACK"]').click()
 		time.sleep(10)
-	with open('../course_books/'+file_name+str(code)+'.json','w') as output:
+	with open('../terms/' + __TERMNAME__ + '/course_books/'+file_name+str(code)+'.json','w') as output:
 		json.dump(all_books,output)
 	driver.switch_to_default_content()
 
@@ -126,7 +126,7 @@ def iterate_over_one(index):
 		navigate_to_course_search()
 		for i in range(1,amount_of_course_careers()):
 			select_course_career(i)
-			select_term(4)
+			select_term(__TERM__)
 			time.sleep(3)
 			flag = search_subject(index)
 			if flag == 0:
@@ -136,5 +136,7 @@ def iterate_over_one(index):
 		iterate_over_one(index)
 
 if __name__ == '__main__':
+	global driver
+	driver = webdriver.Firefox()
 	iterate_over_one(int(sys.argv[1]))
 	driver.close()
