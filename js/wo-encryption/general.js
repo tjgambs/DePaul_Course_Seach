@@ -50,8 +50,6 @@ function updateTermSearch(flag)
 	code.src = '../../js/tipuesearch.min.js';
 	$("head").append(content);
 	$("head").append(code);
-	document.title = document.title.split(')').slice(-1);
-	$('#tipue_search_input').tipuesearch();
 }
 
 function updateTermIndex()
@@ -64,6 +62,7 @@ function run()
 {
 	readSelections();
 	readCreditSelections();
+	$('#tipue_search_input').tipuesearch();
 	$('#help').mousedown(function(e) 
 	{
 		var clicked = $(e.target);
