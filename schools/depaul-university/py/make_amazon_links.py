@@ -3,11 +3,11 @@ from selenium.webdriver.common.by import By
 import json
 import isbnlib
 import glob
-import time
+import sys
 
-__TERMNAME__ = 'winter-2016'
+driver = webdriver.Firefox()
 
-def format_data():
+def format_data(__TERMNAME__):
 	file_names = glob.glob('../terms/' + __TERMNAME__ + '/course_books/*.json')
 	dic = {}
 	good_urls = json.loads(open('../good_urls.json', 'r').read())
@@ -21,8 +21,8 @@ def format_data():
 					number = isbnlib.to_isbn10(d['isbns'][i])
 					name = ','.join(d['names'][i].split(',')[:-1]) + ', Isbn: ' + d['isbns'][i]
 					if number:
-						url ='http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&tag=mocksched-20&linkId=EMBDL7BV7IXRB44G'
-						url_for_checking = 'http://www.amazon.com/gp/product/'+number+'/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN='+number+'&linkCode=as2&linkId=EMBDL7BV7IXRB44G'
+						url ='http://www.amazon.com/gp/product/' + number + '/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=' + number + '&linkCode=as2&tag=mocksched-20&linkId=EMBDL7BV7IXRB44G'
+						url_for_checking = 'http://www.amazon.com/gp/product/' + number + '/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=' + number + '&linkCode=as2&linkId=EMBDL7BV7IXRB44G'
 						if url in good_urls:
 							ret.append([d['status'][i],url,name])
 						elif url in bad_urls:
@@ -51,7 +51,5 @@ def check_url(url):
 		check_url(url)
 
 if __name__ == '__main__':
-	global driver
-	driver = webdriver.Firefox()
-	format_data()
+	format_data(sys.argv[1])
 	driver.close()

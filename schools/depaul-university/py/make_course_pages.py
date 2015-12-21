@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 import json
 import urllib
+import sys
 
-__TERM__ = 'winter-2016'
-
-def create_page(full_name,description,course_url):
+def create_page(full_name,description,course_url,__TERMNAME__):
 	ignore = ['a','an','the','and','at','around','by','after','along','for','from','of','on','to','with','without']
 	tempArr = []
 	for index,i in enumerate(full_name.replace(';','').split(' ')[2:]):
@@ -482,7 +481,7 @@ def create_page(full_name,description,course_url):
 	});
 	</script>
 </html>'''
-	webpage_name = ('terms/' + __TERM__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'.html')
+	webpage_name = ('terms/' + __TERMNAME__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'.html')
 	with open('../'+webpage_name,'w') as output:
 			output.write(html)
 	data = json.loads(urllib.urlopen(course_url).read())
@@ -492,15 +491,15 @@ def create_page(full_name,description,course_url):
 		tags.append(i['class_nbr'])
 		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
 
-	return [full_name.replace(';',''),description,tags,'terms/' + __TERM__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'']
+	return [full_name.replace(';',''),description,tags,'terms/' + __TERMNAME__ + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'']
 
-def create_all():
-	with open('../terms/' + __TERM__ + '/classes.json','r') as input:
+def create_all(__TERMNAME__):
+	with open('../terms/' + __TERMNAME__ + '/classes.json','r') as input:
 		data = json.loads(input.read())
 		to_be_indexed = []
 		for i in data: 
-			to_be_indexed.append(create_page(i[0],i[1],i[2]))
-		send_to_be_indexed(to_be_indexed,__TERM__)
+			to_be_indexed.append(create_page(i[0],i[1],i[2],__TERMNAME__))
+		send_to_be_indexed(to_be_indexed,__TERMNAME__)
 
 def send_to_be_indexed(items,term):
 	with open('../terms/' + term + '/tipuesearch/tipuesearch_content.js','w') as output:
@@ -529,5 +528,5 @@ def clean_index(item):
 	return '"{0}"'.format(item.replace("\"",'').replace("\r\n",'').replace("\n",''))
 
 if __name__ == '__main__':
-	create_all()
+	create_all(sys.argv[1])
 

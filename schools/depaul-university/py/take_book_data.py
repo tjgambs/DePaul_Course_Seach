@@ -7,11 +7,11 @@ import json
 import getpass
 import sys
 
+driver = webdriver.Firefox()
+
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 __USERNAME__ = 'TGAMBLE2'#raw_input('Username: ').upper()
 __PASSWORD__ = '***REMOVED***'#getpass.getpass('Password: ')
-__TERM__ = 4
-__TERMNAME__ = 'winter-2016'
 
 def login():
 	driver.get(__URL__)
@@ -42,7 +42,7 @@ def select_term(index):
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
 	time.sleep(10)
 	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divCLASS_SRCH_WRK2_STRM$35$"]/select'))
-	select.select_by_index(index)
+	select.select_by_index(int(index))
 	driver.switch_to_default_content()
 
 def search_subject(index):
@@ -82,7 +82,7 @@ def amount_of_course_careers():
 	driver.switch_to_default_content()
 	return len(options)
 
-def take_all_data(code):
+def take_all_data(code,__TERMNAME__):
 	time.sleep(60)
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
 	time.sleep(10)
@@ -120,8 +120,8 @@ def format_book_data(title,isbns,status,names):
 	dic['names'] = names
 	return dic
 
-def iterate_over_one(index):
-	try:
+def iterate_over_one(index,__TERM__,__TERMNAME__):
+	# try:
 		login()
 		navigate_to_course_search()
 		for i in range(1,amount_of_course_careers()):
@@ -130,13 +130,11 @@ def iterate_over_one(index):
 			time.sleep(3)
 			flag = search_subject(index)
 			if flag == 0:
-				take_all_data(i)
+				take_all_data(i,__TERMNAME__)
 			navigate_to_course_search()
-	except:
-		iterate_over_one(index)
+	# except:
+	# 	iterate_over_one(index,__TERM__,__TERMNAME__)
 
 if __name__ == '__main__':
-	global driver
-	driver = webdriver.Firefox()
-	iterate_over_one(int(sys.argv[1]))
+	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
 	driver.close()
