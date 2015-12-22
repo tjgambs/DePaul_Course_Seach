@@ -121,7 +121,7 @@ def format_book_data(title,isbns,status,names):
 	return dic
 
 def iterate_over_one(index,__TERM__,__TERMNAME__):
-	# try:
+	try:
 		login()
 		navigate_to_course_search()
 		for i in range(1,amount_of_course_careers()):
@@ -132,8 +132,8 @@ def iterate_over_one(index,__TERM__,__TERMNAME__):
 			if flag == 0:
 				take_all_data(i,__TERMNAME__)
 			navigate_to_course_search()
-	# except:
-	# 	iterate_over_one(index,__TERM__,__TERMNAME__)
+	except:
+		iterate_over_one(index,__TERM__,__TERMNAME__)
 
 if __name__ == '__main__':
 	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
