@@ -43,7 +43,7 @@
 	<div id="search-box" style="text-align: center; visibility: hidden;">
 		<div style="display: inline-block; padding-right:10px">
 			<div style="padding: 3%; text-align:left;">COURSE PREFIX</div>
-			<select class="prefix">
+			<select class="prefix" onchange="saveSelections()">
 				<option value="ACC">ACC - Accountancy</option>
 				<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
 				<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
@@ -464,6 +464,7 @@
     		document.getElementById('term-div').style.visibility = 'visible';
     	}, 200);
 		$(".prefix").select2();
+		readSelections();
     	updateCourseCartCount();
     	run();
 	});
