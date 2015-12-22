@@ -74,6 +74,5 @@ def update():
 	get_all_books()
 	local('python make_amazon_links.py {0}'.format(__TERMNAME__))
 	update_website()
-	local('rm *.pyc')
 	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
 
