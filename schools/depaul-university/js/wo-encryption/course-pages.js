@@ -16,15 +16,24 @@ function saveCreditPrefix()
 function readCreditSelections()
 {
 	var prefix = readCookie('depaul-university-standard-prefix');
-	document.getElementsByClassName('credit-prefix')[0].value = prefix;
+	if(prefix)
+	{
+		document.getElementsByClassName('credit-prefix')[0].value = prefix;
+	}
 }
 
 function readSelections()
 {
 	var prefix = readCookie('depaul-university-standard-prefix');
 	var number = readCookie('depaul-university-standard-number');
-	document.getElementsByClassName('prefix')[0].value = prefix;
-	document.getElementsByClassName('number')[0].value = number;
+	if(prefix)
+	{
+		document.getElementsByClassName('prefix')[0].value = prefix;
+	}
+	if(number)
+	{
+		document.getElementsByClassName('number')[0].value = number;
+	}
 }
 
 function run()
