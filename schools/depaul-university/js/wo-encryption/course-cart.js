@@ -361,7 +361,7 @@ function removeAll()
 
 function excludeOrInclude()
 {
-	var howMany = document.getElementsByClassName('tab-links')[0].getElementsByTagName('li').length;
+	var howMany = document.getElementsByClassName('tab-links')[0].getElementsByTagName('li').length+1;
 	for(var i = 0; i < howMany; i++)
 	{
 		if(document.getElementById('myTable' + i))
