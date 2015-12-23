@@ -37,7 +37,7 @@ def get_all_books(__TERM__,__TERMNAME__):
 			local('python take_book_data.py {0} {1} {2} &'.format(index,__TERM__,__TERMNAME__))
 			time.sleep(5)
 		else:
-			local('python take_book_data.py {0} {1} {2} &'.format(index,__TERM__,__TERMNAME__))
+			local('python take_book_data.py {0} {1} {2}'.format(index,__TERM__,__TERMNAME__))
 			break
 
 def update_website():
@@ -51,24 +51,36 @@ def update_website():
 		local('git push')
 		local('git checkout gh-pages')
 
+def remove_teachers():
+	with lcd('../'):
+		local('rm -r teachers')
+		local('mkdir teachers')
+
+def remove_classes(__TERMNAME__):
+	with lcd('../terms/' + __TERMNAME__):
+		local('rm -r classes')
+		local('mkdir classes')
+
 def update(__TERMNAME__,__TERMNUMBER__,__TERM__,flag):
-	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
 	if flag:
 		local('git checkout gh-pages')
 		local('python take_rmp_rankings.py &')
 		local('python take_course_descriptions.py')
 	local('python take_class_data.py {0} {1}'.format(__TERMNAME__,__TERMNUMBER__))
+	remove_classes(__TERMNAME__)
 	local('python make_course_pages.py {0} &'.format(__TERMNAME__))
 	if flag:
+		remove_teachers()
 		local('python make_teacher_pages.py &')
 	get_all_books(__TERM__,__TERMNAME__)
 	local('python make_amazon_links.py {0}'.format(__TERMNAME__))
+
+def update_all():
+	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
+	update('winter-2016','0965',3,True)
+	update('spring-2016','0970',4,False)
+	#update('summer-2016','0975',5,False)
 	update_website()
 	local('rm *.pyc')
 	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
-
-def update_all:
-	update('winter-2016','0965',3,True)
-	update('spring-2016','0970',4,False)
-	update('summer-2016','0975',5,False)
 
