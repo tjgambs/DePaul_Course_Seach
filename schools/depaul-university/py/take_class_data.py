@@ -33,18 +33,27 @@ def download_classes(__TERMNAME__,__TERMNUMBER__):
 	soup = Soup(html)
 
 	courses = []
+	data = json.loads(open('../course_data.json', 'r').read())
 
 	for ul in soup.findAll('ul',{'class':'columnlist medium'}):
 		a = ul.findAll('a')
 		for i in a:
 			url = 'http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses'
 			start = i['href'].rindex('?dtl=Y') + 6
-
-			html = urllib.urlopen(i['href'])
-			soup = Soup(html)
-			course_description = soup.find('p',{'class':'nopadding-top'}).text
-
-			courses.append([i.text,course_description,str(url+i['href'][start:])])
+			try:
+				course_data = data[' '.join(i.text.split(' ')[:2]).replace(';','')]
+				course_description = course_data[0]
+				course_prerequisites = course_data[1]
+				complete_description = ''
+				if len(course_description) != 0:
+					complete_description += course_description
+				if len(course_prerequisites) != 0:
+					complete_description += ' PREREQUISITE(S): ' + course_prerequisites
+			except:
+				html = urllib.urlopen(i['href'])
+				soup = Soup(html)
+				course_description = soup.find('p',{'class':'nopadding-top'}).text
+			courses.append([i.text.replace(';',''),complete_description,str(url+i['href'][start:])])
 			
 	with open('../terms/' + __TERMNAME__ + '/classes.json','w') as output:
 		json.dump(courses, output)

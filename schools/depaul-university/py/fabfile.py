@@ -68,6 +68,7 @@ def update():
 	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
 	local('git checkout gh-pages')
 	local('python take_rmp_rankings.py &')
+	local('python take_course_descriptions.py')
 	local('python take_class_data.py {0} {1}'.format(__TERMNAME__,__TERMNUMBER__))
 	local('python make_course_pages.py {0} &'.format(__TERMNAME__))
 	local('python make_teacher_pages.py &')
