@@ -227,20 +227,71 @@ function updateRanking()
 	    	}
 	    	catch(e)
 	    	{
-	    		useBackup();
+	    		useBackup('http://mocksched.com/schools/depaul-university/backupRankings0.html');
 	    	}
 	    },
 	    error: function()
 	    {
-		    useBackup();
+		    useBackup('http://mocksched.com/schools/depaul-university/backupRankings0.html');
 		}
 	});
+	$.ajax({
+		url:'https://crossorigin.me/http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery1110022448566812090576_1450841735528&q=*%3A*+AND+schoolid_s%3A5485&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows=1000000000&start=0&fl=pk_id+teacherfirstname_t+teacherlastname_t+averageratingscore_rf',
+		type:'GET',
+		async: false,
+		success: function(response)
+	    {
+	    	try
+	    	{
+		    	var begin = response.indexOf('"docs":') + 7;
+		    	var end = response.length - 151;
+		    	var data = jQuery.parseJSON(response.substr(begin,end));
+		    	for (i of data)
+		    	{
+			    	var overall = i.averageratingscore_rf;
+			    	var first_name = i.teacherfirstname_t.replace('\u00ED','i');
+			    	var last_name = i.teacherlastname_t.replace('\u00ED','i');
+			    	var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-overall');
+			    	var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-firstn');
+			    	var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-lastn');
+			    	var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-') + '-add');
+			    	if(list_overall.length != 0)
+			    	{
+			    		for(var j = 0; j<list_overall.length; j++)
+			    		{
+			    			if(overall)
+			    			{
+			    				if (overall.length != 0 && overall != '0' && overall != '0.0')
+			    				{
+			    					if(list_overall[j].innerHTML.indexOf('<a style') == -1)
+			    					{
+					    				list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ overall + '</a>';
+					    				list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ first_name + '</a>';
+					    				list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/'+(first_name + '-' + last_name).toLowerCase().replace('\u00ED','i').split(' ').join('-')+'">'+ last_name + '</a>';
+					    				list_cookie[j].id = overall+',' + list_cookie[j].id;
+				    				}
+			    				}
+			    			}
+			    		}
+			    	}
+		    	}
+	    	}
+	    	catch(e)
+	    	{
+	    		useBackup('http://mocksched.com/schools/depaul-university/backupRankings1.html');
+	    	}
+	    },
+	    error: function()
+	    {
+		    useBackup('http://mocksched.com/schools/depaul-university/backupRankings1.html');
+		}
+	});	
 }
 
-function useBackup()
+function useBackup(url)
 {
 	$.ajax({
-		url:'http://mocksched.com/schools/depaul-university/backupRankings.html',
+		url:url,
 		type:'GET',
 		async: false,
 		success: function(response)

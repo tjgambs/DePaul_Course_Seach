@@ -16,6 +16,7 @@ import rmp_reviews
 #		http://www.ratemyprofessors.com/campusRatings.jsp?sid=1389
 #The universities id number would be 1389, the number following 'sid='.
 school_id_number = '1389'
+school_id_number_law = '5485'
 
 #Please specify how many teachers you want in your data set. You can have all of 
 #them if you enter in 'all' or you can enter in a number with in quotations.
@@ -33,9 +34,13 @@ helpfulness_rating 		= True
 clarity_rating 			= True
 easiness_rating 		= True
 
+
 #Creates a url with the predefined url parameters.
-def generate_url():
-	url ='http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery111003276446736417711_1446762506495&q=*%3A*+AND+schoolid_s%3A' + school_id_number + '&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows='	
+def generate_url(flag):
+	if(flag == 0):
+		url = 'http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery1110022448566812090576_1450841735528&q=*:*%20AND%20schoolid_s:' + school_id_number_law + '&defType=edismax&qf=teacherfullname_t^1000%20autosuggest&bf=pow(total_number_of_ratings_i,2.1)&sort=&siteName=rmp&rows='
+	if(flag == 1):
+		url ='http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery111003276446736417711_1446762506495&q=*%3A*+AND+schoolid_s%3A' + school_id_number + '&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows='	
 	
 	#Adds the amount of teachers wanted to a url paramater
 	if(how_many_teachers.lower() == 'all'):
@@ -65,8 +70,8 @@ def generate_url():
 	return url
 
 #Takes the url generated and takes all of the data to be formatted.
-def gather_data():
-	url = generate_url()
+def gather_data(flag):
+	url = generate_url(flag)
 	#Formats the data to be used in a list
 	page_content = urllib.urlopen(url).read()
 	begin = page_content.index('"docs":')+7
@@ -91,16 +96,6 @@ def total_teachers():
 	end = page_content.index(',"start":')
 
 	return page_content[begin:end]
-
-#Takes all of the data and stores it in a csv called teachers.csv
-def export_to_csv():
-	data = gather_data()
-	keys = data[0].keys()
-
-	with open('../teachers.csv', 'wb') as output_file:
-	    dict_writer = csv.DictWriter(output_file, keys)
-	    dict_writer.writeheader()
-	    dict_writer.writerows(data)
 
 def create_teacher_webpage(id,name,values):
 	if (values[0] == '0' or values[0] == '0.0'): return
@@ -589,8 +584,8 @@ def create_teacher_webpage(id,name,values):
 		output.write(html.encode("utf-8", "ignore"))
 
 
-def create_all_teacher_webpages():
-	data = gather_data()
+def create_all_teacher_webpages(flag):
+	data = gather_data(flag)
 	for i in data:
 		try: 
 			name = i['teacherfirstname_t'] + ' ' + i['teacherlastname_t']
@@ -617,8 +612,8 @@ def create_all_teacher_webpages():
 			create_teacher_webpage(str(i['pk_id']),name,[rating,helpful,clarity,easy])
 
 def main():
-    export_to_csv()
-    create_all_teacher_webpages()
+    create_all_teacher_webpages(0)
+    create_all_teacher_webpages(1)
 
 if __name__ == '__main__':
 	main()

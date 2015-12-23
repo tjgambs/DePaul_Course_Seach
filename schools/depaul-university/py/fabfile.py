@@ -4,20 +4,7 @@ import take_book_data as Book
 import time
 from time import gmtime, strftime
 
-__TERMNAME__ = 'winter-2016'
-# winter-2016
-# spring-2016
-# summer-2016
-__TERMNUMBER__ = '0965'
-# 0965 - Winter 2016
-# 0970 - Spring 2016
-# 0975 - Summer 2016
-__TERM__ = 3
-# 3 - Winter 2016
-# 4 - Spring 2016
-# 5 - Summer 2016
-
-def get_all_books():
+def get_all_books(__TERM__,__TERMNAME__):
 	Book.login()
 	Book.navigate_to_course_search()
 	number_of_courses = Book.amount_of_subjects()
@@ -64,16 +51,24 @@ def update_website():
 		local('git push')
 		local('git checkout gh-pages')
 
-def update():
+def update(__TERMNAME__,__TERMNUMBER__,__TERM__,flag):
 	print 'Start: ' + strftime("%Y-%m-%d %H:%M:%S")
-	local('git checkout gh-pages')
-	local('python take_rmp_rankings.py &')
-	local('python take_course_descriptions.py')
+	if flag:
+		local('git checkout gh-pages')
+		local('python take_rmp_rankings.py &')
+		local('python take_course_descriptions.py')
 	local('python take_class_data.py {0} {1}'.format(__TERMNAME__,__TERMNUMBER__))
 	local('python make_course_pages.py {0} &'.format(__TERMNAME__))
-	local('python make_teacher_pages.py &')
-	get_all_books()
+	if flag:
+		local('python make_teacher_pages.py &')
+	get_all_books(__TERM__,__TERMNAME__)
 	local('python make_amazon_links.py {0}'.format(__TERMNAME__))
 	update_website()
+	local('rm *.pyc')
 	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
+
+def update_all:
+	update('winter-2016','0965',3,True)
+	update('spring-2016','0970',4,False)
+	update('summer-2016','0975',5,False)
 
