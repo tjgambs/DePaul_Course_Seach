@@ -3,7 +3,7 @@
 	<head>
 		<title>MockSched - DePaul University</title>
 		<meta charset="UTF-8">
-		<link rel="shortcut icon" href="../../icon.png" />
+		<link rel="shortcut icon" href="../../icon.png">
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" />
 		<link rel="stylesheet" href="../../css/stylesheet.css" />
@@ -429,26 +429,19 @@
 	<div class="center ital" style="padding: 2%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div>
 </body>
 <script>
-	$(document).ready(function() 
-	{
-		if(readCookie('depaul-university-term'))
-		{
+	$(document).ready(function() {
+		if(readCookie('depaul-university-term')) {
 			var term = readCookie('depaul-university-term');
 			document.getElementsByClassName('term')[0].value = term;
 			updateTermSearch(false);
 		}
-		else
-		{
+		else {
 			updateTermSearch(true);
 		}
-    	setTimeout(function()
-    	{ 
+    	setTimeout(function() { 
     		document.getElementById('search-box').style.visibility = 'visible'; 
     		document.getElementById('term-div').style.visibility = 'visible';
     	}, 200);
-    	$(".prefix").select2();
-    	updateCourseCartCount();
-    	readSelections();
     	$('#tipue_search_input').tipuesearch();
     	run();
 	});
