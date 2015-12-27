@@ -4,6 +4,8 @@ function run()
 	$("#ads").load("http://mocksched.com/ads.html");
 	readSelections();
 	readCreditSelections();
+	updateCourseCartCount();
+	$(".prefix").select2();
 	$('#help').mousedown(function(e) 
 	{
 		var clicked = $(e.target);

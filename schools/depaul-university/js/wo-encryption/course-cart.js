@@ -1,5 +1,7 @@
 function run()
 {
+	$("#help").load("http://mocksched.com/help.html");
+	$("#ads").load("http://mocksched.com/ads.html");
 	readSelections();
 	readCreditSelections();
 	updateTerm();
