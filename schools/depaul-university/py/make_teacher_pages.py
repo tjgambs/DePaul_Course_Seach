@@ -314,7 +314,7 @@ def create_teacher_webpage(id,name,values):
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number" placeholder="NUMBER" style="width:100px;">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
