@@ -1,0 +1,423 @@
+<!DOCTYPE html><html><head><title>Stephanie Dohrn - 4.3</title><meta charset="UTF-8">
+					<script src="../../../js/jquery.min.js"></script>
+					<script src="../../../js/select2.full.js"></script>
+					<script src="../js/teacher-pages.min.js"></script>
+
+				    <link href="../../../css/select2.css" rel="stylesheet"/>
+					<link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" media="print, projection, screen" />
+					<script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
+					<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
+					<link rel="shortcut icon" href="../../../icon.png">
+				    <link rel="stylesheet" type="text/css" href="../../../css/tipuesearch.css">
+					<script>
+						(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+						ga('create', 'UA-70030211-1', 'auto');
+						ga('send', 'pageview');
+					 </script>
+				</head>
+						<style type="text/css">img.alignleft{ float: left; 
+									margin: 0 1em 1em 0;}.alignleft{ float: left; }#left{width: 200px;height: 150px;float: left;padding-bottom:30px;padding-top: 20px;}
+									#right{height: 150px;margin-left: 200px; padding-bottom: 30px;padding-top: 20px;}</style><body id="body">
+				<div>
+					<span>
+					<h3>
+						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
+						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
+						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+					</h3>
+					</span>
+					<span>
+						<h1 style="float:left; padding: 0px; padding-right:2%;"><a href="../search" style="text-decoration:none; color:#333;">MockSched</a></h1>
+						<div id="search-box" style="visibility: hidden;">
+						<div style="display: inline-block; padding-right:10px">
+							<select class="prefix" style="width:200px;" onchange="saveSelections()">
+								<option value="ACC">ACC - Accountancy</option>
+								<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+								<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+								<option value="AHT">AHT - Allied Health Technology</option>
+								<option value="ASL">ASL - American Sign Language</option>
+								<option value="AMS">AMS - American Studies</option>
+								<option value="ANI">ANI - Animation</option>
+								<option value="ANT">ANT - Anthropology</option>
+								<option value="APB">APB - Applied Brass</option>
+								<option value="APK">APK - Applied Keyboard</option>
+								<option value="APM">APM - Applied Music</option>
+								<option value="APP">APP - Applied Percussion</option>
+								<option value="AP">AP - Applied Professional Studies</option>
+								<option value="APS">APS - Applied Strings</option>
+								<option value="AT">AT - Applied Technology</option>
+								<option value="APV">APV - Applied Voice</option>
+								<option value="APW">APW - Applied Woodwinds</option>
+								<option value="ARB">ARB - Arabic</option>
+								<option value="ART">ART - Art</option>
+								<option value="HAA">HAA - Art And Architecture, History Of</option>
+								<option value="AI">AI - Arts And Ideas</option>
+								<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+								<option value="BIO">BIO - Biological Sciences</option>
+								<option value="BLW">BLW - Business Law</option>
+								<option value="CTH">CTH - Catholic Studies</option>
+								<option value="CTU">CTU - Catholic Theological Union</option>
+								<option value="CHE">CHE - Chemistry</option>
+								<option value="CHN">CHN - Chinese</option>
+								<option value="CMN">CMN - Communication</option>
+								<option value="CMNS">CMNS - Communication Studies</option>
+								<option value="CSS">CSS - Community Service Studies</option>
+								<option value="CPL">CPL - Comparative Literature</option>
+								<option value="COM">COM - Composition</option>
+								<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+								<option value="CSC">CSC - Computer Science</option>
+								<option value="CNS">CNS - Computer, Information And Network Security</option>
+								<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+								<option value="CCH">CCH - Core Curriculum Human Community</option>
+								<option value="CCS">CCS - Core Curriculum Scientific World</option>
+								<option value="CSL">CSL - Counseling</option>
+								<option value="CES">CES - Critical Ethnic Studies</option>
+								<option value="CS">CS - Curriculum Studies</option>
+								<option value="DA">DA - Decision Analytics</option>
+								<option value="DES">DES - Design</option>
+								<option value="DC">DC - Digital Cinema</option>
+								<option value="DHS">DHS - Digital Humanities</option>
+								<option value="DMA">DMA - Digital Media Arts</option>
+								<option value="ECE">ECE - Early Childhood Education</option>
+								<option value="ECT">ECT - E-Commerce Technology</option>
+								<option value="ECO">ECO - Economics</option>
+								<option value="EA">EA - Educating Adults</option>
+								<option value="EDU">EDU - Education - General</option>
+								<option value="EE">EE - Elementary Education</option>
+								<option value="ENG">ENG - English</option>
+								<option value="ELA">ELA - English Language Academy</option>
+								<option value="ENV">ENV - Environmental Science</option>
+								<option value="EXP">EXP - Experience Design</option>
+								<option value="FIN">FIN - Finance</option>
+								<option value="FA">FA - Focus Area</option>
+								<option value="FCH">FCH - French</option>
+								<option value="GAM">GAM - Game Development</option>
+								<option value="GEO">GEO - Geography</option>
+								<option value="GER">GER - German</option>
+								<option value="AAS">AAS - Global Asian Studies</option>
+								<option value="GSB">GSB - Graduate School Of Business</option>
+								<option value="GD">GD - Graphic Design</option>
+								<option value="GRK">GRK - Greek</option>
+								<option value="HTHC">HTHC - Health Communication</option>
+								<option value="HIT">HIT - Health Information Technology</option>
+								<option value="HLTH">HLTH - Health Science</option>
+								<option value="HST">HST - History</option>
+								<option value="HON">HON - Honors</option>
+								<option value="HSP">HSP - Hospitality Leadership</option>
+								<option value="HCD">HCD - Human Centered Design</option>
+								<option value="HC">HC - Human Community</option>
+								<option value="HCI">HCI - Human-Computer Interaction</option>
+								<option value="ICE">ICE - Illinois Institute Of Technology</option>
+								<option value="ILL">ILL - Illustration</option>
+								<option value="IS">IS - Information Systems</option>
+								<option value="IT">IT - Information Technology</option>
+								<option value="IPD">IPD - Institute For Professional Development</option>
+								<option value="IN">IN - Integrative Learning</option>
+								<option value="ISM">ISM - Interactive And Social Media</option>
+								<option value="IM">IM - Interactive Media</option>
+								<option value="INTC">INTC - Intercultural Communication</option>
+								<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+								<option value="IDS">IDS - Interdisciplinary Studies</option>
+								<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+								<option value="IB">IB - International Business</option>
+								<option value="INT">INT - International Studies</option>
+								<option value="IRE">IRE - Irish Studies</option>
+								<option value="IWS">IWS - Islamic World Studies</option>
+								<option value="ITA">ITA - Italian</option>
+								<option value="JPN">JPN - Japanese</option>
+								<option value="JZZ">JZZ - Jazz Studies</option>
+								<option value="JOUR">JOUR - Journalism</option>
+								<option value="LE">LE - Labor Education</option>
+								<option value="LAT">LAT - Latin</option>
+								<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+								<option value="LAW">LAW - Law</option>
+								<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+								<option value="LLS">LLS - Liberal Learning Seminars</option>
+								<option value="LSE">LSE - Liberal Studies In Education</option>
+								<option value="LSP">LSP - Liberal Studies Program</option>
+								<option value="LL">LL - Lifelong Learning</option>
+								<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+								<option value="MGT">MGT - Management</option>
+								<option value="MIS">MIS - Management Information Systems</option>
+								<option value="MKT">MKT - Marketing</option>
+								<option value="MPH">MPH - Master Of Public Health</option>
+								<option value="MSW">MSW - Masters In Social Work</option>
+								<option value="MLS">MLS - Masters Of Liberal Studies</option>
+								<option value="MAT">MAT - Mathematical Sciences</option>
+								<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+								<option value="MCS">MCS - Media Studies</option>
+								<option value="MGE">MGE - Middle Grades Education</option>
+								<option value="MSC">MSC - Military Science</option>
+								<option value="MOL">MOL - Modern Languages</option>
+								<option value="MED">MED - Music Education</option>
+								<option value="MEN">MEN - Music Ensemble</option>
+								<option value="MUS">MUS - Musicianship</option>
+								<option value="NMS">NMS - New Media Studies</option>
+								<option value="NSG">NSG - Nursing</option>
+								<option value="ORGC">ORGC - Organizational Communication</option>
+								<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+								<option value="PRF">PRF - Performance</option>
+								<option value="PAM">PAM - Performing Arts Management</option>
+								<option value="PHL">PHL - Philosophy</option>
+								<option value="PE">PE - Physical Education</option>
+								<option value="PHY">PHY - Physics</option>
+								<option value="POL">POL - Polish</option>
+								<option value="PSC">PSC - Political Science</option>
+								<option value="POR">POR - Portuguese</option>
+								<option value="PM">PM - Project Management</option>
+								<option value="PSY">PSY - Psychology</option>
+								<option value="PPS">PPS - Public Policy Studies</option>
+								<option value="PRAD">PRAD - Public Relations And Advertising</option>
+								<option value="MPS">MPS - Public Services</option>
+								<option value="RE">RE - Real Estate</option>
+								<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+								<option value="RELC">RELC - Relational Communication</option>
+								<option value="REL">REL - Religious Studies</option>
+								<option value="RUS">RUS - Russian</option>
+								<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+								<option value="SW">SW - Scientific World</option>
+								<option value="SEC">SEC - Secondary Education</option>
+								<option value="DCM">DCM - SNL Degree Completion Major</option>
+								<option value="SNC">SNC - SNL Liberal Studies</option>
+								<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+								<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+								<option value="SOC">SOC - Sociology</option>
+								<option value="SE">SE - Software Engineering</option>
+								<option value="REC">REC - Sound Recording Technology</option>
+								<option value="SPN">SPN - Spanish</option>
+								<option value="SEV">SEV - Strategy Execution Valuation</option>
+								<option value="SAP">SAP - Study Abroad Program</option>
+								<option value="SUD">SUD - Sustainable Urban Development</option>
+								<option value="TCH">TCH - TEACH Program</option>
+								<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+								<option value="TDC">TDC - Telecommunications</option>
+								<option value="TV">TV - Television Production</option>
+								<option value="THE">THE - Theatre Studies</option>
+								<option value="TEC">TEC - Theatre Technology</option>
+								<option value="UIP">UIP - University Internship Program</option>
+								<option value="VFX">VFX - Visual Effects</option>
+								<option value="WGS">WGS - Women's And Gender Studies</option>
+								<option value="WLE">WLE - World Language Education</option>
+								<option value="MWR">MWR - Writing</option>
+								<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+							</select>
+						</div>
+						<div style="display: inline-block; padding-right:10px">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
+						</div>
+						<div style="display: inline-block;">
+							<div style="style=padding: 5%;">
+								<form onsubmit="submitForm()" action="../search" id="field">
+									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
+									<input class="inputbox" type="submit" value="SEARCH">
+								</form>
+							</div>
+						</div>
+						</div>
+					</span>
+				<div>
+				<br />
+				<hr>
+				<div id="overlay">
+				<div id="advanced-container">
+	        <form action="../search">
+				<input type="text" name="q" id="tipue_search_input" autocomplete="off" required style="width: 100%" placeholder="Enter a Professor, Course Title, or General Keyword">
+			</form>
+			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
+			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
+			</h2>
+			<h2 align="center" style="padding-top: 10px;">
+				Filter Courses by Credit Hour
+			</h2>
+			<p align="center">
+				<select class="credit-prefix" style="width:50%">
+					<option value="ACC">ACC - Accountancy</option>
+					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
+					<option value="ABD">ABD - African&amp;Black Diaspora Studies</option>
+					<option value="AHT">AHT - Allied Health Technology</option>
+					<option value="ASL">ASL - American Sign Language</option>
+					<option value="AMS">AMS - American Studies</option>
+					<option value="ANI">ANI - Animation</option>
+					<option value="ANT">ANT - Anthropology</option>
+					<option value="APB">APB - Applied Brass</option>
+					<option value="APK">APK - Applied Keyboard</option>
+					<option value="APM">APM - Applied Music</option>
+					<option value="APP">APP - Applied Percussion</option>
+					<option value="AP">AP - Applied Professional Studies</option>
+					<option value="APS">APS - Applied Strings</option>
+					<option value="AT">AT - Applied Technology</option>
+					<option value="APV">APV - Applied Voice</option>
+					<option value="APW">APW - Applied Woodwinds</option>
+					<option value="ARB">ARB - Arabic</option>
+					<option value="ART">ART - Art</option>
+					<option value="HAA">HAA - Art And Architecture, History Of</option>
+					<option value="AI">AI - Arts And Ideas</option>
+					<option value="BBE">BBE - Bilingual-Bicultural Education</option>
+					<option value="BIO">BIO - Biological Sciences</option>
+					<option value="BLW">BLW - Business Law</option>
+					<option value="CTH">CTH - Catholic Studies</option>
+					<option value="CTU">CTU - Catholic Theological Union</option>
+					<option value="CHE">CHE - Chemistry</option>
+					<option value="CHN">CHN - Chinese</option>
+					<option value="CMN">CMN - Communication</option>
+					<option value="CMNS">CMNS - Communication Studies</option>
+					<option value="CSS">CSS - Community Service Studies</option>
+					<option value="CPL">CPL - Comparative Literature</option>
+					<option value="COM">COM - Composition</option>
+					<option value="GPH">GPH - Computer Graphics &amp; Motion Technology</option>
+					<option value="CSC">CSC - Computer Science</option>
+					<option value="CNS">CNS - Computer, Information And Network Security</option>
+					<option value="CCA">CCA - Core Curriculum Arts And Ideas</option>
+					<option value="CCH">CCH - Core Curriculum Human Community</option>
+					<option value="CCS">CCS - Core Curriculum Scientific World</option>
+					<option value="CSL">CSL - Counseling</option>
+					<option value="CES">CES - Critical Ethnic Studies</option>
+					<option value="CS">CS - Curriculum Studies</option>
+					<option value="DA">DA - Decision Analytics</option>
+					<option value="DES">DES - Design</option>
+					<option value="DC">DC - Digital Cinema</option>
+					<option value="DHS">DHS - Digital Humanities</option>
+					<option value="DMA">DMA - Digital Media Arts</option>
+					<option value="ECE">ECE - Early Childhood Education</option>
+					<option value="ECT">ECT - E-Commerce Technology</option>
+					<option value="ECO">ECO - Economics</option>
+					<option value="EA">EA - Educating Adults</option>
+					<option value="EDU">EDU - Education - General</option>
+					<option value="EE">EE - Elementary Education</option>
+					<option value="ENG">ENG - English</option>
+					<option value="ELA">ELA - English Language Academy</option>
+					<option value="ENV">ENV - Environmental Science</option>
+					<option value="EXP">EXP - Experience Design</option>
+					<option value="FIN">FIN - Finance</option>
+					<option value="FA">FA - Focus Area</option>
+					<option value="FCH">FCH - French</option>
+					<option value="GAM">GAM - Game Development</option>
+					<option value="GEO">GEO - Geography</option>
+					<option value="GER">GER - German</option>
+					<option value="AAS">AAS - Global Asian Studies</option>
+					<option value="GSB">GSB - Graduate School Of Business</option>
+					<option value="GD">GD - Graphic Design</option>
+					<option value="GRK">GRK - Greek</option>
+					<option value="HTHC">HTHC - Health Communication</option>
+					<option value="HIT">HIT - Health Information Technology</option>
+					<option value="HLTH">HLTH - Health Science</option>
+					<option value="HST">HST - History</option>
+					<option value="HON">HON - Honors</option>
+					<option value="HSP">HSP - Hospitality Leadership</option>
+					<option value="HCD">HCD - Human Centered Design</option>
+					<option value="HC">HC - Human Community</option>
+					<option value="HCI">HCI - Human-Computer Interaction</option>
+					<option value="ICE">ICE - Illinois Institute Of Technology</option>
+					<option value="ILL">ILL - Illustration</option>
+					<option value="IS">IS - Information Systems</option>
+					<option value="IT">IT - Information Technology</option>
+					<option value="IPD">IPD - Institute For Professional Development</option>
+					<option value="IN">IN - Integrative Learning</option>
+					<option value="ISM">ISM - Interactive And Social Media</option>
+					<option value="IM">IM - Interactive Media</option>
+					<option value="INTC">INTC - Intercultural Communication</option>
+					<option value="ICS">ICS - Interdisciplinary Commerce Studies</option>
+					<option value="IDS">IDS - Interdisciplinary Studies</option>
+					<option value="ISP">ISP - Interdisciplinary Studies Program</option>
+					<option value="IB">IB - International Business</option>
+					<option value="INT">INT - International Studies</option>
+					<option value="IRE">IRE - Irish Studies</option>
+					<option value="IWS">IWS - Islamic World Studies</option>
+					<option value="ITA">ITA - Italian</option>
+					<option value="JPN">JPN - Japanese</option>
+					<option value="JZZ">JZZ - Jazz Studies</option>
+					<option value="JOUR">JOUR - Journalism</option>
+					<option value="LE">LE - Labor Education</option>
+					<option value="LAT">LAT - Latin</option>
+					<option value="LST">LST - LatinAmerican &amp; Latino Studies</option>
+					<option value="LAW">LAW - Law</option>
+					<option value="LGQ">LGQ - Lesbian, Gay, Bisexual, Transgender, Queer Studies</option>
+					<option value="LLS">LLS - Liberal Learning Seminars</option>
+					<option value="LSE">LSE - Liberal Studies In Education</option>
+					<option value="LSP">LSP - Liberal Studies Program</option>
+					<option value="LL">LL - Lifelong Learning</option>
+					<option value="LSI">LSI - Literacy &amp; Specialized Instruction</option>
+					<option value="MGT">MGT - Management</option>
+					<option value="MIS">MIS - Management Information Systems</option>
+					<option value="MKT">MKT - Marketing</option>
+					<option value="MPH">MPH - Master Of Public Health</option>
+					<option value="MSW">MSW - Masters In Social Work</option>
+					<option value="MLS">MLS - Masters Of Liberal Studies</option>
+					<option value="MAT">MAT - Mathematical Sciences</option>
+					<option value="MMT">MMT - Mathematics For Middle School Teaching</option>
+					<option value="MCS">MCS - Media Studies</option>
+					<option value="MGE">MGE - Middle Grades Education</option>
+					<option value="MSC">MSC - Military Science</option>
+					<option value="MOL">MOL - Modern Languages</option>
+					<option value="MED">MED - Music Education</option>
+					<option value="MEN">MEN - Music Ensemble</option>
+					<option value="MUS">MUS - Musicianship</option>
+					<option value="NMS">NMS - New Media Studies</option>
+					<option value="NSG">NSG - Nursing</option>
+					<option value="ORGC">ORGC - Organizational Communication</option>
+					<option value="PAX">PAX - Peace, Justice And Conflict Studies</option>
+					<option value="PRF">PRF - Performance</option>
+					<option value="PAM">PAM - Performing Arts Management</option>
+					<option value="PHL">PHL - Philosophy</option>
+					<option value="PE">PE - Physical Education</option>
+					<option value="PHY">PHY - Physics</option>
+					<option value="POL">POL - Polish</option>
+					<option value="PSC">PSC - Political Science</option>
+					<option value="POR">POR - Portuguese</option>
+					<option value="PM">PM - Project Management</option>
+					<option value="PSY">PSY - Psychology</option>
+					<option value="PPS">PPS - Public Policy Studies</option>
+					<option value="PRAD">PRAD - Public Relations And Advertising</option>
+					<option value="MPS">MPS - Public Services</option>
+					<option value="RE">RE - Real Estate</option>
+					<option value="FMS">FMS - Refugee And Forced Migration Studies</option>
+					<option value="RELC">RELC - Relational Communication</option>
+					<option value="REL">REL - Religious Studies</option>
+					<option value="RUS">RUS - Russian</option>
+					<option value="STEM">STEM - Science, Technology, Engineering And Math</option>
+					<option value="SW">SW - Scientific World</option>
+					<option value="SEC">SEC - Secondary Education</option>
+					<option value="DCM">DCM - SNL Degree Completion Major</option>
+					<option value="SNC">SNC - SNL Liberal Studies</option>
+					<option value="SCG">SCG - Social &amp; Cultural Studies Ed Human Dev Grad</option>
+					<option value="SCU">SCU - Social/Cultural Studies Education/Human Dev Ugrd</option>
+					<option value="SOC">SOC - Sociology</option>
+					<option value="SE">SE - Software Engineering</option>
+					<option value="REC">REC - Sound Recording Technology</option>
+					<option value="SPN">SPN - Spanish</option>
+					<option value="SEV">SEV - Strategy Execution Valuation</option>
+					<option value="SAP">SAP - Study Abroad Program</option>
+					<option value="SUD">SUD - Sustainable Urban Development</option>
+					<option value="TCH">TCH - TEACH Program</option>
+					<option value="T&amp;L">T&amp;L - Teaching And Learning</option>
+					<option value="TDC">TDC - Telecommunications</option>
+					<option value="TV">TV - Television Production</option>
+					<option value="THE">THE - Theatre Studies</option>
+					<option value="TEC">TEC - Theatre Technology</option>
+					<option value="UIP">UIP - University Internship Program</option>
+					<option value="VFX">VFX - Visual Effects</option>
+					<option value="WGS">WGS - Women's And Gender Studies</option>
+					<option value="WLE">WLE - World Language Education</option>
+					<option value="MWR">MWR - Writing</option>
+					<option value="WRD">WRD - Writing Rhetoric And Discourse</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
+				&nbsp;&nbsp;
+				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+			</p>
+	    </div>
+	</div>
+	<div id="help"></div>
+	<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
+	<div id="ads"></div><h1>Stephanie Dohrn</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.2<br>Clarity: 4.3<br>Easiness: 4.2</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/12/2015<br>Class Name: MGT555<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 5<br>Grade Received: B+</div><div id="right"><div>I'm sorry, even though she's a easy grader... the class work load was insane. THERE WAS SOMETHING FOR EVERYTHING. SO MANY PIECES OF PAPER. It was like a new assignment every 15 minutes. She moved so quickly, so that's why it was easily graded but just a stream of confusion. Nothing was explained well, sort of a crap shoot. </div></div></div><div id="container" class="review"><div id="left">Date: 10/25/2014<br>Class Name: MGT555<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I will provide the voice of dissension to the general opinion. Though helpful and a fair grader, I felt the amount of group discussion brought down the level of the class. Get into a bad group and there goes any chance of meaningful insight. Text-heavy PwrPt slides lead to long lectures from someone who is obviously intelligent and capable. </div></div></div><div id="container" class="review"><div id="left">Date: 01/05/2014<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Professor Dohrn has been one of the best teachers I've had at any level.  She keeps class discussions interesting and sets you up for success in her class.  She is very straight forward when it comes to assignments. If you follow directions and put in some effort you will receive an A.  High recommend her for MGT 500.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2013<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Professor Dohrn's class was my first experience in grad school, and was a good way to ease back into classes. The Illiad and your assigned group are the best part of this class; if you make the best of them, you'll have a fantastic experience and great MBA colleagues going forward.</div></div></div><div id="container" class="review"><div id="left">Date: 05/29/2013<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>I describe Dohrn as harmless. If you're looking for an easy A, this is it, but if you're actually hoping to dig into management practices & theory or business ethics, prepare to be disappointed. She has zero business experience & her knowledge of & approach to the material are superficial. Not thought-provoking & not money well spent.</div></div></div><div id="container" class="review"><div id="left">Date: 06/03/2012<br>Class Name: MGT356<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>This is a Sports Management class and if you are not much into sports and dont have much knowledge about it then you will have lot of hard time in this class because she assigns papers every week, Plus she is a hard grader, Attendance counts and will take off points for comming late to class. Not Recommended!!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/17/2012<br>Class Name: MGT555<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really great professor.  Is easy in the sense, that she tells you what she wants and if you do it you will get an A.  Simple as that.  At the same time I really did learn a lot in her class.  Really like how she makes you were in groups.  Highly recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2011<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Boring class, but she tries to keep it interesting by keeping students involved.  Reads off power point and her voice will put you to sleep.  If you go to every class and work witin your group, you'll get an A. No mid-term. She gives you a study guid of the finals material the wek before the test and it's pretty easy if you study.</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2011<br>Class Name: MGT300<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Really easy teacher.  Just be sure to go to class and participate within your groups.  Never used the textbook.  Only a group final presentation and a final exam that was all material went over in class.</div></div></div><div id="container" class="review"><div id="left">Date: 06/12/2011<br>Class Name: MGT555<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great professor.  Kept a somewhat dry topic very topical and interesting.  There is a healthy amount of class participation (discussion leaders, case examples) and a group presentation.  Guest speakers added a lot of value to the class.  Highly recommended.</div></div></div><div id="container" class="review"><div id="left">Date: 03/10/2011<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is very easy going and cool professor.</div></div></div><div id="container" class="review"><div id="left">Date: 09/13/2010<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor was likeable, fun, funny, used lots of interesting video clips and excercises to get the point across. Felt a little like undergarduate, was hoping for something more challenging?but then again it was a nice easy A, good summer course.</div></div></div><div id="container" class="review"><div id="left">Date: 07/22/2010<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Great teacher! This was  my first DePaul class, and I was very pleased with it. It didn't exactly challenge me, but I did learn a lot in the course. There was a lot of reading, but it's nothing too heavy. I would strongly recommend her for this course!</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2010<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor! She certainly keeps things engaging- the class normally went by very quickly. There is a lot of group work and reading, but it's all relatively easy. I really enjoyed the class!</div></div></div><div id="container" class="review"><div id="left">Date: 07/12/2010<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very fair.  Easy if you do your work.  Shows an interest in students.</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2010<br>Class Name: MGMT500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I thought this was a great class. Stephanie does a good job of breaking up the lecture and making it interesting. Paper, group work and final and extra credit opportunity. Really enjoyable class</div></div></div><div id="container" class="review"><div id="left">Date: 04/29/2010<br>Class Name: MGMT500<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This class is horrible. ALOT OF WORK!!! Do not take this professor, her assignments are very unclear. i took this class as hybrid (half online & half in class). Lots of group work. online assignments consist of 4 page papers. AVOID this professor at all costs. the class in general sucks. so glad that my concentration is not mgmt</div></div></div><div id="container" class="review"><div id="left">Date: 10/09/2009<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>real world examples a little out of place</div></div></div><div id="container" class="review"><div id="left">Date: 09/10/2009<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Minimal work, easy A.</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2009<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She keeps class interesting and uses a lot of active group work.</div></div></div><div id="container" class="review"><div id="left">Date: 11/10/2008<br>Class Name: MGT798<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Sport Mgt: Stephanie is a great prof! There is no way you will end this class without learning. At times the lectures get dry, and she gets a bit flustered, but the guest speakers she lines up are AMAZING! She expects you to work for your grade, so don't take this as a blow off class or act disinterested because you WILL LOSE participation points.</div></div></div><div id="container" class="review"><div id="left">Date: 08/20/2008<br>Class Name: MGMT500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Professor Dohrn is awesome.  She is very caring and wants you to learn the material.  She has a lot of hands on material that help you understand the concepts.  I would highly recommend her.</div></div></div><div id="container" class="review"><div id="left">Date: 06/20/2008<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Very nice professor. REALLY HELPFUL and good person to study with. I came from India and she was my first professor. Great to start studies with such professor.</div></div></div><div id="container" class="review"><div id="left">Date: 04/14/2008<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>This class is an easy A but it?s really tedious.  There?s a final, presentation, and assignments or self assessments that are like 3 pages long and only worth 10 points.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2008<br>Class Name: MGMT500<br>Helpfulness: 3<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She really makes class interesting and interactive.  There were many hands-on group activities that were really helpful to get us to understand and apply concepts.  There are a lot of work assignments to do outside of class, but they really taught me a lot about my strengths and weaknesses in the workplace.  Lots of journaling assignments as well.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2007<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Fun class. Some in class group work. Some busy work, but not too difficult.</div></div></div><div id="container" class="review"><div id="left">Date: 10/14/2007<br>Class Name: MGT530<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Really enjoyable. If you're anything like me, after a long day at work the last thing you want is to be lectured at for 3 hours. This class isn't that way at all. She makes it interesting and interactive. Every week there are activities and  in class group work (not graded). I'd take her again in a minute if she offered something I needed.</div></div></div><div id="container" class="review"><div id="left">Date: 09/05/2007<br>Class Name: MGT530<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Her class was highly interactive and we stopped doing lecture in lieu of group discussion and projects by class 3. Final was a group presentation.  Never bored, but could have used more concept work. Overall I liked her a lot.  She's not pretentious and really tried to make the coursework applicable to our jobs/lives.  Not tough.</div></div></div><div id="container" class="review"><div id="left">Date: 04/11/2007<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She assigns way too much work. However, you learn a lot about yourself and the in-class exercises are extremely helpful in preparing you for the business world.  I think that I will be a better manager for it.</div></div></div><div id="container" class="review"><div id="left">Date: 03/14/2007<br>Class Name: MGT500<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Good Teacher.  Doesn't try to overanalyze management.  Lots of groupwork.  An A is easily attainable if you put forth the effort.  Recommended</div></div></div><div id="container" class="review"><div id="left">Date: 01/29/2007<br>Class Name: MGT500<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is teaching wonderful and good teacher. You can learn a lot</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				 	$( document ).ready(function() {
+				 		updateCourseCartCount();
+    					$(".prefix").select2();
+    					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
+    					run();
+					});
+				</script></html>
