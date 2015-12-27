@@ -445,10 +445,13 @@ function creditSearch()
 {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
 	var credit = document.getElementsByClassName('credit-input')[0].value;
-	var search = prefix.toLowerCase() + '-credits=' + credit;
-	document.getElementById('tipue_search_input').value = '"' + search + '"';
-	document.getElementById('field').submit();
-	saveCreditPrefix();
+	if(isNaN(credit) == false)
+	{
+		var search = prefix.toLowerCase() + '-credits=' + credit;
+		document.getElementById('tipue_search_input').value = '"' + search + '"';
+		document.getElementById('field').submit();
+		saveCreditPrefix();
+	}
 }
 
 function updateCourseCartCount()
