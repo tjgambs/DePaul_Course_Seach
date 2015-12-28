@@ -1023,7 +1023,7 @@ function loadBooks(number)
 				    				imageHtml = '<img style="float: left;" height="110px" width="90px" border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=' + isbn + '&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mock09-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=mock09-20&l=as2&o=1&a=' + isbn + '" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />';
 				    				html += '<a target="_blank" style="color:#333;" href="' + url + '">';
 				    				html += imageHtml +'</a>';
-				    				html += '<a target="_blank" style="color:#333;" href="' + url + '"><h3 style="padding-left:100px; height:110px;">' + name + '</h3></a></span>';
+				    				html += '<h3 style="padding-left:100px; height:110px;"><a target="_blank" style="color:#333;" href="' + url + '">' + name + '</a></h3></span>';
 				    			}
 				    			else
 				    			{
