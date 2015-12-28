@@ -8,7 +8,7 @@
 					<script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
 					<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,300italic" rel="stylesheet">
 					<link rel="shortcut icon" href="../../../icon.png">
-				    <link rel="stylesheet" type="text/css" href="../../../css/tipuesearch.css">
+				    <link rel="stylesheet" id="tipue3" type="text/css" href="../../../css/tipuesearch.css">
 					<script>
 						(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -206,7 +206,7 @@
 							</select>
 						</div>
 						<div style="display: inline-block; padding-right:10px">
-							<input type="text" class="number" placeholder="NUMBER" style="width:100px;">
+							<input type="text" class="number inputbox" placeholder="NUMBER" style="width:100px;">
 						</div>
 						<div style="display: inline-block;">
 							<div style="style=padding: 5%;">
@@ -411,9 +411,31 @@
 			</p>
 	    </div>
 	</div>
-	<div id="help"></div>
-	<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-	<div id="ads"></div><h1>Katherine Brucher</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/21/2015<br>Class Name: HON110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Dr. Brucher was a great Discover Chicago teacher and made each class very interesting. Doing the assigned reading is crucial to doing well in the class. She especially takes note of participation and expects you to be able to formulate your own opinions.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's so basic and really boring and awkward. I took the class because it sounded interesting but she killed any chance of that.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very boring class. She is nice and tries, and this does help the class make it bearable. For a requirement seminar, i expected something easier, but the concepts taught and the experience she has in the field make the class much better. get ready for class participation! also make sure you read!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is kinda boring, But is very nice and very helpful if you need help. She is a very easy grader and the papers are easy no final or midterm. overall not a bad class for a sophmore seminar easy A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2009<br>Class Name: MUS265<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Pretty boring, but she knows her subject and makes sure that you understand. Be ready for &quot;hands on&quot; class activities.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2008<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class is so boring.  I can attribute much of this to the fact that I had no interest at all in the class, but at the same time I'm going to forget the material the second I complete the final.  She tries to get the class to sing along and dance, it made me feel as if I had been demoted back to the second grade.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+	<div id="help">
+	    <div id="help-container">
+	    	<h2>How to Use Mocksched.com</h2>
+			<h2 align="left" style="color: #aaa; font-size: 12px;">
+			1) Choose the course prefix you are looking for.<br />
+			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
+			3) After searching, choose the course you are looking for by pressing the course title.<br />
+			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
+			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
+			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
+
+			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
+			</h2>
+	    </div>
+	</div>
+				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
+				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-6459268015898332"
+	     data-ad-slot="6431202807"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script> --><h1>Katherine Brucher</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 3.8<br>Clarity: 3.8<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/21/2015<br>Class Name: HON110<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Dr. Brucher was a great Discover Chicago teacher and made each class very interesting. Doing the assigned reading is crucial to doing well in the class. She especially takes note of participation and expects you to be able to formulate your own opinions.</div></div></div><div id="container" class="review"><div id="left">Date: 10/23/2013<br>Class Name: LSP200<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She's so basic and really boring and awkward. I took the class because it sounded interesting but she killed any chance of that.</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Very boring class. She is nice and tries, and this does help the class make it bearable. For a requirement seminar, i expected something easier, but the concepts taught and the experience she has in the field make the class much better. get ready for class participation! also make sure you read!</div></div></div><div id="container" class="review"><div id="left">Date: 12/05/2009<br>Class Name: LSP200<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She is kinda boring, But is very nice and very helpful if you need help. She is a very easy grader and the papers are easy no final or midterm. overall not a bad class for a sophmore seminar easy A or B.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2009<br>Class Name: MUS265<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Pretty boring, but she knows her subject and makes sure that you understand. Be ready for &quot;hands on&quot; class activities.</div></div></div><div id="container" class="review"><div id="left">Date: 02/29/2008<br>Class Name: ISP200<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Class is so boring.  I can attribute much of this to the fact that I had no interest at all in the class, but at the same time I'm going to forget the material the second I complete the final.  She tries to get the class to sing along and dance, it made me feel as if I had been demoted back to the second grade.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		updateCourseCartCount();
     					$(".prefix").select2();

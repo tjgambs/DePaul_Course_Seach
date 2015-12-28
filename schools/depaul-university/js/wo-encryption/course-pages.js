@@ -38,8 +38,6 @@ function readSelections()
 
 function run()
 {
-	$("#help").load("http://mocksched.com/help.html");
-	$("#ads").load("http://mocksched.com/ads.html");
 	readSelections();
 	readCreditSelections();
 	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
