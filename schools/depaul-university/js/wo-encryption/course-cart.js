@@ -74,7 +74,7 @@ function run()
 function saveSelections()
 {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
-	var number = document.getElementsByClassName('course-number')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
 	writeCookie('depaul-university-standard-prefix',prefix);
 	writeCookie('depaul-university-standard-number',number);
 }
@@ -105,7 +105,7 @@ function readSelections()
 	}
 	if(number)
 	{
-		document.getElementsByClassName('course-number')[0].value = number;
+		document.getElementsByClassName('number')[0].value = number;
 	}
 }
 
@@ -145,7 +145,7 @@ function formatStatus(response)
 	var courseStatus = [];
 	for(var i = 0; i < courses.length; i++)
 	{
-		var number = courses[i].getElementsByClassName('course-number')[0].innerHTML;
+		var number = courses[i].getElementsByClassName('number')[0].innerHTML;
 		for(course of data)
 		{
 			if(course.class_nbr == number)
@@ -183,7 +183,7 @@ function fixCookieStatus(course,status)
 	var cookies = document.cookie.split(';');
 	var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
 	var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
-	var number = course.getElementsByClassName('course-number')[0].innerHTML;
+	var number = course.getElementsByClassName('number')[0].innerHTML;
 	var cookieName = ['depaul-university','(' + term + ')',firstName,lastName,'add',number].join('-').split(' ').join('-');
 	var oldCookie = readCookie(cookieName);
 	var saveCookies = [];
@@ -660,7 +660,7 @@ function formatCookies(value)
 		    	html += '<td class="start">' + i[6] + '</td>';
 		    	html += '<td class="end">' + i[7] + '</td>';
 		    	html += '<td class="section">' + i[8] + '</td>';
-		    	html += '<td class="course-number">' + i[9] + '</td>';
+		    	html += '<td class="number">' + i[9] + '</td>';
 		    	html += '<td class="location">' + i[10] + '</td>';
 		    	html += '<td class="days">' + i[11] + '</td>';
 				html += '</tr>'
@@ -728,7 +728,7 @@ function saveUnchecked()
 			var save = [];
 			for(var i = 0; i < courses.length; i++)
 			{
-				save.push(courses[i].getElementsByClassName('course-number')[0].innerHTML);
+				save.push(courses[i].getElementsByClassName('number')[0].innerHTML);
 			}
 			writeCookie('depaul-university-('+term+')-unchecked' + j,save,1);
 		}
@@ -958,7 +958,7 @@ function convertTime(time)
 function submitForm()
 {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
-	var number = document.getElementsByClassName('course-number')[0].value;
+	var number = document.getElementsByClassName('number')[0].value;
 	if(isNaN(number) == false)
 	{
 		var search = prefix.toUpperCase() + '  ' + number;
@@ -996,7 +996,7 @@ function loadBooks(number)
 				if(all_courses[i].getElementsByClassName("checked")[0])
 				{
 					names.push(all_courses[i].getElementsByClassName('name')[0].innerHTML);
-					numbers.push(all_courses[i].getElementsByClassName('course-number')[0].innerHTML);
+					numbers.push(all_courses[i].getElementsByClassName('number')[0].innerHTML);
 				}
 			}
 	     	var html = '<h1 align="center">Required Books</h1>';
