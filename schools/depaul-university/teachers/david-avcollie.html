@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>David Avcollie</h1><hr><div><h2>Overall Quality: 2.69<br><br>Helpfulness: 2.63<br>Clarity: 2.75<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/06/2013<br>Class Name: SPEECA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>David was my speech coach and teacher at the Goodman School at SAIC in 1973/74. He was an amazing teacher, clearly committed to enhancing our learning experiences. Outrageous and courageous, fearless really, exactly the kind of truth you need to be an actor.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: THTRMFA1<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I studied with him in 1990. He is a festering boil on the butt of humanity. He played favorites, picked on some relentlessly. One minute he would compliment, the next he was yelling in someone's face, even if nothing had changed at all. He was insane. Hell is a class under him for eternity. I actually had to have therapy after one year with him.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2009<br>Class Name: THEATTHEA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I was David's student in the early 80s  so we ar going back a few years.I remember David's passion for acting ,particularrly Shakespreare, and how his excitement was infexious to the clasroom. He promised a free lesson to any returning graduate. I am looking forward to that lesson if i ever catch up  to David.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2008<br>Class Name: ACT1<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>David clearly had favorites-witch in some cases was baffling.  He was repeatedly abusive and rude, almost on the verge of crazy at times.  Super erratic.  Loved it when you brown-nosed to to him. Ultimately, he was my reason for leaving DePaul. It was a very unhealthy environment.  I wish I could have had a better experience.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2007<br>Class Name: ACT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This man abused me and my fellow students mercilessly and needlessly. He should not be allowed near any living being which has the capability for thought or feeling.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2006<br>Class Name: VOICE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Exhibited very seriously inappropriate behavior.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2006<br>Class Name: DRAMA<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I have ever encountered.  Thoroughly unprofessional, rude, unintelligent, insensitive.</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2005<br>Class Name: ACTING<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>David was far and away the best teacher I had at DePaul. Really funny, and knows how to get great performances out of his students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>David Avcollie</h1><hr><div><h2>Overall Quality: 2.69<br><br>Helpfulness: 2.63<br>Clarity: 2.75<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/06/2013<br>Class Name: SPEECA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>David was my speech coach and teacher at the Goodman School at SAIC in 1973/74. He was an amazing teacher, clearly committed to enhancing our learning experiences. Outrageous and courageous, fearless really, exactly the kind of truth you need to be an actor.</div></div></div><div id="container" class="review"><div id="left">Date: 02/09/2010<br>Class Name: THTRMFA1<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I studied with him in 1990. He is a festering boil on the butt of humanity. He played favorites, picked on some relentlessly. One minute he would compliment, the next he was yelling in someone's face, even if nothing had changed at all. He was insane. Hell is a class under him for eternity. I actually had to have therapy after one year with him.</div></div></div><div id="container" class="review"><div id="left">Date: 11/27/2009<br>Class Name: THEATTHEA<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I was David's student in the early 80s  so we ar going back a few years.I remember David's passion for acting ,particularrly Shakespreare, and how his excitement was infexious to the clasroom. He promised a free lesson to any returning graduate. I am looking forward to that lesson if i ever catch up  to David.</div></div></div><div id="container" class="review"><div id="left">Date: 02/04/2008<br>Class Name: ACT1<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>David clearly had favorites-witch in some cases was baffling.  He was repeatedly abusive and rude, almost on the verge of crazy at times.  Super erratic.  Loved it when you brown-nosed to to him. Ultimately, he was my reason for leaving DePaul. It was a very unhealthy environment.  I wish I could have had a better experience.</div></div></div><div id="container" class="review"><div id="left">Date: 10/16/2007<br>Class Name: ACT101<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This man abused me and my fellow students mercilessly and needlessly. He should not be allowed near any living being which has the capability for thought or feeling.</div></div></div><div id="container" class="review"><div id="left">Date: 03/21/2006<br>Class Name: VOICE<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Exhibited very seriously inappropriate behavior.</div></div></div><div id="container" class="review"><div id="left">Date: 02/20/2006<br>Class Name: DRAMA<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>The worst teacher I have ever encountered.  Thoroughly unprofessional, rude, unintelligent, insensitive.</div></div></div><div id="container" class="review"><div id="left">Date: 08/28/2005<br>Class Name: ACTING<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>David was far and away the best teacher I had at DePaul. Really funny, and knows how to get great performances out of his students.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

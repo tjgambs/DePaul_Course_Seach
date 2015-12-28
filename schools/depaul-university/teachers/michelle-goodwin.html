@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Michelle Goodwin - 1.75</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Michelle Goodwin - 1.12</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Michelle Goodwin</h1><hr><div><h2>Overall Quality: 1.75<br><br>Helpfulness: 1.5<br>Clarity: 2.0<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 11/13/2006<br>Class Name: TORTSYO<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Overrated as an individual and a Professor.  She really isn't that smart.  She is &quot;smart&quot; becuase of her &quot;status&quot; and everyone knows it but doesn't say it...  Sadly, if you're taking her for Torts you had no choice.  Her final is tricky and she is very tricky.  Beware.</div></div></div><div id="container" class="review"><div id="left">Date: 03/15/2006<br>Class Name: LAW<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>she truly knows her stuff, but she's better off writing articles than teaching.</div></div></div><div id="container" class="review"><div id="left">Date: 11/15/2005<br>Class Name: TORTS<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a brilliant woman, but not a good professor.  She seems disinterested half the time with class and can't really focus.  Also not very prepared.  But she is amazing one on one...</div></div></div><div id="container" class="review"><div id="left">Date: 03/02/2004<br>Class Name: ETHICS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Useless - A 5 year old could have done a better job.  And I pay $25,000 a year for this crap&#63;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Michelle Goodwin</h1><hr><div><h2>Overall Quality: 1.12<br><br>Helpfulness: 1.25<br>Clarity: 1.0<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 04/14/2006<br>Class Name: TORTS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Not a good class to take with her, she did not know her stuff & was not clear at all. Very disorganized...we had her when she first started, so maybe she has changed her style.</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: TORTS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>When calling on students, Goodwin would have to keep asking students questions that they had already discussed (because she was too busy reading her commercial outline).  She missed a few classes that she should have given us warning of (because she had meetings in other states).  She was not helpful and very unprepared.  HORRIBLE!</div></div></div><div id="container" class="review"><div id="left">Date: 03/28/2006<br>Class Name: TORTS<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div><div id="container" class="review"><div id="left">Date: 02/22/2006<br>Class Name: TORTS<br>Helpfulness: 2<br>Clarity: 1<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Professor Goodwin needs to stop teaching Torts and focus on health law; clearly that's how she feels about it.  I'd say that at least 30% of the time she was unprepared.  Her final is the worst written final I had my first semester.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

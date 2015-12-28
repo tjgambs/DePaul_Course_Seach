@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Drew Depriest</h1><hr><div><h2>Overall Quality: 4.25<br><br>Helpfulness: 4.5<br>Clarity: 4.0<br>Easiness: 4.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/26/2014<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Taking this class my 1st quarter of senior year it felt like a waste of time, but SUPER EASY. He lets you redo assignments by end of quarter, only need the one book for last memo. Took it at night and usually got out early.</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I had MKT376 with Drew on Thursday nights and I still thoroughly enjoyed going to class despite it being thirsty Thursday - yes, he is that good. Top 3 professors in my college career and probably the most valuable class that I will use towards my professional career. If you turn in your assignments on time, you will do well. AWESOME PROF!</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I definitely learned some things in this course. Come to class, you learn from each other, attend the networking events...I loved this class. This course helps you to prepare for (business) life and it's not hard at all! Take the class!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Drew is a young nice guy. He is a new teacher and is still learning. You will receive by far the most amount of paper work in form of slides- none of which are on D2L. No grades there either. The professors who teach this class are supposed to be charismatic, strong speakers but he is not cut from the same cloth. Easy to get an A. but value? Nope</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor and know how to build incredible rapport with all his students. I would definately recommend taking his class, if possible. Very professional, yet relevant. I like the way allowed redos an virtually every assignment. If you fail this class, it is solely reflective on your effort.</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor! Depriest is passionate about what he does and uses real world references to help students learn. He is young and knows a lot about what he does. The first day he played Calvin Harris during break... Take him!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Drew Depriest</h1><hr><div><h2>Overall Quality: 4.25<br><br>Helpfulness: 4.5<br>Clarity: 4.0<br>Easiness: 4.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/26/2014<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>Taking this class my 1st quarter of senior year it felt like a waste of time, but SUPER EASY. He lets you redo assignments by end of quarter, only need the one book for last memo. Took it at night and usually got out early.</div></div></div><div id="container" class="review"><div id="left">Date: 09/23/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I had MKT376 with Drew on Thursday nights and I still thoroughly enjoyed going to class despite it being thirsty Thursday - yes, he is that good. Top 3 professors in my college career and probably the most valuable class that I will use towards my professional career. If you turn in your assignments on time, you will do well. AWESOME PROF!</div></div></div><div id="container" class="review"><div id="left">Date: 08/22/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I definitely learned some things in this course. Come to class, you learn from each other, attend the networking events...I loved this class. This course helps you to prepare for (business) life and it's not hard at all! Take the class!!</div></div></div><div id="container" class="review"><div id="left">Date: 04/02/2013<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Drew is a young nice guy. He is a new teacher and is still learning. You will receive by far the most amount of paper work in form of slides- none of which are on D2L. No grades there either. The professors who teach this class are supposed to be charismatic, strong speakers but he is not cut from the same cloth. Easy to get an A. but value? Nope</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2013<br>Class Name: MKT376<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great Professor and know how to build incredible rapport with all his students. I would definately recommend taking his class, if possible. Very professional, yet relevant. I like the way allowed redos an virtually every assignment. If you fail this class, it is solely reflective on your effort.</div></div></div><div id="container" class="review"><div id="left">Date: 01/12/2013<br>Class Name: MKT376<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Great professor! Depriest is passionate about what he does and uses real world references to help students learn. He is young and knows a lot about what he does. The first day he played Calvin Harris during break... Take him!!!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

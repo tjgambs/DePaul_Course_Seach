@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Mark Arendt</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.8<br>Clarity: 4.5<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: ENGLISH120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B</div><div id="right"><div>He very loves literature. This class has three parts: poem, fiction and drama. There are 3 essays and reading questions sheet. If you love to read literature and spend time to write essay, easy to get an A. He allows to rewrite the papers also. </div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Arendt shares his love of poetry with students in  a a great way. Lots of reading from the Norton, but great, deep analysis of the readings in class. Papers are straightforward and not meant to trick you.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2014<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Arendt definitely loves to share poetry with his students. He assigns 4-5 poems a class to read sometimes adds a simple worksheet that you do in groups. Participate. He doesn't care how much you do/don't know about poetry, he just wants you to discuss the poems. Only neg is his voice is really relaxing. 4-5 pg Midterm and final papers on a poem.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2013<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>His classes kind of get boring towards the end of the period, but overall he's such a nice guy who cares so much about literature. He loves his job and just wants his students to have an appreciation for the stories we read. Every night readings are assigned, but it's easy to get away without doing any of them as long as you PARTICIPATE</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2013<br>Class Name: ENG221<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I haven't yet had a professor who loves student participation as much as him. I think what makes him exceptional as a professor is how he doesn't automatically negate what students say as incorrect, but rather encourages opinions and thoughts. Work is straightforward, easy. Readings are what you'd expect in English. Overall, I think he was great.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2012<br>Class Name: ENG201<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took this class in the Spring Quarter of 2012. He is super passionate! It was a 3 hour night class but it was still good- Great Teacher! If you love to read, this is the class for you. because there is quite a lot of it. This class will also help improve your writing skills. The books are used religiously, so don't skip out on buying any of them!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Mark Arendt</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.8<br>Clarity: 4.5<br>Easiness: 3.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/02/2014<br>Class Name: ENGLISH120<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: B</div><div id="right"><div>He very loves literature. This class has three parts: poem, fiction and drama. There are 3 essays and reading questions sheet. If you love to read literature and spend time to write essay, easy to get an A. He allows to rewrite the papers also. </div></div></div><div id="container" class="review"><div id="left">Date: 06/07/2014<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Dr. Arendt shares his love of poetry with students in  a a great way. Lots of reading from the Norton, but great, deep analysis of the readings in class. Papers are straightforward and not meant to trick you.</div></div></div><div id="container" class="review"><div id="left">Date: 03/09/2014<br>Class Name: ENG220<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Arendt definitely loves to share poetry with his students. He assigns 4-5 poems a class to read sometimes adds a simple worksheet that you do in groups. Participate. He doesn't care how much you do/don't know about poetry, he just wants you to discuss the poems. Only neg is his voice is really relaxing. 4-5 pg Midterm and final papers on a poem.</div></div></div><div id="container" class="review"><div id="left">Date: 05/08/2013<br>Class Name: ENG120<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>His classes kind of get boring towards the end of the period, but overall he's such a nice guy who cares so much about literature. He loves his job and just wants his students to have an appreciation for the stories we read. Every night readings are assigned, but it's easy to get away without doing any of them as long as you PARTICIPATE</div></div></div><div id="container" class="review"><div id="left">Date: 02/12/2013<br>Class Name: ENG221<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I haven't yet had a professor who loves student participation as much as him. I think what makes him exceptional as a professor is how he doesn't automatically negate what students say as incorrect, but rather encourages opinions and thoughts. Work is straightforward, easy. Readings are what you'd expect in English. Overall, I think he was great.</div></div></div><div id="container" class="review"><div id="left">Date: 11/28/2012<br>Class Name: ENG201<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I took this class in the Spring Quarter of 2012. He is super passionate! It was a 3 hour night class but it was still good- Great Teacher! If you love to read, this is the class for you. because there is quite a lot of it. This class will also help improve your writing skills. The books are used religiously, so don't skip out on buying any of them!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Stephani Mason</h1><hr><div><h2>Overall Quality: 3.2<br><br>Helpfulness: 3.2<br>Clarity: 3.2<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/12/2015<br>Class Name: ACC308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Mason is amazing! Although she literally shouted at us a few times but she clearly cared a LOT and wanted us to succeed, and I really appreciate here for doing that!  Weekly projects, 2 exams, and a research paper. I Would take here again in a heartbeat!</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: ACC305<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>DO NOT TAKE HER. Worst accounting class ever. I'm good at accounting but she does a terrible job teaching you and DOES NOT GIVE PRACTICE MIDTERMS OR FINALS TO STUDY like all the other professors. AVOID AT ALL COSTS.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have read reviews from here and other places she has taught and they are pretty accurate. Can be rude and condescending to students. Seems more interested in bragging about herself. Tests are as difficult as advertised.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is rude! Often talks down to the class. Avoid!</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2014<br>Class Name: ACC305306<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mason's class is not easy, but if you got into accounting so you didn't have to work hard, quit while you still can. You will learn more in her class than in any of your other classes at DePaul and she is EXTREMELY helpuful in office hours and via email. My favorite teacher I've had at DePaul, BY FAR. and Im a fin major!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2013<br>Class Name: ACC305<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Professor Mason's class is definitely not easy. She is clear during class and explains concepts fairly well. However, her midterm and final are very difficult. They are much more complex than the examples learned in class. The midterm and final are CPA like if not harder. Many people failed and no one got A's. Final project and large curve.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Stephani Mason</h1><hr><div><h2>Overall Quality: 3.2<br><br>Helpfulness: 3.2<br>Clarity: 3.2<br>Easiness: 1.7</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 12/12/2015<br>Class Name: ACC308<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Mason is amazing! Although she literally shouted at us a few times but she clearly cared a LOT and wanted us to succeed, and I really appreciate here for doing that!  Weekly projects, 2 exams, and a research paper. I Would take here again in a heartbeat!</div></div></div><div id="container" class="review"><div id="left">Date: 11/18/2015<br>Class Name: ACC305<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: B</div><div id="right"><div>DO NOT TAKE HER. Worst accounting class ever. I'm good at accounting but she does a terrible job teaching you and DOES NOT GIVE PRACTICE MIDTERMS OR FINALS TO STUDY like all the other professors. AVOID AT ALL COSTS.</div></div></div><div id="container" class="review"><div id="left">Date: 10/28/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>I have read reviews from here and other places she has taught and they are pretty accurate. Can be rude and condescending to students. Seems more interested in bragging about herself. Tests are as difficult as advertised.</div></div></div><div id="container" class="review"><div id="left">Date: 10/06/2015<br>Class Name: 308<br>Helpfulness: 2<br>Clarity: 3<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>She is rude! Often talks down to the class. Avoid!</div></div></div><div id="container" class="review"><div id="left">Date: 08/15/2014<br>Class Name: ACC305306<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Mason's class is not easy, but if you got into accounting so you didn't have to work hard, quit while you still can. You will learn more in her class than in any of your other classes at DePaul and she is EXTREMELY helpuful in office hours and via email. My favorite teacher I've had at DePaul, BY FAR. and Im a fin major!!</div></div></div><div id="container" class="review"><div id="left">Date: 12/09/2013<br>Class Name: ACC305<br>Helpfulness: 3<br>Clarity: 2<br>Easiness: 2<br>Grade Received: B+</div><div id="right"><div>Professor Mason's class is definitely not easy. She is clear during class and explains concepts fairly well. However, her midterm and final are very difficult. They are much more complex than the examples learned in class. The midterm and final are CPA like if not harder. Many people failed and no one got A's. Final project and large curve.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

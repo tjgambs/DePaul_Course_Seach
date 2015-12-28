@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Kathryn Burke</h1><hr><div><h2>Overall Quality: 3.14<br><br>Helpfulness: 3.29<br>Clarity: 3.0<br>Easiness: 3.86</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/27/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>seriously what a lazy teacher. Doesn't do anything productive. Takes forever grading works. Its not even like there is alot of grading either. assignments are 3 essays which are about 1 1/2 pages long and than there is a midterm and final paper. which right now, none of the Phl 100 spring 2008-09 has recieved our grade.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she is pretty easy but im pretty sure u can find an easy teacher without all the baggage this one brings with her. Its beenabout two & she has not even post up the grades. As a grade everyone in the class recieved a IN which means incomplete. Most of the students emailed her including me about it but she didnt respond, she never responds.</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was an easy teacher who was interesting enough but when the time came for her to actually be usefull and available for feedback, she wasn't there.  Class was cancelled at a time when assignments were due and she says shes available to send paper drafts to but she doesn't read them.  There are better teachers for her classes than her.  Rethink!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a great professor.  She is very clear and helpful for an abstract subject.  Easy to listen to her lecture.  Definitely take her if you have the option.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was totally awesome at sitting down with you and helping you understand what exactly was going on. I would totally take another class that she taught any day.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>easy teacher. she helps understand the concepts because they are confusing. she doesnt follow her syllabus if students feel confused, so she makes sure everyone is on the same page. and there is a midterm and final but questions are given prior and answers discussed prior as well. Overall, nice and helpful teacher</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She has a great accent. I could listen to her talk for hours. Is she British&#63;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Kathryn Burke</h1><hr><div><h2>Overall Quality: 3.14<br><br>Helpfulness: 3.29<br>Clarity: 3.0<br>Easiness: 3.86</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/27/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>seriously what a lazy teacher. Doesn't do anything productive. Takes forever grading works. Its not even like there is alot of grading either. assignments are 3 essays which are about 1 1/2 pages long and than there is a midterm and final paper. which right now, none of the Phl 100 spring 2008-09 has recieved our grade.</div></div></div><div id="container" class="review"><div id="left">Date: 06/26/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she is pretty easy but im pretty sure u can find an easy teacher without all the baggage this one brings with her. Its beenabout two & she has not even post up the grades. As a grade everyone in the class recieved a IN which means incomplete. Most of the students emailed her including me about it but she didnt respond, she never responds.</div></div></div><div id="container" class="review"><div id="left">Date: 05/20/2009<br>Class Name: PHL100<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was an easy teacher who was interesting enough but when the time came for her to actually be usefull and available for feedback, she wasn't there.  Class was cancelled at a time when assignments were due and she says shes available to send paper drafts to but she doesn't read them.  There are better teachers for her classes than her.  Rethink!!</div></div></div><div id="container" class="review"><div id="left">Date: 05/06/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>She is a great professor.  She is very clear and helpful for an abstract subject.  Easy to listen to her lecture.  Definitely take her if you have the option.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was totally awesome at sitting down with you and helping you understand what exactly was going on. I would totally take another class that she taught any day.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>easy teacher. she helps understand the concepts because they are confusing. she doesnt follow her syllabus if students feel confused, so she makes sure everyone is on the same page. and there is a midterm and final but questions are given prior and answers discussed prior as well. Overall, nice and helpful teacher</div></div></div><div id="container" class="review"><div id="left">Date: 01/02/2009<br>Class Name: PHL100<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>She has a great accent. I could listen to her talk for hours. Is she British&#63;</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

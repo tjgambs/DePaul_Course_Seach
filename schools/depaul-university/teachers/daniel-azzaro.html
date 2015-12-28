@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Daniel Azzaro</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.3<br>Clarity: 3.8<br>Easiness: 3.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/03/2015<br>Class Name: PRAD<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is a tough one man. I really hear nothing but good things about this guy. Took him last semester and I had mixed feelings. The guy seems super nice and cool, but I wish class was a little more serious. Never thought I'd say that. But I just couldn't handle the constant joking with past students. Frustrating at times, but overall, class was ok.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2012<br>Class Name: LSP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awful. He might be better in his element (prad classes) but this course that he came up with was such a stitched-together weak excuse for a course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2012<br>Class Name: PRAD392<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the best professors I've ever had. Hands down. Every lecture was interesting and engaging. He is incredibly funny and genuinely cares about his students. A real college professor. Doesn't care about attendance, but rather that you grasp the material. He gives minimal work and understands that students have lives! TAKE HIS CLASS!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2012<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Incredible professor and has 30+ years of experience in the advertising and marketing business so he is very knowledgable. I highly recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2012<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Simply amazing!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2011<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I've never had a class with him; I graduated a year ago from DePaul and live with two girls who still attend there. With that said, ALL I HEAR ABOUT IS DAN AZZARO so he must be doing something right.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2011<br>Class Name: CMN291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher he is very clear and really tries to get the class involved.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2010<br>Class Name: CMNS291<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Azzaro is cool with me. He's really corny and his handwriting is illegible. But he's super smart and knows everything about the advertising world. He's an average grader.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Daniel Azzaro</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.3<br>Clarity: 3.8<br>Easiness: 3.1</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 03/03/2015<br>Class Name: PRAD<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This is a tough one man. I really hear nothing but good things about this guy. Took him last semester and I had mixed feelings. The guy seems super nice and cool, but I wish class was a little more serious. Never thought I'd say that. But I just couldn't handle the constant joking with past students. Frustrating at times, but overall, class was ok.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2012<br>Class Name: LSP200<br>Helpfulness: 2<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Awful. He might be better in his element (prad classes) but this course that he came up with was such a stitched-together weak excuse for a course.</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2012<br>Class Name: PRAD392<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>One of the best professors I've ever had. Hands down. Every lecture was interesting and engaging. He is incredibly funny and genuinely cares about his students. A real college professor. Doesn't care about attendance, but rather that you grasp the material. He gives minimal work and understands that students have lives! TAKE HIS CLASS!!</div></div></div><div id="container" class="review"><div id="left">Date: 03/11/2012<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Incredible professor and has 30+ years of experience in the advertising and marketing business so he is very knowledgable. I highly recommend him.</div></div></div><div id="container" class="review"><div id="left">Date: 03/07/2012<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Simply amazing!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/09/2011<br>Class Name: PRAD392<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>I've never had a class with him; I graduated a year ago from DePaul and live with two girls who still attend there. With that said, ALL I HEAR ABOUT IS DAN AZZARO so he must be doing something right.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2011<br>Class Name: CMN291<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Great teacher he is very clear and really tries to get the class involved.</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2010<br>Class Name: CMNS291<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Azzaro is cool with me. He's really corny and his handwriting is illegible. But he's super smart and knows everything about the advertising world. He's an average grader.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

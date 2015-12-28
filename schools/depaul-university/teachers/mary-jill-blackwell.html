@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Mary Jill Blackwell</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.9<br>Clarity: 4.4<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/05/2015<br>Class Name: PSY342<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. B is awesome! She is so nice and really values her students.  Homeworks are not hard and you get to do your own research study!  No midterm or final, just a research paper at the end that you work on throughout the quarter.  Will take her again if I can.  She is clear, cares a lot, and even online her lectures were interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2011<br>Class Name: PSY364<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Love this teacher. She is hilarious. Her class is interesting and her tests are open book and open note. You have a few papers and some journals but its easy. You actually learn something useful for life too. Take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: PSY342<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>SO helpful and understanding.  There are a lot of assignments due but she is really lenient with due dates so if you talk to her ahead of time they are never an issue. She is also hilarious and kind of scatterbrained but in a way that keeps the class interested</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2010<br>Class Name: PSYCH242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>PROFESSOR JILL IS THE BEST TEACHER I HAVE EVER HAD AT DEPAUL!! SHE IS SO SWEET AND SINCERE AND CARES ABOUT HER STUDENTS SO MUCH AND WANTS US ALL TO DO WELL AND SHE IS ALWAYS WILLING TO HELP US OUT NO MATTER WHAT. VERY ENTHUSIASTIC AND VERY INTERESTED IN THE SUBJECT. TAKE HER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: PSY242<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Just the nicest lady. She's totally helpful, she even put my on her roster when her 300 level class was full. She's very helpful, really, friendly, responds to email questions ASAP and is great when it comes to writing the PSY 242 final paper. Def take her she's a sweet heart</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2009<br>Class Name: PSY364<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I also took her for research 1 and she is awesome. I love her. All the lectures are on blackboard so its really easy to follow, and shes so excited to be there and teaching and keeps your intersested. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2009<br>Class Name: PSY241<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's absent minded, yet hilarious. she has attendance worksheets and games during class. always lets class out early. very cheerful, always smiling. she holds your hand for write ups and is a lenient grader. she's not too skilled in statistics and sometimes confuses students from what they learned in stats 1. worried about research methods 2</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Mary Jill Blackwell</h1><hr><div><h2>Overall Quality: 4.7<br><br>Helpfulness: 4.9<br>Clarity: 4.4<br>Easiness: 4.3</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/05/2015<br>Class Name: PSY342<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Dr. B is awesome! She is so nice and really values her students.  Homeworks are not hard and you get to do your own research study!  No midterm or final, just a research paper at the end that you work on throughout the quarter.  Will take her again if I can.  She is clear, cares a lot, and even online her lectures were interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 05/05/2011<br>Class Name: PSY364<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Love this teacher. She is hilarious. Her class is interesting and her tests are open book and open note. You have a few papers and some journals but its easy. You actually learn something useful for life too. Take her class.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2011<br>Class Name: PSY342<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>SO helpful and understanding.  There are a lot of assignments due but she is really lenient with due dates so if you talk to her ahead of time they are never an issue. She is also hilarious and kind of scatterbrained but in a way that keeps the class interested</div></div></div><div id="container" class="review"><div id="left">Date: 03/12/2010<br>Class Name: PSYCH242<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>PROFESSOR JILL IS THE BEST TEACHER I HAVE EVER HAD AT DEPAUL!! SHE IS SO SWEET AND SINCERE AND CARES ABOUT HER STUDENTS SO MUCH AND WANTS US ALL TO DO WELL AND SHE IS ALWAYS WILLING TO HELP US OUT NO MATTER WHAT. VERY ENTHUSIASTIC AND VERY INTERESTED IN THE SUBJECT. TAKE HER!!!</div></div></div><div id="container" class="review"><div id="left">Date: 11/24/2009<br>Class Name: PSY242<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Just the nicest lady. She's totally helpful, she even put my on her roster when her 300 level class was full. She's very helpful, really, friendly, responds to email questions ASAP and is great when it comes to writing the PSY 242 final paper. Def take her she's a sweet heart</div></div></div><div id="container" class="review"><div id="left">Date: 10/13/2009<br>Class Name: PSY364<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>I also took her for research 1 and she is awesome. I love her. All the lectures are on blackboard so its really easy to follow, and shes so excited to be there and teaching and keeps your intersested. Take her!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2009<br>Class Name: PSY241<br>Helpfulness: 4<br>Clarity: 2<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>she's absent minded, yet hilarious. she has attendance worksheets and games during class. always lets class out early. very cheerful, always smiling. she holds your hand for write ups and is a lenient grader. she's not too skilled in statistics and sometimes confuses students from what they learned in stats 1. worried about research methods 2</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

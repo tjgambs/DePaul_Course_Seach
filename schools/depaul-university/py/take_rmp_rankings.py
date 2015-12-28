@@ -11,7 +11,7 @@ def download_data(url,number):
 def main():
 	try:
 		download_data(url0,'0')
-		download_data(url1ta,'1')
+		download_data(url1,'1')
 	except:
 		pass
 

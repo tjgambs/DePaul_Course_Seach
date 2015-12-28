@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Zehavi Husser</h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 4.86<br>Clarity: 5.0<br>Easiness: 4.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/04/2012<br>Class Name: MOL211<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My favorite classes (took two with her) and professor! If you are interested in mythology please take her classes!If you like to miss a lot of class though, not the classes  for you!But it is well worth attending. Also I have to admit there is a lot of reading but if you are interested you won't mind reading it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2012<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a great professor. She really knows what she's talking about and she wants you to understand Greek tragedy, too. She's so extremely giggly and animated. The only downside is the amount of reading she assigns. Overall though if you're interested in the class there's no way that you can fail.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2011<br>Class Name: MOL212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was a great teacher. I'm planning on taking a lot more of her courses. Easy and really nice. It's clear that she knows what she's doing and she wants you to understand the topic. Classical Tragedy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's by far one of my favorite professors I've ever had at DePaul. She's really passionate about what she teaches and it shows when she teaches. There's usually a lot of reading but not an unreasonable amount. She gives tons of EC and is always available for extra help! She makes mythology so much more understandable and interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This was by far my favorite elective. She requires a lot of reading but its fun because its all stories and fun. Her weekly quizzes are simple if you read and she does everything she can to make sure you get a good grade. She gives out plenty of extra credit and is very easy to talk to if you need help. Take this class!</div></div></div><div id="container" class="review"><div id="left">Date: 05/10/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. She was able to get and maintain my attention more often than not, which is surprising given the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I've had her twice & she is amazing! She teaches something that could be so hard & boring but makes it easy to comprehend and fun to learn about. She is extremely nice and cares about what she teaches & how you do in this class. to do good you MUST READ & there's alot. If u can devote time to read alot, take her it's treat!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Zehavi Husser</h1><hr><div><h2>Overall Quality: 4.93<br><br>Helpfulness: 4.86<br>Clarity: 5.0<br>Easiness: 4.43</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 05/04/2012<br>Class Name: MOL211<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>My favorite classes (took two with her) and professor! If you are interested in mythology please take her classes!If you like to miss a lot of class though, not the classes  for you!But it is well worth attending. Also I have to admit there is a lot of reading but if you are interested you won't mind reading it!</div></div></div><div id="container" class="review"><div id="left">Date: 03/25/2012<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She's a great professor. She really knows what she's talking about and she wants you to understand Greek tragedy, too. She's so extremely giggly and animated. The only downside is the amount of reading she assigns. Overall though if you're interested in the class there's no way that you can fail.</div></div></div><div id="container" class="review"><div id="left">Date: 12/07/2011<br>Class Name: MOL212<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>She was a great teacher. I'm planning on taking a lot more of her courses. Easy and really nice. It's clear that she knows what she's doing and she wants you to understand the topic. Classical Tragedy.</div></div></div><div id="container" class="review"><div id="left">Date: 12/01/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She's by far one of my favorite professors I've ever had at DePaul. She's really passionate about what she teaches and it shows when she teaches. There's usually a lot of reading but not an unreasonable amount. She gives tons of EC and is always available for extra help! She makes mythology so much more understandable and interesting!</div></div></div><div id="container" class="review"><div id="left">Date: 06/17/2011<br>Class Name: MOL210<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>This was by far my favorite elective. She requires a lot of reading but its fun because its all stories and fun. Her weekly quizzes are simple if you read and she does everything she can to make sure you get a good grade. She gives out plenty of extra credit and is very easy to talk to if you need help. Take this class!</div></div></div><div id="container" class="review"><div id="left">Date: 05/10/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher. She was able to get and maintain my attention more often than not, which is surprising given the subject.</div></div></div><div id="container" class="review"><div id="left">Date: 03/18/2011<br>Class Name: MOL211<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>I've had her twice & she is amazing! She teaches something that could be so hard & boring but makes it easy to comprehend and fun to learn about. She is extremely nice and cares about what she teaches & how you do in this class. to do good you MUST READ & there's alot. If u can devote time to read alot, take her it's treat!</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

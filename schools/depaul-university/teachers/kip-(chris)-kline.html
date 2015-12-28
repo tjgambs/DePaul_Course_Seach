@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Kip (chris) Kline</h1><hr><div><h2>Overall Quality: 3.63<br><br>Helpfulness: 3.75<br>Clarity: 3.5<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/13/2007<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You are LUCKY if you get professor Kline. The other professors are scary!! Made a hard class, easy and understandable. He usually ONLY teaches in spring, so try to take him if you can. I was totally one of the students he joked with. :)</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2007<br>Class Name: LSE380<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Worse class Depaul makes you take, but managable with Kline....Make sure you try to take him and not the ridiculous Haymes! He def. tries to make friends with you and spends alot of time on jokes. Tries to help you understand topics, but most of the time it is him trying to be funny. 2 small papers, group work, Midterm with notes and take home pape</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2007<br>Class Name: LSE380<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This teacher was ok.  He tried to explain the hard material as best he could; but I think he spent too much time joking with certain students and not enough time helping the students that were really in the dark. Not the best prof. but not the worst.</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2006<br>Class Name: LSE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher who has a way of keeping class interesting at all times, and is a very knowledgable and funny professor, also a fair grader.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2006<br>Class Name: LSE380<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was terrible! He tries to hard to make a good impression on his students and forgets he has a course to teach.  He is not clear at all and never really gives a straight forward answer. Don't take him unless you want to waste you money.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2006<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>kip is hip! i love his humor! he always brings laughter. all the other LSE 380 professors stink and teaches useless info but kip makes you think...deep...i just wish he taught other classes. there are 2 short papers and one final paper. he is a fair grader as long as you show knowledge of the subject. take good notes in class and you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2006<br>Class Name: LSE330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Hes a good teacher not too much work.  One midterm all from the notes and a final 10 pg paper.  Not to hard of a grader.</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2006<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Kip (chris) Kline</h1><hr><div><h2>Overall Quality: 3.63<br><br>Helpfulness: 3.75<br>Clarity: 3.5<br>Easiness: 3.5</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/13/2007<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>You are LUCKY if you get professor Kline. The other professors are scary!! Made a hard class, easy and understandable. He usually ONLY teaches in spring, so try to take him if you can. I was totally one of the students he joked with. :)</div></div></div><div id="container" class="review"><div id="left">Date: 07/20/2007<br>Class Name: LSE380<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Worse class Depaul makes you take, but managable with Kline....Make sure you try to take him and not the ridiculous Haymes! He def. tries to make friends with you and spends alot of time on jokes. Tries to help you understand topics, but most of the time it is him trying to be funny. 2 small papers, group work, Midterm with notes and take home pape</div></div></div><div id="container" class="review"><div id="left">Date: 06/22/2007<br>Class Name: LSE380<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>This teacher was ok.  He tried to explain the hard material as best he could; but I think he spent too much time joking with certain students and not enough time helping the students that were really in the dark. Not the best prof. but not the worst.</div></div></div><div id="container" class="review"><div id="left">Date: 08/14/2006<br>Class Name: LSE<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Awesome teacher who has a way of keeping class interesting at all times, and is a very knowledgable and funny professor, also a fair grader.</div></div></div><div id="container" class="review"><div id="left">Date: 06/21/2006<br>Class Name: LSE380<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>He was terrible! He tries to hard to make a good impression on his students and forgets he has a course to teach.  He is not clear at all and never really gives a straight forward answer. Don't take him unless you want to waste you money.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2006<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 5<br>Grade Received: N/A</div><div id="right"><div>kip is hip! i love his humor! he always brings laughter. all the other LSE 380 professors stink and teaches useless info but kip makes you think...deep...i just wish he taught other classes. there are 2 short papers and one final paper. he is a fair grader as long as you show knowledge of the subject. take good notes in class and you'll do fine.</div></div></div><div id="container" class="review"><div id="left">Date: 04/24/2006<br>Class Name: LSE330<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Hes a good teacher not too much work.  One midterm all from the notes and a final 10 pg paper.  Not to hard of a grader.</div></div></div><div id="container" class="review"><div id="left">Date: 04/21/2006<br>Class Name: LSE380<br>Helpfulness: 5<br>Clarity: 3<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>No Comments</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);

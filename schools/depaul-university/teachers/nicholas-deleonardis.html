@@ -26,7 +26,7 @@
 					<h3>
 						<a href="../course-cart" style="text-decoration:none; float:right; color:#333;" id="course-cart">Course Cart (0)</a>
 						<div style="color:#333; float:right;">&nbsp;|&nbsp;</div>
-						<a href="javascript:;" style="text-decoration:none; color:#333; float:right;" onclick="help()">Help</a>
+						<a href="javascript:help();" style="text-decoration:none; color:#333; float:right;">Help</a>
 					</h3>
 					</span>
 					<span>
@@ -212,7 +212,7 @@
 							<div style="style=padding: 5%;">
 								<form onsubmit="submitForm()" action="../search" id="field">
 									<input class="inputbox" type="hidden" name="q" id="tipue_search_input" autocomplete="off" required value="">
-									<input class="inputbox" type="submit" value="SEARCH">
+									<input class="search-button" type="submit" value="SEARCH">
 								</form>
 							</div>
 						</div>
@@ -407,36 +407,16 @@
 				&nbsp;&nbsp;
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
-				<input class="inputbox" type="submit" value="SEARCH" onclick="creditSearch()">
+				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
 			</p>
 	    </div>
 	</div>
-	<div id="help">
-	    <div id="help-container">
-	    	<h2>How to Use Mocksched.com</h2>
-			<h2 align="left" style="color: #aaa; font-size: 12px;">
-			1) Choose the course prefix you are looking for.<br />
-			2) If you know the course number, enter that into the number input box to narrow down the search results. If you do not know the course number, no problem, mocksched will display all courses available within that prefix.<br />
-			3) After searching, choose the course you are looking for by pressing the course title.<br />
-			4) Interact with the data on the course page by clicking the headers of the table. To sort multiple columns at once, simply hold down shift and click different headers. For example, let's say you want to arrange all open classes by professor ranking. Easy, hold down shift and click the "Class Status" header then the "Overall Rating" header. Voila! <br />
-			5) Pressing "+" in the leftmost column will place that selected course into a specialized course cart located in the top right.<br />
-			6) After adding courses you want to your course cart, you can create a mock schedule. Press "Generate Mock Schedule" and you will automatically be scrolled to the mock schedule. If you want to remove a course simply press "-" in the table and re-click "Generate Mock Schedule" for your new schedule. You can also view the required books by pressing "Buy Required Books." If you click on a book cover or book title, a new tab will open with that book ready for purchase on Amazon. <br /><br />
-
-			If you need any more help please e-mail me at <a href="mailto:mocksched@gmail.com?subject=MockSched" style="color:#aaa;">mocksched@gmail.com</a>. Thanks!
-			</h2>
-	    </div>
-	</div>
+	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6459268015898332"
-	     data-ad-slot="6431202807"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script> --><h1>Nicholas Deleonardis</h1><hr><div><h2>Overall Quality: 3.06<br><br>Helpfulness: 3.38<br>Clarity: 2.75<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/30/2005<br>Class Name: FIN398<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Two page paper in 10pt font every week. Class is boring and he is difficult to understand.Exams are kinda hard...make sure you study everything that he talks about in the review.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>A two page paper every week.  Three fairly difficult exams.  No curve.  Presentations are done on overhead projector.  The class should be taught in 1975 not 2005.  He reminds me of Elmer from &quot;Crank Yankers&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a nice man and you will learn a thing or two.  However, his grading is very old school.  I ended up with an 84% in the class and got a C.  I know people who did a lot worse than me and got a C as well.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DeLeo is possibly one of the few legit prof @ DP. He will never make you remember any officious info. He's very fair and he knows his stuff AND he'll cut you slack if need be.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2005<br>Class Name: FIN398<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>BUST WORK UP THE A**! I HAD NO TIME FOR ALL THE WORKLOAD.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>There are 1pg paper every wk, xtremly easy (just a summarize)... Test are hard if you didn't study.Very very very helpful if you ask for his help.He's a nice guy... Eventhough i deserve an F in his class, he gave me a C.. thanks</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: FIN398<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this guy looks like the character from thegreat america commercial. Plus he sucks, not only does he not use the computer for anything. All his presentations are from old and faded over head forms! He is sooooo lost and will loose you with him. Stay the hell away.2PG PAPR EVERY WEEK! SUCKS</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hard Tests.  Lots of work and reading.  Old and boring</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Nicholas Deleonardis</h1><hr><div><h2>Overall Quality: 3.06<br><br>Helpfulness: 3.38<br>Clarity: 2.75<br>Easiness: 2.25</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 08/30/2005<br>Class Name: FIN398<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>Two page paper in 10pt font every week. Class is boring and he is difficult to understand.Exams are kinda hard...make sure you study everything that he talks about in the review.</div></div></div><div id="container" class="review"><div id="left">Date: 06/16/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>A two page paper every week.  Three fairly difficult exams.  No curve.  Presentations are done on overhead projector.  The class should be taught in 1975 not 2005.  He reminds me of Elmer from &quot;Crank Yankers&quot;</div></div></div><div id="container" class="review"><div id="left">Date: 06/14/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>He is a nice man and you will learn a thing or two.  However, his grading is very old school.  I ended up with an 84% in the class and got a C.  I know people who did a lot worse than me and got a C as well.</div></div></div><div id="container" class="review"><div id="left">Date: 05/04/2005<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 3<br>Grade Received: N/A</div><div id="right"><div>DeLeo is possibly one of the few legit prof @ DP. He will never make you remember any officious info. He's very fair and he knows his stuff AND he'll cut you slack if need be.</div></div></div><div id="container" class="review"><div id="left">Date: 04/01/2005<br>Class Name: FIN398<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>BUST WORK UP THE A**! I HAD NO TIME FOR ALL THE WORKLOAD.</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: FIN398<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>There are 1pg paper every wk, xtremly easy (just a summarize)... Test are hard if you didn't study.Very very very helpful if you ask for his help.He's a nice guy... Eventhough i deserve an F in his class, he gave me a C.. thanks</div></div></div><div id="container" class="review"><div id="left">Date: 03/31/2005<br>Class Name: FIN398<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>this guy looks like the character from thegreat america commercial. Plus he sucks, not only does he not use the computer for anything. All his presentations are from old and faded over head forms! He is sooooo lost and will loose you with him. Stay the hell away.2PG PAPR EVERY WEEK! SUCKS</div></div></div><div id="container" class="review"><div id="left">Date: 03/30/2005<br>Class Name: FIN398<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Hard Tests.  Lots of work and reading.  Old and boring</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
+				 		$('#ads').load('http://mocksched.com/ads.html');
+						$('#help').load('http://mocksched.com/help.html');
 				 		updateCourseCartCount();
     					$(".prefix").select2();
     					setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
