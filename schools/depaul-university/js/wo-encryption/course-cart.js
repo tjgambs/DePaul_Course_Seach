@@ -671,7 +671,7 @@ function formatCookies(value)
 			html += "'" + index + "'";
 			html += ')"">Save Selected</button><div style="padding-top: 2%;"><button class="generate" id="displayBooks' + index + '" onclick="books(';
 			html += "'" + index + "'";
-			html += ')" style="font-size: 15px;">Buy Required Books</button></div><div style="padding-top: 2%;"><button class="generate" id="mocksched' + index + '" onclick="createCalendarData(';
+			html += ')" style="font-size: 15px;">Required Books</button></div><div style="padding-top: 2%;"><button class="generate" id="mocksched' + index + '" onclick="createCalendarData(';
 			html += "'myTable" + index + "'";
 			html += ')" style="font-size: 15px;">Mock Schedule</button></div><div style="width: 75%; margin: 0 auto;"class="calendar' + index + '" id="calendar' + index + '" style="padding-top:1%; visibility: hidden"></div></div>';
 		}
