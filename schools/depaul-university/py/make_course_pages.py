@@ -434,7 +434,7 @@ def create_page(full_name,description,course_url,__TERMNAME__):
 	<h1>'''
 
 	html += full_name.replace(';','')
-	html +='</h1><h2>'
+	html +='</h1><h2 id="description">'
 	html += description
 
 	html += '</h2></body>'

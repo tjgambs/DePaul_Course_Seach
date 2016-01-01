@@ -1,3 +1,27 @@
+function prereqCourses()
+{
+	var description = document.getElementById('description').innerHTML;
+	var splitDescr = description.substr(description.indexOf('PREREQUISITE(S)')).split(' ');
+	var courses = [];
+	for(var i = 0; i < splitDescr.length; i++)
+	{
+		if(!isNaN(Number(splitDescr[i])))
+		{
+			courses.push((splitDescr[i-1] + ' ' + splitDescr[i]));
+		}
+	}
+	document.getElementById('description').innerHTML = addLinks(description,courses);
+}
+
+function addLinks(description,courses)
+{
+	for(var j = 0; j < courses.length; j++)
+	{
+		description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
+	}
+	return description;
+}
+
 function saveSelections()
 {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
@@ -38,6 +62,7 @@ function readSelections()
 
 function run()
 {
+	prereqCourses();
 	readSelections();
 	readCreditSelections();
 	$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) 
