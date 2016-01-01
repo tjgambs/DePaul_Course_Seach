@@ -45,8 +45,8 @@ def download_classes(__TERMNAME__,__TERMNUMBER__):
 				course_description = course_data[0]
 				course_prerequisites = course_data[1]
 				complete_description = ''
-				if 'PREREQUISITE(S):' in course_description:
-					course_description = '.'.join(course_description[:course_description.index('PREREQUISITE(S):')].split('.')[:-1]) + '.'
+				if 'PREREQUISITE(S):' in course_description.upper():
+					course_description = '.'.join(course_description[:course_description.upper().index('PREREQUISITE(S):')].split('.')[:-1]) + '.'
 				if len(course_description) != 0:
 					complete_description += course_description
 				if len(course_prerequisites) != 0:
