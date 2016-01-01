@@ -17,9 +17,30 @@ function addLinks(description,courses)
 {
 	for(var j = 0; j < courses.length; j++)
 	{
-		description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
+		if(courses[j].split(' ')[1][0] == '0')
+		{
+			if(urlExists((courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase()))
+			{
+				description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j] + '</a>');
+			}
+		}
+		else
+		{
+			if(urlExists(courses[j].replace(' ','-').toLowerCase()))
+			{
+				description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
+			}
+		}
 	}
 	return description;
+}
+
+function urlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status != 404;
 }
 
 function saveSelections()
