@@ -1,3 +1,8 @@
+function hasNumber(myString) 
+{
+	return (/\d/.test(myString));
+}
+
 function prereqCourses()
 {
 	var description = document.getElementById('description').innerHTML;
@@ -9,26 +14,40 @@ function prereqCourses()
 		{
 			courses.push((splitDescr[i-1] + ' ' + splitDescr[i]));
 		}
+		else if(hasNumber(splitDescr[i]))
+		{
+			var number = splitDescr[i].substr(-3);
+			var prefix = splitDescr[i].replace(number,'');
+			courses.push(prefix + ' ' + number);
+		}
 	}
 	document.getElementById('description').innerHTML = addLinks(description,courses);
 }
 
 function addLinks(description,courses)
 {
-	for(var j = 0; j < courses.length; j++)
+	for(var j = 1; j < courses.length; j++)
 	{
 		if(courses[j].split(' ')[1][0] == '0')
 		{
 			if(urlExists((courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase()))
 			{
-				description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j] + '</a>');
+				if(courses[j] && courses[j].length < 10)
+				{
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j] + '</a>');
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].replace(' ','')).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j].replace(' ','') + '</a>');
+				}
 			}
 		}
 		else
 		{
 			if(urlExists(courses[j].replace(' ','-').toLowerCase()))
 			{
-				description = description.split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
+				if(courses[j] && courses[j].length < 10)
+				{
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].replace(' ','')).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j].replace(' ','') + '</a>');
+				}
 			}
 		}
 	}
