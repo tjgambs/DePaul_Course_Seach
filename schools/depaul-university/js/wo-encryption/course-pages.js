@@ -1,7 +1,7 @@
 function prereqCourses()
 {
 	var description = document.getElementById('description').innerHTML;
-	var splitDescr = description.substr(description.indexOf('PREREQUISITE(S)')).split(' ');
+	var splitDescr = description.substr(description.indexOf('PREREQUISITE(S)')).split('(').join('').split(')').join('').split(' ');
 	var courses = [];
 	for(var i = 0; i < splitDescr.length; i++)
 	{
