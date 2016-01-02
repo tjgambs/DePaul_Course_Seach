@@ -10,7 +10,6 @@ function prereqCourses()
 			courses.push((splitDescr[i-1] + ' ' + splitDescr[i]));
 		}
 	}
-	console.log(courses)
 	document.getElementById('description').innerHTML = addLinks(description,courses);
 }
 
