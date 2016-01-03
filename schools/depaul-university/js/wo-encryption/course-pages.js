@@ -6,33 +6,62 @@ function hasNumber(myString)
 function prereqCourses()
 {
 	var description = document.getElementById('description').innerHTML;
-	var splitDescr = description.substr(description.indexOf('TE(S)')+4).split('(').join('').split(')').join('').split('.').join('').split(':').join('').split(',').join('').split(' ');
+	if(description.indexOf('TE(S)') == -1) return;
+	var splitDescr = description.substr(description.indexOf('TE(S)')+7).split('(').join('').split(')').join('').split('.').join('').split(':').join('').split(',').join('').split(' ');
 	var courses = [];
-	for(var i = 0; i < splitDescr.length; i++)
+	var flags = [];
+	var tempPrefix = '';
+	for(var i = 1; i < splitDescr.length; i++)
 	{
 		if(!isNaN(Number(splitDescr[i])))
 		{
-			courses.push((splitDescr[i-1] + ' ' + splitDescr[i]));
+			var number = splitDescr[i];
+			var prefix = splitDescr[i-1];
+			if(prefix == 'or')
+			{
+				courses.push(tempPrefix + ' ' + number);
+				flags.push(false);
+			}
+			else
+			{
+				tempPrefix = prefix;
+				courses.push(prefix + ' ' + number);
+				flags.push(true);
+			}
 		}
 		else if(hasNumber(splitDescr[i]))
 		{
 			var number = splitDescr[i].substr(-3);
 			var prefix = splitDescr[i].replace(number,'');
-			courses.push(prefix + ' ' + number);
+			if(prefix == 'or')
+			{
+				courses.push(tempPrefix + ' ' + number);
+				flags.push(false);
+			}
+			else
+			{
+				tempPrefix = prefix;
+				courses.push(prefix + ' ' + number);
+				flags.push(true);
+			}
 		}
 	}
-	document.getElementById('description').innerHTML = addLinks(description,courses);
+	document.getElementById('description').innerHTML = addLinks(description,courses,flags);
 }
 
-function addLinks(description,courses)
+function addLinks(description,courses,flags)
 {
-	for(var j = 1; j < courses.length; j++)
+	for(var j = 0; j < courses.length; j++)
 	{
 		if(courses[j].split(' ')[1][0] == '0')
 		{
 			if(urlExists((courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase()))
 			{
-				if(courses[j] && courses[j].length < 10)
+				if(courses[j] && !flags[j])
+				{
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].split(' ')[1]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1]).toLowerCase() + '">' + courses[j].split(' ')[1] + '</a>');
+				}
+				else if(courses[j] && courses[j].length < 10)
 				{
 					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j] + '</a>');
 					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].replace(' ','')).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1].substr(1)).toLowerCase() + '">' + courses[j].replace(' ','') + '</a>');
@@ -43,7 +72,11 @@ function addLinks(description,courses)
 		{
 			if(urlExists(courses[j].replace(' ','-').toLowerCase()))
 			{
-				if(courses[j] && courses[j].length < 10)
+				if(courses[j] && !flags[j])
+				{
+					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].split(' ')[1]).join('<a style="text-decoration: none;"href="' + (courses[j].split(' ')[0] + '-' + courses[j].split(' ')[1]).toLowerCase() + '">' + courses[j].split(' ')[1] + '</a>');
+				}
+				else if(courses[j] && courses[j].length < 10)
 				{
 					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j]).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j] + '</a>');
 					description = description.substr(0,description.indexOf('TE(S)')+4) + description.substr(description.indexOf('TE(S)')+4).split(courses[j].replace(' ','')).join('<a style="text-decoration: none;"href="' + courses[j].replace(' ','-').toLowerCase() + '">' + courses[j].replace(' ','') + '</a>');
