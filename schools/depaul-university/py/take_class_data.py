@@ -52,7 +52,12 @@ def download_classes(__TERMNAME__,__TERMNUMBER__):
 				if len(course_description) != 0:
 					complete_description += course_description
 				if len(course_prerequisites) != 0:
-					complete_description += ' PREREQUISITE(S): ' + course_prerequisites
+					if 'corequisite' in course_prerequisites and 'prerequisite' in course_prerequisites:
+						complete_description += ' REQUISITE(S): ' + course_prerequisites
+					elif 'corequisite' in course_prerequisites:
+						complete_description += ' COREQUISITE(S): ' + course_prerequisites
+					else:
+						complete_description += ' PREREQUISITE(S): ' + course_prerequisites
 			except:
 				html = urllib.urlopen(i['href'])
 				soup = Soup(html)
