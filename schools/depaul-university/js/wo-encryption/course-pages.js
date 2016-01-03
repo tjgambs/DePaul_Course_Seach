@@ -6,8 +6,8 @@ function hasNumber(myString)
 function prereqCourses()
 {
 	var description = document.getElementById('description').innerHTML;
-	if(description.indexOf('TE(S)') == -1) return;
-	var splitDescr = description.substr(description.indexOf('TE(S)')+7).split('(').join('').split(')').join('').split('.').join('').split(':').join('').split(',').join('').split(' ');
+	if(description.indexOf('QUISITE') == -1) return;
+	var splitDescr = description.substr(description.indexOf('REQUISITE')+9).split('(').join('').split(')').join('').split('.').join('').split(':').join('').split(',').join('').split(' ');
 	var courses = [];
 	var flags = [];
 	var tempPrefix = '';
