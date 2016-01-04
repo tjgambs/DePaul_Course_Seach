@@ -137,6 +137,13 @@ function updateStatus(term_number)
 	}
 }
 
+function htmlDecode(input)
+{
+	var e = document.createElement('div');
+	e.innerHTML = input;
+	return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}
+
 function formatStatus(response)
 {
 	var courses = document.getElementsByClassName('course');
@@ -151,23 +158,32 @@ function formatStatus(response)
 			if(course.class_nbr == number)
 			{
 				var tempStatus = course.enrl_stat;
+				var tempLocation = course.location_descr + ' - ' + course.facility_descrshort;
+				if(htmlDecode(courses[i].getElementsByClassName('location')[0].innerHTML) != tempLocation)
+				{
+					courses[i].getElementsByClassName('location')[0].innerHTML = tempLocation;
+					fixCookieLocation(courses[i],tempLocation);
+				}
 				switch(tempStatus) 
 				{
 				    case 'O':
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Open')
 				    	{
+				    		courses[i].getElementsByClassName('status')[0].innerHTML = 'Open';
 				    		fixCookieStatus(courses[i],'Open');
 				    	}
 				        break;
 				    case 'C':
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Closed')
 				    	{
+				    		courses[i].getElementsByClassName('status')[0].innerHTML = 'Closed';
 				    		fixCookieStatus(courses[i],'Closed');
 				    	}
 				        break;
 				    case 'W':
 				    	if(courses[i].getElementsByClassName('status')[0].innerHTML != 'Waitlist')
 				    	{
+				    		courses[i].getElementsByClassName('status')[0].innerHTML = 'Waitlist';
 				    		fixCookieStatus(courses[i],'Waitlist');
 				    	}
 				    	break;
@@ -175,6 +191,53 @@ function formatStatus(response)
 			}
 		}
 	}
+}
+
+function fixCookieLocation(course,location)
+{
+	var term = document.getElementsByClassName('term')[0].value;
+	var cookies = document.cookie.split(';');
+	var firstName = course.getElementsByClassName('fname')[0].innerHTML.toLowerCase();
+	var lastName = course.getElementsByClassName('lname')[0].innerHTML.toLowerCase();
+	var number = course.getElementsByClassName('number')[0].innerHTML;
+	var cookieName = ['depaul-university','(' + term + ')',firstName,lastName,'add',number].join('-').split(' ').join('-');
+	var oldCookie = readCookie(cookieName);
+	var saveCookies = [];
+	for(i of cookies)
+	{
+		if(i.indexOf('depaul-university-(' + term + ')-saved-') != -1)
+		{
+			saveCookies.push(i);
+		}
+	}
+	if(oldCookie.split(',').length == 11)
+	{
+		oldCookie = ['0.0'].concat(oldCookie.split(',')).join();
+	}
+	var newCookie = [];
+	for(var i = 0; i < course.getElementsByTagName('td').length; i++)
+	{
+		if(i == 10) newCookie.push(location);
+		else newCookie.push(oldCookie.split(',')[i]);
+	}
+	newCookie = newCookie.filter(Boolean);
+	for(j of saveCookies)
+	{
+		var savedCookieName = j.split('|')[0].split('=')[0];
+		var arr = j.split('|').slice(1);
+		var completeArr = [j.split('|')[0].split('=')[1]];
+		for(k of arr)
+		{
+			var tempArr = k.split(',');
+			if(tempArr[9] == course.getElementsByClassName('number')[0].innerHTML)
+			{
+				tempArr[10] = location;
+			}
+			completeArr.push(tempArr.join());
+		}
+		writeCookie(savedCookieName,completeArr.join('|'),365);
+	}
+	writeCookie(cookieName,newCookie,365);
 }
 
 function fixCookieStatus(course,status)
@@ -219,7 +282,6 @@ function fixCookieStatus(course,status)
 		writeCookie(savedCookieName,completeArr.join('|'),365);
 	}
 	writeCookie(cookieName,newCookie,365);
-	formatCookies();
 }
 
 function updateTerm()
