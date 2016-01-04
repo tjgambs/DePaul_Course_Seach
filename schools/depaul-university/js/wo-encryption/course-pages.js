@@ -222,7 +222,14 @@ function updateTable(url,shortUrl)
 		    	var classEndTime = data[i].meeting_time_end.replace('1/1/1900 ','').replace(':00 ',' ');
 		    	var classSection = data[i].class_section;
 		    	var classNumber = data[i].class_nbr;
-		    	var campus = data[i].location_descr;
+		    	if(data[i].facility_descrshort)
+		    	{
+		    		var campus = data[i].location_descr + ' - ' + data[i].facility_descrshort;
+		    	}
+		    	else
+		    	{
+		    		var campus = data[i].location_descr;
+		    	}
 		    	var days = [undefined,undefined,undefined,undefined,undefined,undefined];
 
 		    	if(data[i].mon.toLowerCase() == 'y') days[0] = 'M';
