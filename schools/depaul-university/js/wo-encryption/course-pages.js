@@ -243,8 +243,17 @@ function updateTable(url,shortUrl)
 		    	if(days.length == 0) days = 'OnLine';
 		    	if(teacherFirstName.length == 0) teacherFirstName = 'TBD';
 		    	if(teacherLastName.length == 0) teacherLastName = 'TBD';
-		    	if(classStartTime.length == 0) classStartTime = 'TBD';
-		    	if(classEndTime.length == 0) classEndTime = 'TBD';
+		    	if(days.toUpperCase() == 'ONLINE')
+		    	{
+			    	if(classStartTime.length == 0) classStartTime = 'OnLine';
+			    	if(classEndTime.length == 0) classEndTime = 'OnLine';
+			    }
+			    else
+			    {
+			    	if(classStartTime.length == 0) classStartTime = 'TBD';
+			    	if(classEndTime.length == 0) classEndTime = 'TBD';
+			    }
+
 		    	if(classStatus == 'C') classStatus = 'Closed';
 		    	if(classStatus == 'O') classStatus = 'Open';
 		    	if(classStatus == 'W') classStatus = 'Waitlist';
