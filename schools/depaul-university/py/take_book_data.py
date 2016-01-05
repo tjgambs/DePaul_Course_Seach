@@ -10,10 +10,8 @@ import sys
 driver = webdriver.Firefox()
 
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
-__USERNAME__ = 'TGAMBLE2'#raw_input('Username: ').upper()
-__PASSWORD__ = '***REMOVED***'#getpass.getpass('Password: ')
 
-def login():
+def login(__USERNAME__,__PASSWORD__):
 	driver.get(__URL__)
 	time.sleep(10)
 	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(__USERNAME__.upper())
@@ -120,7 +118,7 @@ def format_book_data(title,isbns,status,names):
 	dic['names'] = names
 	return dic
 
-def iterate_over_one(index,__TERM__,__TERMNAME__):
+def iterate_over_one(index,__TERM__,__TERMNAME__,__USERNAME__,__PASSWORD__):
 	try:
 		login()
 		navigate_to_course_search()
@@ -136,5 +134,5 @@ def iterate_over_one(index,__TERM__,__TERMNAME__):
 		iterate_over_one(index,__TERM__,__TERMNAME__)
 
 if __name__ == '__main__':
-	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
+	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
 	driver.close()
