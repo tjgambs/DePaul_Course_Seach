@@ -624,6 +624,7 @@ function formatCookies(value)
 				html += "'" + index + "'";
 				html += ')">Exclude All</button></div>';
 			}
+			html += '<div style="text-align: left;">';
 			html += '<table id="myTable' + index + '" class="tablesorter">';
 			html += '<thead><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
 			var courseNumbers = [];
@@ -727,7 +728,7 @@ function formatCookies(value)
 		    	html += '<td class="days">' + i[11] + '</td>';
 				html += '</tr>'
 			}
-			html += '<tbody></table>';
+			html += '</tbody></table></div>';
 			html += '<div align="left" style="padding-top: 10px;">';
 			html += '<button class="generate" id="saveSelected' + index + '" style="display: inline;" align="left" onclick="saveSelected(';
 			html += "'" + index + "'";
