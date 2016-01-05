@@ -626,7 +626,7 @@ function formatCookies(value)
 			}
 			html += '<div style="text-align: left;">';
 			html += '<table id="myTable' + index + '" class="tablesorter">';
-			html += '<thead><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
+			html += '<thead style="text-align:center;"><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
 			var courseNumbers = [];
 			for(i of classes[index].slice(2))
 			{
@@ -724,7 +724,7 @@ function formatCookies(value)
 		    	html += '<td class="end">' + i[7] + '</td>';
 		    	html += '<td class="section">' + i[8] + '</td>';
 		    	html += '<td class="number">' + i[9] + '</td>';
-		    	html += '<td class="location">' + i[10] + '</td>';
+		    	html += '<td class="location" style="width:15%;">' + i[10] + '</td>';
 		    	html += '<td class="days">' + i[11] + '</td>';
 				html += '</tr>'
 			}
