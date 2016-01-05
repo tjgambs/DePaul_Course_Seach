@@ -45,19 +45,18 @@ def download_classes(__TERMNAME__,__TERMNUMBER__):
 				course_description = course_data[0]
 				course_prerequisites = course_data[1]
 				complete_description = ''
-				if 'PREREQUISITE(S):' in course_description.upper():
-					course_description = '.'.join(course_description[:course_description.upper().index('PREREQUISITE(S):')].split('.')[:-1]) + '.'
-				if 'PREREQUISITE:' in course_description.upper():
-					course_description = '.'.join(course_description[:course_description.upper().index('PREREQUISITE:')].split('.')[:-1]) + '.'
-				if len(course_description) != 0:
-					complete_description += course_description
-				if len(course_prerequisites) != 0:
-					if 'corequisite' in course_prerequisites and 'prerequisite' in course_prerequisites:
-						complete_description += ' REQUISITE(S): ' + course_prerequisites
-					elif 'corequisite' in course_prerequisites:
-						complete_description += ' COREQUISITE(S): ' + course_prerequisites
-					else:
-						complete_description += ' PREREQUISITE(S): ' + course_prerequisites
+				if 'PREREQUISITE' not in course_description.upper():
+					if len(course_description) != 0:
+						complete_description += course_description
+					if len(course_prerequisites) != 0:
+						if 'corequisite' in course_prerequisites and 'prerequisite' in course_prerequisites:
+							complete_description += ' REQUISITE(S): ' + course_prerequisites
+						elif 'corequisite' in course_prerequisites:
+							complete_description += ' COREQUISITE(S): ' + course_prerequisites
+						else:
+							complete_description += ' PREREQUISITE(S): ' + course_prerequisites
+				else:
+					complete_description = course_description
 			except:
 				html = urllib.urlopen(i['href'])
 				soup = Soup(html)
