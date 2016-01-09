@@ -158,7 +158,14 @@ function formatStatus(response)
 			if(course.class_nbr == number)
 			{
 				var tempStatus = course.enrl_stat;
-				var tempLocation = course.location_descr + ' - ' + course.facility_descrshort;
+				if(course.facility_descrshort)
+				{
+					var tempLocation = course.location_descr + ' - ' + course.facility_descrshort;
+				}
+				else
+				{
+					var tempLocation = course.location_descr;
+				}
 				if(htmlDecode(courses[i].getElementsByClassName('location')[0].innerHTML) != tempLocation)
 				{
 					courses[i].getElementsByClassName('location')[0].innerHTML = tempLocation;
@@ -580,7 +587,7 @@ function formatCookies(value)
 			classes.push(temp);
 		}
 	}
-	var classes = ([['Current Cart',''].concat(classes)]).concat(readSaved().slice(1));
+	classes = ([['Current Cart',''].concat(classes)]).concat(readSaved().slice(1));
 	var ul = '<ul style="display: inline-block; padding: 0px;" class="tab-links">';
 	for(var index = 0; index < classes.length; index++)
 	{
@@ -630,6 +637,12 @@ function formatCookies(value)
 			var courseNumbers = [];
 			for(i of classes[index].slice(2))
 			{
+				if(!i[4])
+				{
+					console.log('There was an error so restarting course cart.');
+					removeAll();
+					continue;
+				}
 				var classValue = i[4].toLowerCase() + '-' + i[5].toLowerCase() + '-add';
 				var href = 'teachers/' + i[4].toLowerCase() + '-' + i[5].toLowerCase() + '';
 				var course_name = 'terms/' + term + '/classes/' + i[1].replace(' ','-').toLowerCase() + '';
