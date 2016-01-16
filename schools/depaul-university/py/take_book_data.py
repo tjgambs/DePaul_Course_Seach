@@ -11,11 +11,11 @@ driver = webdriver.Firefox()
 
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 
-def login(__USERNAME__,__PASSWORD__):
+def login(username,password):
 	driver.get(__URL__)
 	time.sleep(10)
-	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(__USERNAME__.upper())
-	driver.find_element(By.XPATH,'//input[@name="pwd"]').send_keys(__PASSWORD__)
+	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(username.upper())
+	driver.find_element(By.XPATH,'//input[@name="pwd"]').send_keys(password)
 	driver.find_element(By.XPATH,'//input[@name="Submit"]').click()
 
 def navigate_to_course_search():
@@ -80,7 +80,7 @@ def amount_of_course_careers():
 	driver.switch_to_default_content()
 	return len(options)
 
-def take_all_data(code,__TERMNAME__):
+def take_all_data(code,termname):
 	time.sleep(60)
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
 	time.sleep(10)
@@ -102,7 +102,7 @@ def take_all_data(code,__TERMNAME__):
 		all_books.append(format_book_data(title,isbns,status,names))
 		driver.find_element(By.XPATH,'//a[@id="CLASS_SRCH_WRK2_SSR_PB_BACK"]').click()
 		time.sleep(10)
-	with open('../terms/' + __TERMNAME__ + '/course_books/'+file_name+str(code)+'.json','w') as output:
+	with open('../terms/' + termname + '/course_books/'+file_name+str(code)+'.json','w') as output:
 		json.dump(all_books,output)
 	driver.switch_to_default_content()
 
@@ -118,20 +118,20 @@ def format_book_data(title,isbns,status,names):
 	dic['names'] = names
 	return dic
 
-def iterate_over_one(index,__TERM__,__TERMNAME__,__USERNAME__,__PASSWORD__):
+def iterate_over_one(index,term,termname,username,password):
 	try:
-		login()
+		login(username,password)
 		navigate_to_course_search()
 		for i in range(1,amount_of_course_careers()):
 			select_course_career(i)
-			select_term(__TERM__)
+			select_term(term)
 			time.sleep(3)
 			flag = search_subject(index)
 			if flag == 0:
-				take_all_data(i,__TERMNAME__)
+				take_all_data(i,termname)
 			navigate_to_course_search()
 	except:
-		iterate_over_one(index,__TERM__,__TERMNAME__)
+		iterate_over_one(index,term,termname)
 
 if __name__ == '__main__':
 	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
