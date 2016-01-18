@@ -62,12 +62,13 @@ def remove_classes(termname):
 		local('rm -r classes')
 		local('mkdir classes')
 
-def update(username,password,termname,termnumber,term,flag):
+def update(username,password,termname,termnumber,term,flag,flag2):
 	local('git checkout gh-pages')
 	if flag:
 		local('python take_rmp_rankings.py &')
 		local('python take_course_descriptions.py')
-	local('python take_class_data.py {0} {1}'.format(termname,termnumber))
+	if flag2:
+		local('python take_class_data.py {0} {1}'.format(termname,termnumber))
 	remove_classes(termname)
 	local('python make_course_pages.py {0} &'.format(termname))
 	if flag:
@@ -81,9 +82,9 @@ def update_all():
 	username = raw_input('CampusConnect Username: ')
 	password = getpass.getpass('CampusConnect Password: ')
 
-	update(username,password,'winter-2016','0965',3,True)
-	#update('spring-2016','0970',4,False)
-	#update('summer-2016','0975',5,False)
+	update(username,password,'winter-2016','0965',3,True,False)
+	#update(username,password,'spring-2016','0970',4,True,False)
+	#update(username,password,'summer-2016','0975',5,True,False)
 	
 	update_website()
 	local('rm *.pyc')
