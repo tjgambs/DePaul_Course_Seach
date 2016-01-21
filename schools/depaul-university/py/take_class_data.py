@@ -20,13 +20,13 @@ def setup_browser():
 	br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 	br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
-def download_classes(__TERMNAME__,__TERMNUMBER__):
+def download_classes(termname,termnumber):
 	setup_browser()
 	response = br.open("http://offices.depaul.edu/student-records/schedule-of-classes/Pages/default.aspx")
 	
 	br.select_form(nr=0)
 	control = br.form.find_control('ctl00$ctl30$g_49ceed09_b59e_4457_94a1_a9ea1bd8a6c6$ctl00$ddTerm')
-	control.value = [__TERMNUMBER__]
+	control.value = [termnumber]
 	br.submit()
 
 	html = br.response().read()
@@ -63,7 +63,7 @@ def download_classes(__TERMNAME__,__TERMNUMBER__):
 				course_description = soup.find('p',{'class':'nopadding-top'}).text
 			courses.append([i.text.replace(';',''),complete_description,str(url+i['href'][start:])])
 			
-	with open('../terms/' + __TERMNAME__ + '/classes.json','w') as output:
+	with open('../terms/' + termname + '/classes.json','w') as output:
 		json.dump(courses, output)
 
 if __name__ == '__main__':
