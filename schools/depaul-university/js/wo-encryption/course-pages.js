@@ -8,7 +8,6 @@ function prereqCourses()
 	var description = document.getElementById('description').innerHTML;
 	if(description.toUpperCase().indexOf('REQUISITE') == -1) return;
 	var splitDescr = description.substr(description.toUpperCase().indexOf('REQUISITE')+9).split('(').join('').split(')').join('').split('.').join('').split(':').join('').split(',').join('').split(' ');
-	console.log(splitDescr)
 	var courses = [];
 	var flags = [];
 	var tempPrefix = '';
