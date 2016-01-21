@@ -1013,7 +1013,7 @@ function convertDays(days)
 
 function convertTime(time)
 {
-	if(time == 'TBD') 
+	if(time == 'OnLine' || time == 'TBD') 
 	{
 		return;
 	}
