@@ -773,6 +773,16 @@ function formatCookies(value)
         jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
         e.preventDefault();
     });
+    arrange();
+}
+
+function arrange()
+{
+	var tables = document.querySelectorAll('*[id^="myTable"]');
+	for(var i = 0; i < tables.length; i++)
+	{
+		$("#" + tables[i].id).tablesorter({sortInitialOrder: 'desc'});
+	}
 }
 
 function deleteSave(name,index)
