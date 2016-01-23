@@ -348,12 +348,6 @@ http://www.tipue.com/search
                               if (set.showTitleCount && tipuesearch_t_c == 0)
                               {
                                    var title = document.title;
-                                   if(c==1)
-                                   {
-                                   	 var location = window.location.href.split('/');
-                                   	 location.pop();
-                                   	 window.location.href = location.join('/') +'/'+ found[0].url;
-                                   }
                                    document.title = '(' + c + ') ' + title;
                                    tipuesearch_t_c++;
                               }                         
@@ -471,7 +465,7 @@ http://www.tipue.com/search
                                                   out += '<li><a class="tipue_search_foot_box" id="' + (f * set.show) + '_' + replace + '">' + (f + 1) + '</a></li>';
                                              }
                                         }
-                                   }                       
+                                   }                         
                                                       
                                    if (page + 1 != pages)
                                    {
