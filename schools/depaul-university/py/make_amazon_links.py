@@ -7,8 +7,8 @@ import sys
 
 driver = webdriver.Firefox()
 
-def format_data(__TERMNAME__):
-	file_names = glob.glob('../terms/' + __TERMNAME__ + '/course_books/*.json')
+def format_data(termname):
+	file_names = glob.glob('../terms/' + termname + '/course_books/*.json')
 	dic = {}
 	good_urls = json.loads(open('../good_urls.json', 'r').read())
 	bad_urls = json.loads(open('../bad_urls.json', 'r').read())
@@ -36,7 +36,7 @@ def format_data(__TERMNAME__):
 					else:
 						ret.append([d['status'][i],'',name])
 				dic[d['title']] = ret
-	with open('../terms/' + __TERMNAME__ + '/books.json','w') as output:
+	with open('../terms/' + termname + '/books.json','w') as output:
 		json.dump(dic,output)
 	with open('../good_urls.json','w') as good:
 		json.dump(good_urls,good)
