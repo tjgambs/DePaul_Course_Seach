@@ -1,5 +1,22 @@
+function deleteBrokenCookies() 
+{
+    if(!readCookie('depaul-university-reset'))
+    {
+        var cookies = document.cookie.split(';');
+        for(cook of cookies) 
+        {
+            if(cook.indexOf('depaul-university') != -1) 
+            {
+                deleteCookie(cook);
+            }
+        }
+        writeCookie('depaul-university-reset',1);
+    }
+}
+
 function run()
 {
+    deleteBrokenCookies();
     prereqCourses();
     readSelections();
     readCreditSelections();
@@ -549,7 +566,7 @@ function removeFromCart(contents)
         addToCart(contents)
     };
 
-    delete_cookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index]);
+    deleteCookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index]);
     updateCourseCartCount();
 }
 
@@ -588,7 +605,7 @@ function readCookie(name)
     return '';
 }
 
-function delete_cookie(name)
+function deleteCookie(name)
 {
     document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }

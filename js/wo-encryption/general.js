@@ -1,5 +1,22 @@
+function deleteBrokenCookies() 
+{
+	if(!readCookie('depaul-university-reset'))
+	{
+		var cookies = document.cookie.split(';');
+		for(cook of cookies) 
+		{
+			if(cook.indexOf('depaul-university') != -1) 
+			{
+				deleteCookie(cook);
+			}
+		}
+		writeCookie('depaul-university-reset',1);
+	}
+}
+
 function run()
 {
+	deleteBrokenCookies();
 	readSelections();
 	readCreditSelections();
 	$('#help').mousedown(function(e) 
@@ -221,4 +238,9 @@ function readCookie(name)
         }
 	}
 	return '';
+}
+
+function deleteCookie(name)
+{
+    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
