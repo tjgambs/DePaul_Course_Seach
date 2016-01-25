@@ -10,7 +10,7 @@ function deleteBrokenCookies()
 				deleteCookie(cook);
 			}
 		}
-		writeCookie('depaul-university-reset',1);
+		writeCookie('depaul-university-reset',1,365);
 	}
 }
 
