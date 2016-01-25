@@ -606,9 +606,7 @@ function formatCookies(value)
             classes.push(temp);
         }
     }
-    classes = ([
-        ['Current Cart', ''].concat(classes)
-    ]).concat(readSaved().slice(1));
+    classes = ([['Current Cart', ''].concat(classes)]).concat(readSaved().slice(1));
     var ul = '<ul style="display: inline-block; padding: 0px;" class="tab-links">';
     for (var index = 0; index < classes.length; index++)
     {
@@ -628,6 +626,7 @@ function formatCookies(value)
     ul += '</ul><div class="tab-content">';
     allHtml += ul;
     var html = '';
+    var flag = false;
     for (var index = 0; index < classes.length; index++)
     {
         var unchecked = Array(readCookie('depaul-university-(' + term + ')-unchecked' + index).split(','))[0];
@@ -654,7 +653,21 @@ function formatCookies(value)
             }
             html += '<div style="text-align: left;">';
             html += '<table id="myTable' + index + '" class="tablesorter">';
-            html += '<thead style="text-align:center;"><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Topic</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
+
+			flag = false;
+            for(_class of classes[index].slice(2))
+            {
+            	if(_class[2] != 'N/A') flag = true;
+            }
+            
+            if(flag)
+            {
+                html += '<thead style="text-align:center;"><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Topic</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
+            }
+            else
+            {
+                html += '<thead style="text-align:center;"><tr><th class="header">Remove</th><th class="header">Include Below</th><th class="header">Course</th><th class="header">Overall Rating</th><th class="header">Class Status</th><th class="header">Credit Hours</th><th class="header">Teacher First Name</th><th class="header">Teacher Last Name</th><th class="header">Class Start Time</th><th class="header">Class End Time</th><th class="header">Class Section</th><th class="header">Class Number</th><th class="header">Location</th><th class="header">Days</th></tr></thead><tbody>';
+            }
             var courseNumbers = [];
             for (i of classes[index].slice(2))
             {
@@ -704,7 +717,10 @@ function formatCookies(value)
                     }
                     html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
                     html += '<td class="overall">' + i[0] + '</td>';
-                    html += '<td class="topic" style="max-width:100px; word-wrap:break-word;">' + i[2] + '</td>';
+                    if(flag)
+                    {
+                        html += '<td class="topic" style="max-width:100px; word-wrap:break-word;">' + i[2] + '</td>';
+                    }
                     if (i[2] == 'Closed')
                     {
                         html += '<td style="color:red;" class="status">' + i[3] + '</td>';
@@ -743,7 +759,10 @@ function formatCookies(value)
                     }
                     html += '<td><a class="name" style="text-decoration: none;" href="' + course_name + '">' + i[1] + '</a></td>';
                     html += '<td><a class="overall" style="text-decoration:none;" href="' + href + '">' + i[0] + '</a></td>';
-                    html += '<td class="topic" style="max-width:100px; word-wrap:break-word;">' + i[2] + '</td>';
+                    if(flag)
+                    {
+                        html += '<td class="topic" style="max-width:100px; word-wrap:break-word;">' + i[2] + '</td>';
+                    }
                     if (i[3] == 'Closed')
                     {
                         html += '<td style="color:red;" class="status">' + i[3] + '</td>';

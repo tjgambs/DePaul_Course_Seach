@@ -233,7 +233,14 @@ function updateTable(url, shortUrl)
             var data = jQuery.parseJSON(response);
             var term = readCookie('depaul-university-term');
             var html = '<table id="myTable" class="tablesorter"><thead><tr>';
-            var headers = ['Add', 'Overall Rating', 'Topic', 'Class Status', 'Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
+            if(data[0].topic_descr.length == 0)
+            {
+                var headers = ['Add', 'Overall Rating', 'Class Status', 'Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
+            }
+            else
+            {
+                var headers = ['Add', 'Overall Rating', 'Topic', 'Class Status', 'Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
+            }
             for (i of headers)
             {
                 html += '<th>' + i + '</th>';
@@ -301,7 +308,10 @@ function updateTable(url, shortUrl)
                     html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + ['WRD 103', topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
                 }
                 html += '<td class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall">0.0</td>';
-                html += '<td style="max-width:125px; word-wrap:break-word;" class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-topic">' + topic + '</td>';
+                if(data[0].topic_descr.length > 0)
+                {
+                    html += '<td style="max-width:125px; word-wrap:break-word;" class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-topic">' + topic + '</td>';
+                }
                 if (classStatus == 'Closed')
                 {
                     html += '<td style="color:red;" class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-status">' + classStatus + '</td>';
