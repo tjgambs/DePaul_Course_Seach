@@ -576,7 +576,15 @@ function removeFromCart(contents)
         addToCart(contents)
     };
 
-    deleteCookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index]);
+    var cookieToDelete = '';
+    for(cook of document.cookie.split(';'))
+    {
+        if(cook.split('=')[0].indexOf(value.split(',')[9]) != -1)
+        {
+            cookieToDelete = cook;
+        }
+    }
+    deleteCookie(cookieToDelete);
     updateCourseCartCount();
 }
 

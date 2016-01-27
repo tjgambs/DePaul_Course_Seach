@@ -654,10 +654,10 @@ function formatCookies(value)
             html += '<div style="text-align: left;">';
             html += '<table id="myTable' + index + '" class="tablesorter">';
 
-			flag = false;
+            flag = false;
             for(_class of classes[index].slice(2))
             {
-            	if(_class[2] != 'N/A') flag = true;
+                if(_class[2] != 'N/A') flag = true;
             }
             
             if(flag)
@@ -938,7 +938,15 @@ function removeFromCart(contents)
         index = 9;
     }
     var className = contents.getAttribute('class').split(' ').join('-');
-    deleteCookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index]);
+    var cookieToDelete = '';
+    for(cook of document.cookie.split(';'))
+    {
+        if(cook.split('=')[0].indexOf(value.split(',')[10]) != -1)
+        {
+            cookieToDelete = cook;
+        }
+    }
+    deleteCookie(cookieToDelete);
     formatCookies();
     updateCourseCartCount();
 }
