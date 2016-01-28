@@ -25,7 +25,7 @@ def download_classes(termname,termnumber):
 	response = br.open("http://offices.depaul.edu/student-records/schedule-of-classes/Pages/default.aspx")
 	
 	br.select_form(nr=0)
-	control = br.form.find_control('ctl00$ctl30$g_49ceed09_b59e_4457_94a1_a9ea1bd8a6c6$ctl00$ddTerm')
+	control = br.form.find_control('ctl00$ctl29$g_49ceed09_b59e_4457_94a1_a9ea1bd8a6c6$ctl00$ddTerm')
 	control.value = [termnumber]
 	br.submit()
 
