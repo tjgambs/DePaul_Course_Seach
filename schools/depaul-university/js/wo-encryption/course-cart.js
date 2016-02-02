@@ -1000,7 +1000,7 @@ function createCalendar(events, number, defaultDate, defaultTime)
         {
             left: 'prev,next today',
             center: 'title',
-            right: 'agendaWeek'
+            right: ''
         },
         defaultDate: defaultDate,
         selectable: true,
