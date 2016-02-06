@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 import json
 
-driver = webdriver.Firefox()
+driver = webdriver.PhantomJS()
 
 __URL__ = "http://www.depaul.edu/university-catalog/course-descriptions/Pages/default.aspx?letter=A&subject=Accountancy"
 

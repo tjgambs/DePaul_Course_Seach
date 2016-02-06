@@ -5,7 +5,7 @@ import isbnlib
 import glob
 import sys
 
-driver = webdriver.Firefox()
+driver = webdriver.PhantomJS()
 
 def format_data(termname):
 	file_names = glob.glob('../terms/' + termname + '/course_books/*.json')
