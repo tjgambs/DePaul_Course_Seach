@@ -85,7 +85,7 @@ def update_all():
 
 	#update(username,password,'winter-2016','0965',3,True)
 	update(username,password,'spring-2016','0970',4,True)
-	#update(username,password,'summer-2016','0975',5,True)
+	update(username,password,'summer-2016','0975',5,False)
 	
 	update_website()
 	local('rm *.pyc')

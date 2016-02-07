@@ -7,7 +7,7 @@ import json
 import getpass
 import sys
 
-driver = webdriver.PhantomJS()
+driver = webdriver.Firefox()
 
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 
