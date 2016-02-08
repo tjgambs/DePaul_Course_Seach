@@ -352,7 +352,7 @@ function updateRanking()
             try
             {
                 var begin = response.indexOf('"docs":') + 7;
-                var end = response.length - 150;
+                var end = response.length - 151;
                 var data = jQuery.parseJSON(response.substr(begin, end));
                 for (i of data)
                 {
@@ -404,7 +404,7 @@ function updateRanking()
             try
             {
                 var begin = response.indexOf('"docs":') + 7;
-                var end = response.length - 150;
+                var end = response.length - 151;
                 var data = jQuery.parseJSON(response.substr(begin, end));
                 for (i of data)
                 {
@@ -458,7 +458,7 @@ function useBackup(url)
         success: function(response)
         {
             var begin = response.indexOf('"docs":') + 7;
-            var end = response.length - 150;
+            var end = response.length - 151;
             var data = jQuery.parseJSON(response.substr(begin, end));
             for (i of data)
             {
