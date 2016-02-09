@@ -998,9 +998,9 @@ function createCalendar(events, number, defaultDate, defaultTime)
     {
         header:
         {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek'
+            left: '',
+            center: '',
+            right: ''
         },
         defaultDate: defaultDate,
         selectable: true,
