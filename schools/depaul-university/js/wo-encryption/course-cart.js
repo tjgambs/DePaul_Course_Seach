@@ -438,6 +438,7 @@ function removeAll()
         if (i.indexOf('-add') != -1)
         {
             console.log(i);
+            console.log(term);
             if (i.indexOf(term) != -1)
             {
                 deleteCookie(i.split('=')[0]);
