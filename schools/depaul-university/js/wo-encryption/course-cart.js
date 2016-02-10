@@ -671,7 +671,7 @@ function formatCookies(value)
             var courseNumbers = [];
             for (i of classes[index].slice(2))
             {
-                if (!i[5])
+                if (!i[5] || !i[6] || !i[7] || !i[8] || !i[9] || !i[10] || !i[11] || !i[12])
                 {
                     console.log('There was an error so restarting course cart.');
                     removeAll();
