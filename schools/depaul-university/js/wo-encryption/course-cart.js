@@ -433,7 +433,8 @@ function removeAll()
 {
     deleteCookie('unchecked0');
     var term = document.getElementsByClassName('term')[0].value;
-    for (i of document.cookie.split(';'))
+    var cookies = document.cookie.split(';');
+    for (i of cookies)
     {
         if (i.indexOf('-add') != -1)
         {
