@@ -579,7 +579,7 @@ function removeFromCart(contents)
     var cookieToDelete = '';
     for(cook of document.cookie.split(';'))
     {
-        if(cook.split('=')[0].indexOf(value.split(',')[9]) != -1)
+        if(cook.split('=')[0].indexOf(value.split(',')[10]) != -1)
         {
             cookieToDelete = cook;
         }
