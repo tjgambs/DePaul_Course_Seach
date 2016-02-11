@@ -297,7 +297,6 @@ function updateTable(url, shortUrl)
                 if (classStatus == 'C') classStatus = 'Closed';
                 if (classStatus == 'O') classStatus = 'Open';
                 if (classStatus == 'W') classStatus = 'Waitlist';
-
                 html += '<tr>';
                 if (readCookie('depaul-university-(' + term + ')-' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add-' + classNumber) == 0)
                 {
@@ -305,7 +304,7 @@ function updateTable(url, shortUrl)
                 }
                 else
                 {
-                    html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + ['WRD 103', topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
+                    html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl, topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
                 }
                 html += '<td class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall">0.0</td>';
                 if(data[0].topic_descr.length > 0)
@@ -579,9 +578,19 @@ function removeFromCart(contents)
     var cookieToDelete = '';
     for(cook of document.cookie.split(';'))
     {
-        if(cook.split('=')[0].indexOf(value.split(',')[10]) != -1)
+        if(value.split(',').length == 12) 
+        {
+            if(cook.split('=')[0].indexOf(value.split(',')[9]) != -1)
         {
             cookieToDelete = cook;
+        }
+        }
+        else 
+        {
+            if(cook.split('=')[0].indexOf(value.split(',')[10]) != -1)
+        {
+            cookieToDelete = cook;
+        }
         }
     }
     deleteCookie(cookieToDelete);
