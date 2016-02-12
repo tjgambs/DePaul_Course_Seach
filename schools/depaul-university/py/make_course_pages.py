@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 import json
 import urllib
 import sys

@@ -1,3 +1,6 @@
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 from BeautifulSoup import BeautifulSoup as Soup
 import cookielib
 import mechanize

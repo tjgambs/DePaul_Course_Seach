@@ -1,3 +1,6 @@
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 import urllib
 import json
 

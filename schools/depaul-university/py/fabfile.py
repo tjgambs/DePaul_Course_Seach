@@ -1,3 +1,6 @@
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 from fabric.api import local
 from fabric.context_managers import lcd
 import take_book_data as Book

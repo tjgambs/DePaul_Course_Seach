@@ -1,9 +1,12 @@
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import json
 
-driver = webdriver.PhantomJS()
+driver = webdriver.Firefox()
 
 __URL__ = "http://www.depaul.edu/university-catalog/course-descriptions/Pages/default.aspx?letter=A&subject=Accountancy"
 

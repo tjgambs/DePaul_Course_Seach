@@ -1,3 +1,6 @@
+#Created by Timothy Gamble
+#tjgambs@gmail.com
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json
@@ -5,7 +8,7 @@ import isbnlib
 import glob
 import sys
 
-driver = webdriver.PhantomJS()
+driver = webdriver.Firefox()
 
 def format_data(termname):
 	file_names = glob.glob('../terms/' + termname + '/course_books/*.json')
