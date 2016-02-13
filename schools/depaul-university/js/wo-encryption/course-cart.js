@@ -1,4 +1,17 @@
+function deleteBrokenCookies() {
+    if (readCookie('depaul-university-reset') == 1) {
+        var cookies = document.cookie.split(';');
+        for (cook of cookies) {
+            if (cook.indexOf('depaul-university') != -1) {
+                deleteCookie(cook);
+            }
+        }
+        writeCookie('depaul-university-reset', 2, 365);
+    }
+}
+
 function run() {
+    deleteBrokenCookies();
     readSelections();
     readCreditSelections();
     updateTerm();
