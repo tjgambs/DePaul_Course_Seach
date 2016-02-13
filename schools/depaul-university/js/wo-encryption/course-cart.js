@@ -102,6 +102,7 @@ function updateCart(term_number) {
             }
         });
     }
+
 }
 
 function htmlDecode(input) {
@@ -193,7 +194,9 @@ function fixCookie(course, replaceWith, index) {
         }
         writeCookie(savedCookieName, completeArr.join('|'), 365);
     }
-    writeCookie(cookieName, newCookie, 365);
+    if (newCookie[5]) {
+        writeCookie(cookieName, newCookie, 365);
+    }
     formatCookies();
 }
 
