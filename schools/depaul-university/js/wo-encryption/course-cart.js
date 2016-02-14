@@ -129,26 +129,26 @@ function formatCart(response) {
                 }
                 if (htmlDecode(courses[i].getElementsByClassName('location')[0].innerHTML) != tempLocation) {
                     courses[i].getElementsByClassName('location')[0].innerHTML = tempLocation;
-                    fixClasses(courses[i], tempLocation, 11);
+                    //fixClasses(courses[i], tempLocation, 11);
                 }
                 var tempStatus = course.enrl_stat;
                 switch (tempStatus) {
                     case 'O':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Open') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Open';
-                            fixClasses(courses[i], 'Open', 3);
+                            //fixClasses(courses[i], 'Open', 3);
                         }
                         break;
                     case 'C':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Closed') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Closed';
-                            fixClasses(courses[i], 'Closed', 3);
+                            //fixClasses(courses[i], 'Closed', 3);
                         }
                         break;
                     case 'W':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Waitlist') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Waitlist';
-                            fixClasses(courses[i], 'Waitlist', 3);
+                            //fixClasses(courses[i], 'Waitlist', 3);
                         }
                         break;
                 }
@@ -655,24 +655,22 @@ function updateCheck(data) {
 function removeFromSave(number, table) {
     var term = document.getElementsByClassName('term')[0].value;
     var savedClasses = [];
-    var name = '';
+    var names = [];
     for (var i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) && localStorage.key(i).indexOf('depaul-university-(' + term + ')-saved-') != -1) {
-            name = localStorage.key(i);
             savedClasses.push(localStorage.getItem(localStorage.key(i)).split('|'));
+            names.push(localStorage.key(i));
         }
     }
     var classNames = [];
-    for (i of savedClasses[0]) {
-        classNames.push(i.split('=')[0]);
+    var index = 0;
+    for (i of savedClasses) {
+        classNames.push(savedClasses[index][0]);
+        index++;
     }
     var classTableName = classNames[table - 1];
-    var _old = '';
-    for (i of savedClasses) {
-        if (i[0].indexOf(classTableName) != -1) {
-            _old = i;
-        }
-    }
+    var name = names[table - 1];
+    var _old = localStorage.getItem(name).split('|');
     var _new = [];
     for (i of _old) {
         if (i.indexOf(number) == -1) {
@@ -682,10 +680,11 @@ function removeFromSave(number, table) {
     var value = _new.join('|');
     if (value.indexOf('|') == -1) {
         deleteSave(name, table);
+        formatClasses(table-1);
     } else {
         writeToLocal(name, value);
+        formatClasses(table);
     }
-    formatClasses(table);
 }
 
 function removeFromCart(contents) {
