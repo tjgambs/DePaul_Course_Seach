@@ -50,6 +50,9 @@ function run() {
             el.style.visibility = (el.style.visibility == "hidden") ? "visible" : "hidden";
         }
     });
+    if ("onhashchange" in window) {
+        saveSelections();
+    }
 }
 
 function saveSelections() {
@@ -380,8 +383,8 @@ function includeAll(table) {
 function creditSearch() {
     var prefix = document.getElementsByClassName('credit-prefix')[0].value;
     var credit = document.getElementsByClassName('credit-input')[0].value;
-    if (isNaN(credit) == false) {
-        var search = prefix.toLowerCase() + '-credits=' + credit;
+    if (isNaN(credit) == false && credit.trim().length > 0) {
+        var search = prefix.toLowerCase() + '-credits=' + credit.trim();
         document.getElementById('tipue_search_input').value = '"' + search + '"';
         document.getElementById('field').submit();
         saveCreditPrefix();

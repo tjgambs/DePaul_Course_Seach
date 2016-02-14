@@ -41,6 +41,10 @@ function run() {
 	}
 }
 
+function matchStart(term, text) {
+	return text.toUpperCase().indexOf(term.toUpperCase()) == 0;
+}
+
 function saveSelections() {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
 	var number = document.getElementsByClassName('number')[0].value;
@@ -85,8 +89,8 @@ function readFromLocal(name) {
 function creditSearch() {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
 	var credit = document.getElementsByClassName('credit-input')[0].value;
-	if (isNaN(credit) == false) {
-		var search = prefix.toLowerCase() + '-credits=' + credit;
+	if (isNaN(credit) == false && credit.trim().length > 0) {
+		var search = prefix.toLowerCase() + '-credits=' + credit.trim();
 		document.getElementById('tipue_search_input').value = '"' + search + '"';
 		document.getElementById('field').submit();
 		saveCreditPrefix();
@@ -128,8 +132,4 @@ function submitForm() {
 		document.getElementById('field').submit();
 	}
 	saveSelections();
-}
-
-function matchStart(term, text) {
-	return text.toUpperCase().indexOf(term.toUpperCase()) == 0;
 }

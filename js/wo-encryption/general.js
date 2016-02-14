@@ -80,7 +80,7 @@ function updateTermSearch(flag) {
 		$('.tipue-search').remove();
 	}
 	if (flag) {
-		writeToLocal('depaul-university-term', term, 1);
+		writeToLocal('depaul-university-term', term);
 	}
 	var content = document.createElement('script');
 	var code = document.createElement('script');
@@ -95,7 +95,7 @@ function updateTermSearch(flag) {
 
 function updateTermIndex() {
 	var term = document.getElementsByClassName('term')[0].value;
-	writeToLocal('depaul-university-term', term, 1);
+	writeToLocal('depaul-university-term', term);
 	updateCourseCartCount();
 }
 
@@ -127,8 +127,8 @@ function help() {
 function creditSearch() {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
 	var credit = document.getElementsByClassName('credit-input')[0].value;
-	if (isNaN(credit) == false) {
-		var search = prefix.toLowerCase() + '-credits=' + credit;
+	if (isNaN(credit) == false && credit.trim().length > 0) {
+		var search = prefix.toLowerCase() + '-credits=' + credit.trim();
 		document.getElementById('tipue_search_input').value = '"' + search + '"';
 		document.getElementById('field').submit();
 		saveCreditPrefix();

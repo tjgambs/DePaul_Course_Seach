@@ -40,6 +40,10 @@ function run() {
     }
 }
 
+function matchStart(term, text) {
+    return text.toUpperCase().indexOf(term.toUpperCase()) == 0;
+}
+
 function prereqCourses() {
     var description = document.getElementById('description').innerHTML;
     if (description.toUpperCase().indexOf('REQUISITE') == -1) return;
@@ -361,8 +365,8 @@ function useBackup(url) {
 function creditSearch() {
     var prefix = document.getElementsByClassName('credit-prefix')[0].value;
     var credit = document.getElementsByClassName('credit-input')[0].value;
-    if (isNaN(credit) == false) {
-        var search = prefix.toLowerCase() + '-credits=' + credit;
+    if (isNaN(credit) == false && credit.trim().length > 0) {
+        var search = prefix.toLowerCase() + '-credits=' + credit.trim();
         document.getElementById('tipue_search_input').value = '"' + search + '"';
         document.getElementById('field').submit();
         saveCreditPrefix();
@@ -397,7 +401,9 @@ function overlay() {
 
 function addToCart(contents) {
     var term = window.location.href.split('/').slice(-3, -2)[0];
-    if (readFromLocal('depaul-university-term') != term) writeToLocal('depaul-university-term', term);
+    if (readFromLocal('depaul-university-term') != term) {
+        writeToLocal('depaul-university-term', term);
+    }
     var index = 10;
     var value = contents.getAttribute('id');
     if (value.split(',').length < 13) index = 9;
@@ -412,7 +418,9 @@ function addToCart(contents) {
 
 function removeFromCart(contents) {
     var term = window.location.href.split('/').slice(-3, -2)[0];
-    if (readFromLocal('depaul-university-term') != term) writeToLocal('depaul-university-term', term);
+    if (readFromLocal('depaul-university-term') != term) {
+        writeToLocal('depaul-university-term', term);
+    }
     var index = 10;
     var value = contents.getAttribute('id');
     if (value.split(',').length < 12) index = 9;
@@ -460,8 +468,4 @@ function submitForm() {
         document.getElementById('field').submit();
     }
     saveSelections();
-}
-
-function matchStart(term, text) {
-    return text.toUpperCase().indexOf(term.toUpperCase()) == 0;
 }
