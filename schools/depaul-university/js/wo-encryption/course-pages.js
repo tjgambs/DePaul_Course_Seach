@@ -1,17 +1,4 @@
-function deleteBrokenCookies() {
-    if (readCookie('depaul-university-reset') == 1) {
-        var cookies = document.cookie.split(';');
-        for (cook of cookies) {
-            if (cook.indexOf('depaul-university') != -1) {
-                deleteCookie(cook);
-            }
-        }
-        writeCookie('depaul-university-reset', 2, 365);
-    }
-}
-
 function run() {
-    deleteBrokenCookies();
     prereqCourses();
     readSelections();
     readCreditSelections();
@@ -127,26 +114,26 @@ function urlExists(url) {
 function saveSelections() {
     var prefix = document.getElementsByClassName('prefix')[0].value;
     var number = document.getElementsByClassName('number')[0].value;
-    writeCookie('depaul-university-standard-prefix', prefix);
-    writeCookie('depaul-university-standard-number', number);
+    writeToLocal('depaul-university-standard-prefix', prefix);
+    writeToLocal('depaul-university-standard-number', number);
 }
 
 function saveCreditPrefix() {
     var prefix = document.getElementsByClassName('credit-prefix')[0].value;
-    writeCookie('depaul-university-standard-prefix', prefix);
-    writeCookie('depaul-university-standard-number', '');
+    writeToLocal('depaul-university-standard-prefix', prefix);
+    writeToLocal('depaul-university-standard-number', '');
 }
 
 function readCreditSelections() {
-    var prefix = readCookie('depaul-university-standard-prefix');
+    var prefix = readFromLocal('depaul-university-standard-prefix');
     if (prefix) {
         document.getElementsByClassName('credit-prefix')[0].value = prefix;
     }
 }
 
 function readSelections() {
-    var prefix = readCookie('depaul-university-standard-prefix');
-    var number = readCookie('depaul-university-standard-number');
+    var prefix = readFromLocal('depaul-university-standard-prefix');
+    var number = readFromLocal('depaul-university-standard-number');
     if (prefix) {
         document.getElementsByClassName('prefix')[0].value = prefix;
     }
@@ -168,7 +155,7 @@ function updateTable(url, shortUrl) {
         async: false,
         success: function(response) {
             var data = jQuery.parseJSON(response);
-            var term = readCookie('depaul-university-term');
+            var term = readFromLocal('depaul-university-term');
             var html = '<table id="myTable" class="tablesorter"><thead><tr>';
             if (data[0].topic_descr.length == 0) {
                 var headers = ['Add', 'Overall Rating', 'Class Status', 'Credit Hours', 'Teacher First Name', 'Teacher Last Name', 'Class Start Time', 'Class End Time', 'Class Section', 'Class Number', 'Location', 'Days'];
@@ -219,7 +206,7 @@ function updateTable(url, shortUrl) {
                 if (classStatus == 'O') classStatus = 'Open';
                 if (classStatus == 'W') classStatus = 'Waitlist';
                 html += '<tr>';
-                if (readCookie('depaul-university-(' + term + ')-' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add-' + classNumber) == 0) {
+                if (readFromLocal('depaul-university-(' + term + ')-' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add-' + classNumber) == 0) {
                     html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl, topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../add.png" width="20" onclick="addToCart(this)"/>';
                 } else {
                     html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl, topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
@@ -269,7 +256,7 @@ function updateRanking() {
                     var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall');
                     var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-firstn');
                     var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-lastn');
-                    var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
+                    var list_data = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
                     if (list_overall.length != 0) {
                         for (var j = 0; j < list_overall.length; j++) {
                             if (overall) {
@@ -278,7 +265,7 @@ function updateRanking() {
                                         list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                         list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';
                                         list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + last_name + '</a>';
-                                        list_cookie[j].id = overall + ',' + list_cookie[j].id;
+                                        list_data[j].id = overall + ',' + list_data[j].id;
                                     }
                                 }
                             }
@@ -309,7 +296,7 @@ function updateRanking() {
                     var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall');
                     var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-firstn');
                     var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-lastn');
-                    var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
+                    var list_data = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
                     if (list_overall.length != 0) {
                         for (var j = 0; j < list_overall.length; j++) {
                             if (overall) {
@@ -318,7 +305,7 @@ function updateRanking() {
                                         list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                         list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';
                                         list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + last_name + '</a>';
-                                        list_cookie[j].id = overall + ',' + list_cookie[j].id;
+                                        list_data[j].id = overall + ',' + list_data[j].id;
                                     }
                                 }
                             }
@@ -351,7 +338,7 @@ function useBackup(url) {
                 var list_overall = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall');
                 var list_firstn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-firstn');
                 var list_lastn = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-lastn');
-                var list_cookie = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
+                var list_data = document.getElementsByClassName((first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add');
                 if (list_overall.length != 0) {
                     for (var j = 0; j < list_overall.length; j++) {
                         if (overall) {
@@ -360,7 +347,7 @@ function useBackup(url) {
                                     list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                     list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';
                                     list_lastn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + last_name + '</a>';
-                                    list_cookie[j].id = overall + ',' + list_cookie[j].id;
+                                    list_data[j].id = overall + ',' + list_data[j].id;
                                 }
                             }
                         }
@@ -383,17 +370,14 @@ function creditSearch() {
 }
 
 function updateCourseCartCount() {
-    var days = 1;
     var term = window.location.href.split('/').slice(-3, -2)[0];
-    if (readCookie('depaul-university-term') != term) {
-        writeCookie('depaul-university-term', term, days);
+    if (readFromLocal('depaul-university-term') != term) {
+        writeToLocal('depaul-university-term', term);
     }
-    var cookies = document.cookie;
     var count = 0;
-    for (i of cookies.split(';')) {
-        var cookie = i.split(',');
-        if (cookie[0].indexOf('-add-') != -1) {
-            if (cookie[0].indexOf(term) != -1) {
+    for (var i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i).indexOf('-add-') != -1) {
+            if (localStorage.key(i).indexOf(term) != -1) {
                 count += 1;
             }
         }
@@ -412,9 +396,8 @@ function overlay() {
 }
 
 function addToCart(contents) {
-    var days = 1;
     var term = window.location.href.split('/').slice(-3, -2)[0];
-    if (readCookie('depaul-university-term') != term) writeCookie('depaul-university-term', term, 1);
+    if (readFromLocal('depaul-university-term') != term) writeToLocal('depaul-university-term', term);
     var index = 10;
     var value = contents.getAttribute('id');
     if (value.split(',').length < 13) index = 9;
@@ -423,13 +406,13 @@ function addToCart(contents) {
     document.getElementById(value).onclick = function() {
         removeFromCart(contents);
     };
-    writeCookie('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index], value, days);
+    writeToLocal('depaul-university-(' + term + ')-' + className + '-' + value.split(',')[index], value);
     updateCourseCartCount();
 }
 
 function removeFromCart(contents) {
     var term = window.location.href.split('/').slice(-3, -2)[0];
-    if (readCookie('depaul-university-term') != term) writeCookie('depaul-university-term', term, 1);
+    if (readFromLocal('depaul-university-term') != term) writeToLocal('depaul-university-term', term);
     var index = 10;
     var value = contents.getAttribute('id');
     if (value.split(',').length < 12) index = 9;
@@ -438,51 +421,34 @@ function removeFromCart(contents) {
     document.getElementById(value).onclick = function() {
         addToCart(contents)
     };
-    var cookieToDelete = '';
-    for (cook of document.cookie.split(';')) {
-        if (value.split(',').length == 12) {
-            if (cook.split('=')[0].indexOf(value.split(',')[9]) != -1) {
-                cookieToDelete = cook;
+    var localNameToDelete = '';
+    for (var i = 0; i < localStorage.length; i++) {
+        if (localStorage.getItem(localStorage.key(i)).split(',').length == 12) {
+            if (localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[9]) != -1) {
+                localNameToDelete = localStorage.key(i);
             }
         } else {
-            if (cook.split('=')[0].indexOf(value.split(',')[10]) != -1) {
-                cookieToDelete = cook;
+            if (localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[10]) != -1) {
+                localNameToDelete = localStorage.key(i);
             }
         }
     }
-    deleteCookie(cookieToDelete);
+    deleteFromLocal(localNameToDelete);
     updateCourseCartCount();
 }
 
-function writeCookie(name, value, days) {
-    var date, expires;
-    if (days) {
-        date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    } else {
-        expires = "";
-    }
-    document.cookie = name + "=" + value + expires + "; path=/";
+function writeToLocal(name, value) {
+    localStorage.setItem(name.trim(), value);
 }
 
-function readCookie(name) {
-    var i, c, ca, nameEQ = name + "=";
-    ca = document.cookie.split(';');
-    for (i = 0; i < ca.length; i++) {
-        c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1, c.length);
-        }
-        if (c.indexOf(nameEQ) == 0) {
-            return c.substring(nameEQ.length, c.length);
-        }
-    }
+function readFromLocal(name) {
+    if (localStorage.getItem(name.trim()))
+        return localStorage.getItem(name.trim());;
     return '';
 }
 
-function deleteCookie(name) {
-    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function deleteFromLocal(name) {
+    localStorage.removeItem(name.split('=')[0].trim());
 }
 
 function submitForm() {

@@ -431,8 +431,8 @@
 	$(document).ready(function() {
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
-		if(readCookie('depaul-university-term')) {
-			var term = readCookie('depaul-university-term');
+		if(readFromLocal('depaul-university-term')) {
+			var term = readFromLocal('depaul-university-term');
 			document.getElementsByClassName('term')[0].value = term;
 		}
     	setTimeout(function() { 

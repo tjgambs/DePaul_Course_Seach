@@ -1,17 +1,6 @@
-function deleteBrokenCookies() {
-	if (readCookie('depaul-university-reset') == 1) {
-		var cookies = document.cookie.split(';');
-		for (cook of cookies) {
-			if (cook.indexOf('depaul-university') != -1) {
-				deleteCookie(cook);
-			}
-		}
-		writeCookie('depaul-university-reset', 2, 365);
-	}
-}
+var defaultTerm = 'spring-2016';
 
 function run() {
-	deleteBrokenCookies();
 	readSelections();
 	readCreditSelections();
 	$('#help').mousedown(function(e) {
@@ -55,26 +44,26 @@ function run() {
 function saveSelections() {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
 	var number = document.getElementsByClassName('number')[0].value;
-	writeCookie('depaul-university-standard-prefix', prefix);
-	writeCookie('depaul-university-standard-number', number);
+	writeToLocal('depaul-university-standard-prefix', prefix);
+	writeToLocal('depaul-university-standard-number', number);
 }
 
 function saveCreditPrefix() {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
-	writeCookie('depaul-university-standard-prefix', prefix);
-	writeCookie('depaul-university-standard-number', '');
+	writeToLocal('depaul-university-standard-prefix', prefix);
+	writeToLocal('depaul-university-standard-number', '');
 }
 
 function readCreditSelections() {
-	var prefix = readCookie('depaul-university-standard-prefix');
+	var prefix = readFromLocal('depaul-university-standard-prefix');
 	if (prefix) {
 		document.getElementsByClassName('credit-prefix')[0].value = prefix;
 	}
 }
 
 function readSelections() {
-	var prefix = readCookie('depaul-university-standard-prefix');
-	var number = readCookie('depaul-university-standard-number');
+	var prefix = readFromLocal('depaul-university-standard-prefix');
+	var number = readFromLocal('depaul-university-standard-number');
 	if (prefix) {
 		document.getElementsByClassName('prefix')[0].value = prefix;
 	}
@@ -83,31 +72,14 @@ function readSelections() {
 	}
 }
 
-function writeCookie(name, value, days) {
-	var date, expires;
-	if (days) {
-		date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		expires = "; expires=" + date.toGMTString();
-	} else {
-		expires = "";
-	}
-	document.cookie = name + "=" + value + expires + "; path=/";
+function writeToLocal(name, value) {
+    localStorage.setItem(name.trim(), value);
 }
 
-function readCookie(name) {
-	var i, c, ca, nameEQ = name + "=";
-	ca = document.cookie.split(';');
-	for (i = 0; i < ca.length; i++) {
-		c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1, c.length);
-		}
-		if (c.indexOf(nameEQ) == 0) {
-			return c.substring(nameEQ.length, c.length);
-		}
-	}
-	return '';
+function readFromLocal(name) {
+    if (localStorage.getItem(name.trim()))
+        return localStorage.getItem(name.trim());;
+    return '';
 }
 
 function creditSearch() {
@@ -122,22 +94,19 @@ function creditSearch() {
 }
 
 function updateCourseCartCount() {
-	var cookies = document.cookie;
-	var term = readCookie('depaul-university-term');
-	if (!term) {
-		writeCookie('depaul-university-term', 'winter-2016', 1);
-		term = readCookie('depaul-university-term');
+	if (!readFromLocal('depaul-university-term')) {
+		writeToLocal('depaul-university-term',defaultTerm);
 	}
-	var count = 0;
-	for (i of cookies.split(';')) {
-		var cookie = i.split(',');
-		if (cookie[0].indexOf('-add-') != -1) {
-			if (cookie[0].indexOf(term) != -1) {
-				count += 1;
-			}
-		}
-	}
-	document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')';
+    var term = readFromLocal('depaul-university-term');
+    var count = 0;
+    for (var i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i).indexOf('-add-') != -1) {
+            if (localStorage.key(i).indexOf(term) != -1) {
+                count += 1;
+            }
+        }
+    }
+    document.getElementById('course-cart').innerHTML = 'Course Cart (' + count + ')';
 }
 
 function help() {
