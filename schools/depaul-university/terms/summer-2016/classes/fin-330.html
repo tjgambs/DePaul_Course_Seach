@@ -416,7 +416,7 @@
 	<h1>FIN 330 INVESTMENTS: THEORY & PRACTICE</h1><h2 id="description">This course focuses on Investment principles and problems. It seeks to develop the student's perception of risks and opportunities in investment instruments and markets. It will inform their description of the markets and the operational effects of current financial events upon the various markets. PREREQUISITE(S): FIN 202 and 320 are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FIN&catalog_nbr=330","FIN 330");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FIN&catalog_nbr=330","FIN 330");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

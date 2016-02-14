@@ -416,7 +416,7 @@
 	<h1>ECO 101 INTRODUCTION TO ECONOMIC ISSUES</h1><h2 id="description">This course will introduce students to basic concepts from both micro- and macroeconomics. The goal is for students to gain an appreciation of how economics can be used to understand the world. Students will enhance their analytical skills by using basic economic concepts to examine current domestic and international issues. Students will improve their oral communication skills during class discussions and debates. This course is intended for non-Commerce students and cannot be counted toward a major or minor in economics. PREREQUISITE(S): LSP 121 or MAT 130 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECO&catalog_nbr=101","ECO 101");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECO&catalog_nbr=101","ECO 101");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

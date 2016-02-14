@@ -416,7 +416,7 @@
 	<h1>SPN 206 ADVANCED GRAMMAR AND COMPOSITION FOR HERITAGE SPEAKERS II</h1><h2 id="description">This course is the first in a series (SPN 205, SPN 206 and SPN 207) that offers a comprehensive, structural review of the Spanish language for heritage speakers. The course objectives include: 1) increasing the students' vocabulary in Spanish, 2) improving their reading and writing skills (students will read short stories and essays, and students will write guided compositions), 3) improving the students' oral proficiency (through presentations and discussions), and 4) exploring and fostering an appreciation of Latino culture and heritage. SPN 106 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SPN&catalog_nbr=206","SPN 206");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SPN&catalog_nbr=206","SPN 206");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

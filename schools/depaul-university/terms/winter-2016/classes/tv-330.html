@@ -416,7 +416,7 @@
 	<h1>TV 330 DIGITAL SERIES PRODUCTION</h1><h2 id="description">Students will write, produce, edit, screen and webcast a series of five-minute webisodes over the course of the quarter, focusing on short form storytelling for online distribution. Students will have to think creatively, collaborate and act quickly to complete the webisodes on deadline. The class will focus on short serial storytelling discussing composition, structure and editing for the various forms the work will take (narrative, documentary, sitcom, reality, etc...). Production groups will be assigned and create a series. Each student will write at least one script of that series that will be produced. All will take part in the production process. PREREQUISITE(S): DC 210</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TV&catalog_nbr=330","TV 330");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TV&catalog_nbr=330","TV 330");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

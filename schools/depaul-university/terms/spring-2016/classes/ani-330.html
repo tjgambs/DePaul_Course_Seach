@@ -416,7 +416,7 @@
 	<h1>ANI 330 3D CHARACTER MODELING</h1><h2 id="description">This course will instruct students in the process of 3D polygonal based character modeling. Students will learn professional techniques for building quad-based polygon meshes with an extra emphasis on proper topology to help prepare their model for rigging. Students will learn complete UV unwrapping for the entire figure as well as effective techniques for advanced texturing. PREREQUISITE(S): ANI 230 or GPH 250</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=330","ANI 330");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=330","ANI 330");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

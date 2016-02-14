@@ -416,7 +416,7 @@
 	<h1>TDC 563 PROTOCOLS AND TECHNIQUES FOR DATA  NETWORKS</h1><h2 id="description">Advanced topics in TCP/IP including IPv6, TCP traffic control, routing protocols, multicast routing protocols, and upper layer protocols supporting Quality of Service (QoS) in the new generation of the Internet; compression techniques; introduction to SNA and APPN, SNA and TCP/IP integration. PREREQUISITE(S): TDC 463</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=563","TDC 563");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=563","TDC 563");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

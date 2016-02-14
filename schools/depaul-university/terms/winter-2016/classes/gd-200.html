@@ -416,7 +416,7 @@
 	<h1>GD 200 GRAPHIC DESIGN I</h1><h2 id="description">This course introduces the world of graphic design in a social and historical context. The goals are to explore formal structures and research methods with emphasis on the role of analysis and conceptual thinking as the first tasks of the print and multi-media designer. The course includes basic instruction in typography, color, problem-solving in print and on screen. PREREQUISITE(S): GD 105, ART 105, ANI 105 or GPH 211.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=200","GD 200");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=200","GD 200");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

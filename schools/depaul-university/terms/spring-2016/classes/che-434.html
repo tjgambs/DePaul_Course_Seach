@@ -416,7 +416,7 @@
 	<h1>CHE 434 POLYMER CHARACTERIZATION</h1><h2 id="description">This course looks at the broad subject of polymer characterization. A detailed consideration is given to major methods of analysis of chemical structure, molecular weight, morphology, and rheology. Practical application of polymer characterization in society is a theme throughout the course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=434","CHE 434");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=434","CHE 434");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

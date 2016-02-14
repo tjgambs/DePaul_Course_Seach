@@ -416,7 +416,7 @@
 	<h1>EA 517 FACILITATING ADULT LEARNING</h1><h2 id="description">In this course, students will develop and hone skills to facilitate adult learning in a variety of settings. Students will learn about concepts and theories that inform learner-centered methods and techniques of facilitating learning. Throughout the course, they will apply various methods and techniques in various settings and reflect on how these methods influence learning. The repertoire of skills that students develop as facilitators of learning will have both immediate and future application. While the concepts, methods, and techniques covered in this course are relevant to on-line learning, students who wish to delve further into facilitating on-line learning are encouraged to do so through the MAEA Electives option.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=EA&catalog_nbr=517","EA 517");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=EA&catalog_nbr=517","EA 517");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

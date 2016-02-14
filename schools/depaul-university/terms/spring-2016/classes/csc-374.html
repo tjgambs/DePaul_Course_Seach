@@ -416,7 +416,7 @@
 	<h1>CSC 374 COMPUTER SYSTEMS II</h1><h2 id="description">A course on computer systems topics, focusing on operating systems components and their relevance for application programming. Caching, memory hierarchy, performance optimization, linking, processes, virtual memory, dynamic memory allocation, system level I/O. PREREQUISITE: CSC 373</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=374","CSC 374");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=374","CSC 374");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>CSL 475 COLLEGE AND CAREER READINESS COUNSELING FOR SCHOOL COUNSELORS</h1><h2 id="description">This course provides an introduction to college and career readiness counseling in the school context. Students are introduced to career theories and resources, as well as strategies to promote access and readiness for postsecondary education. PREREQUISITE(S): Admission to the Counseling Masters Program and a grade of B- or better in CSL 451 and CSL 452 are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSL&catalog_nbr=475","CSL 475");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSL&catalog_nbr=475","CSL 475");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

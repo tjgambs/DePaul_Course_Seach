@@ -416,7 +416,7 @@
 	<h1>SW 211 SITES, GAMES, AND TOOLS FOR TRAINING</h1><h2 id="description">Dealing with change has become essential for all of us, in our private lives and in our organizations and businesses. For some people, change is a stimulating adventure. For others, it is painfully anxiety-provoking. Yet the reality of today's business world is that no one can avoid change. The implementation of information technology in the workplace results in complex changes and poses challenges for supervisors and employees. In this course, we will examine issues regarding the individual and social aspects of implementing information technology in work and community. We will explore questions of access to and control of information technology, and concerns for individual privacy. The students will be exposed to a variety of conceptual frameworks and perspective that they may use for interpreting problems and managing change related to integrating computer technology into social systems of work. We will explore each framework or perspective by applying it to case studies. We will reflect on the effectiveness and shortcomings of each interpretive perspective.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=SW&catalog_nbr=211","SW 211");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=SW&catalog_nbr=211","SW 211");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

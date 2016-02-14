@@ -416,7 +416,7 @@
 	<h1>WLE 326 THEORETICAL FOUNDATIONS OF ESL AND WLE</h1><h2 id="description">Presents an introduction to the field of second and world language, with attention to basic concepts of second language acquisition in various language learning contexts. Discusses interdisciplinary perspectives of second and world language acquisition and their application to classroom practices. Topics include interlanguage, communicative competence, D/discourses, investment/motivation, sociocultural approaches to language learning, universal grammar, etc. The different factors influencing the acquisition of ESL and WLE are examined as well as current research in applied linguistics and different approaches to language teaching.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=WLE&catalog_nbr=326","WLE 326");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=WLE&catalog_nbr=326","WLE 326");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

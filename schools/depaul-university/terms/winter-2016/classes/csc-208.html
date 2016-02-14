@@ -416,7 +416,7 @@
 	<h1>CSC 208 ETHICS IN TECHNOLOGY</h1><h2 id="description">Information Technology and the rapid pace in which it has advanced have had a tremendous impact on our lives. Changes have been swift and the human capacity to deal with them is limited. It has been said that our technology has outpaced our humanity. This course will research the new responsibilities technology presents and our ability to deal with these changes in an ethical manner. Students will employ ethical frameworks, which integrate computer science and ethics, to develop the skills required to examine different sets of assumptions and question them. Case studies will provide a historical perspective for analysis.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=208","CSC 208");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=208","CSC 208");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>RE 570 ADVANCED REAL ESTATE ANALYSIS WITH ARGUS</h1><h2 id="description">This course is designed to develop the vocabulary, concepts, and analytical skills necessary to make informed commercial real estate investment decisions at a very detailed level using the Argus software platform, as well as other software and database tools for research and analysis. RE530 is a prerequisite or may be taken concurrently with the permission of the instructor.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=570","RE 570");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=570","RE 570");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

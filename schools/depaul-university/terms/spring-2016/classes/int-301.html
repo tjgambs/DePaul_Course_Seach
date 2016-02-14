@@ -416,7 +416,7 @@
 	<h1>INT 301 SENIOR SEMINAR</h1><h2 id="description">This course combines formal class work and independent research. Students conduct and present competent original academic research on a relevant and novel question of their choosing. Seminar topics vary, but projects typically require comparative research conducted in the student's target language. PREREQUISITE(S): Senior standing and declared International Studies major or minor are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=301","INT 301");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=301","INT 301");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

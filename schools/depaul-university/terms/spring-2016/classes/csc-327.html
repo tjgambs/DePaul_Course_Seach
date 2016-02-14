@@ -416,7 +416,7 @@
 	<h1>CSC 327 PROBLEM SOLVING FOR CONTESTS</h1><h2 id="description">This course prepares students to compete in programming contests. More broadly, it covers problem solving techniques in an informal, fun, and hands-on setting. This course will improve your analytical and programming skills and is thus recommended for all students and not just the competitors among us. This course can be taken for credit twice. PREREQUISITE(S): CSC 301 or CSC 383</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=327","CSC 327");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=327","CSC 327");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

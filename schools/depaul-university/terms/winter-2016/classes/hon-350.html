@@ -416,7 +416,7 @@
 	<h1>HON 350 HONORS SENIOR SEMINAR</h1><h2 id="description">This course, which meets the capstone requirement for the University Honors Program, is designed to engage students in a discussion of meaning and values, and to foster skills in interdisciplinary research and writing. In a seminar setting, students explore a designated topic, develop related projects, and pursue work in an area defined by the Honors faculty member who designed the particular course. Seminars will be offered in broad interdisciplinary areas, allowing seniors to choose from diverse topics. Please see the schedule for current offerings. Only open to students in the University Honors Program. PREREQUISITE(S): HON 301 and status as a senior in the University Honors program is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HON&catalog_nbr=350","HON 350");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HON&catalog_nbr=350","HON 350");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HSP 333 INTERNATIONAL WINE EDUCATION & MANAGEMENT</h1><h2 id="description">The purpose of this course is to introduce students to the world of wine. The course emphasizes export shares and trends for significant producing counties and regions. The course further will focus on the processes of grape growing and the science that underlies the practical issues. The implications for wine-style, quality and costs of decisions taken at each stage of wine production will be covered. Students must be legal drinking age by start of course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=333","HSP 333");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=333","HSP 333");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

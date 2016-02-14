@@ -416,7 +416,7 @@
 	<h1>AI 249 ALL THE CITY'S A STAGE: THEATER AND COMMUNITY IN CHICAGO</h1><h2 id="description">From the days of slavery to the present, the cultural contributions of the African-American in the areas of literature and folklore, music, art, and theatre have helped shape and define the American identity. The impact of their creativity on /american Life has been, has been and continues to be, far-reaching. This course will illuminate the cultural history of the Afro-American. It will follow a lecture/discussion format, using slides, recordings, and selected readings. In addition, students will supplement their learning through individual research and documentation of approved topics.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=249","AI 249");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=249","AI 249");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

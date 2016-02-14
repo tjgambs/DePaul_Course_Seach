@@ -416,7 +416,7 @@
 	<h1>PSY 554 SEMINAR IN DEVELOPMENTAL PSYCHOLOGY</h1><h2 id="description">This course focuses on special topics in developmental psychology and may cover social, emotional, language, and/or cognitive development during selected portions of the lifespan. Relevant theories and empirical research will be analyzed. Cross-level with PSY 378.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=554","PSY 554");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=554","PSY 554");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

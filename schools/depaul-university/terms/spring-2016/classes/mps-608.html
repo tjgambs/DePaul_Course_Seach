@@ -416,7 +416,7 @@
 	<h1>MPS 608 SEMINAR IN HIGHER EDUCATION ADMINISTRATION</h1><h2 id="description">This course provides the opportunity for students to discuss and develop a greater understanding of issues of current concern in higher education. This course may explore issues of critical concern that take from current research and practice in the field and will allow students to integrate knowledge drawn from across the MPS program to the study of current issues in higher education. PREREQUISITE(S): MPS 500 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=608","MPS 608");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=608","MPS 608");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

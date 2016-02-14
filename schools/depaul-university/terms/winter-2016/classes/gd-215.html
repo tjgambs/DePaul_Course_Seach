@@ -416,7 +416,7 @@
 	<h1>GD 215 WEB DESIGN FOR COMMERCIAL PROJECTS</h1><h2 id="description">This is a design-focused web class on intermediate concepts and techniques in the visual design, development and implementation of websites for commercial purposes. Students will use industry standard web design applications and some hand coding in HTML and CSS. PREREQUISITE(S): ISM 210 and (GD 110 or IT 130 or HCI 201)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=215","GD 215");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=215","GD 215");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

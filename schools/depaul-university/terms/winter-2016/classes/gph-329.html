@@ -416,7 +416,7 @@
 	<h1>GPH 329 COMPUTER GRAPHICS DEVELOPMENT II</h1><h2 id="description">(Formerly CSC 329) Basic graphics architecture. Coordinate systems. Three-dimensional representations and transformations. Simple visible-surface algorithms. Introduction to illumination. Gouraud and Phong shading. Antialiasing. Texture mapping and elements of animation. Students create a graphics package using a high-level graphics API such as OpenGL. PREREQUISITE(S): CSC 361 and GAM 325</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GPH&catalog_nbr=329","GPH 329");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GPH&catalog_nbr=329","GPH 329");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

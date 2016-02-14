@@ -416,7 +416,7 @@
 	<h1>GD 395 CAPSTONE PROJECT II</h1><h2 id="description">This two course sequence provides a Graphic Design-specific capstone experience for the student. The capstone course will connect the students' Graphic Design course work with the University courses s/he has taken through three components: student-generated design proposals, class/instructor discussions, and the actual creation/production of the student's proposal. The production piece is the primary focus of this course that takes place over two quarters. PREREQUISITE(S): GD 200 and GD 230</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=395","GD 395");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=395","GD 395");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

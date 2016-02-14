@@ -416,7 +416,7 @@
 	<h1>MUS 282 LOVE SONGS</h1><h2 id="description">This course will investigate case studies of love songs in the Western tradition, considering contemporary conventions, the response of composers and poets to expectations, and the relation between first-person song and autobiography. In this interdisciplinary class, students will explore the historically contingent nature of musical and poetic convention, changing ideas of love and gender relationships, and the importance of biography in the reception of love songs. While the course will have a broad historical scope, an emphasis on modern popular music will allow students to apply critical reading and listening skills to the music they already appreciate.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MUS&catalog_nbr=282","MUS 282");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MUS&catalog_nbr=282","MUS 282");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

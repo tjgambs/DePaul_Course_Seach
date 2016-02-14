@@ -416,7 +416,7 @@
 	<h1>CHE 233 ORGANIC CHEMISTRY LABORATORY II</h1><h2 id="description">Laboratory to be taken in conjunction with CHE 232. PREREQUISITE(S): A minimum grade of C- in CHE 230 and CHE 231 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CHE&catalog_nbr=233","CHE 233");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CHE&catalog_nbr=233","CHE 233");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>SUD 601 CANDIDACY MAINTENANCE</h1><h2 id="description">Masters candidates who are not actively working on a portfolio during a given quarter but who want to maintain active university status can register for this course by permission of the graduate director. This course does not maintain student status for purposes of student loans. Non-credit.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SUD&catalog_nbr=601","SUD 601");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SUD&catalog_nbr=601","SUD 601");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>MIS 555 MANAGEMENT OF INFORMATION TECHNOLOGY</h1><h2 id="description">This course focuses on the management and use of information technology (IT). As the use of IT in society grows, particularly in business, our graduates are likely to become responsible for managing some technology resources and to participate in IT planning and development projects as founders, sponsors, team members, managers of development or end-user developers. Students should become effective users and evaluators of information, IT, and information services. The course explores a number of IT-related topics such as the strategic role of IT, IT planning and architecture, building the telecommunication highway system, management issues in systems development, the expanding universe of computing, group support systems, intelligent systems, electronic document management, and managing the human side of systems.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MIS&catalog_nbr=555","MIS 555");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MIS&catalog_nbr=555","MIS 555");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

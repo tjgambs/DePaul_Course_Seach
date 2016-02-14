@@ -416,7 +416,7 @@
 	<h1>GEO 441 GEOGRAPHIC INFORMATION SYSTEMS (GIS) FOR COMMUNITY DEVELOPMENT</h1><h2 id="description">This course will focus on applications of Geographic Information Systems (GIS) to community studies and community development. As an amalgam of information technologies (e.g. database management, Web 2.0) and earth measurement technologies (e.g. global positioning systems, remote sensing), GIS is rapidly entering the realm of community development. The course will explain how GIS works; enable students to learn techniques including mapping, spatial analysis, and data management; and provide students with the opportunity to apply GIS to community development. Cross-listed with MPS 552.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=441","GEO 441");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=441","GEO 441");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

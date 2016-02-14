@@ -416,7 +416,7 @@
 	<h1>PAX 218 HUMAN RIGHTS: PROMISE AND PROBLEMATICS</h1><h2 id="description">This course will explore the historical origins, foundational principles, and socio-political efficacy of human rights discourse in contemporary international relations, domestic politics, and ethical thought. It consider issues such as the religious and/or secular foundation of human rights; their universality in relation to particular cultural customs and norms; the relative priority of individual and collective rights; and the legitimacy of international humanitarian intervention in sovereign nations.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=PAX&catalog_nbr=218","PAX 218");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=PAX&catalog_nbr=218","PAX 218");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

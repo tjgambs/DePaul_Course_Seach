@@ -416,7 +416,7 @@
 	<h1>MOL 364 MODERN RUSSIAN AUTHORS</h1><h2 id="description">This course explores works of the most influential Russian authors of the Modern period. Authors might include Anton Chekhov, Vladimir Nabokov, Mikhail Bulgakov, Evgeny Zamyatin, and more. Students will explore several genres, including poetry, novel, short, story, and plays. These authors and works will be studied in the context of their times.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MOL&catalog_nbr=364","MOL 364");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MOL&catalog_nbr=364","MOL 364");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

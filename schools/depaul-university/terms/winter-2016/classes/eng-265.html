@@ -416,7 +416,7 @@
 	<h1>ENG 265 THE AMERICAN NOVEL</h1><h2 id="description">Studies in the American novel. Variable emphasis on the historical development, regional expression, multicultural scope, ethical engagement, and/or recurring thematic concerns of the genre. WRD 103 or HON 100 is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENG&catalog_nbr=265","ENG 265");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENG&catalog_nbr=265","ENG 265");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

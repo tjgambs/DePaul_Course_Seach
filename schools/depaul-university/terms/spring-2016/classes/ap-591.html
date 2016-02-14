@@ -416,7 +416,7 @@
 	<h1>AP 591 INTEGRATING PROJECT PROPOSAL</h1><h2 id="description">Students develop and submit concise, well-honed documents proposing the nature and scope of their Final Integrating Projects. Topics being proposed are to be supported by relevant professional/scholarly literature and to include the use of appropriate method(s) of inquiry. (AP-591 and AP-592 serve as a culmination option for the MAAPS degree.) PREREQUISITE(S): Status as a MAAPS student or departmental permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AP&catalog_nbr=591","AP 591");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AP&catalog_nbr=591","AP 591");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HCI 514 GLOBAL USER RESEARCH</h1><h2 id="description">Theories and approaches for conducting HCI research and creating digital media for international audiences. Varied topics include (a) cultural models and global differences that influence design of digital artifacts (b) approaches to conducting usability and other types of user research and (c) information communication and technologies for development (ICT4D). PREREQUISITE(S): HCI 445 and HCI 460</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=514","HCI 514");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=514","HCI 514");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

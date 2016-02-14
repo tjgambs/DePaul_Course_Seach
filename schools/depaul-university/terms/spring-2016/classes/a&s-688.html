@@ -416,7 +416,7 @@
 	<h1>A&S 688 SERVICE LEARNING FOR HIGHER EDUCATION</h1><h2 id="description">This class is a hands-on, minds-on engagement in the practice and theory of service learning - the integration of community service and related academic study. Students will assist a service-learning program with planning, implementation or evaluation and integrate this experience with study of current practice, theory and research. Students who plan careers in higher education will find this useful in light of the increased commitment to providing service-learning opportunities on campuses. Many student services and other higher education positions include the need to offer leadership to these programs.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=A%26S&catalog_nbr=688","A&S 688");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=A%26S&catalog_nbr=688","A&S 688");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

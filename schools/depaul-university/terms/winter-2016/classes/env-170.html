@@ -416,7 +416,7 @@
 	<h1>ENV 170 ENVIRONMENTAL ETHICS</h1><h2 id="description">The environmental issues that confront us are both global and local; they involve political, economic and ethical decision-making by governments, corporations and citizens. Students will explore and evaluate diverse approaches to a range of such issues, as well as the ways different thinkers and different cultures have envisioned the relationship between human beings and the natural world-all with a view to understanding their own relationships to the natural world, their own environmental ethics.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENV&catalog_nbr=170","ENV 170");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENV&catalog_nbr=170","ENV 170");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

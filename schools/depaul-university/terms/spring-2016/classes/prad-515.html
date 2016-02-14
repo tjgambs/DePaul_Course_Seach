@@ -416,7 +416,7 @@
 	<h1>PRAD 515 PUBLIC RELATIONS WRITING</h1><h2 id="description">The goal of this course is to help students develop the professional writing skills needed for success in public relations. Students analyze the process of strategic public relations planning and explore the communication techniques used to establish positive relationships with organizational constituents. They apply what they have learned by developing and presenting a variety of public relations materials, such as a news release, fact sheet, pitch letter, and blog. The course also includes an overview of the AP Style Guide. Upon the successful completion of this course, students will have a professional eportfolio of public relations writing samples. PREREQUISITE(S): Status as a Graduate Public Relations and Advertising student and PRAD 555 or instructor permission is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=515","PRAD 515");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=515","PRAD 515");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

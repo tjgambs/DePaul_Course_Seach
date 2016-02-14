@@ -416,7 +416,7 @@
 	<h1>HAA 220 BUDDHIST ART</h1><h2 id="description">This course explores the traditional visual culture of the Buddhist world, examining art as a reflection of religious belief and practice. The regions covered are South Asia, Southeast Asia, and East Asia. An emphasis is placed on painting, sculpture, and architecture made for or related to Buddhist practice.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HAA&catalog_nbr=220","HAA 220");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HAA&catalog_nbr=220","HAA 220");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>LAW 428 INDEPENDENT STUDY</h1><h2 id="description">Students who have earned at least a 3.0 GPA after completion of at least 40 credits may undertake independent study under the supervision of a full-time faculty member. The student must produce an in depth research paper of publishable quality on a topic not substantially covered by a currently offered course. Fulfills the Seminar requirements. Instructor's permission required.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=428","LAW 428");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=428","LAW 428");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

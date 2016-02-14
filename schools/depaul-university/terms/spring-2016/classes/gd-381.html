@@ -416,7 +416,7 @@
 	<h1>GD 381 GRAPHIC DESIGN PORTFOLIO DEVELOPMENT</h1><h2 id="description">This course provides the student with an opportunity to prepare themselves for the workplace. During the course, students will refine a body of design work and publish their portfolio in both print and web formats. Students will design and develop their own visual identity, resume, cover letter, and business cards in preparation for job interviews and/or graduate school. They will also spend the quarter researching potential employers and learn about each company, agency, and/or studio so that they can strategically tailor their application process. PREREQUISITE(S): GD 110, GD 200, GD 210, GD 230 and GD 300</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=381","GD 381");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=381","GD 381");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

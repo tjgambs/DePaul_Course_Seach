@@ -416,7 +416,7 @@
 	<h1>IN 368 LEARNING HISTORY AT THE MUSEUM</h1><h2 id="description">This course encourages students to examine and think critically about how historical knowledge is constructed and presented. Museums, the subject of this course, are an excellent place to conduct such investigations. The political nature of museums beckons us to think and study even more about how information is transmitted in what, as we learn, is a very significant educative arena. Our journey begins with some quotes regarding museums, which are culled from one of the required readings by art historian Brian Wallis. PREREQUISITE(S): LL 102 and status as a BA-SNLDG99 student are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IN&catalog_nbr=368","IN 368");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IN&catalog_nbr=368","IN 368");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

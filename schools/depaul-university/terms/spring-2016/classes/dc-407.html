@@ -416,7 +416,7 @@
 	<h1>DC 407 WRITING THE EPISODIC DRAMA</h1><h2 id="description">In this course, students analyze hour-long dramatic teleplays. This course features a specific focus on story-telling styles and techniques of successful dramatic predecessors, various formats of hour-long drama teleplays, and the definition and significance of "show bibles". Students will create an original hour long pilot. PREREQUISITE(S): DC 400</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=407","DC 407");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=407","DC 407");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

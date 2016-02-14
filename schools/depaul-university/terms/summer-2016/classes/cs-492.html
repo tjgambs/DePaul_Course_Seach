@@ -416,7 +416,7 @@
 	<h1>CS 492 CREATING AND SUSTAINING PROFESSIONAL LEARNING COMMUNITIES</h1><h2 id="description">This course will provide the framework for the creation, development and sustainability of a professional learning community. Professional learning communities have at their core three guiding principles: 1) a focus on learning, 2) the creation of a collaborative culture and 3) a results-orientation. Within the professional learning community, members are committed to working collaboratively in an ongoing process of collective inquiry and action research in order to achieve better results for the students and community they serve. Professional Learning Communities operate under the assumption that the key to improved learning for students is continuous, job-embedded learning for educators.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CS&catalog_nbr=492","CS 492");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CS&catalog_nbr=492","CS 492");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

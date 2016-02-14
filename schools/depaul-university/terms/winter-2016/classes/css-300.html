@@ -416,7 +416,7 @@
 	<h1>CSS 300 INTRODUCTION TO NON-PROFIT MANAGEMENT</h1><h2 id="description">This course provides students with an understanding of the functioning of the organizations that conduct the vital work of the non-profit sector. Students will complete the course with the knowledge base to be effective program managers and board members in these organizations.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSS&catalog_nbr=300","CSS 300");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSS&catalog_nbr=300","CSS 300");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

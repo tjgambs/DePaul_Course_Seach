@@ -416,7 +416,7 @@
 	<h1>MAT 462 ACTUARIAL SCIENCE II: BASIC CONTINGENCIES</h1><h2 id="description">Basic Contingencies: The theory and applications of contingency mathematics in life and health insurance annuities and pensions, from both a probabilistic and a deterministic viewpoint. Topics include survival distribution and life tables, life insurance and life annuities. Cross-listed as MAT 362. REQUISITE(S): MAT 461 is a prerequisite for this class and MAT 452 is a corequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MAT&catalog_nbr=462","MAT 462");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MAT&catalog_nbr=462","MAT 462");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

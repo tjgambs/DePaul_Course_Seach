@@ -416,7 +416,7 @@
 	<h1>DC 371 DOCUMENTARY PRODUCTION</h1><h2 id="description">This course covers all phases of documentary filmmaking including interview techniques, storytelling with interviews and B roll, and documentary cinematography. For the final project each student will produce a completed documentary film. PREREQUISITE(S): DC 210, DC 220</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=371","DC 371");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=371","DC 371");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

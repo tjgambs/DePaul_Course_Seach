@@ -416,7 +416,7 @@
 	<h1>FA 363 ACHIEVING WORK AND LIFE GOALS</h1><h2 id="description">You will study the process of goal achievement from goal definition through development of a vision, review of resources and obstacles, strategic ordering of tasks and steps, effective communication and problem solving and development of an action plan. You will consider theories of goal setting, planning, communication, and negotiation, and engage in practical exercises that will require the application of theory. You will produce a completed action plan for a defined career or personal goal.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=363","FA 363");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=363","FA 363");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

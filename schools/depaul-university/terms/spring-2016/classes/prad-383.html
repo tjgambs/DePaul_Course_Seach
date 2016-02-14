@@ -416,7 +416,7 @@
 	<h1>PRAD 383 BRANDED CONTENT</h1><h2 id="description">In today's new media world, brands have taken an old tactic of creating content and information to directly connect with their consumers and generate interest and participation. This course provides the approaches that brands take from a strategic point of view, the creation of relevant topics and content, be it entertainment or information,, and the most appropriate use of available communication channels to to best reach potential and current customers. PREREQUISITE(S): PRAD 244 or PRAD 255 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=383","PRAD 383");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=383","PRAD 383");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

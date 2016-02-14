@@ -416,7 +416,7 @@
 	<h1>BIO 191 GENERAL BIOLOGY I FOR SCIENCE MAJORS</h1><h2 id="description">Focuses on the unity of life: its biochemical and cellular makeup and functions, the acquisition and utilization of energy, and the storage and utilization of genetic information. Lecture-laboratory. CHE 130 and CHE 131 are recommended as corequisites. PREREQUISITE(S): MAT 130 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=191","BIO 191");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=191","BIO 191");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

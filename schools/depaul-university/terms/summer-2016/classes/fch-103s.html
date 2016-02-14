@@ -416,7 +416,7 @@
 	<h1>FCH 103S BASIC FRENCH III FOR SUMMER</h1><h2 id="description">(Covers the equivalent of the second half of FCH 102 and all of FCH 103.) The second half of beginning French. Further work on the basic elements of the French language, spoken as well as written, with due regard to the cultural context of French expression.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FCH&catalog_nbr=103S","FCH 103S");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FCH&catalog_nbr=103S","FCH 103S");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

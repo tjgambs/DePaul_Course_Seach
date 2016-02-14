@@ -416,7 +416,7 @@
 	<h1>RE 521 LEGAL ISSUES IN REAL ESTATE</h1><h2 id="description">This is a survey course of real estate law and will be approached on both practical and theoretical levels, with an emphasis on the historical underpinnings of land law. Topics include contracts, landlord/tenant law, title, transactions, taxation, and land use.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=521","RE 521");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=521","RE 521");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

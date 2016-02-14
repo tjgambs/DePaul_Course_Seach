@@ -416,7 +416,7 @@
 	<h1>DC 306 WRITING THE SITCOM</h1><h2 id="description">This course focuses on the fundamentals of writing the half-hour situational comedy. Creating comedic characters, situations, and developing multiple storylines are covered. Students will create an original sitcom pilot. PREREQUISITE(S): DC 272</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=306","DC 306");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=306","DC 306");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

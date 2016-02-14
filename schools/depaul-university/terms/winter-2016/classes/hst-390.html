@@ -416,7 +416,7 @@
 	<h1>HST 390 CAPSTONE IN HISTORICAL RESEARCH AND WRITING</h1><h2 id="description">The History Capstone in Historical research and Writing allows students to engage in deep and sustained historical research and writing, with multiple opportunities for instructor feedback and student revision. It is also an excellent way for students to experience firsthand the linkages between broad reading in a given field and subsequent primary-source based research in that field. Every autumn and winter quarter, certain 300-level course offerings will be designated as Capstone-linked classes. Students ready to take this course can choose among the offerings as suits their interests.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HST&catalog_nbr=390","HST 390");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HST&catalog_nbr=390","HST 390");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

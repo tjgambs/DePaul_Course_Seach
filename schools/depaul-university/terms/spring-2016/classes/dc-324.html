@@ -416,7 +416,7 @@
 	<h1>DC 324 LOGIC PRO MIDI SEQUENCING WORKSHOP</h1><h2 id="description">This course offers training on all aspects of MIDI sequencing in Logic Pro software. All aspects of MIDI will be covered including recording, programming, editing, mixing and processing functions. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=324","DC 324");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=324","DC 324");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

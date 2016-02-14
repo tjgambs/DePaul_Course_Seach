@@ -416,7 +416,7 @@
 	<h1>MUS 105 ROCK MUSIC-THE BEATLES: MUSIC,AESTHETICS  AND CULTURE</h1><h2 id="description">This course is a survey of the music and movies of the Beatles. Topics covered in this class include the basic elements of music to allow students to analyze and compose simple songs. No previous knowledge of music is necessary. This course is not available to students in the School of Music. Arts and Literature.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MUS&catalog_nbr=105","MUS 105");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MUS&catalog_nbr=105","MUS 105");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

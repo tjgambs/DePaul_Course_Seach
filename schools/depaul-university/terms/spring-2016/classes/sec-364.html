@@ -416,7 +416,7 @@
 	<h1>SEC 364 METHODS: CURRICULUM AND INSTRUCTION IN SECONDARY SCHOOLS</h1><h2 id="description">(4 credits) This course will examine materials, methods, and techniques appropriate for teaching in secondary schools. Topics include: educational goals; the development of a rationale and underlying assumptions; instructional goals and objectives; learning objectives; both cognitive and affective; classroom environment; classroom management principles and techniques; multicultural materials in various content areas; the development of appropriate methods and materials; current curriculum issues and controversies. 30 Level 1 Field Experience hours at arranged sites. PREREQUISITE(S): Junior standing is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SEC&catalog_nbr=364","SEC 364");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SEC&catalog_nbr=364","SEC 364");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

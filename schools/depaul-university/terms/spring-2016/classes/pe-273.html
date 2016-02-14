@@ -416,7 +416,7 @@
 	<h1>PE 273 HEALTH AND NUTRITION</h1><h2 id="description">This course will provide students with an introductory background in nutrition throughout the life span. The study of foods and their effects upon health, development and performance of the individual will be emphasized. Software analysis of dietary intakes will facilitate an individual reflective approach to an application of the content.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PE&catalog_nbr=273","PE 273");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PE&catalog_nbr=273","PE 273");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

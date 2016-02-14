@@ -416,7 +416,7 @@
 	<h1>CHE 145 UNIVERSITY CHEMISTRY LABORATORY  III</h1><h2 id="description">Laboratory course to be taken in conjunction with CHE 144. The course meets weekly for three hours. The experimental techniques provide hands-on experience with the course material in CHE 144. Students must co-register for the lecture companion course, CHE144. PREREQUISITE(S): A grade of C- or higher in CHE 142 and CHE 143 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=145","CHE 145");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=145","CHE 145");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

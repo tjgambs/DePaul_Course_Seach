@@ -416,7 +416,7 @@
 	<h1>ANI 150 AFTER EFFECTS WORKSHOP</h1><h2 id="description">This class will introduce students to the fundamentals of After Effects, including key-framing, compositing and rendering. Topics and techniques covered during lectures will be reinforced through in-class exercises and projects.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANI&catalog_nbr=150","ANI 150");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANI&catalog_nbr=150","ANI 150");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

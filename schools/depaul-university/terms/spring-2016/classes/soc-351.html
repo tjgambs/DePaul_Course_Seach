@@ -416,7 +416,7 @@
 	<h1>SOC 351 HEALTH DISPARITIES</h1><h2 id="description">Examination of persistent health disparities in the U.S. and the influence of social settings on morbidity and mortality, as well as the impact of social class, gender, and race/ethnicity on disease and illness patterns and access to health care.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=351","SOC 351");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=351","SOC 351");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

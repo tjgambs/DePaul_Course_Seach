@@ -416,7 +416,7 @@
 	<h1>MUS 203 CONTEMPORARY MUSICAL IMPROVISATION: SCRATCH ORCHESTRA</h1><h2 id="description">This course will focus on improvisational practices with a focus on experimental composers between 1959 - 1980. Students will form a large ensemble. Class activity will focus on hands-on music making with a combination of laptops and acoustic instruments. Arts and Literature.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MUS&catalog_nbr=203","MUS 203");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MUS&catalog_nbr=203","MUS 203");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>GSB 420 APPLIED QUANTITATIVE ANALYSIS</h1><h2 id="description">This course provides a comprehensive review of some basic mathematical and statistical methods and stresses their practical applications in business and economics. The course will equip the student with the quantitative skills required in the MBA program and will also provide a good foundation for addressing typical problems that arise in business. Additionally, the skills acquired in the course will also help the student prepare for the quantitative sections of professional exams, such as the CFA, the CPA and the CMA exams. This course will stress learning through applications/problem-solving using Excel and/or Minitab software for data analyses. However, the course must be analytical and theoretical to the extent that is necessary to develop a correct understanding of the topics presented. The topics covered in the course include relevant mathematical concepts: use of relevant functions and solving equations in unknowns, elementary calculus and graphing functions. It also focuses on relevant statistical concepts: probability theory, hypothesis testing, regression analysis and forecasting.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GSB&catalog_nbr=420","GSB 420");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GSB&catalog_nbr=420","GSB 420");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>FCH 329 FRENCH CINEMA</h1><h2 id="description">Topics in French film from its origins to the present day. A course on iconic French filmmakers of the last fifty years and their contributions to a creative reorientation of cinema in the context of the history of French cinema and film criticism. Topics might include: the New Wave and after, growing up in France and its colonies, love and eroticism, the representation of women in cinema, women directors and the deconstruction of female stereotypes, living on the margins, cinema of the suburbs, social renegades, the construction of the city. Through readings, class discussions, and film viewings, students gain an understanding of French films in light of their cultural and historical contexts. Directors studied might include: Francois Truffaut, Jean-Luc Godard, Diane Kurys, Claire Denis, Patrice Leconte, Andre Techine, Agnes Varda, Bertrand Blier, Matthieu Kassowitz and Sylvain Chomet. Students learn the basic concepts of film aesthetics necessary to an appreciation of cinema, along with a critical vocabulary in French for analyzing and discussing films. FCH 106 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FCH&catalog_nbr=329","FCH 329");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FCH&catalog_nbr=329","FCH 329");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

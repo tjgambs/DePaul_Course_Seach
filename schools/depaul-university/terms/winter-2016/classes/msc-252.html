@@ -416,7 +416,7 @@
 	<h1>MSC 252 PHYSICAL READINESS II</h1><h2 id="description">Introduction to the principles of fitness: a fast-paced military-style interval training class that incorporates calisthenics and an emphasis on a healthy life style. Students will undergo an evaluation of their physical fitness level and it's progression over the course of the quarter.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MSC&catalog_nbr=252","MSC 252");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MSC&catalog_nbr=252","MSC 252");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

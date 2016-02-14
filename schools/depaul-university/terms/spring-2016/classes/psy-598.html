@@ -416,7 +416,7 @@
 	<h1>PSY 598 DISSERTATION  RESEARCH SEMINAR</h1><h2 id="description">Seminar for doctoral candidates working on their dissertation. Students will develop their proposals or write their results and discussion sections, depending on status of their dissertation research. Students will also review and critique work of other students. Zero credit hours.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=598","PSY 598");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=598","PSY 598");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

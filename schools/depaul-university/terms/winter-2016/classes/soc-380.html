@@ -416,7 +416,7 @@
 	<h1>SOC 380 RESEARCH METHODS IN SOCIOLOGY I</h1><h2 id="description">The logic of procedures of social science methodology. Initiation of student research project: formulation of problem, design of research, data collection. Presentation of the range of methods available for various types of social research. PREREQUISITE(S): SOC 279 or PSY 240 or MAT 242 or MAT 137 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SOC&catalog_nbr=380","SOC 380");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SOC&catalog_nbr=380","SOC 380");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

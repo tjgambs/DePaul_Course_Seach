@@ -416,7 +416,7 @@
 	<h1>IN 249 NEW YORK: AN HISTORICAL OVERVIEW</h1><h2 id="description">This Faculty Designed Independent Study (FDIS) encourages students to study the history of one of our nation's oldest and most vibrant cities: New York City, including its five boroughs: Manhattan, the Bronx, Brooklyn, Staten Island, and Queens. The readings associated with the course provide a skeletal history of the city's nearly four hundred years. Students are then asked to read a series of articles that elaborate on key historical events and/or eras, i.e. the city's role in the American Revolution, the Great Depression, the impact of deindustrialization and suburbanization, and development of art and culture across different epochs, among other areas. Students are finally asked to supplement readings and a major homework assignment with a five-page paper that mirrors the spirit of their competence. The collection of readings and video presentations offer a fascinating, insightful, and fun look at one of the most interesting and intriguing American metropolises.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IN&catalog_nbr=249","IN 249");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IN&catalog_nbr=249","IN 249");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>CSC 425 TIME SERIES ANALYSIS AND FORECASTING</h1><h2 id="description">The course introduces students to statistical models for time series analysis and forecasting. The course topics include: autocorrelated data analysis, Box-Jenkins models (autoregressive, moving average, and autoregressive moving average models), analysis of seasonality, volatility models (GARCH-type, GARCH-M type, etc.), forecasting evaluation and diagnostics checking. The course will emphasize applications to financial data, volatility modeling and risk management. Real examples will be used throughout the course. PREREQUISITE(S): CSC 423 or MAT 456 or consent of instructor</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=425","CSC 425");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=425","CSC 425");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

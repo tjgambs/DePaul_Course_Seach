@@ -416,7 +416,7 @@
 	<h1>NSG 505 PRINCIPLES OF ANESTHESIA PRACTICE II</h1><h2 id="description">An intensive 4 quarter hour course designed to provide the nurse anesthesia resident (NAR) with current knowledge of special populations, including pediatric, obstetric, geriatric and trauma patients, as well as patients requiring pain management. Emphasis will be placed on the anatomical and physiological differences that characterize each population with a focus on the pathological disorders unique to each group. The preparation, implementation and evaluation of an appropriate nurse anesthesia care plan for these populations will be stressed.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=505","NSG 505");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=505","NSG 505");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

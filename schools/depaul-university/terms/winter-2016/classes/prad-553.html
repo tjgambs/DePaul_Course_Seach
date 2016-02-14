@@ -416,7 +416,7 @@
 	<h1>PRAD 553 ADVERTISING FOUNDATIONS</h1><h2 id="description">This foundational course examines the theories, principles, applications and standards of advertising both from the perspectives of the practitioner and the consumer. It will cover such topics as integration of advertising with other marketing communication tools, advertising's role in society, advertising research and strategy, advertising creativity, and media planning and buying. The course is designed to equip students with skills to critically interpret, evaluate, and critique advertising messages and solve communication problems. PREREQUISITE(S): Status as a Graduate Public Relations and Advertising student or instructor permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRAD&catalog_nbr=553","PRAD 553");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRAD&catalog_nbr=553","PRAD 553");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

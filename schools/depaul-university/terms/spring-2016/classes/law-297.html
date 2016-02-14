@@ -416,7 +416,7 @@
 	<h1>LAW 297 CUSTOMS LAW</h1><h2 id="description">(3 credit hours) Students will learn the laws and regulations implemented and enforced by U.S. Customs and Border Protection including the determination and collection of customs duties through tariff classification, valuation, and special duty programs. Other areas to be covered are country of origin rules, special classes of merchandise (e.g., art and antiquities, intellectual property, and endangered species), and litigating customs matters. This course provides a useful grounding for anyone interested in corporate compliance or administrative law, as well as for students pursing certificates in intellectual property law, international law, or art and museum law.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=297","LAW 297");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=297","LAW 297");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

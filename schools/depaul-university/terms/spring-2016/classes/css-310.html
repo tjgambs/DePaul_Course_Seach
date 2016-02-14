@@ -416,7 +416,7 @@
 	<h1>CSS 310 RESTORATIVE JUSTICE: ENGAGEMENT WITH THE PRISON</h1><h2 id="description">This course will provide an opportunity for students to 1.) reflect deeply on the meaning of justice, 2.) examine institutionalized forms of justice, and, above all, 3.) explore alternative models of justice. Using a dialectic process, students will actively scrutinize theories of justice and investigate issues and movements of social justice. Additionally, they will be asked to consider how each of these areas informs the other, since theories often influence as well as emerge from issues and movements. Assumptions about crime and justice will be considered by comparing and contrasting retributive and restorative paradigms. The role of offender, victim and community will be analyzed in the context of crime and justice. Students will also look into programs in restorative justice to discern their outcome effectiveness.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSS&catalog_nbr=310","CSS 310");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSS&catalog_nbr=310","CSS 310");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>JPN 303 ADVANCED JAPANESE VI</h1><h2 id="description">The focus of this course is the development of advanced skills in reading, writing, speaking and listening, especially "critical reading/thinking skills" in Japanese by questioning the views given in the textbook and discussing issues from different perspectives. JPN 106 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=JPN&catalog_nbr=303","JPN 303");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=JPN&catalog_nbr=303","JPN 303");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

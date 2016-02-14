@@ -416,7 +416,7 @@
 	<h1>LAW 493 CONSTITUTIONAL LAW: FIRST AMENDMENT  RELIGION CLAUSES</h1><h2 id="description">This course explores religious freedom in America under the First Amendment. The focus of the course is on the constitutional doctrines relating to the Free Exercise Clause and the Establishment Clause of the First Amendment, as well as the underlying assumptions and conflicts that have animated First Amendment constitutional argument over time. In addition, the course proposes to examine the extent to which religious interest groups have influence and control the development of religion clause jurisprudence.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=493","LAW 493");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=493","LAW 493");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

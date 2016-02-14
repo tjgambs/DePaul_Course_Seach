@@ -416,7 +416,7 @@
 	<h1>HIT 440 HEALTH INFORMATION EXCHANGE AND NETWORKING</h1><h2 id="description">Course discusses electronic health information systems and their design, implementation and application including information security, privacy and integrity, data exchange standards, basic principles of telecommunications and infrastructure security, and discussion of challenges of adopting HIE systems.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HIT&catalog_nbr=440","HIT 440");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HIT&catalog_nbr=440","HIT 440");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

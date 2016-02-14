@@ -416,7 +416,7 @@
 	<h1>SOC 317 GENDER, CRIME AND JUSTICE</h1><h2 id="description">In this course students explore the ways in which gender intersects with crime and justice in the U.S. and increasingly, globally. Using feminist and critical perspectives, this course interrogates the gendered and racial nature of the criminal justice system, examines the ways in which gender intersects with patterns of offending, victimization, survival, and resistance, and looks at the ways that criminal justice institutions and gender interact. It also asks students to think critically about alternatives to incarceration and other ways of establishing "justice".</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=317","SOC 317");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=317","SOC 317");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

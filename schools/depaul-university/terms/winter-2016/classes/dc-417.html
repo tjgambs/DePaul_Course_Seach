@@ -416,7 +416,7 @@
 	<h1>DC 417 ADVANCED SOUND MIXING</h1><h2 id="description">This workshop based course offers advanced mixing techniques for Stereo and Surround Sound. Subjects include mixing philosophies, techniques, advanced digital signal processing, and monitoring. A history of Surround Sound and contemporary surround techniques will be covered. Several projects will be completed throughout the quarter. PREREQUISITE(S): DC 315</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=417","DC 417");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=417","DC 417");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

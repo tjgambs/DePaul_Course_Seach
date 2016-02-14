@@ -416,7 +416,7 @@
 	<h1>REL 287 ROMAN CATHOLIC MORAL THOUGHT</h1><h2 id="description">This course examines various moral topics within a Roman Catholic framework. Papal pronouncements, Magisterial statements, Episcopal texts, the works of influential theologians, and critical voices both within and beyond the Church will be critically examined. Special attention will be paid to the method of moral argumentation.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=REL&catalog_nbr=287","REL 287");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=REL&catalog_nbr=287","REL 287");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

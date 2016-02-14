@@ -416,7 +416,7 @@
 	<h1>CHN 101S BASIC CHINESE I FOR SUMMER</h1><h2 id="description">(Covers the equivalent of CHN 101 and the first half of CHN 102.) The first half of beginning Chinese (Mandarin). Listening to, speaking, reading, and writing Chinese in a cultural context for the beginning student.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CHN&catalog_nbr=101S","CHN 101S");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CHN&catalog_nbr=101S","CHN 101S");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

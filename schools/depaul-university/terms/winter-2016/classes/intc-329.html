@@ -416,7 +416,7 @@
 	<h1>INTC 329 PERFORMANCE OF GENDER & SEXUALITY</h1><h2 id="description">This course is designed to give students an opportunity to experiment, explore, and reflect upon the performative dimensions of gender and sexuality. Using aesthetic performance as a point of entry, students will view, analyze, and generate performance work that interrogates the communicative, political, and transformative potentials of embodied actions. With an emphasis on the intersections of gender and sexuality, the course will move through three units of reading, discussion, viewing, and performance creation.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=329","INTC 329");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=329","INTC 329");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

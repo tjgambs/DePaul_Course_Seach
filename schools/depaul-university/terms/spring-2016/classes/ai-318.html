@@ -416,7 +416,7 @@
 	<h1>AI 318 ZOMBIES: MODERN MYTHS, RACE, AND CAPITALISM</h1><h2 id="description">This course offers students the tools needed for a critical reflection of their own assumptive world view of various churches and to probe methods of change which can be applied to these churches enabling them to better serve their people. We will not compare religions; the focus is on the theology behind religions. Once students examine their assumptive worldview, through theological reflection, they will compare values with other class members as well as those of various churches. Each student will choose a given church and engage in critical reflection to examine potential changes needed within that institution. Students will learn about theological reflection, explore skills needed to make changes within a community or church and engage in small group work. Students will also assess and critique themselves and each other.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AI&catalog_nbr=318","AI 318");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AI&catalog_nbr=318","AI 318");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

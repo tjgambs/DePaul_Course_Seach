@@ -416,7 +416,7 @@
 	<h1>SOC 414 LITERATURE REVIEW WRITING PROJECT</h1><h2 id="description">This course requires students to complete a paper reviewing the sociological literature on a topic of their choice. Successful completion of the literature review paper is one of the ways in which students may fulfill the final project requirement leading to the master's degree.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=414","SOC 414");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=414","SOC 414");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

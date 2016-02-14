@@ -416,7 +416,7 @@
 	<h1>CSL 490 FOUNDATIONS OF STUDENT AFFAIRS</h1><h2 id="description">The course examines historical and philosophical elements relative to the role of student affairs in higher education as well as the impact of changing demographics on current trends pertinent to the management of student affairs. The course also provides students with theoretical and practical knowledge about organization structure, services, and faculty/staff/administrative functions in student affairs. PREREQUISITE(S): Admission to the Counseling Masters Program and a grade of B- or better in CSL 451 and CSL 452 are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSL&catalog_nbr=490","CSL 490");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSL&catalog_nbr=490","CSL 490");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

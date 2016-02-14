@@ -416,7 +416,7 @@
 	<h1>HAA 328 THE POWER OF PIETY: ICONS, RELICS, AND MIRACLES IN THE MEDIEVAL WORLD</h1><h2 id="description">This course examines the intersection of personal devotion, public spirituality, and performance of faith in the medieval world. Probing a range of objects that give material expression to the desire for tangible links to the sacred and reminders of supernatural presence in the medieval world, the course analyzes miraculous objects that we would now categorize as works of art. Objects under discussion include a category broadly defined as reliquaries, fragments of the True Cross, images "not made by human hands," and miraculous icons.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=328","HAA 328");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=328","HAA 328");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>ENG 370 HISTORY OF THE ENGLISH LANGUAGE</h1><h2 id="description">Examination of the development of vocabulary and structure of English from its beginnings to contemporary British and American English usage. PREREQUISITE(S): WRD 104 or HON 100 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENG&catalog_nbr=370","ENG 370");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENG&catalog_nbr=370","ENG 370");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

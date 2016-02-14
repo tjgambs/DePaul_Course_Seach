@@ -416,7 +416,7 @@
 	<h1>JOUR 526 POLITICAL COMMUNICATION</h1><h2 id="description">This course examines how political communication and related media affect public opinion, civic life, elections, and public policy, and the impact of these communication dynamics on civic institutions and democratic decision-making. Students will study how journalists, elected officials, citizens, and political strategists construct, use, and understand political messages, including how news, advertising, and entertainment media contribute to the shaping of political perceptions, emotions, and behaviors in a variety of circumstances domestically and internationally.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=JOUR&catalog_nbr=526","JOUR 526");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=JOUR&catalog_nbr=526","JOUR 526");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

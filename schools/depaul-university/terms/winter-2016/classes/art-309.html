@@ -416,7 +416,7 @@
 	<h1>ART 309 DIGITAL SCULPTURE</h1><h2 id="description">The methods and materials of desktop 3D printing technology will be integrated with traditional and contemporary sculpture, such as woodworking, casting, assemblage, and installation. This "hybrid" approach will provide students the opportunity to develop and explore new tools and skills, while maintaining a focus on the development of meaningful content in their artwork. PREREQUISITE(S): ART 113 and ART 115 or consent of instructor is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ART&catalog_nbr=309","ART 309");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ART&catalog_nbr=309","ART 309");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

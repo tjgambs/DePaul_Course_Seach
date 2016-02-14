@@ -416,7 +416,7 @@
 	<h1>ACC 580 ACCOUNTING FOR INCOME TAXES</h1><h2 id="description">Covers the financial accounting and reporting standards for the effects of income taxes that result from corporate activities. Topics include computation of current and deferred tax expense or benefit, temporary differences, carry-forwards, computation of deferred tax assets and liabilities, valuation allowances, business combinations, investments in subsidiaries and equity method investments, tax allocations, presentation and disclosure, and implementation of accounting for uncertainty in income taxes under FIN 48. PREREQUISITE(S): ACC 551 or admission to the MST or MACC programs are prerequisites for this course</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ACC&catalog_nbr=580","ACC 580");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ACC&catalog_nbr=580","ACC 580");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>ISM 320 ADVANCED PRINCIPLES OF INTERACTIVITY</h1><h2 id="description">This course will use complex interactive web projects to challenge students to solve real-world problems. Students will build upon the organizational and analytical strategies learned in ISM while expanding their knowledge of Flash subjects such as site integration, utilizing remote data and manipulating video. PREREQUISITE(S): ISM 220 or GD 215 or GD 216</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=320","ISM 320");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=320","ISM 320");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

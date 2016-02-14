@@ -416,7 +416,7 @@
 	<h1>LAW 102 BUSINESS ORGANIZATIONS</h1><h2 id="description">Provides a basic introduction to the modern American business corporation. Major subject areas covered include the steps required for organizing a corporation, the nature of the corporate entity concept, control and management of the corporation, fiduciary duties of directors and controlling shareholders and an introduction to federal securities law and partnership and agency law.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=102","LAW 102");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=102","LAW 102");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

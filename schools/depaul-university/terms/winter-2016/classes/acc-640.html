@@ -416,7 +416,7 @@
 	<h1>ACC 640 ACCOUNTING THEORY AND POLICY FORMULATION</h1><h2 id="description">A study of the process by which accounting policies are formulated. The students are asked to make critical evaluations of basic issues such as income determination and current issues such as FASB agenda items in light of their theoretical, empirical, practical and political aspects. Students are expected to demonstrate an ability to use the accounting research literature. Students should plan to take this capstone course at the end of their degree program. This course is intended to be taken toward the end of the MSA program. PREREQUISITE(S): ACC 545 and ACC 550, or MACC status are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ACC&catalog_nbr=640","ACC 640");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ACC&catalog_nbr=640","ACC 640");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>TV 310 TV PRODUCTION WORKSHOP</h1><h2 id="description">In this workshop students will produce projects for internal and external clients. Students will learn professional practices and work with clients to create projects such as promos, documentaries, commercials, short series and live events from concept inception to finished product. Through this process, students will examine different professional roles involved in the TV production process. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TV&catalog_nbr=310","TV 310");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TV&catalog_nbr=310","TV 310");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

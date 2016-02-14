@@ -416,7 +416,7 @@
 	<h1>VFX 200 INTRODUCTION TO VISUAL EFFECTS</h1><h2 id="description">Students will explore contemporary concepts and approaches to production in the current state of film and video effects work. Digital and traditional methodologies will be covered, with a concentration on digital exercises illustrating modern techniques. PREREQUISITES: NONE</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=VFX&catalog_nbr=200","VFX 200");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=VFX&catalog_nbr=200","VFX 200");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

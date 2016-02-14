@@ -416,7 +416,7 @@
 	<h1>FIN 555 FINANCIAL MANAGEMENT</h1><h2 id="description">This course provides an introduction to concepts and techniques required to analyze and implement optimal financial decisions by firms and serves as the core course in the corporate finance sequence. The course focuses on the effect of time and uncertainty on investment and financing decisions. It develops a framework for corporate financial decision-making. Topics covered include basic discounting techniques, stock and bond valuation, capital budgeting, portfolio theory, asset pricing, and capital structure. The course uses several case studies to illustrate the application of finance theory to practical problems. PREREQUISITE(S): ACC 500 and ECO 555 and GSB 420, or equivalents, are prerequisites for this class</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FIN&catalog_nbr=555","FIN 555");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FIN&catalog_nbr=555","FIN 555");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

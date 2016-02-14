@@ -416,7 +416,7 @@
 	<h1>PRF 552 MFA I MEISNER</h1><h2 id="description">Sanford Meisner said, "Acting is the ability to live truthfully under imaginary circumstances." In this first of a two quarter sequence, actors will participate in a sequence of structured improvisational exercises focused on the first half of that sentence: living truthfully. The foundational exercise is called Repetition. Using Repetition as a base, students will explore exercises specifically designed to improve their listening and answering skills and increase their ability to respond to their partner moment to moment. PREREQUISITE(S): Status as Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=552","PRF 552");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=552","PRF 552");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

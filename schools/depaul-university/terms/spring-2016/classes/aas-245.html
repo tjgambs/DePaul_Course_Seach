@@ -416,7 +416,7 @@
 	<h1>AAS 245 RELIGION  IN JAPANESE HISTORY, SOCIETY, AND CULTURE</h1><h2 id="description">An exploration of Hinduism as a civilization whose key reference points are religious in the sense understood in the West (ritual and transcendence), yet which finds expression in a "high culture" of literary works, political and social theory, art and architecture, music and dance, and folk and popular stories, songs and plays. Cross-listed with REL 242.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AAS&catalog_nbr=245","AAS 245");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AAS&catalog_nbr=245","AAS 245");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

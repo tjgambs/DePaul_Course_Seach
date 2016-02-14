@@ -416,7 +416,7 @@
 	<h1>TEC 210 SOUND TECHNOLOGY I</h1><h2 id="description">Every day of this class presents you with a sound system that is not producing sound. And each day there is a lesson to learn about how to approach and troubleshoot problems that often arise when designing sound for theatre. PREREQUISITE(S): Status as an Undergraduate or Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TEC&catalog_nbr=210","TEC 210");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TEC&catalog_nbr=210","TEC 210");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

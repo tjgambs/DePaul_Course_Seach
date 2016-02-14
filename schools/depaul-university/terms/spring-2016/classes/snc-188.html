@@ -416,7 +416,7 @@
 	<h1>SNC 188 PROBLEMS AND ISSUES IN CONTEMPORARY ETHICS</h1><h2 id="description">This course is offered in SNL?s online program. Online course conform to University scheduling, but are conducted exclusively through Desire to Learn (D2L). There are no in person class meetings. An introduction to moral philosophy with emphasis on the conflict between "moral relativism" (or "subjective" ethics) on the one hand and "moral realism" (or "objective" ethics) on the other. During the course you will be introduced to classic theories and leading figures in the history of ethics, from Plato and Aristotle to Kant and Nietzsche. Course content will focus on issues (e.g., poverty, drug use, capital punishment, sexual behavior, euthanasia, biomedical research, animal rights, political violence) at the center of contemporary ethical debate in the United States and throughout the world. Philosophical Inquiry.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SNC&catalog_nbr=188","SNC 188");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SNC&catalog_nbr=188","SNC 188");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

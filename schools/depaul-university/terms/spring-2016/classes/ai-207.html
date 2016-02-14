@@ -416,7 +416,7 @@
 	<h1>AI 207 THE LITERATURE OF INCARCERATION</h1><h2 id="description">The United States is the largest incarcerator in the world. Is this because we have more crime? More criminals? In this course we will explore questions about the prison industrial complex and the justice system through the words of incarcerated and formerly-incarcerated writers. We will be looking at poetry, short stories, essays, and memoirs. Employing a mix of discussion, guest speakers, film, class team reports, and close readings of the literary texts, this course will take us on an imaginative journey into a world most of us have few reasons to understand. We will explore questions about the prison industrial complex and the justice system through the words of incarcerated and formerly-incarcerated writers.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AI&catalog_nbr=207","AI 207");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AI&catalog_nbr=207","AI 207");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

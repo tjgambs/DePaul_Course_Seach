@@ -416,7 +416,7 @@
 	<h1>LAW 503 CIVIL RIGHTS</h1><h2 id="description">Analyzes selected topics in the civil rights field, with emphasis on the reconstruction amendments to the Constitution and equal protection. Statutory issues will be discussed. Different topics will be chosen for in-depth treatment, such as voting rights, housing, criminal justice administration and education.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=503","LAW 503");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=503","LAW 503");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

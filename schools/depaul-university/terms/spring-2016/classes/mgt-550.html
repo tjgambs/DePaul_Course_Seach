@@ -416,7 +416,7 @@
 	<h1>MGT 550 ORGANIZATIONAL DIVERSITY</h1><h2 id="description">Organizational diversity is the application of economic, social, and behavioral sciences to aligning the talents of the organization with the ever changing demands and preferences of the marketplace. Leading and managing organizational diversity requires tolerating ambiguity, comfort with differences, and creating a climate that values and fully leverages the talent of all types of workers.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=550","MGT 550");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=550","MGT 550");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

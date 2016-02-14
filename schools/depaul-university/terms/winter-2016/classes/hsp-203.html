@@ -416,7 +416,7 @@
 	<h1>HSP 203 HOSPITALITY LEADERSHIP & SELF DEVELOPMENT</h1><h2 id="description">The primary goal of the course is to move students towards the development and understanding of the foundations of leadership, differentiating leadership from management, and emphasizing the core traits and other personal qualities required of successful hospitality leaders. The course further focuses on the importance of a leader's character, values and professionalism as the basis for ethical decision-making in an organizational context.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HSP&catalog_nbr=203","HSP 203");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HSP&catalog_nbr=203","HSP 203");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

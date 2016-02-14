@@ -416,7 +416,7 @@
 	<h1>SE 456 ARCHITECTURE OF COMPUTER GAMES</h1><h2 id="description">This course discusses the software architecture and the engineering of computer games. The topics include gaming platforms, libraries and frameworks for game development, techniques for accessing and managing low level devices and resources, and application of artificial intelligence. PREREQUISITE(S): CSC 403</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SE&catalog_nbr=456","SE 456");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SE&catalog_nbr=456","SE 456");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

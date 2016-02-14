@@ -416,7 +416,7 @@
 	<h1>ISM 390 TOPICS IN INTERACTIVE AND SOCIAL MEDIA</h1><h2 id="description">Specific topics will be selected by the instructor and may vary with each quarter. PREREQUISITE(S): For specific prerequisites, see syllabus or consult with course instructor.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=390","ISM 390");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=390","ISM 390");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

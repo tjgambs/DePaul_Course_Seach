@@ -416,7 +416,7 @@
 	<h1>HST 324 COLONIAL LATIN AMERICA: AGE OF CONQUEST, 15TH - 17TH CENTURIES</h1><h2 id="description">This course examines the complexities of the Age of Conquest and focuses on the historical experience of Indigenous societies during the early colonial period. Special attention is given to the social and economic structures of Indigenous societies before 1492, the Spanish exploration and conquest, the presence of Indigenous allies and their role in the dynamics of conquest/colonization, the demographic catastrophe that followed the conquest, and the social, cultural, and economic characteristics of early colonial societies. PREREQUISITE(S): HST 199 or HST 298 or instructor consent is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=324","HST 324");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=324","HST 324");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

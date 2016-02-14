@@ -416,7 +416,7 @@
 	<h1>SCG 411 PHILOSOPHY  OF EDUCATION</h1><h2 id="description">This course examines the relationship of education to the moral and ethical dilemmas or predicaments of the human condition. It will entail issues related to the nature of education's responsiveness, or lack there of, to the concerns of the human condition: for example, human alienation, suffering, success and failure, caring, freedom, responsibility, liberation and agency. Special attention will be given to how these concerns influences or have social, cultural and political implications for how teachers address them within the teaching and learning process.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SCG&catalog_nbr=411","SCG 411");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SCG&catalog_nbr=411","SCG 411");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

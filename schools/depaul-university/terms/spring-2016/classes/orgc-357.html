@@ -416,7 +416,7 @@
 	<h1>ORGC 357 TOPICS IN ORGANIZATIONAL COMMUNICATION</h1><h2 id="description">Topics covered in this course might include: communication and customer service, assessment and intervention in organizations, comparative management, democratic participation in organizations, gender in the workplace, etc. (Formerly CMNS 357)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=357","ORGC 357");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=357","ORGC 357");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>MGT 250 CAREER MANAGEMENT SKILLS</h1><h2 id="description">This course helps students develop their careers. Students review their skills and interests as they relate to relevant occupations. They acquire career-enhancing skills in job search, career research, goal setting, and action planning. Students create resumes and cover letters, and they enhance their interviewing and networking skills. Through guided exercises and activities, students assess their current career activities and explore appropriate adjustments. This course is designed for students who have declared (or intend to declare) majors in Management or Business Administration.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=250","MGT 250");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=250","MGT 250");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

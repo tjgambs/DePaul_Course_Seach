@@ -416,7 +416,7 @@
 	<h1>CMNS 541 ORGANIZATIONAL COMMUNICATION AND CULTURE</h1><h2 id="description">The central purpose of this course is to introduce students to the role communication plays in organizational life. Throughout the quarter, attention will be devoted to examining the various theoretical perspectives from which organizational communication can be viewed, and selectively surveying major content topics and current issues in the organizational communication literature. PREREQUISITE(S): Status as a Graduate Communication student or department consent is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CMNS&catalog_nbr=541","CMNS 541");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CMNS&catalog_nbr=541","CMNS 541");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

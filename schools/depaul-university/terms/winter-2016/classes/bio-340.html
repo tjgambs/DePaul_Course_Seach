@@ -416,7 +416,7 @@
 	<h1>BIO 340 SYSTEMS NEUROBIOLOGY</h1><h2 id="description">Explores the organization of the nervous system on a gross anatomical level and based on functional units. The emphasis is on understanding how individual behaviors are produced by different neural systems and how these individual behaviors integrate into the activities of whole organisms. Cross-listed as BIO 440. PREREQUISITE(S): BIO 339 or BIO 310 or PSY 377 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=340","BIO 340");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=340","BIO 340");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

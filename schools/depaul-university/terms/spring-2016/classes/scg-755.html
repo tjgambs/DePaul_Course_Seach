@@ -416,7 +416,7 @@
 	<h1>SCG 755 QUANTITATIVE RESEARCH METHODS II</h1><h2 id="description">A continuation of SCG 735. Students will prepare a methodology section of a research project and will learn how to write up quantitative results of their analyses. By the end of the course students should be able to: understand quantitative methodological approaches; select appropriate data collection strategies; conduct the appropriate analysis for the research question(s) proposed and the nature of the data; and be prepared to write a candidacy paper. Prerequisite: SCG 735.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SCG&catalog_nbr=755","SCG 755");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SCG&catalog_nbr=755","SCG 755");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

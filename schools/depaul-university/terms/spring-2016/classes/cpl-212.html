@@ -416,7 +416,7 @@
 	<h1>CPL 212 GREAT IDEAS,THE INDIVIDUAL AND SOCIETY III</h1><h2 id="description">The Modern Era Representative works of European literature from the French Revolution to the modern period. Emphasis on close reading of particular texts in different genres; all readings in English. Authors treated in this sequence may include: Hegel, Kierkegaard, Marx, Melville, Flaubert, Nietzsche, Freud. Formerly ISP 212.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CPL&catalog_nbr=212","CPL 212");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CPL&catalog_nbr=212","CPL 212");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

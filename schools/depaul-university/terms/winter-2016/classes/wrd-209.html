@@ -416,7 +416,7 @@
 	<h1>WRD 209 GENRE AND DISCOURSE</h1><h2 id="description">In this class, students examine how discourse and genres are used to frame issues and instantiate values and beliefs. Students will explore theories of genre and discourse, learn to analyze how genre and discourse operate, understand the relationship of formal features to beliefs and practices, and produce texts in a variety of genres.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=WRD&catalog_nbr=209","WRD 209");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=WRD&catalog_nbr=209","WRD 209");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

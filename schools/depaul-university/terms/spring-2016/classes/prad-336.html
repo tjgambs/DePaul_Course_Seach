@@ -416,7 +416,7 @@
 	<h1>PRAD 336 ADVERTISING CAMPAIGNS</h1><h2 id="description">This course is designed to help students develop a thorough understanding of the entire advertising campaign planning process. Working in teams, students will approach a communication problem for a real-world client just as an advertising agency would when working on new business. Students will bring together knowledge from past courses as they gather and analyze primary and secondary data to assess the client's situation then develop a comprehensive campaign plan. This includes the development of a creative message strategy and advertising campaign as well as a strategic media plan. PREREQUISITE(S): PRAD 244, PRAD 256, (CMNS 291 or PRAD 291) and Junior Standing are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=336","PRAD 336");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=336","PRAD 336");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

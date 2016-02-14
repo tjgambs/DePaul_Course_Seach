@@ -416,7 +416,7 @@
 	<h1>WRD 281 WRITING CENSORSHIP</h1><h2 id="description">An introduction to censorship as both a mechanism of social control and a fundamental element of all rhetorical situations. Explores the history of censorship in the West and engages theoretical questions about the power of language and its suppression as a force for violence. Affords students opportunities to experiment with effective strategies of resistance by writing under varied conditions of censorship. PREREQUISITE(S): WRD 103 or HON 100 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=WRD&catalog_nbr=281","WRD 281");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=WRD&catalog_nbr=281","WRD 281");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

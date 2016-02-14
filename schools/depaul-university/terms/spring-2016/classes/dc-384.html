@@ -416,7 +416,7 @@
 	<h1>DC 384 LIGHTING II</h1><h2 id="description">Continuation of Lighting for Cinema 1 with introduction to more advanced lighting setups. Students will learn a variety of lighting techniques - night exterior, practical location, complex lighting cues, etc... Advanced lighting and grip equipment will be utilized - Hmi, LED, theatrical and fluorescent.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=384","DC 384");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=384","DC 384");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

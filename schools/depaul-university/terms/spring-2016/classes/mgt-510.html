@@ -416,7 +416,7 @@
 	<h1>MGT 510 TECHNOLOGY, QUALITY & HEALTH INFORMATICS</h1><h2 id="description">This course is designed to provide an overview of health technology, informatics and quality. There will be an emphasis on the real world interaction between medicine and technology and the role of informatics and quality. The course will provide practical and up-to-date examples of emerging technologies. Throughout the course, students will discuss such topics as patient informatics, evidence based medicine, clinical practice guidelines, disease management, quality management, pay for performance, patient safety, applicable regulatory guidelines and the implications of both the public and private sector involvement in health insurance and healthcare informatics.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=510","MGT 510");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=510","MGT 510");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

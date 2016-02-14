@@ -416,7 +416,7 @@
 	<h1>RE 250 CAREER MANAGEMENT FOR REAL ESTATE PROFESSIONALS</h1><h2 id="description">This course is designed to introduce students to various career opportunities in the Real Estate industry and to develop skills to enhance their ability to secure a position and pursue a successful career. PREREQUISITE(S): Declared or Intended Real Estate major or minor and junior standing are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=RE&catalog_nbr=250","RE 250");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=RE&catalog_nbr=250","RE 250");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

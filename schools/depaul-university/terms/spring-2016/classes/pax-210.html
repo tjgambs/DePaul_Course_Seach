@@ -416,7 +416,7 @@
 	<h1>PAX 210 INTERNATIONAL CONFLICT AND PEACEBUILDING</h1><h2 id="description">This interdisciplinary course examines the basic questions of peace studies in different and "diverse" contexts, from personal relationships to societies and states, and addresses the consequences of conflict and conflict resolution in the contemporary world.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PAX&catalog_nbr=210","PAX 210");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PAX&catalog_nbr=210","PAX 210");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

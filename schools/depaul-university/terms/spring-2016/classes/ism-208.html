@@ -416,7 +416,7 @@
 	<h1>ISM 208 VIRTUAL WORLDS AND ONLINE COMMUNITIES</h1><h2 id="description">Environments such as social networking sites, multiplayer online games and other online communities are becoming an increasingly large part of how we work, play, and learn. This course introduces the fundamentals for the interdisciplinary study of cyberculture and online social behavior. By examining core scholarship in this area, together with analyzing an existing virtual world, game, or online community, students will learn to research and understand new technologically-enabled social forms as they are emerging. PREREQUISITE(S) WRD 104</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=208","ISM 208");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ISM&catalog_nbr=208","ISM 208");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

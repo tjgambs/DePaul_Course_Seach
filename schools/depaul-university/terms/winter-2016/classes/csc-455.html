@@ -416,7 +416,7 @@
 	<h1>CSC 455 DATABASE PROCESSING FOR LARGE-SCALE ANALYTICS</h1><h2 id="description">The course covers core concepts of database systems with focus on applications in large-scale analytics. Topics include relational databases, scheme normalization, SQL queries for data integration and data cleaning, database programming for ETL, and nontraditional database systems for unstructured data. PREREQUISITE(S): CSC 401</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=455","CSC 455");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=455","CSC 455");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>ANI 364 ANIMATION RESEARCH SEMINAR</h1><h2 id="description">This seminar introduces students to animation in the context of interdisciplinary thinking and creativity. Students will discuss their learning experiences across disciplines in the University, and practice making connections between this learning and their study of animation. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=364","ANI 364");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=364","ANI 364");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

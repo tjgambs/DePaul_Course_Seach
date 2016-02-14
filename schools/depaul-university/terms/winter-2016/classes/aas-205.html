@@ -416,7 +416,7 @@
 	<h1>AAS 205 GLOBAL ASIA</h1><h2 id="description">From ancient and modern perspectives, Global Asia introduces the artistic, cultural, economic, philosophical, political and religious transformation of Asian societies and peoples across space and time. A visual and multimedia approach complements literature on core ideas and practices. Creative and interactive learning methods are included.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=AAS&catalog_nbr=205","AAS 205");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=AAS&catalog_nbr=205","AAS 205");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

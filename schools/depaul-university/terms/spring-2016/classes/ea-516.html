@@ -416,7 +416,7 @@
 	<h1>EA 516 DESIGNING EDUCATIONAL OFFERINGS</h1><h2 id="description">In this course, students will be introduced to major components involved in designing educational offerings for adult learners in various face-to-face settings. Students will develop (or revise) a design plan for an educational offering appropriate to their selected adult clientele. In particular, they will articulate learning outcomes around which to build their design plan (backward design). They will apply theories, concepts, and principles of adult learning while making design decisions. While the design principles addressed in this course are relevant to on-line environments, students who wish to delve further into on-line learning/teaching technology are encouraged to do so through the MAEA Electives option.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=EA&catalog_nbr=516","EA 516");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=EA&catalog_nbr=516","EA 516");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>GD 220 HISTORY OF DESIGN I</h1><h2 id="description">The history of graphic design is an evolution in aesthetics, technology, style and visual communication. The class will encompass a survey of the major movements in the field of print design, notable designers and design materials. The nature of changing methods, materials, technologies and values are examined in the context of the social and political realities that shape communication. The course will include the historical shift from print to multimedia design methodologies.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=220","GD 220");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=220","GD 220");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

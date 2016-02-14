@@ -416,7 +416,7 @@
 	<h1>DC 375 CINEMATOGRAPHY II</h1><h2 id="description">This class explores the emerging HDTV/HDV technologies along with advanced production techniques of camera movement, lighting, rigging, camera filtration and shot composition. Students will be given hands on training in the use of the latest High Definition Video cameras and then create a short script which they will shoot and edit in High Definition. . PREREQUISITE(S): DC 275</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=375","DC 375");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=375","DC 375");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

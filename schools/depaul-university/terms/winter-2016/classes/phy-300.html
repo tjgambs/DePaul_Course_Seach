@@ -416,7 +416,7 @@
 	<h1>PHY 300 METHODS OF COMPUTATIONAL AND THEORETICAL  PHYSICS I</h1><h2 id="description">Computational and theoretical methods in ordinary differential equations, complex numbers, systems of equations, phase plane analysis, bifurcations. Applications to damped, driven oscillators, electronics. COREQUISITE(S):MAT 261.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PHY&catalog_nbr=300","PHY 300");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PHY&catalog_nbr=300","PHY 300");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

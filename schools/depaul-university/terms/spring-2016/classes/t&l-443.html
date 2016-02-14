@@ -416,7 +416,7 @@
 	<h1>T&L 443 ASSESSING YOUNG BILINGUAL/ESL LEARNERS</h1><h2 id="description">This course will focus on the discussion of basic principles and current approaches to assessment of language learning students in ESL Children's language learning or language learning of children in EST and bilingual early childhood and early elementary educational settings. The different purposes of process and product assessment tools, authentic and curriculum-based forms of assessment, issues in the assessment of English Language Learners (ELLs), and assessment in academic areas for early elementary ELLS will be explored.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=443","T&L 443");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=443","T&L 443");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

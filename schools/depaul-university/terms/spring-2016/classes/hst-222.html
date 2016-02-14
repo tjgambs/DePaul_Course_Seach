@@ -416,7 +416,7 @@
 	<h1>HST 222 MODERN GERMANY, 1870-PRESENT</h1><h2 id="description">Following the path from Germany's unification in the late 19th century via two world wars, the country's division in the course of the Cold War, and ultimately the country's reunification at the close of the 20th century, one of the goals of this course is to introduce students to the major cornerstones of modern German history. Another objective, however, aims at using these events in the exploration of shifting ideas about what it has meant to be German, exploring what factors determined inclusion in or exclusion from the German community.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=222","HST 222");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=222","HST 222");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

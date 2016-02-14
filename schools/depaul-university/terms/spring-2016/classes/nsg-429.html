@@ -416,7 +416,7 @@
 	<h1>NSG 429 PATHOPHYSIOLOGY & APPLIED PHARMACOLOGY</h1><h2 id="description">This course builds on the background of the registered nurse in exploring advanced concepts of pathophysiology and pharmacology. Emphasis is placed on concepts of pathophysiology in relationship to pharmacologic therapies and clinical management. The application of pharmacologic therapies in health promotion and patient management is explored from perspective of the masters prepared nurse</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=429","NSG 429");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=429","NSG 429");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

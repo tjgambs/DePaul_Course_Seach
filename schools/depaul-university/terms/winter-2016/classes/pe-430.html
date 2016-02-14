@@ -416,7 +416,7 @@
 	<h1>PE 430 ADVANCED HEALTH AND SCIENCE CONCEPTS IN SPORT, FITNESS AND RECREATION</h1><h2 id="description">This course will present advanced concepts in health for the individual interested in Health Education or the Allied Health Professions. The content will include health principles related to individual athletes throughout the life span, wellness concepts, and strategies for coping with potentially dangerous behaviors. The students will reflect on how to incorporate knowledge of health into their physical education and health classes in schools or community settings.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PE&catalog_nbr=430","PE 430");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PE&catalog_nbr=430","PE 430");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

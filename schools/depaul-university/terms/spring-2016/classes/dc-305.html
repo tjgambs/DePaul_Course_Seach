@@ -416,7 +416,7 @@
 	<h1>DC 305 PITCHING SEMINAR</h1><h2 id="description">Students will learn about various forms of pitching, including pitching existing spec scripts, new ideas, and developing takes on existing properties. They will learn tips and techniques for having successful meetings, including how to prepare and how to read the dynamics of a room. They will write, practice, and workshop their own pitches. PREREQUISITE(S): DC 101 or DC 201</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=305","DC 305");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=305","DC 305");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>DC 274 IMAGE, OPTICS AND CINEMATIC MOTION</h1><h2 id="description">Cinematography is the scientifically grounded discipline of making lighting and camera choices in order to record moving images. This course deals with the basic mathematics, physics, and photochemistry that underlie cinematography and that motivate camera design and construction. A student who masters the foundations of cinematography through a mixture of lectures, readings, exercises, and labs will be able to evaluate and understand how motion based recording choices affect perception of moving images they see every day.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=274","DC 274");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=274","DC 274");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

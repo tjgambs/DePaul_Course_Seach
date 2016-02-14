@@ -416,7 +416,7 @@
 	<h1>HC 213 GLOBAL BUSINESS, TECHNOLOGY AND THE UNITED NATIONS</h1><h2 id="description">In this course, discussions will focus on global business and technology issues U.S. and Mexican companies face today and UN experts will bring other countries into the global perspective. Students will speak with international UN experts on: major challenges and opportunities that globalization presents to U.S. and Mexican companies; how corporations are using technology to facilitate their global operations; the work of the United Nations in helping implement corporate responsibility, international labor rules, human rights, and reducing child labor; best practices in cross-cultural business; and, other related global business issues. DePaul students will discuss current technology innovations in global business and experience Internet Protocol and Scopia technology connections with people located in New York City, Mexico City, Guadalajara and SNL students outside Chicago, and review class video tapes on DePaul iTunes. Each week Ambassador Kamal will chair the discussion with a global business expert at the United Nations addressing one of the above issues. Students are encouraged to engage in vigorous dialogue. Students and professors in Mexico City and Guadalajara will also engage in dialogue. After the United Nations discussions, DePaul classroom and Scopia students will speak with students and professors at University Panamericana in Mexico City and in Guadalajara via video conferencing, exchanging their experiences with global businesses and ideas on the issues presented in the UN discussions. This course via videoconferencing will enable students to become comfortable in the videoconference format, confident in speaking with world experts, dialogue with students at two universities in Mexico, and become adept at working with technologies.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=213","HC 213");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=213","HC 213");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>MKT 390 SERVICE MARKETING</h1><h2 id="description">Services comprise two thirds of U.S. Gross Domestic Product. This course will explore the identifying characteristics of service marketing as compared and contrasted with product marketing. The conceptual differences in marketing of intangibles vs. tangible offerings to the market will be emphasized. The course will consist of lecture, discussion, readings and cases. PREREQUISITE(S): MKT 202, MKT 301 and MKT 310 are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MKT&catalog_nbr=390","MKT 390");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MKT&catalog_nbr=390","MKT 390");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

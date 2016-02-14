@@ -416,7 +416,7 @@
 	<h1>T&L 406 LANGUAGE DEVELOPMENT OF THE YOUNG CHILD</h1><h2 id="description">This course will focus on the development of language in young children, including techniques and materials for use in assessing and enhancing speech and language development with appreciation for dialectic variations. Emphasis will be on issues relating to second language learners and young children with special needs.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=T%26L&catalog_nbr=406","T&L 406");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=T%26L&catalog_nbr=406","T&L 406");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

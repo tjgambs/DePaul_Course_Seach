@@ -416,7 +416,7 @@
 	<h1>ANI 207 ANIME HISTORY</h1><h2 id="description">This course is an Introduction to the history, development and cultural significance of Japanese animation. We will explore how historical and cultural concepts of Japan have translated to the screen, as well as the influence of economic forces and changing technology. Students will gain an insight into anime's origins and cultural influences through an examination of the World War II, post-war, mid- and late-twentieth-century historical periods of Japan. This class will analyze particular examples of anime and anime artists in their historical context, emphasizing the use of primary sources.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANI&catalog_nbr=207","ANI 207");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANI&catalog_nbr=207","ANI 207");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

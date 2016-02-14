@@ -416,7 +416,7 @@
 	<h1>DES 642 THEATRICAL COLLABORATION</h1><h2 id="description">An investigation, through research and discussion, of the conceptual problems of physically mounting specific, assigned scripts from the classic and modern theatre, covering a broad stylistic range. Students will submit proposals for designs and justify their ideas through literary and pictorial research. The directorial and collaborative problems of arriving at a production concept, up to, but not including fully-realized design documentation, is emphasized through a series of projects. PREREQUISITE(S): Status as a 3rd or 4th year BFA Lighting, Scenery, Costume Design and Dramaturgy students, or MFA students is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DES&catalog_nbr=642","DES 642");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DES&catalog_nbr=642","DES 642");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

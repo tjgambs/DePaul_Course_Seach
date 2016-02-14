@@ -416,7 +416,7 @@
 	<h1>HSP 343 CASINO MANAGEMENT</h1><h2 id="description">Explore the history and development of gaming, casino operations including slots, table games, sports and Internet betting, credit and casino accounting, casino hotels and casino foodservice, and the marketing of the core gaming products. A central focus will be on current trends as well as the primary management and financial elements unique to operating a casino.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=343","HSP 343");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=343","HSP 343");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

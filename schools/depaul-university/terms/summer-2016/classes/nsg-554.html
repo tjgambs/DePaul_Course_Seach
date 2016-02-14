@@ -416,7 +416,7 @@
 	<h1>NSG 554 INFORMATICS AND TECHNOLOGY APPLICATIONS</h1><h2 id="description">This course focuses on information systems technology and its application for the improvement and transformation of patient-centered health care. Implications of informatics for advanced nursing practice and health care in general are explored. Impact on consumer-provider relationships, ethical and legal issues, global/future informatics issues and electronic health record issues are being examined. The course prepares the student to become proficient at selecting and using technology for organizing, analyzing, managing, and evaluating information in nursing administration, education, and clinical practice settings. The use of technology as an adjunct to inquiry and how it supports clinical and professional decision-making is explained and demonstrated.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=554","NSG 554");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=554","NSG 554");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

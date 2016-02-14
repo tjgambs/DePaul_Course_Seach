@@ -416,7 +416,7 @@
 	<h1>SPN 340 SPANISH CREATIVE WRITING WORKSHOP</h1><h2 id="description">This advanced course seeks to reinforce and further develop the student's expression in Spanish by exploring different techniques in writing poetry and fiction. After approaching some basic concepts involved in the creative writing process, and with the constant practice of writing, students will be able to create texts in the style of preference. They will also gain more confidence with linguistics abilities. This class will be conducted in a workshop format, consisting of in-class writing exercises, workshop-like peer-sharing of texts, and discussions about the creative process. SPN 106 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SPN&catalog_nbr=340","SPN 340");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SPN&catalog_nbr=340","SPN 340");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

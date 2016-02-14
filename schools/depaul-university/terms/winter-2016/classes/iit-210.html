@@ -416,7 +416,7 @@
 	<h1>IIT 210 CIRCUIT ANALYSIS I</h1><h2 id="description">Ohm's Law, Kirchoff's Laws, and network element voltage-current relations. Application of mesh and nodal analysis to circuits. Dependent sources, operational amplifier circuits, superposition, Thevenin's and Norton's Theorems, maximun power transfer theorem. Transient circuit analysis for RC, RL, and RLC circuits. Introduction to Laplace Transforms. Concurrent registration in ECE 212 and ECE 218 is strongly encouraged. (Taught at Illinois Institute of Technology as ECE 211)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IIT&catalog_nbr=210","IIT 210");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IIT&catalog_nbr=210","IIT 210");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

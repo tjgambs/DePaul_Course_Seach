@@ -416,7 +416,7 @@
 	<h1>PRAD 379 ADVERTISING MEDIA PLANNING</h1><h2 id="description">This course examines the diverse capabilities of various media available to advertisers and the process by which advertising media plans are constructed to help meet marketing communication objectives for a product or service. The course provides fundamentals on the language, tools, research methods and concepts employed in the media planning process and helps students build media plans using appropriate objectives, strategies and tactics. The course will help students develop a heightened appreciation for the roles of logic, analysis, and insight in the media planning and buying process. PREREQUISITE(S): PRAD 244 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=379","PRAD 379");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=379","PRAD 379");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

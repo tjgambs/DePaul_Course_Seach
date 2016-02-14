@@ -416,7 +416,7 @@
 	<h1>MEN 221 WIND ENSEMBLE</h1><h2 id="description">Study, rehearsal, and performance of masterpieces of wind literature, both traditional and contemporary, with focus on music for ensembles of 8-30 players; acquisition of necessary musical and professional skills for playing in such an ensemble. All of the MEN courses are repeatable courses. PREREQUISITE(S): Status as an Undergraduate Music student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MEN&catalog_nbr=221","MEN 221");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MEN&catalog_nbr=221","MEN 221");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

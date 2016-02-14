@@ -416,7 +416,7 @@
 	<h1>DMA 535 THEORY OF MULTI-MODAL MEDIA DESIGN</h1><h2 id="description">This course introduces students to the theory and practice of multi-modal storytelling, i.e. the strategic use of two or more communication modes to make meaning, such as image, gesture, music, spoken and written language. While the application areas of storytelling may remain the same - from artistic expression to advertising, PR, journalism, documentary, activism and other persuasive froms - our means of meaning making are changing dramatically due to technological innovation, availability of digital media production tools, and the potential of immediate and universal online publication. Changing technological affordances demand an increased media literacy that includes a deep understanding of the specific strengths and weaknesses of various communication modes and their manifestation in digital media formats, so we can leverage them intentionally to create impactful, cohesive and emotionally compelling multi-modal texts and trans-media stories. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DMA&catalog_nbr=535","DMA 535");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DMA&catalog_nbr=535","DMA 535");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>EA 508 APPLIED INQUIRY PROJECT PROPOSAL II</h1><h2 id="description">Each student will design his/her EA 528 Applied Inquiry Project, in consultation with the faculty mentor and a project advisor. Proposal I emphasizes selecting a project topic/focus, identifying the primary users, and conducting a literature review. Proposal II emphasizes shaping and designing the inquiry project, and outlining the final product(s). Upon completion of both phases, the proposal must be approved by the Academic Committee and Graduate Student Program Review Committee (GSPRC). PREREQUISITE(S): Status as an MAEA student or departmental permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=EA&catalog_nbr=508","EA 508");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=EA&catalog_nbr=508","EA 508");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

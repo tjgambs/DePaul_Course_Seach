@@ -416,7 +416,7 @@
 	<h1>ECT 480 INTRANETS AND PORTALS</h1><h2 id="description">Intranet development methodology. Data warehousing concept and On-Line analytic processing (OLAP) for information management. Enterprise information portals (EIP). Transforming information into knowledge. Major applications involve: decision support, customer applications and content personalization for intranet. Students will conduct case studies and projects. PREREQUISITE(S): ECT 424</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECT&catalog_nbr=480","ECT 480");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECT&catalog_nbr=480","ECT 480");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

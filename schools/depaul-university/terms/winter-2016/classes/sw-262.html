@@ -416,7 +416,7 @@
 	<h1>SW 262 THE HAPPINESS PROJECT</h1><h2 id="description">What is happiness? How do we know that we are happy? How can we become happier in our lives? In recent years, there have been an increasing number of college courses dedicated to the study of happiness, positive psychology, life satisfaction, etc. This course will be an introduction to how various fields and disciplines are examining topics relevant to the nature of happiness and well-being, while providing an opportunity for students to examine their own ideas and expectations for happiness. Using Gretchen Rubin?s popular book, The Happiness Project, as a guide, we will review the latest theories and research in psychology, the sciences, religion, and the arts, as well as ancient wisdom and popular culture, to determine what is known and assumed about happiness. Participants in the course will develop and assess their own happiness project during the last several weeks of the course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=262","SW 262");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=262","SW 262");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

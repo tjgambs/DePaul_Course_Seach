@@ -416,7 +416,7 @@
 	<h1>MED 95 CLINICAL EXPERIENCE WITH CHILDREN AND YOUTH</h1><h2 id="description">Required of all music education students. Observations and participation experience with children and youth in a school or agency. This course is a prerequisite for student teaching and related professional courses. This course serves as a pre-requisite for MED 392.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MED&catalog_nbr=95","MED 95");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MED&catalog_nbr=95","MED 95");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

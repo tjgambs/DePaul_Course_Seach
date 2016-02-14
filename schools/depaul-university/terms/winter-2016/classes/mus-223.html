@@ -416,7 +416,7 @@
 	<h1>MUS 223 GROUP PIANO V</h1><h2 id="description">The fifth of six courses in a two year (six-quarter) sequence of two one-hour classes per week using electronic piano labs. Curriculum is organized on the basis of six levels of functional keyboard competence, coordinated with the two-year Musicianship Studies experience described above. Emphasis is on sight-reading, harmonization, theory, score-reading, accompanying and ensemble playing. Note: Students with extensive previous keyboard experience may complete the competence requirements in fewer than six quarters. PREREQUISITE(S): MUS 213 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MUS&catalog_nbr=223","MUS 223");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MUS&catalog_nbr=223","MUS 223");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

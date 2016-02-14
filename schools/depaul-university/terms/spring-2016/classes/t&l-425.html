@@ -416,7 +416,7 @@
 	<h1>T&L 425 CURRICULUM AND INSTRUCTION IN SECONDARY EDUCATION</h1><h2 id="description">This course will examine materials, methods, and techniques appropriate for teaching in secondary schools. Topics include writing instructional objectives, developing lesson plans, designing a curriculum unit, understanding classroom management and assessment related issues. Students will be encouraged to reflect upon their own emerging educational philosophies as well as draw from previous courses they have taken. Students will be given many opportunities for planning, using and evaluating a variety of instructional strategies while preparing and teaching a micro lesson in front of their peers. Students will be committed to teaching as a professional acting responsibly, ethically, and collegially in accordance to Vincentian Personalism. 30 hours Level 1 Field Experience required.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=425","T&L 425");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=425","T&L 425");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

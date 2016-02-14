@@ -416,7 +416,7 @@
 	<h1>PAX 225 TRANSNATIONAL GRASSROOTS SOCIAL MOVEMENTS</h1><h2 id="description">This course is an introductory course on that ways in which ordinary communities of people have promoted peace thorugh nonviolent resistance and transnational connections. Each section of the course may take one specific situation of such collaborative efforts as the main case study or arena of action. Such situations will involve developing understandings of a history of the involvement of the United States with another country, whether through foreign aid or military interventions, and the efforts of citizens of both countries in working for a sustainable peace. The value of transnational solidarity and the complexities of power dynamics in both countries and between citizens will be studied.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PAX&catalog_nbr=225","PAX 225");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PAX&catalog_nbr=225","PAX 225");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

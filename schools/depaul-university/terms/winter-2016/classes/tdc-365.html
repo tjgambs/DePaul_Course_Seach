@@ -416,7 +416,7 @@
 	<h1>TDC 365 NETWORK INTERCONNECTION TECHNOLOGIES</h1><h2 id="description">A comprehensive study of network interconnection technologies including layer 2 bridges and switches, layer 3 routers and higher-layer gateways. The TCP and IP protocols will be studied in detail, including IP address management and router operations and management along with associated Internet protocols. RIP and OSPF protocols will be considered. Course includes laboratory work with protocol analyzers and router administration. PREREQUISITE(S): TDC 363</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TDC&catalog_nbr=365","TDC 365");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TDC&catalog_nbr=365","TDC 365");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

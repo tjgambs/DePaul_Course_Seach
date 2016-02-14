@@ -416,7 +416,7 @@
 	<h1>HC 293 COURT STRUCTURE & COMMON LAW - EXPLORING THE RIGHTS OF EMPLOYERS AND EMPLOYEES</h1><h2 id="description">This course will examine the interrelationships between our economy, business and the practice of law. It will also examine contemporary legal issues in the world of work. Students will examine the structures of the legal community and the impact it has on how business is conducted, and on the economic system in which we live and work. Through readings, discussion, and group projects, students will investigate the interfaces of law, with an emphasis on torts and employment law, as well as current issues which have evolved as the practice of law has become a big business itself. Students will develop and evaluate plans individually or through group interaction for applying new insights to affecting change in their own working environments.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=293","HC 293");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=293","HC 293");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

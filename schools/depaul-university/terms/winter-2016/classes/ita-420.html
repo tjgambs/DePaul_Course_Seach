@@ -416,7 +416,7 @@
 	<h1>ITA 420 ITALIAN FOR BUSINESS</h1><h2 id="description">Italian for business presupposes good knowledge of Italian grammatical structures upon which to build. The course focuses on acquiring business vocabulary, skills for dealing with Italian business partners, and comprehending specialized business journals and reports. An overview of Italy's role of the European Union and the Eurozone are integral to the course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ITA&catalog_nbr=420","ITA 420");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ITA&catalog_nbr=420","ITA 420");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

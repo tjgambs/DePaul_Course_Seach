@@ -416,7 +416,7 @@
 	<h1>MPH 603 COMMUNITY HEALTH INTERVENTIONS</h1><h2 id="description">This is the second course of the three-course practicum sequence. Students are expected to engage in the following tasks: (1) assess the community health profile documenting incidence and prevalence of disease and other health problems; (2) use the findings identified in step one to plan a population-specific community-based health program designed to reduce assessed risk; (3) develop an evaluation instrument designed to determine how successful the plan is in reducing health risk. PREREQUISITE(S): MPH 602 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MPH&catalog_nbr=603","MPH 603");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MPH&catalog_nbr=603","MPH 603");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

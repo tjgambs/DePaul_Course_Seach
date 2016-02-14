@@ -416,7 +416,7 @@
 	<h1>CSC 402 DATA STRUCTURES I</h1><h2 id="description">A first course on data structures in Java for graduate students. The course introduces Java programming from within the context of data structures. The course covers arrays, linked lists, stacks and queues, data structures supporting disjoint-set operations, and discusses recursion and performance analysis. The implementation of the basic operations on each data structure are discussed and analyzed in terms of their efficiency. PREREQUISITE(S): CSC 401</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=402","CSC 402");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=402","CSC 402");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

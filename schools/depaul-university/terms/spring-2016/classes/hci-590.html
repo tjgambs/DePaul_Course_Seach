@@ -416,7 +416,7 @@
 	<h1>HCI 590 TOPICS IN HUMAN-COMPUTER INTERACTION</h1><h2 id="description">HCI topic varies with offering. Contact instructor for more information. PREREQUISITE(S): Completion of the HCI core courses or consent of the instructor. May be repeated for credit.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HCI&catalog_nbr=590","HCI 590");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HCI&catalog_nbr=590","HCI 590");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

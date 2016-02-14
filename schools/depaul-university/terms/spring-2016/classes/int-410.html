@@ -416,7 +416,7 @@
 	<h1>INT 410 INTERNATIONAL LAW</h1><h2 id="description">This course offers students the opportunity to engage in an examination of recent developments in international treaties, legal process and international organization. Topics may include refugees, trade law, criminal law and the establishment of the international criminal court, international labor law, environmental law, theories of international law, human rights and the relationship between international law and local economic development.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=410","INT 410");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=410","INT 410");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

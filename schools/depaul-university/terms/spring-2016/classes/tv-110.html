@@ -416,7 +416,7 @@
 	<h1>TV 110 FOUNDATIONS OF TELEVISION</h1><h2 id="description">This course provides an introduction and framework of the history of television production. Evolving story forms will be examined from television's beginnings to the present. Developments in story and production styles will be analyzed and discussed. Professionals from different sectors of the Chicago television industry will speak to the class in panels.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TV&catalog_nbr=110","TV 110");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TV&catalog_nbr=110","TV 110");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

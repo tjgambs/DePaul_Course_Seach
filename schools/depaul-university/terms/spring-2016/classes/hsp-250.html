@@ -416,7 +416,7 @@
 	<h1>HSP 250 CAREER MANAGEMENT FOR HOSPITALITY PROFESSIONALS</h1><h2 id="description">This course is designed to explore and manage the professional expectations, career realities, and opportunities of your hospitality major. Students will participate in hands-on resume building activities, practice interviews, and apply research and evaluation skills to execute job search and career management strategies. Students will learn about Career Center resources and internship opportunities as ways to prepare for successful job searches and to maximize their potential for long-term professional growth.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=250","HSP 250");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=250","HSP 250");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

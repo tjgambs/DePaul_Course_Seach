@@ -416,7 +416,7 @@
 	<h1>CHE 237 ORGANIC CHEMISTRY I LABORATORY</h1><h2 id="description">Laboratory to be taken in conjunction with CHE 236. CO-REQUISITE(S): CHE236. REQUISITE(S): (CHE 134 and CHE 135) or (CHE 138 and CHE 139) are a prerequisite and CHE 236 is a corequisite for this class</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CHE&catalog_nbr=237","CHE 237");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CHE&catalog_nbr=237","CHE 237");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

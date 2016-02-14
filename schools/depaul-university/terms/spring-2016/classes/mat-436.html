@@ -416,7 +416,7 @@
 	<h1>MAT 436 FUNCTIONAL ANALYSIS</h1><h2 id="description">This course is an introduction to the basic theory of functional analysis. Students will study normed, Banach, and Hilbert Spaces and the theory of bounded linear functionals and operators acting on them. The contraction mapping and the fixed point theorem are also studied with applications to sequence and function spaces. PREREQUISITE(S): MAT 434 and (MAT 370 or MAT 470) is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=436","MAT 436");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=436","MAT 436");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

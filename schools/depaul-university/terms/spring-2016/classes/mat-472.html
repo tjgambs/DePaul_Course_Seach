@@ -416,7 +416,7 @@
 	<h1>MAT 472 FIELDS AND GALOIS THEORY</h1><h2 id="description">Course topics: Commutative rings and fields; irreducible polynomials and field extensions, adjunction of roots, algebraic extensions, splitting and normal fields, cyclic extensions, the Galois group, and the Fundamental theorem of Galois theory. Cross-listed with MAT 312. PREREQUISITE(S): (MAT 311 or MAT 473) and MAT 471 are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=472","MAT 472");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=472","MAT 472");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

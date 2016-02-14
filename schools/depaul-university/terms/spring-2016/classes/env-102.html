@@ -416,7 +416,7 @@
 	<h1>ENV 102 INTRO TO ENVIRONMENTAL SCIENCE WITH LAB</h1><h2 id="description">ENV 102 provides an overview of how the natural world works, how we interact with it and how we can work to protect, restore and sustain it for the future. Topics include an overview of basic ecological principles, population, biodiversity, energy, natural resources and pollution. The course emphasis is on the science behind current environmental concerns. Social, ethical, economic, and political perspectives are considered in order to provide perspective and a fuller understanding of the issues and their solutions. Lab investigations further develop scientific and environmental understandings. Students cannot receive credit for both ENV 101 and ENV 102. PREREQUISITE(S): LSP 120 or LSP 121 or MAT 130 or above is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=102","ENV 102");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=102","ENV 102");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

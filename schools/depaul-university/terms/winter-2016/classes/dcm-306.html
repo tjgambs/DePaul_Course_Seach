@@ -416,7 +416,7 @@
 	<h1>DCM 306 PRODUCTIVE APPLICATIONS OF WORK BASED INFORMATION TECHNOLOGY</h1><h2 id="description">In this course, students will learn about work-based information technology by exploring Windows PC and Mac operating systems. Students will be introduced to common work-based applications software in MS Office: Word, Excel, Power Point, Access and Outlook. Students will learn the basics, intermediate, and advanced level of MS Word, Excel, and Power Point. Students will explore the use and security of Internet applications for both Windows and Mac operating systems.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DCM&catalog_nbr=306","DCM 306");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DCM&catalog_nbr=306","DCM 306");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

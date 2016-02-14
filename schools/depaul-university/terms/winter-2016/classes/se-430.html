@@ -416,7 +416,7 @@
 	<h1>SE 430 OBJECT ORIENTED MODELING</h1><h2 id="description">Object-oriented modeling techniques for analysis and design. Provides the tools and techniques needed to solve complex, real-world software engineering problems in an object-oriented manner, using the most effective elements of the Unified Process. The course covers the essential concepts and notation of the Unified Modeling Language (UML), the standard notation for object-oriented analysis and design. Team project. PREREQUISITE(S): CSC 403</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SE&catalog_nbr=430","SE 430");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SE&catalog_nbr=430","SE 430");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

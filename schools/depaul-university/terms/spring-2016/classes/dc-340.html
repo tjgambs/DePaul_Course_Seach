@@ -416,7 +416,7 @@
 	<h1>DC 340 EDITING III</h1><h2 id="description">This course provides an advanced workshop for students to edit their own narrative or documentary projects. Students will be expected to bring in their own footage, and will take their projects from logging, through rough cut, to picture lock. Post-production workflow, and basic sound design and color correction for picture editors will also be emphasized. PREREQUISITE(S): DC 320</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=340","DC 340");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=340","DC 340");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

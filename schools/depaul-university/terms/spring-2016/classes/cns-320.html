@@ -416,7 +416,7 @@
 	<h1>CNS 320 COMPUTER FORENSIC AND INCIDENT RESPONSE</h1><h2 id="description">Introduction to the topics of computer forensic, computer crimes, response to security incidents, Cybercrime investigation and prosecution. Students will learn how an organization can setup a security response team, prepare for Security incidents and manage these incidents. PREREQUISITE(S): (CSC 301 or CSC 393) and CSC 373</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CNS&catalog_nbr=320","CNS 320");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CNS&catalog_nbr=320","CNS 320");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>RE 354 REAL ESTATE VALUATION</h1><h2 id="description">Real Estate Valuation. Introduction to market analysis and the appraisal process. Basic approaches to valuation analysis including both residential and income properties. This course includes the income capitalization methods and complex valuation assignments. COREQUISITE(S): RE 350 is a corequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=354","RE 354");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=RE&catalog_nbr=354","RE 354");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

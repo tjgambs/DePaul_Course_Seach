@@ -416,7 +416,7 @@
 	<h1>MSC 212 MILITARY PRINCIPLES OF TACTICS</h1><h2 id="description">This quarter focuses principally on officership, providing an extensive examination of the unique purpose, roles, and obligations of commissioned officers. It includes a detailed look at the origin of our institutional values and their practical application in decision-making and leadership. The lesson traces the Army's successes and failure as it evolved from the Vietnam War to the present</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MSC&catalog_nbr=212","MSC 212");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MSC&catalog_nbr=212","MSC 212");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

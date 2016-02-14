@@ -416,7 +416,7 @@
 	<h1>COM 446 NEW MUSIC COMPOSITION SEMINAR</h1><h2 id="description">Analysis of compositional and notation techniques as found in significant new works from the last twenty-thirty years for chamber ensembles or orchestral ensembles. Students will develop weekly presentations on specific works that will eventually be presented at the department's weekly meeting sessions and will also develop a minimum 10 page paper on one-two works. PREREQUISITE(S): Status as a Graduate Composition student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=COM&catalog_nbr=446","COM 446");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=COM&catalog_nbr=446","COM 446");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

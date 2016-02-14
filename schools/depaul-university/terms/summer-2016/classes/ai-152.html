@@ -416,7 +416,7 @@
 	<h1>AI 152 EXPLORING THE ART MUSEUM</h1><h2 id="description">Museums have been a respected and trusted measurement of artistic accomplishment. In this course, the student will examine the museum's role as collector, conservator and educator. The student will investigate the traditional role of the art museum, its collection, practices and programs as well as its efforts to integrate new media into its collection. The course also investigates repatriation, which is the ownership of ancient and cultural heritage and other issues that affect the museum such as censorship and funding. Finally it will look at how we value art as a commercial commodity.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=152","AI 152");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=152","AI 152");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>SPN 370 LATIN AMERICAN CIVILIZATION</h1><h2 id="description">The course will explore the politics, social structures, traditions, artistic movements and historical periods of Latin America. The scope of the course covers the main pre-Columbian civilizations, the time of the Spanish discovery and colonization, the rise of new nationalities and their development, especially in relation to the United States and the emerging globalized world. SPN 106 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SPN&catalog_nbr=370","SPN 370");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SPN&catalog_nbr=370","SPN 370");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

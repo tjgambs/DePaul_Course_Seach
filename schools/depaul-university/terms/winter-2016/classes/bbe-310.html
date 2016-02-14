@@ -416,7 +416,7 @@
 	<h1>BBE 310 SPECIAL TOPICS IN LANGUAGE EDUCATION AND CULTURE</h1><h2 id="description">This course is designed to explore a specific area of study in the field of linguistics, such as sociolinguistics, psycholinguistics, applied linguistics, language planning and policy, and cognitive bilingualism, among other related topics. The particular focus of study will vary and change as the course is offered.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BBE&catalog_nbr=310","BBE 310");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BBE&catalog_nbr=310","BBE 310");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

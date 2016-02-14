@@ -416,7 +416,7 @@
 	<h1>SOC 205 SELF AND SOCIETY</h1><h2 id="description">The course examines the relationship between individuals and the social and cultural environment. It introduces theories of the self and society (psychoanalytic theories, Weberian perspectives, symbolic interaction and social construction, feminist theories, existential perspectives, etc.). Readings include field studies and case studies. Students are introduced to research methods such as life narrative analysis and observation.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=205","SOC 205");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SOC&catalog_nbr=205","SOC 205");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>AP 570 ETHICAL ISSUES</h1><h2 id="description">Through this competence area, students address the relationship between beliefs and assumptions regarding humanity, good/evil, right/wrong, etc., and behavioral outcomes (including areas of conflict) relevant to their areas of focus. PREREQUISITE(S): Status as a MAAPS student or departmental permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AP&catalog_nbr=570","AP 570");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AP&catalog_nbr=570","AP 570");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

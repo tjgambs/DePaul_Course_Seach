@@ -416,7 +416,7 @@
 	<h1>DC 323 PRE-PRODUCTION FOR CINEMA</h1><h2 id="description">This course will cover the pre-production phase of short and feature-length filmmaking, including fundraising, breaking down scripts, scheduling, budgeting and pre-visualizing. Professional scheduling, budgeting and pre-visualization software will be utilized. Additionally, the roles of the creative producer, line producer and assistant director will be examined. Prerequisite(s): DC 210</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=323","DC 323");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=323","DC 323");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

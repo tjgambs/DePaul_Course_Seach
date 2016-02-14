@@ -416,7 +416,7 @@
 	<h1>ENV 204 ENERGY AND THE ENVIRONMENT</h1><h2 id="description">This course is designed to provide students with the scientific tools necessary to understand and critically evaluate both personal and policy decisions regarding the variety of options (e.g. fossil fuel, solar, wind, etc.) for energy generation and use. The course also focuses on the environmental impacts of all forms of energy, from the extraction of fossil fuels and mineral resources from the earth, to the generation, distribution and consumption of energy, and ultimately emission of fossil fuel combustion products, notably carbon dioxide and other heat trapping gasses, to the atmosphere. PREREQUISITE(S): LSP 120 or LSP 121 or MAT 130 or above is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=204","ENV 204");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=204","ENV 204");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

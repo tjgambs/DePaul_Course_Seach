@@ -416,7 +416,7 @@
 	<h1>GD 360 ADVERTISING DESIGN</h1><h2 id="description">Explores the function and practice of design in advertising in both social and art historical contexts. This course engages practical real life projects as well as projects that explore cultural and artistic practices. PREREQUISITE(S): GD 200 and GD 230</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=360","GD 360");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=360","GD 360");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

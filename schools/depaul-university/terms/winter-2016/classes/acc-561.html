@@ -416,7 +416,7 @@
 	<h1>ACC 561 CORPORATE REORGANIZATIONS</h1><h2 id="description">Federal income tax implications of transfers of stock, securities and property in connection with corporate acquisitions, combinations and separations. This course is mainly concerned with the tax consequences to corporate parties, to reorganizations and to their shareholders. Emphasis is given to determining the taxability of transactions and asserting the availability of tax attributes to successors in interest. NOTE: This is a M.S.T. course. PREREQUISITE(S): ACC 558 and ACC 560 are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ACC&catalog_nbr=561","ACC 561");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ACC&catalog_nbr=561","ACC 561");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

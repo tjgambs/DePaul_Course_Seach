@@ -416,7 +416,7 @@
 	<h1>APM 433 WOODWIND ORCHESTRAL REPERTOIRE II: AUDITION PREPARATION</h1><h2 id="description">An overview of orchestral woodwind audition repertoire with special emphasis on audition preparation and audition practice. Students will take several mock auditions over the course of the quarter to improve their understanding of the audition experience. PREREQUISITE(S): Status as a Woodwinds Performance student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=433","APM 433");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=433","APM 433");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

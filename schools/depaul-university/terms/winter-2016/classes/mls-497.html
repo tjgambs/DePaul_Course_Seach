@@ -416,7 +416,7 @@
 	<h1>MLS 497 INDEPENDENT STUDY [NON-CAPSTONE]</h1><h2 id="description">Independent study in an area that does not lead directly into the thesis or capstone. Students may also register for this course on a topic indirectly related to their thesis or capstone if they will subsequently take MLS 498, in which the student directly prepares to write the Integrating Project/Thesis. The MALS and IDS Program requires that students taking independent studies follow a specified format of meeting frequency, activities, and scholarly production. This format is available on the program web site or from the MALS and IDS office. Registration is by permission of the Director of the MALS and IDS Program and the instructor of the independent study.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MLS&catalog_nbr=497","MLS 497");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MLS&catalog_nbr=497","MLS 497");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

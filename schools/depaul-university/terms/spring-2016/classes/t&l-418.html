@@ -416,7 +416,7 @@
 	<h1>T&L 418 LEARNING THROUGH THE ARTS</h1><h2 id="description">This course focuses on the arts (visual art, music, drama and dance) as an integral component of teaching and learning in the elementary school curriculum. Students will explore a variety of art forms and disciplines to develop a critical aesthetic and artistic vocabulary. Students learn to help children utilize artistic media in the exploration and expression of thoughts and feelings. Emphasis is placed on design, construction, and implementation, and assessment of authentic conceptual classroom arts activities that integrate the arts with other classroom curricula. Daytime clinical hours (10) are required during this course. Formerly CDG 418. COREQUISITES: For T&L EE majors, concurrent enrollment in SCG 408 is required.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=418","T&L 418");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=418","T&L 418");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

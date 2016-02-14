@@ -416,7 +416,7 @@
 	<h1>CHE 100 OUR CHEMICAL WORLD</h1><h2 id="description">A course for non-science majors that develops the essential concepts of chemistry with some focus on applications of these methods and ideas toward a particular aspect of human activity or condition. Only one of series 100-102 may be taken for credit.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=100","CHE 100");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CHE&catalog_nbr=100","CHE 100");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

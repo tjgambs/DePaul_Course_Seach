@@ -416,7 +416,7 @@
 	<h1>ILL 200 ILLUSTRATION FOUNDATIONS</h1><h2 id="description">This course will focus on improving the basic skills needed for creating concept art and storyboards for animation and games. Areas of focus include practical perspective, technical rendering, observational drawing and color theory. These skills will be applied in basic prototyping projects. PREREQUISITE(S): GD 105 or ANI 105</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ILL&catalog_nbr=200","ILL 200");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ILL&catalog_nbr=200","ILL 200");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

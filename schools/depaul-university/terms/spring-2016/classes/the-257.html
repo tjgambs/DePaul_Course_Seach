@@ -416,7 +416,7 @@
 	<h1>THE 257 WRITING LOCALLY, THINKING GLOBALLY: INTERNATIONAL THEATRE FOR YOUNG AUDIENCES DRAMATIC LITERATURE</h1><h2 id="description">While writing and performing for their local communities, various international artists have made a global impact on the field of theatre for young audiences. This course is an investigation of the principles, procedures, and practices of theatre for young audiences playwrights and artists worldwide. Through analysis of readings, lectures, workshops, and discussions students will explore the skills and aesthetic techniques that theatre creators from around the globe use to communicate with their audiences. By examining historical, theoretical, and artistic intercontinental connections, students will hopefully gain further appreciation and understanding of the contemporary, global theatre for young audiences (TYA) field.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=257","THE 257");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=257","THE 257");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

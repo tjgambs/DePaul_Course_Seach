@@ -416,7 +416,7 @@
 	<h1>EA 535 REFLECTIVE PRACTICE SEMINAR I</h1><h2 id="description">At the end of the second quarter, students revisit their selected area of practice, select purposes for their program portfolio, and plan for development of the Elements of Better Practice. PREREQUISITE(S): Status as an MAEA student or departmental permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=EA&catalog_nbr=535","EA 535");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=EA&catalog_nbr=535","EA 535");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

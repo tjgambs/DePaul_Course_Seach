@@ -416,7 +416,7 @@
 	<h1>HLTH 329 MEDICAL HUMANITIES</h1><h2 id="description">The humanities and arts provide a unique insight into the human condition, suffering, personhood, and our relationship to medical and health technology. Through these practices, one can develop skills of observation, analysis, empathy and self-reflection, all of which are necessary for the provision of humane health care. In this course, students will explore health and medicine through the lenses of the humanities (literature, philosophy, ethics, history) and the arts (literature, theater, film, and visual arts). PREREQUISITE(S): (WRD 103 and WRD 104) or HON 100 or HON 101 is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HLTH&catalog_nbr=329","HLTH 329");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HLTH&catalog_nbr=329","HLTH 329");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>THE 200 THEATRE & THE ART OF PRODUCTION:GENDER & SEXUALITY IN THE THEATRE</h1><h2 id="description">Through lecture, discussion, projects and actual theatre attendance, students explore the human nature of the theatrical impulse and its evolution into theatrical form. Plays and readings deal with issues of gender identity, sexual orientation, and sexuality in performance. Students follow the process of specific drama productions from script to stage and examine the artistic process and the role that sexuality and gender play in performance and rehearsal.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=200","THE 200");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=200","THE 200");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

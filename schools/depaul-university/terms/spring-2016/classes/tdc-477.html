@@ -416,7 +416,7 @@
 	<h1>TDC 477 NETWORK SECURITY</h1><h2 id="description">Network infrastructure security issues, including perimeter security defense, firewalls, Virtual Private Networks, Intrusion Detection Systems, wireless security, network security auditing tools and ethical considerations. Strategies for the deployment of "Defense-In-Depth" mechanisms in an enterprise computing environment. PREREQUISITE(S): TDC 463 or CSC 435</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=477","TDC 477");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=477","TDC 477");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

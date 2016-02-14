@@ -416,7 +416,7 @@
 	<h1>PHL 701 CANDIDACY CONTINUATION</h1><h2 id="description">Students admitted to candidacy who have completed all Ph.D. course requirements and who are actively working on their dissertations during the quarter are to register by permission of the graduate director. Students are required to be registered for either PHL 701: Candidacy Continuation or PHL 799: Candidacy Maintenance each quarter of the academic year until the dissertation has been defended and the degree completed. The latter course, PHL 799, is to be used during quarters when the student is not actively doing dissertation work.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PHL&catalog_nbr=701","PHL 701");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PHL&catalog_nbr=701","PHL 701");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

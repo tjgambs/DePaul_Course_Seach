@@ -416,7 +416,7 @@
 	<h1>ABD 233 SURVEY OF AFRICAN DIASPORIC INTELLECTUAL THOUGHT</h1><h2 id="description">This survey course examines the philosophical and critical thought from African American, Caribbean, and African philosophers, feminists, political, and radical intellectuals. The thinkers to be studied include, but are not limited to, Du Bois, Garvey, James, Lamming, Williams, Senghor, Fanon, Hodge, Wynter, Lorde, Soyinka, hooks, Emecheta, and Conde.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ABD&catalog_nbr=233","ABD 233");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ABD&catalog_nbr=233","ABD 233");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

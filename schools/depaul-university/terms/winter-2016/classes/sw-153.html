@@ -416,7 +416,7 @@
 	<h1>SW 153 SCIENCE FOR CITIZENS</h1><h2 id="description">Students will learn basic knowledge of science as they engage in activities that are connected to their everyday life. They will explore their natural ecosystem and be able to describe various functions. They will engage in the scientific method through observations, hypotheses, data collection and basic data analysis. Students will apply their critical thinking based on the scientific method to local environmental or science related issues/events.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=153","SW 153");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=153","SW 153");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

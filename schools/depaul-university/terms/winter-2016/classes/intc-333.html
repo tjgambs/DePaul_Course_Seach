@@ -416,7 +416,7 @@
 	<h1>INTC 333 CULTURAL WAYS OF SPEAKING</h1><h2 id="description">Explores how speakers reveal culture through their everyday interactions. This course focuses on speaking as an activity through which individuals identify themselves with communities of discourse, within the United States as well as across cultural groups. It provides students with experience in discovering diverse "ways of speaking" and "codes" concerning what it means to be a person, how people relate to each other, and how they view the world. (Formerly CMNS 333)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=333","INTC 333");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=333","INTC 333");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

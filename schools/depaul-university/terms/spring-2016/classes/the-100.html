@@ -416,7 +416,7 @@
 	<h1>THE 100 WORLD OF THE THEATRE</h1><h2 id="description">Through the aesthetic analysis of plays and dramatists that were foundational in the development of dramatic literature, the student is encouraged to develop basic critical standards for the understanding and appreciation of dramatic production. Can be taken by non-Theatre School students.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=100","THE 100");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=100","THE 100");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>ICS 396 HOSPITALITY STRATEGY</h1><h2 id="description">Hospitality strategy is a capstone course designed to expose students to a strategic perspective on issues that concern the firm as a whole. This viewpoint is integrative in that it draws on concepts from the functional disciplines (i.e. Marketing, Finance, Accounting, Operations) in the diagnosis, analysis and resolution of complex business situations. Students will read, discuss and apply a body of theory and techniques from the field of strategic management. The course emphasizes the development of practical problem solving skills. Corporate strategy is examined from the perspective of: strategic choice, the link between strategy and organization, and the management of strategic change. Examples will be drawn from various hospitality operations around the world. The course emphasizes the use of group decision-making, self-directed work teams, and formal group reports and presentations. PREREQUISITE(S): FIN 310, MGT 300, MKT 310 and Senior standing are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ICS&catalog_nbr=396","ICS 396");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ICS&catalog_nbr=396","ICS 396");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

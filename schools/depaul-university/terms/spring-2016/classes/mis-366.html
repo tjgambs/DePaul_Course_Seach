@@ -416,7 +416,7 @@
 	<h1>MIS 366 INTERNET TECHNOLOGIES IN BUSINESS</h1><h2 id="description">The course will be an introduction to internet technologies with particular focus on World Wide Web and e-business applications. Topics include internet technology application framework, attributes of e-business applications, client and server side processing, web servers, Java, J2EE and Microsoft's .NET, accessing enterprise data, HTTP security, certificates and CA, XML and e-business integration, latency and workload management, and wireless access. Students will work in groups and will be required to do one design proposal and make one presentation using Visio. PREREQUISITE(S): IT 130 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MIS&catalog_nbr=366","MIS 366");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MIS&catalog_nbr=366","MIS 366");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

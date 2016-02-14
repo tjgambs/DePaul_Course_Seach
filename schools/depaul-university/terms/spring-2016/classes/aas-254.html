@@ -416,7 +416,7 @@
 	<h1>AAS 254 SOUTH ASIA, 1707 - 1947: RISE AND FALL OF THE BRITISH RAJ</h1><h2 id="description">The course begins with the decline of the Mughal Empire, and then moves to examine the British empire, the nationalist movement and finally to independence and partition in 1947. The central questions of this course continue to be relevant in the post-colonial period: how we understand the distinctive form of modernity that has developed in South Asia. Taking a comparative approach as often as possible, the course examines the fundamental ways that Britain was as transformed by the development of its empire as was colonial India. The course constantly deconstructs easy binaries of self and others/ East and West by examining the differences within Indian and British society. Cross-listed with HST 153.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AAS&catalog_nbr=254","AAS 254");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=AAS&catalog_nbr=254","AAS 254");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

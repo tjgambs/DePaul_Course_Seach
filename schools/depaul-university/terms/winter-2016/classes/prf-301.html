@@ -416,7 +416,7 @@
 	<h1>PRF 301 MODERN DANCE FOR NON-MAJORS</h1><h2 id="description">This artistic dance course will focus on technique, individual and group improvisation, choreography, the art of making dances and how to view dance in performance. Designed for all levels of experience, the class will give attention to body awareness and alignment, physical strength and flexibility, expressive and creative movement in the modern dance style to a variety of musical accompaniment.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=301","PRF 301");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=301","PRF 301");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

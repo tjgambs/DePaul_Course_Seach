@@ -416,7 +416,7 @@
 	<h1>IWS 230 ISLAMIC FINANCE</h1><h2 id="description">This course is a comprehensive introduction to Islamic finance, from its religious and legal origins and principles to its most advanced forms. This course focuses on the underlying principles of Islamic finance through a study of its scriptural and jurisprudential origins and reviews most of its products such as Mud'raba, Mush'raka, Mur'baha, Project finance, Suk'k, Tak'ful, Ij'ra and equity mutual funds etc. The course also examines today's Islamic finance industry with a closer look at the structure and governance of contemporary Islamic financial institutions and international regulatory bodies.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IWS&catalog_nbr=230","IWS 230");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IWS&catalog_nbr=230","IWS 230");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

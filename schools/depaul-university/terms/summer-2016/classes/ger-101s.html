@@ -416,7 +416,7 @@
 	<h1>GER 101S BASIC GERMAN I FOR SUMMER</h1><h2 id="description">(Covers the equivalent of the GER 101 and the first half of GER 102.) The first half of beginning German. The basic elements of the German language, spoken as well as written, with due regard to the cultural context of German expression.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=GER&catalog_nbr=101S","GER 101S");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=GER&catalog_nbr=101S","GER 101S");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

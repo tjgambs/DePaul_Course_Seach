@@ -416,7 +416,7 @@
 	<h1>CMNS 552 STRATEGIC COMMUNICATION</h1><h2 id="description">This course explores the process by which communicators attempt to accomplish their goals. In particular, this course covers theories of persuasion, strategic message design (creating messages that take into account multiple audiences and goals), and how the inferential process influences decision-making. PREREQUISITE(S): Status as a Graduate Communication or Relational Communication student or department consent is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CMNS&catalog_nbr=552","CMNS 552");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CMNS&catalog_nbr=552","CMNS 552");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

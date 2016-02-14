@@ -416,7 +416,7 @@
 	<h1>MPS 564 PUBLIC SAFETY ADMINISTRATION AND PLANNING</h1><h2 id="description">This course covers management strategies and selected analytic tools for the administration of public safety agencies. Management, planning and coordination issues will be addressed across different governmental structures (federal, state, county, local and sub-local); as well as different functional areas across public safety operations, such as staffing/personnel management; special event planning/operations; interagency coordination; effective community partnership planning; and public communications.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=564","MPS 564");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=564","MPS 564");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

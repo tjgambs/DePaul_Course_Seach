@@ -416,7 +416,7 @@
 	<h1>MPH 551 GLOBAL HEALTH INEQUITIES</h1><h2 id="description">This course examines theories and data surrounding global health. Topics include epidemiologic transition, the burden of chronic non-communicable diseases in the global south, neglected tropical diseases, and access to medicines. Sociological and anthropological perspectives are explored to understand the structural causes of health inequalities around the world.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MPH&catalog_nbr=551","MPH 551");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MPH&catalog_nbr=551","MPH 551");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

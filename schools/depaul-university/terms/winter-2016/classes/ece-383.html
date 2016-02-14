@@ -416,7 +416,7 @@
 	<h1>ECE 383 INTERNSHIP IN ESL/BILINGUAL EDUCATION SETTINGS</h1><h2 id="description">This course will focus on application of the theories of effective teaching practices and assessment procedures appropriate for young English Language learners. It will emphasize an application of knowledge gained from previous ESL/ELL courses and demonstration of skills necessary to work collaboratively and effectively with families of young English Language Learners. Professional behaviors that respect, value, and support all children's native language and culture will be reinforced. (150 clock hours) PREREQUISITE(S): ECE 313, ECE 314, ECE 325, ECE 377, BBE 305, and BBE 306 or permission of the ECE Program Director are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECE&catalog_nbr=383","ECE 383");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECE&catalog_nbr=383","ECE 383");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>CHE 130 GENERAL CHEMISTRY I</h1><h2 id="description">This introductory course for science majors emphasizes the composition of matter, atomic and molecular structure, bonding and chemical reactions. It is the first in the three-course sequence of General Chemistry. This course meets for three hours of lecture and one hour of discussion per week. Students must coregister for CHE 131, the laboratory course. PREREQUISITE(S): MAT 130 or higher and (a grade of C- or higher in CHE 128 and CHE 129 or placement by Chemistry Assessment exam) are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CHE&catalog_nbr=130","CHE 130");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CHE&catalog_nbr=130","CHE 130");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

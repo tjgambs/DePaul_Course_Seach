@@ -416,7 +416,7 @@
 	<h1>PRF 613 GRADUATE ACTING II: CLASSICAL</h1><h2 id="description">The spring quarter will focus on comedies by Shakespeare, Moliere, Sheridan, Wilde and Coward. Students will call upon all of the truth-seeking, risk-taking and relish-making that comedy and heightened language requires. Only farce and commedia are larger. The resulting agility with text provides a firm foundation for confident performance of all classical and modern roles. Exploration of Shakespeare's comedies will include collaboration with M.F.A. Directors with scenes to be presented as an invited-audience showing. PREREQUISITE(S): PRF 612 and status as a Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRF&catalog_nbr=613","PRF 613");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRF&catalog_nbr=613","PRF 613");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

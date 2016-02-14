@@ -416,7 +416,7 @@
 	<h1>MPH 525 PROGRAM EVALUATION</h1><h2 id="description">This course will provide students with a comprehensive theoretical, methodological and ethical foundation for conducting public health program evaluation. Students will experience the practice aspects of evaluation including communicating and negotiating with stakeholders, conducting an evaluability assessment, developing logic models and evaluation questions, identifying appropriate data collection methods, gathering reliable and valid evaluation data that are appropriate to the selected design and analysis methods, analyzing data, reporting evaluation results, and ensuring evaluation use. The instructor will facilitate a learning and skill-building environment, drawing on personal experiences and the expertise of others in the field.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MPH&catalog_nbr=525","MPH 525");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MPH&catalog_nbr=525","MPH 525");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

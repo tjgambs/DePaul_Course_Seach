@@ -416,7 +416,7 @@
 	<h1>HC 302 ACTIVE CITIZENS: MAKING A DIFFERENCE IN THE COMMUNITY, WORKPLACE WORLD</h1><h2 id="description">Americans are known for active participation in organizations that strengthen our communities. We coach our kid's sports teams, take meals to members of our congregations, work for candidates that we believe in and join marches to support or oppose government action. With all these activities, we engage with other members of our community to make it better for ourselves and our families and to promote social justice. In this class we will evaluate our past activities in light of our values and develop a plan to improve our skills and direct our energies for civic engagement.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=302","HC 302");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=302","HC 302");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

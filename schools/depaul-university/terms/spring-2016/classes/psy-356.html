@@ -416,7 +416,7 @@
 	<h1>PSY 356 PRINCIPLES OF FIELD RESEARCH AND ACTION</h1><h2 id="description">Basic knowledge of program development, program evaluation, consultation, human diversity, ethics, group dynamics, and interpersonal skills. PREREQUISITE(S): PSY 105 or 106 and PSY 354 are prerequisites for this class, and admission into the community psychology concentration.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=356","PSY 356");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=356","PSY 356");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

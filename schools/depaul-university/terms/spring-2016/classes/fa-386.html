@@ -416,7 +416,7 @@
 	<h1>FA 386 EXPLORING THE NONPROFIT WORKPLACE</h1><h2 id="description">Working in a non-profit organization can be a very rewarding experience. But how do you know what would be a good fit based on what you can offer? This exploratory course provides students with an overview of what ingredients make a non-profit successful. The lessons provide students with an understanding of how a social issue can be conceptualized into a program to form a non-profit organization. Students learn the basic operational components of an effective non-profit, explore best practices, determine how institutions impact social problems and evaluate their effectiveness. Students also reflect upon their own skills and abilities as they research or interact with non-profits to help guide them into an environment that matches their interests. The course is interactive and consists of a film, reflection, group and individual exercises, readings, discussion, research and writing. The final paper may consist of examining a social issue from an ethical perspective, analyzing the challenges faced by urban, suburban or rural settings, evaluating the effectiveness of how a social institution addresses a social problem or designing an individualized transition plan to volunteer or work in a non-profit organization.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=386","FA 386");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=386","FA 386");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

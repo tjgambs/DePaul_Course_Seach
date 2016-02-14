@@ -416,7 +416,7 @@
 	<h1>CSL 501 COUNSELING SKILLS</h1><h2 id="description">This course is designed to provide students with a comprehensive application and integration of the basic counseling skills used in the helping profession. Skills emphasized in the course include: active listening, attending, rapport building, empathy, paraphrasing, confrontation, reflection, and goal setting. These skills enable students to establish a helping relationship with a client, facilitate the client's self-exploration and engagement in counseling, and encourage the client's active progression towards achieving specified counseling goals. Students practice basic counseling skills and participate in in-vivo role-play through laboratory exercises in the Education and Counseling Center (ECC). The instructor gives feedback on skill development to students during face-to-face consultation and through the viewing of videotaped sessions. PREREQUISITE(S): Admission to the Counseling Masters Program and a grade of B- or better in CSL 451 and CSL 452 are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSL&catalog_nbr=501","CSL 501");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSL&catalog_nbr=501","CSL 501");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

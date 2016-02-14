@@ -416,7 +416,7 @@
 	<h1>ENV 344 ENVIRONMENTAL JUSTICE AND ADVOCACY</h1><h2 id="description">This course explores the roles of individuals and organizations in advocacy through the lens of environmental justice, particularly as power arrangements facilitate or impede consensus building. The course examines how legislation is written and how this process has impacted communities of color. Special attention is paid to advocacy techniques such as lobbying, movement-building, public education and litigation.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=344","ENV 344");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ENV&catalog_nbr=344","ENV 344");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

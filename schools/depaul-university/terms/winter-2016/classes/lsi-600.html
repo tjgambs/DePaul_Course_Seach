@@ -416,7 +416,7 @@
 	<h1>LSI 600 REGISTERED STUDENT IN GOOD STANDING</h1><h2 id="description">(0 credit) Registration is this course is open to students who are not registered for any other courses but need to complete requirements/assignments for previously taken courses. It provides access to University facilities. Permission of advisor required. PREREQUISITE(S): Status as a student in a College of Education Advanced Master's program is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=LSI&catalog_nbr=600","LSI 600");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=LSI&catalog_nbr=600","LSI 600");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

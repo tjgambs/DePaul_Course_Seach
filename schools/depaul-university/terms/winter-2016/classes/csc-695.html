@@ -416,7 +416,7 @@
 	<h1>CSC 695 MASTER'S RESEARCH</h1><h2 id="description">Students interested in a more in-depth study of a particular area will register for this course and work with a faculty member (not necessarily their academic advisor) on a research project. The work involved may include system development, empirical studies, or theoretical work. 4 credit hours of CSC 695 replaces one 500level elective course in student's degree program. This course can be taken for 1-4 credit hours for up 8 credit-hours. PREREQUISITE(S): Consent of research advisor. Independent study form required. Students must successfully complete the foundation courses prior to their first enrollment in CSC 695.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=695","CSC 695");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=695","CSC 695");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

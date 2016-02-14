@@ -416,7 +416,7 @@
 	<h1>FIN 310 INTRODUCTION TO FINANCE</h1><h2 id="description">This course introduces students to the logic, principles, institutions, and terminology of finance. The goal of the course is to provide students with a basic understanding of the role of finance and its functions. It is designed to familiarize the students with tools necessary for making sound financial decisions, both at a personal level and at an enterprise level. PREREQUISITE(S): ACC 101, ACC 102, ECO 105, ECO 106 and (MAT 135, MAT 136 and MAT 137 or equivalents) are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FIN&catalog_nbr=310","FIN 310");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FIN&catalog_nbr=310","FIN 310");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

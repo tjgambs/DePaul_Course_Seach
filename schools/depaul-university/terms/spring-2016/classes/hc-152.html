@@ -416,7 +416,7 @@
 	<h1>HC 152 PROJECT MANAGEMENT: TOOLS AND TECHNIQUES</h1><h2 id="description">This course seeks to fulfill the following learning goals: project definition and task organization, project risk management, project task estimation and schedules, and potential cultural issues when working with project members from other cultures.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=152","HC 152");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=152","HC 152");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

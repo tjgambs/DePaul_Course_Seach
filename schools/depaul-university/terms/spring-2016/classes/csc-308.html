@@ -416,7 +416,7 @@
 	<h1>CSC 308 FRAMEWORKS FOR WEB APPLICATION DEVELOPMENT</h1><h2 id="description">This course introduces concepts, techniques, technologies and APIs for web application development. The main focus of the course is on the Model-View-Controller design pattern employed by modern full-stack web frameworks. Concepts and techniques covered include client/server programming, database abstraction APIs, and asynchronous JavaScript. Examples of full-stack MVC frameworks include Ruby-on-Rails (written in Ruby), Django and TurboGears (written in Python). PREREQUISITE(S): CSC 374</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=308","CSC 308");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=308","CSC 308");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

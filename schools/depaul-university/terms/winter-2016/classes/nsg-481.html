@@ -416,7 +416,7 @@
 	<h1>NSG 481 BIOSTATISTICS AND EPIDEMIOLOGY</h1><h2 id="description">The application of biostatistics/epidemiology to clinical practice and research is the intent of this seminar. Initial discussions will focus on understanding biostatistics and epidemiological statistics as applied to health and disease in diverse populations. From considering the relationship between measurement and biostatistics to understanding the importance of insuring data integrity throughout the research process, students will examine existing data sets (federal, voluntary agencies, professional/specialty organizations). Then the focus will be on understanding epidemiological statistics (rates, proportions, relative and absolute risk), descriptive statistics, measures of differences, measures of relationships/prediction, and multivariate statistical models as applied to health and disease.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=481","NSG 481");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=481","NSG 481");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

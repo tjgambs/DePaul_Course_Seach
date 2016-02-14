@@ -416,7 +416,7 @@
 	<h1>DC 498 WRITING FOR FILM THESIS DEVELOPMENT</h1><h2 id="description">The penultimate production course for directors. Students must enter with a finished, producible, short film script with some principal pre-production elements in place. Advanced pre-production skills and topics to be covered include: prepping and breaking down the shooting script, schedule and budget, pre-visualization and storyboards, casting, rehearsals and directing actors, blocking, continuity, shot design, locations, aesthetics and visual design, working with crew, set procedures, the production binder, and directing from prep through post-production and delivery. PREREQUISITE(S): DC 462 and DC 423</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=498","DC 498");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=498","DC 498");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>IPD 452 IPV6 PROGRAM</h1><h2 id="description">A ten-week online certificate program providing comprehensive coverage of IPv6 technologies and strategies for transitioning enterprise networks to IPv6. This program requires a separate application for admission and $40 application fee. Please visit IPD.CDM.DEPAUL.EDU for information on how to enroll.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IPD&catalog_nbr=452","IPD 452");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IPD&catalog_nbr=452","IPD 452");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

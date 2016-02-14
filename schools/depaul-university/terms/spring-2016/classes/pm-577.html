@@ -416,7 +416,7 @@
 	<h1>PM 577 IT PORTFOLIO MANAGEMENT AND STRATEGIES</h1><h2 id="description">This capstone course integrates the skills and techniques learned in previous IT Project Management courses. Through in depth analysis of case studies and readings, along with presentations by outside speakers experienced in IT Portfolio Management and IT strategy, students use their skills from previous IT project management courses to solve IT strategic and IT portfolio problems. The course starts with formulating the IT strategy from the corporate strategy. Then the IT Portfolio of initiatives, projects and assets is build and fine tuned. PREREQUISITE(S) IS 556 or PM 556</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PM&catalog_nbr=577","PM 577");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PM&catalog_nbr=577","PM 577");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

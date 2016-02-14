@@ -416,7 +416,7 @@
 	<h1>FA 309 STARTING A SUCCESSFUL BUSINESS</h1><h2 id="description">In this class, you will learn evaluation techniques for determining the business feasibility of a new idea, methods of performing a market analysis with special focus on spotting marketing and demographic trends. You will learn the details associated with forming and managing a functional new business with the ultimate goal of this course being the writing of a 10-page business plan for a new product or service idea. It is strongly recommended but not required that you have taken "Understanding Financial Statements" if you do not already have an accounting or financial background.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=309","FA 309");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=309","FA 309");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

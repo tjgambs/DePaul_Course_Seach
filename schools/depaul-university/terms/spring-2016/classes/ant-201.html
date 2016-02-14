@@ -416,7 +416,7 @@
 	<h1>ANT 201 ETHNOGRAPHIC RESEARCH METHODS</h1><h2 id="description">This course focuses on practicing data collection techniques used by qualitative researchers in the social sciences. Under the supervision of the instructor, students will design and implement a collaborative research project. The techniques to be used may include (but are not limited to) observation, structured and semi-structured interviewing, network analysis, and focused group interviewing. The experience gained in this course prepares students for research activities in future course work, graduate school and professional life. In addition to the practical hands-on training, the course also addresses issues of the relationship of theory to method, ethical concerns in research with human subjects, reflexivity and inter-subjectivity in qualitative research.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANT&catalog_nbr=201","ANT 201");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANT&catalog_nbr=201","ANT 201");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HCI 421 DESIGNING FOR CONTENT MANAGEMENT SYSTEMS</h1><h2 id="description">Design and development of Web sites using common database-driven content management systems (CMSs) and publishing tools such as those used to manage blogs, community portals, and other content-heavy websites. Discussions of how familiarity with CMS tools assists the role of the user experience designer. Visual design and theme customization using prior knowledge of CSS. Taxonomy systems, installation of add-on modules, and user management using today's widely used systems. PREREQUISITE(S): HCI 406</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=421","HCI 421");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=421","HCI 421");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

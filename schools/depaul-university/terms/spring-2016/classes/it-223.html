@@ -416,7 +416,7 @@
 	<h1>IT 223 DATA ANALYSIS</h1><h2 id="description">(FORMERLY CSC 323) Application of statistical concepts and techniques to a variety of problems in IT areas and other disciplines, using a statistical package for simple data analysis. Course topics include descriptive statistics, elementary probability rules, sampling, distributions, confidence intervals, correlation, regression and hypothesis testing. PREREQUISITE(S): MAT 130 or placement</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IT&catalog_nbr=223","IT 223");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IT&catalog_nbr=223","IT 223");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>CSC 452 DATABASE PROGRAMMING</h1><h2 id="description">Programming in a large-scale relational database environment using procedural languages. Topics covered in the course include: procedural extension of query languages, runtime error handling, subprograms (procedures and functions), packages, database triggers, dynamic query language. Optional topics include transaction management, reliability, and security. PREREQUISITE(S): (CSC 453 or CSC 451 or CSC 455) and (CSC 401 or IT 411)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=452","CSC 452");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=452","CSC 452");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

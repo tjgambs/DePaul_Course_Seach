@@ -416,7 +416,7 @@
 	<h1>PSC 235 EQUALITY AND SOCIAL JUSTICE</h1><h2 id="description">Considers how societies distribute social goods of power, status, wealth, and informal resources and models of just distribution utilized in classic and modern political theory. Shifts in the meaning of social justice over the course of history and the critical contests over this issue are addressed, as well as the emergence of new models focusing on regional and global concerns. The major concepts including capitalism, socialism and meritocracy are considered.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSC&catalog_nbr=235","PSC 235");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSC&catalog_nbr=235","PSC 235");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

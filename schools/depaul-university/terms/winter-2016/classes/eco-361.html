@@ -416,7 +416,7 @@
 	<h1>ECO 361 INTERNATIONAL TRADE</h1><h2 id="description">This course deals primarily with the trade side of international economic relations. The main objective is the development of analytical tools required for an understanding of the gains from trade and barriers to trade. Particular emphasis is placed on currently pressing issues including the impact of trade on domestic employment and income, international trade tensions, and the rise of regional trade blocks. PREREQUISITE(S): ECO 105, ECO 106 and (MAT 130 or equivalent) are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECO&catalog_nbr=361","ECO 361");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ECO&catalog_nbr=361","ECO 361");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

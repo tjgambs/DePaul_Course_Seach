@@ -416,7 +416,7 @@
 	<h1>A&S 596 HUMAN RESOURCE MANAGEMENT</h1><h2 id="description">Theory, practice and relevant research in modern personnel administration. Recruitment, staff-development, interviewing, collective bargaining, conflict resolution and employee evaluation are emphasized. Human resource administration, induction programs, and in-service opportunities are touched upon. PREREQUISITE(S): Status as an Advanced Masters Education student or a Principal or Catholic School Principal (Licensure) student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=A%26S&catalog_nbr=596","A&S 596");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=A%26S&catalog_nbr=596","A&S 596");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>AI 259 CHICAGO SPACES AND PLACES: WHY DESIGN MATTERS</h1><h2 id="description">In this course, we will explore what Science Fiction says about our world. We will cover how our futurists project human ethics, workplaces, economic issues, government, individuals, gender, race, environment, and technology. We will also ask ourselves what purpose the futurist writing serves and how various predictions made by past writers of Science Fiction have stood the test of time. In considering the future through the lens of literature, learners will draw analogies to today's workplace and world, and will consider how we might begin to shape the future ourselves. After all, if science fiction is providing a snapshot of the future, should we be behaving differently today?</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=259","AI 259");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=259","AI 259");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

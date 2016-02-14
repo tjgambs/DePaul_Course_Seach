@@ -416,7 +416,7 @@
 	<h1>AAS 211 BUDDHIST ART</h1><h2 id="description">This course explores the traditional visual culture of the Buddhist world, examining art as a reflection of religious belief and practice. The works come from South Asia, Southeast Asia, East Asia, and America. An emphasis is placed on painting, sculpture, and architecture made for or related to Buddhist practice. Cross-listed with HAA 220.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AAS&catalog_nbr=211","AAS 211");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AAS&catalog_nbr=211","AAS 211");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

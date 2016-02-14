@@ -416,7 +416,7 @@
 	<h1>ART 382 STUDENTS TEACHING ART IN THE ELEMENTARY CLASSROOM</h1><h2 id="description">This course brings DePaul students into a Chicago grade school to incorporate art into the curriculum. It is a hybrid course that involves some Independent Study in which the students organize their schedule in conjunction with a grade school classroom teacher, and some required classes that they must attend on campus at a prescribed time and day. Students are off campus for approximately 10 class sessions. At the start of the quarter, students are given a theoretical background in community-based art education, ethical issues, and social engagement. Working in teams, students will observe in the classrooms to gain a sense of the grade school community and the existing curriculum. DePaul students will then develop and teach a specific lesson plan in collaboration with the classroom teacher. The objective will be to produce a creative learning experience that co-mingles art and a core subject such as science or social studies. Teaching this art integrated lesson will be an essential aspect of the learning experience. Students will meet back at the DePaul classroom at designated intervals for information, reflection, and the analysis of their experience and their impact on the grade school community, in relation to the theoretical examples from the beginning of the course. These reflections take varied forms: discussion, role-playing exercises, presentations, and papers. Approved for JYEL and cbSL credit. Formerly ART 283.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ART&catalog_nbr=382","ART 382");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ART&catalog_nbr=382","ART 382");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

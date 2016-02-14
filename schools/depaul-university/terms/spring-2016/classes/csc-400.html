@@ -416,7 +416,7 @@
 	<h1>CSC 400 DISCRETE STRUCTURES FOR COMPUTER SCIENCE</h1><h2 id="description">This course covers the basic mathematical tools essential for solving problems in computer science. The mathematical topics are presented with emphasis on their applications in computer science. The topics covered include: logic and set theory, relations, functions, graphs, and counting and probability.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=400","CSC 400");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=400","CSC 400");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

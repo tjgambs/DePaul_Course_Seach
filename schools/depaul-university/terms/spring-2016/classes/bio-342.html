@@ -416,7 +416,7 @@
 	<h1>BIO 342 COGNITIVE NEUROSCIENCE</h1><h2 id="description">This course explores the neuroscience of human behaviors such as emotions, attention, executive function, language, learning, memory, and social interaction by exploring both the underlying biological mechanisms and the psychological theories behind these behaviors. Cognitive Neuroscience is an emerging field of study that attempts to help one gain an understanding of the interdisciplinary nature of the human mind. PREREQUISITE(S): BIO 339 or BIO 340 or BIO 341 or PSY 377 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=BIO&catalog_nbr=342","BIO 342");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=BIO&catalog_nbr=342","BIO 342");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

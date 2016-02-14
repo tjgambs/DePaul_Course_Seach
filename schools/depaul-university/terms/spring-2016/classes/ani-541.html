@@ -416,7 +416,7 @@
 	<h1>ANI 541 ANIMATED SHORT FILM PART II</h1><h2 id="description">This course is a continuation of ANI 540 Animated Short Film Part I. Throughout the quarter students will continue working on their films, meeting with the instructor for advising, and other students for group critiques. Students will also learn effective post-production strategies as they near completion of their first film. This course must be taken consecutively with ANI 540. PREREQUISITE(S): ANI 540</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=541","ANI 541");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=541","ANI 541");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

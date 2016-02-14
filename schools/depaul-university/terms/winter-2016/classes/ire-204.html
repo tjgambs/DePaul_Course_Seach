@@ -416,7 +416,7 @@
 	<h1>IRE 204 IRISH LITERATURE AND FILM</h1><h2 id="description">A survey of theories of international relations and geopolitics, the course explores the security dilemmas and types of collective action that mold international affairs in the Post-Cold War era. Cases from Western Europe, the Balkans, the Middle East and the Trans-Caucasus region provide opportunities to assess theoretical approaches and profile the United States' security landscape for the new millennium. Cross-listed as GEO 201.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IRE&catalog_nbr=204","IRE 204");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IRE&catalog_nbr=204","IRE 204");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

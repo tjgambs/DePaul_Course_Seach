@@ -416,7 +416,7 @@
 	<h1>SW 235 YOGA AND WELL-BEING</h1><h2 id="description">The ancient practice of yoga offers a combination of benefits: physical endeavor, relaxation, contemplation and stress reduction. This course will explore the many dimensions of yoga. Class meetings provide time for the practice of yoga movement, focused breathing and meditation, all of which help to reduce stress. Students explore the impact of these practices on body and mind through independent research, reflection and class discussion. As a result of this course, students will learn fundamental yoga movement; identify the impact of yoga on the physical body; explore yoga philosophy; and understand how yoga is one component of well-being.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=235","SW 235");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SW&catalog_nbr=235","SW 235");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

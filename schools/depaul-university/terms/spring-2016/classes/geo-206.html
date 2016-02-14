@@ -416,7 +416,7 @@
 	<h1>GEO 206 BOUNDARIES AND IDENTITIES</h1><h2 id="description">A critical survey of the manner in which social, political, ethnic, gender and racial identities are being constructed by modernity and post-modernity. Cross-listed as INT 206. Recommended for GEO majors when taught by Professor Nast.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=206","GEO 206");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=206","GEO 206");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HAA 130 EUROPEAN ART</h1><h2 id="description">This introductory-level course examines the art historical methods and their application to a broad chronological and select survey of European art and architecture from pre-history to the 20th century. Field trips to Chicago art institutions extend the visual traditions and critical methods taught in class lectures and discussions.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=130","HAA 130");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=130","HAA 130");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

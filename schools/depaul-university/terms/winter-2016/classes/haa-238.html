@@ -416,7 +416,7 @@
 	<h1>HAA 238 BAROQUE  ART</h1><h2 id="description">Starting in 1600, from the vantage point of the Counter-Reformation and the rise of modern European states, Baroque Art covers the principal works of art & architecture; artists and patrons; and a wide sweep of social, religious, and political, conditions that impacted cultural thinking and production in the 17th century. Attention is focused on the most prominent artistic centers in Italy, the Spanish Netherlands, England, Spain, the Dutch Republic, and France. The in-class lectures with discussion are accompanied by field work to the Baroque collections of the Art Institute of Chicago.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HAA&catalog_nbr=238","HAA 238");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HAA&catalog_nbr=238","HAA 238");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>TDC 405 VOICE AND DATA NETWORK FUNDAMENTALS</h1><h2 id="description">This course provides an introduction to voice and data networking technologies, including public and private voice services, Ethernet and Internet data technologies, network security, business applications and network management. The structure, regulation, and history of the telecom and data network industry will be discussed as well. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=405","TDC 405");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=405","TDC 405");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

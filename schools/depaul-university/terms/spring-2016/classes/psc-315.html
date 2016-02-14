@@ -416,7 +416,7 @@
 	<h1>PSC 315 INTERNET, TECHNOLOGY, AND POLITICS</h1><h2 id="description">This course explores the evolving relationships that reside at the intersection of the Internet and politics. Themes covered in this course include the ways in which politicians and organizations use the Internet and how the Internet is changing the relationship between governments and citizens.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSC&catalog_nbr=315","PSC 315");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSC&catalog_nbr=315","PSC 315");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

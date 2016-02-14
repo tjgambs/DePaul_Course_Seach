@@ -416,7 +416,7 @@
 	<h1>MAT 141 DISCRETE MATHEMATICS II</h1><h2 id="description">Methods of direct and indirect proof, set theoretic proofs, sequences, mathematical induction, recursion, multiply-quantified statements, relations and functions, complexity. PREREQUISITE(S): MAT 140 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=141","MAT 141");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=141","MAT 141");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

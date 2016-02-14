@@ -416,7 +416,7 @@
 	<h1>NSG 550 HEALTHCARE ECONOMICS</h1><h2 id="description">This course focuses on application of supply and demand theory to the healthcare industry as well as analysis of financing and healthcare delivery in the United States and other countries. The principles and tools of microeconomics and macroeconomics will be applied to the healthcare market. Applications particularly pertinent in economic climates include the supply and demand of healthcare, practice incentives, managed care, malpractice and pharmaceutical economics.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=550","NSG 550");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=550","NSG 550");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

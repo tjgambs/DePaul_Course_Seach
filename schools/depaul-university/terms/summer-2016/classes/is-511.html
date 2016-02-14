@@ -416,7 +416,7 @@
 	<h1>IS 511 SOCIAL ISSUES OF COMPUTING</h1><h2 id="description">This course aims to provide a broad survey of the individual, organizational, and cultural impacts of computers and to stimulate reflection upon the social and ethical issues provoked by current and projected uses of computers. Some topics include an in-depth look at computers as they relate to workplaces, communities, public policy, legal issues, education, privacy, and moral values. PREREQUISTE(S): NONE.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IS&catalog_nbr=511","IS 511");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=IS&catalog_nbr=511","IS 511");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

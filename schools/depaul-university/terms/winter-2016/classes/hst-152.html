@@ -416,7 +416,7 @@
 	<h1>HST 152 INDIA FROM 900-1750 - SULTANS, MUGHALS, AND ISLAMIC EMPIRES</h1><h2 id="description">The course begins with the transformation of society from the 'ancient' to the 'medieval', and compares this to developments in Europe in the feudal age. It then incorporates specific political, social, and cultural developments in South Asia that came about with the establishment of powerful Islamic states in a region where Muslims were a minority. These issues will inform the analysis of the Ghaznavid and Ghurid invasions, the Delhi Sultanate, the Vijayanagara empire and the Mughal empire. The course will end with the Marathas and the decline of the Mughal empire, and the rising influence of the British. The central themes concern how the state, economy, culture, and society developed in the period when Islam became firmly embedded in South Asia.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HST&catalog_nbr=152","HST 152");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HST&catalog_nbr=152","HST 152");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>FIN 363 DERIVATIVES: PRICING & APPLICATIONS</h1><h2 id="description">This is an advanced course that focuses on the pricing models for the four derivative instruments: forwards, futures, options and swaps. The first part of the course is devoted to the two general classes of derivative pricing models: discrete time and continuous time, with each model's properties discussed in detail. These models are then applied to a range of realistic pricing situations which include swaps, exotic options and fixed income derivatives. The course concludes with a detailed examination of value at risk. PREREQUISITE(S): FIN 330 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FIN&catalog_nbr=363","FIN 363");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FIN&catalog_nbr=363","FIN 363");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

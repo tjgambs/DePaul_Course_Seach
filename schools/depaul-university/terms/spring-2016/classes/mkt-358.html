@@ -416,7 +416,7 @@
 	<h1>MKT 358 MARKETING IN A GLOBAL ENVIRONMENT</h1><h2 id="description">This final course in the IME sequence provides a strategic perspective for marketing management in a global environment. The course will address company organization, industry structure, firm's competitiveness, marketing activities, and market-entry strategies. Course milestones will address the issues and decisions normally associated with international market expansion. The course is a hands-on learning experience for the student/team through the introduction and interaction with a Chicago-based company currently involved in international business. Offered every Spring. PREREQUISITE(S): Acceptance into the IME program is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=358","MKT 358");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=358","MKT 358");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

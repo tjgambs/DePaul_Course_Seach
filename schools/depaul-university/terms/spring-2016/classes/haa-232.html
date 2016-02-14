@@ -416,7 +416,7 @@
 	<h1>HAA 232 LATE MEDIEVAL ART</h1><h2 id="description">This course will explore the art of the late Medieval period, which spans the eleventh to the fifteenth centuries CE in countries such as France, Germany, Italy, and England. In our study of the Romanesque and Gothic art and architecture that belong to this historical moment, we will explore issues related to production, display, and function and, thereby, come to better understand a world marked by pilgrimage and the cult of relics, chivalry, pageantry, and conflict.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=232","HAA 232");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=232","HAA 232");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

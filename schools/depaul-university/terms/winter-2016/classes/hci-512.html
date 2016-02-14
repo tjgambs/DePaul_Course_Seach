@@ -416,7 +416,7 @@
 	<h1>HCI 512 INFORMATION VISUALIZATION AND INFOGRAPHICS</h1><h2 id="description">Communicating information through visualizations. Students learn how to choose effective means to visualize data for (a) their intended audience(s) and (b) for the message they intend to communicate. Students practice creating and evaluating visualizations using a variety of tools and methods. PREREQUISITE(S): IT 403 and HCI 470</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=512","HCI 512");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=512","HCI 512");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

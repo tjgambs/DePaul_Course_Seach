@@ -416,7 +416,7 @@
 	<h1>CTH 274 IRELAND: RELIGION AND THE CONTEMPORARY  "TROUBLES"</h1><h2 id="description">An examination of the role of two Christian denominations (Protestant and Roman Catholic) in the more recent "Troubles" in the north of Ireland. Attempts to discover the contributions of religious differences in fueling and resolving the animosities between the Unionist and Republican sides; studies the social-historical dimension of the troubles and the Protestant and Catholic religious activities and official responses to them.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CTH&catalog_nbr=274","CTH 274");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CTH&catalog_nbr=274","CTH 274");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

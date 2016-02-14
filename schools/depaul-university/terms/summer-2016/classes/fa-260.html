@@ -416,7 +416,7 @@
 	<h1>FA 260 ESSENTIALS OF PROJECT MANAGEMENT</h1><h2 id="description">This course provides an overview of the fundamentals of Project Management for non-Project Managers. It introduces the four phases of the project management process: Initiating, Planning, Managing, and Closing; the role of the Project Manager; tools, techniques and deliverables associated with successful project management; and troubleshooting techniques.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FA&catalog_nbr=260","FA 260");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=FA&catalog_nbr=260","FA 260");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

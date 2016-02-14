@@ -416,7 +416,7 @@
 	<h1>INTC 361 GENDER AND COMMUNICATION</h1><h2 id="description">A review of the differences in communication patterns between women and men. Topics covered include language and language usage differences, interaction patterns, gender social movements, and perceptions of the sexes generated through language and communication. (Formerly CMNS 361)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=361","INTC 361");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=INTC&catalog_nbr=361","INTC 361");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

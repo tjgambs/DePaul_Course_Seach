@@ -416,7 +416,7 @@
 	<h1>HC 141 COACHING FOR PERSONAL DEVELOPMENT AND PROFESSIONAL EFFECTIVENESS</h1><h2 id="description">Effective coaching has long been recognized as a key element of success in the world of sports. More recently, a new breed of coaches has emerged to help people transform their personal and professional lives. In this course, we will explore the theories, concepts, and techniques of personal life and business coaching. Students will learn about the history of coaching, its uses in personal and professional development and practical applications. Working individually, in pairs, and in small groups, students will practice coaching skills and keep a detailed learning journal. This course will be highly experiential and collaborative in nature. Students will learn concepts of coaching for personal development and professional effectiveness.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=141","HC 141");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=141","HC 141");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

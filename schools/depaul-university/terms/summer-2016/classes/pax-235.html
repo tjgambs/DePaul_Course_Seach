@@ -416,7 +416,7 @@
 	<h1>PAX 235 THE ETHICS OF POVERTY</h1><h2 id="description">This course reviews the current poverty debates from the economic, policy, social, political, and cultural perspectives that influence the implementation of poverty reduction programs, in order to bring an ethical analysis to bear on the degree of moral responsibility that can be argued for when seeking appropriate solutions to global poverty. Several ethical frameworks will be consider, allowing students to learn the critical application of arguments and evidence to a seemingly intransigent phenomenon.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=PAX&catalog_nbr=235","PAX 235");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=PAX&catalog_nbr=235","PAX 235");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

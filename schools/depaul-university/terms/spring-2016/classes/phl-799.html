@@ -416,7 +416,7 @@
 	<h1>PHL 799 CANDIDACY MAINTENANCE</h1><h2 id="description">Ph.D. Candidates who are not actively working on their dissertations during a given quarter but who want to maintain active university status can register for this course by permission of the graduate director. Please note that this course does not maintain student status for purposes of student loans.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PHL&catalog_nbr=799","PHL 799");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PHL&catalog_nbr=799","PHL 799");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

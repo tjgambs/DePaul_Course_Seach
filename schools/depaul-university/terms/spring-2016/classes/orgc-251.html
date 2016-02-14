@@ -416,7 +416,7 @@
 	<h1>ORGC 251 ORGANIZATIONAL COMMUNICATION</h1><h2 id="description">This course focuses on the role of communication in organizational life. Attention will be devoted to exploring how communication simultaneously shapes and is shaped by organizations. Topics include conflict and mediation, stress and social support, the supervisor-subordinate relationships, workplace diversity, organizational consultation and new communication technologies in organizations. (Formerly CMNS 251)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=251","ORGC 251");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=251","ORGC 251");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

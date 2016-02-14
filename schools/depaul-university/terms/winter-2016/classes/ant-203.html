@@ -416,7 +416,7 @@
 	<h1>ANT 203 PROFESSIONALISM AND ETHICS IN ANTHROPOLOGY</h1><h2 id="description">This class explores the many dimensions of what it means to be a professional anthropologist in both applied and academic areas. Students will learn about specialized resources for anthropologists (web resources, library resources, funding resources, career resources), and become familiar with the professional structure of the discipline. A large portion of the course will be devoted to the debate/discussion/exploration of ethical issues that challenge anthropologists through the use of real cases that have confronted researchers in the field, and through an evaluation of the ethical codes of conduct adopted by the primary professional organizations in anthropology.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANT&catalog_nbr=203","ANT 203");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ANT&catalog_nbr=203","ANT 203");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

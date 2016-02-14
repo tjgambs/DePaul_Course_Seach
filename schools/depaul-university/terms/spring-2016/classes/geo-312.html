@@ -416,7 +416,7 @@
 	<h1>GEO 312 THE MIDDLE EAST AND NORTH AFRICA</h1><h2 id="description">A basic survey of the physical, cultural, economic, and political geography of the countries of northern Africa and Western Asia. The course traces the human geographical impacts of Arabic, Turkish, and Persian civilizations, as well as the manner in which Islam, nationalism, statehood, and global politics are shaping the region today.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=312","GEO 312");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=312","GEO 312");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

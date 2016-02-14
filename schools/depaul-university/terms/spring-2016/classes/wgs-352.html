@@ -416,7 +416,7 @@
 	<h1>WGS 352 GENDER, COMMUNITY, AND ACTIVISM: COMMUNITY-BASED LEARNING IN WGS</h1><h2 id="description">This course expands on topics covered in VFX 278. Emphasis is on developing the student's understanding of advanced compositing techniques and design. PREREQUISITE(S): VFX 278 or DC 460.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=WGS&catalog_nbr=352","WGS 352");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=WGS&catalog_nbr=352","WGS 352");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

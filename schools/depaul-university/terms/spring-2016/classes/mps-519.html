@@ -416,7 +416,7 @@
 	<h1>MPS 519 RESOURCE DEVELOPMENT</h1><h2 id="description">This course teaches students the theories and techniques of resource development. We discuss the fundraising tradition in the U.S., principal donor types, theories of donor behavior, and the organizational, legal and ethical contexts of fundraising. Students learn basic fundraising tools, including planning, grant writing, special events, major gifts, planned giving, and capital campaigns. Students work as volunteer consultants with nonprofit partners to analyze their current fundraising strategies and materials and help them develop new ones.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=519","MPS 519");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=519","MPS 519");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

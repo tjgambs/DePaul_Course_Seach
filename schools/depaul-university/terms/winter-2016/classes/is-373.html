@@ -416,7 +416,7 @@
 	<h1>IS 373 INTRODUCTION TO ENTERPRISE SYSTEMS</h1><h2 id="description">A course on technical and management aspects of enterprise systems. It incorporates hands-on experience on enterprise resource planning (ERP) systems. Topics include: characteristics and selection of ERP systems, ERP implementation, customer relationship management (CRM), supply chain management (SCM), ERP systems administration, cloud computing and ERP, and enterprise integration with EPR. PREREQUISITE(S): IS 215</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IS&catalog_nbr=373","IS 373");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IS&catalog_nbr=373","IS 373");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

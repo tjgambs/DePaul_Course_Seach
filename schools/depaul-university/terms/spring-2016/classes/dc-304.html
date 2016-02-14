@@ -416,7 +416,7 @@
 	<h1>DC 304 TOPICS IN SCREENWRITING</h1><h2 id="description">Advanced study in screenwriting focusing on a specific genre each quarter such as: Science Fiction, Film Noir, Comedy, Action-Adventure, Nonfiction, etc. May be repeated for credit. PREREQUISITES: DC 101, DC 201 or by consent of the instructor</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=304","DC 304");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=304","DC 304");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

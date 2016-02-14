@@ -416,7 +416,7 @@
 	<h1>IS 574 BUSINESS INTELLIGENCE</h1><h2 id="description">Introduction to the concepts of business intelligence (BI) as components and functionality of information systems. How business problems can be solved effectively by using operational data to create data warehouses, and then applying data mining tools and analytics to gain new insights into organizational operations. Detailed discussion of the analysis, design and implementation of systems for BI, including: data management systems, decision support systems, group support systems, knowledge engineering, expert systems, and Web 2.0 tools. Case studies of application software, web tools, success and limitation as well as technical and social issues. (PREREQUISITE(S): (SE 430 or IS 435 or PM 430 or MIS 674) and CS C451</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=574","IS 574");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=574","IS 574");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

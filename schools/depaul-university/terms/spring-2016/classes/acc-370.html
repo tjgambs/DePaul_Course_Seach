@@ -416,7 +416,7 @@
 	<h1>ACC 370 PROFESSIONAL RESPONSIBILITIES & BUSINESS LAW</h1><h2 id="description">This course covers the aspects of the legal environment of special concern to accounting practitioners, including: the ethical standards of accounting practice, legal liability of accountants, contract law, property law, tort law, commercial paper, the laws of agency, sales laws, banking, agency, partnerships, corporations, trusts and wills, suretyships, secured transactions, bankruptcy, employment law, securities regulation, antitrust, and public regulation and disclosure laws. PREREQUISITE(S): ACC 102 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ACC&catalog_nbr=370","ACC 370");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ACC&catalog_nbr=370","ACC 370");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

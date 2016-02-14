@@ -416,7 +416,7 @@
 	<h1>PSY 565 PROFESSIONAL DEVELOPMENT SEMINAR</h1><h2 id="description">An interactive seminar that provides guidance regarding master's thesis research, comprehensive examination or literature review, and/or dissertation plans. Attention to pathways for success in doctoral education, practica, internship, scientific research and careers. Selected topics vary with student needs and interests.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=565","PSY 565");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=565","PSY 565");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

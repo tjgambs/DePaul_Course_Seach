@@ -416,7 +416,7 @@
 	<h1>TDC 511 TELECOMMUNICATIONS PRACTICUM</h1><h2 id="description">Introduction to the functionality and management of voice and data communications equipment in the Telecommunications and Local Area Networks laboratories. Emphasis will be on practical understanding and experience through laboratory exercises. PREREQUISITE(S): TDC 411 and TDC 460 and TDC 463</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=511","TDC 511");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TDC&catalog_nbr=511","TDC 511");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

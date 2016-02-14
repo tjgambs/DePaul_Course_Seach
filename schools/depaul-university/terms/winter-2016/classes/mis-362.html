@@ -416,7 +416,7 @@
 	<h1>MIS 362 INFORMATION SYSTEMS PROJECT MANAGEMENT</h1><h2 id="description">The course prepares students to become project managers. It covers IS project management concepts, techniques, tools, project issues, roles and responsibilities of project leaders. Topics include, but not limited to, resource allocation, scheduling, budgeting, monitoring, controlling, use of Gantt charts, precedence analysis, PERT, and CPM. Students use Microsoft Project. PREREQUISITE(S): (An MIS major or E-Business Major and MIS 360) or (an MIS minor and MIS 350) are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MIS&catalog_nbr=362","MIS 362");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MIS&catalog_nbr=362","MIS 362");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

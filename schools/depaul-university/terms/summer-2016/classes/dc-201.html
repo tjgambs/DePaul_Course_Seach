@@ -416,7 +416,7 @@
 	<h1>DC 201 INTRODUCTION TO SCREENWRITING</h1><h2 id="description">This course is an introduction to and overview of the elements of theme, plot, character, and dialogue in dramatic writing for cinema. Emphasis is placed on telling a story in terms of action and the reality of characters. The difference between the literary and visual medium is explored through individual writing projects and group analysis. Development of synopsis and treatment for a short theatrical screen play: theme, plot, character, mise-en-scene and utilization of cinematic elements. PREREQUISITE(S): None.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=DC&catalog_nbr=201","DC 201");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=DC&catalog_nbr=201","DC 201");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

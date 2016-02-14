@@ -416,7 +416,7 @@
 	<h1>LSI 325 TOPICS IN SPECIAL EDUCATION</h1><h2 id="description">This course will cover professional and ethical standards in special education and other variable topics such as inclusion, technology, managing a resource room, bullying, transition, Common Core Standards, and tiers of instruction in Response to Intervention. In addition, the course functions as a seminar for LSI 324 Practicum Experience I and provides support as candidates participate in practicum experiences. The course continues to develop skills for documenting impact on student learning, improving practice, developing a personal philosophy of special education, and planning for professional growth. COREQUISITE: LSI 324. PREREQUISITE(S): Advanced Teacher Candidate Standing is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LSI&catalog_nbr=325","LSI 325");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LSI&catalog_nbr=325","LSI 325");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

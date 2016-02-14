@@ -416,7 +416,7 @@
 	<h1>DC 486 DOCUMENTARY PRODUCING</h1><h2 id="description">The course will cover the key areas of producing for documentaries, which encompasses pre-production, production, marketing, fundraising, and community outreach and engagement. Students will demonstrate a knowledge of the ways in which producers engage with directors, editors, grant making institutions, individual donors, festival marketplaces, exhibitors and broadcasters. This course will be project-based and students will develop a proposal for a documentary, identify target audiences, identify relevant funding organizations and foundations, write grants, and develop a fundraising and distribution plan . Prerequisite(s): none</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=486","DC 486");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=486","DC 486");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

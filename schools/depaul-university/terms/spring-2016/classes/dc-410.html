@@ -416,7 +416,7 @@
 	<h1>DC 410 DIGITAL CINEMA PRODUCTION II</h1><h2 id="description">This course expands on topics covered in DC 210 Production I. Students will refine their skills in the areas of line-producing, pre-production, cinematography, lighting, sound recording, post production work flow. PREREQUISITES: (DC 210 and DC 220 and DC 275) or DC 460 or DC 409</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=410","DC 410");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=410","DC 410");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

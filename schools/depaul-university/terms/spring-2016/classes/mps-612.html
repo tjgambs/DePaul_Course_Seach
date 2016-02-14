@@ -416,7 +416,7 @@
 	<h1>MPS 612 INTERNATIONAL POLITICAL ECONOMY</h1><h2 id="description">This course provides an overview of major theories and practice in international political economy. It includes critical analysis of international political economy such as growth theories, capital and labor flows, and transformation of regimes. Students develop analytical skills for professional interests and research purposes.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=612","MPS 612");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=612","MPS 612");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

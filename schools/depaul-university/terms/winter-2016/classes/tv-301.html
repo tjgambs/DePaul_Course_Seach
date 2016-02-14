@@ -416,7 +416,7 @@
 	<h1>TV 301 THE WRITERS ROOM: DEVELOPING THE HOUR LONG DRAMA</h1><h2 id="description">This is a creative and intense course that takes you from the germ of a story idea to a fully thought out one-hour drama. In this class, you will work with your colleagues and the instructor to enhance your skills in storytelling and in laying out a complete season of your show for cable, broadcast or digital distribution. Additionally you will develop a minimum of one outline for an episode in the season. PREREQUISITE(S): DC 272 and DC 307</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TV&catalog_nbr=301","TV 301");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=TV&catalog_nbr=301","TV 301");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>FA 110 ESSENTIALS OF TRAINING AND DEVELOPMENT</h1><h2 id="description">This is a 5-week, 1-competence course on Employee Training and Development. Students will learn the basic processes of employee training and development, including needs assessment, theories of learning and behavior change, training design to support appropriate selection or development of training, delivery of training, issues of transfer, and assessment of results.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=110","FA 110");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=110","FA 110");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

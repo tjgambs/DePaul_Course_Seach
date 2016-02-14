@@ -416,7 +416,7 @@
 	<h1>GEO 225 WEATHER AND CLIMATE</h1><h2 id="description">The dynamic atmospheric processes which control day-to-day weather and the longer term processes which determine prevailing climatic conditions are the two principal foci of this course. Special topics include weather systems, climate change, global warming, and human impacts on climate. Cross-listed with PHY 225. PREREQUISITE(S): LSP 120 or HON 180 or (MAT 130 or above) or consent of instructor is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=GEO&catalog_nbr=225","GEO 225");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=GEO&catalog_nbr=225","GEO 225");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>APM 342 ORCHESTRAL REPERTOIRE FOR STRINGS III</h1><h2 id="description">Study of standard orchestral repertoire in homogeneous instrument classes: 20th and 21st Century. A year-long sequence of courses. PREREQUISITE(S): Status as an Undergraduate String Performance Major and APM 341 are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=342","APM 342");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=342","APM 342");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HC 253 FAMILY LIFE: THE PAST, PRESENT AND FUTURE OF FAMILIES</h1><h2 id="description">In history, families have been defined as mother, father, and children. In our current experience, more families differ from that model than comply with it. Family structure is evolving. Missing fathers, Single parents, and Blended families are only a few of the changes to the family structure that have occurred with some significance beginning in the 1950s. What influences family structure? Do economics and education make a difference? Are race and ethnicity important factors? What about gender, personality and religion? Is the two parent family necessary? What role do grandparents and great grandparents play in the changing family? Perhaps the most important question we can ask about the family is what comes next. What are the many ways in which families might be redesigned in the future? How do these changes impact individuals in society? Competences: H4, H3X, A3A, FX.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=253","HC 253");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HC&catalog_nbr=253","HC 253");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

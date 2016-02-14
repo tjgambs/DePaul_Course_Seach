@@ -416,7 +416,7 @@
 	<h1>HCI 460 USABILITY EVALUATION METHODS</h1><h2 id="description">Survey of evaluation methods that can be applied to user interfaces. Methods include expert inspections, walkthroughs, usability testing and analytical approaches. Students evaluate existing systems by applying some of these methods. PREREQUISITE(S): IT 403 and (HCI 440 or HCI 441)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HCI&catalog_nbr=460","HCI 460");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HCI&catalog_nbr=460","HCI 460");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>GEO 442 GEOGRAPHICAL INFORMATION SYSTEMS (GIS) FOR SUSTAINABLE URBAN DEVELOPMENT</h1><h2 id="description">This course will examine how GIS has been used to monitor, and evaluate efforts advancing sustainability in urban areas. Students will learn geospatial techniques in support of sustainable practices, including promoting energy efficiency, managing water resources, promoting sustainable options of transportation, improving access to local healthy foods, and responding to climate change. This is accomplished through hands-on lab activities and a case study conducted in collaboration with a non-profit organization engaged in promotion of sustainable practices in Chicago. PREREQUISITE(S): GEO 440 or GEO 441 or successful completion of a GIS certificate or Instructor Permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GEO&catalog_nbr=442","GEO 442");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GEO&catalog_nbr=442","GEO 442");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

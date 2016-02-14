@@ -416,7 +416,7 @@
 	<h1>GEO 243 REMOTE SENSING</h1><h2 id="description">An introduction to the fundamentals of remote sensing, the analysis of the earth through air or space borne sensors. Special topics include image interpretation, image processing, urban change analysis, environmental monitoring, and photogrammetry. Instruction is accomplished through lectures and hands-on lab exercises using ArcGIS Desktop. A comprehensive final project using techniques learned from your work completes the course. PREREQUISITE(S): LSP 120 or HON 180 or (MAT 130 or above) or instructor permission is a prerequisite for this course,</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=243","GEO 243");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GEO&catalog_nbr=243","GEO 243");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

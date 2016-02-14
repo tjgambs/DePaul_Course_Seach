@@ -416,7 +416,7 @@
 	<h1>HCI 440 INTRODUCTION TO USER-CENTERED DESIGN</h1><h2 id="description">The user-interface development process. Introduction to methods for practicing user-centered design including user and task analysis, user interface design principles and testing using low-fidelity prototypes. Students may not receive credit for this course and HCI 441. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=440","HCI 440");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HCI&catalog_nbr=440","HCI 440");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

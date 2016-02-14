@@ -416,7 +416,7 @@
 	<h1>THE 242 STAGE DIRECTION FOR NON-MAJORS</h1><h2 id="description">This course is designed to introduce students to the director's craft. The focus is on the director's relationship to text through the analysis of playscripts and the use of that analysis to plan an interpretation of a play. Analysis will come from a variety of perspectives--personal, psychological, social, and historical. In addition to preparing and presenting their projects, students will attend performances and write papers in response. The class combines lecture, discussion, group exercises, and in-class activities.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=242","THE 242");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=242","THE 242");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

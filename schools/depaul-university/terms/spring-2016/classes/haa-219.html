@@ -416,7 +416,7 @@
 	<h1>HAA 219 JAPANESE FILM ARTS</h1><h2 id="description">This course examines the development of cinema as an artistic form in Japan, from its inception in the early twentieth century to its explosion as an international phenomenon in recent decades. The Japanese cinematic experience is considered as visual expression that parallels key Japanese arts of handscroll painting and woodblock prints. We discuss such genres as samurai films, fantasy tales, monster movies, yakuza thrillers, and science fiction anime. Among the masterpieces studied are Ozu's Tokyo Story, Kurosawa's Rashomon, Itami's Funeral, and Miyazaki's Spirited Away. Issues addressed in relation to these films include artistic expression, technological progress, national identity, social unrest, and religious concern.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=219","HAA 219");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HAA&catalog_nbr=219","HAA 219");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

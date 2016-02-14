@@ -416,7 +416,7 @@
 	<h1>IPD 463 SQL SERVER DATABASE ADMINISTRATION PROGRAM</h1><h2 id="description">An 11-week certificate program covering database administration using Microsoft SQL Server. This program requires a separate application for admission and a $40 application fee. Please visit IPD.CDM.DEPAUL.EDU for information on how to enroll.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IPD&catalog_nbr=463","IPD 463");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IPD&catalog_nbr=463","IPD 463");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

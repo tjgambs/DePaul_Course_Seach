@@ -416,7 +416,7 @@
 	<h1>DC 299 INTERNSHIPS IN MEDIA AND DESIGN (NON-JYEL)</h1><h2 id="description">This course is an internship/independent study course for students who have already fulfilled their JYEL credit. This course offers students the opportunity to reflect on an internship while gaining professional experience, industry contact and referrals while still in school. Opportunities in post-production, motion picture production, advertising, television, animation, game design, graphic design, motion graphics and interactive media can all qualify for this course. Students will work independently on class assignments. Assignments will be determined by the instructor and based on the number of credits in which the student is enrolled. Admission to the program requires consent of the internship course instructor after verification of the student's internship. PREREQUISITE(S): Internship</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=DC&catalog_nbr=299","DC 299");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=DC&catalog_nbr=299","DC 299");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

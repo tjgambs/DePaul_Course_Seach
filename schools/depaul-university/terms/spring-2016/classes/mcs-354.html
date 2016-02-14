@@ -416,7 +416,7 @@
 	<h1>MCS 354 TOPICS IN MASS MEDIA</h1><h2 id="description">This is a rotating topics class for subjects that span a broad range of media outlets, from radio, television, film, and new media to journalism, advertising, and public relations. Possible topics may include: Chinese Mass Media, Children's Media, Media and Censorship, Media Regulation, etc.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=354","MCS 354");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=354","MCS 354");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

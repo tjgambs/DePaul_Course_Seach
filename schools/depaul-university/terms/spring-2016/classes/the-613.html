@@ -416,7 +416,7 @@
 	<h1>THE 613 GRADUATE MANAGEMENT PRACTICUM</h1><h2 id="description">Work training as full-time employment at Chicago Shakespeare Theatre. Specialized training in company operations of ticket sales, gift processing, customer service, house management, producing, company management, budget development, special event planning, subscription campaign, marketing and development, facilities operations, and organizational structure. PREREQUISITE(S): Status as Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=613","THE 613");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=THE&catalog_nbr=613","THE 613");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>DC 229 TELEVISION GENRES</h1><h2 id="description">Students will analyze and discuss some of the most important and influential shows in television history. Students will learn all about the writer-centric form of scripted television, where it's been and where it's heading. Students study serials and procedurals, network and cable shows, principal leads, partnerships and ensembles, comedy and drama, prevalent themes, innovations in content and form, the impact of DVR, and the impact of the internet.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=229","DC 229");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=229","DC 229");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

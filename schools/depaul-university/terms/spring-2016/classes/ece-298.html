@@ -416,7 +416,7 @@
 	<h1>ECE 298 CHILD HEALTH SAFETY AND NUTRITION</h1><h2 id="description">This course focuses on the interrelationships among child, family and the areas of health, safety and nutrition. Special emphasis will be placed upon the issues of health, safety and nutrition that affect young children from the ages of birth through age 8. Understanding cultural issues and special needs of individual children are addressed, as are aspects of health and safety. Central to this course is the acquisition of knowledge and application of practices that promote good nutrition, dental health, and the physical, social and emotional well being of young children. The course includes information on common diseases and health problems.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECE&catalog_nbr=298","ECE 298");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ECE&catalog_nbr=298","ECE 298");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

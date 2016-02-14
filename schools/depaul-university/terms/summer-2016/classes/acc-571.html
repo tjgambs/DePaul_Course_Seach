@@ -416,7 +416,7 @@
 	<h1>ACC 571 ESTATE AND GIFT TAXATION</h1><h2 id="description">This course consists of a detailed review of the federal estate and gift tax laws. In the area of estate taxation, assets included and deductions allowed are reviewed in detail by reference to law, regulations and cases. Recognition of gifts and gift tax deductions and exclusions are also covered. NOTE: This is a M.S.T. course. PREREQUISITE(S): ACC 551 and ACC 558 are prerequisites for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=ACC&catalog_nbr=571","ACC 571");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=ACC&catalog_nbr=571","ACC 571");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

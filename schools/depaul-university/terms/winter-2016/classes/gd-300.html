@@ -416,7 +416,7 @@
 	<h1>GD 300 GRAPHIC DESIGN II</h1><h2 id="description">This course explores design problems in visual communication through word (text) and image (digital, photographic, collage, video) primarily based on the student's own research and writing. Historical word/image art models including dada, surrealism, futurism and contemporary communication and design art are studied as models for the generation of projects. This intermediate level course requires previous mastery of basic design concepts and typography as well as both hands-on and basic computer design skills. PREREQUISITE(S): GD 200 and GD 230</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=300","GD 300");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=GD&catalog_nbr=300","GD 300");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>DC 403 WRITING THE FEATURE II</h1><h2 id="description">This course focuses on completing the second and third acts of the feature length screenplay that was developed in DC 402. Class discussions and workshop sessions will help students support the main conflict of their narrative through the use of rising action, character development and adherence to three-act structure. Students must possess a completed first act for a feature length screenplay in order to enroll in the course. PREREQUISITE(S): DC 402 or DC 405</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=403","DC 403");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DC&catalog_nbr=403","DC 403");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

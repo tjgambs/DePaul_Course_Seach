@@ -416,7 +416,7 @@
 	<h1>HSP 201 HOSPITALITY SERVICE & EXPERIENCE MANAGEMENT</h1><h2 id="description">The concepts of service, service delivery and service recovery in different cultural and geographic contexts are explored, including the full range from limited service through deluxe, the intentional decisions of management about what and how much service to offer, the quality of service, delivering service for rather than to someone, and how to transform a service event into a repeatable, memorable experience.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=201","HSP 201");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HSP&catalog_nbr=201","HSP 201");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

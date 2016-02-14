@@ -416,7 +416,7 @@
 	<h1>PSC 285 MOCK TRIAL: CRIMINAL LAW</h1><h2 id="description">Mock Trial is a co-curricular activity involving intercollegiate competitive simulation of court cases. This course is taught by attorneys and gives students a chance to learn first hand about the work of trial attorneys, understand the judicial system, examine the anatomy of the litigation process, develop critical thinking skills, enhance their communication skills, and participate in simulated trial experiences. Students will learn and practice the basic elements of trial advocacy, including opening statements, direct and cross-examination of witnesses, objections, and closing arguments. PSC 285 focuses on criminal law, cases, and procedures.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSC&catalog_nbr=285","PSC 285");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSC&catalog_nbr=285","PSC 285");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

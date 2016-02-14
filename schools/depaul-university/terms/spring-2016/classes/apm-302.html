@@ -416,7 +416,7 @@
 	<h1>APM 302 ACCOMPANYING PRACTICUM FOR PIANISTS III: STRINGS</h1><h2 id="description">An exploration of different styles of string repertoire, and the practice of accompanying string players in both studio and performance formats. REQUISITE(S): Status as an Undergraduate Keyboard student who has passed the petition to major is a prerequisite and APK 150 and APM 245 is a corequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=302","APM 302");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=APM&catalog_nbr=302","APM 302");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

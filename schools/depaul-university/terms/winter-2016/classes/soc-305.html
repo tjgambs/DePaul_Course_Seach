@@ -416,7 +416,7 @@
 	<h1>SOC 305 POWER,  DEVIANCE AND SOCIAL CONTROL</h1><h2 id="description">This course employs a variety of theoretical paradigms to examine social constructions of deviance and conformity. It pays close attention to the relationship of such behaviors to conventional values, institutions, power, and mechanisms of social control.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SOC&catalog_nbr=305","SOC 305");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SOC&catalog_nbr=305","SOC 305");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

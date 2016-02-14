@@ -416,7 +416,7 @@
 	<h1>TEC 459 PRODUCTION MANAGEMENT SEMINAR</h1><h2 id="description">Explores through lectures and projects the roles of the managerial staff in the modern theater. A basic knowledge of theater terminology and some knowledge of management practice is required. PREREQUISITE(S): Status as an Undergraduate or Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TEC&catalog_nbr=459","TEC 459");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=TEC&catalog_nbr=459","TEC 459");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

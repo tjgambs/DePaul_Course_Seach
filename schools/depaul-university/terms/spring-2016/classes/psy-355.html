@@ -416,7 +416,7 @@
 	<h1>PSY 355 GROUPS AND ORGANIZATIONS</h1><h2 id="description">Issues related to how groups, small and large, function. Includes group formation, relationships, decision-making, performance, and conflict. Also, discussion of organizations as examples of large groups. PREREQUISITE(S): PSY 347 or PSY 380 or instructor consent is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=355","PSY 355");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PSY&catalog_nbr=355","PSY 355");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

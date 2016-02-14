@@ -416,7 +416,7 @@
 	<h1>LSE 258 EDUCATION AND SOCIAL JUSTICE</h1><h2 id="description">This course is designed to examine education within a philosophical framework which focuses upon the relatively great potential of education as an agent for social justice and change. Through the examination of current issues and concerns, students are expected to engage in critical analysis, reflect upon theoretical frameworks, examine public policies and values, and consider ways in which schools and educators can promote the development of social justice. The course will focus on one or several of the following topics: gender, ethnicity, language and culture, and social class and economic opportunity. Attention will be given to the issues of institutional responses to differences, equity, access and outcomes. This course satisfies the Self, Society, & Modern World requirement.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LSE&catalog_nbr=258","LSE 258");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LSE&catalog_nbr=258","LSE 258");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

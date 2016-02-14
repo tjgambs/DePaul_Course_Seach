@@ -416,7 +416,7 @@
 	<h1>THE 622 ARTS LEADERSHIP SYNTHESIS SEMINAR</h1><h2 id="description">All study revolves around this weekly seminar that includes aspects of the Chicago Shakespeare work experience and DePaul course integration in addition to readings, field trips, projects, and time for independent study. The Synthesis Seminar is fluid and reflective, allowing for both examination of coursework and on-the-job experience. Each seminar session synthesizes the students' weekly studies, experiences both at work and in the community, independent research, and natural curiosity in close connection with Theatre School faculty, program director, and the Chicago Shakespeare department heads. PREREQUISITE(S): Status as Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=622","THE 622");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=THE&catalog_nbr=622","THE 622");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

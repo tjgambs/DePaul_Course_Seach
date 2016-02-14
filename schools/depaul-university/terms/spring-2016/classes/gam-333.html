@@ -416,7 +416,7 @@
 	<h1>GAM 333 THE BUSINESS OF GAMES</h1><h2 id="description">This course gives an introduction to the business aspects of the game development industry, including development, publishing, distribution and marketing. Subjects covered include game development contracts, milestone-based development, management techniques, marketing, customer and community support, personnel, budgeting, outsourcing, pipelines, and external partnerships. PREREQUISITE(S): GAM 229</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GAM&catalog_nbr=333","GAM 333");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GAM&catalog_nbr=333","GAM 333");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

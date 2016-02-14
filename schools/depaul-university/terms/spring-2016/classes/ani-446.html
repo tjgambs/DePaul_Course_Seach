@@ -416,7 +416,7 @@
 	<h1>ANI 446 GAME ART PIPELINE</h1><h2 id="description">This course is an introduction to the game technical artist's job. Students learn how to design, engineer, and troubleshoot the game art production pipeline. They study good practices and successful strategies for streamlining at different stages of production process. Projects include analyzing problems and then spec'ing out solutions, creating a workflow for producing and exporting assets to several platforms/ engines, and creating instructional documentation. PREREQUISITE(S): (ANI 230 or ANI 405) and (ANI 231 or ANI 405)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=446","ANI 446");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=446","ANI 446");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

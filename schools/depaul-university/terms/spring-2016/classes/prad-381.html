@@ -416,7 +416,7 @@
 	<h1>PRAD 381 ADVERTISING AND CHILDREN</h1><h2 id="description">This course examines the social and behavioral effects of advertising directed to children, and addresses such topics as what children know and think about advertising, how children respond emotionally to advertising, how advertising can affect behavioral patterns, the changing regulatory environment and related social and psychological issues including materialism and self-esteem. Students will have the opportunity to assess the existing environment and to design creative interventions.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=381","PRAD 381");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=381","PRAD 381");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

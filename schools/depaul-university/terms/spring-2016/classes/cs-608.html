@@ -416,7 +416,7 @@
 	<h1>CS 608 CAPSTONE IN CURRICULUM STUDIES</h1><h2 id="description">Students who have completed the majority of the Curriculum Studies coursework will engage in a thorough analysis of a school or other educational institution (e.g., museum, community organization) and develop an action plan for: professional development; mentoring and inducting new teachers; teacher evaluation and training; instructional coaching; curriculum development, assessment, or alignment; using assessments or other data to improve student learning; or building collaboration with teachers and stakeholders. Students will gather and analyze demographic, financial and testing data, develop a narrative to tell the story of a school's (or educational institution's) history and recent past, capture the school by way of photographs and interviews, and collect documents or other pertinent artifacts to support their action plan.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=608","CS 608");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=608","CS 608");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

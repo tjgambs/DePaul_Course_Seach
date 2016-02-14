@@ -416,7 +416,7 @@
 	<h1>BBE 355 HOW ENGLISH WORKS: ENGLISH SYNTAX FOR ESL AND BILINGUAL EDUCATION TEACHERS</h1><h2 id="description">This course examines the structure of English from a descriptive linguistic framework. It addresses the inner workings of the English language through objective investigation of the lexical, phrasal, and clausal structures of the language to provide ESL and bilingual education teachers the syntactic foundation of the language they will teach. Topics include parts of speech, constituency, phrase structure, clause types, complements versus adjuncts, question formation, tense, negation, and the grammar of dialects. Additionally, this course will provide special emphasis on how these areas of English grammar interface with Common Core and WIDA standards for ELLs.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=BBE&catalog_nbr=355","BBE 355");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=BBE&catalog_nbr=355","BBE 355");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

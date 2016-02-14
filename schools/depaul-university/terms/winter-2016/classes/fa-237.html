@@ -416,7 +416,7 @@
 	<h1>FA 237 CONFLICT MANAGEMENT, NEGOTIATION, AND CLIENT RELATIONS</h1><h2 id="description">This course will introduce students to a variety of strategies for conflict management and negotiation. Students will engage in a number of hands-on activities to develop skills that will benefit them in and beyond the workplace.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FA&catalog_nbr=237","FA 237");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FA&catalog_nbr=237","FA 237");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

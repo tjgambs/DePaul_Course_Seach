@@ -416,7 +416,7 @@
 	<h1>SUD 501 PROFESSIONAL INTERNSHIP</h1><h2 id="description">A 100-hr internship with one of the following: a local government, non-profit organization, or private corporation. Students are encouraged to work onsite, integrating their learning into a Chicago-area organization. Students unable to identify an internship will be assisted by the Steans Center for Community-based Service Learning, the Chaddick Institute, and other DePaul resources.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SUD&catalog_nbr=501","SUD 501");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=SUD&catalog_nbr=501","SUD 501");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

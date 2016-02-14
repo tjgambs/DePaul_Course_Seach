@@ -416,7 +416,7 @@
 	<h1>ORGC 317 TOPICS IN GROUP COMMUNICATION</h1><h2 id="description">Examines selected topics in group communication processes. Topics may include group creativity, communicating in virtual teams, conflict in groups, and group facilitation. (Formerly CMNS 317)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=317","ORGC 317");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ORGC&catalog_nbr=317","ORGC 317");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

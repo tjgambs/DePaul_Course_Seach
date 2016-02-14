@@ -416,7 +416,7 @@
 	<h1>MCS 342 HISTORY OF TELEVISION & RADIO</h1><h2 id="description">A history of radio, television, and cable that engages with elements such as programming, economics, industrial structures, audiences, government and industry policies, and social effects. The course includes viewing, analysis, and criticism of a wide variety of American programming.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=342","MCS 342");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=342","MCS 342");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>MCS 353 TOPICS IN MEDIA STUDIES</h1><h2 id="description">This is a rotating topics class for subjects that encompass a number of different media, including radio, television, film. Possible topics may include: Media and Politics, Contemporary News Media, Reception Studies, Popular Culture Studies, etc.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=353","MCS 353");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=353","MCS 353");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

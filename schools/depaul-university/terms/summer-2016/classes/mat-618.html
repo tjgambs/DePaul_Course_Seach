@@ -416,7 +416,7 @@
 	<h1>MAT 618 TOPICS IN CALCULUS AND DIFFERENTIAL EQUATIONS</h1><h2 id="description">Taylor's theorem, parametric equations, slope fields, Euler's method. The second half of the course will look at the history of calculus and the development of ideas such as limits, least upper bounds, convergence of series, countability, and cardinality. PREREQUISITE(S): MAT 612 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MAT&catalog_nbr=618","MAT 618");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MAT&catalog_nbr=618","MAT 618");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

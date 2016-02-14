@@ -416,7 +416,7 @@
 	<h1>FA 209 CONSUMER BEHAVIOR INSIGHTS</h1><h2 id="description">In the Consumer Behavior Insights course, students explore the processes that consumers use to make decisions. Understanding of consumer segments is developed and applied to create communication strategies using a decision-making framework. Through coursework, students demonstrate an understanding of various topics including how market intelligence is collected, market segmentation, the impact of various cultural influences on behavior, elements of persuasive communication and development of consumer-oriented strategies. Cultural norms influence receptivity to marketing communication messages. In-depth consumer knowledge of a sub-cultural segment is learned and applied as students conduct market research. Based on analysis, students develop communication objectives, positioning statements and strategies for consumer communication. The role of mass media is examined in two distinct areas. Mass media influence cultural values by reinforcing norms for consumer needs and wants. Mass media are also important means for communication of targeted advertising messages.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=209","FA 209");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=209","FA 209");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

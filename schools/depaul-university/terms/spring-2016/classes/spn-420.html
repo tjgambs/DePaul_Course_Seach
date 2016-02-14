@@ -416,7 +416,7 @@
 	<h1>SPN 420 COMMERCIAL SPANISH II</h1><h2 id="description">Advanced Commercial Spanish is designed to provide the business-oriented student with sufficient Spanish language skills to be able to function credibly in a business environment where a knowledge of Spanish is necessary. Students will be exposed to a wide variety of commercial terminology and will have ample oral and written practice related to the business world.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SPN&catalog_nbr=420","SPN 420");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SPN&catalog_nbr=420","SPN 420");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>MKT 383 ADVANCED VALUATIONS FOR BUSINESS</h1><h2 id="description">This is a strategic sales course which emphasizes the psychology of selling in complex selling situations, identifying the decision maker among multiple contacts, quantifying the value proposition to the customer, and presenting a compelling sales proposal. PREREQUISITE(S): (MKT 202 or ACC 202 or FIN 202 or MGT 202), MKT 310 and (MKT 376 or MKT 377) are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=383","MKT 383");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=383","MKT 383");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

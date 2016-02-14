@@ -416,7 +416,7 @@
 	<h1>FA 221 ENTREPRENEURSHIP: FROM START-UP TO SUCCESS</h1><h2 id="description">In this course, students learn the essential attributes of an entrepreneur and the stages one goes through in taking the seed of an idea and growing it into a successful business. But it also takes more than a good business plan and money to succeed - entrepreneurs must understand that all too often, the strengths that helped them be successful as a start-up become liabilities to overcome in order to take their business to the next level. This course provides practical insights into the differences between effective leadership and management by exploring the concepts of Emotional Intelligence in the workplace and how to identify and develop human capital - the lifeblood of every business. Competences: L7, H2C, H3D, FX.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=221","FA 221");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=221","FA 221");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>HLTH 229 ETHICS FOR HEALTH SCIENCES</h1><h2 id="description">This course provides an introduction to the ethical and moral theories that frame our response to fundamental issues in the health sciences. Moral philosophers, such as Aristotle, Thomas Aquinas and Immanuel Kant, all pose questions about the nature of right and wrong, and what is meant by a good life. The first part of the course examines the work of these philosophers and then uses them in order to think through specific topics, including: confidentiality, informed consent and end of life decision-making; health care disparities and health care reform; and global health ethics.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HLTH&catalog_nbr=229","HLTH 229");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HLTH&catalog_nbr=229","HLTH 229");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

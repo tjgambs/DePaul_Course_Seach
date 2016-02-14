@@ -416,7 +416,7 @@
 	<h1>PRF 411 ACTING IV</h1><h2 id="description">First course in a 3 course sequence. Utilizing an ensemble approach, this class helps prepare the student for the rigors of the professional world by integrating the skills learned in previous years training through the use of exercises, improvisations, reading and discussions, and a variety of performance projects including scenes and monologues. PREREQUISITE(S): PRF 313 and status as an Undergraduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=411","PRF 411");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=411","PRF 411");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

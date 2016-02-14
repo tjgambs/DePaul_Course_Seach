@@ -416,7 +416,7 @@
 	<h1>INT 203 INTERNATIONAL MOVEMENTS IN THE 20TH AND 21ST CENTURIES</h1><h2 id="description">This course evaluates the major social movements that have shaped international developments in the 20th and 21st centuries. Includes discussions of the varieties of socialism, race, colonization and decolonization of the Third World. PREREQUISITE(S): INT 201, INT 202 and status as an International Studies major or minor is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=203","INT 203");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INT&catalog_nbr=203","INT 203");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

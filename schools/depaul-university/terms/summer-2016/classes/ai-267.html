@@ -416,7 +416,7 @@
 	<h1>AI 267 THE EXAMINED LIFE: A QUESTION OF  PHILOSOPHY</h1><h2 id="description">"The unexamined Life is not worth living," exclaimed the Greek philosopher Socrates, setting the tone for philosophical quests that have shaped out thought and civilizations. "Neither is the examined one," retorted German philosopher Schopenhaurer 2,300 years later after surveying the prospects of the modern world. This course will outline the philosophical tradition of rational thought that stretches in between these thinkers. Students will focus on how the great thinkers and traditions East and West considered ethical, metaphysical, epistemological , political, and aesthetic problems. And they will engage in a philosophical examination of their own life and beliefs.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=267","AI 267");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=AI&catalog_nbr=267","AI 267");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

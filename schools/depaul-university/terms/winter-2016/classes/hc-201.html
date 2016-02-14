@@ -416,7 +416,7 @@
 	<h1>HC 201 NEGOTIATING CONTRACTS: STRATEGIC, LEGAL, ETHICAL, AND MODERN TECHNOLOGY CONSIDERATIONS</h1><h2 id="description">In this course, we will examine the processes of managing perceptions and communicating. We will delve into the realm of analyzing our world as we perceive it and the art of entering into the realm of another's perception. We will utilize "four agreements" as a method of managing our perceptions and the perceptions of others, and as an approach for communication. In learning to communicate with others we will utilize a technique called "matching." We will examine the development of contract law. We will cover the basics of contract formation: offer, acceptance and consideration. We will identify which contracts are required to be in writing. We will examine the remedies available when a contract is breached. We will review various examples of contracts to evaluate the practical application of what we learned.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HC&catalog_nbr=201","HC 201");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HC&catalog_nbr=201","HC 201");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

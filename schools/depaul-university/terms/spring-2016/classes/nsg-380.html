@@ -416,7 +416,7 @@
 	<h1>NSG 380 UNDERGRADUATE NURSING SYNTHESIS</h1><h2 id="description">This course provides a capstone experience of professional nursing practice in contemporary society through integration of liberal arts knowledge, skills, and attitudes developed in earlier courses with evidence-based practice. Students will collaborate with the instructor and each other to contribute to course topics, readings, and discussion. Course work will include research, writing assignments, and other assessments of the student?s understanding of and preparation to practice ethical, compassionate, and culturally competent person- and family-centered care which is informed by evidence from current nursing research. Students will complete a group project demonstrating integration of liberal arts and sciences education with professional nursing practice in contemporary society. Activism and nursing?s role in health care reform, and the need for ongoing personal reflection and professional development will also be explored.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=380","NSG 380");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=380","NSG 380");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

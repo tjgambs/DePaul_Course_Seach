@@ -416,7 +416,7 @@
 	<h1>PRF 692 DIRECTING SEMINAR</h1><h2 id="description">This course provides the opportunity for all three years of MFA directors and directing faculty to share, discuss and investigate particular and immediate aspects of directing. The course provides a forum for directors to discuss current rehearsal processes and trouble-shoot with their colleagues and instructor. Additionally, directing students reflect on, discuss and receive feedback from their colleagues and instructor on production work. The second half of the course focuses on honing a specific directorial skill or exploring new directorial territory. This component changes quarterly at the discretion of the instructor. PREREQUISITE(S): Status as Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=692","PRF 692");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PRF&catalog_nbr=692","PRF 692");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

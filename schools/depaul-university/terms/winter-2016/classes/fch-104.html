@@ -416,7 +416,7 @@
 	<h1>FCH 104 INTERMEDIATE FRENCH I</h1><h2 id="description">First quarter of intermediate French. Intensive practice in the use of French through listening, speaking, reading, and writing, and continued enhancement of the cultural awareness intrinsic to those skills. This course emphasizes language as communication. It stresses the further development of listening, reading, speaking, and writing skills. It is designed to reinforce the students' knowledge of French grammar and vocabulary in realistic contexts. The course also incorporates information on many aspects of contemporary French/Francophone society since cultural awareness is essential for true communicative competence. All the material presented has a functional purpose so that it can be easily used in real-life language situations. Class activities are structured to give students the practice they will need in order to perform authentic communicative functions in real life. FCH 103 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FCH&catalog_nbr=104","FCH 104");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=FCH&catalog_nbr=104","FCH 104");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

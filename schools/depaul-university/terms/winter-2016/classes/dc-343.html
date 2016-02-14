@@ -416,7 +416,7 @@
 	<h1>DC 343 WRITING THE SHORT FILM FOR PRODUCTION</h1><h2 id="description">Students will study the essential elements and conventions for writing the short film including but not limited to character, structure, and tension. Students will write a polished short film (no longer than 25 pages) designed to be produced. Students will learn how to put together a professional proposal to apply for internal or external production funds and financing. PREREQUISITE(S): DC 101 or DC 201</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=343","DC 343");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=343","DC 343");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

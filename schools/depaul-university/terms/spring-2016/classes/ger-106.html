@@ -416,7 +416,7 @@
 	<h1>GER 106 INTERMEDIATE GERMAN III</h1><h2 id="description">This video-based course is designed to develop and expand skills in German and explore ideas, cultural topics and themes from the German-speaking world. Course activities will include: learning from authentic video clips and films; visiting (in textbook and video) various cities and regions in the German-speaking world, exploring the variety and the similarities; practicing skills in German by discussing cultural issues and authentic readings; interpreting graphics and charts on topics of German culture; structured listening and writing practice; reading literary and nonliterary texts of increasing difficulty; summarizing verbally and in writing what is read, heard, and learned; writing compositions and short texts of various types; researching a topic; preparing and presenting results to the class (oral and written). GER 105 or equivalent, including placement test or permission of instructor, is recommended.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GER&catalog_nbr=106","GER 106");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GER&catalog_nbr=106","GER 106");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

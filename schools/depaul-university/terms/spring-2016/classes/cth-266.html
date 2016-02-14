@@ -416,7 +416,7 @@
 	<h1>CTH 266 CONTEMPORARY SPIRITUAL MEMOIRS</h1><h2 id="description">An investigation of the relationship between Catholic life and music. The development of Catholic service music (masses, canticles, hymns, motets, etc.) as well as religious choral works may be studied.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CTH&catalog_nbr=266","CTH 266");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CTH&catalog_nbr=266","CTH 266");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

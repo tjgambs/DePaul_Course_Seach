@@ -416,7 +416,7 @@
 	<h1>CSC 480 ARTIFICIAL INTELLIGENCE I</h1><h2 id="description">An in-depth survey of important concepts, problems, and techniques in artificial intelligence, including search, knowledge representation, logical reasoning, and reasoning with uncertainty. A particular focus and a unifying theme of the course will be the concept of intelligent agents. No prior knowledge of AI is required. The course is particularly suitable for graduate and advanced undergraduate students who want to gain the technical background necessary to build intelligent systems, or who want to prepare for more advanced work in AI. The concepts and techniques learned in this course will be directly applicable to many other areas of computer science including software design, distributed systems, databases, and information management and retrieval. PREREQUISITE(S): CSC 403</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=480","CSC 480");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=480","CSC 480");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

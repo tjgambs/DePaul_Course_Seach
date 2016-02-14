@@ -416,7 +416,7 @@
 	<h1>PRAD 540 CRISIS COMMUNICATION MANAGEMENT</h1><h2 id="description">This course examines institutional crisis communication from a management perspective. Emphasis is on crisis response strategies and organizational approaches for preventing and managing crisis events. Students develop case studies of contemporary crises and participate in simulations designed to develop professional expertise and practical skills in crisis communication management. PREREQUISITE(S): Status as a Graduate Public Relations and Advertising or Health Communication student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=540","PRAD 540");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRAD&catalog_nbr=540","PRAD 540");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

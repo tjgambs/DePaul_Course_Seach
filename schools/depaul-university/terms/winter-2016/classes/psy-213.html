@@ -416,7 +416,7 @@
 	<h1>PSY 213 LESBIAN, GAY, BISEXUAL AND TRANSGENDER PSYCHOLOGY</h1><h2 id="description">Overview of psychological and social issues relevant to lesbian, gay, bisexual, and transgendered (LGBT) individuals and communities. The course will examine key concepts, LGBT psychological research, and efforts to promote liberation and well being.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=213","PSY 213");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=213","PSY 213");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

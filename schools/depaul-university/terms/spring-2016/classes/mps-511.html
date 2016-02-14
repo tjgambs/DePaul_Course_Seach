@@ -416,7 +416,7 @@
 	<h1>MPS 511 SUSTAINABLE INTERNATIONAL DEVELOPMENT</h1><h2 id="description">This course provides an overview of theories and approaches to sustainable social and economic development and examines the roles of Non-Governmental Organizations (NGOs) as well as methods of evaluating their effect. The course covers the role of NGOs in building and strengthening sustainable communities and societies in developing countries.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=511","MPS 511");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MPS&catalog_nbr=511","MPS 511");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

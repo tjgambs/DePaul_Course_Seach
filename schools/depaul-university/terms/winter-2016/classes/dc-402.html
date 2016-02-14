@@ -416,7 +416,7 @@
 	<h1>DC 402 WRITING THE FEATURE I</h1><h2 id="description">This course focuses on creating a well-vetted original concept, step outline, and first act for a feature length screenplay. Students will analyze the conventions of plot and character-driven narratives and participation in workshop sessions in an effort to develop their unique voice on the page. This script should be completed, revised and polished in DC 403 and DC 404. PREREQUISITE(S): DC 501</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=402","DC 402");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DC&catalog_nbr=402","DC 402");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

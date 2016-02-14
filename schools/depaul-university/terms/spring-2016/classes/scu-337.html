@@ -416,7 +416,7 @@
 	<h1>SCU 337 HUMAN GROWTH AND DEVELOPMENT</h1><h2 id="description">This course is an introduction to the study of the process of human development from conception to old age. Through a range of theories, the periods of childhood, adolescence, and adulthood are examined with particular attention to the role of culture, gender, and class as they inform the contextualized process of growth and change across the life span.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SCU&catalog_nbr=337","SCU 337");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SCU&catalog_nbr=337","SCU 337");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

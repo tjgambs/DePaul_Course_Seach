@@ -416,7 +416,7 @@
 	<h1>CTH 221 CATHOLIC EXPERIENCE II: 1200 - FRENCH REVOLUTION</h1><h2 id="description">This course provides an overview of the history of Catholicism and its interactions with institutional, political, and social history from 1200 to the French Revolution. The main topics of the class are the origin of the Universities and Scholasticism; Mendicant Orders and their impact on the Medieval Society; the Challenges to Papal Monarchy; Humanism and Erasmus; the impact of the Age of the Reformation; the Council of Trent; the geographic discoveries and the New Worlds; the Enlightenment and the Scientific Revolution; the Catholic Church and the French Revolution.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CTH&catalog_nbr=221","CTH 221");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CTH&catalog_nbr=221","CTH 221");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

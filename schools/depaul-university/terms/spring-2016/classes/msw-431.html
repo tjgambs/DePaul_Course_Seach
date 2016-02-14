@@ -416,7 +416,7 @@
 	<h1>MSW 431 SOCIAL WELFARE POLICY I</h1><h2 id="description">This foundation-level course is designed to provide students with the entry-level knowledge of social work ethics and values, policy formation and analysis, and practice skills necessary to impact and interpret the rules and regulations surrounding social welfare. Emphasis is placed on understanding political processes at the agency, local, regional and federal level and attention is given to economic considerations as well as the unique role of social welfare policy in regulating the lives of clients, particularly those from historically oppressed groups. This course is the first of two required social welfare policy courses for MSW degree candidates.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MSW&catalog_nbr=431","MSW 431");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MSW&catalog_nbr=431","MSW 431");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

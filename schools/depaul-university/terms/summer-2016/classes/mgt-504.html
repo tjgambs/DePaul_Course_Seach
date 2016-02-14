@@ -416,7 +416,7 @@
 	<h1>MGT 504 FUNDAMENTAL OPERATIONS MANAGEMENT</h1><h2 id="description">Fundamental Operations Management provides an introduction to the basic and pragmatic issues faced by operations managers. Major practices in operations management, such as operations strategy selection, process improvement, inventory management, project management, and quality issues are covered to help students understand the role of operations management in an organization and between organizations (supply chain). More specifically, the course educates students in strategic thinking (operations strategy selection, supply chain management), doing (inventory management, project management, quality management), and feeling (ethical issues in cross-border supply chains, lean production, continuous improvement). PREREQUISITE(S): GSB 420 or status as a MS-BIT student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MGT&catalog_nbr=504","MGT 504");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MGT&catalog_nbr=504","MGT 504");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

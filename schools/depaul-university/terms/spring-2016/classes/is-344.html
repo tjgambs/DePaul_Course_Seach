@@ -416,7 +416,7 @@
 	<h1>IS 344 IT AUDITING</h1><h2 id="description">Management and boards continue to recognize the importance of effectively managing information technology (IT) assets - to meet business objectives and to thoughtfully manage IT related business risks. This course examines the key principles related to auditing information technology processes and related controls and is designed to meet the ever increasing needs of IT audit and IT governance professionals. In addition, this course aids in the preparation for the Certified Information Systems Auditor (CISA) exam. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=344","IS 344");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=344","IS 344");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>NSG 490 PRACTICUM IN POPULATION-BASED NURSING PRACTICE III</h1><h2 id="description">This is the third clinical practicum in a sequence of supervised clinical experiences for nurse practitioner students in which students demonstrate increasing comprehensive practice of primary care in the context of specialty practice for selected populations. This course provides the opportunity to integrate the multiple professional roles of the advanced practice nurse while refining their skills in the comprehensive practice of primary care and/or specialty practice for selected populations. Emphasis is on health promotion and disease prevention with unitary human beings in mutual process with their environment in the management of health and illness, teaching and health counseling and organizational and role competencies. Students select sites and preceptors in family, adult, pediatric or women's health promotion according to their area of concentration and self-assessed strengths and weaknesses. PREREQUISITE(S): NSG 487 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=490","NSG 490");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=490","NSG 490");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

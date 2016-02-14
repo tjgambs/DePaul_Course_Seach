@@ -416,7 +416,7 @@
 	<h1>NSG 610 ANESTHESIA PRACTICUM I</h1><h2 id="description">An introduction to the clinical practice of nurse anesthesia with an emphasis on the principles introduced in ANES 500-504, 507, and 508. Includes administration of anesthesia for select patient populations under direct instruction and supervision of a certified registered nurse anesthetist (CRNA) or anesthesiologist. The course content focuses on specific general surgical procedures, including intra-abdominal, gynecological, urologic, ear, nose and throat, orthopedic, and endoscopic procedure. Content knowledge will be assessed through objective examinations. The preparation, implementation and evaluation of an appropriate nurse anesthesia care plan for these populations will be assessed through clinical performance evaluations and written care plans Course includes Human Patient Simulation (HPS) assignments. PREREQUISITE(S): NSG 504 and NSG 507 are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=610","NSG 610");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=610","NSG 610");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

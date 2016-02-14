@@ -416,7 +416,7 @@
 	<h1>HST 379 RECONSTRUCTION AND THE RISE OF JIM CROW</h1><h2 id="description">Covers the problems of reunion between the North and the South after the Civil War, including the struggle for African-Americans' civil and political rights, the transition to a free labor economy in the South, and the eventual end of reconstruction and establishment of racial segregation in the South and the nation. PREREQUISITE(S): HST 199 or HST 298 or instructor consent is a prerequisite for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=379","HST 379");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HST&catalog_nbr=379","HST 379");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

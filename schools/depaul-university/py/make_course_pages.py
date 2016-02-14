@@ -444,7 +444,7 @@ def create_page(full_name,description,course_url,termname):
 	html += '''<script>
 
 	$(document).ready(function() 
-	{'''
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);'''
 	html += 'updateTable("' + "https://crossorigin.me/{0}".format(course_url) + '","' + short_url + '");'
 	html += '''
 		$('#ads').load('http://mocksched.com/ads.html');
@@ -460,7 +460,6 @@ def create_page(full_name,description,course_url,termname):
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>'''

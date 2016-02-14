@@ -416,7 +416,7 @@
 	<h1>HON 180 DATA ANALYSIS AND STATISTICS</h1><h2 id="description">Using real-world data and open-ended investigations from a variety of disciplines, students apply quantitative and statistical reasoning skills to focus on outcomes of analysis. Students will explore the nature and description of data, probability theory, sampling, variability, estimation, analysis of correlation, hypothesis testing, and experiment design to become critical users of quantitative information. Open only to students in the University Honors Program. PREREQUISITE(S): LSP 120, MAT 130 or placement by test is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HON&catalog_nbr=180","HON 180");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HON&catalog_nbr=180","HON 180");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>SW 244 STATISTICAL REASONING: UNDERSTANDING AND USING STATISTICS</h1><h2 id="description">This course will teach students the basic concepts of statistics. Students will investigate topics including descriptive statistics, correlation, normal distributions, probability, sampling distributions and hypothesis testing. By the end of this course, students will able to complete a statistical analysis of datasets using Microsoft Excel as the primary tool. Considerable time will also be devoted to discussing how statistics are used and abused.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SW&catalog_nbr=244","SW 244");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SW&catalog_nbr=244","SW 244");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

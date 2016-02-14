@@ -416,7 +416,7 @@
 	<h1>MED 301 SECONDARY INSTRUMENTAL METHODS AND LAB</h1><h2 id="description">The purpose of this course is to prepare students for secondary levels of instrumental music instruction. Primary goals include administrative responsibilities, teaching techniques, use of appropriate classroom materials (including repertoire selection), and appropriate means of student evaluation. PREREQUISITE(S): MED 300 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MED&catalog_nbr=301","MED 301");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MED&catalog_nbr=301","MED 301");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

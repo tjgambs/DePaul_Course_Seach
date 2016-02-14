@@ -416,7 +416,7 @@
 	<h1>HLTH 379 PEER ADVISING IN HEALTH SCIENCES</h1><h2 id="description">Peer Advising in Health Sciences is a course designed to connect our successful senior students with the broader population of Health Sciences majors, while providing Peer Advisors with an introduction to advising skills including active listening, providing open-minded guidance and support, interpreting university policies and guidelines, managing confidential information, and effective time management.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HLTH&catalog_nbr=379","HLTH 379");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=HLTH&catalog_nbr=379","HLTH 379");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

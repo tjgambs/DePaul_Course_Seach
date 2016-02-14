@@ -416,7 +416,7 @@
 	<h1>CSC 398 INTERNSHIP</h1><h2 id="description">In cooperation with local employers the computer science program offers students the opportunity to integrate their academic experience with on-the-job training in computer related work areas. Academic credit is variable and admission to the program requires consent of internship advisor. Supervisor evaluation will contribute to the final grade.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSC&catalog_nbr=398","CSC 398");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSC&catalog_nbr=398","CSC 398");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

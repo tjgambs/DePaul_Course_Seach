@@ -416,7 +416,7 @@
 	<h1>MSW 483 FOUNDATION PRACTICE III</h1><h2 id="description">This course is the third in a series of three required foundational courses (MSW 481, MSW 482 and MSW 483) designed to equip students with the basic theoretical knowledge, analytical skills, practice skills, and values needed to practice generalist social work within communities and organizations. Specifically, this course introduces skills associated with task groups which serve to meet client needs in communities and organizations. The course is grounded in the empowerment model with an emphasis on social justice and the Vincentian values of respect, advocacy, service, and inventiveness. This course is to be taken concurrently with MSW 493 (Foundation Field Education III) and is required of all students enrolled in the first year field sequence. PREREQUISITE(S): MSW 482 and department permission are prerequisites for this course.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MSW&catalog_nbr=483","MSW 483");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MSW&catalog_nbr=483","MSW 483");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

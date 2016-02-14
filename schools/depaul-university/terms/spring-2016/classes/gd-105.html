@@ -416,7 +416,7 @@
 	<h1>GD 105 INTRO TO VISUAL DESIGN</h1><h2 id="description">This course introduces the basic concepts of design for time-based digital media. Students study the principles of composition and color theory, and how these are affected by movement, duration and display. Vector and bitmap manipulation tools are explored in relation to game design, video and Internet production.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=105","GD 105");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=GD&catalog_nbr=105","GD 105");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>NSG 431 HEALTH PROMOTION FOR FAMILIES AND COMMUNITIES</h1><h2 id="description">Examines issues, frameworks, theories and techniques relevant to health promotion for individuals, families and communities. Health disparities and social & cultural factors impacting health and wellness are examined and methods for assessing and facilitating cultural competence of providers and institutions are studied. The nurse's role as advocate for health promotion in public policy is discusssed.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=431","NSG 431");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=NSG&catalog_nbr=431","NSG 431");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

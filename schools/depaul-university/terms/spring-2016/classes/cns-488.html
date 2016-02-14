@@ -416,7 +416,7 @@
 	<h1>CNS 488 SECURITY TESTING AND ASSESSMENT</h1><h2 id="description">Methodologies and tools for performing vulnerability testing; management of security testing initiatives and activities; review of the different types of assessments, legal issues, ethical concerns. Defensive mechanisms to mitigate the risks illustrated by the assessment using Defense-In-Depth architectures. Concepts illustrated using hands-on lab exercises. PREREQUISITE(S): TDC 477</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CNS&catalog_nbr=488","CNS 488");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CNS&catalog_nbr=488","CNS 488");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>FA 137 PRESIDENTS AND THEIR ECONOMIC POLICIES</h1><h2 id="description">The United States monetary and fiscal policies have been dramatically affected by some of our Presidents. In this course, students will learn about 10 selected presidents and their economic policies. The course will give a background and summary of the President and his major activities. Significant domestic and foreign issues that the President was involved in will be discussed. However, the main part of the course will be the economic policy and laws that the President led and executed. Some of the Presidents include, Woodrow Wilson who introduced Income Tax and the Federal Reserve system. George Washington who was involved in chartering the 1st National Bank of the United States, President Obama and the Affordable Health Act, Ronald Reagan and his Reagonomics, with supply side focus.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=137","FA 137");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=FA&catalog_nbr=137","FA 137");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

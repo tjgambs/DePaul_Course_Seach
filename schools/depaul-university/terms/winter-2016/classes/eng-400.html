@@ -416,7 +416,7 @@
 	<h1>ENG 400 STRUCTURE OF MODERN ENGLISH</h1><h2 id="description">A systematic outline of modern English from both traditional and contemporary linguistic perspectives. Examines descriptive grammars, word and phrase structure, syntax and semantics, and formal issues of style and rhetoric. Formerly ENG 416.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENG&catalog_nbr=400","ENG 400");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=ENG&catalog_nbr=400","ENG 400");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

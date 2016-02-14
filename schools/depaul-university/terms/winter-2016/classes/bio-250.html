@@ -416,7 +416,7 @@
 	<h1>BIO 250 CELL BIOLOGY</h1><h2 id="description">Fundamentals of cell form and function studied at the molecular and organelle level, including basic cellular biochemistry, ultrastructure and physiology. Lecture-laboratory. PREREQUISITE(S): BIO 193 and (CHE 134 or CHE 138) are a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=250","BIO 250");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=BIO&catalog_nbr=250","BIO 250");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

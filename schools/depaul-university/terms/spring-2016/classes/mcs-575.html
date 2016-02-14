@@ -416,7 +416,7 @@
 	<h1>MCS 575 DIGITAL MEDIA ETHICS</h1><h2 id="description">This course provides students with the necessary background to investigate legal and ethical issues in digital technology and culture. Additionally, students practice digital literacy as an application of these ethical issues. This class offers topics including, but not limited to copyright, authorship, attribution, civics, vernacular creativity, Free Speech, filesharing, piracy, libel, access, participation, modes of control, net neutrality, etc., in order for students will come away with a sense of the ethical issues within today's culture. PREREQUISITE(S): Status as a MA-DCMA, MA-MCS, or MA-DGCMED student or department consent is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=575","MCS 575");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MCS&catalog_nbr=575","MCS 575");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

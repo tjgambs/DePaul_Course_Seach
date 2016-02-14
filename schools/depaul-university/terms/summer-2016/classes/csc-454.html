@@ -416,7 +416,7 @@
 	<h1>CSC 454 DATABASE ADMINISTRATION AND MANAGEMENT</h1><h2 id="description">This course is designed to give students a comprehensive foundation in database administration and management. The course provides a conceptual understanding of the database architecture and how its components work and interact with one another. Topics covered in this course include: database architecture, capacity planning, installation and maintenance, network configuration, security management, utilities and tools, industry standards and guidelines, database management techniques and practices. PREREQUISITE(S): CSC 451 or CSC 453 or CSC 455</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSC&catalog_nbr=454","CSC 454");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=CSC&catalog_nbr=454","CSC 454");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

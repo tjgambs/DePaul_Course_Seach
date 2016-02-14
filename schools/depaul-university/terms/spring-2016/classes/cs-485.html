@@ -416,7 +416,7 @@
 	<h1>CS 485 CURRICULUM/PROGRAM EVALUATION</h1><h2 id="description">Evaluation is essential for curriculum/program development and implementation. Hence, understanding evaluation methods, technologies, and quality criteria is particularly relevant to educational leaders, curriculum/program designers, and technology specialists. In this course, students will critically examine a variety of current evaluation models, instruments, and resources. Students will also conduct a comprehensive analysis of a significant evaluation study relevant to their specific professional interest. Registration is restricted to students in Advanced Master's programs. PREREQUISITE(S): Status as an Advanced Masters Education student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=485","CS 485");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=485","CS 485");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

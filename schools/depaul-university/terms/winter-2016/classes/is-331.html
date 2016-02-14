@@ -416,7 +416,7 @@
 	<h1>IS 331 FUNDAMENTALS OF DIGITAL PRODUCT MANAGEMENT</h1><h2 id="description">This course focuses on the creation and management of intangible technology products and services throughout the entire product management lifecycle. The benefits of the product management process along with the role of the Product Manager throughout the digital product lifecycle, main tasks, key reports and relationships, and the relationship between product management and product marketing will be examined. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IS&catalog_nbr=331","IS 331");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IS&catalog_nbr=331","IS 331");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

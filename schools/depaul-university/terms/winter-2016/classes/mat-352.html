@@ -416,7 +416,7 @@
 	<h1>MAT 352 PROBABILITY AND STATISTICS II</h1><h2 id="description">Joint probability distributions and correlation; law of large numbers and the central limit theorem; sampling distributions and theory of estimation. PREREQUISITE(S): A grade of C-minus or better in MAT 351 or instructor permission is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MAT&catalog_nbr=352","MAT 352");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=MAT&catalog_nbr=352","MAT 352");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

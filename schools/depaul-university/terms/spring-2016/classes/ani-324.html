@@ -416,7 +416,7 @@
 	<h1>ANI 324 STORY DEVELOPMENT</h1><h2 id="description">Students will elaborate on the skills from ANI 220 to create sophisticated pre-production for their own films, game cinematics and animations. Emphasis is placed on advanced story development, professional artistry and pre-visualization techniques such as converting a script to visual story reels or animatics. Students will complete the course with a fully-developed animatic for the story of their choosing. PREREQUISITE(S): ANI 220</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=324","ANI 324");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=324","ANI 324");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

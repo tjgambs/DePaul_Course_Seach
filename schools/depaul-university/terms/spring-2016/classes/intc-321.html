@@ -416,7 +416,7 @@
 	<h1>INTC 321 CULTURAL AND SYMBOLIC CRITICISM</h1><h2 id="description">Introduction to the critical methodologies of rhetorical analysis. Students are instructed in ways to become more reflective consumers of discourse by examining how rhetoric instructs reality, shapes the social and political agenda and engages questions of ethics, power and persuasion. The course promotes a critical awareness of the role symbols play in influencing human perception, attitude, and action in a diverse culture. (Formerly CMNS 321)</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INTC&catalog_nbr=321","INTC 321");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=INTC&catalog_nbr=321","INTC 321");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

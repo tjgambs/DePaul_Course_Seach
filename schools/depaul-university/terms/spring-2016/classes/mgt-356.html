@@ -416,7 +416,7 @@
 	<h1>MGT 356 SPORTS MANAGEMENT</h1><h2 id="description">Students will examine the major issues facing sport managers in a variety of sport organization settings. Through the lens of organizational theory and behavior, areas explored include professional, Olympic, collegiate, and youth sport. Other areas of focus will include sponsorship, technology, legal issues, and emerging issues through course projects and case studies. Students will be exposed to various disciplines/careers through guest lecturers in the sports industry and/or on-site experiences. PREREQUISITE(S): MGT 300 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=356","MGT 356");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MGT&catalog_nbr=356","MGT 356");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

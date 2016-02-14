@@ -416,7 +416,7 @@
 	<h1>REL 269 JUDAISM IN ANTIQUITY</h1><h2 id="description">This course traces the history of Israelite and Jewish culture and religion from their origins in the world of the Ancient Near East in the second millennium BCE until the rise of Islam in the seventh century CE. We will critically examine the meaning and mutual relationship of such categories as "ancient Israelite" religion, "biblical" religion, and "early Judaism." We will also discuss the history of religious institutions, texts, and practices, as well as the dynamics of continuity and change in ancient Israelite and Jewish society. This course will pay special attention to the complex relationship that exists between history and collective memory as constructed through texts and rituals.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=REL&catalog_nbr=269","REL 269");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=REL&catalog_nbr=269","REL 269");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>NSG 516 ANESTHESIA PRACTICUM VII</h1><h2 id="description">The final advanced practicum in which the third year nurse anesthesia resident (NAR) demonstrates the knowledge, skills, and attitudes necessary for entry level nurse anesthesia practice: proficiency in providing perioperative nurse anesthesia care for all patient populations; an ethical and culturally sensitive approach to patient care; analysis and synthesis of current research for application into practice; ability to perform a comprehensive self evaluation; and display of a professional attitude toward life long learning. Includes seminar presentations on selected topics or issues relative to the advanced practice of nurse anesthesia. PREREQUISITE(S): NSG 515 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=516","NSG 516");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=NSG&catalog_nbr=516","NSG 516");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

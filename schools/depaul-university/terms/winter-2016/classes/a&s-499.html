@@ -416,7 +416,7 @@
 	<h1>A&S 499 PLANNING FOR PROFESSIONAL DEVELOPMENT</h1><h2 id="description">This course introduces students to the dynamics of adult learning and how to apply these learning theories to the development of meaningful professional development for teachers and adult staff that enhances student success. Goals: (1) Developing skills and developing a comprehensive plan for professional development, (2) Addressing the challenges of adult learners, (3) Developing mentoring and coaching skills, (4) Developing and understanding the importance of assessment and reflection.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=A%26S&catalog_nbr=499","A&S 499");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=A%26S&catalog_nbr=499","A&S 499");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

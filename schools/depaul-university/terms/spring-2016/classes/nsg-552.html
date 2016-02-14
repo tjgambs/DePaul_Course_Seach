@@ -416,7 +416,7 @@
 	<h1>NSG 552 PROGRAM EVALUATION</h1><h2 id="description">This course will familiarize the student in different types of program evaluation, including objectives oriented evaluation, management oriented evaluation, consumer oriented evaluation, expertise oriented evaluation adversary oriented evaluation, participant oriented evaluation and alternative evaluation approaches. Students gain practical experience through a series of exercises involving the design of a conceptual framework, development of indicators, analysis of computerized service statistics, and development of an evaluation plan to measure impact.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=552","NSG 552");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=NSG&catalog_nbr=552","NSG 552");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

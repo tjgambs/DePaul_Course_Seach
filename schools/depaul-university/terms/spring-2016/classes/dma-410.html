@@ -416,7 +416,7 @@
 	<h1>DMA 410 DESIGN WORKSHOP</h1><h2 id="description">This course is an intensive study of the world of visual design with a specific focus on contemporary graphic design theories and practices expressing ideas and messages to specific audiences. It expands on the design skills developed in the introductory class (GD 200) including communication, conceptualization, typography, color, form, and structure. Students will study both commercial and artistic approaches producing projects that integrate designed graphics, photographs, illustration and text, and their intersection with moving technologies. Students will have the opportunity to produce sophisticated printed matter on state-of-the-art printing equipment or digital presentation for the web, screen or mobile devices. PREREQUISITE(S): None</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DMA&catalog_nbr=410","DMA 410");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=DMA&catalog_nbr=410","DMA 410");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

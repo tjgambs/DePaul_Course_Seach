@@ -416,7 +416,7 @@
 	<h1>PRF 213 ACTING II</h1><h2 id="description">Third course in a 3 course sequence. Scene study work begins. Students explore the relationship of the self to the role through the use of intention, relationship, environment, and text. A variety of playscripts are drawn from contemporary theatre. PREREQUISITE(S): PRF 212 and status as an Undergraduate or Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRF&catalog_nbr=213","PRF 213");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=PRF&catalog_nbr=213","PRF 213");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

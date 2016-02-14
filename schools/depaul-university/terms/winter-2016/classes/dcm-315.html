@@ -416,7 +416,7 @@
 	<h1>DCM 315 EXPLORING THE FIELD</h1><h2 id="description">Students will work on professional goal setting and action plans by conducting research on their chosen field, exploring trends, ethical issues, controversies, best preparation strategies, and other salient matters. In addition, the concept of "good work" and what that means for one's own career will be debated and discussed. PREREQUISITE(S): A major in Leadership Studies, Applied Behavioral Sciences or Professional Communication is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DCM&catalog_nbr=315","DCM 315");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DCM&catalog_nbr=315","DCM 315");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

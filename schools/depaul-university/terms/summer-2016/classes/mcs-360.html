@@ -416,7 +416,7 @@
 	<h1>MCS 360 B-MOVIES</h1><h2 id="description">This course will explore the role of the B-movie in film history: from its origins in the 1930s, through its evolution in the 1950s and all the way up to the modern critical application of the `B' label to a variety of different film genres, styles and budgets. Students will examine the place of the B's within the overall contexts of both mainstream Hollywood cinema and low-budget filmmaking in general. Specific focus will be placed on issues of economic mode of production and how this impacts a film's aesthetics, as well as theories of cultural distinction regarding the notion of `film trash' such as camp theory and cultism. A variety of films will be screened in class. Please take into consideration when choosing this course that we will screen films that may at times contain highly lurid, violent and/or sexual imagery.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MCS&catalog_nbr=360","MCS 360");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MCS&catalog_nbr=360","MCS 360");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

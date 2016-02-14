@@ -416,7 +416,7 @@
 	<h1>MGT 590 MANAGEMENT OF INNOVATION AND TECHNOLOGICAL CHANGE</h1><h2 id="description">The ability to manage technological innovation has become an increasingly essential requirement for business people regardless of functional specialty. The objective of this course is to explore ways to create environments that are conducive to technological innovation. Throughout the course students examine practices, models, and approaches that established, as well as new, organizations employ to promote innovative practice, technological change, and new technologies. The following topics will be covered: the innovation process, managing technical people, the impact of organizational design on innovation, knowledge management, cross function teams and exploiting new technologies. Students will research new technologies and discuss potential business applications and issues associated with those technologies. Offered once a year.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MGT&catalog_nbr=590","MGT 590");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=MGT&catalog_nbr=590","MGT 590");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

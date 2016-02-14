@@ -416,7 +416,7 @@
 	<h1>IT 320 CONTENT MANAGEMENT SYSTEMS</h1><h2 id="description">Design and use of Content Management Systems (CMSs) to manage unstructured digital media throughout the enterprise, simplify the publication of Web content, and locate and link content at any level of an organization. Discussion will focus on key users, their roles and responsibilities, collaborative workflow, and versioning. Students will become familiar with available CMSs, design a database-driven Website focusing on separation of the content's semantic layer from its layout, and implement a system using a variety of open-source software. Prerequisite(s): CSC 241or IT 211 or IT 231 or IT 238 or CSC 243.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IT&catalog_nbr=320","IT 320");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=IT&catalog_nbr=320","IT 320");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

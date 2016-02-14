@@ -416,7 +416,7 @@
 	<h1>LAW 230 UNITED STATES FOREIGN RELATIONS LAW</h1><h2 id="description">This course will provide an overview of the extensive body of law that regulates the authority of the federal government in the areas of foreign affairs and the making of foreign policy. This body of law includes the US Constitution, congressional statutes, key executive orders, federal court decisions, and applicable rules deriving from treaties and customary international law. The course examines in detail the interaction of the Constitution with the foreign policy powers of the Congress and the President, and the ways in which doctrines of the separation of powers have shaped the allotment of legal authority among the three branches of government in US foreign relations.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=230","LAW 230");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=LAW&catalog_nbr=230","LAW 230");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

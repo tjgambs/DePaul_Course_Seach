@@ -416,7 +416,7 @@
 	<h1>MKT 559 EMERGING MARKETS</h1><h2 id="description">Emerging markets are quite different from the developed economies of the world. Today, firms from the West look for new market opportunities outside of the advanced economies of the world. They realize that their traditional markets are oversaturated, overly competitive and rapidly aging. They recognize that future opportunities for long-term sustainable growth will be found in emerging markets. PREREQUISITE(S): MKT 555 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=559","MKT 559");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MKT&catalog_nbr=559","MKT 559");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

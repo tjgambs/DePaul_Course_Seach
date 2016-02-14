@@ -416,7 +416,7 @@
 	<h1>SW 361 INTRODUCTION TO COMPUTER PRODUCTIVITY</h1><h2 id="description">Microsoft Office is the most ubiquitous application suite in personal computing. There is little Office cannot do, from document creation and editing, e-mail and scheduling, spreadsheet and database management, desktop publishing, image editing and even Web design. In this course, we will explore several component applications of Office, focusing on word processor Word, spreadsheet Excel and presentation software PowerPoint, with the goal of developing facility with each application individually and using an integrated approach.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=SW&catalog_nbr=361","SW 361");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=SW&catalog_nbr=361","SW 361");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

@@ -416,7 +416,7 @@
 	<h1>SW 295 SUCCESSFUL INTERVIEWING</h1><h2 id="description">Interviewing " the process of asking and answering questions" is a part of everyday experience. This course introduces and explores the fundamental principles, theories and techniques of interviewing including the interpersonal communication process, common types of interviews, interview structure, questions and responses. Through collaborative and experiential learning activities, students will prepare for and participate in all aspects of the interview process as the interviewer and interviewee.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SW&catalog_nbr=295","SW 295");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=SW&catalog_nbr=295","SW 295");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

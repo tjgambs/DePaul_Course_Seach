@@ -416,7 +416,7 @@
 	<h1>DES 272 DESIGN PRODUCTION PRACTICE I</h1><h2 id="description">Second course in a 3 course sequence. Design students do practical work on planning, constructing, rigging, painting, crewing, and running of productions. Areas may include scenery, costumes, lighting, or sound. PREREQUISITE(S): Status as an Undergraduate or Graduate Theatre student is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DES&catalog_nbr=272","DES 272");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=DES&catalog_nbr=272","DES 272");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

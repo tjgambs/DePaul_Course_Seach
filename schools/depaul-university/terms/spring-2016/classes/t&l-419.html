@@ -416,7 +416,7 @@
 	<h1>T&L 419 CURRICULUM AND STRATEGIES: SOCIAL STUDIES</h1><h2 id="description">This course is an introduction to an integrated view of social studies for engaged citizenship. Through the study of strategies (such as concept formation, historical inquiry, role-play, etc), materials (such as primary sources) teacher candidates will learn and apply principles of curricular integration to create curriculum/units that engage elementary learners in the exploration of issues, ideas, and perspectives that impact our world. COREQUISTES: For T&L EE majors, concurrent enrollment in T&L 415 and T&L 584 is required. PREREQUISITE(S): Advanced Teacher Candidate Standing is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=419","T&L 419");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=T%26L&catalog_nbr=419","T&L 419");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

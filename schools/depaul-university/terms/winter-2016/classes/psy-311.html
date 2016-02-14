@@ -416,7 +416,7 @@
 	<h1>PSY 311 CONNECTING WITH YOUTH THROUGH RESEARCH, ADVOCACY, AND SERVICE: QUARTER 2</h1><h2 id="description">This course is the second in a three-quarter service learning sequence designed to teach students the latest research on stressors affecting low-income urban communities and effective strategies for making a difference in those communities. Students will put their learning into practice by connecting as mentors and advocates with low-income urban adolescents.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=311","PSY 311");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=PSY&catalog_nbr=311","PSY 311");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

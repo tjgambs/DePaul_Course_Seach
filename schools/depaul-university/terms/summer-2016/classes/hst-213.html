@@ -416,7 +416,7 @@
 	<h1>HST 213 MEDIEVAL MYSTICS IN EUROPE: 1000-1600 AD</h1><h2 id="description">The evolution over time of theories and experiences of human union with God, and of varied Christian spiritual paths and practices, as described in mystical literature, saints' lives, religious art, and music. Emphasis on the monastic, urban, and courtly institutional contexts of the documents. Cross-listed as CTH 228</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=HST&catalog_nbr=213","HST 213");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0975&subject=HST&catalog_nbr=213","HST 213");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

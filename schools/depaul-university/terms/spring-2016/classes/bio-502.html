@@ -416,7 +416,7 @@
 	<h1>BIO 502 CANDIDACY CONTINUATION</h1><h2 id="description">Students who have completed their coursework but who must take extra time to complete the requirements for the Master's thesis (MS), or final project (MA), must enroll in candidacy continuation each quarter of the academic year until the Master's requirement has been completed. This course carries part-time student status. Non-credit.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=BIO&catalog_nbr=502","BIO 502");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=BIO&catalog_nbr=502","BIO 502");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

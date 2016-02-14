@@ -416,7 +416,7 @@
 	<h1>HLTH 120 EXPLORING THE HEALTH SCIENCES</h1><h2 id="description">This course explores the growing and complicated landscape of the health professions. Students will explore a board range of careers available to people interested in the health of communities and individuals, helping them to identify their own skills, interests, and values. Designed for students in all majors who are interested in exploring a professional interest in health sciences, this course will include aspects of self-assessment and career exploration, health industry research, and connecting with individuals in the field.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HLTH&catalog_nbr=120","HLTH 120");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=HLTH&catalog_nbr=120","HLTH 120");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

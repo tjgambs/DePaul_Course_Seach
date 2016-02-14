@@ -416,7 +416,7 @@
 	<h1>MAT 368 MATHEMATICAL FINANCE</h1><h2 id="description">Financial derivatives, risk management, investment strategies, arbitrage, valuation, Put-call parity, the binomial model, option pricing, lognormal models for asset prices, Black-Scholes formula, value at risk and conditional tail expectation, Brownian motion and Ito's lemma, interest rate models. Cross-listed with MAT 468. PREREQUISITE(S): MAT 353 is a prerequisite for this class.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=368","MAT 368");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=MAT&catalog_nbr=368","MAT 368");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

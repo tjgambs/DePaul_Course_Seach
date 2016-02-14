@@ -416,7 +416,7 @@
 	<h1>ANI 440 COLLABORATIVE SHORT ANIMATED FILM</h1><h2 id="description">Students will work in small groups to produce short animated films from concept to completion using the media of their choice. Emphasis is placed on a collaborative environment for pitching ideas, visual development and creative problem-solving during production. Different studio methodologies and techniques will be discussed. Each team will face various technical and aesthetic challenges to complete a finished film. PREREQUISITE(S): ANI 421 or ANI 453</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=440","ANI 440");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=ANI&catalog_nbr=440","ANI 440");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

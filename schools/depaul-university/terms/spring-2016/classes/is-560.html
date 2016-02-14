@@ -416,7 +416,7 @@
 	<h1>IS 560 ENTERPRISE SYSTEMS</h1><h2 id="description">An introduction to enterprise systems for data and process integration, including ERP systems. Topics include the requirements of enterprise systems, application architecture, tools, and functionality of leading enterprise systems, life cycle and methodologies for systems integration, selection, and implementation strategies. Also addressed are emerging trends for enterprise systems and relationship among component systems. PREREQUISITE(S): Advanced Standing</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=560","IS 560");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=IS&catalog_nbr=560","IS 560");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

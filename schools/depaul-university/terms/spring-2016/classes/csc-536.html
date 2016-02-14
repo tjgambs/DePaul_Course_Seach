@@ -416,7 +416,7 @@
 	<h1>CSC 536 DISTRIBUTED SYSTEMS II</h1><h2 id="description">An intermediate course on distributed systems. Topics may include: clock synchronization; mutual exclusion; distributed transactions; consistency models; distribution and consistency protocols; failure models; achieving fault tolerance; distributed object-based systems; distributed file systems. PREREQUISITE(S): CSC 435</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=536","CSC 536");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CSC&catalog_nbr=536","CSC 536");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>

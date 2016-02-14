@@ -416,7 +416,7 @@
 	<h1>CS 591 CURRICULUM THEORIZING: MULTIPLE LENSES</h1><h2 id="description">This course examines diverse curriculum discourses, historical as well as contemporary, within a broader context of issues related to education and schooling. It is designed to engage students critically in the study of curricular frameworks, their assumptions, values, and implications for education, schooling, teaching and learning. Major topics include frameworks for defining and conceptualizing curriculum and curricular visions; social, political, and historical contexts of curriculum construction; issues of gender, race, class, and the media; and the curriculum as socialy constructed and historically contextualized discourse(s) about what is and what should be taught. Particular content areas will be used as examples.</h2></body><script>
 
 	$(document).ready(function() 
-	{updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=591","CS 591");
+	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0970&subject=CS&catalog_nbr=591","CS 591");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
 		updateRanking();
@@ -430,7 +430,6 @@
 	   		}
 		});
 		run();
-		setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);
 	});
 	</script>
 </html>
