@@ -129,26 +129,26 @@ function formatCart(response) {
                 }
                 if (htmlDecode(courses[i].getElementsByClassName('location')[0].innerHTML) != tempLocation) {
                     courses[i].getElementsByClassName('location')[0].innerHTML = tempLocation;
-                    //fixClasses(courses[i], tempLocation, 11);
+                    fixClasses(courses[i], tempLocation, 11);
                 }
                 var tempStatus = course.enrl_stat;
                 switch (tempStatus) {
                     case 'O':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Open') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Open';
-                            //fixClasses(courses[i], 'Open', 3);
+                            fixClasses(courses[i], 'Open', 3);
                         }
                         break;
                     case 'C':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Closed') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Closed';
-                            //fixClasses(courses[i], 'Closed', 3);
+                            fixClasses(courses[i], 'Closed', 3);
                         }
                         break;
                     case 'W':
                         if (courses[i].getElementsByClassName('status')[0].innerHTML != 'Waitlist') {
                             courses[i].getElementsByClassName('status')[0].innerHTML = 'Waitlist';
-                            //fixClasses(courses[i], 'Waitlist', 3);
+                            fixClasses(courses[i], 'Waitlist', 3);
                         }
                         break;
                 }
@@ -223,7 +223,7 @@ function readPreviousTerm() {
 function readSaved() {
     var term = document.getElementsByClassName('term')[0].value;
     var savedClasses = [];
-    for (var i = 0; i < localStorage.length+1; i++) {
+    for (var i = 0; i < localStorage.length; i++) {
         var course = [];
         if (localStorage.key(i) && localStorage.key(i).indexOf('depaul-university-(' + term + ')-saved-') != -1) {
             var name = localStorage.getItem(localStorage.key(i)).split('|')[0];
@@ -301,7 +301,7 @@ function convertDate(date) {
 function removeAll() {
     deleteFromLocal('unchecked0');
     var term = document.getElementsByClassName('term')[0].value;
-    for (var i = 0; i < localStorage.length+1; i++) {
+    for (var i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1 && localStorage.key(i).indexOf(term) != -1) {
             deleteFromLocal(localStorage.key(i));
             i--;
@@ -697,8 +697,9 @@ function removeFromCart(contents) {
     var className = contents.getAttribute('class').split(' ').join('-');
     var localNameToDelete = '';
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.getItem(localStorage.key(i)) && localStorage.getItem(localStorage.key(i)).indexOf(value.split(',')[10]) != -1) {
+        if (localStorage.getItem(localStorage.key(i)) && localStorage.getItem(localStorage.key(i)).indexOf(value.split(',')[10]) != -1 && localStorage.key(i).indexOf('-add-') != -1) {
             localNameToDelete = localStorage.key(i);
+            break;
         }
     }
     deleteFromLocal(localNameToDelete);
