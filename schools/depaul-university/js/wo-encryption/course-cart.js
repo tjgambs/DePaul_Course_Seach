@@ -305,11 +305,14 @@ function convertDate(date) {
 function removeAll() {
     deleteFromLocal('unchecked0');
     var term = document.getElementsByClassName('term')[0].value;
+    var arr = [];
     for (var i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1 && localStorage.key(i).indexOf(term) != -1) {
-            deleteFromLocal(localStorage.key(i));
-            i--;
+            arr.push(localStorage.key(i));
         }
+    }
+    for (var i = 0; i < arr.length; i++) {
+        localStorage.removeItem(arr[i]);
     }
     formatClasses();
     updateCourseCartCount();
