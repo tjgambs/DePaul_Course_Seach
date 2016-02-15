@@ -380,8 +380,8 @@ function updateCourseCartCount() {
     }
     var count = 0;
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).indexOf('-add-') != -1) {
-            if (localStorage.key(i).indexOf(term) != -1) {
+        if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1) {
+            if (localStorage.key(i) && localStorage.key(i).indexOf(term) != -1) {
                 count += 1;
             }
         }
@@ -431,12 +431,12 @@ function removeFromCart(contents) {
     };
     var localNameToDelete = '';
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.getItem(localStorage.key(i)).split(',').length == 12) {
-            if (localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[9]) != -1) {
+        if (localStorage.getItem(localStorage.key(i)) && localStorage.getItem(localStorage.key(i)).split(',').length == 12) {
+            if (localStorage.getItem(localStorage.key(i)) && localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[9]) != -1) {
                 localNameToDelete = localStorage.key(i);
             }
         } else {
-            if (localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[10]) != -1) {
+            if (localStorage.getItem(localStorage.key(i)) && localStorage.getItem(localStorage.key(i)).split('=')[0].indexOf(value.split(',')[10]) != -1) {
                 localNameToDelete = localStorage.key(i);
             }
         }

@@ -104,7 +104,7 @@ function updateCourseCartCount() {
     var term = readFromLocal('depaul-university-term');
     var count = 0;
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).indexOf('-add-') != -1) {
+        if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1) {
             if (localStorage.key(i).indexOf(term) != -1) {
                 count += 1;
             }
