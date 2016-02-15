@@ -5,6 +5,9 @@
 import json
 import urllib
 import sys
+import take_lsld_data as lsld
+
+lsld_data = lsld.take()
 
 def create_page(full_name,description,course_url,termname):
 	ignore = ['a','an','the','and','at','around','by','after','along','for','from','of','on','to','with','without']
@@ -249,10 +252,10 @@ def create_page(full_name,description,course_url,termname):
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -428,7 +431,23 @@ def create_page(full_name,description,course_url,termname):
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
@@ -468,11 +487,18 @@ def create_page(full_name,description,course_url,termname):
 			output.write(html)
 	data = json.loads(urllib.urlopen(course_url).read())
 	tags = []
+
+	for name, value in lsld_data.iteritems():
+		if ' '.join(full_name.split(' ')[:2]) in value:
+			tags.append('lsld=' + name)
+			break
+
 	for i in data:
 		tags.append(i['first_name'] + ' ' + i['last_name'])
 		tags.append(i['class_nbr'])
 		tags.append('location=' + i['location_descr'])
-		tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
+		if not course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'] in tags:
+			tags.append(course_url.split('=')[-2].split('&')[0].lower()+'-credits='+i['units_minimum'])
 
 	return [full_name.replace(';',''),description,tags,'terms/' + termname + '/classes/' + '-'.join(full_name.split()[:2]).replace(';','').lower()+'']
 

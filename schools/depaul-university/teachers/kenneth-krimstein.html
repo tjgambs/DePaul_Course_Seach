@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Kenneth Krimstein - 4.5</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Kenneth Krimstein - 4.0</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -229,10 +229,10 @@
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -408,12 +408,28 @@
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<div id="ads"></div><h1>Kenneth Krimstein</h1><hr><div><h2>Overall Quality: 4.5<br><br>Helpfulness: 4.5<br>Clarity: 4.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 07/08/2015<br>Class Name: PRAD244<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Ken is great! I had him for Principles of Advertising and his stories about his experience as well as his feedback was really helpful. He got me excited to pursue this field. He's a creative and outspoken guy who will tell you how it is and it prepares you for what the industry is really like. We also got to work on a project for a real client! </div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2015<br>Class Name: LSP110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ken is very interesting and has so much to teach his students. I had a great experience in his class. You are able to learn a lot and make connections with professionals and other students. He is a tough grader, but will give you the grade you deserve, just write well, you'll do fine. I would take this class again, he is such a cool guy. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Kenneth Krimstein</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/12/2016<br>Class Name: LSP110<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>MadMen&Women: Fun class. Cool prof.  Did fun stuff for immersion wk. Went to ad agencies, museums,  did a scavenger hunt, among others. Grade:  20% attendance & participation (not really), 20% common hour assign,  10% 2-3 pg ad analysis, 30% 5-6 pg final ad analysis, and 20% other assign.  Nitpicky about writing, but grades fairly.  No reading.</div></div></div><div id="container" class="review"><div id="left">Date: 07/08/2015<br>Class Name: PRAD244<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Ken is great! I had him for Principles of Advertising and his stories about his experience as well as his feedback was really helpful. He got me excited to pursue this field. He's a creative and outspoken guy who will tell you how it is and it prepares you for what the industry is really like. We also got to work on a project for a real client! </div></div></div><div id="container" class="review"><div id="left">Date: 05/21/2015<br>Class Name: LSP110<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>Ken is very interesting and has so much to teach his students. I had a great experience in his class. You are able to learn a lot and make connections with professionals and other students. He is a tough grader, but will give you the grade you deserve, just write well, you'll do fine. I would take this class again, he is such a cool guy. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		$('#ads').load('http://mocksched.com/ads.html');
 						$('#help').load('http://mocksched.com/help.html');

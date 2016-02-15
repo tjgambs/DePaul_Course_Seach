@@ -373,6 +373,13 @@ function creditSearch() {
     }
 }
 
+function learningDomainSearch() {
+    var domain = document.getElementsByClassName('learning-domain-prefix')[0].value;
+    var search = 'lsld=' + domain;
+    document.getElementById('tipue_search_input').value = '"' + search + '"';
+    document.getElementById('field').submit();
+}
+
 function updateCourseCartCount() {
     var term = window.location.href.split('/').slice(-3, -2)[0];
     if (readFromLocal('depaul-university-term') != term) {

@@ -395,6 +395,13 @@ function creditSearch() {
     }
 }
 
+function learningDomainSearch() {
+    var domain = document.getElementsByClassName('learning-domain-prefix')[0].value;
+    var search = 'lsld=' + domain;
+    document.getElementById('tipue_search_input').value = '"' + search + '"';
+    document.getElementById('field').submit();
+}
+
 function updateCourseCartCount() {
     var term = document.getElementsByClassName('term')[0].value;
     var count = 0;

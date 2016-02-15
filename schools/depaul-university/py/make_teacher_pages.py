@@ -337,10 +337,10 @@ def create_teacher_webpage(id,name,values):
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -516,7 +516,23 @@ def create_teacher_webpage(id,name,values):
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>

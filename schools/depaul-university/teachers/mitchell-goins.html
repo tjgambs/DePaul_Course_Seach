@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Mitchell Goins - 4.0</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Mitchell Goins - 3.9</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -229,10 +229,10 @@
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -408,12 +408,28 @@
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<div id="ads"></div><h1>Mitchell Goins</h1><hr><div><h2>Overall Quality: 4.0<br><br>Helpfulness: 4.0<br>Clarity: 4.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/05/2016<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>This class was amazing. Mitch is such an amazing professor and goes well out of his way to help students. He is funny and interactive, always making sure the entire class is entertained while learning. Only issue is the class was 3 hours.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2016<br>Class Name: WRD103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>ASSIGNMENTS ASSIGNMENTS ASSIGNMENTS  Fun lecture though</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Mitchell Goins</h1><hr><div><h2>Overall Quality: 3.9<br><br>Helpfulness: 4.2<br>Clarity: 3.6<br>Easiness: 3.4</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/11/2016<br>Class Name: WRD104<br>Helpfulness: 5<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Mitch is honestly such a nice guy and he truly wants his students to do well. He is always available to help you out and gives great feedback. I was a little concerned about taking a 3 hour night class, but his class is awesome and he keeps you on your toes. Lectures are fun, there are quite a few assignments, but if you do your work, you're fine!</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2016<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Mitch, he's laid back young and can relatable. Very kind, and keeps you focused during a 3 hour long class. If you're not satisfied with your grade, he allows you to revise. Do what you gotta do, put in effort and you'll be just fine.</div></div></div><div id="container" class="review"><div id="left">Date: 02/10/2016<br>Class Name: WRD104<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 3<br>Grade Received: Audit/No Grade</div><div id="right"><div>Mitch is really laid back and understanding with all of his students. Provides great feedback on your writing and is always willing to work with you if you need help. No tests because this is a writing course but there are multiple papers.</div></div></div><div id="container" class="review"><div id="left">Date: 02/05/2016<br>Class Name: WRD103<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 5<br>Grade Received: A</div><div id="right"><div>This class was amazing. Mitch is such an amazing professor and goes well out of his way to help students. He is funny and interactive, always making sure the entire class is entertained while learning. Only issue is the class was 3 hours.</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2016<br>Class Name: WRD103<br>Helpfulness: 3<br>Clarity: 3<br>Easiness: 3<br>Grade Received: B+</div><div id="right"><div>ASSIGNMENTS ASSIGNMENTS ASSIGNMENTS  Fun lecture though</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		$('#ads').load('http://mocksched.com/ads.html');
 						$('#help').load('http://mocksched.com/help.html');

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Barrie Borich - 3.8</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Barrie Borich - 3.7</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -229,10 +229,10 @@
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -408,12 +408,28 @@
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<div id="ads"></div><h1>Barrie Borich</h1><hr><div><h2>Overall Quality: 3.8<br><br>Helpfulness: 4.0<br>Clarity: 3.5<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 10/22/2015<br>Class Name: LSP 110<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She's a really cool teacher and is passionate about what she teaches. She knows what she's talking about. She grades fairly/on the easy side. She assigns a lot of reading but then the "quizzes on the reading" are super basic so that's kind of annoying. She likes participation. I personally didn't enjoy the content, but as a teacher she's great.</div></div></div><div id="container" class="review"><div id="left">Date: 12/25/2014<br>Class Name: DISCOVER<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very interesting teacher if you like the subject. I was mislead on the class and it ended up being about going green. I have no interest in this subject so I did not enjoy the class. She is always willing to help and is clear on assignments. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Barrie Borich</h1><hr><div><h2>Overall Quality: 3.7<br><br>Helpfulness: 3.7<br>Clarity: 3.7<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/11/2016<br>Class Name: LSP110<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 3<br>Grade Received: A-</div><div id="right"><div>Borich was a nice woman and professor, though her lectures were often very bland. We had assigned readings every week and were given quizzes on them the following week so the books are an absolute must have. The content of the class was not as interesting as I thought it was going to be but I did learn a lot about the city and green spaces.</div></div></div><div id="container" class="review"><div id="left">Date: 10/22/2015<br>Class Name: LSP 110<br>Helpfulness: 4<br>Clarity: 3<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>She's a really cool teacher and is passionate about what she teaches. She knows what she's talking about. She grades fairly/on the easy side. She assigns a lot of reading but then the "quizzes on the reading" are super basic so that's kind of annoying. She likes participation. I personally didn't enjoy the content, but as a teacher she's great.</div></div></div><div id="container" class="review"><div id="left">Date: 12/25/2014<br>Class Name: DISCOVER<br>Helpfulness: 4<br>Clarity: 4<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Very interesting teacher if you like the subject. I was mislead on the class and it ended up being about going green. I have no interest in this subject so I did not enjoy the class. She is always willing to help and is clear on assignments. </div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		$('#ads').load('http://mocksched.com/ads.html');
 						$('#help').load('http://mocksched.com/help.html');

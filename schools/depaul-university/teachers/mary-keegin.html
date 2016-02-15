@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Mary Keegin - 5.0</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Mary Keegin - 4.3</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -229,10 +229,10 @@
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -408,12 +408,28 @@
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<div id="ads"></div><h1>Mary Keegin</h1><hr><div><h2>Overall Quality: 5.0<br><br>Helpfulness: 5.0<br>Clarity: 5.0<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 01/04/2016<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Easy to get good grades. Just don't be absent. Don't be late.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Mary Keegin</h1><hr><div><h2>Overall Quality: 4.3<br><br>Helpfulness: 4.0<br>Clarity: 4.5<br>Easiness: 4.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/07/2016<br>Class Name: PSY106<br>Helpfulness: 3<br>Clarity: 4<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>I had Professor Keegin for my Introductory Psychology class and really enjoyed it. She is very clear and helpful. The class was fairly easy as long as you read the textbook, take notes, do the papers, and study for the exams. She's funny and hip!</div></div></div><div id="container" class="review"><div id="left">Date: 01/04/2016<br>Class Name: PSY106<br>Helpfulness: 5<br>Clarity: 5<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Easy to get good grades. Just don't be absent. Don't be late.</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		$('#ads').load('http://mocksched.com/ads.html');
 						$('#help').load('http://mocksched.com/help.html');

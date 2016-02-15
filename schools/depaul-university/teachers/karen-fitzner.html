@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Karen Fitzner - 2.63</title><meta charset="UTF-8">
+<!DOCTYPE html><html><head><title>Karen Fitzner - 2.4</title><meta charset="UTF-8">
 					<script src="../../../js/jquery.min.js"></script>
 					<script src="../../../js/select2.full.js"></script>
 					<script src="../js/teacher-pages.min.js"></script>
@@ -229,10 +229,10 @@
 			<h2 align="left" style="padding-top: 10px; color: #aaa; font-size: 12px;">
 			If searching for a phrase, please surround the phrase in quotation marks (i.e. "Computer Science"). In doing so, you will receive more accurate results.
 			</h2>
-			<h2 align="center" style="padding-top: 10px;">
+			<h2 align="center">
 				Filter Courses by Credit Hour
 			</h2>
-			<p align="center">
+			<span align="center">
 				<select class="credit-prefix" style="width:50%">
 					<option value="ACC">ACC - Accountancy</option>
 					<option value="A&amp;S">A&amp;S - Administration &amp; Supervision</option>
@@ -408,12 +408,28 @@
 				<input class="inputbox credit-input" style="width:15%" type="text" placeholder="Credits">
 				&nbsp;&nbsp;
 				<input class="search-button" type="submit" value="SEARCH" onclick="creditSearch()">
-			</p>
+			</span>
+
+			<h2 align="center">
+				Filter Courses by Learning Domain
+			</h2>
+			<span align="center" style="padding-top: -10px;">
+				<select class="learning-domain-prefix" style="width:50%">
+					<option value="Arts and Literature">Arts and Literature</option>
+					<option value="Philosophical Inquiry">Philosophical Inquiry</option>
+					<option value="Religious Dimensions">Religious Dimensions</option>
+					<option value="Scientific Inquiry">Scientific Inquiry</option>
+					<option value="Social, Cultural, and Behavioral Inquiry">Social, Cultural, and Behavioral Inquiry</option>
+					<option value="Understanding the Past">Understanding the Past</option>
+				</select>
+				&nbsp;&nbsp;
+				<input class="search-button" type="submit" value="SEARCH" onclick="learningDomainSearch()">
+			</span>
 	    </div>
 	</div>
 	<div id="help"></div>
 				<button class="generate" style="top:-20px; align: center;" onclick='overlay()'>ADVANCED SEARCH</button>
-				<div id="ads"></div><h1>Karen Fitzner</h1><hr><div><h2>Overall Quality: 2.63<br><br>Helpfulness: 2.5<br>Clarity: 2.75<br>Easiness: 2.75</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: ECON105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Of all my professors at DePaul, I was most disappointed with her. She is extremely nice and cares about her students, however is so disorganized with how to run the class. She rarely knows any due dates for assignments  and does not offer help outside of class.  Never ask this professor anything about grades, she will lose her temper!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: ECO326<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Fitzner is very unorganized and is truly just all over the place. She is very nice, and has had great work experience but her teaching methods are not on point. Be ready to back track a lot in this class and do most of the work on your own. </div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2015<br>Class Name: ECO105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was a pretty good professor.  You have to show up and pay attention in order to get an A or B I feel.  Quizzes every other class, but they are straight forward and from the book.  Half of the midterm and final (the only tests) were take home.  I showed up every class,  never read the book, and did all the homework (from the book).  Got a 95%</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2015<br>Class Name: ECO105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DON'T TAKE THIS PROFESSOR, she is the worst professor I saw in my life. her tests and quizzes super difficult. I am blaming my self cuz I took this class with her and got C while there other good and easy professors who you can with them easy A</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
+				<div id="ads"></div><h1>Karen Fitzner</h1><hr><div><h2>Overall Quality: 2.4<br><br>Helpfulness: 2.2<br>Clarity: 2.6<br>Easiness: 3.0</h2></div><h1>Student Reviews</h1><hr><div id="container" class="review"><div id="left">Date: 02/13/2016<br>Class Name: ECO105<br>Helpfulness: 1<br>Clarity: 2<br>Easiness: 4<br>Grade Received: A</div><div id="right"><div>Takehome MC midterm (25%), Qs from test bank. 7 pop quizzes (15%), no makeups. 13 hw (20%), absolutely need mylab, don't miss ANY deadlines. participation & group problem mini-presentations (10%). final (20%), exempt if you have B+. Don't take if you want to learn or econ major. Can be confusing and is not helpful; ask SI leader. Calls on people.</div></div></div><div id="container" class="review"><div id="left">Date: 06/02/2015<br>Class Name: ECON105<br>Helpfulness: 2<br>Clarity: 4<br>Easiness: 4<br>Grade Received: B+</div><div id="right"><div>Of all my professors at DePaul, I was most disappointed with her. She is extremely nice and cares about her students, however is so disorganized with how to run the class. She rarely knows any due dates for assignments  and does not offer help outside of class.  Never ask this professor anything about grades, she will lose her temper!</div></div></div><div id="container" class="review"><div id="left">Date: 03/23/2015<br>Class Name: ECO326<br>Helpfulness: 3<br>Clarity: 1<br>Easiness: 2<br>Grade Received: N/A</div><div id="right"><div>Professor Fitzner is very unorganized and is truly just all over the place. She is very nice, and has had great work experience but her teaching methods are not on point. Be ready to back track a lot in this class and do most of the work on your own. </div></div></div><div id="container" class="review"><div id="left">Date: 02/28/2015<br>Class Name: ECO105<br>Helpfulness: 4<br>Clarity: 5<br>Easiness: 4<br>Grade Received: N/A</div><div id="right"><div>She was a pretty good professor.  You have to show up and pay attention in order to get an A or B I feel.  Quizzes every other class, but they are straight forward and from the book.  Half of the midterm and final (the only tests) were take home.  I showed up every class,  never read the book, and did all the homework (from the book).  Got a 95%</div></div></div><div id="container" class="review"><div id="left">Date: 02/23/2015<br>Class Name: ECO105<br>Helpfulness: 1<br>Clarity: 1<br>Easiness: 1<br>Grade Received: N/A</div><div id="right"><div>DON'T TAKE THIS PROFESSOR, she is the worst professor I saw in my life. her tests and quizzes super difficult. I am blaming my self cuz I took this class with her and got C while there other good and easy professors who you can with them easy A</div></div></div></div><div class="center ital" style="padding-top: 1%;">Ratings and reviews credited to <a href="http://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></div><div class="center ital" style="padding-top: .5%;">Contact the <a href="mailto:mocksched@gmail.com?subject=MockSched">Developer</a></div></body><script>
 				 	$( document ).ready(function() {
 				 		$('#ads').load('http://mocksched.com/ads.html');
 						$('#help').load('http://mocksched.com/help.html');
