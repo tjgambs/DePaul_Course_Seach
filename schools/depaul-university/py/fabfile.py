@@ -65,17 +65,6 @@ def remove_classes(termname):
 		local('rm -r classes')
 		local('mkdir classes')
 
-def general_update_data():
-	local('python take_rmp_rankings.py &')
-	local('python make_teacher_pages.py &')
-	remove_classes('spring-2016')
-	remove_classes('summer-2016')
-	local('python take_class_data.py spring-2016 0970')
-	local('python take_class_data.py summer-2016 0975')
-	local('python make_course_pages.py spring-2016')
-	local('python make_course_pages.py summer-2016')
-	update_website()
-
 def update(username,password,termname,termnumber,term,flag):
 	local('git checkout gh-pages')
 	if flag:
