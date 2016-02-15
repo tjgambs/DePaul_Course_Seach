@@ -1,4 +1,5 @@
 var defaultTerm = 'spring-2016';
+var currentSort = {};
 
 function run() {
     readSelections();
@@ -611,6 +612,8 @@ function arrange() {
     for (var i = 0; i < tables.length; i++) {
         $("#" + tables[i].id).tablesorter({
             sortInitialOrder: 'desc'
+        }).bind("sortEnd", {index:i} ,function(sorter) {
+            currentSort[sorter.data.index] = sorter.target.config.sortList;
         });
     }
 }
@@ -684,9 +687,13 @@ function removeFromSave(number, table) {
     if (value.indexOf('|') == -1) {
         deleteSave(name, table);
         formatClasses(table-1);
+        delete currentSort[table]; 
     } else {
         writeToLocal(name, value);
         formatClasses(table);
+        if(currentSort[table]) {
+            $("#myTable" + table).trigger("sorton",[currentSort[table]]);
+        }
     }
 }
 
@@ -707,6 +714,9 @@ function removeFromCart(contents) {
     }
     deleteFromLocal(localNameToDelete);
     formatClasses();
+    if(currentSort[0]) {
+        $("#myTable0").trigger("sorton",[currentSort[0]]);
+    }
     updateCourseCartCount();
 }
 
