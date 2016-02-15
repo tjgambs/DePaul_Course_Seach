@@ -399,7 +399,7 @@ function updateCourseCartCount() {
     var term = document.getElementsByClassName('term')[0].value;
     var count = 0;
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).indexOf('-add-') != -1) {
+        if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1) {
             if (localStorage.key(i).indexOf(term) != -1) {
                 count += 1;
             }
@@ -446,7 +446,7 @@ function formatClasses(value) {
     }
 
     for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).indexOf('-add-') != -1 && localStorage.key(i).indexOf(term) != -1) {
+        if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1 && localStorage.key(i).indexOf(term) != -1) {
             temp = localStorage.getItem(localStorage.key(i)).split(',');
             if (temp.length == 12) {
                 temp = (['0.0'].concat(temp));
