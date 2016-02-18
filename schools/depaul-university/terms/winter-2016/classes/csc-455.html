@@ -435,9 +435,9 @@
 	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);updateTable("https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=0965&subject=CSC&catalog_nbr=455","CSC 455");
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
+		$(".prefix").select2();
 		updateRanking();
 		updateCourseCartCount();
-    	$(".prefix").select2();
 		$("#myTable").tablesorter({
 			sortInitialOrder: 'desc',
 	    	headers: {

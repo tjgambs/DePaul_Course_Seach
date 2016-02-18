@@ -468,9 +468,9 @@ def create_page(full_name,description,course_url,termname):
 	html += '''
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
+		$(".prefix").select2();
 		updateRanking();
 		updateCourseCartCount();
-    	$(".prefix").select2();
 		$("#myTable").tablesorter({
 			sortInitialOrder: 'desc',
 	    	headers: {
