@@ -6,8 +6,6 @@ from selenium.webdriver.common.by import By
 import time
 import json
 
-driver = webdriver.Firefox()
-
 __URL__ = "http://www.depaul.edu/university-catalog/course-descriptions/Pages/default.aspx?letter=A&subject=Accountancy"
 
 def take():
@@ -29,7 +27,9 @@ def take():
 			data[name] = [description,prerequisites]
 	with open('../course_data.json','w') as output:
 		json.dump(data,output)
-	driver.close()
 
 if __name__ == '__main__':
+	global driver
+	driver = webdriver.Firefox()
 	take()
+	driver.close()

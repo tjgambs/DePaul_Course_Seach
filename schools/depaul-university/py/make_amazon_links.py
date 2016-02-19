@@ -8,8 +8,6 @@ import isbnlib
 import glob
 import sys
 
-driver = webdriver.Firefox()
-
 def format_data(termname):
 	file_names = glob.glob('../terms/' + termname + '/course_books/*.json')
 	dic = {}
@@ -54,5 +52,7 @@ def check_url(url):
 		check_url(url)
 
 if __name__ == '__main__':
+	global driver
+	driver = webdriver.Firefox()
 	format_data(sys.argv[1])
 	driver.close()

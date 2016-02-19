@@ -10,8 +10,6 @@ import json
 import getpass
 import sys
 
-driver = webdriver.Firefox()
-
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 
 def login(username,password):
@@ -137,5 +135,7 @@ def iterate_over_one(index,term,termname,username,password):
 		iterate_over_one(index,term,termname)
 
 if __name__ == '__main__':
+	global driver
+	driver = webdriver.Firefox()
 	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
 	driver.close()
