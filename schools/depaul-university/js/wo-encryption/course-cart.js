@@ -59,26 +59,26 @@ function run() {
 function saveSelections() {
     var prefix = document.getElementsByClassName('prefix')[0].value;
     var number = document.getElementsByClassName('number')[0].value;
-    writeToLocal('depaul-university-standard-prefix', prefix);
-    writeToLocal('depaul-university-standard-number', number);
+    writeToSession('depaul-university-standard-prefix', prefix);
+    writeToSession('depaul-university-standard-number', number);
 }
 
 function saveCreditPrefix() {
     var prefix = document.getElementsByClassName('credit-prefix')[0].value;
-    writeToLocal('depaul-university-standard-prefix', prefix);
-    writeToLocal('depaul-university-standard-number', '');
+    writeToSession('depaul-university-standard-prefix', prefix);
+    writeToSession('depaul-university-standard-number', '');
 }
 
 function readCreditSelections() {
-    var prefix = readFromLocal('depaul-university-standard-prefix');
+    var prefix = readFromSession('depaul-university-standard-prefix');
     if (prefix) {
         document.getElementsByClassName('credit-prefix')[0].value = prefix;
     }
 }
 
 function readSelections() {
-    var prefix = readFromLocal('depaul-university-standard-prefix');
-    var number = readFromLocal('depaul-university-standard-number');
+    var prefix = readFromSession('depaul-university-standard-prefix');
+    var number = readFromSession('depaul-university-standard-number');
     if (prefix) {
         document.getElementsByClassName('prefix')[0].value = prefix;
     }
@@ -742,6 +742,16 @@ function readFromLocal(name) {
 
 function deleteFromLocal(name) {
     localStorage.removeItem(name.split('=')[0].trim());
+}
+
+function writeToSession(name, value) {
+    sessionStorage.setItem(name.trim(), value);
+}
+
+function readFromSession(name) {
+    if (sessionStorage.getItem(name.trim()))
+        return sessionStorage.getItem(name.trim());;
+    return '';
 }
 
 function createCalendar(events, number, defaultDate, defaultTime) {

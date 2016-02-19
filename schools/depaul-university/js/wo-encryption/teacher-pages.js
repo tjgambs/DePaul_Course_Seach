@@ -48,26 +48,26 @@ function matchStart(term, text) {
 function saveSelections() {
 	var prefix = document.getElementsByClassName('prefix')[0].value;
 	var number = document.getElementsByClassName('number')[0].value;
-	writeToLocal('depaul-university-standard-prefix', prefix);
-	writeToLocal('depaul-university-standard-number', number);
+	writeToSession('depaul-university-standard-prefix', prefix);
+	writeToSession('depaul-university-standard-number', number);
 }
 
 function saveCreditPrefix() {
 	var prefix = document.getElementsByClassName('credit-prefix')[0].value;
-	writeToLocal('depaul-university-standard-prefix', prefix);
-	writeToLocal('depaul-university-standard-number', '');
+	writeToSession('depaul-university-standard-prefix', prefix);
+	writeToSession('depaul-university-standard-number', '');
 }
 
 function readCreditSelections() {
-	var prefix = readFromLocal('depaul-university-standard-prefix');
+	var prefix = readFromSession('depaul-university-standard-prefix');
 	if (prefix) {
 		document.getElementsByClassName('credit-prefix')[0].value = prefix;
 	}
 }
 
 function readSelections() {
-	var prefix = readFromLocal('depaul-university-standard-prefix');
-	var number = readFromLocal('depaul-university-standard-number');
+	var prefix = readFromSession('depaul-university-standard-prefix');
+	var number = readFromSession('depaul-university-standard-number');
 	if (prefix) {
 		document.getElementsByClassName('prefix')[0].value = prefix;
 	}
@@ -83,6 +83,16 @@ function writeToLocal(name, value) {
 function readFromLocal(name) {
     if (localStorage.getItem(name.trim()))
         return localStorage.getItem(name.trim());;
+    return '';
+}
+
+function writeToSession(name, value) {
+    sessionStorage.setItem(name.trim(), value);
+}
+
+function readFromSession(name) {
+    if (sessionStorage.getItem(name.trim()))
+        return sessionStorage.getItem(name.trim());;
     return '';
 }
 
