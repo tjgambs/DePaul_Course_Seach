@@ -215,7 +215,7 @@ function updateTable(url, shortUrl) {
                 } else {
                     html += '<td><input class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-add"' + 'id="' + [shortUrl, topic, classStatus, creditHours, teacherFirstName, teacherLastName, classStartTime, classEndTime, classSection, classNumber, campus, days] + '" type="image" src="../../../../../minus.png" width="20" onclick="removeFromCart(this)"/>';
                 }
-                html += '<td class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall">0.0</td>';
+                html += '<td class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-overall">N/A</td>';
                 if (data[0].topic_descr.length > 0) {
                     html += '<td style="max-width:125px; word-wrap:break-word;" class="' + (teacherFirstName + '-' + teacherLastName).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '-topic">' + topic + '</td>';
                 }
@@ -264,7 +264,7 @@ function updateRanking() {
                     if (list_overall.length != 0) {
                         for (var j = 0; j < list_overall.length; j++) {
                             if (overall) {
-                                if (overall.length != 0 && overall != '0' && overall != '0.0') {
+                                if (overall.length != 0 && overall != '0' && overall != 'N/A') {
                                     if (list_overall[j].innerHTML.indexOf('<a style') == -1) {
                                         list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                         list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';
@@ -304,7 +304,7 @@ function updateRanking() {
                     if (list_overall.length != 0) {
                         for (var j = 0; j < list_overall.length; j++) {
                             if (overall) {
-                                if (overall.length != 0 && overall != '0' && overall != '0.0') {
+                                if (overall.length != 0 && overall != '0' && overall != 'N/A') {
                                     if (list_overall[j].innerHTML.indexOf('<a style') == -1) {
                                         list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                         list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';
@@ -346,7 +346,7 @@ function useBackup(url) {
                 if (list_overall.length != 0) {
                     for (var j = 0; j < list_overall.length; j++) {
                         if (overall) {
-                            if (overall.length != 0 && overall != '0' && overall != '0.0') {
+                            if (overall.length != 0 && overall != '0' && overall != 'N/A') {
                                 if (list_overall[j].innerHTML.indexOf('<a style') == -1) {
                                     list_overall[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + overall + '</a>';
                                     list_firstn[j].innerHTML = '<a style="text-decoration:none;" href="../../../teachers/' + (first_name + '-' + last_name).toLowerCase().replace('\u00ED', 'i').split(' ').join('-') + '">' + first_name + '</a>';

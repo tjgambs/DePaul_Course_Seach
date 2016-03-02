@@ -175,7 +175,7 @@ function fixClasses(course, replaceWith, index) {
         }
     }
     if (oldClass.split(',').length == 12) {
-        oldClass = ['0.0'].concat(oldClass.split(',')).join();
+        oldClass = ['N/A'].concat(oldClass.split(',')).join();
     }
     var newClass = [];
     for (var i = 0; i < course.getElementsByTagName('td').length; i++) {
@@ -239,7 +239,7 @@ function readSaved() {
                 term = classArray[j].split('=')[0].split('(')[1].split(')')[0];
                 var temp = classArray[j].split('=')[1].split(',');
                 if (classArray[j].split('=')[1].split(',').length == 12) {
-                    temp = ['0.0'].concat(temp);
+                    temp = ['N/A'].concat(temp);
                 }
                 course.push(temp);
             }
@@ -456,7 +456,7 @@ function formatClasses(value) {
         if (localStorage.key(i) && localStorage.key(i).indexOf('-add-') != -1 && localStorage.key(i).indexOf(term) != -1) {
             temp = localStorage.getItem(localStorage.key(i)).split(',');
             if (temp.length == 12) {
-                temp = (['0.0'].concat(temp));
+                temp = (['N/A'].concat(temp));
             }
             classes.push(temp);
         }
@@ -523,7 +523,7 @@ function formatClasses(value) {
                 } else {
                     html += '<tr class=course><td><input class="' + classValue + '" id="' + i.join(',') + '" type="image" src="../../minus.png" width="20" onclick="removeFromCart(this)"></td>';
                 }
-                if (i[0] == '0.0') {
+                if (i[0] == 'N/A') {
                     if (document.getElementById(i[9] + '-checkbox-' + index)) {
                         if (document.getElementById(i[9] + '-checkbox-' + index).className == "checked") {
                             html += '<td><input type="checkbox" class="checked" id="' + i[10] + '-checkbox-' + index + '" onclick="updateCheck(this)" checked></td>';
