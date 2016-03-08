@@ -6,6 +6,7 @@ import json
 import urllib
 import sys
 import take_lsld_data as lsld
+import urllib
 
 lsld_data = lsld.take()
 
@@ -464,7 +465,7 @@ def create_page(full_name,description,course_url,termname):
 
 	$(document).ready(function() 
 	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);'''
-	html += 'updateTable("' + "https://crossorigin.me/{0}".format(course_url) + '","' + short_url + '");'
+	html += 'updateTable("' + "{0}".format(course_url) + '","' + short_url + '");'
 	html += '''
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');
