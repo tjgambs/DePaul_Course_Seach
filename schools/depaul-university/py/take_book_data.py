@@ -13,6 +13,8 @@ import sys
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 
 def login(username,password):
+	global driver
+	driver = webdriver.Firefox()
 	driver.get(__URL__)
 	time.sleep(10)
 	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(username.upper())
@@ -135,7 +137,5 @@ def iterate_over_one(index,term,termname,username,password):
 		iterate_over_one(index,term,termname)
 
 if __name__ == '__main__':
-	global driver
-	driver = webdriver.Firefox()
 	iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
 	driver.close()
