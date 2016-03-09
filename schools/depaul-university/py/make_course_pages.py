@@ -465,7 +465,7 @@ def create_page(full_name,description,course_url,termname):
 
 	$(document).ready(function() 
 	{setTimeout(function(){ document.getElementById('search-box').style.visibility = 'visible'; }, 200);'''
-	html += 'updateTable("' + "{0}".format(course_url) + '","' + short_url + '");'
+	html += 'updateTable("' + "https://jsonp.afeld.me/?url={0}".format(urllib.quote(course_url, safe='')) + '","' + short_url + '");'
 	html += '''
 		$('#ads').load('http://mocksched.com/ads.html');
 		$('#help').load('http://mocksched.com/help.html');

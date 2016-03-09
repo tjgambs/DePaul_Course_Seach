@@ -245,7 +245,7 @@ function updateTable(url, shortUrl) {
 
 function updateRanking() {
     $.ajax({
-        url: 'http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery111003276446736417711_1446762506495&q=*%3A*+AND+schoolid_s%3A1389&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows=1000000000&start=0&fl=pk_id+teacherfirstname_t+teacherlastname_t+averageratingscore_rf',
+        url: 'https://jsonp.afeld.me/?url=http%3A%2F%2Fsearch.mtvnservices.com%2Ftypeahead%2Fsuggest%2F%3Fsolrformat%3Dtrue%26rows%3D10%26callback%3DjQuery111003276446736417711_1446762506495%26q%3D*%253A*%2BAND%2Bschoolid_s%253A1389%26defType%3Dedismax%26qf%3Dteacherfullname_t%255E1000%2Bautosuggest%26bf%3Dpow%28total_number_of_ratings_i%252C2.1%29%26sort%3D%26siteName%3Drmp%26rows%3D1000000000%26start%3D0%26fl%3Dpk_id%2Bteacherfirstname_t%2Bteacherlastname_t%2Baverageratingscore_rf',
         type: 'GET',
         async: false,
         success: function(response) {
@@ -285,7 +285,7 @@ function updateRanking() {
         }
     });
     $.ajax({
-        url: 'http://search.mtvnservices.com/typeahead/suggest/?solrformat=true&rows=10&callback=jQuery1110022448566812090576_1450841735528&q=*%3A*+AND+schoolid_s%3A5485&defType=edismax&qf=teacherfullname_t%5E1000+autosuggest&bf=pow(total_number_of_ratings_i%2C2.1)&sort=&siteName=rmp&rows=1000000000&start=0&fl=pk_id+teacherfirstname_t+teacherlastname_t+averageratingscore_rf',
+        url: 'https://jsonp.afeld.me/?url=http%3A%2F%2Fsearch.mtvnservices.com%2Ftypeahead%2Fsuggest%2F%3Fsolrformat%3Dtrue%26rows%3D10%26callback%3DjQuery1110022448566812090576_1450841735528%26q%3D*%253A*%2BAND%2Bschoolid_s%253A5485%26defType%3Dedismax%26qf%3Dteacherfullname_t%255E1000%2Bautosuggest%26bf%3Dpow%28total_number_of_ratings_i%252C2.1%29%26sort%3D%26siteName%3Drmp%26rows%3D1000000000%26start%3D0%26fl%3Dpk_id%2Bteacherfirstname_t%2Bteacherlastname_t%2Baverageratingscore_rf',
         type: 'GET',
         async: false,
         success: function(response) {
