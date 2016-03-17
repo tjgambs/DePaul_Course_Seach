@@ -66,18 +66,18 @@ def remove_classes(termname):
 		local('mkdir classes')
 
 def update(username,password,termname,termnumber,term,flag):
-	local('git checkout gh-pages')
-	if flag:
-		local('python take_rmp_rankings.py &')
-		local('python take_course_descriptions.py')
+	# local('git checkout gh-pages')
+	# if flag:
+	# 	local('python take_rmp_rankings.py &')
+	# 	local('python take_course_descriptions.py')
 
-	local('python take_class_data.py {0} {1}'.format(termname,termnumber))
-	remove_classes(termname)
-	local('python make_course_pages.py {0} &'.format(termname))
+	# local('python take_class_data.py {0} {1}'.format(termname,termnumber))
+	# remove_classes(termname)
+	# local('python make_course_pages.py {0} &'.format(termname))
 	
-	if flag:
-		remove_teachers()
-		local('python make_teacher_pages.py &')
+	# if flag:
+	# 	remove_teachers()
+	# 	local('python make_teacher_pages.py &')
 	get_all_books(username,password,term,termname)
 	local('python make_amazon_links.py {0}'.format(termname))
 
@@ -88,9 +88,9 @@ def update_all():
 
 	#update(username,password,'winter-2016','0965',3,True)
 	update(username,password,'spring-2016','0970',4,True)
-	update(username,password,'summer-2016','0975',5,False)
+	#update(username,password,'summer-2016','0975',5,False)
 	
-	update_website()
-	local('rm *.pyc')
+	#update_website()
+	#local('rm *.pyc')
 	print 'Finish: ' + strftime("%Y-%m-%d %H:%M:%S")
 
