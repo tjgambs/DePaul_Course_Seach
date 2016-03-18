@@ -137,7 +137,10 @@ def iterate_over_one(index,term,termname,username,password):
 				take_all_data(i,termname)
 			navigate_to_course_search()
 	except:
-		driver.quit()
+		try:
+			driver.quit()
+		except:
+			pass
 		iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
 		return
 
