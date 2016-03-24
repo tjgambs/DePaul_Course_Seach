@@ -8,11 +8,11 @@ import time
 from time import gmtime, strftime
 import getpass
 
-def get_all_books(username,password,term,termname):
+def get_all_books(username,password,termnumber,term,termname):
 	Book.login(username,password)
 	Book.navigate_to_course_search()
-	number_of_courses = Book.amount_of_subjects()
-	Book.driver.close()
+	number_of_courses = Book.amount_of_subjects(termnumber)
+	Book.driver.quit()
 	first_run = int(number_of_courses) / 10 * 10
 	second_run = int(number_of_courses) % 10
 	for index in range(1,first_run,10):
@@ -35,7 +35,7 @@ def get_all_books(username,password,term,termname):
 		local('python take_book_data.py {0} {1} {2} {3} {4} &'.format(index + 8,term,termname,username,password))
 		time.sleep(5)
 		local('python take_book_data.py {0} {1} {2} {3} {4} &'.format(index + 9,term,termname,username,password))
-		time.sleep(1000)
+		time.sleep(1500)
 	for index in range(first_run + 1,second_run + first_run):
 		if index < second_run + first_run - 1:
 			local('python take_book_data.py {0} {1} {2} {3} {4} &'.format(index,term,termname,username,password))
@@ -78,7 +78,7 @@ def update(username,password,termname,termnumber,term,flag):
 	# if flag:
 	# 	remove_teachers()
 	# 	local('python make_teacher_pages.py &')
-	get_all_books(username,password,term,termname)
+	get_all_books(username,password,termnumber,term,termname)
 	local('python make_amazon_links.py {0}'.format(termname))
 
 def update_all():

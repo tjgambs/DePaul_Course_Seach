@@ -55,4 +55,4 @@ if __name__ == '__main__':
 	global driver
 	driver = webdriver.Firefox()
 	format_data(sys.argv[1])
-	driver.close()
+	driver.quit()

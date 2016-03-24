@@ -12,12 +12,12 @@ import sys
 
 __URL__ = "https://campusconnect.depaul.edu/psp/CSPRD90/?cmd=login&languageCd=ENG"
 
+fp = webdriver.FirefoxProfile()
+fp.set_preference("dom.max_chrome_script_run_time", 0)
+fp.set_preference("dom.max_script_run_time", 0)
+driver = webdriver.Firefox(firefox_profile=fp)
+
 def login(username,password):
-	fp = webdriver.FirefoxProfile()
-	fp.set_preference("dom.max_chrome_script_run_time", 0)
-	fp.set_preference("dom.max_script_run_time", 0)
-	global driver
-	driver = webdriver.Firefox(firefox_profile=fp)
 	driver.get(__URL__)
 	time.sleep(10)
 	driver.find_element(By.XPATH,'//input[@name="userid"]').send_keys(username.upper())
@@ -34,8 +34,10 @@ def navigate_to_course_search():
 	driver.find_element(By.XPATH,'//td[@class="SSSTABINACTIVE"][1]').click()
 	driver.switch_to_default_content()
 
-def amount_of_subjects():
+def amount_of_subjects(termnumber):
 	driver.switch_to_frame(driver.find_element(By.XPATH,'//iframe[@name="TargetContent"]'))
+	term = Select(driver.find_element(By.XPATH,'//div[@id="win0divCLASS_SRCH_WRK2_STRM$35$"]/select'))
+	term.select_by_value(termnumber)
 	time.sleep(10)
 	select = Select(driver.find_element(By.XPATH,'//div[@id="win0divSSR_CLSRCH_WRK_SUBJECT_SRCH$0"]/select'))
 	options = select.options
@@ -60,13 +62,13 @@ def search_subject(index):
 	try:
 		if driver.find_element(By.XPATH,'//span[@class="SSSMSGWARNINGTEXT"]'):
 			return -1
-	except:
+	except Exception,e:
 		pass
 
 	try:
 		if(driver.find_element(By.XPATH,'//input[@id="#ICSave"]') != None):
 			driver.find_element(By.XPATH,'//input[@id="#ICSave"]').click()
-	except: 
+	except Exception,e: 
 		pass
 	driver.switch_to_default_content()
 	return 0
@@ -101,7 +103,7 @@ def take_all_data(code,termname):
 		isbns = []
 		status = []
 		names = []
-		if(driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXBDTL_ISBN")]')):
+		if driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXBDTL_ISBN")]'):
 			isbns = driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXBDTL_ISBN")]/span[contains(@id,"DERIVED_SSR_TXB_SSR_TXBDTL_ISBN")]')
 			status = driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXB_STATDESCR")]/span[contains(@id,"DERIVED_SSR_TXB_SSR_TXB_STATDESCR")]')
 			names = driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXBDTL_LONG")]/span[contains(@id,"DERIVED_SSR_TXB_SSR_TXBDTL_LONG")]')
@@ -114,7 +116,7 @@ def take_all_data(code,termname):
 
 def format_book_data(title,isbns,status,names):
 	dic = {}
-	if(len(isbns)!=0):
+	if len(isbns)!=0:
 		isbns = [isbn.text for isbn in isbns]
 		status = [stat.text for stat in status]
 		names = [name.text for name in names]
@@ -129,18 +131,15 @@ def iterate_over_one(index,term,termname,username,password):
 		login(username,password)
 		navigate_to_course_search()
 		for i in range(1,amount_of_course_careers()):
-			select_course_career(i)
 			select_term(term)
+			select_course_career(i)
 			time.sleep(3)
 			flag = search_subject(index)
 			if flag == 0:
 				take_all_data(i,termname)
 			navigate_to_course_search()
-	except:
-		try:
-			driver.quit()
-		except:
-			pass
+	except Exception,e:
+		print e
 		iterate_over_one(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3],sys.argv[4].upper(),sys.argv[5])
 		return
 
