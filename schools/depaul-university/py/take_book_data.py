@@ -96,7 +96,12 @@ def take_all_data(code,termname):
 	file_name = str(driver.find_element(By.XPATH,'//div[@id="win0divSSR_CLSRSLT_WRK_GROUPBOX2GP$0"]/table/tbody/tr/td/table/tbody/tr/td').text.split()[0])
 	all_books = []
 	for index in range(0,end):
-		button = driver.find_element(By.XPATH,'//a[@name="MTG_CLASS_NBR$%s"]' % str(index))
+		while True:
+			try:
+				button = driver.find_element(By.XPATH,'//a[@name="MTG_CLASS_NBR$%s"]' % str(index))
+				break
+			except Exception,e:
+				time.sleep(1)
 		title = button.text
 		button.click()
 		time.sleep(10)
@@ -108,7 +113,12 @@ def take_all_data(code,termname):
 			status = driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXB_STATDESCR")]/span[contains(@id,"DERIVED_SSR_TXB_SSR_TXB_STATDESCR")]')
 			names = driver.find_elements(By.XPATH,'//div[contains(@id,"win0divDERIVED_SSR_TXB_SSR_TXBDTL_LONG")]/span[contains(@id,"DERIVED_SSR_TXB_SSR_TXBDTL_LONG")]')
 		all_books.append(format_book_data(title,isbns,status,names))
-		driver.find_element(By.XPATH,'//a[@id="CLASS_SRCH_WRK2_SSR_PB_BACK"]').click()
+		while True:
+			try:
+				driver.find_element(By.XPATH,'//a[@id="CLASS_SRCH_WRK2_SSR_PB_BACK"]').click()
+				break
+			except Exception,e:
+				time.sleep(1)
 		time.sleep(10)
 	with open('../terms/' + termname + '/course_books/'+file_name+str(code)+'.json','w') as output:
 		json.dump(all_books,output)
