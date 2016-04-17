@@ -93,7 +93,7 @@ function updateCart(term_number) {
     for (var i = 0; i < courses.length; i++) {
         var prefix = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[0];
         var number = courses[i].getElementsByClassName('name')[0].innerHTML.split(' ')[1];
-        var url = 'https://crossorigin.me/http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=' + term_number + '&subject=' + prefix + '&catalog_nbr=' + number;
+        var url = 'https://jsonp.afeld.me/?url='+encodeURI('http://offices.depaul.edu/_layouts/DUC.SR.ClassSvc/DUClassSvc.ashx?action=getclasses&strm=' + term_number + '&subject=' + prefix + '&catalog_nbr=' + number);
         if (urls.indexOf(url) == -1) {
             urls.push(url);
         }
