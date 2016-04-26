@@ -475,6 +475,7 @@ def create_page(full_name,description,course_url,termname):
 		$("#myTable").tablesorter({
 			sortInitialOrder: 'desc',
 	    	headers: {
+	    		1: { sorter: "digit", string: "min" },
 	        	6: { sorter: 'time'},
 	        	7: { sorter: 'time'}
 	   		}
